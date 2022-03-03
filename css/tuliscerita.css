@@ -1,0 +1,46 @@
+.banner {
+    height: 90vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/header-tulis-cerita.png);
+    background-size: cover;
+    text-align: left;
+    text-shadow: 5px 5px 10px #4d148c;
+    font-size: xx-large;
+    color: white;
+    font-weight: bold;
+    padding-top: 15%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+
+.banner h1 {
+    font-size: 55px;
+}
+
+.formBox{
+    margin:1.5em;
+    margin-top:2em;
+
+}
+.formBox2{
+    padding: 2em;
+
+}
+.formInput{
+    margin-top: 1em;
+}
+.submitBtn{
+    width: 100%;
+}
+.redText{
+    color: red;
+}
+
+/* div{
+    border:1px solid black;
+} */

@@ -1,0 +1,109 @@
+/* dropdown */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: block;
+    position: relative;
+    float: left;
+}
+
+li ul {
+    display: none;
+}
+
+ul li a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    white-space: nowrap;
+    color: white;
+}
+
+li:hover > ul {
+    display: block;
+    position: absolute;
+}
+
+.menu:hover{
+    background-color: 	rgba(231, 146, 67, 0.9);
+}
+
+li:hover li {
+    float: none;
+}
+
+.main-navigation li ul li {
+    border-top: 0;
+}
+
+
+ul ul ul {
+    left: 100%;
+    top: 0;
+    
+}
+
+ul:before,
+ul:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+    
+}
+
+ul:after {
+    clear: both;
+}
+
+/* end dropdown */
+
+.footer-link:hover {
+    color: #fff;
+}
+
+footer {
+    background-color: #4d148c;
+}
+  
+.footer-links a {
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 2;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    border: 0;
+}
+  
+.footer-social {
+    padding-top: 3px;
+    text-align: right;
+}
+  
+.footer-social a {
+    margin-left: 20px;
+    color: white;
+    border: 0;
+}
+  
+.footer-social a:hover,
+.footer-social a:focus {
+    color: white;
+    border: 0;
+}
+  
+.footer-social i {
+    font-size: 24px;
+    vertical-align: middle;
+    border: none;
+}
+  
+.footer-bottom {
+    padding: 15px 0 17px 0;
+    background: #4d148c;
+    text-align: left;
+    color: #aaa;
+}

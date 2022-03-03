@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a:link, a:visited,  a:hover, a:active
+{
+    color: none;
+    text-decoration: none;
+}
+
+.carousel-sec{
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+
+}
+.carousel-item img{
+    max-height: 90vh;
+  }
+
+  .tentang p {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+.card-text {
+    color: black;
+}
+.card-title {
+    color: black;
+}
+
+.hover-card {
+    transition: 0.3s;
+}
+
+.hover-card:hover {
+    transform: scale(1.1);
+}
+
+.carousel-contain {
+    background-color: rgb(77, 20, 140, 0.2);
+}
+
+.artikel h5 {
+    font-family: "Inter", sans-serif;
+}
+
+.artikel p {
+    font-family: "Montserrat", sans-serif;
+}
+
+.cardberlangganan {
+    background-color: rgb(77, 20, 140, 0.3);
+    border-radius: 10px;
+}

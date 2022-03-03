@@ -1,0 +1,77 @@
+.banner {
+    height: 90vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/prodamasplus.jpg);
+    background-size: cover;
+    text-align: left;
+    text-shadow: 5px 5px 10px #4d148c;
+    font-size: xx-large;
+    color: white;
+    font-weight: bold;
+    padding-top: 15%;
+}
+
+.banner h1 {
+    font-size: 55px;
+}
+
+.button-pesan {
+    border: none;
+    border-radius: 4px;
+}
+
+.wrap-input200 {
+    margin-top: 20px;
+    width: 93%;
+    max-width: 500px;
+}
+
+.wrap-input100 {
+    margin-top: 20px;
+    display: block;
+    width: 93%;
+}
+
+#p-email {
+    font-weight: bold;
+    font-size: small;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 4px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.kritik {
+    border-radius: 4px;
+    width: 120px;
+    height: 50px;
+    border: none;
+    background-color: #eeeeee;
+    color: black;
+    margin-top: 20px;
+    margin-left: 27px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.cerita {
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+    width: 110px;
+    height: 50px;
+    border: none;
+    background-color: #eeeeee;
+    color: black;
+    margin-top: 20px;
+    margin-right: 27px;
+}
