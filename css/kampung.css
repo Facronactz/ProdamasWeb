@@ -1,0 +1,127 @@
+.banner {
+    height: 90vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: url(../img-tentang/header-kampung-keren-baru.png);
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    text-shadow: 5px 5px 10px #4d148c;
+    font-size: xx-large;
+    color: white;
+    font-weight: bold;
+    padding-top: 15%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 50% 50%;
+    -o-background-size: 50% 50%;
+    background-size: 100% 100%;
+}
+
+.kampung-keren {
+    margin-top: 30px;
+}
+
+.kampung-keren h2 {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+
+.kampung-keren h5 {
+    margin: auto;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+}
+
+.kampung {
+    padding: 70px;
+}
+
+/* dropdown */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: block;
+    position: relative;
+    float: left;
+}
+
+li ul {
+    display: none;
+}
+
+ul li a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    white-space: nowrap;
+    color: white;
+}
+
+li:hover > ul {
+    display: block;
+    position: absolute;
+}
+
+.menu:hover {
+    background-color: rgba(231, 146, 67, 0.9);
+}
+
+li:hover li {
+    float: none;
+}
+
+.main-navigation li ul li {
+    border-top: 0;
+}
+
+ul ul ul {
+    left: 100%;
+    top: 0;
+}
+
+ul:before,
+ul:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+ul:after {
+    clear: both;
+}
+
+/* end dropdown */
+
+.isi a {
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.isi a:hover {
+    color: blue;
+}
+
+.kartu {
+    max-width: auto;
+}
+
+.kartuatas {
+    max-width: 18rem;
+}
+
+.item h5 {
+    font-family: "Inter", sans-serif;
+    font-size: large;
+}
+
+.item p {
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+}

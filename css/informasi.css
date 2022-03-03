@@ -1,0 +1,76 @@
+.banner {
+    height: 90vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/header-informasi.png);
+    background-size: cover;
+    text-align: center;
+    text-shadow: 5px 5px 10px #020202;
+    font-size: xx-large;
+    color: white;
+    font-weight: bold;
+    padding-top: 15%;
+}
+
+.border {
+    background-color: rgb(77, 20, 140, 0.3);
+    color: black;
+}
+#visi {
+    padding-left: 90px;
+    margin-top: 30px;
+    font-weight: bolder;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+}
+
+#isi-visi {
+    padding-left: 90px;
+    margin-right: 90px;
+    text-align: justify;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+}
+
+#isi-misi {
+    margin-left: 90px;
+    margin-right: 190px;
+    text-align: justify;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    list-style-type: decimal;
+}
+
+h2 {
+    font-family: "Inter", sans-serif;
+    padding-left: 90px;
+    margin-top: 20px;
+}
+
+.text {
+    margin-left: 90px;
+    margin-right: 190px;
+    font-family: "Montserrat", sans-serif;
+    /* text-align: justify; */
+}
+.moreText {
+    display: none;
+}
+.read-more-btn {
+    margin-left: 90px;
+    text-align: justify;
+    padding: 10px 30px;
+    background-color: rgb(240, 178, 107);
+    color: rgb(53, 49, 49);
+    border: none;
+    outline: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+.text.show-more .moreText {
+    display: inline;
+}
+.text.show-more .dots {
+    display: none;
+}

@@ -1,0 +1,61 @@
+/* dropdown */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: block;
+    position: relative;
+    float: left;
+}
+
+li ul {
+    display: none;
+}
+
+ul li a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    white-space: nowrap;
+    color: white;
+}
+
+li:hover > ul {
+    display: block;
+    position: absolute;
+}
+
+.menu:hover{
+    background-color: 	rgba(231, 146, 67, 0.9);
+}
+
+li:hover li {
+    float: none;
+}
+
+.main-navigation li ul li {
+    border-top: 0;
+}
+
+
+ul ul ul {
+    left: 100%;
+    top: 0;
+    
+}
+
+ul:before,
+ul:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+    
+}
+
+ul:after {
+    clear: both;
+}
+
+/* end dropdown */

@@ -1,0 +1,137 @@
+.banner {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner video {
+    position: absolute;
+    object-fit: cover;
+    z-index: 1;
+    width: 100%;
+    height: 90%;
+}
+
+.feedig {
+    padding-top: 90px;
+    padding-left: 80px;
+    padding-right: 50px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.feedig a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.card-img-top {
+    border-radius: 16px;
+    padding-top: 10px;
+    margin-left: 1%;
+}
+
+.feedtiktok {
+    padding-top: 90px;
+    padding-left: 84px;
+    padding-right: 40px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.feedtiktok a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.tiktok-embed {
+    width: 100px;
+    height: 520px;
+}
+
+footer {
+    background-color: #4d148c;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 2;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    border: 0;
+}
+
+.footer-social {
+    padding-top: 3px;
+    text-align: right;
+}
+.footer-social a {
+    margin-left: 20px;
+    color: white;
+    border: 0;
+}
+.footer-social a:hover,
+.footer-social a:focus {
+    color: white;
+    border: 0;
+}
+.footer-social i {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.footer-bottom {
+    padding: 15px 0 17px 0;
+    background: #4d148c;
+    text-align: left;
+    color: #aaa;
+}
+
+/* audio css */
+
+.feedAudio {
+    border: none;
+    margin: 2em;
+}
+.noBorder {
+    border: none;
+}
+.centerItms {
+    /* position: relative;
+    display: flex;
+    align-items: center; */
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+.cardAudio {
+    margin: 1em;
+    box-shadow: 2px 2px 5px #00000079;
+}
+.audioPlayerBox {
+    padding: 1em;
+}
+
+/* div{
+    border:1px solid black;
+} */
+
+/* Video css */
+.feedVideo {
+    margin: 2em;
+}
+
+/* Foto css */
+
+@media screen and (max-width: 800px) {
+    .fotoResp{   
+        width: 100%;
+        padding: 0;
+        margin-left: 0;
+    }
+}

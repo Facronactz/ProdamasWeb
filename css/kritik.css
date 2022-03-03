@@ -1,0 +1,71 @@
+body {
+    background: rgb(219, 223, 226);
+}
+
+.card-body {
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    width: 100%;
+    max-width: 900px;
+    text-align: left;
+    /* margin-left: 70px; */
+    /* margin-right: 70px; */
+    display: flex;
+    align-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+    margin-left: 80px;
+    margin-top: 40px;
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+}
+
+.form-control {
+    content: center;
+    width: 100%;
+}
+
+.section {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+    height: 75px;
+    width: 100%;
+    align-content: center;
+    text-align: left;
+    max-width: 900px;
+    padding-right: 50px;
+    /* margin-left: 100px; */
+    /* margin-right: 70px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h5 {
+    font-weight: bold;
+    font-size: 25px;
+    padding: 20px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

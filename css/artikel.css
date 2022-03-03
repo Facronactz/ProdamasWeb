@@ -1,0 +1,99 @@
+/* Add a card effect for articles */
+.banner {
+    height: 90vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: url(../img-tentang/artikel.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    text-shadow: 5px 5px 10px #4d148c;
+    font-size: 5cm;
+    color: white;
+    font-weight: bold;
+    padding-top: 15%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.banner h1 {
+    font-size: 70px;
+    margin-top: 220px;
+}
+
+
+.card {
+  background-color: white;
+  padding: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card-right {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.caption {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.caption:hover {
+  transform: scale(1.1);
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  width: 70%;
+  text-align: justify;
+  margin-left: 35px;
+}
+
+/* Right column */
+.rightcolumn {
+  text-align: justify;
+  width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .leftcolumn img, .rightcolumn{   
+    width: 100%;
+    padding: 0;
+    margin-left: 0;
+  }
+}
+
+.list-group-item:hover {
+  transform: scale(1.1);
+}
+
+div#social-links {
+  margin: 0 auto;
+  max-width: 500px;
+}
+div#social-links ul li {
+  display: inline-block;
+}          
+div#social-links ul li a {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 1px;
+  font-size: 30px;
+  color: #222;
+  background-color: #ccc;
+}
+
