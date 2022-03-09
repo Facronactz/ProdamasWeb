@@ -32,6 +32,12 @@
       object-position: top;
       max-height: 94vh;
     }
+    .card-img-fix {
+        object-fit: cover;
+        height: calc(20vh + 10px);
+        min-height: 200px;
+        max-height: 300px;
+    }
   </style>
   @endsection
 </head>
@@ -101,14 +107,14 @@
   <!--End tentang-->
 
   <!--artikel-->
-  <div class="container artikel mb-5 mt-5">
+  <div class="container-md my-5 artikel">
     <h3 class="mb-4" style="font-family: Inter, sans-serif">Artikel</h3>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
       @foreach ($artikel as $item)
       <a href="artikel/{{$item->id}}">
-        <div class="col">
+        <div class="col my-3 my-lg-0">
           <div class="card h-100 hover-card">
-            <img src="{{ asset('articleProd/sampul/'.$item->gambar_sampul) }}" class="card-img-top" alt="...">
+            <img src="{{ asset('articleProd/sampul/'.$item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{ $item->judul }}</h5>
               <p class="card-text">{{ $item->text_sampul }}</p>
@@ -133,7 +139,7 @@
       @foreach ($video as $item)
       <div class="col">
         <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$item->id}}">
-          <img src="{{ asset('videoProd/sampul/'.$item->gambar_sampul) }}" class="card-img-top" alt="...">
+          <img src="{{ asset('videoProd/sampul/'.$item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ $item->judul }}</h5>
             <p class="card-text">{{ $item->caption }}</p>
@@ -195,7 +201,7 @@
       @foreach ($foto as $item)
       <div class="col">
         <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$item->id}}">
-          <img src="{{ asset('fotoProd/'.$item->konten) }}" class="card-img-top" alt="...">
+          <img src="{{ asset('fotoProd/'.$item->konten) }}" class="card-img-top card-img-fix" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ $item->judul }}</h5>
             <p class="card-text">{{ $item->caption }}</p>
@@ -219,7 +225,7 @@
       <a href="foto/{{$item->id}}"></a>
   <div class="col">
     <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$item->id}}">
-      <img src="{{ asset('fotoProd/'.$item->gambar_sampul) }}" class="card-img-top" alt="...">
+      <img src="{{ asset('fotoProd/'.$item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{ $item->judul }}</h5>
         <p class="card-text">{{ $item->caption }}</p>
@@ -279,7 +285,7 @@
       @foreach ($audio as $item)
       <div class="col">
         <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$item->id}}">
-          <img src="{{ asset('audioProd/thumb/'.$item->gambar_sampul) }}" class="card-img-top" alt="...">
+          <img src="{{ asset('audioProd/thumb/'.$item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ $item->judul }}</h5>
             <p class="card-text">{{ $item->caption }}</p>
