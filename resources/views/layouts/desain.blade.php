@@ -128,7 +128,7 @@
                 <!-- Middle -->
                 <div class="navbar-nav mx-auto">
                     <a class="nav-link @yield('beranda')" aria-current="page" href="{{ url('/') }}">Beranda</a>
-                    <a class="nav-link" href="{{ url('/artikel')">Artikel</a>
+                    <a class="nav-link" href="{{ url('/artikel')}}">Artikel</a>
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
