@@ -150,7 +150,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
                             <li><a class="dropdown-item @yield('tentang')" href="{{url ('/tentang')}}">Prodamas</a></li>
                             <li><a class="dropdown-item @yield('bidang')" href="{{url ('/bidang')}}">Bidang</a></li>
-                            <li><a class="dropdown-item @yield('kampung keren')" href="{{url ('/kampungkeren')}}">Kampung Keren</a></li>
+                            <li><a class="dropdown-item @yield('kampungkeren')" href="{{url ('/kampungkeren')}}">Kampung Keren</a></li>
                             <li><a class="dropdown-item @yield('pokmas')" href="{{url ('/pokmas')}}">POKMAS</a></li>
                             <li><a class="dropdown-item @yield('media')" href="{{url ('/media')}}">MedSos</a></li>
                         </ul>
