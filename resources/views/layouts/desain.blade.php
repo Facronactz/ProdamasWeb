@@ -79,7 +79,7 @@
                         <a class="nav-link @yield('audio')" href="{{ url('audio') }}">Audio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link @yield('media')" href="{{ url('media') }}">Medsos</a>
+                        <a class="nav-link @yield('media')" href="{{ url('media') }}">Tes</a>
                     </li>
 
                 </ul>
