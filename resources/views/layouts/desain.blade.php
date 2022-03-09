@@ -134,7 +134,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
                             <li><a class="dropdown-item @yield('peta')" href="{{url ('/peta')}}">Prodamas Dalam Peta</a></li>
                             <li><a class="dropdown-item @yield('banksampah')" href="{{url ('/banksampah')}}">E-Bank Sampah</a></li>
-                            <li><a class="dropdown-item" href="#}">Progressio</a></li>
+                            <li><a class="dropdown-item" href="#">Progressio</a></li>
                         </ul>
                     </div>
                     <div class="nav-item dropdown">
