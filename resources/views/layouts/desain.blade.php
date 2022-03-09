@@ -140,9 +140,9 @@
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkMedia">
-                            <li><a class="dropdown-item @yield('foto')" href="{{url ('/foto')}}">Foto</a></li>
-                            <li><a class="dropdown-item @yield('audio')" href="{{url ('/audio')}}">Audio</a></li>
-                            <li><a class="dropdown-item @yield('video')" href="{{url ('/video')}}">Video</a></li>
+                            <li><a class="dropdown-item @yield('foto')" href="{{url ('foto')}}">Foto</a></li>
+                            <li><a class="dropdown-item @yield('audio')" href="{{url ('audio')}}">Audio</a></li>
+                            <li><a class="dropdown-item @yield('video')" href="{{url ('video')}}">Video</a></li>
                         </ul>
                     </div>
                     <div class="nav-item dropdown">
