@@ -148,11 +148,11 @@
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tentang</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
-                            <li><a class="dropdown-item @yield('tentang')" href="{{url (/tentang)}}">Prodamas</a></li>
-                            <li><a class="dropdown-item @yield('bidang')" href="{{url (/bidang)}}">Bidang</a></li>
-                            <li><a class="dropdown-item @yield('kampung keren')" href="{{url (/kampungkeren)}}">Kampung Keren</a></li>
-                            <li><a class="dropdown-item @yield('pokmas')" href="{{url (/pokmas)}}">POKMAS</a></li>
-                            <li><a class="dropdown-item @yield('media')" href="{{url (/media)}}">MedSos</a></li>
+                            <li><a class="dropdown-item @yield('tentang')" href="{{url ('/tentang')}}">Prodamas</a></li>
+                            <li><a class="dropdown-item @yield('bidang')" href="{{url ('/bidang')}}">Bidang</a></li>
+                            <li><a class="dropdown-item @yield('kampung keren')" href="{{url ('/kampungkeren')}}">Kampung Keren</a></li>
+                            <li><a class="dropdown-item @yield('pokmas')" href="{{url ('/pokmas')}}">POKMAS</a></li>
+                            <li><a class="dropdown-item @yield('media')" href="{{url ('/media')}}">MedSos</a></li>
                         </ul>
                     </div>
                     <a class="nav-link">Kontak</a>
