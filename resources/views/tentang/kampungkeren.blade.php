@@ -1,5 +1,6 @@
 @extends('layouts.desain')
 @section('main-tentang', 'active')
+@section('kampungkeren', 'active')
 @section('content')
     <!DOCTYPE html>
     <html lang="en">
