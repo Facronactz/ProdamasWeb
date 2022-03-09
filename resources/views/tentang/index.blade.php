@@ -1,6 +1,6 @@
 @extends('layouts.desain')
-@section('main-tentang', 'active')
-@section('tentang', 'active')
+@section('main-tentang', 'active') @endsection
+@section('tentang', 'active') @endsection
 <!DOCTYPE html>
 <html lang="en">
     <head>
