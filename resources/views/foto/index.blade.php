@@ -1,13 +1,12 @@
 @extends('layouts.desain')
-@section('foto','active') 
-@endsection
+@section('foto','active')
 {{-- @section('search') --}}
 {{-- <form class="d-flex">
     <input class="form-control me-2" type="search" style="font-family: 'Font Awesome 5 Free'; font-weight: 600; border-radius: 30px; height: 30px" placeholder=" &#xf002;" aria-label="Search" />
 </form> --}}
 {{-- @endsection --}}
 
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
     
     <head>
@@ -32,7 +31,7 @@
     <link rel="stylesheet" href="css/media.css">
 </head>
 
-<body>
+<body> --}}
     @section('content')
     <!-- awal jumbotron -->
     <div class="banner">
@@ -111,8 +110,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @endsection
-
+{{-- 
 </body>
 
-</html>
+</html> --}}
 
