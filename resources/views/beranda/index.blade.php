@@ -26,7 +26,7 @@
     <!--CSS-->
     @section('head')
     <link rel="stylesheet" href="css/beranda.css">
-    @endsection('head')
+    @endsection
   </head>
   
   <body>
