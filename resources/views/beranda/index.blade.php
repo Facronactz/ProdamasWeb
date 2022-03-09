@@ -113,7 +113,7 @@
       @foreach ($artikel as $item)
       <a href="artikel/{{$item->id}}">
         <div class="col h-100 my-3 my-lg-0">
-          <div class="card hover-card">
+          <div class="card h-100 hover-card">
             <img src="{{ asset('articleProd/sampul/'.$item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{ $item->judul }}</h5>
