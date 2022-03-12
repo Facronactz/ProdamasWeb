@@ -32,7 +32,7 @@
 
 <body>
     <!--navbar-->
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #4d148c">
+    {{-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #4d148c">
         <div class="container-fluid mx-xxl-5">
             <a href="{{ url('/') }}"><img src="{{ asset('img/logoprodamas.png') }}" alt="" width="40" height="40" class="d-inline-block align-text-top" /></a>
             <a href="{{ url('/') }}" class="navbar-brand ms-2" style="font-family: Inter, sans-serif">PRODAMAS</a>
@@ -117,7 +117,7 @@
 
         </div>
         </div>
-    </nav> -->
+    </nav> --}}
     <!--end navbar-->
     <!-- New Nav -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-kediri" style="font-family: Inter; background-color: #4d148c">
