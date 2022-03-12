@@ -27,7 +27,7 @@
     @else
         <title>Prodamas Plus</title>
     @endif
-        
+
 </head>
 
 <body>
@@ -45,31 +45,31 @@
                 <!-- Middle -->
                 <div class="navbar-nav mx-auto">
                     <a class="nav-link @yield('beranda')" aria-current="page" href="{{ url('/') }}">Beranda</a>
-                    <a class="nav-link @yield('artikel')" href="{{ url('/artikel')}}">Artikel</a>
+                    <a class="nav-link @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
                     <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
+                        <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
-                            <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{url ('/peta')}}">Prodamas Dalam Peta</a></li>
-                            <li class="w-100"><a class="dropdown-item @yield('banksampah')" href="{{url ('/banksampah')}}">E-Bank Sampah</a></li>
-                            <li class="w-100"><a class="dropdown-item">Progressio</a></li>
+                            <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
+                            <li class="w-100"><a class="dropdown-item @yield('banksampah')" href="{{ url('/banksampah') }}">E-Bank Sampah</a></li>
+                            <li class="w-100"><a class="dropdown-item" href="https://prodamasplus.kedirikota.go.id/">Progressio</a></li>
                         </ul>
                     </div>
                     <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLinkMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLinkMedia" role="button" data-bs-toggle="dropdown @yield('media')" aria-expanded="false">Media</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkMedia">
-                            <li><a class="dropdown-item @yield('foto')" href="{{url ('/foto')}}">Foto</a></li>
-                            <li><a class="dropdown-item @yield('audio')" href="{{url ('/audio')}}">Audio</a></li>
-                            <li class="w-100"><a class="dropdown-item @yield('video')" href="{{url ('/video')}}">Video</a></li>
+                            <li><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
+                            <li><a class="dropdown-item @yield('audio')" href="{{ url('/audio') }}">Audio</a></li>
+                            <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
                         </ul>
                     </div>
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tentang</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
-                            <li class="w-100"><a class="dropdown-item @yield('tentang')" href="{{url ('/tentang')}}">Prodamas</a></li>
-                            <li class="w-100"><a class="dropdown-item @yield('bidang')" href="{{url ('/bidang')}}">Bidang</a></li>
-                            <li class="w-100"><a class="dropdown-item @yield('kampungkeren')" href="{{url ('/kampungkeren')}}">Kampung Keren</a></li>
-                            <li class="w-100"><a class="dropdown-item @yield('pokmas')" href="{{url ('/pokmas')}}">POKMAS</a></li>
-                            <li class="w-100"><a class="dropdown-item @yield('media')" href="{{url ('/media')}}">MedSos</a></li>
+                            <li class="w-100"><a class="dropdown-item @yield('tentang')" href="{{ url('/tentang') }}">Prodamas</a></li>
+                            <li class="w-100"><a class="dropdown-item @yield('bidang')" href="{{ url('/bidang') }}">Bidang</a></li>
+                            <li class="w-100"><a class="dropdown-item @yield('kampungkeren')" href="{{ url('/kampungkeren') }}">Kampung Keren</a></li>
+                            <li class="w-100"><a class="dropdown-item @yield('pokmas')" href="{{ url('/pokmas') }}">POKMAS</a></li>
+                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">MedSos</a></li>
                         </ul>
                     </div>
                     <a class="nav-link">Kontak</a>
@@ -127,7 +127,8 @@
                                 <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
                                     Tautan Eksternal</p>
                                 <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
-                                <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank Sampah</a> <br>
+                                <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
+                                    Sampah</a> <br>
                                 <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
                             </div>
                         </div>
