@@ -22,7 +22,12 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/desain.css') }}">
     @yield('head')
-    <title>Prodamas Plus</title>
+    @hasSection('title')
+        <title>Prodamas Plus - @yield('title')</title>
+    @else
+        <title>Prodamas Plus</title>
+    @endif
+        
 </head>
 
 <body>
