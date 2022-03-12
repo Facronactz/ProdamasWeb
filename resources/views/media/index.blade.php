@@ -1,5 +1,5 @@
 @extends('layouts.desain')
-@section('tentang', 'active')
+@section('main-tentang', 'active')
 @section('sosmed', 'active')
 
 @section('title', 'Media Sosial')
