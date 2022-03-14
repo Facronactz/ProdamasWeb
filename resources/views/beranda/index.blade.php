@@ -364,7 +364,7 @@
     <script>
         $(function() {
             $('.modal').on('hide.bs.modal', function() {
-                $video = $(this).find('video').pause();
+                $video = $(this).find('.media');
                 $audio = $(this).find(".media");
                 if ($audio) {
                     $audio[0].pause();
