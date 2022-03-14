@@ -175,7 +175,7 @@
                 if($media){
                     $img.click(function() {
                         // $media[0].pause();
-                        return media[0].paused() ? media[0].play(); : media[0].pause();;
+                        return media[0].paused() ? media[0].play() : media[0].pause();
                     });
                 }   
             });
