@@ -162,8 +162,8 @@
 
     <script>
         $(function() {
+            $media = $(this).find('.media');
             $('.modal').on('hide.bs.modal', function() {
-                $media = $(this).find('.media');
                 try {
                     $media[0].pause();
                 } catch (error) {
