@@ -163,24 +163,21 @@
     <script>
         $(function() {
             $('.modal').on('hide.bs.modal', function() {
-                $video = $(this).find('.media');
-                $audio = $(this).find(".media");
+                $media = $(this).find('.media');
                 try {
-                    $audio[0].pause();
+                    $media[0].pause();
                 } catch (error) {
                     
                 }
-                try {
-                    $video[0].pause(); 
-                } catch (error) {
-                    
-                }
-                // if ($audio) {
-                //     $audio[0].pause();
-                // }
-                // if ($video) {
-                //     $video[0].pause();
-                // }
+            });
+            $('.modal').on('shown.bs.modal', function() {
+                $img = $(this).find('.click');
+                if($media){
+                    $img.click(function() {
+                        // $media[0].pause();
+                        return media[0].paused() ? media[0].play(); : media[0].pause();;
+                    });
+                }   
             });
         });
     </script>
