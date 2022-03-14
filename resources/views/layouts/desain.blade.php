@@ -88,7 +88,7 @@
         </div>
     </nav>
 
-    @yield('content');
+    @yield('content')
 
     <!-- Awal footer -->
     <footer>
