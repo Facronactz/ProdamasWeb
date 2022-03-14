@@ -176,7 +176,7 @@
                 $media = $(this).find('.media');
                 $img = $(this).find('.click');
                 if($media){
-                    $img.click(function() {
+                    $img.unbind().click(function() {
                         // $media[0].pause();
                         return $media[0].paused ? $media[0].play() : $media[0].pause();
                     });
