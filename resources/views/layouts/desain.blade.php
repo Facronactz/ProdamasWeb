@@ -165,12 +165,22 @@
             $('.modal').on('hide.bs.modal', function() {
                 $video = $(this).find('.media');
                 $audio = $(this).find(".media");
-                if ($audio) {
+                try {
                     $audio[0].pause();
+                } catch (error) {
+                    
                 }
-                if ($video) {
-                    $video[0].pause();
+                try {
+                    $video[0].pause(); 
+                } catch (error) {
+                    
                 }
+                // if ($audio) {
+                //     $audio[0].pause();
+                // }
+                // if ($video) {
+                //     $video[0].pause();
+                // }
             });
         });
     </script>
