@@ -363,9 +363,10 @@
 
     <script>
         $(function() {
-            $('.modal').on('hidden.bs.modal', function() {
+            $('.modal').on('hide.bs.modal', function() {
                 // $(this).find('video').pause();
-                $(this).find('audio').pause();
+                $audio = $(this).find("audio");
+                $audio.pause();
             });
         });
     </script>
