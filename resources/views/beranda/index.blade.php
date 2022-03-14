@@ -363,11 +363,10 @@
 
     <script>
         $(function() {
-            $('.modal').on('hidden.bs.modal', function(e) {
-                $(this).find('video')[0].pause();
-                $(this).find('audio')[0].pause();
+            $('.modal').on('hidden.bs.modal', function() {
+                $(this).find('video').pause();
+                $(this).find('audio').pause();
             });
         });
     </script>
-
 @endsection
