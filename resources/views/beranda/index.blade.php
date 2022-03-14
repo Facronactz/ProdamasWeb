@@ -141,7 +141,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 videoPlayerBox centerItms">
+                        <div class="row row-cols-1 row-cols-md-2 mb-2 g-4 videoPlayerBox centerItms">
                             <div class="card" style="
                                     width: 25rem;
                                     border: none;
@@ -154,7 +154,6 @@
                                 </video>
                             </div>
                             <div class="card" style="
-                                    width: 25rem;
                                     border: none;
                                     ">
                                 <h3> {{ $item->judul }} </h3>
@@ -228,7 +227,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 videoPlayerBox centerItms">
+                        <div class="row row-cols-1 row-cols-md-2 mb-2 g-4 videoPlayerBox centerItms">
                             <div class="col-6" style="width: 25rem;
                               border: none;
                               margin: 0;
@@ -237,7 +236,6 @@
                                 <img class="max-width: 500px" src="{{ asset('fotoProd/' . $item->konten) }}" width="520" height="340" controls>
                             </div>
                             <div class="card" style="
-                              width: 25rem;
                               border: none;
                               ">
                                 <h3>{{ $item->judul }}</h3>
