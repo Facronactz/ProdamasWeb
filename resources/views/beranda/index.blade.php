@@ -294,7 +294,7 @@
                                   border: none;
                                   margin-right:1em;
                                   ">
-                                <img onclick="$audio[0].play" src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
+                                <img src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}" class="d-flex justify-content click" style="width: 100%;" alt="...">
                                 <audio class="media" controls style="width: 100%;">
                                     <source src="{{ asset('/audioProd/fileaudio/' . $item->konten) }}" type="audio/mpeg">
                                     Your browser does not support the audio element.
