@@ -11,7 +11,7 @@
         }
 
         .card-img-fix {
-            object-fit: cover;
+            object-fit: fill;
             height: calc(20vh + 10px);
             min-height: 200px;
             max-height: 300px;
