@@ -367,7 +367,7 @@
                 // $(this).find('video').pause();
                 $audio = $(this).find(".media");
                 // $audio.pause();
-                $audio.play();
+                $audio[0].pause();
             });
         });
     </script>
