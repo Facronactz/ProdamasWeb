@@ -364,10 +364,14 @@
     <script>
         $(function() {
             $('.modal').on('hide.bs.modal', function() {
-                // $(this).find('video').pause();
+                $video = $(this).find('video').pause();
                 $audio = $(this).find(".media");
-                // $audio.pause();
-                $audio[0].pause();
+                if ($audio) {
+                    $audio[0].pause();
+                }
+                if ($video) {
+                    $video[0].pause();
+                }
             });
         });
     </script>
