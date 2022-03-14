@@ -282,7 +282,7 @@
         {{-- Card Modal --}}
         <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
-                <div class="modal-content" onclick="$audio[0].play">
+                <div class="modal-content">
                     <div class="modal-header ">
                         <h5 class="modal-title" id="audioPlayerLabel">{{ $item->judul }}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -294,7 +294,7 @@
                                   border: none;
                                   margin-right:1em;
                                   ">
-                                <img src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
+                                <img onclick="$audio[0].play" src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
                                 <audio class="media" controls style="width: 100%;">
                                     <source src="{{ asset('/audioProd/fileaudio/' . $item->konten) }}" type="audio/mpeg">
                                     Your browser does not support the audio element.
