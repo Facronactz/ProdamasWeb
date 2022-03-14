@@ -170,6 +170,8 @@
                     
                 }
             });
+        });
+        $(function(){
             $('.modal').on('shown.bs.modal', function() {
                 $media = $(this).find('.media');
                 $img = $(this).find('.click');
