@@ -359,20 +359,5 @@
   </div>
   </div> --}}
     <!--end berlangganan-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <script>
-        $(function() {
-            $('.modal').on('hide.bs.modal', function() {
-                $video = $(this).find('.media');
-                $audio = $(this).find(".media");
-                if ($audio) {
-                    $audio[0].pause();
-                }
-                if ($video) {
-                    $video[0].pause();
-                }
-            });
-        });
-    </script>
 @endsection
