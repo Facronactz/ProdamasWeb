@@ -228,12 +228,12 @@
                     </div>
                     <div class="modal-body">
                         <div class="row row-cols-1 row-cols-md-2 mb-2 g-4 videoPlayerBox centerItms">
-                            <div class="col-6" style="width: 25rem;
+                            <div class="card" style="
                               border: none;
                               margin: 0;
                               margin-top: 30px;
                               ">
-                                <img class="max-width: 500px" src="{{ asset('fotoProd/' . $item->konten) }}" width="520" height="340" controls>
+                                <img class="d-flex" src="{{ asset('fotoProd/' . $item->konten) }}"controls>
                             </div>
                             <div class="card" style="
                               border: none;
