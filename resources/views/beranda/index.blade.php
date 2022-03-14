@@ -143,20 +143,20 @@
                     <div class="modal-body">
                         <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 videoPlayerBox centerItms">
                             <div class="card" style="
-                                width: 25rem;
-                                border: none;
-                                margin: 0;
-                                margin-top: 30px;
-                                ">
+                                    width: 25rem;
+                                    border: none;
+                                    margin: 0;
+                                    margin-top: 30px;
+                                    ">
                                 <video class="media" width="100%" max-width="850" height="auto" controls>
                                     <source src="{{ asset('/videoProd/konten/' . $item->konten) }}">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="card" style="
-                                width: 25rem;
-                                border: none;
-                                ">
+                                    width: 25rem;
+                                    border: none;
+                                    ">
                                 <h3> {{ $item->judul }} </h3>
                                 <p> {{ $item->caption }} </p>
                             </div>
@@ -230,16 +230,16 @@
                     <div class="modal-body">
                         <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 videoPlayerBox centerItms">
                             <div class="col-6" style="width: 25rem;
-                          border: none;
-                          margin: 0;
-                          margin-top: 30px;
-                          ">
+                              border: none;
+                              margin: 0;
+                              margin-top: 30px;
+                              ">
                                 <img class="max-width: 500px" src="{{ asset('fotoProd/' . $item->konten) }}" width="520" height="340" controls>
                             </div>
                             <div class="card" style="
-                          width: 25rem;
-                          border: none;
-                          ">
+                              width: 25rem;
+                              border: none;
+                              ">
                                 <h3>{{ $item->judul }}</h3>
                                 <p>{{ $item->caption }}</p>
                             </div>
@@ -288,12 +288,12 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 audioPlayerBox centerItms">
+                        <div class="row row-cols-1 row-cols-md-2 mb-2 g-4 audioPlayerBox centerItms">
                             <div class="card" style="
-                                  width: 25rem;
-                                  border: none;
-                                  margin-right:1em;
-                                  ">
+                                      width: 20rem;
+                                      border: none;
+                                      margin-right:1em;
+                                      ">
                                 <img src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}" class="d-flex justify-content click" style="width: 100%;" alt="...">
                                 <audio class="media" controls style="width: 100%;">
                                     <source src="{{ asset('/audioProd/fileaudio/' . $item->konten) }}" type="audio/mpeg">
@@ -301,9 +301,8 @@
                                 </audio>
                             </div>
                             <div class="card" style="
-                              width: 25rem;
-                              border: none;
-                              ">
+                                  border: none;
+                                  ">
                                 <h1> {{ $item->judul }}</h1>
                                 <p>{{ $item->caption }}</p>
                             </div>
