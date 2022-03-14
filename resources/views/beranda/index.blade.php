@@ -117,7 +117,7 @@
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Video</h3>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($video as $item)
-                <div class="col">
+                <div class="col" style="cursor: pointer">
                     <div class="card h-100 hover-card" data-bs-toggle="modal"
                         data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('videoProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix"
@@ -184,7 +184,7 @@
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Foto</h3>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($foto as $item)
-                <div class="col">
+                <div class="col" style="cursor: pointer">
                     <div class="card h-100 hover-card" data-bs-toggle="modal"
                         data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('fotoProd/' . $item->konten) }}" class="card-img-top card-img-fix" alt="...">
@@ -273,7 +273,7 @@
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Audio</h3>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($audio as $item)
-                <div class="col">
+                <div class="col" style="cursor: pointer">
                     <div class="card h-100 hover-card" data-bs-toggle="modal"
                         data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('audioProd/thumb/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix"
