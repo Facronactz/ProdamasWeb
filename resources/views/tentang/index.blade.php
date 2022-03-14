@@ -87,7 +87,7 @@
                                 Prodamas Plus 2021
                             </button>
                         </h2>
-                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                        <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <strong>(Peraturan Walikota Kediri Nomor 32 Tahun 2021)<br />Pedoman Teknis ProgramPemberdayaan Masyarakat Plus Tahun Anggaran 2022</strong>
                                 <br><a href="/perwali/PERWAL_32_Pedoman_Teknis_Prodamas_Plus_TA_2022__27_MEI.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>
@@ -200,7 +200,7 @@
                             </button>
                         </h2>
                         <!--perwal 1-->
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <strong>(Peraturan Walikota Kediri Nomor 40 Tahun 2014)<br />Pedoman Pelaksanaan Program Fasilitasi Pemberdayaan Masyarakat</strong>
                                 <br><a href="/perwali/40 PERWAL PRODAMAS.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>
@@ -208,7 +208,7 @@
                             <hr>
                         </div>
                         <!--perwal 2-->
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <strong>(Peraturan Walikota Kediri Nomor 52 Tahun 2014)<br />Perubahan Atas Peraturan Walikota Kediri Nomor 40 Tahun 2014 Tentang Pedoman Pelaksanaan Program Fasilitasi Pemberdayaan Masyarakat</strong>
                                 <a href="/perwali/52_PERWAL_2014_ttg_PERUBAHAN_PERWAL_ATAS_PERWAL_40_TAHUN_2014_ttg_PRODAMAS.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>
