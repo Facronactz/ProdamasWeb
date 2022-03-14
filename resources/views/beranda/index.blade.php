@@ -295,7 +295,7 @@
                                   margin-right:1em;
                                   ">
                                 <img src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
-                                <audio controls style="width: 100%;">
+                                <audio class="media" controls style="width: 100%;">
                                     <source src="{{ asset('/audioProd/fileaudio/' . $item->konten) }}" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
@@ -365,8 +365,9 @@
         $(function() {
             $('.modal').on('hide.bs.modal', function() {
                 // $(this).find('video').pause();
-                $audio = $(this).find("audio");
-                $audio.pause();
+                $audio = $(this).find(".media");
+                // $audio.pause();
+                $audio.play();
             });
         });
     </script>
