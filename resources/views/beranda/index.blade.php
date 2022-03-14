@@ -91,8 +91,7 @@
                 <a href="artikel/{{ $item->id }}">
                     <div class="col h-100 my-3 my-lg-0">
                         <div class="card h-100 hover-card">
-                            <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}"
-                                class="card-img-top card-img-fix" alt="...">
+                            <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $item->judul }}</h5>
                                 <p class="card-text">{{ $item->text_sampul }}</p>
@@ -103,10 +102,8 @@
             @endforeach
         </div>
         <a href="{{ url('artikel') }}">
-            <h6 class="text-end mt-3"><u>Info Lainnya <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            <h6 class="text-end mt-3"><u>Info Lainnya <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                     </svg></u></h6>
         </a>
     </div>
@@ -118,10 +115,8 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($video as $item)
                 <div class="col" style="cursor: pointer">
-                    <div class="card h-100 hover-card" data-bs-toggle="modal"
-                        data-bs-target="#audioPlayer{{ $item->id }}">
-                        <img src="{{ asset('videoProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix"
-                            alt="...">
+                    <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
+                        <img src="{{ asset('videoProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
                             <p class="card-text">{{ $item->caption }}</p>
@@ -131,17 +126,14 @@
             @endforeach
         </div>
         <a href="{{ url('video') }}">
-            <h6 class="text-end mt-3"><u>Info Lainnya <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            <h6 class="text-end mt-3"><u>Info Lainnya <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                     </svg></u></h6>
         </a>
     </div>
 
     @foreach ($video as $item)
-        <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header ">
@@ -151,20 +143,20 @@
                     <div class="modal-body">
                         <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 videoPlayerBox centerItms">
                             <div class="card" style="
-                            width: 25rem;
-                            border: none;
-                            margin: 0;
-                            margin-top: 30px;
-                            ">
+                                width: 25rem;
+                                border: none;
+                                margin: 0;
+                                margin-top: 30px;
+                                ">
                                 <video width="100%" max-width="850" height="auto" controls>
                                     <source src="{{ asset('/videoProd/konten/' . $item->konten) }}">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="card" style="
-                            width: 25rem;
-                            border: none;
-                            ">
+                                width: 25rem;
+                                border: none;
+                                ">
                                 <h3> {{ $item->judul }} </h3>
                                 <p> {{ $item->caption }} </p>
                             </div>
@@ -185,8 +177,7 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($foto as $item)
                 <div class="col" style="cursor: pointer">
-                    <div class="card h-100 hover-card" data-bs-toggle="modal"
-                        data-bs-target="#audioPlayer{{ $item->id }}">
+                    <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('fotoProd/' . $item->konten) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
@@ -197,10 +188,8 @@
             @endforeach
         </div>
         <a href="{{ url('foto') }}">
-            <h6 class="text-end mt-3"><u>Info Lainnya <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            <h6 class="text-end mt-3"><u>Info Lainnya <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                     </svg></u></h6>
         </a>
     </div>
@@ -231,8 +220,7 @@
 
     @foreach ($foto as $item)
         {{-- Card Modal --}}
-        <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header ">
@@ -242,17 +230,16 @@
                     <div class="modal-body">
                         <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 videoPlayerBox centerItms">
                             <div class="col-6" style="width: 25rem;
-                      border: none;
-                      margin: 0;
-                      margin-top: 30px;
-                      ">
-                                <img class="max-width: 500px" src="{{ asset('fotoProd/' . $item->konten) }}" width="520"
-                                    height="340" controls>
+                          border: none;
+                          margin: 0;
+                          margin-top: 30px;
+                          ">
+                                <img class="max-width: 500px" src="{{ asset('fotoProd/' . $item->konten) }}" width="520" height="340" controls>
                             </div>
                             <div class="card" style="
-                      width: 25rem;
-                      border: none;
-                      ">
+                          width: 25rem;
+                          border: none;
+                          ">
                                 <h3>{{ $item->judul }}</h3>
                                 <p>{{ $item->caption }}</p>
                             </div>
@@ -274,10 +261,8 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($audio as $item)
                 <div class="col" style="cursor: pointer">
-                    <div class="card h-100 hover-card" data-bs-toggle="modal"
-                        data-bs-target="#audioPlayer{{ $item->id }}">
-                        <img src="{{ asset('audioProd/thumb/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix"
-                            alt="...">
+                    <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
+                        <img src="{{ asset('audioProd/thumb/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
                             <p class="card-text">{{ $item->caption }}</p>
@@ -287,18 +272,15 @@
             @endforeach
         </div>
         <a href="{{ url('audio') }}">
-            <h6 class="text-end mt-3"><u>Info Lainnya <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            <h6 class="text-end mt-3"><u>Info Lainnya <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                     </svg></u></h6>
         </a>
     </div>
 
     @foreach ($audio as $item)
         {{-- Card Modal --}}
-        <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header ">
@@ -308,21 +290,20 @@
                     <div class="modal-body">
                         <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 audioPlayerBox centerItms">
                             <div class="card" style="
-                              width: 25rem;
-                              border: none;
-                              margin-right:1em;
-                              ">
-                                <img src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}"
-                                    class="d-flex justify-content" style="width: 100%;" alt="...">
+                                  width: 25rem;
+                                  border: none;
+                                  margin-right:1em;
+                                  ">
+                                <img src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
                                 <audio controls style="width: 100%;">
                                     <source src="{{ asset('/audioProd/fileaudio/' . $item->konten) }}" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
                             </div>
                             <div class="card" style="
-                          width: 25rem;
-                          border: none;
-                          ">
+                              width: 25rem;
+                              border: none;
+                              ">
                                 <h1> {{ $item->judul }}</h1>
                                 <p>{{ $item->caption }}</p>
                             </div>
@@ -378,6 +359,15 @@
   </div>
   </div> --}}
     <!--end berlangganan-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+    <script>
+        $(function() {
+            $('.modal').on('hidden.bs.modal', function(e) {
+                $(this).find('video')[0].pause();
+                $(this).find('audio')[0].pause();
+            });
+        });
+    </script>
 
 @endsection
