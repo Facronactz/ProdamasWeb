@@ -163,9 +163,15 @@
     <script>
         $(function() {
             $('.modal').on('hide.bs.modal', function() {
-                $media = $(this).find('.media');
+                $audio = $(this).find('audio');
                 try {
-                    $media[0].pause();
+                    $audio[0].pause();
+                } catch (error) {
+                    
+                }
+                $video = $(this).find('video');
+                try {
+                    $video[0].pause();
                 } catch (error) {
                     
                 }
