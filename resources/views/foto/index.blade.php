@@ -79,6 +79,9 @@
                 Tidak ada data
             </div>
         @endforelse
+        <div style="text-align:center">
+            {{ $fotos->links() }}
+        </div>
     </div>
     <!-- akhir feed foto -->
 @endsection
