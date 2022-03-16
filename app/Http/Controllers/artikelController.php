@@ -17,11 +17,11 @@ class artikelController extends Controller
     public function index(){
         $artikel = ArticleAdmin::where('status', 'published')
         ->orderBy('id', 'desc') 
-        ->get();
+        ->simplePaginate(4);
         // dd($artikel);
         $artikelupdate = ArticleAdmin::where('status', 'published') 
                 ->orderBy('id', 'desc') 
-                ->take(4) 
+                ->take(1) 
                 ->get();
         return view('artikel.index', compact('artikel','artikelupdate'));
     }
