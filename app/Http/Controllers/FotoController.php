@@ -13,7 +13,7 @@ class FotoController extends Controller
     public function index()
     {
         // $fotos = DB::table('fotos')->get();
-        $fotos = FotoAdmin::orderBy('id', 'desc')->get();
+        $fotos = FotoAdmin::orderBy('id', 'desc')->simplePaginate(8);
         return view('foto.index', compact('fotos'));
     }
 }
