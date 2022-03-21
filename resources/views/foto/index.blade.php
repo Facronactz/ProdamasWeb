@@ -60,7 +60,7 @@
             </div>
         </div>
 
-        @foreach ($fotos as $foto)     
+        @foreach ($fotos as $foto)
         {{-- Card Modal --}}
         <div class="modal fade" id="audioPlayer{{$foto->id}}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
@@ -100,6 +100,9 @@
             Tidak ada data
         </div>
         @endforelse
+        <div style="text-align:center">
+            {{ $fotos->links() }}
+        </div>
     </div>
     <!-- akhir feed foto -->
 

@@ -11,8 +11,8 @@ class VideoController extends Controller
 {
     public function index()
     {
-        $videos = DB::table('videos')->get();
-        return view('video.index', ['videos'=>$videos]);
+        $videos = DB::table('videos')->simplePaginate(8);
+        return view('video.index', ['videos' => $videos]);
     }
 
     public function beranda()

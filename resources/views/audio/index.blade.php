@@ -66,7 +66,7 @@
             </div>
         </div>
 
-        @foreach ($audios as $audio)    
+        @foreach ($audios as $audio)
         {{-- Card Modal --}}
         <div class="modal fade" id="audioPlayer{{$audio->id}}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
@@ -110,6 +110,9 @@
             Tidak ada data
         </div>
         @endforelse
+        <div style="text-align:center">
+            {{ $audios->links() }}
+        </div>
     </div>
     <!-- akhir feed audio -->
 

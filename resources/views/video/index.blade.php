@@ -39,13 +39,13 @@
         <!-- awal jumbotron -->
         <div class="banner">
             <video id="background-video" autoplay loop muted poster="kota.png">
-              <source src="img/VIDEO.mp4" type="video/mp4" />
+                <source src="img/VIDEO.mp4" type="video/mp4" />
             </video>
-          </div>
+        </div>
         <!-- akhir jumbotrom -->
 
 
-       <!-- Awal feed video -->
+        <!-- Awal feed video -->
         <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedVideo">
             {{-- Card video 1--}}
             @forelse ($videos as $video)
@@ -106,6 +106,9 @@
                 Tidak ada data
             </div>
             @endforelse
+            <div style="text-align:center">
+                {{ $videos->links() }}
+            </div>
         </div>
         <!-- akhir feed video -->
 
