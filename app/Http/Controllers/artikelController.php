@@ -26,7 +26,6 @@ class artikelController extends Controller
                         ->get();
                 return view('artikel.index', compact('artikel', 'artikelupdate'));
         }
-
         public function beranda()
         {
                 $artikel = ArticleAdmin::where('status', 'published')
