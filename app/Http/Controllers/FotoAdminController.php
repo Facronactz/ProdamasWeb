@@ -77,7 +77,7 @@ class FotoAdminController extends Controller
     // }
 
     public function edit($id) {
-        $foto = FotoAdmin::find($id)->first();
+        $foto = FotoAdmin::findOrFail($id);
         return view('admin.foto.edit',compact('foto'));
     }
 
