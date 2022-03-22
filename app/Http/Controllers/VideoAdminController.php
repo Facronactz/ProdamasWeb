@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 // use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\VideoAdmin;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\File;
+use DB;
+use File;
 
 class VideoAdminController extends Controller
 {
@@ -58,7 +58,7 @@ class VideoAdminController extends Controller
     // }
 
     public function edit($id) {
-        $video = VideoAdmin::findOrFail($id);
+        $video = VideoAdmin::find($id)->first();
         return view('admin.video.edit',compact('video'));
     }
 
