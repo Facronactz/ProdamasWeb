@@ -64,7 +64,7 @@ class ArticleController extends Controller
 
         // dd($artikel);
 
-        $gambar_sampul->move(public_path('../articleProd/sampul/'), $new_sampul);   
+        $gambar_sampul->move(public_path('../articleProd/sampul/'), $new_sampul);        
         $artikel->save();
 
         return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Ditambahkan!');
@@ -98,7 +98,7 @@ class ArticleController extends Controller
 
         $article = ArticleAdmin::findorfail($id);
         if ($request->has('picture')) {
-            File::delete("articleProd/sampul/".$article->picture);
+            File::delete("../articleProd/sampul/".$article->picture);
             $picture = $request->picture;
             $new_sampul = time() . ' - ' . $picture->getClientOriginalName();
             $picture->move('articleProd/sampul/', $new_sampul);

@@ -1,24 +1,7 @@
 @extends('layouts.desain')
-@section('audio','active')
-{{-- @section('search') --}}
-<form class="d-flex">
-    <input class="form-control me-2" type="search" style="font-family: 'Font Awesome 5 Free'; font-weight: 600; border-radius: 30px; height: 30px" placeholder=" &#xf002;" aria-label="Search" />
-</form>
-{{-- @endsection --}}
-@section('content')
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-
-    <title>Prodamas Plus</title>
+@section('media', 'active')
+@section('audio', 'active')
+@section('title', 'Audio')
 
 @section('head')
 <link rel="stylesheet" href="css/media.css">
@@ -75,14 +58,10 @@
                         <div class="card" style="
                                 width: 25rem;
                                 border: none;
-                                margin-right:1em;
                                 ">
                             <h1> {{ $audio->judul }}</h1>
                             <p>{{ $audio->caption }}</p>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
                 <div class="modal-footer">
