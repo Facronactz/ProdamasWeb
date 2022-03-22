@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 // use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\AudioAdmin;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\File;
+use DB;
+use File;
 
 class AudioAdminController extends Controller
 {
@@ -63,7 +63,7 @@ class AudioAdminController extends Controller
     }
 */
     public function edit($id) {
-        $audio = AudioAdmin::findOrFail($id);
+        $audio = AudioAdmin::find($id)->first();
         return view('admin.audio.edit',compact('audio'));
     }
 

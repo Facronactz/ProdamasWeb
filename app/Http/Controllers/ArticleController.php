@@ -82,7 +82,7 @@ class ArticleController extends Controller
     // }
 
     public function edit($id) {
-        $article = ArticleAdmin::findOrFail($id);
+        $article = ArticleAdmin::find($id)->first();
         return view('admin.article.edit',compact('article'));
     }
 
