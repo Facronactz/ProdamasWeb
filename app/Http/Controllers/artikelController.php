@@ -17,60 +17,61 @@ class artikelController extends Controller
         public function index()
         {
                 $artikel = ArticleAdmin::where('status', 'published')
-                ->orderBy('id', 'desc')
-                ->simplePaginate(4);
+                        ->orderBy('id', 'desc')
+                        ->simplePaginate(4);
                 // dd($artikel);
                 $artikelupdate = ArticleAdmin::where('status', 'published')
-                ->orderBy('id', 'desc')
-                ->take(1)
+                        ->orderBy('id', 'desc')
+                        ->take(1)
                         ->get();
                 return view('artikel.index', compact('artikel', 'artikelupdate'));
         }
 
-    public function beranda()
-    {
-        $artikel = ArticleAdmin::where('status', 'published') 
-                ->orderBy('id', 'desc') 
-                ->take(3) 
-                ->get();
+        public function beranda()
+        {
+                $artikel = ArticleAdmin::where('status', 'published')
+                        ->orderBy('id', 'desc')
+                        ->take(3)
+                        ->get();
 
-        $video = VideoAdmin::orderBy('id', 'desc') 
-                ->take(3) 
-                ->get();
+                $video = VideoAdmin::orderBy('id', 'desc')
+                        ->take(3)
+                        ->get();
 
-        $foto = FotoAdmin::orderBy('id', 'desc') 
-                ->take(3) 
-                ->get();
+                $foto = FotoAdmin::orderBy('id', 'desc')
+                        ->take(3)
+                        ->get();
 
-        $audio = AudioAdmin::orderBy('id', 'desc') 
-                ->take(3) 
-                ->get();
+                $audio = AudioAdmin::orderBy('id', 'desc')
+                        ->take(3)
+                        ->get();
 
-        // dd($audio);
-      
-        return view('beranda.index', compact('artikel','video','foto','audio'));
-    }
+                // dd($audio);
 
-    public function show($id){
-        $artikel = ArticleAdmin::where('id', $id)
-        ->orderBy('id', 'desc') 
-        ->get();
-        // dd($artikel);
-        return view ('artikel.artikelLay', compact('artikel'));
-    }
+                return view('beranda.index', compact('artikel', 'video', 'foto', 'audio'));
+        }
 
-    // public function ShareWidget()
-    // {
-    //     $shareComponent = Share::page(
-    //         'https://www.positronx.io/create-autocomplete-search-in-laravel-with-typeahead-js/',
-    //         'Your share text comes here',
-    //     )
-    //     ->facebook()
-    //     ->twitter()
-    //     ->linkedin()
-    //     ->telegram()
-    //     ->whatsapp();
-    //     //dd($shareComponent);
-    //     return view('artikel.index', compact('shareComponent'));
-    // }
+        public function show($id)
+        {
+                $artikel = ArticleAdmin::where('id', $id)
+                        ->orderBy('id', 'desc')
+                        ->get();
+                // dd($artikel);
+                return view('artikel.artikelLay', compact('artikel'));
+        }
+
+        // public function ShareWidget()
+        // {
+        //     $shareComponent = Share::page(
+        //         'https://www.positronx.io/create-autocomplete-search-in-laravel-with-typeahead-js/',
+        //         'Your share text comes here',
+        //     )
+        //     ->facebook()
+        //     ->twitter()
+        //     ->linkedin()
+        //     ->telegram()
+        //     ->whatsapp();
+        //     //dd($shareComponent);
+        //     return view('artikel.index', compact('shareComponent'));
+        // }
 }

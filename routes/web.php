@@ -15,12 +15,14 @@ use App\Http\Controllers\AudioController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\TentangController;
 use App\Http\Controllers\TulisCeritaController;
+use App\Http\Controllers\KampungkerenController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\FotoAdminController;
 use App\Http\Controllers\VideoAdminController;
 use App\Http\Controllers\AudioAdminController;
+use App\Http\Controllers\KampungkerenAdminController;
 use App\Http\Controllers\TestregistController;
 //use App\Http\Controllers\SocialShareButtonsController;
 
@@ -42,7 +44,6 @@ Route::get('/', [artikelController::class, 'beranda'])->name('dashboard');
 // tentang
 Route::get('/tentang', [TentangController::class, 'index']);
 Route::get('/bidang', [TentangController::class, 'bidang']);
-Route::get('/kampungkeren', [TentangController::class, 'kampungkeren']);
 Route::get('/pokmas', [TentangController::class, 'pokmas']);
 
 // data
@@ -70,18 +71,21 @@ Route::resource('foto', FotoController::class);
 //tulis Cerita
 Route::resource('tuliscerita', TulisCeritaController::class);
 
+//foto
+Route::resource('kampungkeren', KampungkerenController::class);
+
 
 //login & profil
 Route::get('/loginuser', [AuthController::class, 'index'])->name('login');
 Route::post('/postlogin', [AuthController::class, 'postlogin']);
 Route::get('/registrasi', [AuthController::class, 'registrasi']);
 Route::post('/postregist', [AuthController::class, 'postregist'])
-->name('auth.store');
+    ->name('auth.store');
 Route::resource('profil', EditprofilController::class);
 Route::post('/test123', [TestregistController::class, 'store']);
 
 
-Route::group(['middleware' => 'auth'], function(){ //agar tidak dapat tampil menggunakan linknya
+Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil menggunakan linknya
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/profil/{id}/edit', [ProfilController::class, 'index']);
 
@@ -118,6 +122,13 @@ Route::group(['middleware' => 'auth'], function(){ //agar tidak dapat tampil men
     Route::put('/admin/audio/{audio_id}', [AudioAdminController::class, 'update']);
     Route::delete('/admin/audio/{audio_id}', [AudioAdminController::class, 'destroy']);
 
+    //kampung keren
+    Route::get('/admin/add-kampungkeren', [KampungkerenAdminController::class, 'create']);
+    Route::post('/admin/list-kampungkeren', [KampungkerenAdminController::class, 'store']);
+    Route::get('/admin/list-kampungkeren', [KampungkerenAdminController::class, 'index']);
+    Route::get('/admin/kampungkeren/{kampungkeren_id}', [KampungkerenAdminController::class, 'edit']);
+    Route::put('/admin/kampungkeren/{kampungkeren_id}', [KampungkerenAdminController::class, 'update']);
+    Route::delete('/admin/kampungkeren/{kampungkeren_id}', [KampungkerenAdminController::class, 'destroy']);
 });
 
 //berlangganan
