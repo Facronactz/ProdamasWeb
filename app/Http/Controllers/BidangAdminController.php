@@ -43,7 +43,7 @@ class BidangAdminController extends Controller
     public function index()
     {
         $bidangs = Bidang::groupBy('judul')->get();
-        $descriptions[] = DescriptionAdmin::first()->get();
+        $descriptions = DescriptionAdmin::first()->get();
         return view('admin.bidang.list', compact('bidangs', 'descriptions'));
     }
 
