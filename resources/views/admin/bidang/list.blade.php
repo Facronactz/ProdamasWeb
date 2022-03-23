@@ -16,7 +16,7 @@ Bidang Submission
 <div class="form-group">
     <label for="desc_kampungkeren">Deskripsi</label>
     <table class="table">
-        @foreach ($descriptions as $description)
+        @foreach ($descriptions ?? '' as $description)
         <tr>
             <td>{{ $description->desc_bidang }}</td>
             <td align="right">
