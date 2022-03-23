@@ -2,5 +2,9 @@
 *.css linguist-vendored
 *.scss linguist-vendored
 *.js linguist-vendored
+<<<<<<< HEAD
 CHANGELOG.md export-ignore
 . !text !filter !merge !diff
+=======
+CHANGELOG.md export-ignore
+>>>>>>> bfdd09fb12cd7a20a8d23bfd8b8ea868ac0ed7d0
