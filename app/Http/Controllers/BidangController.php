@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Bidang;
+use App\Models\DescriptionAdmin;
+use App\Http\Controllers\DB;
 
 class BidangController extends Controller
 {
-    public function index(){
-        return view('bidang.index');
+    public function index()
+    {
+        $id = 1;
+        $bidangs = Bidang::orderByRaw('id', $id)->get();
+        $descriptions = DescriptionAdmin::first()->get();
+        return view('bidang.index', compact('bidangs', 'descriptions'));
     }
 }

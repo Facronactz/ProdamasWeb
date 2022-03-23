@@ -16,6 +16,7 @@ use App\Http\Controllers\VideoController;
 use App\Http\Controllers\TentangController;
 use App\Http\Controllers\TulisCeritaController;
 use App\Http\Controllers\KampungkerenController;
+use App\Http\Controllers\BidangController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\ArticleController;
@@ -23,6 +24,7 @@ use App\Http\Controllers\FotoAdminController;
 use App\Http\Controllers\VideoAdminController;
 use App\Http\Controllers\AudioAdminController;
 use App\Http\Controllers\KampungkerenAdminController;
+use App\Http\Controllers\BidangAdminController;
 use App\Http\Controllers\TestregistController;
 //use App\Http\Controllers\SocialShareButtonsController;
 
@@ -43,7 +45,6 @@ Route::get('/', [artikelController::class, 'beranda'])->name('dashboard');
 
 // tentang
 Route::get('/tentang', [TentangController::class, 'index']);
-Route::get('/bidang', [TentangController::class, 'bidang']);
 Route::get('/pokmas', [TentangController::class, 'pokmas']);
 
 // data
@@ -71,8 +72,11 @@ Route::resource('foto', FotoController::class);
 //tulis Cerita
 Route::resource('tuliscerita', TulisCeritaController::class);
 
-//foto
+//kampungkeren
 Route::resource('kampungkeren', KampungkerenController::class);
+
+//kampungkeren
+Route::resource('bidang', BidangController::class);
 
 
 //login & profil
@@ -129,6 +133,18 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/kampungkeren/{kampungkeren_id}', [KampungkerenAdminController::class, 'edit']);
     Route::put('/admin/kampungkeren/{kampungkeren_id}', [KampungkerenAdminController::class, 'update']);
     Route::delete('/admin/kampungkeren/{kampungkeren_id}', [KampungkerenAdminController::class, 'destroy']);
+    Route::get('/admin/kampungkeren/', [KampungkerenAdminController::class, 'edit_desc']);
+    Route::put('/admin/kampungkeren/', [KampungkerenAdminController::class, 'update_desc']);
+
+    //bidang
+    Route::get('/admin/add-bidang', [BidangAdminController::class, 'create']);
+    Route::post('/admin/list-bidang', [BidangAdminController::class, 'store']);
+    Route::get('/admin/list-bidang', [BidangAdminController::class, 'index']);
+    Route::get('/admin/bidang/{bidang_id}', [BidangAdminController::class, 'edit']);
+    Route::put('/admin/bidang/{bidang_id}', [BidangAdminController::class, 'update']);
+    Route::delete('/admin/bidang/{bidang_id}', [BidangAdminController::class, 'destroy']);
+    Route::get('/admin/bidang/', [BidangAdminController::class, 'edit_desc']);
+    Route::put('/admin/bidang/', [BidangAdminController::class, 'update_desc']);
 });
 
 //berlangganan

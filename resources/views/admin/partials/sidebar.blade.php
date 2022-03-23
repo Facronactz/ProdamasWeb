@@ -49,8 +49,14 @@
                 </li>
                 <li class="nav-item">
                     <a href="/admin/list-kampungkeren" class="nav-link @yield('kampungkeren')">
-                        <i class="nav-icon fas fa-trophy"></i>
+                        <i class="nav-icon fas fa-house-user"></i>
                         <p>Kampung Keren</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/list-bidang" class="nav-link @yield('bidang')">
+                        <i class="nav-icon fas fa-address-card"></i>
+                        <p>Bidang</p>
                     </a>
                 </li>
             </ul>

@@ -1,9 +1,9 @@
 @extends('admin.master')
 
-@section('kampungkeren', 'active')
+@section('bidang', 'active')
 
 @section('title')
-Kampung Keren Submission
+Bidang Submission
 @endsection
 
 @section('content')
@@ -18,17 +18,17 @@ Kampung Keren Submission
     <table class="table">
         @foreach ($descriptions as $description)
         <tr>
-            <td>{{ $description->desc_kampungkeren }}</td>
+            <td>{{ $description->desc_bidang }}</td>
             <td align="right">
-                <form action="/admin/kampungkeren/" method="POST">
-                    <a href="/admin/kampungkeren/" class="btn btn-info">Edit</a>
+                <form action="/admin/bidang/" method="POST">
+                    <a href="/admin/bidang/" class="btn btn-info">Edit</a>
                 </form>
             </td>
         </tr>
         @endforeach
     </table>
 </div>
-<a href="/admin/add-kampungkeren" class="btn btn-primary mb-3">Tambah Kampung Keren</a>
+<a href="/admin/add-bidang" class="btn btn-primary mb-3">Tambah Bidang</a>
 <table class="table" id="tableFoto">
     <thead class="thead-light">
         <tr>
@@ -40,15 +40,15 @@ Kampung Keren Submission
         </tr>
     </thead>
     <tbody>
-        @forelse ($kampungkeren as $key=>$karen)
+        @forelse ($bidangs as $key=>$bidang)
         <tr>
             <td>{{$key + 1}}</th>
-            <td>{{$karen->created_at}}</td>
-            <td>{{$karen->judul}}</td>
-            <td>{{$karen->foto}}</td>
+            <td>{{$bidang->created_at}}</td>
+            <td>{{$bidang->judul}}</td>
+            <td>{{$bidang->foto}}</td>
             <td>
-                <form action="/admin/kampungkeren/{{$karen->id}}" method="POST">
-                    <a href="/admin/kampungkeren/{{$karen->id}}" class="btn btn-info">Edit</a>
+                <form action="/admin/bidang/{{$bidang->id}}" method="POST">
+                    <a href="/admin/bidang/{{$bidang->id}}" class="btn btn-info">Edit</a>
                     @csrf
                     @method('DELETE')
                     <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Foto?')" value="Delete">
