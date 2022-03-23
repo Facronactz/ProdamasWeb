@@ -27,7 +27,7 @@ class BidangAdminController extends Controller
         foreach ($request->file('foto') as $file) {
             if ($file->isValid()) {
                 $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-                $file->move(public_path('../public/bidangProd/'), $foto);
+                $file->move(public_path('../bidangProd/'), $foto);
                 $files[] = [
                     'judul' => strtoupper($request->judul),
                     'foto' => $foto,
