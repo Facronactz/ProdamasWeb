@@ -11,8 +11,7 @@ class BidangController extends Controller
 {
     public function index()
     {
-        $id = 1;
-        $bidangs = Bidang::orderByRaw('id', $id)->get();
+        $bidangs = Bidang::orderBy('id')->get();
         $descriptions = DescriptionAdmin::first()->get();
         return view('bidang.index', compact('bidangs', 'descriptions'));
     }
