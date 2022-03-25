@@ -75,7 +75,7 @@
         Tidak ada data
     </div>
     @endforelse
-    <div style="text-align:center">
+    <div class="d-flex justify-content-end w-100">
         {{ $fotos->links() }}
     </div>
 </div>

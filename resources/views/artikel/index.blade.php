@@ -39,7 +39,7 @@
                 </div>
             </div>
             @endforeach
-            <div style="text-align:left">
+            <div class="d-flex justify-content-end w-100">
                 {{ $artikel->links() }}
             </div>
         </div>
