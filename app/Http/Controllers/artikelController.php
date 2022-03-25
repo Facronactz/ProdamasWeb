@@ -17,8 +17,8 @@ class artikelController extends Controller
         public function index()
         {
                 $artikel = ArticleAdmin::where('status', 'published')
-                        ->orderBy('id', 'desc')
-                        ->simplePaginate(4);
+                        ->orderBy('id', 'desc');
+                        // ->paginate(4);
                 // dd($artikel);
                 $artikelupdate = ArticleAdmin::where('status', 'published')
                         ->orderBy('id', 'desc')
