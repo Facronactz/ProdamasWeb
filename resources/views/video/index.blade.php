@@ -21,7 +21,7 @@
 <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedVideo">
     {{-- Card video 1 --}}
     @forelse ($videos as $video)
-    <div class=" card noBorder cardAudio" style="width: 18rem;">
+    <div class=" card noBorder cardAudio" style="width: 18rem; cursor: pointer;">
         <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $video->id }}">
             <img src="{{ asset('/videoProd/sampul/' . $video->gambar_sampul) }}" style="width: 250px; height: 270px" class="card-img-top d-flex justify-content" alt="video-prodamas">
             <div class="card-body">
