@@ -20,10 +20,10 @@
 
     <!-- Awal feed foto -->
     <div class="container overflow-hidden">
-        <div class="row gx-5">
+        <div class="row row-cols-2 gx-0">
             {{-- Card foto --}}
             @forelse ($fotos as $foto)
-                <div class="card bg-dark text-white" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $foto->id }}">
+                <div class="col mx-3 card bg-dark text-white" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $foto->id }}">
                     <img src="{{ asset('fotoProd/' . $foto->konten) }}" class="card-img" alt="...">
                     <div class="card-img-overlay">
                         <h5 class="card-title">{{ $foto->judul }}</h5>
