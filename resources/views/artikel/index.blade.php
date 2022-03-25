@@ -40,7 +40,7 @@
             </div>
             @endforeach
             <div style="text-align:left">
-                {{-- {{ $artikel->links() }} --}}
+                {{ $artikel->links() }}
             </div>
         </div>
         <!-- kanan -->
