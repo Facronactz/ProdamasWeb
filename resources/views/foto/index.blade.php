@@ -73,7 +73,7 @@
                 </div>
             @endforelse
         </div>
-        <div class="d-flex justify-content-end w-100">
+        <div class="d-flex justify-content-end w-100  my-3">
             {{ $fotos->links() }}
         </div>
     </div>

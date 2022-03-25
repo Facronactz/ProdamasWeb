@@ -78,7 +78,7 @@
         Tidak ada data
     </div>
     @endforelse
-    <div class="d-flex justify-content-end w-100">
+    <div class="d-flex justify-content-end w-100 my-3">
         {{ $videos->links() }}
     </div>
 </div>
