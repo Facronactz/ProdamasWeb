@@ -11,7 +11,7 @@
 <!-- awal jumbotron -->
 <div class="banner">
     <video id="background-video" autoplay loop muted poster="kota.png">
-        <source src="img/AUDIO.mp4" type="video/mp4" />
+        <source src="header/hAudio.png" type="video/mp4" />
     </video>
 </div>
 <!-- akhir jumbotrom -->
