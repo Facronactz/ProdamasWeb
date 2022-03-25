@@ -22,7 +22,7 @@
             <div class="col">
 
                 @foreach ($artikel as $item)
-                    <div class="card mb-3" style="max-width: 540px;">
+                    <div class="card mb-3">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="img-fluid rounded-start">
