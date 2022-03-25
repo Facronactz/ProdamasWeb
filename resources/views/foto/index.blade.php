@@ -6,7 +6,6 @@
 
 @section('head')
     <link rel="stylesheet" href="css/media.css">
-    <link rel="stylesheet" href="css/text.css">
 @endsection
 
 @section('content')
@@ -28,7 +27,7 @@
                     <div class="card bg-dark text-white" data-bs-toggle="modal" data-bs-target="#foto{{ $foto->id }}">
                         <img src="{{ asset('fotoProd/' . $foto->konten) }}" class="card-img" alt="...">
                         <div class="card-img-overlay">
-                            <h5 class="card-title stroke halftone halftone-color">{{ $foto->judul }}</h5>
+                            <h5 class="card-title">{{ $foto->judul }}</h5>
                         </div>
                     </div>
                 </div>
