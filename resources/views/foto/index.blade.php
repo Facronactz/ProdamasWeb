@@ -23,16 +23,18 @@
         <div class="row row-cols-2 gx-0">
             {{-- Card foto --}}
             @forelse ($fotos as $foto)
-                <div class="col mx-3 card bg-dark text-white" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $foto->id }}">
-                    <img src="{{ asset('fotoProd/' . $foto->konten) }}" class="card-img" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">{{ $foto->judul }}</h5>
+                <div class="col p-2">
+                    <div class="card bg-dark text-white" data-bs-toggle="modal" data-bs-target="#foto{{ $foto->id }}">
+                        <img src="{{ asset('fotoProd/' . $foto->konten) }}" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">{{ $foto->judul }}</h5>
+                        </div>
                     </div>
                 </div>
 
                 @foreach ($fotos as $foto)
                     {{-- Card Modal --}}
-                    <div class="modal fade" id="audioPlayer{{ $foto->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+                    <div class="modal fade" id="foto{{ $foto->id }}" tabindex="-1" aria-labelledby="fotoLabel" aria-hidden="true">
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header ">
@@ -42,16 +44,16 @@
                                 <div class="modal-body">
                                     <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 videoPlayerBox centerItms">
                                         <div class="col-6" style="width: 25rem;
-                                            border: none;
-                                            margin: 0;
-                                            margin-top: 30px;
-                                            ">
+                                                border: none;
+                                                margin: 0;
+                                                margin-top: 30px;
+                                                ">
                                             <img class="max-width: 500px" src="{{ asset('fotoProd/' . $foto->konten) }}" width="520" height="340" controls>
                                         </div>
                                         <div class="card" style="
-                                            width: 25rem;
-                                            border: none;
-                                            ">
+                                                width: 25rem;
+                                                border: none;
+                                                ">
                                             <h3>{{ $foto->judul }}</h3>
                                             <p>{{ $foto->caption }}</p>
                                         </div>
