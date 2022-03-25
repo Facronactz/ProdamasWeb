@@ -24,7 +24,7 @@
             {{-- Card foto --}}
             @forelse ($fotos as $foto)
                 <div class="col p-2">
-                    <div class="card bg-dark text-white" data-bs-toggle="modal" data-bs-target="#foto{{ $foto->id }}">
+                    <div class="card bg-dark text-white" data-bs-toggle="modal" data-bs-target="#foto{{ $foto->id }}" style="cursor: pointer">
                         <img src="{{ asset('fotoProd/' . $foto->konten) }}" class="card-img" alt="...">
                         <div class="card-img-overlay">
                             <h5 class="card-title">{{ $foto->judul }}</h5>
