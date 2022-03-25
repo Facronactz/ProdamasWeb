@@ -11,7 +11,7 @@ class AudioController extends Controller
     public function index()
     {
         // $audios = DB::table('audios')->get();
-        $audios = Audio::orderBy('id', 'desc')->simplePaginate(8);
+        $audios = Audio::orderBy('id', 'desc')->paginate(4);
         return view('audio.index', compact('audios'));
     }
 }
