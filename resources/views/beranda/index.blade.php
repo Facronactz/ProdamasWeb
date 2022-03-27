@@ -2,7 +2,8 @@
 @section('beranda', 'active')
 @section('title', 'Beranda')
 @section('head')
-    <link rel="stylesheet" href="css/beranda.css">
+    <link rel="stylesheet" href="css/beranda.css">\
+    <link rel="stylesheet" href="css/hover.css">
     <style>
         .carousel-img {
             object-fit: cover;
@@ -89,7 +90,7 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
             @foreach ($artikel as $item)
                 <a href="artikel/{{ $item->id }}">
-                    <div class="col h-100 my-3 my-lg-0">
+                    <div class="col h-100 my-3 my-lg-0 hvr-bob">
                         <div class="card h-100 hover-card">
                             <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                             <div class="card-body">
@@ -114,7 +115,7 @@
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Video</h3>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($video as $item)
-                <div class="col" style="cursor: pointer">
+                <div class="col hvr-bob" style="cursor: pointer">
                     <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('videoProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
@@ -175,7 +176,7 @@
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Foto</h3>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($foto as $item)
-                <div class="col" style="cursor: pointer">
+                <div class="col hvr-bob" style="cursor: pointer">
                     <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('fotoProd/' . $item->konten) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
@@ -258,7 +259,7 @@
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Audio</h3>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($audio as $item)
-                <div class="col" style="cursor: pointer">
+                <div class="col hvr-bob" style="cursor: pointer">
                     <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('audioProd/thumb/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
