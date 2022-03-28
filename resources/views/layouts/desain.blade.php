@@ -75,6 +75,13 @@
                     <a class="nav-link">Kontak</a>
                 </div>
 
+                {{-- Search --}}
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search" aria-label="default input example">
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
                 <!-- Medsos -->
                 <div>
                     <div class="d-flex justify-content-evenly">
@@ -167,26 +174,26 @@
                 try {
                     $audio[0].pause();
                 } catch (error) {
-                    
+
                 }
                 $video = $(this).find('video');
                 try {
                     $video[0].pause();
                 } catch (error) {
-                    
+
                 }
             });
         });
-        $(function(){
+        $(function() {
             $('.modal').on('shown.bs.modal', function() {
                 $media = $(this).find('.media');
                 $img = $(this).find('.click');
-                if($media){
+                if ($media) {
                     $img.unbind().click(function() {
                         // $media[0].pause();
                         return $media[0].paused ? $media[0].play() : $media[0].pause();
                     });
-                }   
+                }
             });
         });
     </script>
