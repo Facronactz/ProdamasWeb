@@ -17,15 +17,7 @@
     </div>
     <!-- akhir jumbotrom -->
 
-    {{-- Search Bar --}}
-    <div class="input-group" style="max-width: 10vw">
-        <form action="searchfoto" method="GET">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchfoto">
-        <button class="btn btn-primary" type="submit">
-            <i class="fas fa-search link-light"></i>
-        </button>
-        </form>
-    </div>
+
     <!-- Awal feed foto -->
     <div class="container overflow-hidden">
         <div class="row row-cols-2 gx-0">
