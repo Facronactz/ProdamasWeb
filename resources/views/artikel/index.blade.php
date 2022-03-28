@@ -50,6 +50,10 @@
                                     <p class="card-text" style="font-size: 14px;"><?= $item->text_sampul ?></p>
                                     <p class="card-text" style="font-size: 13px;"><small class="text-muted">Last
                                             updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 @endforeach
                 <div class="d-flex justify-content-end w-100 my-3">
                     {{ $artikel->links() }}
