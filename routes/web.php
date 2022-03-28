@@ -137,8 +137,8 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/kampungkeren/{kampungkeren_id}', [KampungkerenAdminController::class, 'edit']);
     Route::put('/admin/kampungkeren/{kampungkeren_id}', [KampungkerenAdminController::class, 'update']);
     Route::delete('/admin/kampungkeren/{kampungkeren_id}', [KampungkerenAdminController::class, 'destroy']);
-    Route::get('/admin/kampungkeren/', [KampungkerenAdminController::class, 'edit_desc']);
-    Route::put('/admin/kampungkeren/', [KampungkerenAdminController::class, 'update_desc']);
+    Route::get('/admin/kampungkerens/', [KampungkerenAdminController::class, 'edit_desc']);
+    Route::put('/admin/kampungkerens/', [KampungkerenAdminController::class, 'update_desc']);
 
     //bidang
     Route::get('/admin/add-bidang', [BidangAdminController::class, 'create']);
@@ -147,8 +147,8 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/bidang/{bidang_id}', [BidangAdminController::class, 'edit']);
     Route::put('/admin/bidang/{bidang_id}', [BidangAdminController::class, 'update']);
     Route::delete('/admin/bidang/{bidang_id}', [BidangAdminController::class, 'destroy']);
-    Route::get('/admin/bidang/', [BidangAdminController::class, 'edit_desc']);
-    Route::put('/admin/bidang/', [BidangAdminController::class, 'update_desc']);
+    Route::get('/admin/bidangs/', [BidangAdminController::class, 'edit_desc']);
+    Route::put('/admin/bidangs/', [BidangAdminController::class, 'update_desc']);
 
     //pokmas
     Route::get('/admin/add-pokmas', [PokmasAdminController::class, 'create']);
@@ -157,8 +157,8 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/pokmas/{pokmas_id}', [PokmasAdminController::class, 'edit']);
     Route::put('/admin/pokmas/{pokmas_id}', [PokmasAdminController::class, 'update']);
     Route::delete('/admin/pokmas/{pokmas_id}', [PokmasAdminController::class, 'destroy']);
-    Route::get('/admin/pokmas/', [PokmasAdminController::class, 'edit_desc']);
-    Route::put('/admin/pokmas/', [PokmasAdminController::class, 'update_desc']);
+    Route::get('/admin/pokmass/', [PokmasAdminController::class, 'edit_desc']);
+    Route::put('/admin/pokmass/', [PokmasAdminController::class, 'update_desc']);
 });
 
 //berlangganan

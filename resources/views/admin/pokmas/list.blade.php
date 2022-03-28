@@ -18,10 +18,10 @@ Pokmas Submission
     <table class="table">
         @foreach ($descriptions as $description)
         <tr>
-            <td>{{ $description->desc_pokmas }}</td>
+            <td><?= $description->desc_pokmas ?></td>
             <td align="right">
-                <form action="/admin/pokmas/" method="POST">
-                    <a href="/admin/pokmas/" class="btn btn-info">Edit</a>
+                <form action="/admin/pokmass/" method="POST">
+                    <a href="/admin/pokmass/" class="btn btn-info">Edit</a>
                 </form>
             </td>
         </tr>

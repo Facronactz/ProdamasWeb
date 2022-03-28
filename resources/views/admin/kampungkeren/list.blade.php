@@ -18,10 +18,10 @@ Kampung Keren Submission
     <table class="table">
         @foreach ($descriptions ?? '' as $description)
         <tr>
-            <td>{{ $description->desc_kampungkeren }}</td>
+            <td><?= $description->desc_kampungkeren ?></td>
             <td align="right">
-                <form action="/admin/kampungkeren/" method="POST">
-                    <a href="/admin/kampungkeren/" class="btn btn-info">Edit</a>
+                <form action="/admin/kampungkerens/" method="POST">
+                    <a href="/admin/kampungkerens/" class="btn btn-info">Edit</a>
                 </form>
             </td>
         </tr>

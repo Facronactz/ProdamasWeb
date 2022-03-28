@@ -8,7 +8,7 @@ Edit Deskripsi Kampung Keren
 
 @section('content')
 
-<form action="/admin/kampungkeren/" method="POST" enctype="application/x-www-form-urlencoded">
+<form action="/admin/kampungkerens/" method="POST" enctype="application/x-www-form-urlencoded">
     @csrf
     @method('put')
     <div class="form-group">

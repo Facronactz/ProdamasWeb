@@ -8,7 +8,7 @@ Edit Deskripsi Bidang
 
 @section('content')
 
-<form action="/admin/bidang/" method="POST" enctype="application/x-www-form-urlencoded">
+<form action="/admin/bidangs/" method="POST" enctype="application/x-www-form-urlencoded">
     @csrf
     @method('put')
     <div class="form-group">
