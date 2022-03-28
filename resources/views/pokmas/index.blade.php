@@ -36,7 +36,7 @@
         <section class="tentang mt-5 ">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 py-5" style="white-space: pre-line">
+                    <div class="col-md-6 py-5">
                         <?= $pokmas->caption ?>
                     </div>
                     <div class="col-md-6 py-5">
