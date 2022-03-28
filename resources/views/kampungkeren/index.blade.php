@@ -37,7 +37,7 @@
     <div class="kampung-keren">
         <div class="container">
             <h2>Kampung Keren</h2> <br>
-            @foreach ($descriptions as $description)
+            @foreach ($descriptions ?? '' as $description)
             <h5> <?= $description->desc_kampungkeren ?></h5>
             @endforeach
         </div>
