@@ -48,15 +48,30 @@
                 <div class="card-right bg-light">
                     <h5 class="card-header">Update Artikel</h5>
                     @foreach ($artikelupdate as $item)
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="img-fluid rounded-start">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $item->judul }}</h5>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        <a class="stretched-link" href="artikel/{{ $item->id }}"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-sm-12">
                             <div class="caption">
                                 <div class="row">
-                                    <a href="artikel/{{ $item->id }}">
-                                        <h5>{{ $item->judul }}</h5>
-                                    </a>
                                     <div class="col-xl-3">
                                         <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" width="100%" alt="Cinque Terre">
                                     </div>
+                                    <a href="artikel/{{ $item->id }}">
+                                        <h5>{{ $item->judul }}</h5>
+                                    </a>
                                 </div>
                             </div>
                         </div>
