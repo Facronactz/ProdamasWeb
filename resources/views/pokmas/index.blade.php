@@ -10,7 +10,7 @@
         <div class="container-fluid banner">
             <div class="container banner-content">
                 <h2><u>POKMAS</u></h2>
-                @foreach ($descriptions as $description)
+                @foreach ($descriptions ?? '' as $description)
                 <h5><?= $description->desc_pokmas ?></h5>
                 @endforeach
             </div>
