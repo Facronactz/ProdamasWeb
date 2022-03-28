@@ -79,7 +79,7 @@
                 <div class="input-group" style="max-width: 10vw">
                     <input class="form-control" type="text" placeholder="Search" aria-label="Search">
                     <button class="btn btn-primary" style="width: 20px">
-                        <i class="fab fa-solid fa-magnifying-glass"></i>
+                        <i class="fab fa-search link-light"></i>
                     </button>
                 </div>
                 <!-- Medsos -->
