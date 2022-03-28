@@ -125,10 +125,12 @@
                 </div>
             @endforeach
         </div>
-        <a href="{{ url('video') }}" class="btn btn-primary hvr-icon-forward">
-            Selengkapnya
-            <i class="hvr-icon fas fa-arrow-right"></i>
-        </a>
+        <div class="d-flex justify-content-end mt-2">
+            <a href="{{ url('video') }}" class="btn btn-primary hvr-icon-forward">
+                Selengkapnya
+                <i class="hvr-icon fas fa-arrow-right"></i>
+            </a>
+        </div>
     </div>
 
     @foreach ($video as $item)
