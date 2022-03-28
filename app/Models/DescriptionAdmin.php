@@ -16,6 +16,6 @@ class DescriptionAdmin extends Model
     public function getCreatedAtAttribute()
     {
         return Carbon::parse($this->attributes['created_at'])
-        ->translatedFormat('d F Y');
+            ->translatedFormat('d F Y');
     }
 }
