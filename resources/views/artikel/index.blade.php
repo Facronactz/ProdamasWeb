@@ -21,7 +21,12 @@
 
             <!-- Kiri -->
             <div class="col">
-
+                <div class="input-group" style="max-width: 10vw">
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-search link-light"></i>
+                    </button>
+                </div> 
                 @foreach ($artikel as $item)
                     <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
                         <div class="row g-0">
