@@ -23,7 +23,7 @@
                         <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" alt=""
                             style="height:100%; max-width: 800px">
                     </div><br>
-                    <p><?= $item->article ?></p>
+                    <p>{{ $item->article }}</p>
                 </div>
             @endforeach
         </div>
@@ -42,7 +42,7 @@
                                     alt="Cinque Terre">
                             </div>
                             <div class="col-sm-9">
-                                <p><?= $item->text_sampul ?></p>
+                                <p>{{ $item->text_sampul }}</p>
                             </div>
                         </div>
                     </div>
