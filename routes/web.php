@@ -28,8 +28,6 @@ use App\Http\Controllers\AudioAdminController;
 use App\Http\Controllers\KampungkerenAdminController;
 use App\Http\Controllers\BidangAdminController;
 use App\Http\Controllers\TestregistController;
-use App\Http\Controllers\SearchController; 
-
 //use App\Http\Controllers\SocialShareButtonsController;
 
 
@@ -184,22 +182,6 @@ Route::get('registration', [CustomAuthController::class, 'registration'])->name(
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
-
-//Route search artikel
-Route::resource('/artikel', artikelController::class);
-Route::get('/searchartikel', [SearchController::class, 'searchartikel'])->name('search');
-
-//Route search audio
-Route::resource('/audio', AudioController::class);
-Route::get('/searchaudio', [SearchController::class, 'searchaudio'])->name('search');
-
-//Route search foto
-Route::resource('/foto', FotoController::class);
-Route::get('/searchfoto', [SearchController::class, 'searchfoto'])->name('search');
-
-//Route search video
-Route::resource('/video', VideoController::class);
-Route::get('/searchvideo', [SearchController::class, 'searchvideo'])->name('search');
 
 
 //admin
