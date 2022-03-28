@@ -89,7 +89,7 @@
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Artikel</h3>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
             @foreach ($artikel as $item)
-                <div class="col h-100 my-3 my-lg-0 hvr-bob">
+                <div class="col my-3 my-lg-0 hvr-bob">
                     <div class="card h-100 hvr-grow">
                         <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
@@ -125,10 +125,9 @@
                 </div>
             @endforeach
         </div>
-        <a href="{{ url('video') }}">
-            <h6 class="text-end mt-3"><u>Info Lainnya <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                    </svg></u></h6>
+        <a href="{{ url('video') }}" class="btn btn-primary hvr-icon-forward">
+            Selengkapnya
+            <div class="hvr-icon">&#10140;</div>
         </a>
     </div>
 
