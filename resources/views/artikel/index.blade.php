@@ -54,7 +54,7 @@
                                     <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="img-fluid rounded-start">
                                 </div>
                                 <div class="col-md-8">
-                                    <div class="card-body">
+                                    <div class="card-body py-0">
                                         <h5 class="card-title" style="font-size: 14px;">{{ $item->judul }}</h5>
                                         <p class="card-text" style="font-size: 12px;"><small class="text-muted">Last updated 3 mins ago</small></p>
                                         <a class="stretched-link" href="artikel/{{ $item->id }}"></a>
