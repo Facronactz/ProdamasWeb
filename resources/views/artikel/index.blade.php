@@ -39,10 +39,11 @@
                     {{ $artikel->links() }}
                 </div>
             </div>
-            @endforeach
+            
             <div style="text-align:left">
                 {{ $artikel->links() }}
             </div>
+            @endforeach
         </div>
         <!-- kanan -->
         <div class="rightcolumn">
