@@ -93,7 +93,7 @@ class KampungkerenAdminController extends Controller
 
     public function edit_desc()
     {
-        $descriptions = DescriptionAdmin::first();
+        $descriptions = DescriptionAdmin::first()->get();
         return view('admin.kampungkeren.editdesc', compact('descriptions'));
     }
 
@@ -104,7 +104,7 @@ class KampungkerenAdminController extends Controller
         ]);
 
 
-        $descriptions = DescriptionAdmin::first();
+        $descriptions = DescriptionAdmin::first()->get();
         $descriptions_data = ["desc_kampungkeren" => $request["desc_kampungkeren"]];
         $descriptions->update($descriptions_data);
 
