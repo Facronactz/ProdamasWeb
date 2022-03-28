@@ -48,9 +48,9 @@
                 <div class="card-right bg-light">
                     <h5 class="card-header">Update Artikel</h5>
                     @foreach ($artikelupdate as $item)
-                        <div class="card mb-3" style="max-width: 540px;">
+                        <div class="card mb-3 p-0" style="max-width: 540px;">
                             <div class="row g-0">
-                                <div class="col-md-4">
+                                <div class="col-md-4 my-auto">
                                     <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="img-fluid rounded-start">
                                 </div>
                                 <div class="col-md-8">
