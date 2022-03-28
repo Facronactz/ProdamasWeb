@@ -21,6 +21,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/desain.css') }}">
+    {{-- Animation --}}
+    <link rel="stylesheet" href="{{ asset('css/hover.css') }}">
     @yield('head')
     @hasSection('title')
         <title>Prodamas Plus - @yield('title')</title>
@@ -75,6 +77,13 @@
                     <a class="nav-link">Kontak</a>
                 </div>
 
+                {{-- Search --}}
+                <div class="input-group" style="max-width: 10vw">
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-search link-light"></i>
+                    </button>
+                </div>
                 <!-- Medsos -->
                 <div>
                     <div class="d-flex justify-content-evenly">
@@ -167,26 +176,26 @@
                 try {
                     $audio[0].pause();
                 } catch (error) {
-                    
+
                 }
                 $video = $(this).find('video');
                 try {
                     $video[0].pause();
                 } catch (error) {
-                    
+
                 }
             });
         });
-        $(function(){
+        $(function() {
             $('.modal').on('shown.bs.modal', function() {
                 $media = $(this).find('.media');
                 $img = $(this).find('.click');
-                if($media){
+                if ($media) {
                     $img.unbind().click(function() {
                         // $media[0].pause();
                         return $media[0].paused ? $media[0].play() : $media[0].pause();
                     });
-                }   
+                }
             });
         });
     </script>

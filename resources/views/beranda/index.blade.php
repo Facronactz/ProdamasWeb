@@ -3,6 +3,7 @@
 @section('title', 'Beranda')
 @section('head')
     <link rel="stylesheet" href="css/beranda.css">
+    <link rel="stylesheet" href="css/hover.css">
     <style>
         .carousel-img {
             object-fit: cover;
@@ -88,24 +89,24 @@
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Artikel</h3>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
             @foreach ($artikel as $item)
-                <a href="artikel/{{ $item->id }}">
-                    <div class="col h-100 my-3 my-lg-0">
-                        <div class="card h-100 hover-card">
-                            <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $item->judul }}</h5>
-                                <p class="card-text">{{ $item->text_sampul }}</p>
-                            </div>
+                <div class="col my-3 my-lg-0 hvr-bob">
+                    <div class="card h-100 hvr-grow">
+                        <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
+                        <div class="card-body">
+                            <a class="stretched-link" href="artikel/{{ $item->id }}"></a>
+                            <h5 class="card-title">{{ $item->judul }}</h5>
+                            <p class="card-text">{{ $item->text_sampul }}</p>
                         </div>
                     </div>
-                </a>
+                </div>
             @endforeach
         </div>
-        <a href="{{ url('artikel') }}">
-            <h6 class="text-end mt-3"><u>Info Lainnya <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                    </svg></u></h6>
-        </a>
+        <div class="d-flex justify-content-end mt-2">
+            <a href="{{ url('artikel') }}" class="btn btn-primary hvr-icon-forward">
+                Selengkapnya
+                <i class="hvr-icon fas fa-arrow-right"></i>
+            </a>
+        </div>
     </div>
     <!--end artikel-->
 
@@ -114,8 +115,8 @@
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Video</h3>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($video as $item)
-                <div class="col" style="cursor: pointer">
-                    <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
+                <div class="col hvr-bob" style="cursor: pointer">
+                    <div class="card h-100 hvr-grow" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('videoProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
@@ -125,11 +126,12 @@
                 </div>
             @endforeach
         </div>
-        <a href="{{ url('video') }}">
-            <h6 class="text-end mt-3"><u>Info Lainnya <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                    </svg></u></h6>
-        </a>
+        <div class="d-flex justify-content-end mt-2">
+            <a href="{{ url('video') }}" class="btn btn-primary hvr-icon-forward">
+                Selengkapnya
+                <i class="hvr-icon fas fa-arrow-right"></i>
+            </a>
+        </div>
     </div>
 
     @foreach ($video as $item)
@@ -143,19 +145,19 @@
                     <div class="modal-body">
                         <div class="row row-cols-1 row-cols-md-2 mb-2 g-4 videoPlayerBox centerItms">
                             <div class="card" style="
-                                    width: 25rem;
-                                    border: none;
-                                    margin: 0;
-                                    margin-top: 30px;
-                                    ">
+                                        width: 25rem;
+                                        border: none;
+                                        margin: 0;
+                                        margin-top: 30px;
+                                        ">
                                 <video class="media" width="100%" max-width="850" height="auto" controls>
                                     <source src="{{ asset('/videoProd/konten/' . $item->konten) }}">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="card" style="
-                                    border: none;
-                                    ">
+                                        border: none;
+                                        ">
                                 <h3> {{ $item->judul }} </h3>
                                 <p> {{ $item->caption }} </p>
                             </div>
@@ -175,8 +177,8 @@
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Foto</h3>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($foto as $item)
-                <div class="col" style="cursor: pointer">
-                    <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
+                <div class="col hvr-bob" style="cursor: pointer">
+                    <div class="card h-100 hvr-grow" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('fotoProd/' . $item->konten) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
@@ -186,11 +188,12 @@
                 </div>
             @endforeach
         </div>
-        <a href="{{ url('foto') }}">
-            <h6 class="text-end mt-3"><u>Info Lainnya <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                    </svg></u></h6>
-        </a>
+        <div class="d-flex justify-content-end mt-2">
+            <a href="{{ url('foto') }}" class="btn btn-primary hvr-icon-forward">
+                Selengkapnya
+                <i class="hvr-icon fas fa-arrow-right"></i>
+            </a>
+        </div>
     </div>
 
 
@@ -200,7 +203,7 @@
       @foreach ($foto as $item)
       <a href="foto/{{$item->id}}"></a>
   <div class="col">
-    <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$item->id}}">
+    <div class="card h-100 hvr-grow" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$item->id}}">
       <img src="{{ asset('fotoProd/'.$item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{ $item->judul }}</h5>
@@ -229,15 +232,15 @@
                     <div class="modal-body">
                         <div class="row row-cols-1 row-cols-md-2 mb-2 g-4 videoPlayerBox centerItms">
                             <div class="card" style="
-                              border: none;
-                              margin: 0;
-                              margin-top: 30px;
-                              ">
-                                <img class="d-flex" src="{{ asset('fotoProd/' . $item->konten) }}"controls>
+                                  border: none;
+                                  margin: 0;
+                                  margin-top: 30px;
+                                  ">
+                                <img class="d-flex" src="{{ asset('fotoProd/' . $item->konten) }}" controls>
                             </div>
                             <div class="card" style="
-                              border: none;
-                              ">
+                                  border: none;
+                                  ">
                                 <h3>{{ $item->judul }}</h3>
                                 <p>{{ $item->caption }}</p>
                             </div>
@@ -258,8 +261,8 @@
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Audio</h3>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($audio as $item)
-                <div class="col" style="cursor: pointer">
-                    <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
+                <div class="col hvr-bob" style="cursor: pointer">
+                    <div class="card h-100 hvr-grow" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('audioProd/thumb/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
@@ -269,11 +272,12 @@
                 </div>
             @endforeach
         </div>
-        <a href="{{ url('audio') }}">
-            <h6 class="text-end mt-3"><u>Info Lainnya <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                    </svg></u></h6>
-        </a>
+        <div class="d-flex justify-content-end mt-2">
+            <a href="{{ url('audio') }}" class="btn btn-primary hvr-icon-forward">
+                Selengkapnya
+                <i class="hvr-icon fas fa-arrow-right"></i>
+            </a>
+        </div>
     </div>
 
     @foreach ($audio as $item)
@@ -288,10 +292,10 @@
                     <div class="modal-body">
                         <div class="row row-cols-1 row-cols-md-2 mb-2 g-4 audioPlayerBox centerItms">
                             <div class="card" style="
-                                      width: 20rem;
-                                      border: none;
-                                      margin-right:1em;
-                                      ">
+                                          width: 20rem;
+                                          border: none;
+                                          margin-right:1em;
+                                          ">
                                 <img src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}" class="d-flex justify-content click" style="width: 100%;" alt="...">
                                 <audio class="media" controls style="width: 100%;">
                                     <source src="{{ asset('/audioProd/fileaudio/' . $item->konten) }}" type="audio/mpeg">
@@ -299,8 +303,8 @@
                                 </audio>
                             </div>
                             <div class="card" style="
-                                  border: none;
-                                  ">
+                                      border: none;
+                                      ">
                                 <h1> {{ $item->judul }}</h1>
                                 <p>{{ $item->caption }}</p>
                             </div>
