@@ -62,19 +62,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-sm-12">
-                            <div class="caption">
-                                <div class="row">
-                                    <div class="col-xl-3">
-                                        <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" width="100%" alt="Cinque Terre">
-                                    </div>
-                                    <a href="artikel/{{ $item->id }}">
-                                        <h5>{{ $item->judul }}</h5>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
                     @endforeach
                 </div>
                 <div class="card-right bg-light">
