@@ -78,12 +78,18 @@
                 </div>
 
                 {{-- Search --}}
-                <div class="input-group" style="max-width: 10vw">
+                {{-- <div class="input-group" style="max-width: 10vw">
                     <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                    <select class="form-select" id="inputGroupSelect01">
+                        <option selected>Semua</option>
+                        <option value="1">Foto</option>
+                        <option value="2">Audio</option>
+                        <option value="3">Video</option>
+                    </select>
                     <button class="btn btn-primary">
                         <i class="fas fa-search link-light"></i>
                     </button>
-                </div>
+                </div> --}}
                 <!-- Medsos -->
                 <div>
                     <div class="d-flex justify-content-evenly">

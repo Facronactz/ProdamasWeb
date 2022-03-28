@@ -90,7 +90,7 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
             @foreach ($artikel as $item)
                 <div class="col my-3 my-lg-0 hvr-bob">
-                    <div class="card h-100 hvr-grow">
+                    <div class="card h-100 hvr-grow hvr-underline-from-center">
                         <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <a class="stretched-link" href="artikel/{{ $item->id }}"></a>
@@ -111,12 +111,12 @@
     <!--end artikel-->
 
     <!--video-->
-    <div class="container artikel mb-5 mt-5">
+    <div class="container-md my-5">
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Video</h3>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
             @foreach ($video as $item)
-                <div class="col hvr-bob" style="cursor: pointer">
-                    <div class="card h-100 hvr-grow" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
+                <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
+                    <div class="card h-100 hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('videoProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
@@ -173,12 +173,12 @@
     <!--end video-->
 
     <!--foto-->
-    <div class="container artikel mb-5 mt-5">
+    <div class="container-md my-5">
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Foto</h3>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
             @foreach ($foto as $item)
-                <div class="col hvr-bob" style="cursor: pointer">
-                    <div class="card h-100 hvr-grow" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
+                <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
+                    <div class="card h-100 hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('fotoProd/' . $item->konten) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
@@ -197,9 +197,9 @@
     </div>
 
 
-    {{-- <div class="container artikel mb-5 mt-5">
+    {{-- <div class="container-md my-5">
     <h3 class="mb-4" style="font-family: Inter, sans-serif">Foto</h3>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
       @foreach ($foto as $item)
       <a href="foto/{{$item->id}}"></a>
   <div class="col">
@@ -257,12 +257,12 @@
     <!--end foto-->
 
     <!--audio-->
-    <div class="container artikel mb-5 mt-5">
+    <div class="container-md my-5">
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Audio</h3>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
             @foreach ($audio as $item)
-                <div class="col hvr-bob" style="cursor: pointer">
-                    <div class="card h-100 hvr-grow" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
+                <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
+                    <div class="card h-100 hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('audioProd/thumb/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
