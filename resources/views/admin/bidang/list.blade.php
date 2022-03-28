@@ -20,8 +20,8 @@ Bidang Submission
         <tr>
             <td><?= $description->desc_bidang ?></td>
             <td align="right">
-                <form action="/admin/bidangs/" method="POST">
-                    <a href="/admin/bidangs/" class="btn btn-info">Edit</a>
+                <form action="/admin/bidangs/{{ $description->id }}" method="POST">
+                    <a href="/admin/bidangs/{{ $description->id }}" class="btn btn-info">Edit</a>
                 </form>
             </td>
         </tr>

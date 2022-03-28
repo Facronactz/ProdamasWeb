@@ -147,8 +147,8 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/bidang/{bidang_id}', [BidangAdminController::class, 'edit']);
     Route::put('/admin/bidang/{bidang_id}', [BidangAdminController::class, 'update']);
     Route::delete('/admin/bidang/{bidang_id}', [BidangAdminController::class, 'destroy']);
-    Route::get('/admin/bidangs/', [BidangAdminController::class, 'edit_desc']);
-    Route::put('/admin/bidangs/', [BidangAdminController::class, 'update_desc']);
+    Route::get('/admin/bidangs/{description_id}', [BidangAdminController::class, 'edit_desc']);
+    Route::put('/admin/bidangs/{description_id}', [BidangAdminController::class, 'update_desc']);
 
     //pokmas
     Route::get('/admin/add-pokmas', [PokmasAdminController::class, 'create']);
