@@ -9,7 +9,7 @@
 
 @section('content')
 <!-- awal jumbotron -->
-<div class="banner">
+<div>
     <img class="w-100" src="header/hVideo.png" alt="" srcset="">
 </div>
 <!-- akhir jumbotrom -->
