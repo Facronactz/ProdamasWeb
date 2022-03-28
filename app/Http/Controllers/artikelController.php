@@ -22,7 +22,7 @@ class artikelController extends Controller
                 // dd($artikel);
                 $artikelupdate = ArticleAdmin::where('status', 'published')
                         ->orderBy('id', 'desc')
-                        ->take(1)
+                        ->take(3)
                         ->get();
                 return view('artikel.index', compact('artikel', 'artikelupdate'));
         }
