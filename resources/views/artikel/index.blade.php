@@ -5,6 +5,9 @@
 @section('head')
     <link rel="stylesheet" href="css/artikel.css">
     <link rel="stylesheet" href="css/hover.css">
+    .rightcolumn{
+
+    }
 @endsection
 
 @section('content')
@@ -31,8 +34,8 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <a href="artikel/{{ $item->id }}" class="stretched-link"></a>
-                                    <h5 class="card-title">{{ $item->judul }}</h5>
-                                    <p class="card-text">{{ $item->text_sampul }}</p>
+                                    <h5 class="card-title" style="font-size: 15px">{{ $item->judul }}</h5>
+                                    <p class="card-text" style="font-size: 14px" >{{ $item->text_sampul }}</p>
                                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                                 </div>
                             </div>
