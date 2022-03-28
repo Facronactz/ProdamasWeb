@@ -32,16 +32,16 @@
                             <a href="artikel/{{ $item->id }}" class="link-dark">
                                 <h5 class="card-title">{{ $item->judul }}</h5>
                             </a>
-                            <p class="card-text"><?= $item->text_sampul ?>
-                            </p>
+                            <p class="card-text"><?= $item->text_sampul ?></p>
                         </div>
                     </div>
                 </div>
             </div>
-            @endforeach
+            
             <div style="text-align:left">
                 {{ $artikel->links() }}
             </div>
+            @endforeach
         </div>
         <!-- kanan -->
         <div class="rightcolumn">
