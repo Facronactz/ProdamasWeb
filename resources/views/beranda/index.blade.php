@@ -127,7 +127,7 @@
         </div>
         <a href="{{ url('video') }}" class="btn btn-primary hvr-icon-forward">
             Selengkapnya
-            <div class="hvr-icon">&#10140;</div>
+            <i class="hvr-icon fas fa-arrow-right"></i>
         </a>
     </div>
 
