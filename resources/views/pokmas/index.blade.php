@@ -11,7 +11,7 @@
             <div class="container banner-content">
                 <h2><u>POKMAS</u></h2>
                 @foreach ($descriptions as $description)
-                <h5>{{ $description->desc_pokmas }}</h5>
+                <h5><?= $description->desc_pokmas ?></h5>
                 @endforeach
             </div>
         </div>
@@ -26,7 +26,7 @@
                         <img src="{{ asset('pokmasProd/'. $pokmas->foto) }}" class="img-fluid rounded-3">
                     </div>
                     <div class="col-md-6 py-5" style="white-space: pre-line">
-                        {{ $pokmas->caption }}
+                        <?= $pokmas->caption ?>
                     </div>
 
                 </div>
@@ -37,7 +37,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 py-5" style="white-space: pre-line">
-                        {{ $pokmas->caption }}
+                        <?= $pokmas->caption ?>
                     </div>
                     <div class="col-md-6 py-5">
                         <img src="{{ asset('pokmasProd/'. $pokmas->foto) }}" class="img-fluid rounded-3">

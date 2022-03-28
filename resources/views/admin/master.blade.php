@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    @stack('link_summer')
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Admin Page | PRODAMAS </title>
@@ -96,31 +95,26 @@
     <script src="{{ asset('/adminlte/plugins/summernote/summernote-bs4.min.js') }}"></script>
 
     <script>
-        // $(document).ready(function() {
-        //     $('#description').summernote(
-        //         {
-        //             callbacks: {
-        //                 onPaste: function(e) {
-        //                     var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
-        //                     e.preventDefault();
-        //                     document.execCommand('insertText', false, bufferText);
-        //                 },
-        //             },
-        //             toolbar: [
-        //                 ['style', ['bold', 'italic', 'underline']],
-        //                 ['para', ['ul', 'ol']],
-        //                 ['view', ['fullscreen']],
-        //             ],
-        //         }
-        //         )
-        //         ,
-        //         $('textarea[name="content"]').html($('#description').code());
-        // });
+        $(document).ready(function() {
+            $('#description').summernote({
+                callbacks: {
+                    onPaste: function(e) {
+                        var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
+                        e.preventDefault();
+                        document.execCommand('insertText', false, bufferText);
+                    },
+                },
+                toolbar: [
+                    ['style', ['bold', 'italic', 'underline']],
+                    ['para', ['ul', 'ol']],
+                    ['view', ['fullscreen']],
+                ],
+            })
+        });
     </script>
 
     @stack('scripts')
     @yield('table')
 </body>
-@stack('link_summer')
 
 </html>

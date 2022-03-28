@@ -32,7 +32,7 @@
                             <a href="artikel/{{ $item->id }}" class="link-dark">
                                 <h5 class="card-title">{{ $item->judul }}</h5>
                             </a>
-                            <p class="card-text">{{ $item->text_sampul }}
+                            <p class="card-text"><?= $item->text_sampul ?>
                             </p>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                                 <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" width="100%" alt="Cinque Terre">
                             </div>
                             <div class="col-sm-9">
-                                <p>{{ $item->text_sampul }}</p>
+                                <p><?= $item->text_sampul ?></p>
                             </div>
                         </div>
                     </div>

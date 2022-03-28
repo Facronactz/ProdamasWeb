@@ -16,7 +16,7 @@ class CreatePokmassTable extends Migration
         Schema::create('pokmass', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('foto');
-            $table->string('caption', 1000);
+            $table->string('caption', 5000);
             $table->timestamps();
         });
     }
