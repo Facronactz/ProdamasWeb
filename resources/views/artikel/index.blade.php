@@ -41,6 +41,7 @@
             <div class="d-flex justify-content-end w-100 my-3">
                 {{ $artikel->links() }}
             </div>
+            @endforeach
         </div>
         <!-- kanan -->
         <div class="rightcolumn">
