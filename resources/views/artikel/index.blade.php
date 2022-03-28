@@ -21,6 +21,12 @@
 
         <!-- Kiri -->
         <div class="col">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary">
+                    <i class="fas fa-search link-light"></i>
+                </button>
+            </div>
             @foreach ($artikel as $item)
             <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
                 <div class="row g-0">
@@ -41,7 +47,6 @@
             <div class="d-flex justify-content-end w-100 my-3">
                 {{ $artikel->links() }}
             </div>
-            @endforeach
         </div>
         <!-- kanan -->
         <div class="rightcolumn">
