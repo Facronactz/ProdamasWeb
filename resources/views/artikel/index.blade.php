@@ -50,15 +50,12 @@
                     @foreach ($artikelupdate as $item)
                         <div class="col-sm-12">
                             <div class="caption">
-                                <a href="artikel/{{ $item->id }}">
-                                    <h5>{{ $item->judul }}</h5>
-                                </a>
                                 <div class="row">
+                                    <a href="artikel/{{ $item->id }}">
+                                        <h5>{{ $item->judul }}</h5>
+                                    </a>
                                     <div class="col-xl-3">
                                         <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" width="100%" alt="Cinque Terre">
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <p>{{ $item->text_sampul }}</p>
                                     </div>
                                 </div>
                             </div>
