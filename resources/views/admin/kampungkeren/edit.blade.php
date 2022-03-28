@@ -25,7 +25,7 @@ Edit Kampung Keren
         @if ($kampungkeren->foto)
         <p>{{$kampungkeren->foto}}</p>
         @endif
-        <input type="file" class="form-control" name="foto" id="foto" value="{{$kampungkeren->foto}}">
+        <input type="file" class="form-control" name="foto[]" id="foto[]" value="{{$kampungkeren->foto}}">
         @error('foto')
         <div class="alert alert-danger">
             {{ $message }}
