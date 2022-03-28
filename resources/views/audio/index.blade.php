@@ -16,7 +16,15 @@
     <img class="w-100" src="header/hAudio.png" alt="" srcset="">
 </div>
 <!-- akhir jumbotrom -->
-
+{{-- Search Bar --}}
+<div class="input-group" style="max-width: 10vw">
+    <form action="searchaudio" method="GET">
+    <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchaudio">
+    <button class="btn btn-primary" type="submit">
+        <i class="fas fa-search link-light"></i>
+    </button>
+    </form>
+</div>
 <!-- Awal feed audio -->
 <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedAudio">
     {{-- Card Audio --}}
