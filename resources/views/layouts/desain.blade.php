@@ -76,7 +76,7 @@
                 </div>
 
                 {{-- Search --}}
-                <div class="input-group" style="max-width: 10vw">
+                <div class="input-group">
                     <input class="form-control" type="text" placeholder="Search" aria-label="Search">
                     <button class="btn btn-primary" style="width: 20px">
                         <i class="fas fa-search link-light"></i>
