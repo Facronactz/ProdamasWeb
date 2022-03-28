@@ -20,8 +20,8 @@ Pokmas Submission
         <tr>
             <td><?= $description->desc_pokmas ?></td>
             <td align="right">
-                <form action="/admin/pokmass/" method="POST">
-                    <a href="/admin/pokmass/" class="btn btn-info">Edit</a>
+                <form action="/admin/pokmass/{{ $description->id }}" method="POST">
+                    <a href="/admin/pokmass/{{ $description->id }}" class="btn btn-info">Edit</a>
                 </form>
             </td>
         </tr>

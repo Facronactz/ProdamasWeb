@@ -20,8 +20,8 @@ Kampung Keren Submission
         <tr>
             <td><?= $description->desc_kampungkeren ?></td>
             <td align="right">
-                <form action="/admin/kampungkerens/" method="POST">
-                    <a href="/admin/kampungkerens/" class="btn btn-info">Edit</a>
+                <form action="/admin/kampungkerens/{{ $description->id }}" method="POST">
+                    <a href="/admin/kampungkerens/{{ $description->id }}" class="btn btn-info">Edit</a>
                 </form>
             </td>
         </tr>

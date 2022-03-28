@@ -8,7 +8,7 @@ Edit Deskripsi Pokmas
 
 @section('content')
 
-<form action="/admin/pokmass/" method="POST" enctype="application/x-www-form-urlencoded">
+<form action="/admin/pokmass/{{ $descriptions->id }}" method="POST" enctype="application/x-www-form-urlencoded">
     @csrf
     @method('put')
     <div class="form-group">
