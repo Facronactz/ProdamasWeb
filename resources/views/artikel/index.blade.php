@@ -34,7 +34,6 @@
                         </p>
                     </div>
                 </div>
-                @endforeach
                 <div class="d-flex justify-content-end w-100 my-3">
                     {{ $artikel->links() }}
                 </div>
@@ -43,7 +42,7 @@
             <div style="text-align:left">
                 {{ $artikel->links() }}
             </div>
-            @endforeach
+        @endforeach
         </div>
         <!-- kanan -->
         <div class="rightcolumn">
@@ -63,7 +62,7 @@
                                 <p><?= $item->text_sampul ?></p>
                             </div>
                         </div>
-                        @endforeach
+                @endforeach
                     </div>
                     <div class="card-right bg-light">
                         <h5 class="card-header">Kunjungi Website</h5>
