@@ -10,9 +10,7 @@
 @section('content')
 <!-- awal jumbotron -->
 <div class="banner">
-    <video id="background-video" autoplay loop muted poster="kota.png">
-        <source src="img/hVideo.png" type="video/mp4" />
-    </video>
+    <img class="w-100" src="header/hVideo.png" alt="" srcset="">
 </div>
 <!-- akhir jumbotrom -->
 
