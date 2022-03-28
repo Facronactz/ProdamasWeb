@@ -18,10 +18,10 @@ Bidang Submission
     <table class="table">
         @foreach ($descriptions ?? '' as $description)
         <tr>
-            <td>{{ $description->desc_bidang }}</td>
+            <td><?= $description->desc_bidang ?></td>
             <td align="right">
-                <form action="/admin/bidang/" method="POST">
-                    <a href="/admin/bidang/" class="btn btn-info">Edit</a>
+                <form action="/admin/bidangs/{{ $description->id }}" method="POST">
+                    <a href="/admin/bidangs/{{ $description->id }}" class="btn btn-info">Edit</a>
                 </form>
             </td>
         </tr>

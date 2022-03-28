@@ -91,20 +91,20 @@ class KampungkerenAdminController extends Controller
         return redirect('/admin/list-kampungkeren')->with('success', 'Kampung Keren Berhasil Dihapus!');
     }
 
-    public function edit_desc()
+    public function edit_desc($id)
     {
-        $descriptions = DescriptionAdmin::first();
+        $descriptions = DescriptionAdmin::findOrFail($id);
         return view('admin.kampungkeren.editdesc', compact('descriptions'));
     }
 
-    public function update_desc(Request $request)
+    public function update_desc($id, Request $request)
     {
         $request->validate([
             'desc_kampungkeren' => 'required',
         ]);
 
 
-        $descriptions = DescriptionAdmin::first();
+        $descriptions = DescriptionAdmin::findOrFail($id);
         $descriptions_data = ["desc_kampungkeren" => $request["desc_kampungkeren"]];
         $descriptions->update($descriptions_data);
 

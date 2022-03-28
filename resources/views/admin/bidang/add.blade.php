@@ -48,7 +48,7 @@ Bidang Baru
     </div>
     <div class="form-group">
         <label for="caption">Caption</label>
-        <textarea name="caption" class="form-control" cols="30" rows="10"></textarea>
+        <textarea name="caption" id="description" class="form-control" cols="30" rows="10"></textarea>
         @error('caption')
         <div class="alert alert-danger">
             {{ $message }}

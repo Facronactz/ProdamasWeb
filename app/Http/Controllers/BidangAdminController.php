@@ -91,19 +91,19 @@ class BidangAdminController extends Controller
         return redirect('/admin/list-bidang')->with('success', 'Bidang Berhasil Dihapus!');
     }
 
-    public function edit_desc()
+    public function edit_desc($id)
     {
-        $descriptions = DescriptionAdmin::first();
+        $descriptions = DescriptionAdmin::findOrFail($id);
         return view('admin.bidang.editdesc', compact('descriptions'));
     }
 
-    public function update_desc(Request $request)
+    public function update_desc($id, Request $request)
     {
         $request->validate([
             'desc_bidang' => 'required',
         ]);
 
-        $descriptions = DescriptionAdmin::first();
+        $descriptions = DescriptionAdmin::findOrFail($id);
         $descriptions_data = ["desc_bidang" => $request["desc_bidang"]];
         $descriptions->update($descriptions_data);
 
