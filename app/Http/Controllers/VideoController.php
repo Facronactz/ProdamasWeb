@@ -11,7 +11,7 @@ class VideoController extends Controller
 {
     public function index()
     {
-        $videos = DB::table('videos')->simplePaginate(8);
+        $videos = DB::table('videos')->paginate(4);
         return view('video.index', ['videos' => $videos]);
     }
 

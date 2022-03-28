@@ -18,11 +18,11 @@ class artikelController extends Controller
         {
                 $artikel = ArticleAdmin::where('status', 'published')
                         ->orderBy('id', 'desc')
-                        ->simplePaginate(4);
+                        ->paginate(4);
                 // dd($artikel);
                 $artikelupdate = ArticleAdmin::where('status', 'published')
                         ->orderBy('id', 'desc')
-                        ->take(1)
+                        ->take(3)
                         ->get();
                 return view('artikel.index', compact('artikel', 'artikelupdate'));
         }
