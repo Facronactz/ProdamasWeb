@@ -34,9 +34,9 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <a href="artikel/{{ $item->id }}" class="stretched-link"></a>
-                                    <h5 class="card-title" style="font-size: 15px;">{{ $item->judul }}</h5>
+                                    <h5 class="card-title" style="font-size: 22px;">{{ $item->judul }}</h5>
                                     <p class="card-text" style="font-size: 14px;">{{ $item->text_sampul }}</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    <p class="card-text" style="font-size: 13px;"><small class="text-muted">Last updated 3 mins ago</small></p>
                                 </div>
                             </div>
                         </div>
@@ -58,8 +58,8 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h5 class="card-title">{{ $item->judul }}</h5>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        <h5 class="card-title" style="font-size: 14px">{{ $item->judul }}</h5>
+                                        <p class="card-text" style="font-size: 12px"><small class="text-muted">Last updated 3 mins ago</small></p>
                                         <a class="stretched-link" href="artikel/{{ $item->id }}"></a>
                                     </div>
                                 </div>
