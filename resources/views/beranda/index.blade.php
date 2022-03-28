@@ -91,7 +91,7 @@
             @foreach ($artikel as $item)
                 <a href="artikel/{{ $item->id }}">
                     <div class="col h-100 my-3 my-lg-0 hvr-bob">
-                        <div class="card h-100 hover-card">
+                        <div class="card h-100 hvr-grow">
                             <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $item->judul }}</h5>
@@ -116,7 +116,7 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($video as $item)
                 <div class="col hvr-bob" style="cursor: pointer">
-                    <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
+                    <div class="card h-100 hvr-grow" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('videoProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
@@ -177,7 +177,7 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($foto as $item)
                 <div class="col hvr-bob" style="cursor: pointer">
-                    <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
+                    <div class="card h-100 hvr-grow" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('fotoProd/' . $item->konten) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
@@ -201,7 +201,7 @@
       @foreach ($foto as $item)
       <a href="foto/{{$item->id}}"></a>
   <div class="col">
-    <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$item->id}}">
+    <div class="card h-100 hvr-grow" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$item->id}}">
       <img src="{{ asset('fotoProd/'.$item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{ $item->judul }}</h5>
@@ -260,7 +260,7 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($audio as $item)
                 <div class="col hvr-bob" style="cursor: pointer">
-                    <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
+                    <div class="card h-100 hvr-grow" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('audioProd/thumb/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
