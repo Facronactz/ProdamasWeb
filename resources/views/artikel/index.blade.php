@@ -5,9 +5,6 @@
 @section('head')
     <link rel="stylesheet" href="css/artikel.css">
     <link rel="stylesheet" href="css/hover.css">
-    .rightcolumn{
-
-    }
 @endsection
 
 @section('content')
@@ -58,8 +55,8 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h5 class="card-title" style="font-size: 14px">{{ $item->judul }}</h5>
-                                        <p class="card-text" style="font-size: 12px"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        <h5 class="card-title" style="font-size: 14px;">{{ $item->judul }}</h5>
+                                        <p class="card-text" style="font-size: 12px;"><small class="text-muted">Last updated 3 mins ago</small></p>
                                         <a class="stretched-link" href="artikel/{{ $item->id }}"></a>
                                     </div>
                                 </div>
