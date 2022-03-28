@@ -17,6 +17,7 @@ class CreateDescriptionsTable extends Migration
             $table->id();
             $table->string('desc_kampungkeren', 5000)->default('-');
             $table->string('desc_bidang', 255)->default('-');
+            $table->string('title_pokmas', 255)->default('-');
             $table->string('desc_pokmas', 5000)->default('-');
             $table->timestamps();
         });

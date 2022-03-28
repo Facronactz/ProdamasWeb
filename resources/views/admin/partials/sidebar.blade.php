@@ -59,12 +59,6 @@
                         <p>Bidang</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/admin/list-pokmas" class="nav-link @yield('pokmas')">
-                        <i class="nav-icon fas fa-users"></i>
-                        <p>Pokmas</p>
-                    </a>
-                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
