@@ -21,6 +21,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/desain.css') }}">
+    {{-- Animation --}}
+    <link rel="stylesheet" href="{{ asset('css/hover.css') }}">
     @yield('head')
     @hasSection('title')
         <title>Prodamas Plus - @yield('title')</title>
