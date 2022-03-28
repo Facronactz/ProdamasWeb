@@ -13,7 +13,7 @@
     {{-- <video id="background-video" autoplay loop muted poster="kota.png">
         <source src="header/hAudio.png" type="video/mp4" />
     </video> --}}
-    <img class="w-100" src="header/AUDIO ok.png" alt="" srcset="">
+    <img class="w-100" src="header/hAudio.png" alt="" srcset="">
 </div>
 <!-- akhir jumbotrom -->
 
