@@ -18,7 +18,7 @@ Edit Deskripsi Bidang
         </div>
         @enderror
         <label for="desc_bidang">Description</label>
-        <textarea name="desc_bidang" class="form-control" cols="30" rows="3"><?= $descriptions->desc_bidang ?></textarea>
+        <textarea name="desc_bidang" id="description" class="form-control" cols="30" rows="3"><?= $descriptions->desc_bidang ?></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Edit</button>
     <a href="/admin/list-bidang" class="btn btn-outline-primary">Back</a>

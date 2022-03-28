@@ -34,7 +34,7 @@ Edit Bidang
     </div>
     <div class="form-group">
         <label for="caption">Caption</label>
-        <textarea name="caption" class="form-control" cols="30" rows="3">{{$bidang->caption}}</textarea>
+        <textarea name="caption" id="description" class="form-control" cols="30" rows="3">{{$bidang->caption}}</textarea>
         @error('caption')
         <div class="alert alert-danger">
             {{ $message }}

@@ -18,7 +18,7 @@ Edit Deskripsi Kampung Keren
         </div>
         @enderror
         <label for="desc_kampungkeren">Description</label>
-        <textarea name="desc_kampungkeren" class="form-control" cols="30" rows="3"><?= $descriptions->desc_kampungkeren ?></textarea>
+        <textarea name="desc_kampungkeren" id="description" class="form-control" cols="30" rows="3"><?= $descriptions->desc_kampungkeren ?></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Edit</button>
     <a href="/admin/list-kampungkeren" class="btn btn-outline-primary">Back</a>
