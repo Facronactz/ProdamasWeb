@@ -17,8 +17,8 @@ Edit Deskripsi Kampung Keren
             {{ $message }}
         </div>
         @enderror
-        <label for="desc_kampungkeren">Caption</label>
-        <textarea name="desc_kampungkeren" class="form-control" cols="30" rows="3">{{ $descriptions->desc_kampungkeren }}</textarea>
+        <label for="desc_kampungkeren">Description</label>
+        <textarea name="desc_kampungkeren" class="form-control" cols="30" rows="3"><?= $descriptions->desc_kampungkeren ?></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Edit</button>
     <a href="/admin/list-kampungkeren" class="btn btn-outline-primary">Back</a>

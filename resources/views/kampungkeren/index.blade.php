@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
     <!--CSS-->
-    <link rel="stylesheet" href="css/kampung.css">
 </head>
 
 <body>
@@ -38,9 +37,9 @@
     <div class="kampung-keren">
         <div class="container">
             <h2>Kampung Keren</h2> <br>
-            <h5>Kampung Keren Prodamas merupakan salah satu dari 10 program unggulan Wali Kota Kediri. Program ini memicu tumbuhnya kreativitas dan kemandirian
-                masyarakat di Kota Kediri untuk memunculkan karakteristik kawasan, keunikan, budaya,
-                keterampilan dan peningkatan potensi ekonomi di kelurahannya.</h5>
+            @foreach ($descriptions as $description)
+            <h5> <?= $description->desc_kampungkeren ?></h5>
+            @endforeach
         </div>
     </div>
 
