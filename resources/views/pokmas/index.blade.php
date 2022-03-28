@@ -25,7 +25,7 @@
                     <div class="col-md-6 py-5">
                         <img src="{{ asset('pokmasProd/'. $pokmas->foto) }}" class="img-fluid rounded-3">
                     </div>
-                    <div class="col-md-6 py-5" style="white-space: pre-line">
+                    <div class="col-md-6 py-5">
                         <?= $pokmas->caption ?>
                     </div>
 
