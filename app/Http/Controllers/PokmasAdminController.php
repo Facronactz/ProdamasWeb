@@ -3,22 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Kampungkeren;
+use App\Models\Pokmas;
 use App\Models\DescriptionAdmin;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 
-class KampungkerenAdminController extends Controller
+class PokmasAdminController extends Controller
 {
     public function create()
     {
-        return view('admin.kampungkeren.add');
+        return view('admin.pokmas.add');
     }
 
     public function store(Request $request)
     {
         $this->validate($request, [
-            'judul' => 'required',
             'foto' => 'required',
             'caption' => 'required',
         ]);
@@ -27,87 +26,82 @@ class KampungkerenAdminController extends Controller
         foreach ($request->file('foto') as $file) {
             if ($file->isValid()) {
                 $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-                $file->move(public_path('../public/kampungkerenProd/'), $foto);
+                $file->move(public_path('../pokmasProd/'), $foto);
                 $files[] = [
-                    'judul' => $request->judul,
                     'foto' => $foto,
                     'caption' => $request->caption
                 ];
             }
         }
-        Kampungkeren::insert($files);
+        pokmas::insert($files);
 
-        return redirect('/admin/list-kampungkeren')->with('success', 'Kampung Keren Berhasil Ditambahkan!');
+        return redirect('/admin/list-pokmas')->with('success', 'Pokmas Berhasil Ditambahkan!');
     }
 
     public function index()
     {
-        $kampungkeren = Kampungkeren::groupBy('judul')->get();
+        $pokmass = pokmas::groupBy('id')->get();
         $descriptions = DescriptionAdmin::first()->get();
-        return view('admin.kampungkeren.list', compact('kampungkeren', 'descriptions'));
+        return view('admin.pokmas.list', compact('pokmass', 'descriptions'));
     }
 
     public function edit($id)
     {
-        $kampungkeren = Kampungkeren::findOrFail($id);
-        return view('admin.kampungkeren.edit', compact('kampungkeren'));
+        $pokmas = pokmas::findOrFail($id);
+        return view('admin.pokmas.edit', compact('pokmas'));
     }
 
     public function update($id, Request $request)
     {
         $request->validate([
-            'judul' => 'required',
             'foto' => 'mimes:jpeg,jpg,png|max:2200',
             'caption' => 'required'
         ]);
 
-        $kampungkeren = Kampungkeren::findorfail($id);
+        $pokmass = pokmas::findorfail($id);
         if ($request->has('picture')) {
-            File::delete("kampungkerenProd//" . $kampungkeren->picture);
-            $picture = $request->picture;
+            File::delete("pokmasProd//" . $pokmass->foto);
+            $picture = $request->foto;
             $pathFoto = time() . ' - ' . $picture->getClientOriginalName();
-            $picture->move('kampungkerenProd//', $pathFoto);
+            $picture->move('pokmasProd//', $pathFoto);
 
-            $kampungkeren_data = [
-                "judul" => $request["judul"],
+            $pokmas_data = [
                 "foto" => $pathFoto,
                 "caption" => $request["caption"],
             ];
         } else {
-            $kampungkeren_data = [
-                "judul" => $request["judul"],
+            $pokmas_data = [
                 "caption" => $request["caption"]
             ];
         }
 
-        $kampungkeren->update($kampungkeren_data);
+        $pokmass->update($pokmas_data);
 
-        return redirect('/admin/list-kampungkeren')->with('success', 'Kampung Keren Berhasil Diupdate!');
+        return redirect('/admin/list-pokmas')->with('success', 'Pokmas Berhasil Diupdate!');
     }
 
     public function destroy($id)
     {
-        $submission = DB::table('kampungkeren')->where('id', $id)->delete();
-        return redirect('/admin/list-kampungkeren')->with('success', 'Kampung Keren Berhasil Dihapus!');
+        $submission = DB::table('pokmass')->where('id', $id)->delete();
+        return redirect('/admin/list-pokmas')->with('success', 'Pokmas Berhasil Dihapus!');
     }
 
     public function edit_desc($id)
     {
         $descriptions = DescriptionAdmin::findOrFail($id);
-        return view('admin.kampungkeren.editdesc', compact('descriptions'));
+        return view('admin.pokmas.editdesc', compact('descriptions'));
     }
 
     public function update_desc($id, Request $request)
     {
         $request->validate([
-            'desc_kampungkeren' => 'required',
+            'desc_pokmas' => 'required',
         ]);
 
-
         $descriptions = DescriptionAdmin::findOrFail($id);
-        $descriptions_data = ["desc_kampungkeren" => $request["desc_kampungkeren"]];
+        $descriptions_data = ["desc_pokmas" => $request["desc_pokmas"]];
         $descriptions->update($descriptions_data);
 
-        return redirect('/admin/list-kampungkeren')->with('success', 'Deskripsi Berhasil Diupdate!');
+        return redirect('/admin/list-pokmas')->with('success', 'Deskripsi Berhasil Diupdate!');
     }
 }
