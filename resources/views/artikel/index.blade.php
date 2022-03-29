@@ -5,19 +5,22 @@
 @section('head')
 <link rel="stylesheet" href="css/artikel.css">
 <link rel="stylesheet" href="css/hover.css">
+<link rel="stylesheet" href="css/titleAnimation.css">
 @endsection
 
 @section('content')
 <!-- awal jumbotron -->
 <div class="container-fluid banner">
     <div class="container banner-content">
-        <h1>Artikel</h1>
     </div>
 </div>
 <!-- akhir jumbotrom -->
 
 <div class="container">
     <div class="row justify-content-between mt-5">
+        <div class="div-title">
+            <h1 class="home-title">Artikel</h1>
+        </div>
 
         <!-- Kiri -->
         <div class="col">
