@@ -12,7 +12,7 @@
 .div-title {
   display: flex;
   overflow: hidden;
-  font-family: 'Maitree', serif;
+  font-family: 'Maitree', 'Segoe Ui';
 }
 
 /* title styles */
