@@ -17,8 +17,6 @@ use App\Http\Controllers\TentangController;
 use App\Http\Controllers\TulisCeritaController;
 use App\Http\Controllers\KampungkerenController;
 use App\Http\Controllers\BidangController;
-use App\Http\Controllers\PokmasAdminController;
-use App\Http\Controllers\PokmasController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\ArticleController;
@@ -47,6 +45,7 @@ Route::get('/', [artikelController::class, 'beranda'])->name('dashboard');
 
 // tentang
 Route::get('/tentang', [TentangController::class, 'index']);
+Route::get('/pokmas', [TentangController::class, 'pokmas']);
 
 // data
 Route::get('/grafik', [DataController::class, 'grafik']);
@@ -76,11 +75,8 @@ Route::resource('tuliscerita', TulisCeritaController::class);
 //kampungkeren
 Route::resource('kampungkeren', KampungkerenController::class);
 
-//bidang
+//kampungkeren
 Route::resource('bidang', BidangController::class);
-
-//pokmas
-Route::resource('pokmas', PokmasController::class);
 
 
 //login & profil

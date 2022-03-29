@@ -2,6 +2,7 @@
 <html>
 
 <head>
+@stack('link_summer')
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Admin Page | PRODAMAS </title>
@@ -19,8 +20,6 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- summernote -->
-    <link rel="stylesheet" href="{{ asset('/adminlte/plugins/summernote/summernote-bs4.min.css') }}">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -91,30 +90,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <!-- summernote -->
-    <script src="{{ asset('/adminlte/plugins/summernote/summernote-bs4.min.js') }}"></script>
-
-    <script>
-        $(document).ready(function() {
-            $('#description').summernote({
-                callbacks: {
-                    onPaste: function(e) {
-                        var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
-                        e.preventDefault();
-                        document.execCommand('insertText', false, bufferText);
-                    },
-                },
-                toolbar: [
-                    ['style', ['bold', 'italic', 'underline']],
-                    ['para', ['ul', 'ol']],
-                    ['view', ['fullscreen']],
-                ],
-            })
-        });
-    </script>
-
     @stack('scripts')
     @yield('table')
 </body>
-
+@stack('link_summer')
 </html>
