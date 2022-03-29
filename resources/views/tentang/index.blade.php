@@ -83,7 +83,7 @@
                 <div class="accordion mt-3 mb-5" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingeven">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
                                 Prodamas Plus 2021
                             </button>
                         </h2>
@@ -195,7 +195,7 @@
                     {{-- P2014 --}}
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Prodamas 2014
                             </button>
                         </h2>
