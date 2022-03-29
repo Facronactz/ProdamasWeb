@@ -40,7 +40,7 @@
                 <div class="col text-center">
                     @foreach ($descriptions ?? '' as $description)
                     <p class="fs-5">
-                        {{ $description->desc_bidang }}
+                        <?= $description->desc_bidang ?>
                     </p>
                     @endforeach
                 </div>
