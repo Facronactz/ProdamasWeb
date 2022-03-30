@@ -35,7 +35,7 @@
                     <div class="col flex-shrink-0 order-md-1 col">
                         <div class="bidang-img" style="background-image: url('{{ asset('bidangProd/' . $bidang->foto) }}')"></div>
                     </div>
-                    <div class="flex-shrink-0 order-md-1 align-items-center justify-content-center col">
+                    <div class="flex-grow-1 order-md-2 align-items-center justify-content-center col">
                         <h1>{{ $bidang->judul }}</h1>
                         <br>
                     </div>
