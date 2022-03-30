@@ -17,7 +17,7 @@
             <div class="row mt-5" style="font-family: Montserrat, sans-serif">
                 <div class="col text-center">
                     <p class="fs-5">
-                        <?= $descriptions -> desc_bidang ?>
+                        <?= $descriptions->desc_bidang ?>
                     </p>
                 </div>
             </div>
@@ -27,115 +27,48 @@
     </section>
 
     <div class="container mt-5 mb-5">
-        <div class="row box">
-            <div class="col-6">
-                <div class="bidang-img" style="background-image:url('img-tentang/Ekonomi.jpg')">
-                </div>
-            </div>
+        @foreach ($bidangs as $bidang)
+            @if ($bidang->id % 2 != 0)
+                <div class="row box">
+                    <div class="col-6">
+                        <div class="bidang-img" style="background-image: url('{{ asset('bidangProd/' . $bidang->foto) }}')"></div>
+                    </div>
 
-            <div class="d-flex align-items-center justify-content-center col-6">
-                <div class="item-title">
-                    <h1>EKONOMI</h1>
-                    <br>
-                    <p>Untuk meningkatkan keberdayaan masyarakat di bidang ekonomi,
-                        anggaran Prodamas dialokasikan terutama untuk mendukung pengembangan usaha kecil,
-                        sekaligus sebagai jalan mewujudkan salah satu program unggulan Pemkot Kediri,
-                        yaitu mewujudkan 15.000 Wirausahawan baru.</p>
+                    <div class="d-flex align-items-center justify-content-center col-6">
+                        <div class="item-title">
+                            <h1>{{ $bidang->judul }}</h1>
+                            <br>
+                            <p>{{ $bidang->caption }}</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            @else
+                <div class="row box">
+                    <div class="d-flex align-items-center justify-content-center col-6">
+                        <div class="item-title">
+                            <h1>{{ $bidang->judul }}</h1>
+                            <br>
+                            <p>{{ $bidang->caption }}</p>
+                        </div>
+                    </div>
 
-        <div class="row box">
-            <div class="d-flex align-items-center justify-content-center col-6">
-                <div class="item-title">
-                    <h1>SOSIAL BUDAYA</h1>
-                    <br>
-                    <p>Prodamas juga dialokasikan untuk pengadaan sarana pengembangan seni budaya,
-                        olah raga dan kegiatan sosial kemasyarakatan di tingkat RT, seperti pengadaan
-                        alat kesenian tradisional maupun modern, peralatan pendukung kegiatan olah raga prestasi
-                        dan peralatan pendukung kegiatan sosial kemasyarakatan lainnya.</p>
+                    <div class="col-6">
+                        <div class="bidang-img" style="background-image: url('{{ asset('bidangProd/' . $bidang->foto) }}')"></div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-6">
-                <div class="bidang-img" style="background-image:url('img-tentang/SosialBudaya.jpg')">
+            @endif
+            {{-- <div class="row row-cols-md-2 row-cols-1 align-items-center">
+                <div class="col order-0 order-md-2">
+                    <h1>{{$bidang->judul }}</h1>
                 </div>
-            </div>
-        </div>
-
-        <div class="row box">
-            <div class="col-6">
-                <div class="bidang-img" style="background-image:url('img-tentang/Infrastruktur.jpg')">
+                <div class="col order-3 order-md-1 align-self-center">
+                    <div class="bidang-img" style="background-image: url('{{ asset('bidangProd/' . $bidang->foto) }}')"></div>
                 </div>
-            </div>
-
-            <div class="d-flex align-items-center justify-content-center col-6">
-                <div class="item-title">
-                    <h1>INFRASTRUKTUR</h1>
-                    <br>
-                    <p>Pengalokasian anggaran Prodamas untuk peningkatan pembangunan infrastruktur berskala kecil
-                        di tiap RT berdampak pada penyerapan tenaga kerja dari warga lingkungan RT setempat.</p>
+                <div class="col order-3 order-md-4 offset-md-6 offset-sm-0">
+                    <h1>{{$bidang->caption}}</h1>
                 </div>
-            </div>
-        </div>
-
-        <div class="row box">
-            <div class="d-flex align-items-center justify-content-center col-6">
-                <div class="item-title">
-                    <h1>KESEHATAN</h1>
-                    <br>
-                    <p>
-                    <p>Guna mendukung terwujudnya program Universal Health Coverage (UHC),
-                        Prodamas Plus dialokasikan untuk pembayaran iuran BPJS Kesehatan
-                        kelas 3 bagi seluruh masyarakat yang belum terdaftar BPJS Kesehatan maupun
-                        alih kepesertaan dari Peserta Mandiri menjadi peserta yang dibiayai oleh
-                        anggaran Prodamas Plus.</p>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-6">
-                <div class="bidang-img" style="background-image:url('img-tentang/Kesehatan.jpg')">
-                </div>
-            </div>
-        </div>
-
-        <div class="row box">
-            <div class="col-6">
-                <div class="bidang-img" style="background-image:url('img-tentang/Pendidikan.jpg')">
-                </div>
-            </div>
-
-            <div class="d-flex align-items-center justify-content-center col-6">
-                <div class="item-title">
-                    <h1>PENDIDIKAN</h1>
-                    <br>
-                    <p>Prodamas plus mendukung terciptanya kesempatan yang sama kepada seluruh masyarakat
-                        Kota Kediri untuk mendapatkan pendidikan berkualitas baik formal maupun non-formal
-                        seperti pengadaan sarana prasarana TPA/TPQ dan pelatihan keterampilan kerja dan
-                        Pengadaan sarana prasarana program Quran Massive (program unggulan Pemkot Kediri
-                        untuk memberantas buta huruf Al Quran).
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row box">
-            <div class="d-flex align-items-center justify-content-center col-6">
-                <div class="item-title">
-                    <h1>KEPEMUDAAN</h1>
-                    <br>
-                    <p>Prodamas plus mendukung potensi yang dimiliki pemuda yang ada di Kota Kediri khususnya
-                        karang taruna untuk saling berbagi keterampilan yang dimiliki dan disalurkan kepada
-                        anak-anak yang ada di masing-masing daerah.</p>
-                </div>
-            </div>
-
-            <div class="col-6">
-                <div class="bidang-img" style="background-image:url('img-tentang/Kepemudaan.jpg')">
-                </div>
-            </div>
-        </div>
+            </div> --}}
+        @endforeach
 
     </div>
 @endsection
