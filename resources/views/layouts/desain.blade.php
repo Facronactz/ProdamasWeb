@@ -31,7 +31,7 @@
     @endif
 
     <style>
-        .login-icon:hover{
+        .login-icon i:hover{
             color: black;
         }
     </style>
