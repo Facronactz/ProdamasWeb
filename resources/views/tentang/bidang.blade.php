@@ -31,14 +31,18 @@
     <div class="container mt-5 mb-5">
         @foreach ($bidangs as $bidang)
             @if ($bidang->id % 2 != 0)
-                <div class="row row-cols-md-2 row-cols-1 align-items-center justify-content-center clearfix">
-                    <div class="col mx-auto w-100 order-0 text-center">
-                        <h1>{{ $bidang->judul }}</h1>
+                <div class="row box">
+                    <div class="col-6">
+                        <div class="bidang-img" style="background-image: url('{{ asset('bidangProd/' . $bidang->foto) }}')"></div>
                     </div>
-                    <div class="col float-start float-md-start">
-                        <img class="bidang-img" src="{{ asset('bidangProd/' . $bidang->foto) }}">
-                        <p>{{ $bidang->caption }}</p>
+                    <div class="d-flex align-items-center justify-content-center col-6">
+                        <div class="item-title">
+                            <h1>{{ $bidang->judul }}</h1>
+                            <br>
+                            <p>{{ $bidang->caption }}</p>
+                        </div>
                     </div>
+
                 </div>
             @else
                 <div class="row box">
@@ -49,7 +53,6 @@
                             <p>{{ $bidang->caption }}</p>
                         </div>
                     </div>
-
                     <div class="col-6">
                         <div class="bidang-img" style="background-image: url('{{ asset('bidangProd/' . $bidang->foto) }}')"></div>
                     </div>
