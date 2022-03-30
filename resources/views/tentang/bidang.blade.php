@@ -31,15 +31,13 @@
     <div class="container mt-5 mb-5">
         @foreach ($bidangs as $bidang)
             @if ($bidang->id % 2 != 0)
-                <div class="row row-cols-md-2 row-cols-1 align-items-center justify-content-center">
+                <div class="row row-cols-md-2 row-cols-1 align-items-center justify-content-center clearfix">
                     <div class="col mx-auto w-100 order-0 text-center">
                         <h1>{{ $bidang->judul }}</h1>
                     </div>
-                    <div class="col align-self-center my-auto">
-                        <div class="bidang-img" style="background-image: url('{{ asset('bidangProd/' . $bidang->foto) }}')"></div>
-                    </div>
-                    <div class="col">
-                        <h1>{{ $bidang->caption }}</h1>
+                    <div class="col float-start float-md-start">
+                        <img class="bidang-img" src="url('{{ asset('bidangProd/' . $bidang->foto) }}')">
+                        <p>{{ $bidang->caption }}</p>
                     </div>
                 </div>
             @else
