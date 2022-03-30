@@ -17,8 +17,7 @@
             <div class="row mt-5" style="font-family: Montserrat, sans-serif">
                 <div class="col text-center">
                     <p class="fs-5">
-                        Cakupan Bidang Prodamas Plus yang terdiri dari 6 bidang :
-                        Ekonomi, Sosial Budaya, Infrastruktur, Kesehatan, Pendidikan dan Kepemudaan.
+                        <?= $descriptions -> desc_bidang ?>
                     </p>
                 </div>
             </div>
