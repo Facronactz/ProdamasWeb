@@ -90,13 +90,15 @@
                         <i class="fas fa-search link-light"></i>
                     </button>
                 </div> --}}
-                <!-- Medsos -->
+                {{--  Medsos --}}
                 <div>
                     <div class="d-flex justify-content-evenly">
                         <a href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube mx-2 link-light"></i></a>
                         <a href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram mx-2 link-light"></i></a>
                         <a href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook mx-2 link-light"></i></a>
                         <a href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a>
+                        <hr>
+                        <a href="{{url('/loginuser')}}"><i class="fas fa-sign-in-alt mx-2 link-light"></i></a>
                     </div>
                 </div>
             </div>
