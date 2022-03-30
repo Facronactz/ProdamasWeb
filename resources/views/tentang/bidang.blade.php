@@ -36,7 +36,7 @@
                         <h1>{{ $bidang->judul }}</h1>
                     </div>
                     <div class="col float-start float-md-start">
-                        <img class="bidang-img" src="url('{{ asset('bidangProd/' . $bidang->foto) }}')">
+                        <img class="bidang-img" src="{{ asset('bidangProd/' . $bidang->foto) }}">
                         <p>{{ $bidang->caption }}</p>
                     </div>
                 </div>
