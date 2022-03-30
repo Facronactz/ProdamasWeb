@@ -183,6 +183,22 @@ Route::post('custom-registration', [CustomAuthController::class, 'customRegistra
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
 
+//Route search artikel
+Route::resource('/artikel', artikelController::class);
+Route::get('/searchartikel', [SearchController::class, 'searchartikel'])->name('search');
+
+//Route search audio
+Route::resource('/audio', AudioController::class);
+Route::get('/searchaudio', [SearchController::class, 'searchaudio'])->name('search');
+
+//Route search foto
+Route::resource('/foto', FotoController::class);
+Route::get('/searchfoto', [SearchController::class, 'searchfoto'])->name('search');
+
+//Route search video
+Route::resource('/video', VideoController::class);
+Route::get('/searchvideo', [SearchController::class, 'searchvideo'])->name('search');
+
 
 //admin
 // Route::resource('admin', AdminController::class);
