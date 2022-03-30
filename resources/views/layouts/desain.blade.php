@@ -32,7 +32,7 @@
 
     <style>
         .login-icon i:hover{
-            color: black;
+            color: black !important;
         }
     </style>
 
