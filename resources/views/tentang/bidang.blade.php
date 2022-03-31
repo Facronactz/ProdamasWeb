@@ -64,6 +64,10 @@
                     </div>
                 </div>
             @endif
+            @if(last($bidang->id))
+            @else
+                <hr>
+            @endif
         @endforeach
 
     </div>
