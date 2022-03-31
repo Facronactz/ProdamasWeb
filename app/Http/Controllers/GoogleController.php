@@ -15,7 +15,21 @@ class GoogleController extends Controller
     {
         try {
             $user = Socialite::driver('google')->user() ;
-            dd($user);
+            //dd($user);
+            $finduser = User::where('google_id',$user->getId())->first();
+            if($user){
+                Auth::login($finduser);
+                return redirect()->intended('dashboard');
+            }
+            else{
+                $newUser = User::create([
+                    'name'
+                    'username'
+                    'email'
+                    'google_id'
+                ])
+            }
+                
         } catch (\Throwable $th) {
             //throw $th;
         }
