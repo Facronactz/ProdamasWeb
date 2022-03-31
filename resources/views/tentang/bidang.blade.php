@@ -34,6 +34,10 @@
     </section>
 
     <div class="container mt-5 mb-5">
+        @if(last($bidangs))
+        @else
+            <hr>
+        @endif
         @foreach ($bidangs as $bidang)
             @if ($bidang->id % 2 != 0)
                 <div class="row row-cols-1 row-cols-md-2 box">
@@ -63,10 +67,6 @@
                         </div>
                     </div>
                 </div>
-            @endif
-            @if(last($bidangs))
-            @else
-                <hr>
             @endif
         @endforeach
 
