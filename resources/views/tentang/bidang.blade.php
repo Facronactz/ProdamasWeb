@@ -51,12 +51,13 @@
                 </div>
             @else
                 <div class="row row-cols-1 row-cols-md-2 box">
+                    <h1 class="d-md-none d-block d-lg-none d-xl-none d-xxl-none">{{ $bidang->judul }}</h1>
                     <div class="col order-md-2">
                         <div class="bidang-img" style="background-image: url('{{ asset('bidangProd/' . $bidang->foto) }}')"></div>
                     </div>
                     <div class="d-flex align-items-center justify-content-center col order-md-1">
                         <div class="item-title">
-                            <h1>{{ $bidang->judul }}</h1>
+                            <h1 class="d-md-block d-none">{{ $bidang->judul }}</h1>
                             <br>
                             <p>{{ $bidang->caption }}</p>
                         </div>
