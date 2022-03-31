@@ -64,7 +64,7 @@
                     </div>
                 </div>
             @endif
-            @if(last($bidang))
+            @if(last($bidangs))
             @else
                 <hr>
             @endif
