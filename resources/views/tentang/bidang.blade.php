@@ -4,6 +4,11 @@
 
 @section('head')
     <link rel="stylesheet" href="css/bidang.css">
+    <style>
+        @media screen and (max width: 768px){
+
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -35,9 +40,10 @@
                     <div class="col">
                         <div class="bidang-img" style="background-image: url('{{ asset('bidangProd/' . $bidang->foto) }}')"></div>
                     </div>
+                    <h1 class="d-md-none d-block d-lg-none d-xl-none d-xxl-none">{{ $bidang->judul }}</h1>
                     <div class="d-flex align-items-center justify-content-center col">
                         <div class="item-title">
-                            <h1>{{ $bidang->judul }}</h1>
+                            <h1 class="d-md-block d-none">{{ $bidang->judul }}</h1>
                             <br>
                             <p>{{ $bidang->caption }}</p>
                         </div>
