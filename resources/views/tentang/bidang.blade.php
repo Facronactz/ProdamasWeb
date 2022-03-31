@@ -5,9 +5,8 @@
 @section('head')
     <link rel="stylesheet" href="css/bidang.css">
     <style>
-        @media screen and (max width: 768px){
+        @media screen and (max width: 768px) {}
 
-        }
     </style>
 @endsection
 
@@ -34,11 +33,11 @@
     </section>
 
     <div class="container mt-5 mb-5">
-        @if(last($bidangs))
-        @else
-            <hr>
-        @endif
         @foreach ($bidangs as $bidang)
+            @if (last($bidangs))
+            @else
+                <hr>
+            @endif
             @if ($bidang->id % 2 != 0)
                 <div class="row row-cols-1 row-cols-md-2 box">
                     <h1 class="d-md-none d-block d-lg-none d-xl-none d-xxl-none">{{ $bidang->judul }}</h1>
