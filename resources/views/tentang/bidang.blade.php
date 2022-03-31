@@ -37,10 +37,10 @@
         @foreach ($bidangs as $bidang)
             @if ($bidang->id % 2 != 0)
                 <div class="row row-cols-1 row-cols-md-2 box">
+                    <h1 class="d-md-none d-block d-lg-none d-xl-none d-xxl-none">{{ $bidang->judul }}</h1>
                     <div class="col">
                         <div class="bidang-img" style="background-image: url('{{ asset('bidangProd/' . $bidang->foto) }}')"></div>
                     </div>
-                    <h1 class="d-md-none d-block d-lg-none d-xl-none d-xxl-none">{{ $bidang->judul }}</h1>
                     <div class="d-flex align-items-center justify-content-center col">
                         <div class="item-title">
                             <h1 class="d-md-block d-none">{{ $bidang->judul }}</h1>
