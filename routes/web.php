@@ -159,7 +159,9 @@ Route::get('/artikel/{id}', [artikelController::class, 'show']);
 //Route::post('add_prosess', 'artikelController@add_process');
 
 //Login
-route::get('auth/google',[])
+route::get('auth/google',[App\Http\Controllers::class,'redirectToGoogle'])->name('google.login');
+route::get('auth/google/callback', [App\Http\Controllers::class,'handleGoogleCallback'])->name('google.callback');
+
 //kritik saran
 Route::get('kritik.index', [App\Http\Controllers\KritikController::class, 'kritik'])->name('kritik');
 Route::post('kritik-saran', [App\Http\Controllers\KritikController::class, 'storeContactForm'])->name('contact-form.store');
