@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{ asset('css/desain.css') }}">
     {{-- Animation --}}
     <link rel="stylesheet" href="{{ asset('css/hover.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/social-color.css') }}">
     @yield('head')
     @hasSection('title')
         <title>Prodamas Plus - @yield('title')</title>
