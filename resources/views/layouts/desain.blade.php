@@ -104,6 +104,7 @@
                         <a class="align-self-center" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram mx-2 link-light"></i></a>
                         <a class="align-self-center" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook mx-2 link-light"></i></a>
                         <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a>
+<<<<<<< Updated upstream
                         <button class="align-self-center btn btn-outline-light login-icon ms-3" type="button" data-bs-toogle="modal" data-bs-target="#modalLogin">Log In<i class="fas fa-sign-in-alt mx-2"></i></button>
                     </div>
                     <!-- Button trigger modal -->
@@ -143,6 +144,11 @@
                             </div>
                         </div>
                     </div>
+=======
+                        <!-- Button trigger modal -->
+                        <button class="align-self-center btn btn-outline-light login-icon ms-3" type="button" data-bs-toogle="modal" data-bs-target="#loginModal">Log In<i class="fas fa-sign-in-alt mx-2"></i></button>
+                    </div>
+>>>>>>> Stashed changes
 
                 </div>
             </div>
@@ -253,6 +259,42 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+
+    {{-- Modal Login --}}
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn w-100 btn-primary my-2"><i class="fab fa-google"></i>
+                        Google
+                    </button>
+                    <button class="btn btn-primary w-100 my-2"><i class="fab fa-facebook-f"></i>
+                        Facebook
+                    </button>
+                    <button class="btn btn-primary w-100 my-2"><i class="fab fa-twitter"></i>
+                        Twitter
+                    </button>
+                    <button class="btn btn-primary w-100 my-2"><i class="fab fa-instagram"></i>
+                        Instagram
+                    </button>
+                    <button class="btn btn-primary w-100 my-2"><i class="fas fa-phone-alt"></i>
+                        No HP
+                    </button>
+                    <button class="btn btn-primary w-100 my-2"><i class="fas fa-user-shield"></i>
+                        Admin
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
