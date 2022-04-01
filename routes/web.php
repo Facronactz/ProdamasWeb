@@ -26,6 +26,7 @@ use App\Http\Controllers\AudioAdminController;
 use App\Http\Controllers\KampungkerenAdminController;
 use App\Http\Controllers\BidangAdminController;
 use App\Http\Controllers\TestregistController;
+use App\Http\Controllers\SettingCarouselController;
 //use App\Http\Controllers\SocialShareButtonsController;
 
 
@@ -145,6 +146,14 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::delete('/admin/bidang/{bidang_id}', [BidangAdminController::class, 'destroy']);
     Route::get('/admin/bidang/', [BidangAdminController::class, 'edit_desc']);
     Route::put('/admin/bidang/', [BidangAdminController::class, 'update_desc']);
+
+    // Setting Carousel
+    Route::get('/admin/add-carousel', [SettingCarouselController::class, 'create']);
+    Route::post('/admin/list-carousel', [SettingCarouselController::class, 'store']);
+    Route::get('/admin/list-carousel', [SettingCarouselController::class, 'index']);
+    Route::get('/admin/edit-carousel/{carousel}', [SettingCarouselController::class, 'edit']);
+    Route::put('/admin/edit-carousel/{carousel}', [SettingCarouselController::class, 'update']);
+    Route::delete('/admin/delete-carousel/{carousel}', [SettingCarouselController::class, 'destroy']);
 });
 
 //berlangganan

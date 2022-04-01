@@ -52,6 +52,11 @@
             <div class="carousel-item">
                 <img src="img/header2.png" class="d-block w-100 carousel-img" alt="..." />
             </div>
+            @foreach ($carousels as $carousel)
+            <div class="carousel-item">
+                <img src="{{ 'carouselProd/'. $carousel->foto }}" class="d-block w-100 carousel-img" alt="..." />
+            </div>
+            @endforeach
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselUtama" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
