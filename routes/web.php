@@ -27,7 +27,7 @@ use App\Http\Controllers\KampungkerenAdminController;
 use App\Http\Controllers\BidangAdminController;
 use App\Http\Controllers\TestregistController;
 use App\Http\Controllers\SearchController; 
-
+use Laravel\Socialite\Facades\Socialite; 
 //use App\Http\Controllers\SocialShareButtonsController;
 
 
