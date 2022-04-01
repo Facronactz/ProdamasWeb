@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 //use App\Http\GoogleController;
-use Iluminated\Support\Facades\Auth;
-use Laravel\Socialite\facades\Socialite;
-//use Illuminate\Http\Request;
+//use Iluminated\Support\Facades\Auth;
+//use Laravel\Socialite\facades\Socialite;
+use Illuminate\Http\Request;
 
 class GoogleController extends Controller
 {
