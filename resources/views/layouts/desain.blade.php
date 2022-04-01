@@ -105,7 +105,7 @@
                         <a class="align-self-center" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook mx-2 link-light"></i></a>
                         <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a>
                         <!-- Button trigger modal -->
-                        <button class="align-self-center btn btn-outline-light login-icon ms-3" type="button" data-bs-toogle="modal" data-bs-target="#loginModal">Log In<i class="fas fa-sign-in-alt mx-2"></i></button>
+                        <button class="align-self-center btn btn-outline-light login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Log In<i class="fas fa-sign-in-alt mx-2"></i></button>
                     </div>
 
                 </div>
