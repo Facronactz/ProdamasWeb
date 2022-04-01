@@ -105,7 +105,7 @@
                         <a class="align-self-center" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook mx-2 link-light"></i></a>
                         <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a>
                         <!-- Button trigger modal -->
-                        <button class="align-self-center btn btn-outline-light login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Log In<i class="fas fa-sign-in-alt mx-2"></i></button>
+                        <button class="align-self-center btn btn-outline-light login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In<i class="fas fa-sign-in-alt mx-2"></i></button>
                     </div>
 
                 </div>
@@ -223,32 +223,31 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Sign In Using Social Media</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <button class="btn w-100 btn-primary my-2"><i class="fab fa-google"></i>
+                    <button class="btn w-100 btn-google my-2"><i class="fab fa-google"></i>
                         Google
                     </button>
-                    <button class="btn btn-primary w-100 my-2"><i class="fab fa-facebook-f"></i>
+                    <button class="btn btn-facebook w-100 my-2"><i class="fab fa-facebook-f"></i>
                         Facebook
                     </button>
-                    <button class="btn btn-primary w-100 my-2"><i class="fab fa-twitter"></i>
-                        Twitter
-                    </button>
-                    <button class="btn btn-primary w-100 my-2"><i class="fab fa-instagram"></i>
+                    <button class="btn btn-instagram w-100 my-2"><i class="fab fa-instagram"></i>
                         Instagram
                     </button>
-                    <button class="btn btn-primary w-100 my-2"><i class="fas fa-phone-alt"></i>
+                    <button class="btn btn-twitter w-100 my-2"><i class="fab fa-twitter"></i>
+                        Twitter
+                    </button>
+                    <button class="btn btn-telp w-100 my-2"><i class="fas fa-phone-alt"></i>
                         No HP
                     </button>
-                    <button class="btn btn-primary w-100 my-2"><i class="fas fa-user-shield"></i>
+                    <button class="btn btn-admin w-100 my-2"><i class="fas fa-user-shield"></i>
                         Admin
                     </button>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
