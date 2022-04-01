@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User\Controller;
+use App\Http\GoogleController\Controller;
 use Iluminated\Support\Facades\Auth;
 use Laravel\Socialite\facades\Socialite;
 //use Illuminate\Http\Request;
