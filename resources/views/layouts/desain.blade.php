@@ -243,9 +243,9 @@
                     <button class="btn btn-telp w-100 my-2"><i class="fas fa-phone-alt"></i>
                         No HP
                     </button>
-                    <button class="btn btn-admin w-100 my-2"><i class="fas fa-user-shield"></i>
+                    <a class="btn btn-admin w-100 my-2" href="{{url('loginuser')}}"><i class="fas fa-user-shield"></i>
                         Admin
-                    </button>
+                    </a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
