@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-
-use Illuminate\Http\Request;
+use App\Models\User\Controller;
+use Iluminated\Support\Facades\Auth;
+use Laravel\Socialite\facades\Socialite;
+//use Illuminate\Http\Request;
 
 class GoogleController extends Controller
 {
@@ -23,13 +24,17 @@ class GoogleController extends Controller
             }
             else{
                 $newUser = User::create([
-                    'name'
-                    'username'
-                    'email'
-                    'google_id'
-                ])
-            }
+                    'name' =>$user->getName(),
+                    'username' =>$user->getEmail(),
+                    'email' =>$user->getEmail(),
+                    'google_id' =>$user->getId(),
+                    'password' =>bcrypt('12345678')
+                ]);
+                }
                 
+                Auth::login($newUser);
+                return redirect()->intended('dashboard');
+
         } catch (\Throwable $th) {
             //throw $th;
         }
