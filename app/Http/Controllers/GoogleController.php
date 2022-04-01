@@ -2,42 +2,40 @@
 
 namespace App\Http\Controllers;
 
-//use App\Http\GoogleController;
-//use Iluminated\Support\Facades\Auth;
+use App\Http\GoogleController;
+use Iluminated\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Laravel\Socialite\facades\Socialite;
 
-class GoogleController extends Controller
+class SocialAuthController extends Controller
 {
-    public function redirectToGoogle(){
-        return Socialite::driver('google')->redirect();
-    }        
-    public function handleGoogleCallback()
-    {
-        try {
-            $user = Socialite::driver('google')->user() ;
-            //dd($user);
-            $finduser = User::where('google_id',$user->getId())->first();
-            if($user){
-                Auth::login($finduser);
-                return redirect()->intended('dashboard');
-            }
-            else{
-                $newUser = User::create([
-                    'name' =>$user->getName(),
-                    'username' =>$user->getEmail(),
-                    'email' =>$user->getEmail(),
-                    'google_id' =>$user->getId(),
-                    'password' =>bcrypt('12345678')
-                ]);
-                }
-                
-                Auth::login($newUser);
-                return redirect()->intended('dashboard');
+  protected $driver = ['google'];
 
-        } catch (\Throwable $th) {
-            //throw $th;
-        }
+  public function redirect($provider)
+  {
+    if(!in_array($provider, $this->driver)){
+
+        abort(400);
     }
+
+    return Socialite::driver($provider)->redirect();
+  }
+
+  public function callback(Request $request)
+  {
+    $provider = $request->segment(2);
+
+    if(!in_array($provider, $this->driver)){
+
+        abort(400);
+    }
+
+    $user = Socialite::driver($provider)->user();
+
+    //save the user or do something else
+
+    auth()->login($user);
+    return redirect()->to('/');
+  }
 }
 
