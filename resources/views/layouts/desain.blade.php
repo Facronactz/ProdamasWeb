@@ -21,12 +21,20 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/desain.css') }}">
+    {{-- Animation --}}
+    <link rel="stylesheet" href="{{ asset('css/hover.css') }}">
     @yield('head')
     @hasSection('title')
         <title>Prodamas Plus - @yield('title')</title>
     @else
         <title>Prodamas Plus</title>
     @endif
+
+    <style>
+        .login-icon i:hover{
+            color: black !important;
+        }
+    </style>
 
 </head>
 
@@ -75,13 +83,27 @@
                     <a class="nav-link">Kontak</a>
                 </div>
 
-                <!-- Medsos -->
+                {{-- Search --}}
+                {{-- <div class="input-group" style="max-width: 10vw">
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                    <select class="form-select" id="inputGroupSelect01">
+                        <option selected>Semua</option>
+                        <option value="1">Foto</option>
+                        <option value="2">Audio</option>
+                        <option value="3">Video</option>
+                    </select>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-search link-light"></i>
+                    </button>
+                </div> --}}
+                {{--  Medsos --}}
                 <div>
                     <div class="d-flex justify-content-evenly">
-                        <a href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube mx-2 link-light"></i></a>
-                        <a href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram mx-2 link-light"></i></a>
-                        <a href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook mx-2 link-light"></i></a>
-                        <a href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a>
+                        <a class="align-self-center" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube mx-2 link-light"></i></a>
+                        <a class="align-self-center" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram mx-2 link-light"></i></a>
+                        <a class="align-self-center" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook mx-2 link-light"></i></a>
+                        <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a>
+                        <a class="align-self-center btn btn-outline-light login-icon ms-3" href="{{url('/loginuser')}}">Log In<i class="fas fa-sign-in-alt mx-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -167,26 +189,26 @@
                 try {
                     $audio[0].pause();
                 } catch (error) {
-                    
+
                 }
                 $video = $(this).find('video');
                 try {
                     $video[0].pause();
                 } catch (error) {
-                    
+
                 }
             });
         });
-        $(function(){
+        $(function() {
             $('.modal').on('shown.bs.modal', function() {
                 $media = $(this).find('.media');
                 $img = $(this).find('.click');
-                if($media){
+                if ($media) {
                     $img.unbind().click(function() {
                         // $media[0].pause();
                         return $media[0].paused ? $media[0].play() : $media[0].pause();
                     });
-                }   
+                }
             });
         });
     </script>

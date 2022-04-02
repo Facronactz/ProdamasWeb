@@ -25,7 +25,7 @@ Edit Bidang
         @if ($bidang->foto)
         <p>{{$bidang->foto}}</p>
         @endif
-        <input type="file" class="form-control" name="foto" id="foto" value="{{$bidang->foto}}">
+        <input type="file" class="form-control" name="foto[]" id="foto[]" value="{{$bidang->foto}}">
         @error('foto')
         <div class="alert alert-danger">
             {{ $message }}
@@ -34,7 +34,7 @@ Edit Bidang
     </div>
     <div class="form-group">
         <label for="caption">Caption</label>
-        <textarea name="caption" class="form-control" cols="30" rows="3">{{$bidang->caption}}</textarea>
+        <textarea name="caption" id="description" class="form-control" cols="30" rows="3">{{$bidang->caption}}</textarea>
         @error('caption')
         <div class="alert alert-danger">
             {{ $message }}

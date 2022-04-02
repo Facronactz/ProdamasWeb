@@ -17,6 +17,8 @@ use App\Http\Controllers\TentangController;
 use App\Http\Controllers\TulisCeritaController;
 use App\Http\Controllers\KampungkerenController;
 use App\Http\Controllers\BidangController;
+use App\Http\Controllers\PokmasAdminController;
+use App\Http\Controllers\PokmasController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\ArticleController;
@@ -46,7 +48,6 @@ Route::get('/', [artikelController::class, 'beranda'])->name('dashboard');
 
 // tentang
 Route::get('/tentang', [TentangController::class, 'index']);
-Route::get('/pokmas', [TentangController::class, 'pokmas']);
 
 // data
 Route::get('/grafik', [DataController::class, 'grafik']);
@@ -76,8 +77,11 @@ Route::resource('tuliscerita', TulisCeritaController::class);
 //kampungkeren
 Route::resource('kampungkeren', KampungkerenController::class);
 
-//kampungkeren
+//bidang
 Route::resource('bidang', BidangController::class);
+
+//pokmas
+Route::resource('pokmas', PokmasController::class);
 
 
 //login & profil
@@ -134,8 +138,8 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/kampungkeren/{kampungkeren_id}', [KampungkerenAdminController::class, 'edit']);
     Route::put('/admin/kampungkeren/{kampungkeren_id}', [KampungkerenAdminController::class, 'update']);
     Route::delete('/admin/kampungkeren/{kampungkeren_id}', [KampungkerenAdminController::class, 'destroy']);
-    Route::get('/admin/kampungkeren/', [KampungkerenAdminController::class, 'edit_desc']);
-    Route::put('/admin/kampungkeren/', [KampungkerenAdminController::class, 'update_desc']);
+    Route::get('/admin/kampungkerens/{description_id}', [KampungkerenAdminController::class, 'edit_desc']);
+    Route::put('/admin/kampungkerens/{description_id}', [KampungkerenAdminController::class, 'update_desc']);
 
     //bidang
     Route::get('/admin/add-bidang', [BidangAdminController::class, 'create']);
@@ -154,6 +158,16 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/edit-carousel/{carousel}', [SettingCarouselController::class, 'edit']);
     Route::put('/admin/edit-carousel/{carousel}', [SettingCarouselController::class, 'update']);
     Route::delete('/admin/delete-carousel/{carousel}', [SettingCarouselController::class, 'destroy']);
+
+    //pokmas
+    Route::get('/admin/add-pokmas', [PokmasAdminController::class, 'create']);
+    Route::post('/admin/list-pokmas', [PokmasAdminController::class, 'store']);
+    Route::get('/admin/list-pokmas', [PokmasAdminController::class, 'index']);
+    Route::get('/admin/pokmas/{pokmas_id}', [PokmasAdminController::class, 'edit']);
+    Route::put('/admin/pokmas/{pokmas_id}', [PokmasAdminController::class, 'update']);
+    Route::delete('/admin/pokmas/{pokmas_id}', [PokmasAdminController::class, 'destroy']);
+    Route::get('/admin/pokmass/{description_id}', [PokmasAdminController::class, 'edit_desc']);
+    Route::put('/admin/pokmass/{description_id}', [PokmasAdminController::class, 'update_desc']);
 });
 
 //berlangganan

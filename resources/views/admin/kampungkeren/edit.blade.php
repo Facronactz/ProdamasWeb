@@ -25,7 +25,7 @@ Edit Kampung Keren
         @if ($kampungkeren->foto)
         <p>{{$kampungkeren->foto}}</p>
         @endif
-        <input type="file" class="form-control" name="foto" id="foto" value="{{$kampungkeren->foto}}">
+        <input type="file" class="form-control" name="foto[]" id="foto[]" value="{{$kampungkeren->foto}}">
         @error('foto')
         <div class="alert alert-danger">
             {{ $message }}
@@ -34,7 +34,7 @@ Edit Kampung Keren
     </div>
     <div class="form-group">
         <label for="caption">Caption</label>
-        <textarea name="caption" class="form-control" cols="30" rows="3">{{$kampungkeren->caption}}</textarea>
+        <textarea name="caption" id="description" class="form-control" cols="30" rows="3">{{$kampungkeren->caption}}</textarea>
         @error('caption')
         <div class="alert alert-danger">
             {{ $message }}

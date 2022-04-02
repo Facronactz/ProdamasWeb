@@ -5,23 +5,33 @@
 @section('head')
     <link rel="stylesheet" href="css/artikel.css">
     <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/titleAnimation.css">
 @endsection
 
 @section('content')
     <!-- awal jumbotron -->
     <div class="container-fluid banner">
         <div class="container banner-content">
-            <h1>Artikel</h1>
         </div>
     </div>
     <!-- akhir jumbotrom -->
 
     <div class="container">
         <div class="row justify-content-between mt-5">
+            <div class="div-title">
+                <h1 class="home-title">
+                    <span>Artikel</span>
+                </h1>
+            </div>
 
             <!-- Kiri -->
             <div class="col">
-
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-search link-light"></i>
+                    </button>
+                </div>
                 @foreach ($artikel as $item)
                     <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
                         <div class="row g-0">
@@ -31,9 +41,9 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <a href="artikel/{{ $item->id }}" class="stretched-link"></a>
-                                    <h5 class="card-title">{{ $item->judul }}</h5>
-                                    <p class="card-text">{{ $item->text_sampul }}</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    <h5 class="card-title" style="font-size: 22px;">{{ $item->judul }}</h5>
+                                    <p class="card-text" style="font-size: 14px;"><?= $item->text_sampul ?></p>
+                                    <p class="card-text" style="font-size: 13px;"><small class="text-muted">Last updated 3 mins ago</small></p>
                                 </div>
                             </div>
                         </div>
@@ -48,17 +58,16 @@
                 <div class="card-right bg-light">
                     <h5 class="card-header">Update Artikel</h5>
                     @foreach ($artikelupdate as $item)
-                        <div class="col-sm-12">
-                            <div class="caption">
-                                <a href="artikel/{{ $item->id }}">
-                                    <h5>{{ $item->judul }}</h5>
-                                </a>
-                                <div class="row">
-                                    <div class="col-xl-3">
-                                        <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" width="100%" alt="Cinque Terre">
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <p>{{ $item->text_sampul }}</p>
+                        <div class="card mb-3 p-0 hvr-float-shadow" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4 my-auto">
+                                    <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="img-fluid rounded-start">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body py-0">
+                                        <h5 class="card-title" style="font-size: 14px;">{{ $item->judul }}</h5>
+                                        <p class="card-text mb-0" style="font-size: 12px;"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        <a class="stretched-link" href="artikel/{{ $item->id }}"></a>
                                     </div>
                                 </div>
                             </div>

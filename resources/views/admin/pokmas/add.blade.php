@@ -1,9 +1,9 @@
 @extends('admin.master')
 
-@section('bidang', 'active')
+@section('pokmas', 'active')
 
 @section('title')
-Bidang Baru
+Pokmas Baru
 @endsection
 
 @section('content')
@@ -25,17 +25,8 @@ Bidang Baru
 </div>
 @endif
 
-<form action="/admin/list-bidang" method="POST" enctype="multipart/form-data">
+<form action="/admin/list-pokmas" method="POST" enctype="multipart/form-data">
     @csrf
-    <div class="form-group">
-        <label for="judul">Judul</label>
-        <input name="judul" class="form-control" name="judul" id="judul" placeholder="Judul">
-        @error('judul')
-        <div class="alert alert-danger">
-            {{ $message }}
-        </div>
-        @enderror
-    </div>
 
     <div class="form-group">
         <label for="foto">Foto</label><br>
@@ -49,13 +40,13 @@ Bidang Baru
     <div class="form-group">
         <label for="caption">Caption</label>
         <textarea name="caption" id="description" class="form-control" cols="30" rows="10"></textarea>
-        @error('caption')
+        @error('description')
         <div class="alert alert-danger">
             {{ $message }}
         </div>
         @enderror
     </div>
     <button type="submit" class="btn btn-primary">Tambah</button>
-    <a href="/admin/list-bidang" class="btn btn-outline-primary">Kembali</a>
+    <a href="/admin/list-pokmas" class="btn btn-outline-primary">Kembali</a>
 </form>
 @endsection
