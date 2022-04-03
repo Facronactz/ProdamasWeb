@@ -65,6 +65,12 @@
                         <p>Pokmas</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="/admin/list-kritik" class="nav-link @yield('kritik')">
+                        <i class="nav-icon fas fa-comment"></i>
+                        <p>Kritik</p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

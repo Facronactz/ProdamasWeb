@@ -159,6 +159,11 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::delete('/admin/pokmas/{pokmas_id}', [PokmasAdminController::class, 'destroy']);
     Route::get('/admin/pokmass/{description_id}', [PokmasAdminController::class, 'edit_desc']);
     Route::put('/admin/pokmass/{description_id}', [PokmasAdminController::class, 'update_desc']);
+
+    //kritik
+    Route::get('/admin/list-kritik', [App\Http\Controllers\KritikAdminController::class, 'index']);
+    Route::get('/admin/kritik/{kritik_id}', [App\Http\Controllers\KritikAdminController::class, 'edit']);
+    Route::delete('/admin/kritik/{kritik_id}', [App\Http\Controllers\KritikAdminController::class, 'destroy']);
 });
 
 //berlangganan
