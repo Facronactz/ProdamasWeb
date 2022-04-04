@@ -65,14 +65,16 @@
     </div>
 
     {{-- Search --}}
-    <form action="search mt-3">
-        <div class="input-group">
-            <input class="form-control" type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
-            <button class="btn btn-primary" type="submit">
-                <i class="fas fa-search link-light"></i>
-            </button>
-        </div>
-    </form>
+    <div class="container">
+        <form action="search" class="mt-3">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-search link-light"></i>
+                </button>
+            </div>
+        </form>
+    </div>
 
     <!--Tentang-->
     <section class="tentang">
