@@ -64,8 +64,6 @@
         </button>
     </div>
 
-<<<<<<< Updated upstream
-=======
     {{-- Search --}}
     <form action="search mt-3">
         <div class="input-group">
@@ -76,7 +74,6 @@
         </div>
     </form>
 
->>>>>>> Stashed changes
     <!--Tentang-->
     <section class="tentang">
         <div class="container">
