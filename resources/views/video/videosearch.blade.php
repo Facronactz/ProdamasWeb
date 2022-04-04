@@ -19,7 +19,7 @@
 {{-- Search Bar --}}
 <div class="input-group" style="max-width: 10vw">
     <form action="searchvideo" method="GET">
-    <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchvideo">
+    <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchvideo" value="{{ request('searchvideo') }}">
     <button class="btn btn-primary" type="submit">
         <i class="fas fa-search link-light"></i>
     </button>
@@ -28,6 +28,7 @@
 <!-- Awal feed video -->
 <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedVideo">
     {{-- Card video 1 --}}
+    @if($videos->count())
     @forelse ($videos as $video)
     <div class=" card noBorder cardAudio" style="width: 18rem; cursor: pointer;">
         <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $video->id }}">
@@ -82,13 +83,15 @@
     {{-- Akhir Card Video --}}
     @endforeach
     @empty
-    <div class="alert alert-success" role="alert">
-        Tidak ada data
-    </div>
     @endforelse
     <div class="d-flex justify-content-end w-100 my-3">
         {{ $videos->links() }}
     </div>
+    @else
+    <div class="alert alert-success" role="alert">
+        Tidak ada data
+    </div>
+    @endif
 </div>
 <!-- akhir feed video -->
 

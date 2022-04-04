@@ -17,8 +17,6 @@ use App\Http\Controllers\TentangController;
 use App\Http\Controllers\TulisCeritaController;
 use App\Http\Controllers\KampungkerenController;
 use App\Http\Controllers\BidangController;
-use App\Http\Controllers\PokmasAdminController;
-use App\Http\Controllers\PokmasController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\ArticleController;
@@ -28,6 +26,8 @@ use App\Http\Controllers\AudioAdminController;
 use App\Http\Controllers\KampungkerenAdminController;
 use App\Http\Controllers\BidangAdminController;
 use App\Http\Controllers\TestregistController;
+use App\Http\Controllers\SearchController; 
+
 //use App\Http\Controllers\SocialShareButtonsController;
 
 
@@ -47,6 +47,7 @@ Route::get('/', [artikelController::class, 'beranda'])->name('dashboard');
 
 // tentang
 Route::get('/tentang', [TentangController::class, 'index']);
+Route::get('/pokmas', [TentangController::class, 'pokmas']);
 
 // data
 Route::get('/grafik', [DataController::class, 'grafik']);
@@ -76,11 +77,8 @@ Route::resource('tuliscerita', TulisCeritaController::class);
 //kampungkeren
 Route::resource('kampungkeren', KampungkerenController::class);
 
-//bidang
+//kampungkeren
 Route::resource('bidang', BidangController::class);
-
-//pokmas
-Route::resource('pokmas', PokmasController::class);
 
 
 //login & profil
@@ -137,8 +135,8 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/kampungkeren/{kampungkeren_id}', [KampungkerenAdminController::class, 'edit']);
     Route::put('/admin/kampungkeren/{kampungkeren_id}', [KampungkerenAdminController::class, 'update']);
     Route::delete('/admin/kampungkeren/{kampungkeren_id}', [KampungkerenAdminController::class, 'destroy']);
-    Route::get('/admin/kampungkerens/{description_id}', [KampungkerenAdminController::class, 'edit_desc']);
-    Route::put('/admin/kampungkerens/{description_id}', [KampungkerenAdminController::class, 'update_desc']);
+    Route::get('/admin/kampungkeren/', [KampungkerenAdminController::class, 'edit_desc']);
+    Route::put('/admin/kampungkeren/', [KampungkerenAdminController::class, 'update_desc']);
 
     //bidang
     Route::get('/admin/add-bidang', [BidangAdminController::class, 'create']);
@@ -147,18 +145,8 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/bidang/{bidang_id}', [BidangAdminController::class, 'edit']);
     Route::put('/admin/bidang/{bidang_id}', [BidangAdminController::class, 'update']);
     Route::delete('/admin/bidang/{bidang_id}', [BidangAdminController::class, 'destroy']);
-    Route::get('/admin/bidangs/{description_id}', [BidangAdminController::class, 'edit_desc']);
-    Route::put('/admin/bidangs/{description_id}', [BidangAdminController::class, 'update_desc']);
-
-    //pokmas
-    Route::get('/admin/add-pokmas', [PokmasAdminController::class, 'create']);
-    Route::post('/admin/list-pokmas', [PokmasAdminController::class, 'store']);
-    Route::get('/admin/list-pokmas', [PokmasAdminController::class, 'index']);
-    Route::get('/admin/pokmas/{pokmas_id}', [PokmasAdminController::class, 'edit']);
-    Route::put('/admin/pokmas/{pokmas_id}', [PokmasAdminController::class, 'update']);
-    Route::delete('/admin/pokmas/{pokmas_id}', [PokmasAdminController::class, 'destroy']);
-    Route::get('/admin/pokmass/{description_id}', [PokmasAdminController::class, 'edit_desc']);
-    Route::put('/admin/pokmass/{description_id}', [PokmasAdminController::class, 'update_desc']);
+    Route::get('/admin/bidang/', [BidangAdminController::class, 'edit_desc']);
+    Route::put('/admin/bidang/', [BidangAdminController::class, 'update_desc']);
 });
 
 //berlangganan
@@ -170,9 +158,11 @@ Route::resource('artikel', artikelController::class);
 Route::get('/artikel/{id}', [artikelController::class, 'show']);
 //Route::post('add_prosess', 'artikelController@add_process');
 
-//kritik saran
-Route::get('kritik.index', [App\Http\Controllers\KritikController::class, 'kritik'])->name('kritik');
-Route::post('kritik-saran', [App\Http\Controllers\KritikController::class, 'storeContactForm'])->name('contact-form.store');
+// //Login
+// route::get('auth/google',[])
+// //kritik saran
+// Route::get('kritik.index', [App\Http\Controllers\KritikController::class, 'kritik'])->name('kritik');
+// Route::post('kritik-saran', [App\Http\Controllers\KritikController::class, 'storeContactForm'])->name('contact-form.store');
 
 //Authentication
 Route::get('admin', [CustomAuthController::class, 'admin']);
@@ -183,9 +173,15 @@ Route::post('custom-registration', [CustomAuthController::class, 'customRegistra
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
 
+// Route search all
+Route::get('/search', [SearchController::class, 'search'])->name('search');
+
+
 //Route search artikel
 Route::resource('/artikel', artikelController::class);
 Route::get('/searchartikel', [SearchController::class, 'searchartikel'])->name('search');
+
+
 
 //Route search audio
 Route::resource('/audio', AudioController::class);

@@ -19,8 +19,8 @@
 
     {{-- Search Bar --}}
     <div class="input-group" style="max-width: 10vw">
-        <form action="searchfoto" method="GET">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchfoto">
+        <form action="searchfoto">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchfoto" value="{{ request('searchfoto') }}">
         <button class="btn btn-primary" type="submit">
             <i class="fas fa-search link-light"></i>
         </button>
