@@ -26,11 +26,11 @@
         </button>
         </form>
     </div>
-
     <!-- Awal feed foto -->
     <div class="container overflow-hidden">
         <div class="row row-cols-2 gx-0">
             {{-- Card foto --}}
+            @if($fotos->count())
             @forelse ($fotos as $foto)
                 <div class="col p-2">
                     <div class="card bg-dark text-white" data-bs-toggle="modal" data-bs-target="#foto{{ $foto->id }}" style="cursor: pointer">
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 @foreach ($fotos as $foto)
                     {{-- Card Modal --}}
                     <div class="modal fade" id="foto{{ $foto->id }}" tabindex="-1" aria-labelledby="fotoLabel" aria-hidden="true">
@@ -76,11 +76,13 @@
                     </div>
                     {{-- Akhir Card foto --}}
                 @endforeach
-            @empty
-                <div class="alert alert-success" role="alert">
-                    Tidak ada data
-                </div>
+                @empty
             @endforelse
+            @else
+            <div class="alert alert-success" role="alert">
+                Tidak ada data
+            </div>
+            @endif
         </div>
         <div class="d-flex justify-content-end w-100  my-3">
             {{ $fotos->links() }}
