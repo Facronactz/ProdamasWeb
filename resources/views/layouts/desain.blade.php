@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{ asset('css/desain.css') }}">
     {{-- Animation --}}
     <link rel="stylesheet" href="{{ asset('css/hover.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/social-color.css') }}">
     @yield('head')
     @hasSection('title')
         <title>Prodamas Plus - @yield('title')</title>
@@ -31,9 +32,10 @@
     @endif
 
     <style>
-        .login-icon i:hover{
+        .login-icon i:hover {
             color: black !important;
         }
+
     </style>
 
 </head>
@@ -96,15 +98,17 @@
                         <i class="fas fa-search link-light"></i>
                     </button>
                 </div> --}}
-                {{--  Medsos --}}
+                {{-- Medsos --}}
                 <div>
                     <div class="d-flex justify-content-evenly">
                         <a class="align-self-center" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube mx-2 link-light"></i></a>
                         <a class="align-self-center" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram mx-2 link-light"></i></a>
                         <a class="align-self-center" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook mx-2 link-light"></i></a>
                         <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a>
-                        <a class="align-self-center btn btn-outline-light login-icon ms-3" href="{{url('/loginuser')}}">Log In<i class="fas fa-sign-in-alt mx-2"></i></a>
+                        <!-- Button trigger modal -->
+                        <button class="align-self-center btn btn-outline-light login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In<i class="fas fa-sign-in-alt mx-2"></i></button>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -214,6 +218,41 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+
+    {{-- Modal Login --}}
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign In Using Social Media</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn w-100 btn-google my-2"><i class="fab fa-google"></i>
+                        Google
+                    </button>
+                    <button class="btn btn-facebook w-100 my-2"><i class="fab fa-facebook-f"></i>
+                        Facebook
+                    </button>
+                    <button class="btn btn-instagram w-100 my-2"><i class="fab fa-instagram"></i>
+                        Instagram
+                    </button>
+                    <button class="btn btn-twitter w-100 my-2"><i class="fab fa-twitter"></i>
+                        Twitter
+                    </button>
+                    <button class="btn btn-telp w-100 my-2"><i class="fas fa-phone-alt"></i>
+                        No HP
+                    </button>
+                    <a class="btn btn-admin w-100 my-2" href="{{url('loginuser')}}"><i class="fas fa-user-shield"></i>
+                        Admin
+                    </a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
