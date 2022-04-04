@@ -21,83 +21,25 @@
     </style>
 @endsection
 
+
+
 @section('content')
-    <!-- awal jumbotron -->
-    {{-- <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="img/header1.png" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="img/header2.png" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div> --}}
-    <div id="carouselUtama" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/header1.png" class="d-block w-100 carousel-img" alt="..." />
-            </div>
-            <div class="carousel-item">
-                <img src="img/header2.png" class="d-block w-100 carousel-img" alt="..." />
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselUtama" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselUtama" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
 
-    {{-- Search --}}
+
+<div class="input-group" style="max-width: 10vw">
     <form action="search">
-        <div class="input-group">
-            <input class="form-control" type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
-            <button class="btn btn-primary" type="submit">
-                <i class="fas fa-search link-light"></i>
-            </button>
-        </div>
-    </form>
-
-    <!--Tentang-->
-    <section class="tentang mt-3 ">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 py-5">
-                    <h1 class="text-center mb-5">Tentang Prodamas</h1>
-                    <p class="fs-5" style="text-align: justify;">Program Pemberdayaan Masyarakat (PRODAMAS) adalah
-                        suatu program dari Pemerintah Kota Kediri
-                        yang digunakan untuk melaksanakan kegiatan pembangunan masyarakat ditingkat kelurahan yang berbasis
-                        wilayah Rukun Tetangga (RT) yang dimulai sejak tahun 2015 sebagai upaya mewujudkan kemampuan dan
-                        kemandirian masyarakat dalam pembangunan.</p>
-                </div>
-                <div class="col-md-6 py-5">
-                    <img src="img/tentangProdamas.jpeg" class="img-fluid rounded-3">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End tentang-->
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="search" value="{{ request('search') }}">
+        <button class="btn btn-primary" type="submit">
+            <i class="fas fa-search link-light"></i>
+        </button>
+        </form>
+</div>
 
     <!--artikel-->
     <div class="container-md my-5 artikel">
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Artikel</h3>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 px-md-0 px-5">
+            @if($artikel->count())
             @foreach ($artikel as $item)
                 <div class="col my-3 my-lg-0 hvr-bob">
                     <div class="card h-100 hvr-grow hvr-underline-from-center">
@@ -105,7 +47,7 @@
                         <div class="card-body">
                             <a class="stretched-link" href="artikel/{{ $item->id }}"></a>
                             <h5 class="card-title">{{ $item->judul }}</h5>
-                            <p class="card-text">{{ $item->text_sampul }}</p>
+                            {{-- <p class="card-text">{{ $item->text_sampul }}</p> --}}
                         </div>
                     </div>
                 </div>
@@ -117,20 +59,27 @@
                 <i class="hvr-icon fas fa-arrow-right"></i>
             </a>
         </div>
+
+        @else
+        <div class="alert alert-success" role="alert">
+            Tidak ada data
+        </div>
+        @endif
     </div>
     <!--end artikel-->
 
     <!--video-->
     <div class="container-md my-5">
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Video</h3>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
-            @foreach ($video as $item)
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 px-md-0 px-5">
+            @if($videos->count())
+            @foreach ($videos as $item)
                 <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
                     <div class="card h-100 hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('videoProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
-                            <p class="card-text">{{ $item->caption }}</p>
+                            {{-- <p class="card-text">{{ $item->caption }}</p> --}}
                         </div>
                     </div>
                 </div>
@@ -142,9 +91,14 @@
                 <i class="hvr-icon fas fa-arrow-right"></i>
             </a>
         </div>
+        @else
+        <div class="alert alert-success" role="alert">
+            Tidak ada data
+        </div>
+        @endif
     </div>
 
-    @foreach ($video as $item)
+    @foreach ($videos as $item)
         <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
@@ -180,19 +134,21 @@
             </div>
         </div>
     @endforeach
+   
     <!--end video-->
 
     <!--foto-->
     <div class="container-md my-5">
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Foto</h3>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
-            @foreach ($foto as $item)
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 px-md-0 px-5">
+            @if($fotos->count())
+            @foreach ($fotos as $item)
                 <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
                     <div class="card h-100 hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('fotoProd/' . $item->konten) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
-                            <p class="card-text">{{ $item->caption }}</p>
+                            {{-- <p class="card-text">{{ $item->caption }}</p> --}}
                         </div>
                     </div>
                 </div>
@@ -204,33 +160,14 @@
                 <i class="hvr-icon fas fa-arrow-right"></i>
             </a>
         </div>
+        @else
+            <div class="alert alert-success" role="alert">
+                Tidak ada data
+            </div>
+            @endif
     </div>
 
-
-    {{-- <div class="container-md my-5">
-    <h3 class="mb-4" style="font-family: Inter, sans-serif">Foto</h3>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
-      @foreach ($foto as $item)
-      <a href="foto/{{$item->id}}"></a>
-  <div class="col">
-    <div class="card h-100 hvr-grow" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$item->id}}">
-      <img src="{{ asset('fotoProd/'.$item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{ $item->judul }}</h5>
-        <p class="card-text">{{ $item->caption }}</p>
-      </div>
-    </div>
-  </div>
-  @endforeach
-  </div>
-  <a href="{{ url('foto') }}">
-    <h6 class="text-end mt-3"><u>Info Lainnya <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-        </svg></u></h6>
-  </a>
-  </div> --}}
-
-    @foreach ($foto as $item)
+    @foreach ($fotos as $item)
         {{-- Card Modal --}}
         <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
@@ -252,7 +189,7 @@
                                   border: none;
                                   ">
                                 <h3>{{ $item->judul }}</h3>
-                                <p>{{ $item->caption }}</p>
+                                {{-- <p>{{ $item->caption }}</p> --}}
                             </div>
                         </div>
                     </div>
@@ -269,14 +206,15 @@
     <!--audio-->
     <div class="container-md my-5">
         <h3 class="mb-4" style="font-family: Inter, sans-serif">Audio</h3>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
-            @foreach ($audio as $item)
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 px-md-0 px-5">
+            @if($audios->count())
+            @foreach ($audios as $item)
                 <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
                     <div class="card h-100 hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('audioProd/thumb/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
-                            <p class="card-text">{{ $item->caption }}</p>
+                            {{-- <p class="card-text">{{ $item->caption }}</p> --}}
                         </div>
                     </div>
                 </div>
@@ -288,9 +226,14 @@
                 <i class="hvr-icon fas fa-arrow-right"></i>
             </a>
         </div>
+        @else
+            <div class="alert alert-success" role="alert">
+                Tidak ada data
+            </div>
+            @endif
     </div>
 
-    @foreach ($audio as $item)
+    @foreach ($audios as $item)
         {{-- Card Modal --}}
         <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
@@ -329,46 +272,5 @@
         {{-- Akhir Card Audio --}}
     @endforeach
     <!--end audio-->
-
-    <!--berlangganan-->
-    {{-- <div class="container py-5 mb-5">
-    <div class="cardberlangganan">
-      <div class="card-body">
-        <h5 class="card-title text-center mb-4 mt-5" style="font-weight: bold;font-family:Inter, sans-serif;">Berlangganan</h5>
-        <p class="card-text text-center" style="font-family: Montserrat, sans-serif;;">Dapatkan informasi menarik dan terupdate tentang Prodamas Kota Kediri dengan mendaftarkan email Anda.</p>
-        <form action="{{url('beranda.index')}}" method="post">
-  @if ($message = Session::get('success'))
-  <span class="text-success">
-    <center>
-      <strong>{{ $message }}</strong>
-    </center>
-  </span>
-  @endif
-  @if ($message = Session::get('error'))
-  <span class="text-muted">
-    <center>
-      <strong>{{ $message }}</strong>
-    </center>
-  </span>
-  @endif
-  @if ($errors->any('email'))
-  <span class="text-danger">
-    <center>
-      <strong>{{$errors->first('email')}}</strong>
-    </center>
-  </span>
-  @endif
-  @csrf
-  <div class="col-8 offset-2 mb-3 mt-2">
-    <input type="text" class="form-control" name="email" aria-describedby="emailberlangganan">
-  </div>
-  <div class="d-grid gap-2 col-6 mx-auto mb-5">
-    <button class="rounded" type="submit" style="background-color: #FF6600; border:none;color:white;height: 35px">Mulai Berlangganan</button>
-  </div>
-  </form>
-  </div>
-  </div>
-  </div> --}}
-    <!--end berlangganan-->
 
 @endsection

@@ -13,22 +13,22 @@
     {{-- <video id="background-video" autoplay loop muted poster="kota.png">
         <source src="header/hAudio.png" type="video/mp4" />
     </video> --}}
-    <img class="w-100" src="header/hAudio.png" alt="" srcset="">
+    <img class="w-100" src="header/AUDIO ok.png" alt="" srcset="">
 </div>
 <!-- akhir jumbotrom -->
 {{-- Search Bar --}}
 <div class="input-group" style="max-width: 10vw">
     <form action="searchaudio">
-    <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchaudio" value="{{ request('searchaudio') }}">
+    <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchaudio"  value="{{ request('searchaudio') }}">
     <button class="btn btn-primary" type="submit">
         <i class="fas fa-search link-light"></i>
     </button>
     </form>
 </div>
-
 <!-- Awal feed audio -->
 <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedAudio">
     {{-- Card Audio --}}
+    @if($audios->count())
     @forelse ($audios as $audio)
     <div class=" card noBorder cardAudio" style="width: 18rem; cursor: pointer;">
         <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $audio->id }}">
@@ -42,7 +42,7 @@
             </div>
         </div>
     </div>
-
+    
     @foreach ($audios as $audio)
     {{-- Card Modal --}}
     <div class="modal fade" id="audioPlayer{{ $audio->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
@@ -82,14 +82,15 @@
     </div>
     <!-- Akhir Card Audio -->
     @endforeach
-    @empty
-    <div class="alert alert-success" role="alert">
-        Tidak ada data
-    </div>
     @endforelse
     <div class="d-flex justify-content-end w-100 my-3">
         {{ $audios->links() }}
     </div>
+    @else
+    <div class="alert alert-success" role="alert">
+        Tidak ada data
+    </div>
+    @endif
 </div>
 <!-- akhir feed audio -->
 @endsection
