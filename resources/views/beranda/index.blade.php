@@ -65,20 +65,22 @@
     </div>
 
     {{-- Search --}}
-    <form action="search">
-        <div class="input-group">
-            <input class="form-control" type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
-            <button class="btn btn-primary" type="submit">
-                <i class="fas fa-search link-light"></i>
-            </button>
-        </div>
-    </form>
+    <div class="container">
+        <form action="search" class="mt-3">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-search link-light"></i>
+                </button>
+            </div>
+        </form>
+    </div>
 
     <!--Tentang-->
-    <section class="tentang mt-3 ">
+    <section class="tentang">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 py-5">
+                <div class="col-md-6 py-4">
                     <h1 class="text-center mb-5">Tentang Prodamas</h1>
                     <p class="fs-5" style="text-align: justify;">Program Pemberdayaan Masyarakat (PRODAMAS) adalah
                         suatu program dari Pemerintah Kota Kediri
@@ -86,7 +88,7 @@
                         wilayah Rukun Tetangga (RT) yang dimulai sejak tahun 2015 sebagai upaya mewujudkan kemampuan dan
                         kemandirian masyarakat dalam pembangunan.</p>
                 </div>
-                <div class="col-md-6 py-5">
+                <div class="col-md-6 py-4">
                     <img src="img/tentangProdamas.jpeg" class="img-fluid rounded-3">
                 </div>
             </div>
