@@ -35,6 +35,12 @@
         .login-icon i:hover {
             color: black !important;
         }
+        .header{
+            max-height: 90vh;
+            max-width: 100%;
+            object-fit: cover;
+            object-position: bottom;
+        }
 
     </style>
 
