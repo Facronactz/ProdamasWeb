@@ -62,6 +62,7 @@
             </a>
         </div>
     @else
+    </div>
         <div class="alert alert-success" role="alert">
             Tidak ada data
         </div>
@@ -93,6 +94,7 @@
             </a>
         </div>
     @else
+    </div>
         <div class="alert alert-success" role="alert">
             Tidak ada data
         </div>
@@ -162,6 +164,7 @@
             </a>
         </div>
     @else
+    </div>
         <div class="alert alert-success" role="alert">
             Tidak ada data
         </div>
@@ -228,6 +231,7 @@
             </a>
         </div>
     @else
+    </div>
         <div class="alert alert-success" role="alert">
             Tidak ada data
         </div>
