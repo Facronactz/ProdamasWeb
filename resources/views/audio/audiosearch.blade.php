@@ -17,14 +17,16 @@
 </div>
 <!-- akhir jumbotrom -->
 {{-- Search Bar --}}
-<div class="input-group" style="max-width: 10vw">
-    <form action="searchaudio">
-    <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchaudio"  value="{{ request('searchaudio') }}">
-    <button class="btn btn-primary" type="submit">
-        <i class="fas fa-search link-light"></i>
-    </button>
-    </form>
-</div>
+<form action="searchaudio">
+    <div class="container row justify-content-center">
+        <div class="input-group">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchaudio"  value="{{ request('searchaudio') }}">
+            <button class="btn btn-primary" type="submit">
+                <i class="fas fa-search link-light"></i>
+            </button>
+        </div>
+    </div>
+</form>
 <!-- Awal feed audio -->
 <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedAudio">
     {{-- Card Audio --}}
