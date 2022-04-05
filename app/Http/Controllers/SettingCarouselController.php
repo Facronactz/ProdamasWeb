@@ -17,7 +17,7 @@ class SettingCarouselController extends Controller
     public function index()
     {
         //
-        $carousels = SettingCarousel::orderBy('id', 'desc')->get();
+        $carousels = SettingCarousel::orderBy('id', 'desc')->get(3);
         return view('admin.carousel.list', compact('carousels'));
     }
 
