@@ -31,7 +31,7 @@
 		<div class="container-login100" style="background-color:#4d148c;">
 			<div class="wrap-login100 p-t-30 p-b-50">
 
-				<form class="login100-form validate-form p-b-33 p-t-5" action="/postlogin" method="POST" enctype="multipart/form-data">
+				<form class="login100-form validate-form p-b-33 p-t-5" action="{{ url('/postlogin') }}" method="POST" enctype="multipart/form-data">
 				<span class="login100-form-title p-b-41" style="color: black; margin-top: 15px;">
 					Login
 				</span>
