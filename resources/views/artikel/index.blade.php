@@ -11,7 +11,7 @@
 @section('content')
     <!-- awal jumbotron -->
     <div class="container-fluid">
-        
+        <img src="{{asset('img-tentang/artikel.jpg')}}" alt="" srcset="">
     </div>
     <!-- akhir jumbotrom -->
 
