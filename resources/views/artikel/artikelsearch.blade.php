@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <div class="row container justify-content-center">
+    <div class="row container justify-content-center mx-auto">
         <div class="leftcolumn mt-5">
             <form action="searchartikel">
                 <div class="input-group">
