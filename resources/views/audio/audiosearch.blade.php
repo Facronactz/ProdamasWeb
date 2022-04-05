@@ -17,7 +17,7 @@
     </div>
     <!-- akhir jumbotrom -->
     {{-- Search Bar --}}
-    <div class="container row justify-content-center">
+    <div class="container row justify-content-center mx-auto">
         <form action="searchaudio">
             <div class="input-group">
                 <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchaudio" value="{{ request('searchaudio') }}">
