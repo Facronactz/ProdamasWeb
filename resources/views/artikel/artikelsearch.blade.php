@@ -19,20 +19,19 @@
             </form>
             @if ($artikel->count())
                 @foreach ($artikel as $item)
-                    <div class="card">
-                        <a href="artikel/{{ $item->id }}" class="stretched-link"></a>
-                        <h2>{{ $item->judul }}</h2><br>
-                        <div class="row">
-                            <!--<div class="col-sm-12">buat share
-                            </div>-->
-                            <div class="col-sm-4">
-                                <h6>{{ $item->created_at }}</h6>
+                    <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
+                        <div class="row g-0">
+                            <div class="col-md-4 my-auto">
+                                <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="img-fluid rounded-start">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <a href="artikel/{{ $item->id }}" class="stretched-link"></a>
+                                    <h5 class="card-title" style="font-size: 22px;">{{ $item->judul }}</h5>
+                                    <p class="card-text" style="font-size: 13px;"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
                             </div>
                         </div>
-                        <br>
-                        <div class="">
-                            <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" alt="" style="height:100%; max-width: 800px">
-                        </div><br>
                     </div>
                 @endforeach
                 <div class="d-flex justify-content-end w-100 my-3">
