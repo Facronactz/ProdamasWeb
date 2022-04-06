@@ -157,9 +157,8 @@
 
 @section('content')
     <!-- awal jumbotron -->
-    <div class="container-fluid banner">
-        <div class="container banner-content">
-        </div>
+    <div class="container-fluid header">
+        <img src="{{asset('img-tentang/header-kampung-keren.png')}}" alt="" srcset="">
     </div>
     <!-- akhir jumbotrom -->
 
