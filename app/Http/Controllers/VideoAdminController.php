@@ -20,7 +20,7 @@ class VideoAdminController extends Controller
         $this->validate($request,[
             'gambar_sampul' => 'required|file|image|max:2200',
             'judul' => 'required',
-            'konten' => 'required|file',
+            'konten' => 'required',
             'caption' => 'required'
         ]);
 
