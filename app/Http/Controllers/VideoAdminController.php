@@ -29,17 +29,17 @@ class VideoAdminController extends Controller
         $pathThumb = "sampul-".time().".".$extThumb;
         $pathStore = $request->gambar_sampul->move(public_path('../videoProd/sampul'), $pathThumb);
 
-        // konten video
-        $konten = $request->file('konten');
-        $videoname = $konten->getClientOriginalName();
-        $videopath = $konten->storeAs('konten', $videoname);
-        $pathStore = $request->konten->move(public_path('../videoProd/konten'), $videopath);
+        // // konten video
+        // $konten = $request->file('konten');
+        // $videoname = $konten->getClientOriginalName();
+        // $videopath = $konten->storeAs('konten', $videoname);
+        // $pathStore = $request->konten->move(public_path('../videoProd/konten'), $videopath);
         
 
         VideoAdmin::create([
             "gambar_sampul" => $pathThumb,
             "judul" => $request["judul"],
-            "konten" => $videoname,
+            "konten" => $request["konten"],
             "caption" => $request["caption"],
         ]);
 
@@ -66,7 +66,7 @@ class VideoAdminController extends Controller
         $request->validate([
             'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
             'judul' => 'required',
-            'konten' => 'mimes:video/mp4', 
+            'konten' => 'required', 
             'caption' => 'required'
         ]);
 
