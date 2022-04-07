@@ -20,7 +20,7 @@
             @if($artikel->count())
             @foreach ($artikel as $item)
                 <div class="card">
-                    <a href="artikel/{{ $item->id }}" class="stretched-link"></a>
+                    <a href="artikel/{{ $item->id }}" class="stretched-link" target="_blank"></a>
                     <h2>{{ $item->judul }}</h2><br>
                     <div class="row">
                         <!--<div class="col-sm-12">buat share
