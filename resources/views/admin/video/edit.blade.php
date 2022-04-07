@@ -37,7 +37,7 @@ Edit Video
         @if ($video->gambar_sampul)
         <p>{{$video->gambar_sampul}}</p>
         @endif
-        <input type="file" name="konten" class="form-control" cols="30" rows="10" {{$video->konten}}>
+        <input type="text" name="konten" class="form-control" cols="30" rows="10" {{$video->konten}}>
         @error('konten')
         <div class="alert alert-danger">
             {{ $message }}
