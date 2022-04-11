@@ -8,12 +8,6 @@
 @endsection
 
 @section('content')
-    <!-- awal jumbotron -->
-    <div>
-        <img class="w-100" src="header/hVideo.png" alt="" srcset="">
-    </div>
-    <!-- akhir jumbotrom -->
-
     {{-- Search Bar --}}
     <div class="container">
         <form action="searchvideo">
