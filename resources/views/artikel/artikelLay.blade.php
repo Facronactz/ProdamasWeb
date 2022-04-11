@@ -13,14 +13,15 @@
                     <h2>{{ $item->judul }}</h2><br>
                     <div class="row">
                         <!--<div class="col-sm-12">buat share
-                            </div>-->
+                        </div>-->
                         <div class="col-sm-4">
                             <h6>{{ $item->created_at }}</h6>
                         </div>
                     </div>
                     <br>
                     <div class="">
-                        <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" alt="" style="height:100%; max-width: 800px">
+                        <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" alt=""
+                            style="height:100%; max-width: 800px">
                     </div><br>
                     <p><?= $item->article ?></p>
                 </div>
@@ -54,7 +55,8 @@
                 <ul class="list-group list-group-flush">
                     <a class="list-group-item" href="https://www.kedirikota.go.id/">Pemerintah Kota Kediri</a>
                     <a class="list-group-item" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
-                    <a class="list-group-item" href="https://survey123.arcgis.com/share/932769e15a27418aa9b448b0b1e6b6b6">Bank Sampah</a>
+                    <a class="list-group-item"
+                        href="https://survey123.arcgis.com/share/932769e15a27418aa9b448b0b1e6b6b6">Bank Sampah</a>
                 </ul>
             </div>
         </div>

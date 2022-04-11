@@ -57,6 +57,10 @@ class artikelController extends Controller
                         ->orderBy('id', 'desc')
                         ->get();
                 // dd($artikel);
+                $artikelupdate = ArticleAdmin::where('status', 'published')
+                        ->orderBy('id', 'desc')
+                        ->take(3)
+                        ->get();
                 return view('artikel.artikelLay', compact('artikel'));
         }
 
