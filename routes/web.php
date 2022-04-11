@@ -159,17 +159,17 @@ Route::get('/artikel/{id}', [artikelController::class, 'show']);
 //Route::post('add_prosess', 'artikelController@add_process');
 
 //Login
-//Route::get('auth/google',[App\Http\Controllers\GoogleController::class,'redirectToGoogle'])->name('google.login');
-//Route::get('auth/google/callback', [App\Http\Controllers\GoogleController::class,'handleGoogleCallback'])->name('google.callback');
-Route::get('/auth/google', function () {
-    return Socialite::driver('google')->redirect();
-});
+Route::get('auth/google',[App\Http\Controllers\GoogleController::class,'redirectToGoogle'])->name('google.login');
+Route::get('auth/google/callback', [App\Http\Controllers\GoogleController::class,'handleGoogleCallback'])->name('google.callback');
+// Route::get('/auth/google', function () {
+//     return Socialite::driver('google')->redirect();
+// });
  
-Route::get('/auth/google/callback', function () {
-    $user = Socialite::driver('google')->user();
+// Route::get('/auth/google/callback', function () {
+//     $user = Socialite::driver('google')->user();
  
-    // $user->token
-});
+//     // $user->token
+// });
 //kritik saran
 Route::get('kritik.index', [App\Http\Controllers\KritikController::class, 'kritik'])->name('kritik');
 Route::post('kritik-saran', [App\Http\Controllers\KritikController::class, 'storeContactForm'])->name('contact-form.store');
