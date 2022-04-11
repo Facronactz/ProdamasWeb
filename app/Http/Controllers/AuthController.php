@@ -58,7 +58,7 @@ class AuthController extends Controller {
         //untuk menyimpan data regist ke DB
         // User::create([
         //     'name' => $request->name,
-        //     'level' => 'user',
+        //     'role' => 'user',
         //     'email'=> $request->email,
         //     'telp' => $request->telp,
         //     'username' => $request->username,
@@ -67,7 +67,7 @@ class AuthController extends Controller {
         // ]);
         $validateData = $request->validate([
             'name' => 'required|max:120',
-            'level' => 'null',
+            'role' => 'null',
             'email' => 'required',
             'telp' => 'required',
             'username' => 'required',
@@ -76,7 +76,7 @@ class AuthController extends Controller {
         ]);
         $data = new User();
         $data->name = $validateData['name'];
-        $data->level = "user";
+        $data->role = "user";
         $data->email = $validateData['email'];
         $data->telp = $validateData['telp'];
         $data->username = $validateData['username'];
