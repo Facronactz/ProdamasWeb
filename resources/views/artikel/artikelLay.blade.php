@@ -19,7 +19,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="">
+                    <div class="container-fluid justify-content-center row">
                         <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" alt=""
                             style="height:100%; max-width: 800px">
                     </div><br>
