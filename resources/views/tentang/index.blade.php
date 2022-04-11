@@ -9,8 +9,8 @@
 
 @section('content')
     <!-- awal jumbotron -->
-    <div class="container-fluid header">
-        <img src="{{asset('img-tentang/header-tentang-prodamas.png')}}" alt="" srcset="">
+    <div class="container-fluid p-0">
+        <img class="header w-100" src="{{asset('img-tentang/header-tentang-prodamas.png')}}" alt="" srcset="">
     </div>
     <!-- akhir jumbotrom -->
 
