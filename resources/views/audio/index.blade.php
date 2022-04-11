@@ -9,11 +9,8 @@
 
 @section('content')
     <!-- awal jumbotron -->
-    <div>
-        {{-- <video id="background-video" autoplay loop muted poster="kota.png">
-        <source src="header/hAudio.png" type="video/mp4" />
-    </video> --}}
-        <img class="w-100" src="header/hAudio.png" alt="" srcset="">
+    <div class="container">
+        <h1> Audio </h1>
     </div>
     <!-- akhir jumbotrom -->
     {{-- Search Bar --}}

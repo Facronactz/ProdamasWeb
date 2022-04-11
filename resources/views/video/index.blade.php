@@ -8,6 +8,9 @@
 @endsection
 
 @section('content')
+    <div class="container">
+        <h1> Video </h1>
+    </div>
     {{-- Search Bar --}}
     <div class="container">
         <form action="searchvideo">
@@ -49,20 +52,20 @@
                             <div class="modal-body">
                                 <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 videoPlayerBox centerItms">
                                     <div class="card" style="
-                                                width: 25rem;
-                                                border: none;
-                                                margin: 0;
-                                                margin-top: 30px;
-                                                ">
+                                                    width: 25rem;
+                                                    border: none;
+                                                    margin: 0;
+                                                    margin-top: 30px;
+                                                    ">
                                         <video width="100%" max-width="850" height="auto" controls>
                                             <source src="{{ asset('/videoProd/konten/' . $video->konten) }}">
                                             Your browser does not support the video tag.
                                         </video>
                                     </div>
                                     <div class="card" style="
-                                                width: 25rem;
-                                                border: none;
-                                                ">
+                                                    width: 25rem;
+                                                    border: none;
+                                                    ">
                                         <h3> {{ $video->judul }} </h3>
                                         <p> {{ $video->caption }} </p>
                                     </div>
