@@ -47,14 +47,11 @@
   </div> --}}
   <div id="carouselUtama" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/header1.png" class="d-block w-100 carousel-img" alt="..." />
-            </div>
-            <div class="carousel-item">
-                <img src="img/header2.png" class="d-block w-100 carousel-img" alt="..." />
-            </div>
-            @foreach ($carousels as $carousel)
-            <div class="carousel-item">
+            
+            @foreach ($carousels as $key => $carousel)
+            <div class="carousel-item @if ($key == 0) {{"active"}}
+                
+            @endif">
                 <img src="{{ 'carouselProd/'. $carousel->foto }}" class="d-block w-100 carousel-img" alt="..." />
             </div>
             @endforeach
