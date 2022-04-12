@@ -28,7 +28,7 @@
     <div class="container">
         <div class="row justify-content-between mt-3">
             <div class="div-title">
-                <div class="header-symbol animate__animated animate__flash animate__delay-2s"></div>
+                <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
                 <h1 class="home-title header-text">
                     <span>Artikel</span>
                 </h1>
