@@ -136,7 +136,7 @@
         <div class="div-title mb-4">
             <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
             <h1 class="home-title header-text">
-                <span>Artikel</span>
+                <span>Video</span>
             </h1>
         </div>
 
@@ -205,7 +205,7 @@
         <div class="div-title mb-4">
             <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
             <h1 class="home-title header-text">
-                <span>Artikel</span>
+                <span>Foto</span>
             </h1>
         </div>
 
@@ -296,7 +296,7 @@
         <div class="div-title mb-4">
             <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
             <h1 class="home-title header-text">
-                <span>Artikel</span>
+                <span>Audio</span>
             </h1>
         </div>
 
