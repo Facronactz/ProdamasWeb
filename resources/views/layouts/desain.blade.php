@@ -44,7 +44,7 @@
             object-position: bottom;
         }
 
-        .bg-iki {
+        /* .bg-iki {
             background-image: url('{{ url('img/pattern.png') }}');
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -52,7 +52,7 @@
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
-        }
+        } */
 
         .bg-iki:after {
             content: "";
