@@ -44,7 +44,7 @@
         }
 
         .bg-iki {
-            background-image: url('{{url('img/pattern.png')}}')';
+            background-image: url('{{url('img/pattern.png')}}');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
