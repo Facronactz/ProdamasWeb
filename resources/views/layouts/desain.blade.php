@@ -44,7 +44,7 @@
             object-position: bottom;
         }
 
-        .bg-iki::after {
+        .bg-iki {
             background-image: url('{{ url('img/pattern.png') }}');
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -53,6 +53,23 @@
             -moz-background-size: cover;
             -o-background-size: cover;
         }
+
+        .bg-iki:after {
+            content: "";
+            position: fixed;
+            /* stretch a fixed position to the whole screen */
+            top: 0;
+            height: 100vh;
+            /* fix for mobile browser address bar appearing disappearing */
+            left: 0;
+            right: 0;
+            z-index: -1;
+            /* needed to keep in the background */
+            background: url('{{ url('img/pattern.png') }}');
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
         }
 
     </style>
