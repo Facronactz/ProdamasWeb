@@ -48,10 +48,10 @@
             background-image: url('{{ url('img/pattern.png') }}');
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-size: cover;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
+            background-size: scroll;
+            -webkit-background-size: scroll;
+            -moz-background-size: scroll;
+            -o-background-size: scroll;
         }
         }
 
