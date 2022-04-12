@@ -102,7 +102,7 @@
         {{-- Header --}}
         <div class="div-title mb-4">
             <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
-            <h1 class="home-title header-text">
+            <h1 class="home-title header-text px-2">
                 <span>Artikel</span>
             </h1>
         </div>
@@ -135,7 +135,7 @@
         {{-- Header --}}
         <div class="div-title mb-4">
             <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
-            <h1 class="home-title header-text">
+            <h1 class="home-title header-text px-2">
                 <span>Video</span>
             </h1>
         </div>
@@ -204,7 +204,7 @@
         {{-- Header --}}
         <div class="div-title mb-4">
             <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
-            <h1 class="home-title header-text">
+            <h1 class="home-title header-text px-2">
                 <span>Foto</span>
             </h1>
         </div>
@@ -295,7 +295,7 @@
         {{-- Header --}}
         <div class="div-title mb-4">
             <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
-            <h1 class="home-title header-text">
+            <h1 class="home-title header-text px-2">
                 <span>Audio</span>
             </h1>
         </div>

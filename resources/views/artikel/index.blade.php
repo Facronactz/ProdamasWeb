@@ -15,7 +15,7 @@
         <div class="row justify-content-between mt-3">
             <div class="div-title">
                 <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
-                <h1 class="home-title header-text">
+                <h1 class="home-title header-text px-2">
                     <span>Artikel</span>
                 </h1>
             </div>
