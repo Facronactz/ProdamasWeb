@@ -16,14 +16,14 @@
 }
 
 /* title styles */
-.home-title span{
+.home-title{
     position: relative;
     overflow: hidden;
     display: block;
     line-height: 1.2;
 }
 
-.home-title span::after{
+.home-title::after{
     content: '';
     position: absolute;
     top: 0;
@@ -35,7 +35,7 @@
     transform: translateX(-101%);
 }
 
-.home-title span::before{
+.home-title::before{
     content: '';
     position: absolute;
     top: 0;
@@ -47,13 +47,13 @@
     transform: translateX(0);
 }
 
-.home-title span:nth-of-type(1)::before,
-.home-title span:nth-of-type(1)::after{
+.home-title:nth-of-type(1)::before,
+.home-title:nth-of-type(1)::after{
     animation-delay: 1s;
 }
 
-.home-title span:nth-of-type(2)::before,
-.home-title span:nth-of-type(2)::after{
+.home-title:nth-of-type(2)::before,
+.home-title:nth-of-type(2)::after{
     animation-delay: 1.5s;
 }
 

@@ -10,7 +10,7 @@
     <!-- Goofle Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat&Poppins:wght@600&display=swap" rel="stylesheet" />
 
     <!-- Icon -->
     <link href="{{ asset('img/icon.png') }}" rel="icon" />
@@ -35,11 +35,26 @@
         .login-icon i:hover {
             color: black !important;
         }
-        .header{
+
+        .header {
             max-height: 90vh;
             max-width: 100%;
             object-fit: cover;
             object-position: bottom;
+        }
+
+        .header-text div {
+            width: 14px;
+            height: 14px;
+            background-color: purple;
+            margin: 0;
+            padding: 0;
+            margin-top: 7px;
+        }
+
+        .header-text h1 {
+            font-family: 'Poppins';
+            text-shadow: 2px 2px rgb(209, 201, 209);
         }
 
     </style>
@@ -249,7 +264,7 @@
                     <button class="btn btn-telp w-100 my-2"><i class="fas fa-phone-alt"></i>
                         No HP
                     </button>
-                    <a class="btn btn-admin w-100 my-2" href="{{url('loginuser')}}"><i class="fas fa-user-shield"></i>
+                    <a class="btn btn-admin w-100 my-2" href="{{ url('loginuser') }}"><i class="fas fa-user-shield"></i>
                         Admin
                     </a>
                 </div>

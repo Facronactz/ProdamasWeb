@@ -6,6 +6,20 @@
     <link rel="stylesheet" href="css/artikel.css">
     <link rel="stylesheet" href="css/hover.css">
     <link rel="stylesheet" href="css/titleAnimation.css">
+    <style>
+      .header-text div{
+        width: 14px;
+        height: 14px;
+        background-color: purple;
+        margin: 0;
+        padding: 0;
+        margin-top: 7px;
+      }
+      .header-text div h1{
+        font-family: 'Poppins'; 
+        text-shadow: 2px 2px rgb(209, 201, 209);
+      }
+    </style>
 @endsection
 
 @section('content')
@@ -16,11 +30,9 @@
     <!-- akhir jumbotrom -->
 
     <div class="container">
-        <div class="row justify-content-between mt-5">
+        <div class="row justify-content-between mt-5 header-text">
             <div class="div-title">
-                <h1 class="home-title">
-                    <span>Artikel</span>
-                </h1>
+                <h1 class="home-title">Artikel</h1>
             </div>
 
             <!-- Kiri -->
