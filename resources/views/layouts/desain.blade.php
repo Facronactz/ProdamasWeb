@@ -49,6 +49,10 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+        }
         }
 
     </style>
