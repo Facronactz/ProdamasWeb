@@ -4,6 +4,7 @@
 @section('head')
     <link rel="stylesheet" href="css/beranda.css">
     <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/titleAnimation.css">
     <style>
         .carousel-img {
             object-fit: cover;
@@ -298,7 +299,7 @@
                 <span>Artikel</span>
             </h1>
         </div>
-        
+
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
             @foreach ($audio as $item)
                 <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">

@@ -43,6 +43,18 @@
             object-fit: cover;
             object-position: bottom;
         }
+        .header-symbol {
+            width: 14px;
+            height: 14px;
+            background-color: purple;
+            margin: 0;
+            padding: 0;
+            margin-top: 7px;
+        }
+        .header-text span {
+            font-family: 'Poppins';
+            text-shadow: 2px 2px rgb(209, 201, 209);
+        }
 
         /* .bg-iki {
             background-image: url('{{ url('img/pattern.png') }}');

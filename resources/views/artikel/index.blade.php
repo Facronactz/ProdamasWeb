@@ -6,21 +6,7 @@
     <link rel="stylesheet" href="css/artikel.css">
     <link rel="stylesheet" href="css/hover.css">
     <link rel="stylesheet" href="css/titleAnimation.css">
-    <style>
-        .header-symbol {
-            width: 14px;
-            height: 14px;
-            background-color: purple;
-            margin: 0;
-            padding: 0;
-            margin-top: 7px;
-        }
-        .header-text span {
-            font-family: 'Poppins';
-            text-shadow: 2px 2px rgb(209, 201, 209);
-        }
 
-    </style>
 @endsection
 
 @section('content')
