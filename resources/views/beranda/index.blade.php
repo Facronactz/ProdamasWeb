@@ -98,7 +98,14 @@
 
     <!--artikel-->
     <div class="container-md my-5 artikel">
-        <h3 class="mb-4" style="font-family: Inter, sans-serif">Artikel</h3>
+        {{-- Header --}}
+        <div class="div-title mb-4">
+            <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
+            <h1 class="home-title header-text">
+                <span>Artikel</span>
+            </h1>
+        </div>
+
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
             @foreach ($artikel as $item)
                 <div class="col my-3 my-lg-0 hvr-bob">
@@ -124,7 +131,14 @@
 
     <!--video-->
     <div class="container-md my-5">
-        <h3 class="mb-4" style="font-family: Inter, sans-serif">Video</h3>
+        {{-- Header --}}
+        <div class="div-title mb-4">
+            <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
+            <h1 class="home-title header-text">
+                <span>Artikel</span>
+            </h1>
+        </div>
+
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
             @foreach ($video as $item)
                 <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
@@ -186,7 +200,14 @@
 
     <!--foto-->
     <div class="container-md my-5">
-        <h3 class="mb-4" style="font-family: Inter, sans-serif">Foto</h3>
+        {{-- Header --}}
+        <div class="div-title mb-4">
+            <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
+            <h1 class="home-title header-text">
+                <span>Artikel</span>
+            </h1>
+        </div>
+
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
             @foreach ($foto as $item)
                 <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
@@ -270,7 +291,14 @@
 
     <!--audio-->
     <div class="container-md my-5">
-        <h3 class="mb-4" style="font-family: Inter, sans-serif">Audio</h3>
+        {{-- Header --}}
+        <div class="div-title mb-4">
+            <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
+            <h1 class="home-title header-text">
+                <span>Artikel</span>
+            </h1>
+        </div>
+        
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
             @foreach ($audio as $item)
                 <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
