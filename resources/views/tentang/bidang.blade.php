@@ -2,6 +2,8 @@
 @section('main-tentang', 'active')
 @section('bidang', 'active')
 
+@section('title', 'Bidang Prodamas')
+
 @section('head')
     <link rel="stylesheet" href="css/bidang.css">
 @endsection
