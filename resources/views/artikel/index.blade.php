@@ -24,11 +24,6 @@
 @endsection
 
 @section('content')
-    <!-- awal jumbotron -->
-    <div class="container-fluid p-0">
-        <img class="header w-100" src="{{ asset('img-tentang/artikel.jpg') }}" alt="" srcset="">
-    </div>
-    <!-- akhir jumbotrom -->
 
     <div class="container">
         <div class="row justify-content-between mt-5">
