@@ -26,7 +26,7 @@
 @section('content')
 
     <div class="container">
-        <div class="row justify-content-between mt-5">
+        <div class="row justify-content-between mt-3">
             <div class="div-title">
                 <div class="header-symbol"></div>
                 <h1 class="home-title header-text">
