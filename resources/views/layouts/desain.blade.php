@@ -10,7 +10,7 @@
     <!-- Goofle Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat&Poppins:wght@600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat&family=Poppins:wght@600&display=swap" rel="stylesheet" />
 
     <!-- Icon -->
     <link href="{{ asset('img/icon.png') }}" rel="icon" />
@@ -41,20 +41,6 @@
             max-width: 100%;
             object-fit: cover;
             object-position: bottom;
-        }
-
-        .header-text div {
-            width: 14px;
-            height: 14px;
-            background-color: purple;
-            margin: 0;
-            padding: 0;
-            margin-top: 7px;
-        }
-
-        .header-text h1 {
-            font-family: 'Poppins';
-            text-shadow: 2px 2px rgb(209, 201, 209);
         }
 
     </style>
