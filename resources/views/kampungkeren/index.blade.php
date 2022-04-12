@@ -1,5 +1,5 @@
 @extends('layouts.desain')
-@section('kampungkeren','active')
+@section('main-tentang', 'active')
 @section('kampungkeren', 'active')
 
 @section('title', 'Kampung Keren')
