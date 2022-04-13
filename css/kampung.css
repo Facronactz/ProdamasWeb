@@ -3,7 +3,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    background: url(../img-tentang/header-kampung-keren-baru.png);
+    background: url(../img-tentang/header-kampung-keren.png);
     background-size: cover;
     background-position: center;
     text-align: left;
@@ -18,6 +18,12 @@
     background-size: 100% 100%;
 }
 
+.header-kampung-keren {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: 10% 40%;
+}
 .kampung-keren {
     margin-top: 30px;
 }
@@ -29,7 +35,7 @@
 
 .kampung-keren h5 {
     margin: auto;
-    margin-left: 25px;
+    margin-left: 17px;
     margin-right: 25px;
     font-family: "Montserrat", sans-serif;
     text-align: justify;
@@ -37,6 +43,19 @@
 
 .kampung {
     padding: 70px;
+}
+
+.konten {
+    max-width: auto;
+    margin: auto;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: justify;
+}
+
+.konten h2 {
+    text-decoration-line: underline;
+    text-decoration-style: double;
 }
 
 /* dropdown */
@@ -88,8 +107,10 @@ ul ul ul {
 
 ul:before,
 ul:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 ul:after {
