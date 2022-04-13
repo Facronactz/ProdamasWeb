@@ -9,7 +9,12 @@
 
 @section('content')
     <div class="container">
-        <h1> Video </h1>
+        <div class="div-title">
+            <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
+            <h1 class="home-title header-text px-2">
+                <span>Video</span>
+            </h1>
+        </div>
     </div>
     {{-- Search Bar --}}
     <div class="container">

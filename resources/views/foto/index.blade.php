@@ -11,7 +11,12 @@
 @section('content')
     <!-- awal jumbotron -->
     <div class="container">
-        <h1> Foto </h1>
+        <div class="div-title">
+            <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
+            <h1 class="home-title header-text px-2">
+                <span>Foto</span>
+            </h1>
+        </div>
     </div>
     <!-- akhir jumbotrom -->
 
@@ -29,7 +34,7 @@
 
     <!-- Awal feed foto -->
     <div class="container overflow-hidden">
-        <div class="row row-cols-2 gx-0">
+        <div class="row row-cols-1 row-cols-md-2 gx-0">
             {{-- Card foto --}}
             @forelse ($fotos as $foto)
                 <div class="col p-2">
