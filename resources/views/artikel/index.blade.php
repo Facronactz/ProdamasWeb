@@ -4,8 +4,6 @@
 
 @section('head')
     <link rel="stylesheet" href="css/artikel.css">
-    <link rel="stylesheet" href="css/hover.css">
-    <link rel="stylesheet" href="css/titleAnimation.css">
 
 @endsection
 

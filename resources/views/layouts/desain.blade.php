@@ -24,6 +24,7 @@
     {{-- Animation --}}
     <link rel="stylesheet" href="{{ asset('css/hover.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/titleAnimation.css">
     <link rel="stylesheet" href="{{ asset('css/social-color.css') }}">
     @yield('head')
     @hasSection('title')
