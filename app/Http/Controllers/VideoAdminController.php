@@ -94,7 +94,7 @@ class VideoAdminController extends Controller
             $video_data = [
                 //"gambar-sampul" => $new_picture,
                 "judul" => $request["judul"],
-                // "konten" => $request["konten"],
+                "konten" => $request["konten"],
                 "caption" => $request["caption"],
             ];
         }
