@@ -9,7 +9,7 @@
         .prodamas-header {
             width: 100%;
             max-height: 500px;
-            object-fit: fill;
+            object-fit: cover;
             object-position: center;
         }
 
