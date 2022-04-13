@@ -5,7 +5,7 @@
 @section('title', 'Kampung Keren')
 
 @section('head')
-    <link rel="stylesheet" href="{{asset('css/kampung.css')}}"
+    <link rel="stylesheet" href="{{asset('css/kampung.css')}}">
 @endsection
 
 @section('content')
