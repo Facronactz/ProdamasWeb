@@ -156,9 +156,9 @@
                             <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a>
                             @auth
                             {{-- Button Admin --}}
-                            <a class="align-self-center btn btn-outline-light login-icon ms-3" href="/admin">Admin<i class="fas fa-sign-in-alt mx-2"></i></a>
+                            <a class="align-self-center btn btn-outline-light login-icon ms-3" href="/admin">Admin<i class="fas fa-user-shield"></i></a>
                             {{-- Button Logout --}}
-                            <a class="align-self-center btn btn-outline-light login-icon ms-3" href="/signout">Log Out<i class="fas fa-sign-in-alt mx-2"></i></a>
+                            <a class="align-self-center btn btn-outline-light login-icon ms-3" href="/signout">Log Out<i class="fas fa-sign-out-alt"></i></a>
                             @endauth
                             @guest
                             {{-- Button trigger modal --}}
