@@ -4,7 +4,7 @@
 
 @section('title', 'Tentang Prodamas')
 @section('head')
-    <link rel="stylesheet" href="css/tentang.css">
+    <link rel="stylesheet" href="{{asset('css/tentang.css')}}">
     <style>
         .prodamas-header {
             width: 100%;
