@@ -5,12 +5,21 @@
 @section('title', 'Tentang Prodamas')
 @section('head')
     <link rel="stylesheet" href="css/tentang.css">
+    <style>
+        .prodamas-header {
+            width: 100%;
+            max-height: 500px;
+            object-fit: fill;
+            object-position: center;
+        }
+
+    </style>
 @endsection
 
 @section('content')
     <!-- awal jumbotron -->
     <div class="container-fluid p-0">
-        <img class="prodamas-header" src="{{asset('img-tentang/header-tentang-prodamas.png')}}" alt="" srcset="">
+        <img class="prodamas-header" src="{{ asset('img-tentang/header-tentang-prodamas.png') }}" alt="" srcset="">
     </div>
     <!-- akhir jumbotrom -->
 
