@@ -9,7 +9,7 @@
 
 @section('content')
     <div class="container">
-        <div class="div-title">
+        <div class="div-title mt-3">
             <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
             <h1 class="home-title header-text px-2">
                 <span>Video</span>
