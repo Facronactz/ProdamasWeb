@@ -26,6 +26,12 @@
         background-size: 100% 100%;
     }
 
+    .header-kampung-keren{
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        object-position: 10% 40%;
+    }
     .kampung-keren {
         margin-top: 30px;
     }
@@ -153,7 +159,7 @@
 
 @section('content')
     <div class="container-fluid p-0">
-        <img class="header w-100" src="{{asset('img-tentang/header-kampung-keren.png')}}" alt="" srcset="">
+        <img class="header-kampung-keren" src="{{asset('img-tentang/header-kampung-keren.png')}}" alt="" srcset="">
     </div>
     <!-- akhir jumbotrom -->
 
