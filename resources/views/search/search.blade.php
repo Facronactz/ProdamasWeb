@@ -54,7 +54,7 @@
             @endforeach
         </div>
         <div class="d-flex justify-content-end mt-2">
-            <a href="{{ url('artikel') }}" class="btn btn-primary hvr-icon-forward">
+            <a href="{{ url('artikel') }}" class="hvr-icon-forward" style="text-decoration: underline">
                 Selengkapnya
                 <i class="hvr-icon fas fa-arrow-right"></i>
             </a>
@@ -86,7 +86,7 @@
             @endforeach
         </div>
         <div class="d-flex justify-content-end mt-2">
-            <a href="{{ url('video') }}" class="btn btn-primary hvr-icon-forward">
+            <a href="{{ url('video') }}" class="hvr-icon-forward" style="text-decoration: underline">
                 Selengkapnya
                 <i class="hvr-icon fas fa-arrow-right"></i>
             </a>
@@ -156,7 +156,7 @@
             @endforeach
         </div>
         <div class="d-flex justify-content-end mt-2">
-            <a href="{{ url('foto') }}" class="btn btn-primary hvr-icon-forward">
+            <a href="{{ url('foto') }}" class="hvr-icon-forward" style="text-decoration: underline">
                 Selengkapnya
                 <i class="hvr-icon fas fa-arrow-right"></i>
             </a>
@@ -222,7 +222,7 @@
             @endforeach
         </div>
         <div class="d-flex justify-content-end mt-2">
-            <a href="{{ url('audio') }}" class="btn btn-primary hvr-icon-forward">
+            <a href="{{ url('audio') }}" class="hvr-icon-forward" style="text-decoration: underline">
                 Selengkapnya
                 <i class="hvr-icon fas fa-arrow-right"></i>
             </a>
