@@ -58,7 +58,9 @@
                                     border: none;
                                     margin-right:1em;
                                     ">
-                                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src={{ $audio->konten }}></iframe>
+                                
+                                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src={{$audio->konten}}></iframe>
+                                    <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/prodamas-pemerintah-kota-kediri" title="" target="_blank" style="color: #cccccc; text-decoration: none;"></a> · <a href="https://soundcloud.com/prodamas-pemerintah-kota-kediri/jingle-prodamas" title="" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
                             {{-- <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
                             <audio controls style="width: 100%;">
                                 <source src="{{ asset('/audioProd/fileaudio/' . $audio->konten) }}" type="audio/mpeg">
