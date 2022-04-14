@@ -98,7 +98,7 @@ class AudioAdminController extends Controller
             ];
         } else {
             $audio_data = [
-                "gambar-sampul" => $new_picture["gambar-sampul"],
+                // "gambar-sampul" => $new_audio_sampul,
                 "text_sampul" => $request["text_sampul"],
                 "judul" => $request["judul"],
                 "slug" => $request["slug"],
