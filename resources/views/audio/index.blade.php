@@ -58,11 +58,12 @@
                                     border: none;
                                     margin-right:1em;
                                     ">
-                            <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
+                                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src={{ $audio->konten }}></iframe>
+                            {{-- <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
                             <audio controls style="width: 100%;">
                                 <source src="{{ asset('/audioProd/fileaudio/' . $audio->konten) }}" type="audio/mpeg">
                                 Your browser does not support the audio element.
-                            </audio>
+                            </audio> --}}
                         </div>
                         <div class="card" style="
                                 width: 25rem;

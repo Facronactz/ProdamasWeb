@@ -37,7 +37,7 @@ Edit Audio
         @if ($audio->audio)
         <p>{{$audio->audio}}</p>
         @endif
-        <input type="file" name="audio" class="form-control" cols="30" rows="10" {{$audio->audio}}>
+        <input type="text" name="audio" class="form-control" cols="30" rows="10" {{$audio->audio}}>
         @error('audio')
         <div class="alert alert-danger">
             {{ $message }}
