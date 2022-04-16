@@ -118,6 +118,7 @@
                 <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
                     <div class="card h-100 hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('videoProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
+                        <iframe width="fixed" height="fixed" src="{{ $video->konten }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
                             <p class="card-text">{{ $item->caption }}</p>
@@ -151,7 +152,7 @@
                                         margin-top: 30px;
                                         ">
                                 <video class="media" width="100%" max-width="850" height="auto" controls>
-                                    <source src="{{ ($item->konten) }}">
+                                    <source src="{{ asset('/videoProd/konten/' . $item->konten) }}">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
