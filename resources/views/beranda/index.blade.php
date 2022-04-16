@@ -306,8 +306,8 @@
                     <div class="card h-100 hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('audioProd/thumb/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $item->judul }}</h5>
-                            <p class="card-text">{{ $item->caption }}</p>
+                            <h5 class="card-title"><?= $item->judul ?></h5>
+                            <p class="card-text"><?= $item->caption ?></p>
                         </div>
                     </div>
                 </div>
