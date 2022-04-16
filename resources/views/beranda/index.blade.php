@@ -134,7 +134,7 @@
         </div>
     </div>
 
-    @foreach ($video as $item)
+    @foreach ($video as $videos)
         <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
@@ -150,10 +150,11 @@
                                         margin: 0;
                                         margin-top: 30px;
                                         ">
-                                <video class="media" width="100%" max-width="850" height="auto" controls>
+                                {{-- <video class="media" width="100%" max-width="850" height="auto" controls>
                                     <source src="{{ asset('/videoProd/konten/' . $item->konten) }}">
                                     Your browser does not support the video tag.
-                                </video>
+                                </video> --}}
+                                <iframe width="fixed" height="fixed" src="{{ $video->konten }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div class="card" style="
                                         border: none;
