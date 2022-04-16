@@ -92,7 +92,7 @@
 <body>
     <!-- New Nav -->
     <div class="bg-iki">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-kediri sticky-top" style="font-family: Inter; background-color: #4d148c">
+        <nav id="navBar" class="navbar navbar-expand-lg navbar-dark bg-kediri sticky-top" style="font-family: Inter; background-color: #4d148c">
             <div class="container-fluid mx-xxl-5">
                 <a href="{{ url('/') }}"><img src="https://prodamasdev.kedirikota.go.id/img/logoprodamas.png" alt="" class="d-inline-block align-text-top" width="40" height="40" /></a>
                 <a class="navbar-brand ms-2" href="{{ url('/') }}" style="font-family: Inter">PRODAMAS</a>
@@ -132,7 +132,7 @@
                                 <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">MedSos</a></li>
                             </ul>
                         </div>
-                        <a class="nav-link">Kontak</a>
+                        <a class="nav-link" href="#footer">Kontak</a>
                     </div>
 
                     {{-- Search --}}
@@ -175,7 +175,7 @@
         @yield('content')
 
         <!-- Awal footer -->
-        <footer>
+        <footer id="footer">
             <div class="footer-top">
                 <div class="container">
                     <div class="row">
