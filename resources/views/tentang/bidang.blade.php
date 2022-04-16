@@ -2,12 +2,10 @@
 @section('main-tentang', 'active')
 @section('bidang', 'active')
 
+@section('title', 'Bidang Prodamas')
+
 @section('head')
     <link rel="stylesheet" href="css/bidang.css">
-    <style>
-        @media screen and (max width: 768px) {}
-
-    </style>
 @endsection
 
 @section('content')

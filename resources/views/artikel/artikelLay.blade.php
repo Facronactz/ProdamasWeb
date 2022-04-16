@@ -19,7 +19,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="">
+                    <div class="container-fluid justify-content-center row">
                         <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" alt=""
                             style="height:100%; max-width: 800px">
                     </div><br>
@@ -29,25 +29,27 @@
         </div>
 
         <div class="rightcolumn mt-5">
+
             <div class="card-right bg-light">
                 <h5 class="card-header">Update Artikel</h5>
-                <div class="col-sm-12">
-                    <div class="caption">
-                        <a href="artikel/{{ $item->id }}">
-                            <h5>{{ $item->judul }}</h5>
-                        </a>
-                        <div class="row">
-                            <div class="col-xl-3">
-                                <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" width="100%"
-                                    alt="Cinque Terre">
+                @foreach ($artikelupdate as $item)
+                    <div class="card mb-3 p-0 hvr-float-shadow" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 my-auto">
+                                <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="img-fluid rounded-start">
                             </div>
-                            <div class="col-sm-9">
-                                <p><?= $item->text_sampul ?></p>
+                            <div class="col-md-8">
+                                <div class="card-body py-0">
+                                    <h5 class="card-title" style="font-size: 14px;">{{ $item->judul }}</h5>
+                                    <p class="card-text mb-0" style="font-size: 12px;"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    <a class="stretched-link" href="artikel/{{ $item->id }}"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
+
             <div class="card-right bg-light">
                 <h5 class="card-header">Kunjungi Website</h5>
                 <ul class="list-group list-group-flush">

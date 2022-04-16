@@ -73,7 +73,7 @@ class CustomAuthController extends Controller
             return view('admin.master');
         }
         
-        return redirect("login")->withSuccess('You are not allowed to access');
+        return redirect("/loginuser")->withSuccess('You are not allowed to access');
     }
     
 
