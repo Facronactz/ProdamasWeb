@@ -150,11 +150,10 @@
                                         margin: 0;
                                         margin-top: 30px;
                                         ">
-                                        <iframe width="fixed" height="fixed" src="{{ $video->konten }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                {{-- <video class="media" width="100%" max-width="850" height="auto" controls>
-                                    <source src= {{$video->konten}} >
+                                <video class="media" width="100%" max-width="850" height="auto" controls>
+                                    <source src="{{ asset('/videoProd/konten/' . $item->konten) }}">
                                     Your browser does not support the video tag.
-                                </video> --}}
+                                </video>
                             </div>
                             <div class="card" style="
                                         border: none;
