@@ -135,11 +135,11 @@
     </div>
 
     @foreach ($videos as $video)
-        <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+        <div class="modal fade" id="audioPlayer{{ $video->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header ">
-                        <h5 class="modal-title" id="fotoLabel">{{ $item->judul }}</h5>
+                        <h5 class="modal-title" id="fotoLabel">{{ $video->judul }}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
