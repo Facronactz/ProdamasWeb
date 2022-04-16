@@ -61,9 +61,10 @@
         </div>
 
         @else
-        <div class="border-bottom max-width: 10vw">
+        <div>
             Tidak ada data
         </div>
+        <hr>
         @endif
     </div>
     <!--end artikel-->
@@ -92,7 +93,7 @@
             </a>
         </div>
         @else
-        <div class="border-bottom max-width: 10vw">
+        <div>
             Tidak ada data
         </div>
         <hr>
@@ -162,9 +163,10 @@
             </a>
         </div>
         @else
-            <div class="border-bottom max-width: 10vw">
+            <div>
                 Tidak ada data
             </div>
+            <hr>
             @endif
     </div>
 
@@ -228,9 +230,10 @@
             </a>
         </div>
         @else
-            <div class="border-bottom max-width: 10vw">
+            <div>
                 Tidak ada data
             </div>
+            <hr>
             @endif
     </div>
 
