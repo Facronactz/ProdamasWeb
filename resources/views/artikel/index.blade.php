@@ -4,22 +4,16 @@
 
 @section('head')
     <link rel="stylesheet" href="css/artikel.css">
-    <link rel="stylesheet" href="css/hover.css">
-    <link rel="stylesheet" href="css/titleAnimation.css">
+
 @endsection
 
 @section('content')
-    <!-- awal jumbotron -->
-    <div class="container-fluid banner">
-        <div class="container banner-content">
-        </div>
-    </div>
-    <!-- akhir jumbotrom -->
 
     <div class="container">
-        <div class="row justify-content-between mt-5">
+        <div class="row justify-content-between mt-3">
             <div class="div-title">
-                <h1 class="home-title">
+                <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
+                <h1 class="home-title header-text px-2">
                     <span>Artikel</span>
                 </h1>
             </div>
@@ -86,6 +80,5 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 @endsection

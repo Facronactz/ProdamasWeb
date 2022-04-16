@@ -10,26 +10,31 @@
 
 @section('content')
     <!-- awal jumbotron -->
-    <div class="banner">
-        <video id="background-video" autoplay loop muted poster="kota.png">
-            <source src="img/FOTO.mp4" type="video/mp4" />
-        </video>
+    <div class="container">
+        <div class="div-title mt-3">
+            <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
+            <h1 class="home-title header-text px-2">
+                <span>Foto</span>
+            </h1>
+        </div>
     </div>
     <!-- akhir jumbotrom -->
 
     {{-- Search Bar --}}
-    <div class="input-group" style="max-width: 10vw">
+    <div class="container">
         <form action="searchfoto">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchfoto" value="{{ request('searchfoto') }}">
-        <button class="btn btn-primary" type="submit">
-            <i class="fas fa-search link-light"></i>
-        </button>
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchfoto" value="{{ request('searchfoto') }}">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-search link-light"></i>
+                </button>
+            </div>
         </form>
     </div>
 
     <!-- Awal feed foto -->
     <div class="container overflow-hidden">
-        <div class="row row-cols-2 gx-0">
+        <div class="row row-cols-1 row-cols-md-2 gx-0">
             {{-- Card foto --}}
             @forelse ($fotos as $foto)
                 <div class="col p-2">
@@ -53,16 +58,16 @@
                                 <div class="modal-body">
                                     <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 videoPlayerBox centerItms">
                                         <div class="col-6" style="width: 25rem;
-                                                border: none;
-                                                margin: 0;
-                                                margin-top: 30px;
-                                                ">
+                                                    border: none;
+                                                    margin: 0;
+                                                    margin-top: 30px;
+                                                    ">
                                             <img class="max-width: 500px" src="{{ asset('fotoProd/' . $foto->konten) }}" width="520" height="340" controls>
                                         </div>
                                         <div class="card" style="
-                                                width: 25rem;
-                                                border: none;
-                                                ">
+                                                    width: 25rem;
+                                                    border: none;
+                                                    ">
                                             <h3>{{ $foto->judul }}</h3>
                                             <p>{{ $foto->caption }}</p>
                                         </div>

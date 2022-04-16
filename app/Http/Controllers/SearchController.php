@@ -15,6 +15,7 @@ class SearchController extends Controller
     {
         $keyword = $request->search;
         $artikel = ArticleAdmin::where('judul', 'like', "%" . $keyword . "%")
+        ->where('status', 'published')
         ->paginate(3)
         // ->take(3)
         // ->get()
@@ -40,7 +41,7 @@ class SearchController extends Controller
     public function searchartikel(Request $request)
     {
         $keyword = $request->searchartikel;
-        $artikel = ArticleAdmin::where('judul', 'like', "%" . $keyword . "%")->paginate(3);
+        $artikel = ArticleAdmin::where('judul', 'like', "%" . $keyword . "%")->where('status', 'published')->paginate(3);
         return view('artikel.artikelsearch', compact('artikel'));
     }
     

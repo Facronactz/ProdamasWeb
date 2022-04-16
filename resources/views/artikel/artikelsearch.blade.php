@@ -6,46 +6,44 @@
 @endsection
 
 @section('content')
-    <div class="row">
+    <div class="row container justify-content-center mx-auto">
         <div class="leftcolumn mt-5">
-            <div class="input-group" style="max-width: 10vw">
-                {{-- <form action="searchartikel"> --}}
-                <form action="searchartikel">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchartikel" value="{{ request('searchartikel') }}">
-                <button class="btn btn-primary" type="submit">
-                    <i class="fas fa-search link-light"></i>
-                </button>
-                </form>
-            </div>
-            @if($artikel->count())
-            @foreach ($artikel as $item)
-                <div class="card">
-                    <a href="artikel/{{ $item->id }}" class="stretched-link"></a>
-                    <h2>{{ $item->judul }}</h2><br>
-                    <div class="row">
-                        <!--<div class="col-sm-12">buat share
-                        </div>-->
-                        <div class="col-sm-4">
-                            <h6>{{ $item->created_at }}</h6>
+            <form action="searchartikel">
+                <div class="input-group">
+                    {{-- <form action="searchartikel"> --}}
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchartikel" value="{{ request('searchartikel') }}">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-search link-light"></i>
+                    </button>
+                </div>
+            </form>
+            @if ($artikel->count())
+                @foreach ($artikel as $item)
+                    <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
+                        <div class="row g-0">
+                            <div class="col-md-4 my-auto">
+                                <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="img-fluid rounded-start">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <a href="artikel/{{ $item->id }}" class="stretched-link"></a>
+                                    <h5 class="card-title" style="font-size: 22px;">{{ $item->judul }}</h5>
+                                    <p class="card-text" style="font-size: 13px;"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <br>
-                    <div class="">
-                        <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" alt=""
-                            style="height:100%; max-width: 800px">
-                    </div><br>
+                @endforeach
+                <div class="d-flex justify-content-end w-100 my-3">
+                    {{ $artikel->links() }}
                 </div>
-            @endforeach
-            <div class="d-flex justify-content-end w-100 my-3">
-             {{ $artikel->links() }}
-            </div>
             @else
                 <div class="alert alert-success" role="alert">
                     Tidak ada data
                 </div>
             @endif
-            </div>
         </div>
+    </div>
     </div>
     <!-- Akhir content -->
 @endsection
