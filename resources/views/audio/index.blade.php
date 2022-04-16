@@ -59,8 +59,9 @@
                                     margin-right:1em;
                                     ">
                                 
-                                <iframe src="https://drive.google.com/file/d/1KicuhAcRMgnXs2sdcbk1BfZ73kj3_Ycz/preview" width="fixed" height="fixed" allow="autoplay"></iframe>
+                                
                             <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
+                            <iframe src="https://drive.google.com/file/d/1KicuhAcRMgnXs2sdcbk1BfZ73kj3_Ycz/preview" width="fixed" height="fixed" allow="autoplay"></iframe>
                             {{-- <audio controls style="width: 100%;">
                                 <source src="{{ asset('/audioProd/fileaudio/' . $audio->konten) }}" type="audio/mpeg">
                                 Your browser does not support the audio element.
