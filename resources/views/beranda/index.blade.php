@@ -159,8 +159,8 @@
                             <div class="card" style="
                                         border: none;
                                         ">
-                                <h3> {{ $item->judul }} </h3>
-                                <p> {{ $item->caption }} </p>
+                                <h3> {{ $video->judul }} </h3>
+                                <p> {{ $video->caption }} </p>
                             </div>
                         </div>
                     </div>
