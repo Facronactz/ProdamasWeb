@@ -117,7 +117,8 @@
             @foreach ($video as $item)
                 <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
                     <div class="card h-100 hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
-                        <img src="{{ asset('videoProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
+                        {{-- <img src="{{ asset('videoProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="..."> --}}
+                        <iframe width="fixed" height="fixed" src="{{ $video->konten }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
                             <p class="card-text">{{ $item->caption }}</p>
