@@ -175,8 +175,8 @@
         @yield('content')
 
         <!-- Awal footer -->
-        <footer id="footer">
-            <div class="footer-top">
+        <footer data-bs-spy="scroll" data-bs-target="#navBar" data-bs-offset="0">
+            <div class="footer-top" id="footer">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
