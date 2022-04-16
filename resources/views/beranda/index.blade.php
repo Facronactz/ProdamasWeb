@@ -134,7 +134,7 @@
         </div>
     </div>
 
-    @foreach ($videos as $video)
+    @foreach ($video as $video)
         <div class="modal fade" id="audioPlayer{{ $video->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
