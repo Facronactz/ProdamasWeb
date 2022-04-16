@@ -89,7 +89,7 @@
 
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#scrollspy" data-bs-offset="0" data-bs-method="position">
     <!-- New Nav -->
     <div class="bg-iki">
         <nav class="navbar navbar-expand-lg navbar-dark bg-kediri sticky-top" style="font-family: Inter; background-color: #4d148c">
@@ -177,7 +177,7 @@
         @yield('content')
 
         <!-- Awal footer -->
-        <footer data-bs-spy="scroll" data-bs-target="#scrollspy" data-bs-offset="0">
+        <footer>
             <div class="footer-top" id="footer">
                 <div class="container">
                     <div class="row">
