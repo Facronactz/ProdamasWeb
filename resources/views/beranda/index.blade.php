@@ -114,7 +114,7 @@
                         <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <a class="stretched-link" href="artikel/{{ $item->id }}"></a>
-                            <h5 class="card-title">{{ $item->judul }}</h5>
+                            <h5 class="card-title"><?= $item->judul ?></h5>
                             <p class="card-text">{{ $item->text_sampul }}</p>
                         </div>
                     </div>
@@ -146,8 +146,8 @@
                     <div class="card h-100 hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('videoProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $item->judul }}</h5>
-                            <p class="card-text">{{ $item->caption }}</p>
+                            <h5 class="card-title"><?= $item->judul ?></h5>
+                            <p class="card-text"><?= $item->caption ?></p>
                         </div>
                     </div>
                 </div>
@@ -166,7 +166,7 @@
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header ">
-                        <h5 class="modal-title" id="fotoLabel">{{ $item->judul }}</h5>
+                        <h5 class="modal-title" id="fotoLabel"><?= $item->judul ?></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -185,8 +185,8 @@
                             <div class="card" style="
                                         border: none;
                                         ">
-                                <h3> {{ $item->judul }} </h3>
-                                <p> {{ $item->caption }} </p>
+                                <h3> <?= $item->judul ?> </h3>
+                                <p> <?= $item->caption ?> </p>
                             </div>
                         </div>
                     </div>
@@ -215,8 +215,8 @@
                     <div class="card h-100 hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('fotoProd/' . $item->konten) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $item->judul }}</h5>
-                            <p class="card-text">{{ $item->caption }}</p>
+                            <h5 class="card-title"><?= $item->judul ?></h5>
+                            <p class="card-text"><?= $item->caption ?></p>
                         </div>
                     </div>
                 </div>
@@ -240,8 +240,8 @@
     <div class="card h-100 hvr-grow" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$item->id}}">
       <img src="{{ asset('fotoProd/'.$item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{ $item->judul }}</h5>
-        <p class="card-text">{{ $item->caption }}</p>
+        <h5 class="card-title"><?= $item->judul ?></h5>
+        <p class="card-text"><?= $item->caption ?></p>
       </div>
     </div>
   </div>
@@ -260,7 +260,7 @@
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header ">
-                        <h5 class="modal-title" id="fotoLabel">{{ $item->judul }}</h5>
+                        <h5 class="modal-title" id="fotoLabel"><?= $item->judul ?></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -275,8 +275,8 @@
                             <div class="card" style="
                                   border: none;
                                   ">
-                                <h3>{{ $item->judul }}</h3>
-                                <p>{{ $item->caption }}</p>
+                                <h3><?= $item->judul ?></h3>
+                                <p><?= $item->caption ?></p>
                             </div>
                         </div>
                     </div>
@@ -327,7 +327,7 @@
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header ">
-                        <h5 class="modal-title" id="audioPlayerLabel">{{ $item->judul }}</h5>
+                        <h5 class="modal-title" id="audioPlayerLabel"><?= $item->judul ?></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -346,8 +346,8 @@
                             <div class="card" style="
                                       border: none;
                                       ">
-                                <h1> {{ $item->judul }}</h1>
-                                <p>{{ $item->caption }}</p>
+                                <h1> <?= $item->judul ?></h1>
+                                <p><?= $item->caption ?></p>
                             </div>
                         </div>
                     </div>
