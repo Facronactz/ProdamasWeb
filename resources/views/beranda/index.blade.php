@@ -151,7 +151,7 @@
                                         margin-top: 30px;
                                         ">
                                 <video class="media" width="100%" max-width="850" height="auto" controls>
-                                    <source src="{{ asset('/videoProd/konten/' . $item->konten) }}">
+                                    <source src="{{ ($item->konten) }}">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
