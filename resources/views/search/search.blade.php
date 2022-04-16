@@ -64,6 +64,7 @@
         <div>
             Tidak ada data
         </div>
+    </div>
         <hr>
         @endif
     </div>
@@ -96,6 +97,7 @@
         <div>
             Tidak ada data
         </div>
+    </div>
         <hr>
         @endif
     </div>
@@ -166,6 +168,7 @@
             <div>
                 Tidak ada data
             </div>
+    </div>
             <hr>
             @endif
     </div>
@@ -233,6 +236,7 @@
             <div>
                 Tidak ada data
             </div>
+    </div>
             <hr>
             @endif
     </div>
