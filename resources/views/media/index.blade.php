@@ -6,6 +6,15 @@
 
 @section('head')
     <link rel="stylesheet" href="css/media.css">
+    <style>
+        .medsos-link {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: larger;
+        }
+
+    </style>
 @endsection
 
 @section('content')
@@ -21,7 +30,7 @@
 
 
         <!-- Awal embed IG -->
-        <div class="p-5">
+        <div class="px-4 mb-3 mt-1">
 
             <img src="img/instagram-icon.png" alt="instagram" width="40" height="40" class="d-inline-block" />
             <a class="usernameig medsos-link" href="https://www.instagram.com/prodamasplus/">@prodamasplus</a>
@@ -34,7 +43,7 @@
         <!-- Akhir embed IG -->
 
         <!-- Awal embed tiktok-->
-        <div class="p-5 ">
+        <div class="px-4 mb-3">
 
             <img src="img/tiktok-icon.png" alt="tiktok" width="40" height="40" class="d-inline-block" />
             <a class="usernamett medsos-link" href="https://vt.tiktok.com/ZSejpETUx/">@prodamasplus</a>
