@@ -14,7 +14,7 @@ use App\Http\Controllers\FotoController;
 use App\Http\Controllers\AudioController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\TentangController;
-use App\Http\Controllers\TulisCeritaController;
+// use App\Http\Controllers\TulisCeritaController;
 use App\Http\Controllers\KampungkerenController;
 use App\Http\Controllers\BidangController;
 use App\Http\Controllers\AdminController;
@@ -26,7 +26,10 @@ use App\Http\Controllers\AudioAdminController;
 use App\Http\Controllers\KampungkerenAdminController;
 use App\Http\Controllers\BidangAdminController;
 use App\Http\Controllers\TestregistController;
-use App\Http\Controllers\SearchController; 
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\TulisCeritaController;
+use App\Http\Controllers\CeritaController;
+use App\Http\Controllers\CeritaAdminController;
 
 //use App\Http\Controllers\SocialShareButtonsController;
 
@@ -70,6 +73,10 @@ Route::resource('video', VideoController::class);
 
 //foto
 Route::resource('foto', FotoController::class);
+
+//cerita
+Route::resource('cerita', CeritaController::class);
+Route::get('/tulis_ceritas/{id}', [CeritaController::class, 'show']);
 
 //tulis Cerita
 Route::resource('tuliscerita', TulisCeritaController::class);
@@ -195,6 +202,19 @@ Route::get('/searchfoto', [SearchController::class, 'searchfoto'])->name('search
 Route::resource('/video', VideoController::class);
 Route::get('/searchvideo', [SearchController::class, 'searchvideo'])->name('search');
 
+//Route search cerita
+Route::resource('/cerita', CeritaController::class);
+Route::get('/searchcerita', [SearchController::class, 'searchcerita'])->name('search');
+
+//tulis cerita admin
+Route::get('/admin/add-tuliscerita', [CeritaAdminController::class, 'create']);
+Route::post('/admin/list-tuliscerita', [CeritaAdminController::class, 'store']);
+Route::get('/admin/list-tuliscerita', [CeritaAdminController::class, 'index']);
+Route::get('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'edit']);
+Route::put('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'update']);
+Route::delete('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'destroy']);
+Route::get('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'edit_desc']);
+Route::put('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'update_desc']);
 
 //admin
 // Route::resource('admin', AdminController::class);

@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Models\ArticleAdmin;
-use App\Models\AudioAdmin;
 use App\Models\FotoAdmin;
+use App\Models\AudioAdmin;
 use App\Models\VideoAdmin;
+use App\Models\CeritaAdmin;
+use App\Models\ArticleAdmin;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 
 class SearchController extends Controller
@@ -15,21 +16,25 @@ class SearchController extends Controller
     {
         $keyword = $request->search;
         $artikel = ArticleAdmin::where('judul', 'like', "%" . $keyword . "%")
+        ->orWhere('text_sampul', 'like', "%" . $keyword . "%")
         ->paginate()
         // ->take(3)
         // ->get()
         ;
         $audios = AudioAdmin::where('judul', 'like', "%" . $keyword . "%")
+        ->orWhere('caption', 'like', "%" . $keyword . "%")
         ->paginate()
         // ->take(3)
         // ->get()
         ;
         $fotos = FotoAdmin::where('judul', 'like', "%" . $keyword . "%")
+        ->orWhere('caption', 'like', "%" . $keyword . "%")
         ->paginate()
         // ->take(3)
         // ->get()
         ;
         $videos = VideoAdmin::where('judul', 'like', "%" . $keyword . "%")
+        ->orWhere('caption', 'like', "%" . $keyword . "%")
         ->paginate()
         // ->take(3)
         // ->get()
@@ -63,5 +68,13 @@ class SearchController extends Controller
         $keyword = $request->searchvideo;
         $videos = VideoAdmin::where('judul', 'like', "%" . $keyword . "%")->paginate(3);
         return view('video.videosearch', compact('videos'));
+    }
+    public function searchcerita(Request $request)
+    {
+        $keyword = $request->searchcerita;
+        $tulis_ceritas = CeritaAdmin::where('judul', 'like', "%" . $keyword . "%")
+        ->orWhere('ringkasan', 'like', "%" . $keyword . "%")
+        ->paginate(2);
+        return view('cerita.searchcerita', compact('tulis_ceritas'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 }
