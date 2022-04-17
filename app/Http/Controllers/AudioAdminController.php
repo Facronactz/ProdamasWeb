@@ -29,11 +29,11 @@ class AudioAdminController extends Controller
         $pathThumb = "sampul-".time().".".$extThumb;
         $pathStore = $request->gambar_sampul->move(public_path('../audioProd/thumb'), $pathThumb);
 
-        // // konten audio
-        // $konten = $request->file('konten');
-        // $audioname = $konten->getClientOriginalName();
-        // $audiopath = $konten->storeAs('konten', $audioname);
-        // $pathStore = $request->konten->move(public_path('../audioProd/fileaudio'), $audiopath);
+        // konten audio
+        $konten = $request->file('konten');
+        $audioname = $konten->getClientOriginalName();
+        $audiopath = $konten->storeAs('konten', $audioname);
+        $pathStore = $request->konten->move(public_path('google drive'), $audiopath);
 /*
         $audio_sampul = $request->audio_sampul;
         $new_audio_sampul = time() . ' - ' . $audio_sampul->getClientOriginalName();
