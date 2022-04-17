@@ -63,7 +63,7 @@
                             <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
                             <audio controls>
                                 {{-- <iframe src="{{$audio->konten}}" width="fixed" height="fixed" allow="autoplay"></iframe> --}}
-                                <source src="{{$audio->konten}}" >
+                                <source src="{{$audio->konten}}" type="text">
                                 <p>Your browser does not support HTML5 audio :(</p>
                              </audio> 
                             
