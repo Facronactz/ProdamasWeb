@@ -62,9 +62,9 @@
                                 
                             <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
                             <audio controls>
-                                <iframe src="{{$audio->konten}}" width="fixed" height="fixed" allow="autoplay"></iframe>
-                                {{-- <source src="http://docs.google.com/uc?export=open&id=1lhaQyNS3pwc6JWWg8jmOf4eyK2qRR8wi" type="audio/mp3">
-                                <p>Your browser does not support HTML5 audio :(</p> --}}
+                                {{-- <iframe src="{{$audio->konten}}" width="fixed" height="fixed" allow="autoplay"></iframe> --}}
+                                <source src="{{$audio->konten}}" type="audio/mp3">
+                                <p>Your browser does not support HTML5 audio :(</p>
                              </audio> 
                             
                             {{-- <audio controls style="width: 100%;">
