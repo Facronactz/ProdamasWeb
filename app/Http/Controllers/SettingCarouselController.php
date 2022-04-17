@@ -42,7 +42,7 @@ class SettingCarouselController extends Controller
         //
         $this->validate($request, [
             'nama' => 'required',
-            'foto' => 'image|nullable|max:1024',
+            'foto' => 'image',
         ]);
         $files = [];
         if ($request->file('foto')) {
@@ -96,7 +96,7 @@ class SettingCarouselController extends Controller
         //
         $request->validate([
             'nama' => 'required',
-            'foto' => 'mimes:jpeg,jpg,png|max:2200',
+            'foto' => 'image',
         
         ]); 
         $files = [];
