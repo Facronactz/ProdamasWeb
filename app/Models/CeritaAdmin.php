@@ -6,15 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 
-class DescriptionAdmin extends Model
+class CeritaAdmin extends Model
 {
     use HasFactory;
-    protected $table = "descriptions";
-    public $incrementing = false;
-    protected $fillable = ["id", "desc_kampungkeren", "desc_bidang", "desc_pokmas", "desc_tuliscerita"];
+    protected $table = "tulis_ceritas";
 
-    public function getCreatedAtAttribute()
-    {
+    protected $fillable = ["nama","nomor_telepon","email","judul","ringkasan","foto","file"];
+
+    public function getCreatedAtAttribute() {
         return Carbon::parse($this->attributes['created_at'])
             ->translatedFormat('d F Y');
     }

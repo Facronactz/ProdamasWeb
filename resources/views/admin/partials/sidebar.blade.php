@@ -65,6 +65,12 @@
                         <p>Pokmas</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="/admin/list-tuliscerita" class="nav-link @yield('tuliscerita')">
+                        <i class="nav-icon fas fa-edit"></i>
+                        <p>Tulis Cerita</p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
