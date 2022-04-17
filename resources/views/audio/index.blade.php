@@ -61,7 +61,10 @@
                                 
                                 
                             <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
-                            <iframe src="https://drive.google.com/file/d/1KicuhAcRMgnXs2sdcbk1BfZ73kj3_Ycz/preview" width="fixed" height="fixed" allow="autoplay"></iframe>
+                            <audio controls="controls">
+                                <source src="https://docs.google.com/uc?export=download&id=1Mq1HgpAQN2QuEOQ3PqkowTwH5grCFWwG">
+                            </audio>
+                            {{-- <iframe src="https://drive.google.com/file/d/1KicuhAcRMgnXs2sdcbk1BfZ73kj3_Ycz/preview" width="fixed" height="fixed" allow="autoplay"></iframe> --}}
                             {{-- <audio controls style="width: 100%;">
                                 <source src="{{ asset('/audioProd/fileaudio/' . $audio->konten) }}" type="audio/mpeg">
                                 Your browser does not support the audio element.
