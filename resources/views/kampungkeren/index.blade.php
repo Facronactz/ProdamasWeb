@@ -54,7 +54,7 @@
             @foreach ($kampungkeren as $karen)
                 <div class="col d-flex" style="flex-direction: column;">
                     <img src="{{ asset('kampungkerenProd/' . $karen->foto) }}" alt="">
-                    <div class="d-flex justify-content-center" style="min-height:80px; margin: -30px auto; width:180px; background-color:{{ $karen->warna }}">
+                    <div class="d-flex justify-content-center" style="min-height:80px; margin: -30px auto; width:180px; background-color:{{ $karen->warna }}; color:white;">
                         <h2 class="my-auto">{{ $karen->judul }}</h2>
                     </div>
                     <div class="mt-5 mb-4">
