@@ -13,8 +13,8 @@ Edit Video
     @method('put')
     <div class="form-group">
         <label for="gambar_sampul">Gambar Sampul</label><br>
-        @if ($video->gambar_sampul)
-        <p>{{$video->gambar_sampul}}</p>
+        @if ($new_video_sampul)
+        <p>{{$new_video_sampul}}</p>
         @endif
         <input type="file" class="form-control" name="gambar_sampul" id="gambar_sampul">
         @error('gambar_sampul')
