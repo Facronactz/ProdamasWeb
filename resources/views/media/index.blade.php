@@ -10,11 +10,13 @@
 
 @section('content')
     <!-- awal jumbotron -->
-    <div class="div-title">
-        <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
-        <h1 class="home-title header-text px-2">
-            <span>Media Sosial</span>
-        </h1>
+    <div class="container mt-3">
+        <div class="div-title">
+            <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
+            <h1 class="home-title header-text px-2">
+                <span>Media Sosial</span>
+            </h1>
+        </div>
     </div>
     <!-- akhir jumbotrom -->
 
@@ -23,7 +25,7 @@
     <div class="p-5">
 
         <img src="img/instagram-icon.png" alt="instagram" width="40" height="40" class="d-inline-block" />
-        <a class="usernameig" href="https://www.instagram.com/prodamasplus/">@prodamasplus</a>
+        <a class="usernameig medsos-link" href="https://www.instagram.com/prodamasplus/">@prodamasplus</a>
 
         <!-- Tampilan embed Post ig -->
         <script src="https://apps.elfsight.com/p/platform.js" defer></script>
@@ -36,7 +38,7 @@
     <div class="p-5 ">
 
         <img src="img/tiktok-icon.png" alt="tiktok" width="40" height="40" class="d-inline-block" />
-        <a class="usernamett" href="https://vt.tiktok.com/ZSejpETUx/">@prodamasplus</a>
+        <a class="usernamett medsos-link" href="https://vt.tiktok.com/ZSejpETUx/">@prodamasplus</a>
 
         <!-- post tiktok -->
         <script src="https://apps.elfsight.com/p/platform.js" defer></script>
