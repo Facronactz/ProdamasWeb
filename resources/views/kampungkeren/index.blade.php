@@ -14,15 +14,6 @@
     </div>
     <!-- akhir jumbotrom -->
 
-    {{-- <div class="kampung-keren">
-        <div class="container">
-            <h2>Kampung Keren</h2> <br>
-            @foreach ($descriptions ?? '' as $description)
-            <h5> <?= $description->desc_kampungkeren ?></h5>
-            @endforeach
-        </div>
-    </div> --}}
-
     <div class="container-lg">
         <div class="d-flex my-4">
             <div class="row text-center w-100">
@@ -34,21 +25,6 @@
                 </div>
             </div>
         </div>
-
-        <!--Konten Kampung Keren-->
-        {{-- <div class="kampung">
-            <div class="konten">
-                <h2 class="h4 font-italic mb-4">{{ $karen->judul }}</h2>
-                <div class="row">
-                    <div class="col-lg-5">
-                        <img src="{{ asset('kampungkerenProd/' . $karen->foto) }}" alt="kampung-herbal" class="w-100 mb-4 border border-md border-black shadow-md">
-                    </div>
-                    <div class="col-md-6">
-                        <p style="font-family: Montserrat, sans-serif;"> {{ $karen->caption }}</p>
-                    </div>
-                </div>
-            </div>
-    </div> --}}
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 text-center">
             @foreach ($kampungkeren as $karen)
