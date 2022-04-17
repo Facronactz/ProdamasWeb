@@ -61,9 +61,9 @@
                     <p>{{ $karen->caption }}</p>
                 </div>
             </div>
+            @endforeach
         </div>
         <br>
-        @endforeach
         <div style="text-align:center">
             {{ $kampungkeren->links() }}
         </div>
