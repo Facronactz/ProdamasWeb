@@ -30,7 +30,7 @@ class AudioAdminController extends Controller
         $pathStore = $request->gambar_sampul->move(public_path('../audioProd/thumb'), $pathThumb);
 
         // konten audio
-        $konten = $request->text('konten');
+        $konten = $request->file('konten');
         $audioname = $konten->getClientOriginalName();
         $audiopath = $konten->storeAs('konten', $audioname);
         $pathStore = $request->konten->move(public_path('google drive'), $audiopath);
