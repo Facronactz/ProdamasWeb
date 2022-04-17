@@ -61,9 +61,10 @@
                                 
                                 
                             <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
-                            <audio controls="controls">
-                                <source src="https://docs.google.com/uc?export=download&id=1Mq1HgpAQN2QuEOQ3PqkowTwH5grCFWwG">
-                            </audio>
+                            <audio controls>
+                                <source src="http://docs.google.com/uc?export=open&id=1lhaQyNS3pwc6JWWg8jmOf4eyK2qRR8wi" type="audio/mp3">
+                                <p>Your browser does not support HTML5 audio :(</p>
+                             </audio> 
                             {{-- <iframe src="https://drive.google.com/file/d/1KicuhAcRMgnXs2sdcbk1BfZ73kj3_Ycz/preview" width="fixed" height="fixed" allow="autoplay"></iframe> --}}
                             {{-- <audio controls style="width: 100%;">
                                 <source src="{{ asset('/audioProd/fileaudio/' . $audio->konten) }}" type="audio/mpeg">
