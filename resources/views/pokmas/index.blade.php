@@ -1,51 +1,83 @@
 @extends('layouts.desain')
-@section('pokmas','active')
-@section('content')
-<!DOCTYPE html>
-<html lang="en">
+@section('main-tentang', 'active')
+@section('pokmas', 'active')
 
-<body>
+@section('title', 'POKMAS')
+
+@section('head')
+    <style>
+        .banner {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h2 h3 {
+            font-family: "Inter", sans-serif;
+        }
+
+        p ol {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .card {
+            background-color: white;
+            width: 100%;
+            margin: auto;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .tableauPlaceholder {
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+    </style>
+@endsection
+
+@section('content')
     <div class="card">
         <!-- awal jumbotron -->
         <div class="container-fluid banner">
             <div class="container banner-content">
                 <h2><u>POKMAS</u></h2>
                 @foreach ($descriptions ?? '' as $description)
-                <h5><?= $description->desc_pokmas ?></h5>
+                    <h5><?= $description->desc_pokmas ?></h5>
                 @endforeach
             </div>
         </div>
         <!-- akhir jumbotrom -->
-        @foreach($pokmass as $pokmas)
-        @if ($pokmas->id%2 != 0)
-        <section class="tentang mt-5 ">
-            <div class="container">
-                <div class="row">
+        @foreach ($pokmass as $pokmas)
+            @if ($pokmas->id % 2 != 0)
+                <section class="tentang mt-5 ">
+                    <div class="container">
+                        <div class="row">
 
-                    <div class="col-md-6 py-5">
-                        <img src="{{ asset('pokmasProd/'. $pokmas->foto) }}" class="img-fluid rounded-3">
-                    </div>
-                    <div class="col-md-6 py-5">
-                        <?= $pokmas->caption ?>
-                    </div>
+                            <div class="col-md-6 py-5">
+                                <img src="{{ asset('pokmasProd/' . $pokmas->foto) }}" class="img-fluid rounded-3">
+                            </div>
+                            <div class="col-md-6 py-5">
+                                <?= $pokmas->caption ?>
+                            </div>
 
-                </div>
-            </div>
-        </section>
-        @else
-        <section class="tentang mt-5 ">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 py-5">
-                        <?= $pokmas->caption ?>
+                        </div>
                     </div>
-                    <div class="col-md-6 py-5">
-                        <img src="{{ asset('pokmasProd/'. $pokmas->foto) }}" class="img-fluid rounded-3">
+                </section>
+            @else
+                <section class="tentang mt-5 ">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 py-5">
+                                <?= $pokmas->caption ?>
+                            </div>
+                            <div class="col-md-6 py-5">
+                                <img src="{{ asset('pokmasProd/' . $pokmas->foto) }}" class="img-fluid rounded-3">
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        @endif
+                </section>
+            @endif
         @endforeach
     </div>
     <!--end pengertian pokmas-->
@@ -85,38 +117,4 @@
         vizElement.parentNode.insertBefore(scriptElement, vizElement);
     </script>
     <!--end grafik pokmas-->
-    }
-
-    <style>
-        .banner {
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        h2 h3 {
-            font-family: "Inter", sans-serif;
-        }
-
-        p ol {
-            font-family: "Montserrat", sans-serif;
-        }
-
-        .card {
-            background-color: white;
-            width: 100%;
-            margin: auto;
-            margin-top: 10px;
-            border-radius: 5px;
-        }
-
-        .tableauPlaceholder {
-            width: 100%;
-            max-width: 1100px;
-            margin: auto;
-        }
-    </style>
-
-</body>
-
-</html>
 @endsection

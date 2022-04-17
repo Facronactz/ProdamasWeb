@@ -4,6 +4,7 @@
 @section('head')
     <link rel="stylesheet" href="css/beranda.css">
     <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/titleAnimation.css">
     <style>
         .carousel-img {
             object-fit: cover;
@@ -64,11 +65,23 @@
         </button>
     </div>
 
+    {{-- Search --}}
+    <div class="container">
+        <form action="search" class="mt-3">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-search link-light"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+
     <!--Tentang-->
-    <section class="tentang mt-3 ">
+    <section class="tentang">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 py-5">
+                <div class="col-md-6 py-4">
                     <h1 class="text-center mb-5">Tentang Prodamas</h1>
                     <p class="fs-5" style="text-align: justify;">Program Pemberdayaan Masyarakat (PRODAMAS) adalah
                         suatu program dari Pemerintah Kota Kediri
@@ -76,7 +89,7 @@
                         wilayah Rukun Tetangga (RT) yang dimulai sejak tahun 2015 sebagai upaya mewujudkan kemampuan dan
                         kemandirian masyarakat dalam pembangunan.</p>
                 </div>
-                <div class="col-md-6 py-5">
+                <div class="col-md-6 py-4">
                     <img src="img/tentangProdamas.jpeg" class="img-fluid rounded-3">
                 </div>
             </div>
@@ -86,15 +99,22 @@
 
     <!--artikel-->
     <div class="container-md my-5 artikel">
-        <h3 class="mb-4" style="font-family: Inter, sans-serif">Artikel</h3>
+        {{-- Header --}}
+        <div class="div-title mb-4">
+            <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
+            <h1 class="home-title header-text px-2">
+                <span>Artikel</span>
+            </h1>
+        </div>
+
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
             @foreach ($artikel as $item)
                 <div class="col my-3 my-lg-0 hvr-bob">
-                    <div class="card h-100 hvr-grow hvr-underline-from-center">
+                    <div class="card h-100 d-block hvr-grow hvr-underline-from-center">
                         <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
                             <a class="stretched-link" href="artikel/{{ $item->id }}"></a>
-                            <h5 class="card-title">{{ $item->judul }}</h5>
+                            <h5 class="card-title"><?= $item->judul ?></h5>
                             <p class="card-text">{{ $item->text_sampul }}</p>
                         </div>
                     </div>
@@ -112,15 +132,22 @@
 
     <!--video-->
     <div class="container-md my-5">
-        <h3 class="mb-4" style="font-family: Inter, sans-serif">Video</h3>
+        {{-- Header --}}
+        <div class="div-title mb-4">
+            <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
+            <h1 class="home-title header-text px-2">
+                <span>Video</span>
+            </h1>
+        </div>
+
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
             @foreach ($video as $item)
                 <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
-                    <div class="card h-100 hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
+                    <div class="card h-100 d-block hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('videoProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $item->judul }}</h5>
-                            <p class="card-text">{{ $item->caption }}</p>
+                            <h5 class="card-title"><?= $item->judul ?></h5>
+                            <p class="card-text"><?= $item->caption ?></p>
                         </div>
                     </div>
                 </div>
@@ -139,7 +166,7 @@
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header ">
-                        <h5 class="modal-title" id="fotoLabel">{{ $item->judul }}</h5>
+                        <h5 class="modal-title" id="fotoLabel"><?= $item->judul ?></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -158,8 +185,8 @@
                             <div class="card" style="
                                         border: none;
                                         ">
-                                <h3> {{ $item->judul }} </h3>
-                                <p> {{ $item->caption }} </p>
+                                <h3> <?= $item->judul ?> </h3>
+                                <p> <?= $item->caption ?> </p>
                             </div>
                         </div>
                     </div>
@@ -174,15 +201,22 @@
 
     <!--foto-->
     <div class="container-md my-5">
-        <h3 class="mb-4" style="font-family: Inter, sans-serif">Foto</h3>
+        {{-- Header --}}
+        <div class="div-title mb-4">
+            <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
+            <h1 class="home-title header-text px-2">
+                <span>Foto</span>
+            </h1>
+        </div>
+
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
             @foreach ($foto as $item)
                 <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
-                    <div class="card h-100 hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
+                    <div class="card h-100 d-block hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('fotoProd/' . $item->konten) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $item->judul }}</h5>
-                            <p class="card-text">{{ $item->caption }}</p>
+                            <h5 class="card-title"><?= $item->judul ?></h5>
+                            <p class="card-text"><?= $item->caption ?></p>
                         </div>
                     </div>
                 </div>
@@ -203,11 +237,11 @@
       @foreach ($foto as $item)
       <a href="foto/{{$item->id}}"></a>
   <div class="col">
-    <div class="card h-100 hvr-grow" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$item->id}}">
+    <div class="card h-100 d-block hvr-grow" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$item->id}}">
       <img src="{{ asset('fotoProd/'.$item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{ $item->judul }}</h5>
-        <p class="card-text">{{ $item->caption }}</p>
+        <h5 class="card-title"><?= $item->judul ?></h5>
+        <p class="card-text"><?= $item->caption ?></p>
       </div>
     </div>
   </div>
@@ -226,7 +260,7 @@
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header ">
-                        <h5 class="modal-title" id="fotoLabel">{{ $item->judul }}</h5>
+                        <h5 class="modal-title" id="fotoLabel"><?= $item->judul ?></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -241,8 +275,8 @@
                             <div class="card" style="
                                   border: none;
                                   ">
-                                <h3>{{ $item->judul }}</h3>
-                                <p>{{ $item->caption }}</p>
+                                <h3><?= $item->judul ?></h3>
+                                <p><?= $item->caption ?></p>
                             </div>
                         </div>
                     </div>
@@ -258,15 +292,22 @@
 
     <!--audio-->
     <div class="container-md my-5">
-        <h3 class="mb-4" style="font-family: Inter, sans-serif">Audio</h3>
+        {{-- Header --}}
+        <div class="div-title mb-4">
+            <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
+            <h1 class="home-title header-text px-2">
+                <span>Audio</span>
+            </h1>
+        </div>
+
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
             @foreach ($audio as $item)
                 <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
-                    <div class="card h-100 hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
+                    <div class="card h-100 d-block hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                         <img src="{{ asset('audioProd/thumb/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $item->judul }}</h5>
-                            <p class="card-text">{{ $item->caption }}</p>
+                            <h5 class="card-title"><?= $item->judul ?></h5>
+                            <p class="card-text"><?= $item->caption ?></p>
                         </div>
                     </div>
                 </div>
@@ -286,7 +327,7 @@
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header ">
-                        <h5 class="modal-title" id="audioPlayerLabel">{{ $item->judul }}</h5>
+                        <h5 class="modal-title" id="audioPlayerLabel"><?= $item->judul ?></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -305,8 +346,8 @@
                             <div class="card" style="
                                       border: none;
                                       ">
-                                <h1> {{ $item->judul }}</h1>
-                                <p>{{ $item->caption }}</p>
+                                <h1> <?= $item->judul ?></h1>
+                                <p><?= $item->caption ?></p>
                             </div>
                         </div>
                     </div>
