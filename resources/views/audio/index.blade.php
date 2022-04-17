@@ -62,7 +62,7 @@
                                 
                             <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
                             <audio controls>
-                                <source src="http://docs.google.com/uc?export=open&id={id}" type="audio/mp3">
+                                <source src="http://docs.google.com/uc?export=open&id={{$id}}" type="audio/mp3">
                                 <p>Your browser does not support HTML5 audio :(</p>
                              </audio> 
                             {{-- <iframe src="https://drive.google.com/file/d/1KicuhAcRMgnXs2sdcbk1BfZ73kj3_Ycz/preview" width="fixed" height="fixed" allow="autoplay"></iframe> --}}
