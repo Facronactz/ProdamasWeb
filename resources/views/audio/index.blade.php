@@ -62,7 +62,7 @@
                                 <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
                                 
                                 {{-- <iframe src="{{$audio->konten}}" width="absolut" height="absolut" allow="autoplay"></iframe> --}}
-                                <audio style="width:50%; height:fit-content" no-controls autoplay loop muted>
+                                <audio style= no-controls autoplay loop muted>
                                     <source src="{{$audio->konten}}" type='audio/mp3'>
                         </div>
                         <div class="card" style="
