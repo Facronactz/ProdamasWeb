@@ -13,7 +13,7 @@
         <div class="formBox2">
             <p>Silakan kirim cerita Anda ke alamat email <b>prodamas@kedirikota.go.id</b> dengan format di bawah ini:
             <div class="row row-cols-1 row-cols-md-2 mb-2 g-4 centerItms">
-                <div class="card col-auto" style="
+                <div class="card col-auto justify-content-center" style="
                     border: none;
                     ">
 
