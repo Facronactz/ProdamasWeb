@@ -47,13 +47,13 @@
                     <div class="d-flex justify-content-evenly">
                         <a href="https://docs.google.com/document/d/1p8yd5Iiz1s6wWKW9OEGDx-YgM_Ta1agD/edit?usp=sharing&ouid=111925719766899341367&rtpof=true&sd=true" class="btn w-100 btn-g btn-telp m mx- mx-4">
                             Download Template
-                            <i class="fas fa-cloud-download link-light"></i>
+                            {{-- <i class="fas fa-cloud-download link-light"></i> --}}
                         </a>
                         <a href="mailto:prodamas@kedirikota.go.id?subject=Masyarakat%20Bercerita%20-%20PRODAMAS
                                         &amp;body=Nama%20Penulis%3A%0ANo.%20Handphone%3A%0AEmail%3A%0AJudul%20Cerita%3A%0ARingkasan%20Cerita%3A%0A
                                         %0ASilahkan%20lampirkan%20foto%20dan%20artikel%20Anda%20%28format%20pdf%29%20bersama%20email%20ini." class="btn btn-primary w-100 mx-4">
                             Kirim Email
-                            <i class="fas fa-paper-plane link-light"></i>
+                            {{-- <i class="fas fa-paper-plane link-light"></i> --}}
                         </a>
                     </div>
                 </div>
