@@ -49,7 +49,7 @@ Tulis Cerita Submission
       @forelse ($tulis_ceritas as $key=>$tuliscerita)
       <tr>
           <td>{{$key + 1}}</th>
-          <td>{{$tuliscerita->created_at}}</td>
+          <td>{{$tuliscerita->updated_at}}</td>
           <td>{{$tuliscerita->nama}}</td>
           {{-- <td>{{$tuliscerita->nomor_telepon}}</td>
           <td>{{$tuliscerita->email}}</td> --}}
