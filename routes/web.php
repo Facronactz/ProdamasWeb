@@ -29,6 +29,8 @@ use App\Http\Controllers\KampungkerenAdminController;
 use App\Http\Controllers\BidangAdminController;
 use App\Http\Controllers\TestregistController;
 use App\Http\Controllers\SearchController; 
+use App\Http\Controllers\CeritaController;
+use App\Http\Controllers\CeritaAdminController;
 //use App\Http\Controllers\SocialShareButtonsController;
 
 
@@ -71,8 +73,12 @@ Route::resource('video', VideoController::class);
 //foto
 Route::resource('foto', FotoController::class);
 
-//tulis Cerita
-Route::resource('tuliscerita', TulisCeritaController::class);
+//cerita
+Route::resource('cerita', CeritaController::class);
+Route::get('/tulis_ceritas/{id}', [CeritaController::class, 'show']);
+
+    //tulis Cerita
+    Route::resource('tuliscerita', TulisCeritaController::class);
 
 //kampungkeren
 Route::resource('kampungkeren', KampungkerenController::class);
@@ -160,6 +166,16 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::delete('/admin/pokmas/{pokmas_id}', [PokmasAdminController::class, 'destroy']);
     Route::get('/admin/pokmass/{description_id}', [PokmasAdminController::class, 'edit_desc']);
     Route::put('/admin/pokmass/{description_id}', [PokmasAdminController::class, 'update_desc']);
+
+        //tulis cerita admin
+        Route::get('/admin/add-tuliscerita', [CeritaAdminController::class, 'create']);
+        Route::post('/admin/list-tuliscerita', [CeritaAdminController::class, 'store']);
+        Route::get('/admin/list-tuliscerita', [CeritaAdminController::class, 'index']);
+        Route::get('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'edit']);
+        Route::put('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'update']);
+        Route::delete('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'destroy']);
+        Route::get('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'edit_desc']);
+        Route::put('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'update_desc']);    
 });
 
 //berlangganan
