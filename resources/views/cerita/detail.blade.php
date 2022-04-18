@@ -1,6 +1,6 @@
 @extends('layouts.desain')
 @section('cerita', 'active')
-@section('title', 'Cerita')
+@section('title', 'Cerita Masyarakat')
 @section('head')
     <link rel="stylesheet" href="{{ asset('/css/cerita.css') }}">
 @endsection
