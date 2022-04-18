@@ -48,12 +48,18 @@
   </div> --}}
     <div id="carouselUtama" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            @foreach ($carousels as $key => $carousel)
+            <div class="carousel-item @if ($key == 0) {{"active"}}
+            @endif">
+                <img src="{{ 'carouselProd/'. $carousel->foto }}" class="d-block w-100 carousel-img" alt="..." />
+            </div>
+            @endforeach
+            {{-- <div class="carousel-item active">
                 <img src="img/header1.png" class="d-block w-100 carousel-img" alt="..." />
             </div>
             <div class="carousel-item">
                 <img src="img/header2.png" class="d-block w-100 carousel-img" alt="..." />
-            </div>
+            </div> --}}
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselUtama" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

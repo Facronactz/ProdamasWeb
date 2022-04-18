@@ -135,6 +135,7 @@
                         <div id="scrollspy">
                             <a class="nav-link" href="#footer">Kontak</a>
                         </div>
+                        <a class="nav-link @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a>
                     </div>
 
                     {{-- Search --}}
@@ -174,7 +175,9 @@
             </div>
         </nav>
 
-        @yield('content')
+        <div style="min-height: 64vh">
+            @yield('content')
+        </div>
 
         <!-- Awal footer -->
         <footer>

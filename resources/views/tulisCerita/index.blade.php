@@ -39,12 +39,12 @@
 
 <body>
 
-    <!-- awal jumbotron -->
+    {{-- <!-- awal jumbotron -->
     <div class="container-fluid banner">
         <div class="container banner-content">
         </div>
     </div>
-    <!-- akhir jumbotrom -->
+    <!-- akhir jumbotrom --> --}}
 
     {{-- Form Tulis Cerita --}}
     <div class="container formBox">
@@ -54,7 +54,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
-        <h2> Apa Ceritamu tentang <b> PRODAMAS </b>?</h2>
+        <h2> Tulis Ceritamu tentang <b> PRODAMAS </b></h2>
         <div class="formBox2">
             <form action="{{route('tuliscerita.store')}}" method="POST" enctype="multipart/form-data">
                 <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms">
