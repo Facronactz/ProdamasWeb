@@ -11,7 +11,7 @@ class Kampungkeren extends Model
     use HasFactory;
     protected $table = "kampungkeren";
 
-    protected $fillable = ["judul", "foto", "caption"];
+    protected $fillable = ["judul", "foto", "caption", "warna"];
 
     public function getCreatedAtAttribute()
     {

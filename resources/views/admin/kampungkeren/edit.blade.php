@@ -20,6 +20,17 @@ Edit Kampung Keren
         </div>
         @enderror
     </div>
+    
+    <div class="form-group">
+        <label for="warna">Warna</label>
+        <input name="warna" class="form-control" name="warna" id="warna" placeholder="warna">
+        @error('warna')
+        <div class="alert alert-danger">
+            {{ $message }}
+        </div>
+        @enderror
+    </div>
+    
     <div class="form-group">
         <label for="konten">Foto</label><br>
         @if ($kampungkeren->foto)

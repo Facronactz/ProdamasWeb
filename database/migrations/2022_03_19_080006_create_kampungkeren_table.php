@@ -16,6 +16,7 @@ class CreateKampungkerenTable extends Migration
         Schema::create('kampungkeren', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('judul', 100);
+            $table->string('warna', 7)->default('#4d148c');
             $table->string('foto');
             $table->string('caption', 1000);
             $table->timestamps();

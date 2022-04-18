@@ -45,10 +45,11 @@
                         </div>
                     </div>
                 @endforeach
-                <div class="d-flex justify-content-end w-100 my-3">
+                <div class="d-flex justify-content-end w-100 mb-4">
                     {{ $artikel->links() }}
                 </div>
             </div>
+            <hr class="d-md-none m-0">
             <!-- kanan -->
             <div class="rightcolumn">
                 <div class="card-right bg-light">
