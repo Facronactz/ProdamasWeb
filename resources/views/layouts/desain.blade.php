@@ -175,7 +175,7 @@
             </div>
         </nav>
 
-        <div style="min-height: 90vh">
+        <div style="min-height: 64vh">
             @yield('content')
         </div>
 
