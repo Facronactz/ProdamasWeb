@@ -78,7 +78,7 @@
             right: 0;
             z-index: -1;
             /* needed to keep in the background */
-            background: url('{{ url('img/pattern.png') }}');
+            background: url('{{ url('img/bg.png') }}');
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;

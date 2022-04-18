@@ -32,10 +32,6 @@
 
     <div class="container mt-5 mb-5">
         @foreach ($bidangs as $bidang)
-            @if (last($bidangs))
-            @else
-                <hr>
-            @endif
             @if ($bidang->id % 2 != 0)
                 <div class="row row-cols-1 row-cols-md-2 box">
                     <h1 class="d-md-none d-block d-lg-none d-xl-none d-xxl-none">{{ $bidang->judul }}</h1>
@@ -64,6 +60,10 @@
                         </div>
                     </div>
                 </div>
+            @endif
+            @if ($loop->last)
+            @else
+                <hr>
             @endif
         @endforeach
 

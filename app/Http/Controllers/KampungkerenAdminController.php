@@ -21,6 +21,7 @@ class KampungkerenAdminController extends Controller
             'judul' => 'required',
             'foto' => 'required',
             'caption' => 'required',
+            'warna' => 'required',  
         ]);
 
         $files = [];
@@ -31,7 +32,8 @@ class KampungkerenAdminController extends Controller
                 $files[] = [
                     'judul' => $request->judul,
                     'foto' => $foto,
-                    'caption' => $request->caption
+                    'caption' => $request->caption,
+                    'warna' => $request->warna,
                 ];
             }
         }
