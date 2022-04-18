@@ -1,6 +1,6 @@
 @extends('layouts.desain')
 @section('cerita', 'active')
-@section('title', 'Tulis Cerita')
+@section('title', 'Cerita Masyarakat')
 
 @section('head')
     <link rel="stylesheet" href="css/cerita.css">
