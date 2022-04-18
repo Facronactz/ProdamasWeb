@@ -59,13 +59,10 @@
                                     margin-right:1em;
                                     ">
                                 
-                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="{{ $audio->konten }}"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
-                            {{-- <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
-                            <audio controls>
-                                <source src="http://docs.google.com/uc?export=open&id=1KicuhAcRMgnXs2sdcbk1BfZ73kj3_Ycz" type="audio/mp3">
-                                <p>Your browser does not support HTML5 audio :(</p>
-                             </audio> 
-                            <iframe src="https://drive.google.com/file/d/1KicuhAcRMgnXs2sdcbk1BfZ73kj3_Ycz/preview" width="fixed" height="fixed" allow="autoplay"></iframe> --}}
+                                <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
+                                <iframe src="https://drive.google.com/file/d/1KicuhAcRMgnXs2sdcbk1BfZ73kj3_Ycz/preview" width="640" height="480" allow="autoplay"></iframe>
+
+                            {{-- <iframe src="https://drive.google.com/file/d/1KicuhAcRMgnXs2sdcbk1BfZ73kj3_Ycz/preview" width="fixed" height="fixed" allow="autoplay"></iframe> --}}
                             {{-- <audio controls style="width: 100%;">
                                 <source src="{{ asset('/audioProd/fileaudio/' . $audio->konten) }}" type="audio/mpeg">
                                 Your browser does not support the audio element.
