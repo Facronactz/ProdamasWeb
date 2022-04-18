@@ -19,7 +19,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
                     <a href="{{ url('/admin/list-carousel') }}" class="nav-link @yield('carousel')">
-                        <i class="fas fa-archway"></i>
+                        <i class="nav-icon fas fa-archway"></i>
                         <p>Carousel Header</p>
                     </a>
                 </li>
