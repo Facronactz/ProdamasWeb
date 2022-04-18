@@ -59,13 +59,13 @@
                                     margin-right:1em;
                                     ">
                                 
-                                
-                            <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
+                                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1420706845&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/prodamas-pemerintah-kota-kediri" title="PRODAMAS KOTA KEDIRI" target="_blank" style="color: #cccccc; text-decoration: none;">PRODAMAS KOTA KEDIRI</a> · <a href="https://soundcloud.com/prodamas-pemerintah-kota-kediri/sets/audio-prodamas" title="Audio Prodamas" target="_blank" style="color: #cccccc; text-decoration: none;">Audio Prodamas</a></div>
+                            {{-- <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
                             <audio controls>
                                 <source src="http://docs.google.com/uc?export=open&id=1KicuhAcRMgnXs2sdcbk1BfZ73kj3_Ycz" type="audio/mp3">
                                 <p>Your browser does not support HTML5 audio :(</p>
                              </audio> 
-                            {{-- <iframe src="https://drive.google.com/file/d/1KicuhAcRMgnXs2sdcbk1BfZ73kj3_Ycz/preview" width="fixed" height="fixed" allow="autoplay"></iframe> --}}
+                            <iframe src="https://drive.google.com/file/d/1KicuhAcRMgnXs2sdcbk1BfZ73kj3_Ycz/preview" width="fixed" height="fixed" allow="autoplay"></iframe> --}}
                             {{-- <audio controls style="width: 100%;">
                                 <source src="{{ asset('/audioProd/fileaudio/' . $audio->konten) }}" type="audio/mpeg">
                                 Your browser does not support the audio element.
