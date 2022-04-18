@@ -135,6 +135,7 @@
                         <div id="scrollspy">
                             <a class="nav-link" href="#footer">Kontak</a>
                         </div>
+                        <a class="nav-link @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a>
                     </div>
 
                     {{-- Search --}}
