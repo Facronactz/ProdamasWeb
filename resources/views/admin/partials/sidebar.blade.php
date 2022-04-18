@@ -71,6 +71,12 @@
                         <p>Tulis Cerita</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ url('/admin/list-carousel') }}" class="nav-link @yield('carousel')">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>Setting Carousel</p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
