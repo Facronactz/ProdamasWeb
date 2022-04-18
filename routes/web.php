@@ -32,6 +32,7 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CeritaController;
 use App\Http\Controllers\CeritaAdminController;
 //use App\Http\Controllers\SocialShareButtonsController;
+use App\Http\Controllers\SettingCarouselController;
 
 
 /*
@@ -235,3 +236,11 @@ Route::put('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class,
 Route::delete('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'destroy']);
 Route::get('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'edit_desc']);
 Route::put('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'update_desc']);
+
+    // Setting Carousel
+    Route::get('/admin/add-carousel', [SettingCarouselController::class, 'create']);
+    Route::post('/admin/list-carousel', [SettingCarouselController::class, 'store']);
+    Route::get('/admin/list-carousel', [SettingCarouselController::class, 'index']);
+    Route::get('/admin/edit-carousel/{carousel}', [SettingCarouselController::class, 'edit']);
+    Route::put('/admin/edit-carousel/{carousel}', [SettingCarouselController::class, 'update']);
+    Route::delete('/admin/delete-carousel/{carousel}', [SettingCarouselController::class, 'destroy']);
