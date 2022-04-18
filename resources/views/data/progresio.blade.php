@@ -1,6 +1,6 @@
 @extends('layouts.desain')
 @section('data', 'active')
-@section('progresio', 'active')
+@section('progressio', 'active')
 @section('title', 'Progresio')
 
 @section('content')
