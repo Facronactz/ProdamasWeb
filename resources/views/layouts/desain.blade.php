@@ -175,7 +175,9 @@
             </div>
         </nav>
 
-        @yield('content')
+        <div style="min-height: 90vh">
+            @yield('content')
+        </div>
 
         <!-- Awal footer -->
         <footer>
