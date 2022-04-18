@@ -67,8 +67,4 @@
         </div>
         <!--div container-->
     </section>
-
-
-
-    </div>
 @endsection
