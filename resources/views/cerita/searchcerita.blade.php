@@ -27,6 +27,7 @@
             {{-- mengambil data dari database --}}
             <h4 class="my-3">Cerita Masyarakat</h4>
             <div class="col">
+                @if ($tulis_ceritas->count())
                 @foreach ($tulis_ceritas as $cerita)
                     <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
                         <div class="row g-0">
