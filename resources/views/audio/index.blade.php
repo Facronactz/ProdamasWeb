@@ -60,9 +60,9 @@
                                     ">
                                 
                                 <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
-                                <audio controls>
+                                
                                 <iframe src="{{$audio->konten}}" width="absolut" height="absolut" allow="autoplay"></iframe>
-                                </audio controls>
+                                
                         </div>
                         <div class="card" style="
                                 width: 25rem;
