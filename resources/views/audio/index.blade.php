@@ -67,7 +67,7 @@
                                 border: none;
                                 ">
                             <h1> {{ $audio->judul }}</h1>
-                            <h4> <?=$audio->caption?> </h4>
+                           <p> <?=$audio->caption?> </p>
                         </div>
                     </div>
                 </div>
