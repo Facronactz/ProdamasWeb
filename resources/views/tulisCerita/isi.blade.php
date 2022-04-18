@@ -15,7 +15,6 @@
             <div class="row row-cols-1 row-cols-md-2 mb-2 g-4 centerItms">
                 <div class="card col-auto" style="
                     border: none;
-                    margin-right:1em;
                     ">
 
                     <div class="isi" style="border: 1px solid rgb(179, 179, 179); font-size:small; padding: 10px">
@@ -48,7 +47,7 @@
 
                     <a href="mailto:prodamas@kedirikota.go.id?subject=Masyarakat%20Bercerita%20-%20PRODAMAS
                     &body=Nama%20Penulis%3A%0ANo.%20Handphone%3A%0AEmail%3A%0AJudul%20Cerita%3A%0ARingkasan%20Cerita%3A%0A
-                    %0ASilahkan%20lampirkan%20foto%20dan%20artikel%20Anda%20%28format%20pdf%29%20bersama%20email%20ini." class="btn btn-primary"></a>
+                    %0ASilahkan%20lampirkan%20foto%20dan%20artikel%20Anda%20%28format%20pdf%29%20bersama%20email%20ini." class="btn btn-primary">Kirim</a>
                 </div>
             </div>
             </form>
