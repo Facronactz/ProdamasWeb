@@ -125,7 +125,7 @@
                         <div class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tentang</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
-                                <li class="w-100"><a class="dropdown-item @yield('tentang')" href="{{ url('/tentang') }}">Prodamas</a></li>
+                                <li class="w-100"><a class="dropdown-item @yield('prodamas')" href="{{ url('/prodamas') }}">Prodamas</a></li>
                                 <li class="w-100"><a class="dropdown-item @yield('bidang')" href="{{ url('/bidang') }}">Bidang</a></li>
                                 <li class="w-100"><a class="dropdown-item @yield('kampungkeren')" href="{{ url('/kampungkeren') }}">Kampung Keren</a></li>
                                 <li class="w-100"><a class="dropdown-item @yield('pokmas')" href="{{ url('/pokmas') }}">POKMAS</a></li>
