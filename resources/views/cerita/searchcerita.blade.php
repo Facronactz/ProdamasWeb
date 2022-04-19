@@ -14,20 +14,19 @@
     <section id="prodamas">
         <div class="container">
 
+            {{-- mengambil data dari database --}}
+            <h4 class="my-3">Cerita Masyarakat</h4>
             {{-- Search Bar --}}
             <div class="container">
-                <form action="searchaudio">
+                <form action="searchcerita">
                     <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchaudio" value="{{ request('searchaudio') }}">
+                        <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchcerita" value="{{ request('searchcerita') }}">
                         <button class="btn btn-primary" type="submit">
                             <i class="fas fa-search link-light"></i>
                         </button>
                     </div>
                 </form>
             </div>
-
-            {{-- mengambil data dari database --}}
-            <h4 class="my-3">Cerita Masyarakat</h4>
             <div class="col">
                 @if ($tulis_ceritas->count())
                     @foreach ($tulis_ceritas as $cerita)
