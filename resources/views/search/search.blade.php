@@ -263,7 +263,7 @@
                                                       border: none;
                                                       ">
                                 <h1> {{ $item->judul }}</h1>
-                                <p>{{ $item->caption }}</p>
+                                <p> <?= $audio->caption ?> </p>
                             </div>
                         </div>
                     </div>
