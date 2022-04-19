@@ -10,6 +10,7 @@ use App\Models\FotoAdmin;
 use App\Models\VideoAdmin;
 use Share;
 use DB;
+use App\Models\SettingCarousel;
 
 
 class artikelController extends Controller
@@ -47,8 +48,9 @@ class artikelController extends Controller
                         ->get();
 
                 // dd($audio);
+                $carousels = SettingCarousel::orderBy('id', 'desc')->take(3)->get();
 
-                return view('beranda.index', compact('artikel', 'video', 'foto', 'audio'));
+                return view('beranda.index', compact('artikel', 'video', 'foto', 'audio', 'carousels'));
         }
 
         public function show($id)

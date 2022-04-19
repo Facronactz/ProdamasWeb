@@ -48,12 +48,18 @@
   </div> --}}
     <div id="carouselUtama" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            @foreach ($carousels as $key => $carousel)
+            <div class="carousel-item @if ($key == 0) {{"active"}}
+            @endif">
+                <img src="{{ 'carouselProd/'. $carousel->foto }}" class="d-block w-100 carousel-img" alt="..." />
+            </div>
+            @endforeach
+            {{-- <div class="carousel-item active">
                 <img src="img/header1.png" class="d-block w-100 carousel-img" alt="..." />
             </div>
             <div class="carousel-item">
                 <img src="img/header2.png" class="d-block w-100 carousel-img" alt="..." />
-            </div>
+            </div> --}}
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselUtama" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -177,10 +183,11 @@
                                         margin: 0;
                                         margin-top: 30px;
                                         ">
-                                <video class="media" width="100%" max-width="850" height="auto" controls>
+                                {{-- <video class="media" width="100%" max-width="850" height="auto" controls>
                                     <source src="{{ asset('/videoProd/konten/' . $item->konten) }}">
                                     Your browser does not support the video tag.
-                                </video>
+                                </video> --}}
+                                <iframe width="fixed" height="fixed" src="{{ $item->konten }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div class="card" style="
                                         border: none;
@@ -338,9 +345,8 @@
                                           margin-right:1em;
                                           ">
                                 <img src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}" class="d-flex justify-content click" style="width: 100%;" alt="...">
-                                <audio class="media" controls style="width: 100%;">
-                                    <source src="{{ asset('/audioProd/fileaudio/' . $item->konten) }}" type="audio/mpeg">
-                                    Your browser does not support the audio element.
+                                <audio controls="controls">
+                                    <source src="{{ $item->konten }}">
                                 </audio>
                             </div>
                             <div class="card" style="

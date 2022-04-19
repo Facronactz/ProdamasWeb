@@ -82,7 +82,7 @@
             right: 0;
             z-index: -1;
             /* needed to keep in the background */
-            background: url('{{ url('img/pattern.png') }}');
+            background: url('{{ url('img/bg.png') }}');
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -114,7 +114,7 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
                                 <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
                                 <li class="w-100"><a class="dropdown-item @yield('banksampah')" href="{{ url('/banksampah') }}">E-Bank Sampah</a></li>
-                                <li class="w-100"><a class="dropdown-item" href="https://prodamasplus.kedirikota.go.id/">Progressio</a></li>
+                                <li class="w-100"><a class="dropdown-item @yield('progresio')" href="{{ url('/progressio') }}">Progressio</a></li>
                             </ul>
                         </div>
                         <div class="nav-item dropdown">
@@ -138,6 +138,7 @@
                         <div id="scrollspy">
                             <a class="nav-link" href="#footer">Kontak</a>
                         </div>
+                        <a class="nav-link @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a>
                     </div>
 
                     {{-- Search --}}
@@ -177,7 +178,9 @@
             </div>
         </nav>
 
-        @yield('content')
+        <div style="min-height: 64vh">
+            @yield('content')
+        </div>
 
         <!-- Awal footer -->
         <footer>

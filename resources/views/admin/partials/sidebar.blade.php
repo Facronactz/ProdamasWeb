@@ -18,6 +18,12 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
+                    <a href="{{ url('/admin/list-carousel') }}" class="nav-link @yield('carousel')">
+                        <i class="nav-icon fas fa-archway"></i>
+                        <p>Carousel Header</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="/admin/list-article" class="nav-link @yield('artikel')">
                         <i class="nav-icon far fa-newspaper"></i>
                         <p>Artikel</p>
@@ -48,6 +54,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="/admin/list-prodamas" class="nav-link @yield('prodamas')">
+                        <i class="nav-icon fas fa-landmark"></i>
+                        <p>Prodamas</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="/admin/list-kampungkeren" class="nav-link @yield('kampungkeren')">
                         <i class="nav-icon fas fa-house-user"></i>
                         <p>Kampung Keren</p>
@@ -66,9 +78,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/list-prodamas" class="nav-link @yield('prodamas')">
-                        <i class="nav-icon fas fa"></i>
-                        <p>Prodamas</p>
+                    <a href="/admin/list-tuliscerita" class="nav-link @yield('tuliscerita')">
+                        <i class="nav-icon fas fa-edit"></i>
+                        <p>Tulis Cerita</p>
                     </a>
                 </li>
             </ul>

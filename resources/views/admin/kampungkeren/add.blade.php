@@ -38,6 +38,16 @@ Kampung Keren Baru
     </div>
 
     <div class="form-group">
+        <label for="warna">Warna</label>
+        <input name="warna" class="form-control" name="warna" id="warna" placeholder="warna">
+        @error('warna')
+        <div class="alert alert-danger">
+            {{ $message }}
+        </div>
+        @enderror
+    </div>
+
+    <div class="form-group">
         <label for="foto">Foto</label><br>
         <input type="file" class="form-control" name="foto[]" id="foto[]" multiple>
         @error('foto')

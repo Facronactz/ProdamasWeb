@@ -35,7 +35,7 @@ Audio Baru
     </div>
     <div class="form-group">
         <label for="konten">Konten</label><br>
-        <input type="file" class="form-control" name="konten" id="konten">
+        <input type="text" class="form-control" name="konten" id="konten">
         @error('konten')
         <div class="alert alert-danger">
             {{ $message }}

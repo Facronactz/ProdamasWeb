@@ -21,7 +21,7 @@ class AudioAdminController extends Controller
             'gambar_sampul' => 'required|file|image|max:2200',
             'caption' => 'required',
             'judul' => 'required',
-            'konten' => 'required|mimes:audio/mpeg,mpga,mp3,wav,aac',
+            'konten' => 'required',
         ]);
         // dump($request);
         // sampul
@@ -29,11 +29,11 @@ class AudioAdminController extends Controller
         $pathThumb = "sampul-".time().".".$extThumb;
         $pathStore = $request->gambar_sampul->move(public_path('../audioProd/thumb'), $pathThumb);
 
-        // konten audio
-        $konten = $request->file('konten');
-        $audioname = $konten->getClientOriginalName();
-        $audiopath = $konten->storeAs('konten', $audioname);
-        $pathStore = $request->konten->move(public_path('../audioProd/fileaudio'), $audiopath);
+        // // konten audio
+        // $konten = $request->file('konten');
+        // $audioname = $konten->getClientOriginalName();
+        // $audiopath = $konten->storeAs('konten', $audioname);
+        // $pathStore = $request->konten->move(public_path('../audioProd/fileaudio'), $audiopath);
 /*
         $audio_sampul = $request->audio_sampul;
         $new_audio_sampul = time() . ' - ' . $audio_sampul->getClientOriginalName();
@@ -44,7 +44,7 @@ class AudioAdminController extends Controller
         AudioAdmin::create([
             "gambar_sampul" => $pathThumb,
             "judul" => $request["judul"],
-            "konten" => $audioname,
+            "konten" => $request["konten"],
             "caption" => $request["caption"],
         ]);
 
@@ -69,9 +69,9 @@ class AudioAdminController extends Controller
 
     public function update($id, Request $request) {
         $request->validate([
-            'gambar_sampul' => 'required|file|image|max:2200',
+            'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
             'judul' => 'required',
-            'konten' => 'nullable|audio', 
+            'konten' => 'required', 
             'caption' => 'required'
         ]);
 
@@ -93,16 +93,16 @@ class AudioAdminController extends Controller
                 "text_sampul" => ["text-sampul"],
                 "judul" => $request["judul"],
                 "slug" => $request["slug"],
-                "konten" => $new_konten,
+                "konten" => $request["konten"],
                 "caption" => $request["caption"],
             ];
         } else {
             $audio_data = [
-                "gambar-sampul" => $new_picture["gambar-sampul"],
+                // "gambar-sampul" => $new_audio_sampul,
                 "text_sampul" => $request["text_sampul"],
                 "judul" => $request["judul"],
                 "slug" => $request["slug"],
-                "konten" => $new_konten,
+                "konten" => $request["konten"],
                 "caption" => $request["caption"]
             ];
         }
