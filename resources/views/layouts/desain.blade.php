@@ -21,6 +21,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/desain.css') }}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+
     {{-- Animation --}}
     <link rel="stylesheet" href="{{ asset('css/hover.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -28,9 +30,9 @@
     <link rel="stylesheet" href="{{ asset('css/social-color.css') }}">
     @yield('head')
     @hasSection('title')
-        <title>Prodamas Plus - @yield('title')</title>
+    <title>Prodamas Plus - @yield('title')</title>
     @else
-        <title>Prodamas Plus</title>
+    <title>Prodamas Plus</title>
     @endif
 
     <style>
@@ -44,6 +46,7 @@
             object-fit: cover;
             object-position: bottom;
         }
+
         .header-symbol {
             width: 14px;
             height: 14px;
@@ -52,6 +55,7 @@
             padding: 0;
             margin-top: 7px;
         }
+
         .header-text span {
             font-family: 'Poppins';
             text-shadow: 2px 2px rgb(209, 201, 209);
@@ -84,7 +88,6 @@
             -o-background-size: cover;
             background-size: cover;
         }
-
     </style>
 
 </head>
@@ -125,7 +128,7 @@
                         <div class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tentang</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
-                                <li class="w-100"><a class="dropdown-item @yield('tentang')" href="{{ url('/tentang') }}">Prodamas</a></li>
+                                <li class="w-100"><a class="dropdown-item @yield('prodamas')" href="{{ url('/prodamas') }}">Prodamas</a></li>
                                 <li class="w-100"><a class="dropdown-item @yield('bidang')" href="{{ url('/bidang') }}">Bidang</a></li>
                                 <li class="w-100"><a class="dropdown-item @yield('kampungkeren')" href="{{ url('/kampungkeren') }}">Kampung Keren</a></li>
                                 <li class="w-100"><a class="dropdown-item @yield('pokmas')" href="{{ url('/pokmas') }}">POKMAS</a></li>
@@ -245,8 +248,12 @@
         </footer>
         <!-- Akhir footer -->
 
+        <!-- jQuery -->
+        <script src="{{asset('/adminlte/plugins/jquery/jquery.min.js')}}"></script>
+
         <!--Script dropdown-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
         <script>
             $(function() {
@@ -280,6 +287,9 @@
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
+
+        @stack('scripts')
+        @yield('table')
 
         {{-- Modal Login --}}
         <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

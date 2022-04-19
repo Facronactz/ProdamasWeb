@@ -17,8 +17,6 @@ use App\Http\Controllers\TentangController;
 use App\Http\Controllers\TulisCeritaController;
 use App\Http\Controllers\KampungkerenController;
 use App\Http\Controllers\BidangController;
-use App\Http\Controllers\PokmasAdminController;
-use App\Http\Controllers\ProdamasAdminController;
 use App\Http\Controllers\PokmasController;
 use App\Http\Controllers\ProdamasController;
 use App\Http\Controllers\AdminController;
@@ -29,6 +27,8 @@ use App\Http\Controllers\VideoAdminController;
 use App\Http\Controllers\AudioAdminController;
 use App\Http\Controllers\KampungkerenAdminController;
 use App\Http\Controllers\BidangAdminController;
+use App\Http\Controllers\PokmasAdminController;
+use App\Http\Controllers\ProdamasAdminController;
 use App\Http\Controllers\TestregistController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CeritaController;
@@ -50,9 +50,6 @@ use App\Http\Controllers\SettingCarouselController;
 
 //tampilan
 Route::get('/', [artikelController::class, 'beranda'])->name('dashboard');
-
-// tentang
-Route::get('/tentang', [TentangController::class, 'index']);
 
 // data
 Route::get('/grafik', [DataController::class, 'grafik']);
@@ -184,7 +181,6 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'edit_desc']);
     Route::put('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'update_desc']);
 
-
     //prodamas
     Route::get('/admin/addcont-prodamas', [ProdamasAdminController::class, 'createcont']);
     Route::post('/admin/storecont-prodamas', [ProdamasAdminController::class, 'storecont']);
@@ -199,7 +195,6 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::delete('/admin/prodamass/{pokmas_id}', [ProdamasAdminController::class, 'destroyreg']);
     Route::get('/admin/prodamas/', [ProdamasAdminController::class, 'edittrans']);
     Route::put('/admin/prodamas/', [ProdamasAdminController::class, 'updatetrans']);
-
 
     //tulis cerita admin
     Route::get('/admin/add-tuliscerita', [CeritaAdminController::class, 'create']);
