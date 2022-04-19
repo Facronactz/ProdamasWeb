@@ -72,7 +72,6 @@
                                         <audio controls="controls">
                                             <source src="{{ $audio->konten }}">
                                         </audio>
-                                        <a href="{{ $audio->konten }}">{{ $audio->judul }}</a>
                                     </div>
                                     <div class="card" style="
                                         width: 25rem;
