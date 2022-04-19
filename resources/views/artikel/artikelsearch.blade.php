@@ -26,7 +26,7 @@
                         <!--<div class="col-sm-12">buat share
                         </div>-->
                         <div class="col-sm-4">
-                            <h6>{{ $item->created_at }}</h6>
+                            <h6>{{$item->updated_at}}</h6>
                         </div>
                     </div>
                     <br>
