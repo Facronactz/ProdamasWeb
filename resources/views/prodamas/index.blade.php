@@ -107,15 +107,16 @@
                 <h4 style="font-family: Inter, sans-serif; text-decoration-line: underline; text-decoration-style: double; text-align:center; margin-top: 7%" class="card-title">
                     Regulasi Prodamas
                 </h4>
-                <table class="table mt-4" style="width:100%;">
-                    <tbody>
+                <table class="table mt-4" id="tableRegulasi" style="width:100%;">
+                    <thead>
                         <tr class="text-center" style="height: 4rem;">
                             <th class="text-left">Tanggal</th>
                             <th class="text-align:center">Judul</th>
                             <th class="text-align:center">Sumber</th>
 
                         </tr>
-
+                    </thead>
+                    <tbody>
                         @foreach ($regulasis as $regulasi)
                         <tr style="padding: 10px;">
                             <td style="width:210px;padding: 10px;">{{$regulasi->created_at}}</td>
@@ -134,6 +135,13 @@
             </div>
         </div>
     </div>
+    @endsection
+    @section('table')
+    <script>
+        $(document).ready(function() {
+            $('#tableRegulasi').DataTable(); //sesuikan id tabel yg dibat
+        });
+    </script>
+    @endsection
 
 </html>
-@endsection

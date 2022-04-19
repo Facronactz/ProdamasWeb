@@ -21,6 +21,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/desain.css') }}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+
     {{-- Animation --}}
     <link rel="stylesheet" href="{{ asset('css/hover.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -28,9 +30,9 @@
     <link rel="stylesheet" href="{{ asset('css/social-color.css') }}">
     @yield('head')
     @hasSection('title')
-        <title>Prodamas Plus - @yield('title')</title>
+    <title>Prodamas Plus - @yield('title')</title>
     @else
-        <title>Prodamas Plus</title>
+    <title>Prodamas Plus</title>
     @endif
 
     <style>
@@ -44,6 +46,7 @@
             object-fit: cover;
             object-position: bottom;
         }
+
         .header-symbol {
             width: 14px;
             height: 14px;
@@ -52,6 +55,7 @@
             padding: 0;
             margin-top: 7px;
         }
+
         .header-text span {
             font-family: 'Poppins';
             text-shadow: 2px 2px rgb(209, 201, 209);
@@ -84,7 +88,6 @@
             -o-background-size: cover;
             background-size: cover;
         }
-
     </style>
 
 </head>
@@ -242,8 +245,12 @@
         </footer>
         <!-- Akhir footer -->
 
+        <!-- jQuery -->
+        <script src="{{asset('/adminlte/plugins/jquery/jquery.min.js')}}"></script>
+
         <!--Script dropdown-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
         <script>
             $(function() {
