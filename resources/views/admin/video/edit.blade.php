@@ -46,7 +46,7 @@ Edit Video
     </div>
     <div class="form-group">
         <label for="caption">Caption</label>
-        <textarea name="caption" id="description" class="form-control" cols="30" rows="3"></textarea>
+        <textarea name="caption" id="description" class="form-control" cols="30" rows="3"> {{$video->caption}}</textarea>
         @error('caption')
         <div class="alert alert-danger">
             {{ $message }}

@@ -65,6 +65,12 @@
                         <p>Pokmas</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="/admin/list-prodamas" class="nav-link @yield('prodamas')">
+                        <i class="nav-icon fas fa"></i>
+                        <p>Prodamas</p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
