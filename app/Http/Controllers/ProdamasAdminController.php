@@ -29,7 +29,7 @@ class ProdamasAdminController extends Controller
         foreach ($request->file('foto') as $file) {
             if ($file->isValid()) {
                 $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-                $file->move(public_path('../public/prodamasProd/'), $foto);
+                $file->move(public_path('../prodamasProd/'), $foto);
                 $files[] = [
                     'judul' => $request->judul,
                     'foto' => $foto,
@@ -69,7 +69,7 @@ class ProdamasAdminController extends Controller
         $foto = $request->file('foto');
         if ($foto != NULL) {
             $fotoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $foto->getClientOriginalName());
-            $foto->move(public_path('../public/prodamasProd/'), $fotoPath);
+            $foto->move(public_path('../prodamasProd/'), $fotoPath);
 
             $prodamass->update([
                 'judul' => $request->judul,
@@ -111,7 +111,7 @@ class ProdamasAdminController extends Controller
         $foto = $request->file('foto');
         if ($foto != NULL) {
             $fotoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $foto->getClientOriginalName());
-            $foto->move(public_path('../public/prodamasProd/'), $fotoPath);
+            $foto->move(public_path('../prodamasProd/'), $fotoPath);
 
             $transforms->update([
                 'judul' => $request->judul,
@@ -145,7 +145,7 @@ class ProdamasAdminController extends Controller
         foreach ($request->file('file') as $pdf) {
             if ($pdf->isValid()) {
                 $file = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $pdf->getClientOriginalName());
-                $pdf->move(public_path('../public/regulasiProd/'), $file);
+                $pdf->move(public_path('../regulasiProd/'), $file);
                 $pdfs[] = [
                     'judul' => $request->judul,
                     'file' => $file,
@@ -175,7 +175,7 @@ class ProdamasAdminController extends Controller
         $file = $request->file('file');
         if ($file != NULL) {
             $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-            $file->move(public_path('../public/prodamasProd/'), $filePath);
+            $file->move(public_path('../prodamasProd/'), $filePath);
 
             $regulasis->update([
                 'judul' => $request->judul,
