@@ -111,7 +111,7 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
                                 <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
                                 <li class="w-100"><a class="dropdown-item @yield('banksampah')" href="{{ url('/banksampah') }}">E-Bank Sampah</a></li>
-                                <li class="w-100"><a class="dropdown-item" href="https://prodamasplus.kedirikota.go.id/">Progressio</a></li>
+                                <li class="w-100"><a class="dropdown-item @yield('progresio')" href="{{ url('/progressio') }}">Progressio</a></li>
                             </ul>
                         </div>
                         <div class="nav-item dropdown">
