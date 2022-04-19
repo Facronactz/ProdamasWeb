@@ -58,18 +58,21 @@
                                     border: none;
                                     margin-right:1em;
                                     ">
-                            <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
-                            <audio controls style="width: 100%;">
-                                <source src="{{ asset('/audioProd/fileaudio/' . $audio->konten) }}" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
+                                
+                                <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
+                                
+                                {{-- <iframe src="{{$audio->konten}}" width="absolut" height="absolut" allow="autoplay"></iframe> --}}
+                                <audio controls="controls">
+                                    <source src="{{$audio->konten}}">
+                                  </audio>
+                                <a href="{{$audio->konten}}">{{$audio->judul}}</a>
                         </div>
                         <div class="card" style="
                                 width: 25rem;
                                 border: none;
                                 ">
                             <h1> {{ $audio->judul }}</h1>
-                            <p>{{ $audio->caption }}</p>
+                           <p> <?=$audio->caption?> </p>
                         </div>
                     </div>
                 </div>
@@ -91,4 +94,4 @@
     </div>
 </div>
 <!-- akhir feed audio -->
-@endsection
+@endsection 
