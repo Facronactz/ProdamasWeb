@@ -9,16 +9,15 @@
 @section('content')
     <section id="prodamas">
         <div class="container">
-            
             {{-- Search Bar --}}
-            <div class="input-group" style="max-width: 10vw">
-                <form action="searchcerita" method="GET">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchcerita">
+            <form action="searchcerita">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchcerita" value="{{ request('searchcerita') }}">
                     <button class="btn btn-primary" type="submit">
-                    <i class="fas fa-search link-light"></i>
+                        <i class="fas fa-search link-light"></i>
                     </button>
-                </form>
-            </div>
+                </div>
+            </form>
             
             <div class="row mt-5">
                 <div class="col text-center" style="font-family: Inter, sans-serif; margin-top: 35px">
