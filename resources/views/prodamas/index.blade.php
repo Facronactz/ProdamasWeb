@@ -1,7 +1,8 @@
 @extends('layouts.desain')
-@extends('main-tentang', 'active')
-@extends('tentang', 'active')
-@extends('title', 'Tentang Prodamas')
+@section('main-tentang', 'active')
+@section('tentang', 'active')
+
+@section('title', 'Tentang Prodamas')
 
 @section('head')
     <link rel="stylesheet" href="{{ asset('css/tentang.css') }}">
