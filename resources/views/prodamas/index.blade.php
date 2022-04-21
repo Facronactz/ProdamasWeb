@@ -1,6 +1,6 @@
 @extends('layouts.desain')
 @section('main-tentang', 'active')
-@section('tentang', 'active')
+@section('prodamas', 'active')
 
 @section('title', 'Tentang Prodamas')
 
