@@ -46,7 +46,7 @@
                                 <div class="card-body">
                                     {{-- <a href="tulis_ceritas/{{ $cerita->id }}" class="stretched-link"></a> --}}
                                     <h5 class="card-title" style="font-size: 22px;">{{ $cerita->judul }}</h5>
-                                    <p class="card-text" style="font-size: 13px;"><small class="text-muted">Oleh {{ $cerita->nama }}, {{ $cerita->created_at}} </small></p>
+                                    <p class="card-text" style="font-size: 13px;"><small class="text-muted">Oleh {{ $cerita->nama }}, {{ $cerita->updated_at}} </small></p>
                                     <p class="card-text" style="font-size: 14px;"><?= $cerita->ringkasan = Str::limit($cerita->ringkasan, 430) ?></p>
                                     <a href="cerita/{{ $cerita->id }}" target="_blank" style="font-size: 14px;">Selengkapnya . .</a>
                                 </div>
