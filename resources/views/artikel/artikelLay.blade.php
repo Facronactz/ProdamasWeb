@@ -16,6 +16,7 @@
                         </div>-->
                         <div class="col-sm-4">
                             <h6>{{ $item->created_at }}</h6>
+                            <small class="fa fa-eye" aria-hidden="true"><small class="text-muted"> {{ $item->views}} </small></small>
                         </div>
                     </div>
                     <br>
