@@ -49,6 +49,7 @@
                                     <p class="card-text" style="font-size: 13px;"><small class="text-muted">Oleh {{ $cerita->nama }}, {{ $cerita->updated_at}} </small></p>
                                     <p class="card-text" style="font-size: 14px;"><?= $cerita->ringkasan = Str::limit($cerita->ringkasan, 430) ?></p>
                                     <a href="cerita/{{ $cerita->id }}" target="_blank" style="font-size: 14px;">Selengkapnya . .</a>
+                                    <small class="fa fa-eye" aria-hidden="true"><small class="text-muted"> {{ $cerita->views}} </small></small>
                                 </div>
                             </div>
                         </div>
