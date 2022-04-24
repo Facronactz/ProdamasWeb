@@ -17,8 +17,8 @@ use App\Http\Controllers\TentangController;
 use App\Http\Controllers\TulisCeritaController;
 use App\Http\Controllers\KampungkerenController;
 use App\Http\Controllers\BidangController;
-use App\Http\Controllers\PokmasAdminController;
 use App\Http\Controllers\PokmasController;
+use App\Http\Controllers\ProdamasController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\ArticleController;
@@ -27,8 +27,10 @@ use App\Http\Controllers\VideoAdminController;
 use App\Http\Controllers\AudioAdminController;
 use App\Http\Controllers\KampungkerenAdminController;
 use App\Http\Controllers\BidangAdminController;
+use App\Http\Controllers\PokmasAdminController;
+use App\Http\Controllers\ProdamasAdminController;
 use App\Http\Controllers\TestregistController;
-use App\Http\Controllers\SearchController; 
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CeritaController;
 use App\Http\Controllers\CeritaAdminController;
 //use App\Http\Controllers\SocialShareButtonsController;
@@ -48,9 +50,6 @@ use App\Http\Controllers\SettingCarouselController;
 
 //tampilan
 Route::get('/', [artikelController::class, 'beranda'])->name('dashboard');
-
-// tentang
-Route::get('/tentang', [TentangController::class, 'index']);
 
 // data
 Route::get('/grafik', [DataController::class, 'grafik']);
@@ -79,8 +78,8 @@ Route::resource('foto', FotoController::class);
 Route::resource('cerita', CeritaController::class);
 Route::get('/tulis_ceritas/{id}', [CeritaController::class, 'show']);
 
-    //tulis Cerita
-    Route::resource('tuliscerita', TulisCeritaController::class);
+//tulis Cerita
+Route::resource('tuliscerita', TulisCeritaController::class);
 
 //kampungkeren
 Route::resource('kampungkeren', KampungkerenController::class);
@@ -90,6 +89,9 @@ Route::resource('bidang', BidangController::class);
 
 //pokmas
 Route::resource('pokmas', PokmasController::class);
+
+//prodamas
+Route::resource('prodamas', ProdamasController::class);
 
 
 //login & profil
@@ -169,15 +171,48 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/pokmass/{description_id}', [PokmasAdminController::class, 'edit_desc']);
     Route::put('/admin/pokmass/{description_id}', [PokmasAdminController::class, 'update_desc']);
 
-        //tulis cerita admin
-        Route::get('/admin/add-tuliscerita', [CeritaAdminController::class, 'create']);
-        Route::post('/admin/list-tuliscerita', [CeritaAdminController::class, 'store']);
-        Route::get('/admin/list-tuliscerita', [CeritaAdminController::class, 'index']);
-        Route::get('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'edit']);
-        Route::put('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'update']);
-        Route::delete('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'destroy']);
-        Route::get('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'edit_desc']);
-        Route::put('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'update_desc']);    
+    //tulis cerita admin
+    Route::get('/admin/add-tuliscerita', [CeritaAdminController::class, 'create']);
+    Route::post('/admin/list-tuliscerita', [CeritaAdminController::class, 'store']);
+    Route::get('/admin/list-tuliscerita', [CeritaAdminController::class, 'index']);
+    Route::get('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'edit']);
+    Route::put('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'update']);
+    Route::delete('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'destroy']);
+    Route::get('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'edit_desc']);
+    Route::put('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'update_desc']);
+
+    //prodamas
+    Route::get('/admin/addcont-prodamas', [ProdamasAdminController::class, 'createcont']);
+    Route::post('/admin/storecont-prodamas', [ProdamasAdminController::class, 'storecont']);
+    Route::get('/admin/addreg-prodamas', [ProdamasAdminController::class, 'createreg']);
+    Route::post('/admin/storereg-prodamas', [ProdamasAdminController::class, 'storereg']);
+    Route::get('/admin/list-prodamas', [ProdamasAdminController::class, 'index']);
+    Route::get('/admin/prodamas/{pokmas_id}', [ProdamasAdminController::class, 'editcont']);
+    Route::put('/admin/prodamas/{pokmas_id}', [ProdamasAdminController::class, 'updatecont']);
+    Route::delete('/admin/prodamas/{pokmas_id}', [ProdamasAdminController::class, 'destroycont']);
+    Route::get('/admin/prodamass/{pokmas_id}', [ProdamasAdminController::class, 'editreg']);
+    Route::put('/admin/prodamass/{pokmas_id}', [ProdamasAdminController::class, 'updatereg']);
+    Route::delete('/admin/prodamass/{pokmas_id}', [ProdamasAdminController::class, 'destroyreg']);
+    Route::get('/admin/prodamas/', [ProdamasAdminController::class, 'edittrans']);
+    Route::put('/admin/prodamas/', [ProdamasAdminController::class, 'updatetrans']);
+
+    //tulis cerita admin
+    Route::get('/admin/add-tuliscerita', [CeritaAdminController::class, 'create']);
+    Route::post('/admin/list-tuliscerita', [CeritaAdminController::class, 'store']);
+    Route::get('/admin/list-tuliscerita', [CeritaAdminController::class, 'index']);
+    Route::get('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'edit']);
+    Route::put('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'update']);
+    Route::delete('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'destroy']);
+    Route::get('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'edit_desc']);
+    Route::put('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'update_desc']);
+
+    // Setting Carousel
+    Route::get('/admin/add-carousel', [SettingCarouselController::class, 'create']);
+    Route::post('/admin/list-carousel', [SettingCarouselController::class, 'store']);
+    Route::get('/admin/list-carousel', [SettingCarouselController::class, 'index']);
+    Route::get('/admin/edit-carousel/{carousel}', [SettingCarouselController::class, 'edit']);
+    Route::put('/admin/edit-carousel/{carousel}', [SettingCarouselController::class, 'update']);
+    Route::delete('/admin/delete-carousel/{carousel}', [SettingCarouselController::class, 'destroy']);
 });
 
 //berlangganan
@@ -227,21 +262,3 @@ Route::get('/searchvideo', [SearchController::class, 'searchvideo'])->name('sear
 //Route search cerita
 Route::resource('/cerita', CeritaController::class);
 Route::get('/searchcerita', [SearchController::class, 'searchcerita'])->name('search');
-
-//tulis cerita admin
-Route::get('/admin/add-tuliscerita', [CeritaAdminController::class, 'create']);
-Route::post('/admin/list-tuliscerita', [CeritaAdminController::class, 'store']);
-Route::get('/admin/list-tuliscerita', [CeritaAdminController::class, 'index']);
-Route::get('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'edit']);
-Route::put('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'update']);
-Route::delete('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'destroy']);
-Route::get('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'edit_desc']);
-Route::put('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'update_desc']);
-
-    // Setting Carousel
-    Route::get('/admin/add-carousel', [SettingCarouselController::class, 'create']);
-    Route::post('/admin/list-carousel', [SettingCarouselController::class, 'store']);
-    Route::get('/admin/list-carousel', [SettingCarouselController::class, 'index']);
-    Route::get('/admin/edit-carousel/{carousel}', [SettingCarouselController::class, 'edit']);
-    Route::put('/admin/edit-carousel/{carousel}', [SettingCarouselController::class, 'update']);
-    Route::delete('/admin/delete-carousel/{carousel}', [SettingCarouselController::class, 'destroy']);

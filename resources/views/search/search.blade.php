@@ -255,16 +255,15 @@
                                                           margin-right:1em;
                                                           ">
                                 <img src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}" class="d-flex justify-content click" style="width: 100%;" alt="...">
-                                <audio class="media" controls style="width: 100%;">
-                                    <source src="{{ asset('/audioProd/fileaudio/' . $item->konten) }}" type="audio/mpeg">
-                                    Your browser does not support the audio element.
+                                <audio controls="controls">
+                                    <source src="{{ $item->konten }}">
                                 </audio>
                             </div>
                             <div class="card" style="
                                                       border: none;
                                                       ">
                                 <h1> {{ $item->judul }}</h1>
-                                <p>{{ $item->caption }}</p>
+                                <p> <?= $item->caption ?> </p>
                             </div>
                         </div>
                     </div>
