@@ -9,6 +9,7 @@ use Illuminate\Support\Carbon;
 class ArticleAdmin extends Model
 {
     use HasFactory;
+    use \Conner\Tagging\Taggable;
     protected $table = "articles";
 
     protected $fillable = ["status","gambar_sampul","text_sampul","judul","slug","article","picture"];
