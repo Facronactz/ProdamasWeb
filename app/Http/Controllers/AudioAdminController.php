@@ -76,40 +76,27 @@ class AudioAdminController extends Controller
         ]);
 
         $audio = AudioAdmin::findorfail($id);
-        if ($request->has('picture')) {
-            File::delete("audioProd/thumb/".$audio->picture);
-            $picture = $request->picture;
-            $new_audio_sampul = time() . ' - ' . $picture->getClientOriginalName();
-            $picture->move('audioProd/thumb/', $new_audio_sampul);
-/*
-            $request->has('konten_picture')) {
-            File::delete("img-audio-konten/".$audio->konten_picture);
-            $konten_picture = $request->konten_picture;
-            $new_audio_konten = time() . ' - ' . $konten_picture->getClientOriginalName();
-            $konten_picture->move('img-audio-konten/', $new_audio_sampul);
-*/
-            $audio_data = [
-                "gambar_sampul" => $new_audio_sampul,
-                "text_sampul" => ["text-sampul"],
-                "judul" => $request["judul"],
-                "slug" => $request["slug"],
-                "konten" => $request["konten"],
-                "caption" => $request["caption"],
-            ];
-        } else {
-            $audio_data = [
-                // "gambar-sampul" => $new_audio_sampul,
-                "text_sampul" => $request["text_sampul"],
-                "judul" => $request["judul"],
-                "slug" => $request["slug"],
-                "konten" => $request["konten"],
-                "caption" => $request["caption"]
-            ];
-        }
-        
-        $audio->update($audio_data);
+        $file = $request->file('gambar_sampul');
+        if ($file != NULL) {
+            File::delete(public_path("../audioProd/thumb/" . $audio->gambar_sampul));
+            $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
+            $file->move(public_path('../audioProd/thumb'), $filePath);
 
-        return redirect('/admin/list-audio')->with('success', 'Submission successfully updated!');
+            $audio->update([
+                'gambar_sampul' => $filePath,
+                'judul' => $request->judul,
+                'konten' => $request->konten,
+                'caption' => $request->caption
+            ]);
+        } else {
+            $audio->update([
+                'judul' => $request->judul,
+                'konten' => $request->konten,
+                'caption' => $request->caption
+            ]);
+        }
+
+        return redirect('/admin/list-audio')->with('success', 'Audio Berhasil Diupdate!');
     }
 
     public function destroy($id) {
