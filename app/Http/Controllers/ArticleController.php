@@ -97,30 +97,28 @@ class ArticleController extends Controller
         ]);
 
         $article = ArticleAdmin::findorfail($id);
-        if ($request->has('picture')) {
-            File::delete("../articleProd/sampul/".$article->picture);
-            $picture = $request->picture;
-            $new_sampul = time() . ' - ' . $picture->getClientOriginalName();
-            $picture->move('articleProd/sampul/', $new_sampul);
-            $article_data = [
-                "gambar_sampul" => $new_sampul,
-                "text_sampul" => $request["text-sampul"],
-                "judul" => $request["judul"],
-                "slug" => $request["slug"],
-                "article" => $request["article"],
-                //"picture" => $new_picture
-            ];
+        $file = $request->file('gambar_sampul');
+        if ($file != NULL) {
+            File::delete(public_path("../articleProd/sampul/" . $article->gambar_sampul));
+            $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
+            $file->move(public_path('../articleProd/sampul/'), $filePath);
+
+            $article->update([
+                'gambar_sampul' => $filePath,
+                'text_sampul' => $request->text_sampul,
+                'judul' => $request->judul,
+                'slug' => $request->slug,
+                'picture' => $filePath,
+                'article' => $request->article
+            ]);
         } else {
-            $article_data = [
-                // "gambar-sampul" => $new_sampul,
-                "text_sampul" => $request["text_sampul"],
-                "judul" => $request["judul"],
-                "slug" => $request["slug"],
-                "article" => $request["article"]
-            ];
+            $article->update([
+                'text_sampul' => $request->text_sampul,
+                'judul' => $request->judul,
+                'slug' => $request->slug,
+                'article' => $request->article
+            ]);
         }
-        
-        $article->update($article_data);
 
         return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Diedit!');
     }

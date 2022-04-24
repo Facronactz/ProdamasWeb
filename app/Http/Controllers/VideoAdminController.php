@@ -71,35 +71,23 @@ class VideoAdminController extends Controller
         ]);
 
         $video = VideoAdmin::findorfail($id);
-        if ($request->has('picture')) {
-            File::delete("img-video-sampul/".$video->picture);
-            $picture = $request->picture;
-            $new_video_sampul = time() . ' - ' . $picture->getClientOriginalName();
-            $picture->move('img-video-sampul/', $new_video_sampul);
-/*
-            $request->has('konten_picture')) {
-            File::delete("img-video-konten/".$video->konten_picture);
-            $konten_picture = $request->konten_picture;
-            $new_video_konten = time() . ' - ' . $konten_picture->getClientOriginalName();
-            $konten_picture->move('img-video-konten/', $new_video_sampul);
-*/
-            $video_data = [
-                "gambar_sampul" => $new_video_sampul,
-                "judul" => $request["judul"],
-                "konten" => $request["konten"],
-                "caption" => $request["caption"],
-            ];
+        $file = $request->file('gambar_sampul');
+        if ($file != NULL) {
+            File::delete(public_path("../videoProd/" . $video->gambar_sampul));
+            $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
+            $file->move(public_path('../videoProd/'), $filePath);
+
+            $video->update([
+                'judul' => $request->judul,
+                'gambar_sampul' => $filePath,
+                'caption' => $request->caption
+            ]);
+        } else {
+            $video->update([
+                'judul' => $request->judul,
+                'caption' => $request->caption
+            ]);
         }
-         else {
-            $video_data = [
-                //"gambar-sampul" => $new_picture,
-                "judul" => $request["judul"],
-                "konten" => $request["konten"],
-                "caption" => $request["caption"],
-            ];
-        }
-        
-        $video->update($video_data);
 
         return redirect('/admin/list-video')->with('success', 'Submission successfully updated!');
     }
