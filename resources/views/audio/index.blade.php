@@ -59,22 +59,26 @@
                             <div class="modal-body">
                                 <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 audioPlayerBox centerItms">
                                     <div class="card" style="
-                                        width: 25rem;
-                                        border: none;
-                                        margin-right:1em;
-                                        ">
+                                            width: 25rem;
+                                            border: none;
+                                            margin-right:1em;
+                                            ">
                                         <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
-                                        <audio controls style="width: 100%;">
+                                        {{-- Audio --}}
+                                        {{-- <audio controls style="width: 100%;">
                                             <source src="{{ asset('/audioProd/fileaudio/' . $audio->konten) }}" type="audio/mpeg">
                                             Your browser does not support the audio element.
+                                        </audio> --}}
+                                        <audio controls="controls">
+                                            <source src="{{ $audio->konten }}">
                                         </audio>
                                     </div>
                                     <div class="card" style="
-                                    width: 25rem;
-                                    border: none;
-                                    ">
+                                        width: 25rem;
+                                        border: none;
+                                        ">
                                         <h1> {{ $audio->judul }}</h1>
-                                        <p>{{ $audio->caption }}</p>
+                                        <p> <?= $audio->caption ?> </p>
                                     </div>
                                 </div>
                             </div>

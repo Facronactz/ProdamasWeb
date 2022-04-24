@@ -54,6 +54,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="/admin/list-prodamas" class="nav-link @yield('prodamas')">
+                        <i class="nav-icon fas fa-landmark"></i>
+                        <p>Prodamas</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="/admin/list-kampungkeren" class="nav-link @yield('kampungkeren')">
                         <i class="nav-icon fas fa-house-user"></i>
                         <p>Kampung Keren</p>

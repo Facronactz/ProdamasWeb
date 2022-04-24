@@ -17,4 +17,8 @@ class DataController extends Controller
     public function banksampah(){
         return view('data.banksampah');
     }
+
+    public function progressio(){
+        return view('data.progresio');
+    }
 }
