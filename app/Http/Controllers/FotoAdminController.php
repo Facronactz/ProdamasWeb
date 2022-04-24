@@ -89,32 +89,23 @@ class FotoAdminController extends Controller
         ]);
 
         $foto = FotoAdmin::findorfail($id);
-        if ($request->has('picture')) {
-            File::delete("fotoProd//".$foto->picture);
-            $picture = $request->picture;
-            $pathFoto = time() . ' - ' . $picture->getClientOriginalName();
-            $picture->move('fotoProd//', $pathFoto);
-/*
-            $request->has('konten_picture')) {
-            File::delete("fotoProd//".$foto->konten_picture);
-            $konten_picture = $request->konten_picture;
-            $new_konten = time() . ' - ' . $konten_picture->getClientOriginalName();
-            $konten_picture->move('fotoProd//', $new_foto_sampul);
-*/
-            $foto_data = [
-                "judul" => $request["judul"],
-                "konten" => $pathFoto,
-                "caption" => $request["caption"],
-            ];
+        $file = $request->file('konten');
+        if ($file != NULL) {
+            File::delete(public_path("../fotoProd/" . $foto->konten));
+            $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
+            $file->move(public_path('../public/fotoProd/'), $filePath);
+
+            $foto->update([
+                'judul' => $request->judul,
+                'konten' => $filePath,
+                'caption' => $request->caption
+            ]);
         } else {
-            $foto_data = [
-                "judul" => $request["judul"],
-                //"konten" => $pathFoto,
-                "caption" => $request["caption"]
-            ];
+            $foto->update([
+                'judul' => $request->judul,
+                'caption' => $request->caption
+            ]);
         }
-        
-        $foto->update($foto_data);
 
         return redirect('/admin/list-foto')->with('success', 'Foto Berhasil Diupdate!');
     }

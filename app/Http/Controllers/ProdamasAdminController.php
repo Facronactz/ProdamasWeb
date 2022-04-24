@@ -68,6 +68,7 @@ class ProdamasAdminController extends Controller
 
         $foto = $request->file('foto');
         if ($foto != NULL) {
+            File::delete(public_path("../prodamasProd/" . $prodamass->foto));
             $fotoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $foto->getClientOriginalName());
             $foto->move(public_path('../prodamasProd/'), $fotoPath);
 
@@ -110,6 +111,7 @@ class ProdamasAdminController extends Controller
 
         $foto = $request->file('foto');
         if ($foto != NULL) {
+            File::delete(public_path("../prodamasProd/" . $transforms->foto));
             $fotoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $foto->getClientOriginalName());
             $foto->move(public_path('../prodamasProd/'), $fotoPath);
 
@@ -174,8 +176,9 @@ class ProdamasAdminController extends Controller
         $regulasis = regulasi::findorfail($id);
         $file = $request->file('file');
         if ($file != NULL) {
+            File::delete(public_path("../regulasiProd/" . $regulasis->file));
             $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-            $file->move(public_path('../prodamasProd/'), $filePath);
+            $file->move(public_path('../regulasiProd/'), $filePath);
 
             $regulasis->update([
                 'judul' => $request->judul,

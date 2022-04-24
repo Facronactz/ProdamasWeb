@@ -62,25 +62,23 @@ class BidangAdminController extends Controller
         ]);
 
         $bidangs = Bidang::findorfail($id);
-        if ($request->has('picture')) {
-            File::delete("bidangProd//" . $bidangs->foto);
-            $picture = $request->foto;
-            $pathFoto = time() . ' - ' . $picture->getClientOriginalName();
-            $picture->move('bidangProd//', $pathFoto);
-            
-            $bidang_data = [
-                "judul" => $request["judul"],
-                "foto" => $pathFoto,
-                "caption" => $request["caption"],
-            ];
-        } else {
-            $bidang_data = [
-                "judul" => $request["judul"],
-                "caption" => $request["caption"]
-            ];
-        }
+        $file = $request->file('foto');
+        if ($file != NULL) {
+            File::delete(public_path("../bidangProd/" . $bidangs->foto));
+            $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
+            $file->move(public_path('../bidangProd/'), $filePath);
 
-        $bidangs->update($bidang_data);
+            $bidangs->update([
+                'judul' => $request->judul,
+                'foto' => $filePath,
+                'caption' => $request->caption
+            ]);
+        } else {
+            $bidangs->update([
+                'judul' => $request->judul,
+                'caption' => $request->caption
+            ]);
+        }
 
         return redirect('/admin/list-bidang')->with('success', 'Bidang Berhasil Diupdate!');
     }
