@@ -64,25 +64,23 @@ class KampungkerenAdminController extends Controller
         ]);
 
         $kampungkeren = Kampungkeren::findorfail($id);
-        if ($request->has('picture')) {
-            File::delete("kampungkerenProd//" . $kampungkeren->picture);
-            $picture = $request->picture;
-            $pathFoto = time() . ' - ' . $picture->getClientOriginalName();
-            $picture->move('kampungkerenProd//', $pathFoto);
+        $file = $request->file('foto');
+        if ($file != NULL) {
+            File::delete(public_path("../kampungkerenProd/" . $kampungkeren->foto));
+            $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
+            $file->move(public_path('../kampungkerenProd/'), $filePath);
 
-            $kampungkeren_data = [
-                "judul" => $request["judul"],
-                "foto" => $pathFoto,
-                "caption" => $request["caption"],
-            ];
+            $kampungkeren->update([
+                'judul' => $request->judul,
+                'foto' => $filePath,
+                'caption' => $request->caption
+            ]);
         } else {
-            $kampungkeren_data = [
-                "judul" => $request["judul"],
-                "caption" => $request["caption"]
-            ];
+            $kampungkeren->update([
+                'judul' => $request->judul,
+                'caption' => $request->caption
+            ]);
         }
-
-        $kampungkeren->update($kampungkeren_data);
 
         return redirect('/admin/list-kampungkeren')->with('success', 'Kampung Keren Berhasil Diupdate!');
     }

@@ -59,23 +59,21 @@ class PokmasAdminController extends Controller
         ]);
 
         $pokmass = pokmas::findorfail($id);
-        if ($request->has('picture')) {
-            File::delete("pokmasProd//" . $pokmass->foto);
-            $picture = $request->foto;
-            $pathFoto = time() . ' - ' . $picture->getClientOriginalName();
-            $picture->move('pokmasProd//', $pathFoto);
+        $file = $request->file('foto');
+        if ($file != NULL) {
+            File::delete(public_path("../pokmasProd/" . $pokmass->foto));
+            $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
+            $file->move(public_path('../pokmasProd/'), $filePath);
 
-            $pokmas_data = [
-                "foto" => $pathFoto,
-                "caption" => $request["caption"],
-            ];
+            $pokmass->update([
+                'foto' => $filePath,
+                'caption' => $request->caption
+            ]);
         } else {
-            $pokmas_data = [
-                "caption" => $request["caption"]
-            ];
+            $pokmass->update([
+                'caption' => $request->caption
+            ]);
         }
-
-        $pokmass->update($pokmas_data);
 
         return redirect('/admin/list-pokmas')->with('success', 'Pokmas Berhasil Diupdate!');
     }
