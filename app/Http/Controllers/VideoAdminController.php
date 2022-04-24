@@ -89,12 +89,12 @@ class VideoAdminController extends Controller
             ]);
         }
 
-        return redirect('/admin/list-video')->with('success', 'Submission successfully updated!');
+        return redirect('/admin/list-video')->with('success', 'Video Berhasil Diupdate');
     }
 
     public function destroy($id) {
         $submission = DB::table('videos')->where('id', $id)->delete();
-        return redirect('/admin/list-video')->with('success', 'Submission successfully deleted!');
+        return redirect('/admin/list-video')->with('success', 'Video Berhasil Dihapus');
     }
 /*
     public function upload($id) {
