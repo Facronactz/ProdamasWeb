@@ -24,6 +24,7 @@ class ArticleController extends Controller
             'judul' => 'required',
             'slug' => 'required',
             'article' => 'required',
+            'tags' => 'required',
             'picture' => 'mimes:jpeg,jpg,png|max:2200'
         ]);
 
@@ -61,6 +62,8 @@ class ArticleController extends Controller
         $artikel->slug = $request->slug;
         $artikel->picture =  $new_sampul;
         $artikel->article = $request->article;
+        
+        $tags = explode(",", $request->tags);
 
         // dd($artikel);
 
