@@ -64,6 +64,7 @@ class ArticleController extends Controller
         $artikel->article = $request->article;
         
         $tags = explode(",", $request->tags);
+        $artikel->tag($tags);
 
         // dd($artikel);
 
