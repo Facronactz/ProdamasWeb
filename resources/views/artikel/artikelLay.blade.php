@@ -15,8 +15,7 @@
                         <!--<div class="col-sm-12">buat share
                         </div>-->
                         <div class="col-sm-4">
-                            <h6>{{ $item->created_at }}</h6>
-                            <small class="fa fa-eye" aria-hidden="true"><small class="text-muted"> {{ $item->views}} </small></small>
+                            <h6>{{ $item->created_at }}, <i class="fa fa-eye" style="font-size: 13px">  {{ $item->views}}</i></h6>
                         </div>
                     </div>
                     <br>

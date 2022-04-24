@@ -35,12 +35,12 @@
                                 <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="img-fluid rounded-start">
                             </div>
                             <div class="col-md-8">
-                                <div class="card-body">
+                                <div class="card-body row">
                                     <a href="artikel/{{ $item->id }}" class="stretched-link"></a>
                                     <h5 class="card-title" style="font-size: 22px;">{{ $item->judul }}</h5>
                                     <p class="card-text" style="font-size: 14px;"><?= $item->text_sampul ?></p>
-                                    <p class="card-text" style="font-size: 13px;"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    <small class="fa fa-eye" aria-hidden="true"><small class="text-muted"> {{ $item->views}} </small></small>
+                                    <p class="col-xs-6 col-sm-8 col-lg-10" style="font-size: 13px;"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    <p class="col-xs-6 col-sm-4 col-lg-2" style="font-size: 11px;"><small class="fa fa-eye text-muted"> {{ $item->views}}</small></p>
                                 </div>
                             </div>
                         </div>
