@@ -48,6 +48,12 @@ class SearchController extends Controller
         $artikel = ArticleAdmin::where('judul', 'like', "%" . $keyword . "%")->paginate(3);
         return view('artikel.artikelsearch', compact('artikel'));
     }
+
+    public function searchtagartikel()
+    {
+        $artikel = ArticleAdmin::with('Kampung Keren')->get();
+        return view('artikel.artikeltagsearch', compact('artikel'));
+    }
     
     public function searchaudio(Request $request)
     {

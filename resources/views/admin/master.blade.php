@@ -106,7 +106,7 @@
                 },
                 toolbar: [
                     ['style', ['bold', 'italic', 'underline']],
-                    ['para', ['ul', 'ol']],
+                    ['para', ['ul', 'ol', 'paragraph']],
                     ['view', ['fullscreen']],
                 ],
             })
