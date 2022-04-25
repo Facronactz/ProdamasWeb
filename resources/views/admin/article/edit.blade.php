@@ -78,9 +78,9 @@ Edit Artikel
             @foreach ($article->tags as $tag)
                 <span class="tag label label-info">{{$tag->name}}<span data-role="remove"></span></span>
             @endforeach
-            <input type="text" placeholder="" size="1">
+            <input type="text" placeholder="" size="1" data-role="tagsinput" name="tags">
         </div>
-        <input class="form-control" type="text" data-role="tagsinput" name="tags">
+        {{-- <input class="form-control" type="text" > --}}
         @error('tags')
         <div class="alert alert-danger">
             {{ $message }}
