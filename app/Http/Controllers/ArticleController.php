@@ -139,7 +139,7 @@ class ArticleController extends Controller
                 'article' => $request->article
             ]);
             $hsl = explode(",", $request->tags);
-            $article->retag(array($hsl));
+            $article->retag($hsl);
         }
 
         return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Diedit!');
