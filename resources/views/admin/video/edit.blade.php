@@ -37,7 +37,7 @@ Edit Video
         @if ($video->konten)
         <p>{{$video->konten}}</p>
         @endif
-        <input type="text" name="konten" class="form-control" cols="30" rows="10" >
+        <input type="text" name="konten" class="form-control" cols="30" rows="10">
         @error('konten')
         <div class="alert alert-danger">
             {{ $message }}
@@ -52,7 +52,17 @@ Edit Video
             {{ $message }}
         </div>
         @enderror
-    </div><br>
+    </div>
+    <div class="form-group">
+        <label for="tags">Tag</label>
+        <input class="form-control" type="text" data-role="tagsinput" name="tags">
+        @error('tags')
+        <div class="alert alert-danger">
+            {{ $message }}
+        </div>
+        @enderror
+    </div>
+    <br>
     <button type="submit" class="btn btn-primary">Edit Video</button>
     <a href="/admin/list-video" class="btn btn-outline-primary">Back</a>
 </form>

@@ -51,6 +51,15 @@ Audio Baru
         </div>
         @enderror
     </div>
+    <div class="form-group">
+        <label for="tags">Tag</label>
+        <input class="form-control" type="text" data-role="tagsinput" name="tags">
+        @error('tags')
+        <div class="alert alert-danger">
+            {{ $message }}
+        </div>
+        @enderror
+    </div>
     <button type="submit" class="btn btn-primary" value="submit">Tambah Audio</button>
     <a href="/admin/list-audio" class="btn btn-outline-primary">Kembali</a>
 </form>

@@ -21,6 +21,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('/adminlte/plugins/summernote/summernote-bs4.min.css') }}">
+    <!-- tag -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" rel="stylesheet" />
+
+    <style>
+        .bootstrap-tagsinput .tag {
+            margin-right: 2px;
+            color: #ffffff;
+            background: #2196f3;
+            padding: 3px 7px;
+            border-radius: 3px;
+        }
+
+        .bootstrap-tagsinput {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -93,6 +109,8 @@
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <!-- summernote -->
     <script src="{{ asset('/adminlte/plugins/summernote/summernote-bs4.min.js') }}"></script>
+    <!-- tag -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js"></script>
 
     <script>
         $(document).ready(function() {
