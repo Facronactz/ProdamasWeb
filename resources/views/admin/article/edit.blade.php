@@ -69,7 +69,7 @@
             {{-- @foreach ($article->tags as $tag)
                 <label class="label label-info">{{ $tag->name }}</label>
             @endforeach --}}
-            <input class="form-control" type="text" data-role="tagsinput" name="tags" value="{{ $tag->tagNames }}"
+            <input class="form-control" type="text" data-role="tagsinput" name="tags" value="{{ $article->tagNames }}"
             @error('tags')
                 <div class="alert alert-danger">
                     {{ $message }}
