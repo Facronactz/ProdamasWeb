@@ -66,7 +66,7 @@
         </div>
         <div class="form-group">
             <label for="tags">Tag</label>
-            @foreach ($articles->tags as $tag)
+            @foreach ($article->tags as $tag)
                 <label class="label label-info">{{ $tag->name }}</label>
             @endforeach
             <input class="form-control" type="text" data-role="tagsinput" name="tags">
