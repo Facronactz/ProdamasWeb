@@ -85,7 +85,8 @@ class ArticleController extends Controller
     // }
 
     public function edit($id) {
-        $article = ArticleAdmin::findOrFail($id);
+        // $article = ArticleAdmin::findOrFail($id);
+        $article = ArticleAdmin::where('id', $id)->get();
 
         $tagg = "";
         foreach ($article as $post){
