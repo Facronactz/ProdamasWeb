@@ -8,6 +8,7 @@ use App\Models\ArticleAdmin;
 use App\Models\AudioAdmin;
 use App\Models\FotoAdmin;
 use App\Models\VideoAdmin;
+use App\Models\Visitor;
 use Share;
 use DB;
 use App\Models\SettingCarousel;
@@ -28,7 +29,7 @@ class artikelController extends Controller
                 return view('artikel.index', compact('artikel', 'artikelupdate'));
         }
 
-        public function beranda()
+        public function beranda($id)
         {
                 $artikel = ArticleAdmin::where('status', 'published')
                         ->orderBy('id', 'desc')
@@ -50,7 +51,11 @@ class artikelController extends Controller
                 // dd($audio);
                 $carousels = SettingCarousel::orderBy('id', 'desc')->take(3)->get();
 
-                return view('beranda.index', compact('artikel', 'video', 'foto', 'audio', 'carousels'));
+                Visitor::find($id)->increment('views');
+                $visitors = Visitor::orderBy('id')->get();
+                return view('layouts.desain', compact('visitors'));
+
+                return view('beranda.index', compact('artikel', 'video', 'foto', 'audio', 'carousels', 'visitors'));
         }
 
         public function show($id)
