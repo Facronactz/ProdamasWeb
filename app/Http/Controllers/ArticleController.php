@@ -86,7 +86,16 @@ class ArticleController extends Controller
 
     public function edit($id) {
         $article = ArticleAdmin::findOrFail($id);
-        return view('admin.article.edit',compact('article'));
+
+        $tagg = "";
+        foreach ($article as $post){
+            foreach($post->tags as $tag) {
+                $tagg = $tagg .','. $tag->name;
+                $tagg = trim($tagg, ',');
+            }
+        }
+
+        return view('admin.article.edit',compact('article','tagg'));
     }
 
     public function update($id, Request $request) {
