@@ -40,7 +40,17 @@ Edit Artikel
             {{ $message }}
         </div>
         @enderror
-    </div><br>
+    </div>
+    <div class="form-group">
+        <label for="tags">Tag</label>
+        <input class="form-control" type="text" data-role="tagsinput" name="tags">
+        @error('tags')
+        <div class="alert alert-danger">
+            {{ $message }}
+        </div>
+        @enderror
+    </div>
+    <br>
     <button type="submit" class="btn btn-primary">Edit Foto</button>
     <a href="/admin/list-foto" class="btn btn-outline-primary">Back</a>
 </form>

@@ -37,7 +37,7 @@ Edit Audio
         @if ($audio->konten)
         <p>{{$audio->konten}}</p>
         @endif
-        <input type="text" name="audio" class="form-control" cols="30" rows="10" >
+        <input type="text" name="audio" class="form-control" cols="30" rows="10">
         @error('audio')
         <div class="alert alert-danger">
             {{ $message }}
@@ -52,7 +52,17 @@ Edit Audio
             {{ $message }}
         </div>
         @enderror
-    </div><br>
+    </div>
+    <div class="form-group">
+        <label for="tags">Tag</label>
+        <input class="form-control" type="text" data-role="tagsinput" name="tags">
+        @error('tags')
+        <div class="alert alert-danger">
+            {{ $message }}
+        </div>
+        @enderror
+    </div>
+    <br>
     <button type="submit" class="btn btn-primary">Edit Audio</button>
     <a href="/admin/list-audio" class="btn btn-outline-primary">Back</a>
 </form>
