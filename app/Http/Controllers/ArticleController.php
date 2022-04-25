@@ -129,6 +129,8 @@ class ArticleController extends Controller
                 'picture' => $filePath,
                 'article' => $request->article
             ]);
+            $hsl = explode(",", $request->tags);
+            $article->retag(array($hsl));
         } else {
             $article->update([
                 'text_sampul' => $request->text_sampul,
@@ -136,6 +138,8 @@ class ArticleController extends Controller
                 'slug' => $request->slug,
                 'article' => $request->article
             ]);
+            $hsl = explode(",", $request->tags);
+            $article->retag(array($hsl));
         }
 
         return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Diedit!');
