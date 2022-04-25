@@ -85,11 +85,11 @@ class ArticleController extends Controller
     // }
 
     public function edit($id) {
-        // $article = ArticleAdmin::findOrFail($id);
-        $article = ArticleAdmin::all();
+        $article = ArticleAdmin::findOrFail($id);
+        $artikel = ArticleAdmin::all();
 
         $tagg = "";
-        foreach ($article as $post){
+        foreach ($artikel as $post){
             foreach($post->tags as $tag) {
                 $tagg = $tagg .','. $tag->name;
                 $tagg = trim($tagg, ',');
