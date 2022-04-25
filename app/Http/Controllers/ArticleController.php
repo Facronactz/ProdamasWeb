@@ -63,12 +63,12 @@ class ArticleController extends Controller
         $artikel->article = $request->article;
         
     	$tags = explode(",", $request->tags);
-        $artikel->tag($tags);
-
+        
         // dd($artikel);
-
+        
         $gambar_sampul->move(public_path('../articleProd/sampul/'), $new_sampul);        
         $artikel->save();
+        $artikel->tag($tags);
 
         return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Ditambahkan!');
     }
