@@ -17,7 +17,7 @@ class ArticleController extends Controller
 
     public function store(Request $request)
     {
-        $this->validate($request,[
+        $this->validate($request, [
             'status' => 'required',
             'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
             'text_sampul' => 'required',
@@ -27,11 +27,11 @@ class ArticleController extends Controller
             'picture' => 'mimes:jpeg,jpg,png|max:2200'
         ]);
 
-        
+
         // dd($request->all());
         $gambar_sampul = $request->gambar_sampul;
         $new_sampul = time() . ' - ' . $gambar_sampul->getClientOriginalName();
-        
+
         // sampul artikel
         // $extThumb = $request->gambar_sampul->getClientOriginalName();
         // $pathThumb = "sampul-".time().".".$extThumb;
@@ -53,7 +53,7 @@ class ArticleController extends Controller
         //     // "picture" => $articlename
         // ]);
 
-        $artikel =new ArticleAdmin;
+        $artikel = new ArticleAdmin;
         $artikel->status = $request->status;
         $artikel->gambar_sampul =  $new_sampul;
         $artikel->text_sampul = $request->text_sampul;
@@ -61,12 +61,12 @@ class ArticleController extends Controller
         $artikel->slug = $request->slug;
         $artikel->picture =  $new_sampul;
         $artikel->article = $request->article;
-        
-    	$tags = explode(",", $request->tags);
-        
+
+        $tags = explode(",", $request->tags);
+
         // dd($artikel);
-        
-        $gambar_sampul->move(public_path('../articleProd/sampul/'), $new_sampul);        
+
+        $gambar_sampul->move(public_path('../articleProd/sampul/'), $new_sampul);
         $artikel->save();
         $artikel->tag($tags);
 
@@ -84,21 +84,27 @@ class ArticleController extends Controller
     //     return view('admin.show',compact('submission'));
     // }
 
-    public function edit($id) {
+    public function edit($id)
+    {
         $article = ArticleAdmin::findOrFail($id);
-        $artikel = DB::table('tagging_tagged')->where('taggable_id','=', $id)->get();
+        $artikel = DB::table('tagging_tagged')->where('taggable_id', '=', $id)->get();
         $tagg = "";
-        foreach ($artikel as $post){
-            foreach($post->tags as $tag) {
-                $tagg = $tagg .','. $tag->name;
-                $tagg = trim($tagg, ',');
-            }
+        // foreach ($artikel as $post){
+        //     foreach($post->tags as $tag) {
+        //         $tagg = $tagg .','. $tag->name;
+        //         $tagg = trim($tagg, ',');
+        //     }
+        // }
+        foreach ($artikel as $item) {
+            $tagg = $tagg . ',' . $item->name;
+            $tagg = trim($tagg, ',');
         }
 
-        return view('admin.article.edit',compact('article','tagg'));
+        return view('admin.article.edit', compact('article', 'tagg'));
     }
 
-    public function update($id, Request $request) {
+    public function update($id, Request $request)
+    {
         $request->validate([
             'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
             'text_sampul' => 'required',
@@ -135,7 +141,8 @@ class ArticleController extends Controller
         return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Diedit!');
     }
 
-    public function destroy($id) {
+    public function destroy($id)
+    {
         $submission = DB::table('articles')->where('id', $id)->delete();
         return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Dihapus!');
     }
@@ -148,14 +155,15 @@ class ArticleController extends Controller
         return back();
     }
 
-    public function upload($id) {
-        $article = ArticleAdmin::where('id',$id)->first();
-        return view('layouts.article_content',compact('article')); 
+    public function upload($id)
+    {
+        $article = ArticleAdmin::where('id', $id)->first();
+        return view('layouts.article_content', compact('article'));
     }
 
-    public function list_content() {
+    public function list_content()
+    {
         $articles = ArticleAdmin::all();
-        return view('layouts.article',compact('articles')); 
+        return view('layouts.article', compact('articles'));
     }
-    
 }
