@@ -61,6 +61,9 @@ class ArticleController extends Controller
         $artikel->slug = $request->slug;
         $artikel->picture =  $new_sampul;
         $artikel->article = $request->article;
+        
+    	$tags = explode(",", $request->tags);
+        $artikel->tag($tags);
 
         // dd($artikel);
 
