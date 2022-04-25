@@ -130,7 +130,7 @@ class ArticleController extends Controller
                 'article' => $request->article
             ]);
             $hsl = explode(",", $request->tags);
-            $article->retag(array($hsl));
+            $article->retag($hsl);
         } else {
             $article->update([
                 'text_sampul' => $request->text_sampul,
