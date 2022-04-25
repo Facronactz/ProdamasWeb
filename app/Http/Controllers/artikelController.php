@@ -29,7 +29,7 @@ class artikelController extends Controller
                 return view('artikel.index', compact('artikel', 'artikelupdate'));
         }
 
-        public function beranda($id)
+        public function beranda()
         {
                 $artikel = ArticleAdmin::where('status', 'published')
                         ->orderBy('id', 'desc')
@@ -51,7 +51,7 @@ class artikelController extends Controller
                 // dd($audio);
                 $carousels = SettingCarousel::orderBy('id', 'desc')->take(3)->get();
 
-                Visitor::find($id)->increment('views');
+                Visitor::find('id')->increment('views');
                 $visitors = Visitor::orderBy('id')->get();
                 return view('layouts.desain', compact('visitors'));
 
