@@ -83,4 +83,14 @@ class SearchController extends Controller
         ->paginate(2);
         return view('cerita.searchcerita', compact('tulis_ceritas'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
+
+    public function tagger(Request $request){
+        $url = $request->fullurl();
+        $src = parse_url($url)['query'];
+        parse_str($src, $ok);
+        
+        $keyword = $ok['tag'];
+    	$artikel = ArticleAdmin::withAnyTag($keyword)->get();
+        return view('artikel.artikelsearch', compact('artikel'));
+    }
 }
