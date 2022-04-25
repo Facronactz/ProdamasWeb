@@ -17,7 +17,7 @@ Artikel Baru
 <form action="/admin/list-article" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
-        <label for="status">Ststus</label>
+        <label for="status">Status</label>
         <select class="form-control" name="status" id="status" placeholder="Status">
             <option value="">- pilih -</option>
             <option value="published">Published</option>
