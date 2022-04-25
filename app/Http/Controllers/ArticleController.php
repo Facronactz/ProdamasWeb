@@ -86,7 +86,7 @@ class ArticleController extends Controller
 
     public function edit($id) {
         $article = ArticleAdmin::findOrFail($id);
-        $artikel = DB::query('select * from tagging_tagged where taggable_id = $id')->get();
+        $artikel = DB::table('tagging_tagged')->where('taggable_id','=', $id)->get();
         echo json_encode($artikel);
         die();
         $tagg = "";
