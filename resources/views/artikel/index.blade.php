@@ -39,7 +39,12 @@
                                     <a href="artikel/{{ $item->id }}" class="stretched-link"></a>
                                     <h5 class="card-title" style="font-size: 22px;">{{ $item->judul }}</h5>
                                     <p class="card-text" style="font-size: 14px;"><?= $item->text_sampul ?></p>
-                                    <p class="card-text" style="font-size: 13px;"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    <div class="row justify-content-center">
+                                        <p class="card-text d-flex justify-content-between" style="font-size: 13px;">
+                                            <small class="text-muted">Last updated 3 mins ago</small>
+                                            <small class="fa fa-eye text-muted my-auto"> {{ $item->views}}</small></p>                                        
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

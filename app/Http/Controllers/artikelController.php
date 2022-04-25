@@ -55,6 +55,7 @@ class artikelController extends Controller
 
         public function show($id)
         {
+                Articleadmin::find($id)->increment('views');
                 $artikel = ArticleAdmin::where('id', $id)
                         ->orderBy('id', 'desc')
                         ->get();

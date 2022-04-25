@@ -3,13 +3,18 @@
 @section('title', 'Cerita Masyarakat')
 
 @section('head')
+    <style>
+        .ringkasan p{
+            text-align: justify;
+        }
+    </style>
     <link rel="stylesheet" href="css/cerita.css">
 @endsection
 
 @section('content')
     <section id="prodamas">
         <div class="container">
-            
+
             <div class="row mt-5">
                 <div class="col text-center" style="font-family: Inter, sans-serif; margin-top: 35px">
                     <h1>Masyarakat Bercerita</h1>
@@ -52,16 +57,19 @@
                                 <div class="card-body">
                                     {{-- <a href="tulis_ceritas/{{ $cerita->id }}" class="stretched-link"></a> --}}
                                     <h5 class="card-title" style="font-size: 22px;">{{ $cerita->judul }}</h5>
-                                    <p class="card-text" style="font-size: 13px;"><small class="text-muted">Oleh {{ $cerita->nama }}, {{ $cerita->updated_at}} </small></p>
-                                    <p class="card-text" style="font-size: 14px;"><?= $cerita->ringkasan = Str::limit($cerita->ringkasan, 430) ?></p>
-                                    <a href="cerita/{{ $cerita->id }}" target="_blank" style="font-size: 14px;">Selengkapnya . .</a>
+                                    <p class="card-text" style="font-size: 13px;"><small class="text-muted">Oleh {{ $cerita->nama }}, {{ $cerita->updated_at }} </small></p>
+                                    <p class="card-text ringkasan" style="font-size: 14px;"><?= $cerita->ringkasan = Str::limit($cerita->ringkasan, 430) ?></p>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="fa fa-eye text-muted my-auto"> {{ $cerita->views }} </small>
+                                        <a href="cerita/{{ $cerita->id }}" target="_blank" style="font-size: 14px;">Selengkapnya . .<i class="fa fa-chevron-circle-right"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 @endforeach
             </div>
-           
+
 
         </div>
         <!--div container-->
