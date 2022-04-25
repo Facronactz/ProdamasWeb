@@ -51,9 +51,8 @@ class artikelController extends Controller
                 // dd($audio);
                 $carousels = SettingCarousel::orderBy('id', 'desc')->take(3)->get();
 
-                Visitor::find('id')->increment('views');
-                $visitors = Visitor::orderBy('id')->get();
-                return view('layouts.desain', compact('visitors'));
+                // Visitor::find('id')->increment('views');
+                // $visitors = Visitor::orderBy('id')->get();
 
                 return view('beranda.index', compact('artikel', 'video', 'foto', 'audio', 'carousels', 'visitors'));
         }
