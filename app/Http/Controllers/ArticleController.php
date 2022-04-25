@@ -96,7 +96,7 @@ class ArticleController extends Controller
         //     }
         // }
         foreach ($artikel as $item) {
-            $tagg = $tagg . ',' . $item->name;
+            $tagg = $tagg . ',' . $item->tag_name;
             $tagg = trim($tagg, ',');
         }
 
