@@ -14,6 +14,7 @@
                     <ul class="list-group list-group-flush">
                         <a class="list-group-item">Penulis:<small class="text-muted"> <br> {{ $cerita->nama }}</a></small>
                         <a class="list-group-item">Tanggal Publish: <small class="text-muted"><br> {{ $cerita->created_at }}</a></small>
+                        <a class="list-group-item">Telah dibaca:<small class="text-muted"> <br> {{ $cerita->views }} kali</a></small>
                         <a class="list-group-item">Ringkasan: <small class="text-muted"><br> {{ $cerita->ringkasan }}</a></small>
                     </ul>
                 </div>
