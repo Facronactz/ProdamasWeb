@@ -86,8 +86,9 @@ class ArticleController extends Controller
 
     public function edit($id) {
         $article = ArticleAdmin::findOrFail($id);
-        $artikel = ArticleAdmin::all();
-
+        $artikel = ArticleAdmin::query('select * from tagging_tagged where taggable_id = $id')->get();
+        echo json_encode($artikel);
+        die();
         $tagg = "";
         foreach ($artikel as $post){
             foreach($post->tags as $tag) {
