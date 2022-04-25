@@ -66,10 +66,10 @@
         </div>
         <div class="form-group">
             <label for="tags">Tag</label>
-            @foreach ($article->tags as $tag)
+            {{-- @foreach ($article->tags as $tag)
                 <label class="label label-info">{{ $tag->name }}</label>
-            @endforeach
-            <input class="form-control" type="text" data-role="tagsinput" name="tags">
+            @endforeach --}}
+            <input class="form-control" type="text" data-role="tagsinput" name="tags" value="{{ $tag->tagNames }}"
             @error('tags')
                 <div class="alert alert-danger">
                     {{ $message }}
