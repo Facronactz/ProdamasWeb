@@ -18,11 +18,11 @@ class CeritaController extends Controller
     }
     public function show($id)
     {
-            $tulis_ceritas = Tulis_cerita::where('id', $id)
-                    ->orderBy('id', 'desc')
-                    ->get();
-            // dd($tulis_ceritas);
-            return view('cerita.detail', compact('tulis_ceritas'));
+        Tulis_cerita::find($id)->increment('views');
+        $tulis_ceritas = Tulis_cerita::where('id', $id)
+            ->orderBy('id', 'desc')
+            ->get();
+        // dd($tulis_ceritas);
+        return view('cerita.detail', compact('tulis_ceritas'));
     }
-
 }
