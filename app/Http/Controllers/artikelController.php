@@ -66,12 +66,10 @@ class artikelController extends Controller
                         ->get();
                 $tags ="";
                 foreach ($artikel as $item) {
-                        $tags = $item->tags;
-                        echo $tags;
-                        foreach ($tags as $tag) {
-                        }
-                        die;
+                        $tags .= $item->tags;
                 }
+                echo $tags;
+                die;
                 return view('artikel.artikelLay', compact('artikel', 'artikelupdate', 'tags'));
         }
 
