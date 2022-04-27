@@ -13,7 +13,7 @@
                     <h2>{{ $item->judul }}</h2><br>
                     <div class="row">
                         <!--<div class="col-sm-12">buat share
-                            </div>-->
+                                </div>-->
                         <div class="col-sm-4">
                             <h6>{{ $item->created_at }}</h6> <i class="fa fa-eye" style="font-size: 13px"> {{ $item->views }}</i></h6>
                         </div>
@@ -23,14 +23,14 @@
                         <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" alt="" style="height:100%; max-width: 800px">
                     </div><br>
                     <p><?= $item->article ?></p>
-                    @foreach ($tags as $tag)
                     <div>
-                        <button type="button" class="btn btn-primary me-1">
-                            {{ $tag->name }} 
-                            <span class="badge bg-secondary"> {{ $tag->count }} </span>
-                        </button>
+                        @foreach ($tags as $tag)
+                            <button type="button" class="btn btn-primary me-1">
+                                {{ $tag->name }}
+                                <span class="badge bg-secondary"> {{ $tag->count }} </span>
+                            </button>
+                        @endforeach
                     </div>
-                    @endforeach
                 </div>
             @endforeach
         </div>
