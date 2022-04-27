@@ -66,9 +66,9 @@ class artikelController extends Controller
                         ->get();
                 $tags ="";
                 foreach ($artikel as $item) {
-                        $tags .= $item->tags;
+                        $tags = $item->tags;
+                        echo $tags;
                         foreach ($tags as $tag) {
-                                echo $tag->name;
                         }
                         die;
                 }
