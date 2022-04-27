@@ -64,7 +64,9 @@ class artikelController extends Controller
                         ->orderBy('id', 'desc')
                         ->take(3)
                         ->get();
-                $tags = $artikel->tags;
+                foreach ($artikel as $item){
+                        $tags = $item->tags;
+                }
                 return view('artikel.artikelLay', compact('artikel', 'artikelupdate', 'tags'));
         }
 
