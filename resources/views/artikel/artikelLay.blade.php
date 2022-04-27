@@ -24,10 +24,12 @@
                     </div><br>
                     <p><?= $item->article ?></p>
                     @foreach ($tags as $tag)
-                        <button type="button" class="btn btn-primary">
+                    <div>
+                        <button type="button" class="btn btn-primary me-1">
                             {{ $tag->name }} 
                             <span class="badge bg-secondary"> {{ $tag->count }} </span>
                         </button>
+                    </div>
                     @endforeach
                 </div>
             @endforeach
