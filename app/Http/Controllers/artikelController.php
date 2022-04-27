@@ -64,8 +64,9 @@ class artikelController extends Controller
                         ->orderBy('id', 'desc')
                         ->take(3)
                         ->get();
+                $tags ="";
                 foreach ($artikel as $item) {
-                        $tags = $item->tags;
+                        $tags .= $item->tags;
                         foreach ($tags as $tag) {
                                 echo $tag->name;
                         }
