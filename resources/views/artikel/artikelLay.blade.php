@@ -23,13 +23,13 @@
                         <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" alt="" style="height:100%; max-width: 800px">
                     </div><br>
                     <p><?= $item->article ?></p>
+                    @foreach ($tags as $tag)
+                        <button type="button" class="btn btn-primary">
+                            {{ $tag->name }} 
+                            <span class="badge bg-secondary"> {{ $tag->count }} </span>
+                        </button>
+                    @endforeach
                 </div>
-                @foreach ($tags as $tag)
-                    <button type="button" class="btn btn-primary">
-                        {{ $tag->name }} 
-                        <span class="badge bg-secondary"> {{ $tag->count }} </span>
-                    </button>
-                @endforeach
             @endforeach
         </div>
 
