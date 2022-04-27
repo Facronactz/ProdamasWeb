@@ -90,7 +90,7 @@ class SearchController extends Controller
         parse_str($src, $ok);
         
         $keyword = $ok['tag'];
-    	$artikel = ArticleAdmin::withAnyTag($keyword)->get();
+    	$artikel = ArticleAdmin::withAnyTag($keyword)->paginate(3);
         return view('artikel.artikelsearch', compact('artikel'));
     }
 }
