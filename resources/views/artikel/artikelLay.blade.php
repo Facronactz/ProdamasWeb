@@ -26,7 +26,7 @@
                     <p><?= $item->article ?></p>
                 </div>
                 @foreach ($tags as $tag)
-                    <h1>{{$tag}}</h1>
+                    <h1>{{$tag->name}}</h1>
                 @endforeach
             @endforeach
         </div>
