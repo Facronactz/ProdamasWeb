@@ -66,6 +66,8 @@ class artikelController extends Controller
                         ->get();
                 foreach ($artikel as $item){
                         $tags = $item->tags;
+                        echo $tags->name;
+                        die;
                 }
                 return view('artikel.artikelLay', compact('artikel', 'artikelupdate', 'tags'));
         }
