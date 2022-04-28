@@ -54,7 +54,7 @@ Tulis Cerita Submission
           {{-- <td>{{$tuliscerita->nomor_telepon}}</td>
           <td>{{$tuliscerita->email}}</td> --}}
           <td>{{$tuliscerita->judul}}</td>
-          <td>{{$tuliscerita->ringkasan = Str::limit($tuliscerita->ringkasan, 65)}}</td>
+          <td><?= substr($tuliscerita->ringkasan, 0, 65) ?></td>
           <td>{{$tuliscerita->file}}</td>
           <td>{{$tuliscerita->foto}}</td>
           {{-- <td> <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#status{{$tuliscerita->id}}">{{$tuliscerita->status}}</a> </td> --}}
