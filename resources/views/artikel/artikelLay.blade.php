@@ -25,8 +25,8 @@
             <p><?= $item->article ?></p>
             <div>
                 @foreach ($tags as $tag)
-                <form action="{{url('searchartikel')}}">
-                    <input type="hidden" name="searchartikel" value="{{ Str::lower($tag->name) }}">
+                <form action="{{url('tag')}}">
+                    <input type="hidden" value="{{ Str::lower($tag->name) }}">
                     <button type="submit" class="btn btn-primary me-1">
                         {{ $tag->name }}
                         <span class="badge bg-secondary"> {{ $tag->count }} </span>
