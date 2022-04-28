@@ -74,17 +74,17 @@
                         @else
                             {{-- Admin Menu --}}
                             <div class="container-fluid">
-                                @foreach ($menus as $menu)
                                 <div class="g-3 row justify-content-center my-3">
+                                    @foreach ($menus as $menu)
                                     <div class="card text-center col-md-5 col-lg-3 col-xl-2 mx-2">
                                         <div class="card-body">
                                             <i class="{{$menu->icon}} fa-7x"></i>
                                             <h1>{{ $menu->name }}</h1>
-                                            <a href="{{$menu->url}}" class="stretched-link"></a>
+                                            <a href="{{$menu->link}}" class="stretched-link"></a>
                                         </div>
                                     </div>
+                                    @endforeach
                                 </div>
-                                @endforeach
                             </div>
                         @endif
                     </div>
