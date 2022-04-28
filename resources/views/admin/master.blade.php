@@ -77,10 +77,12 @@
                                 <div class="g-3 row justify-content-center my-3">
                                     @foreach ($menus as $menu)
                                     <div class="card text-center col-md-5 col-lg-3 col-xl-2 mx-2">
-                                        <div class="card-body">
-                                            <i class="{{$menu->icon}} fa-7x"></i>
-                                            <h1>{{ $menu->name }}</h1>
-                                            <a href="{{$menu->link}}" class="stretched-link"></a>
+                                        <div class="card-body row">
+                                            <div class="mx-auto">
+                                                <i class="{{$menu->icon}} fa-7x"></i>
+                                                <a href="{{$menu->link}}" class="stretched-link"></a>
+                                                <h2>{{ $menu->name }}</h2>
+                                            </div>
                                         </div>
                                     </div>
                                     @endforeach
