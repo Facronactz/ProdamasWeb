@@ -9,11 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('/adminlte/plugins/fontawesome-free/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('/adminlte/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="{{asset('/adminlte/dist/css/adminlte.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('/adminlte/dist/css/adminlte.min.css') }}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
@@ -36,6 +36,7 @@
         .bootstrap-tagsinput {
             width: 100%;
         }
+
     </style>
 </head>
 
@@ -68,7 +69,26 @@
                 <!-- Default box -->
                 <div class="card">
                     <div class="card-body">
-                        @yield('content')
+                        @hasSection('content')
+                            @yield('content')
+                        @else
+                            {{-- Admin Menu --}}
+                            <div class="container-fluid">
+                                <div class="g-3 row justify-content-center my-3">
+                                    @foreach ($menus as $menu)
+                                    <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2" style="background: {{$menu->color}}; min-width: 200px;">
+                                        <div class="card-body row">
+                                            <div class="m-auto">
+                                                <i class="{{$menu->icon}} fa-7x"></i>
+                                                <a href="{{$menu->link}}" class="stretched-link"></a>
+                                                <h2>{{ $menu->name }}</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endif
                     </div>
                     <!-- /.card-body -->
                 </div>
@@ -96,13 +116,13 @@
     <!-- ./wrapper -->
 
     <!-- jQuery -->
-    <script src="{{asset('/adminlte/plugins/jquery/jquery.min.js')}}"></script>
+    <script src="{{ asset('/adminlte/plugins/jquery/jquery.min.js') }}"></script>
     <!-- Bootstrap 4 -->
-    <script src="{{asset('/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ asset('/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- AdminLTE App -->
-    <script src="{{asset('/adminlte/dist/js/adminlte.min.js')}}"></script>
+    <script src="{{ asset('/adminlte/dist/js/adminlte.min.js') }}"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="{{asset('/adminlte/dist/js/demo.js')}}"></script>
+    <script src="{{ asset('/adminlte/dist/js/demo.js') }}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

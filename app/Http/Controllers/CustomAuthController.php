@@ -7,6 +7,7 @@ use Hash;
 use Session;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use App\Models\admin_menu;
 
 class CustomAuthController extends Controller
 {
@@ -14,8 +15,8 @@ class CustomAuthController extends Controller
     public function index()
     {
         return view('auth.login');
-    }  
-      
+    }
+
 
     public function customLogin(Request $request)
     {
@@ -23,14 +24,13 @@ class CustomAuthController extends Controller
             'email' => 'required',
             'password' => 'required',
         ]);
-   
+
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             return redirect()->intended('admin')
-                        ->withSuccess('Signed in');
-        }
-        else {
-        return redirect("login")->withSuccess('Login details are not valid');
+                ->withSuccess('Signed in');
+        } else {
+            return redirect("login")->withSuccess('Login details are not valid');
         }
     }
 
@@ -40,47 +40,50 @@ class CustomAuthController extends Controller
     {
         return view('auth.registration');
     }
-      
+
 
     public function customRegistration(Request $request)
-    {  
+    {
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
         ]);
-           
+
         $data = $request->all();
         $check = $this->create($data);
-         
+
         return redirect("admin")->withSuccess('You have signed-in');
     }
 
 
     public function create(array $data)
     {
-      return User::create([
-        'name' => $data['name'],
-        'email' => $data['email'],
-        'password' => Hash::make($data['password'])
-      ]);
-    }    
-    
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password'])
+        ]);
+    }
+
 
     public function admin()
     {
-        if(Auth::check()){
-            return view('admin.master');
+        if (Auth::check()) {
+
+            $menus = admin_menu::all();
+            return view('admin.master', compact('menus'));
         }
-        
+
         return redirect("/loginuser")->withSuccess('You are not allowed to access');
     }
-    
 
-    public function signOut() {
+
+    public function signOut()
+    {
         Session::flush();
         Auth::logout();
-  
+
         return Redirect('/');
     }
 }
