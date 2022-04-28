@@ -72,77 +72,85 @@
                         @hasSection('content')
                             @yield('content')
                         @else
-
-                                {{-- Admin Menu --}}
+                            {{-- Admin Menu --}}
+                            <div class="container-fluid">
                                 @foreach ($menus as $menu)
-                                    {{ $menu->name }}
+                                <div class="g-3 row justify-content-center my-3">
+                                    <div class="card text-center col-md-5 col-lg-3 col-xl-2 mx-2">
+                                        <div class="card-body">
+                                            <i class="{{$menu->icon}} fa-7x"></i>
+                                            <h1>{{ $menu->name }}</h1>
+                                            <a href="{{$menu->url}}" class="stretched-link"></a>
+                                        </div>
+                                    </div>
+                                </div>
                                 @endforeach
-
+                            </div>
                         @endif
-                        </div>
-                        <!-- /.card-body -->
                     </div>
-                    <!-- /.card -->
-
-                </section>
-                <!-- /.content -->
-            </div>
-            <!-- /.content-wrapper -->
-
-            <footer class="main-footer">
-                <div class="float-right d-none d-sm-block">
-                    <!-- <b>Version</b> 3.0.5 -->
+                    <!-- /.card-body -->
                 </div>
-                <strong>Copyright &copy; 2021 <a href="#">Admin Prodamas</a>.</strong> All rights
-                reserved.
-            </footer>
+                <!-- /.card -->
 
-            <!-- Control Sidebar -->
-            <aside class="control-sidebar control-sidebar-dark">
-                <!-- Control sidebar content goes here -->
-            </aside>
-            <!-- /.control-sidebar -->
+            </section>
+            <!-- /.content -->
         </div>
-        <!-- ./wrapper -->
+        <!-- /.content-wrapper -->
 
-        <!-- jQuery -->
-        <script src="{{ asset('/adminlte/plugins/jquery/jquery.min.js') }}"></script>
-        <!-- Bootstrap 4 -->
-        <script src="{{ asset('/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-        <!-- AdminLTE App -->
-        <script src="{{ asset('/adminlte/dist/js/adminlte.min.js') }}"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="{{ asset('/adminlte/dist/js/demo.js') }}"></script>
+        <footer class="main-footer">
+            <div class="float-right d-none d-sm-block">
+                <!-- <b>Version</b> 3.0.5 -->
+            </div>
+            <strong>Copyright &copy; 2021 <a href="#">Admin Prodamas</a>.</strong> All rights
+            reserved.
+        </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
 
-        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-        <!-- summernote -->
-        <script src="{{ asset('/adminlte/plugins/summernote/summernote-bs4.min.js') }}"></script>
-        <!-- tag -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js"></script>
+    <!-- jQuery -->
+    <script src="{{ asset('/adminlte/plugins/jquery/jquery.min.js') }}"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{{ asset('/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- AdminLTE App -->
+    <script src="{{ asset('/adminlte/dist/js/adminlte.min.js') }}"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{{ asset('/adminlte/dist/js/demo.js') }}"></script>
 
-        <script>
-            $(document).ready(function() {
-                $('#description').summernote({
-                    callbacks: {
-                        onPaste: function(e) {
-                            var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
-                            e.preventDefault();
-                            document.execCommand('insertText', false, bufferText);
-                        },
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <!-- summernote -->
+    <script src="{{ asset('/adminlte/plugins/summernote/summernote-bs4.min.js') }}"></script>
+    <!-- tag -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#description').summernote({
+                callbacks: {
+                    onPaste: function(e) {
+                        var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
+                        e.preventDefault();
+                        document.execCommand('insertText', false, bufferText);
                     },
-                    toolbar: [
-                        ['style', ['bold', 'italic', 'underline']],
-                        ['para', ['ul', 'ol', 'paragraph']],
-                        ['view', ['fullscreen']],
-                    ],
-                })
-            });
-        </script>
+                },
+                toolbar: [
+                    ['style', ['bold', 'italic', 'underline']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['view', ['fullscreen']],
+                ],
+            })
+        });
+    </script>
 
-        @stack('scripts')
-        @yield('table')
-    </body>
+    @stack('scripts')
+    @yield('table')
+</body>
 
-    </html>
+</html>
