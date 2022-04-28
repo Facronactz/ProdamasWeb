@@ -409,3 +409,12 @@
     <!--end berlangganan-->
 
 @endsection
+
+{{-- total kunjungan di footer --}}
+@section('views')
+
+<div>
+    <p style="margin-top: 45px; color: white; text-align:center">Website ini telah dikunjungi {{ $totalviews }} kali</p>
+</div>
+
+@endsection
