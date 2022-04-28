@@ -25,7 +25,7 @@
             <p><?= $item->article ?></p>
             <div>
                 @foreach ($tags as $tag)
-                <form action="searchartikel">
+                <form action="{{url('searchartikel')}}">
                     <input type="hidden" name="searchartikel" value="{{ Str::lower($tag->name) }}">
                     <button type="submit" class="btn btn-primary me-1">
                         {{ $tag->name }}
