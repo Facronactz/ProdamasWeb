@@ -68,7 +68,16 @@
                 <!-- Default box -->
                 <div class="card">
                     <div class="card-body">
-                        @yield('content')
+                        @hasSection('content')
+                            @yield('content')
+                        @sectionMissing('content')
+                            
+                            {{-- Admin Menu --}}
+                            @foreach ($menus as $menu)
+                                {{ $menu->name }}
+                            @endforeach
+
+                        @endif
                     </div>
                     <!-- /.card-body -->
                 </div>
