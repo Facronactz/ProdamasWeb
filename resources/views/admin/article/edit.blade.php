@@ -20,7 +20,7 @@ Edit Artikel
         @if ($article->gambar_sampul)
         <p>{{$article->gambar_sampul}}</p>
         @endif
-        <input type="file" name="gambar_sampul" id="gambar_sampul">
+        <input type="file" accept="image/png, image/jpg, image/jpeg" name="gambar_sampul" id="gambar_sampul">
         @error('gambar_sampul')
         <div class="alert alert-danger">
             {{ $message }}

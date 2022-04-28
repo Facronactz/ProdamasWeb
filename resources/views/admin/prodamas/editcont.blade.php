@@ -40,7 +40,7 @@ Edit Konten
     <div class="form-group">
         <label for="foto">Foto</label><br>
         <p>{{$prodamas->foto}}</p>
-        <input type="file" class="form-control" name="foto" id="foto">
+        <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="foto" id="foto">
         @error('foto')
         <div class="alert alert-danger">
             {{ $message }}
