@@ -78,7 +78,7 @@
                                     @foreach ($menus as $menu)
                                     <div class="card text-center col-md-5 col-lg-3 col-xl-2 mx-2">
                                         <div class="card-body row">
-                                            <div class="mx-auto">
+                                            <div class="m-auto">
                                                 <i class="{{$menu->icon}} fa-7x"></i>
                                                 <a href="{{$menu->link}}" class="stretched-link"></a>
                                                 <h2>{{ $menu->name }}</h2>
