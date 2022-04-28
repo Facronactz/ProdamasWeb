@@ -25,7 +25,7 @@
             <p><?= $item->article ?></p>
             <div>
                 @foreach ($tags as $tag)
-                <form action="/tag">
+                <form action="searchartikel">
                     <input type="hidden" value="{{ $tag->name }}">
                     <button type="submit" class="btn btn-primary me-1">
                         {{ $tag->name }}
