@@ -18,7 +18,7 @@ class PokmasAdminController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'foto' => 'required',
+            'foto' => 'required|mimes:jpeg,jpg,png|max:2200',
             'caption' => 'required',
         ]);
 

@@ -21,7 +21,7 @@ class FotoAdminController extends Controller
     {
         $this->validate($request,[
             'judul' => 'required',
-            'konten' => 'required',
+            'konten' => 'required|mimes:jpeg,jpg,png|max:2200',
             'caption' => 'required',
         ]);
         // dd($request->konten);

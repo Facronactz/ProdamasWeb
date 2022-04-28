@@ -19,12 +19,12 @@ class ArticleController extends Controller
     {
         $this->validate($request,[
             'status' => 'required',
-            'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
+            'gambar_sampul' => 'required|mimes:jpeg,jpg,png|max:2200',
             'text_sampul' => 'required',
             'judul' => 'required',
             'slug' => 'required',
             'article' => 'required',
-            'picture' => 'mimes:jpeg,jpg,png|max:2200'
+            'picture' => 'required|mimes:jpeg,jpg,png|max:2200'
         ]);
 
         
