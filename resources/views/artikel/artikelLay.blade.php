@@ -25,10 +25,13 @@
             <p><?= $item->article ?></p>
             <div>
                 @foreach ($tags as $tag)
-                <button type="button" class="btn btn-primary me-1">
-                    {{ $tag->name }}
-                    <span class="badge bg-secondary"> {{ $tag->count }} </span>
-                </button>
+                <form action="/tag">
+                    <input type="text" value="{{ $tag->name }}">
+                    <button type="submit" class="btn btn-primary me-1">
+                        {{ $tag->name }}
+                        <span class="badge bg-secondary"> {{ $tag->count }} </span>
+                    </button>
+                </form>
                 @endforeach
             </div>
         </div>
