@@ -16,7 +16,7 @@ Edit Audio
         @if ($audio->gambar_sampul)
         <p>{{$audio->gambar_sampul}}</p>
         @endif
-        <input type="file" name="gambar_sampul" class="form-control" id="gambar_sampul">
+        <input type="file" accept="image/png, image/jpg, image/jpeg" name="gambar_sampul" class="form-control" id="gambar_sampul">
         @error('gambar_sampul')
         <div class="alert alert-danger">
             {{ $message }}
