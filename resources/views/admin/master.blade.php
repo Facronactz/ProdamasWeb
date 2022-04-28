@@ -71,7 +71,7 @@
                     <div class="card-body">
                         @hasSection('content')
                             @yield('content')
-                        @sectionMissing('content')
+                        @else
 
                                 {{-- Admin Menu --}}
                                 @foreach ($menus as $menu)
