@@ -64,7 +64,10 @@ class artikelController extends Controller
                         ->orderBy('id', 'desc')
                         ->take(3)
                         ->get();
-                return view('artikel.artikelLay', compact('artikel', 'artikelupdate'));
+                foreach ($artikel as $item){
+                        $tags = $item->tags;
+                }
+                return view('artikel.artikelLay', compact('artikel', 'artikelupdate', 'tags'));
         }
 
         // public function ShareWidget()
