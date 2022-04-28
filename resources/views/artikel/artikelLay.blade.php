@@ -26,7 +26,7 @@
             <div>
                 @foreach ($tags as $tag)
                 <form action="{{url('tag')}}">
-                    <input type="hidden" value="{{ Str::lower($tag->name) }}">
+                    <input type="hidden" name="keyword "value="{{ Str::lower($tag->name) }}">
                     <button type="submit" class="btn btn-primary me-1">
                         {{ $tag->name }}
                         <span class="badge bg-secondary"> {{ $tag->count }} </span>

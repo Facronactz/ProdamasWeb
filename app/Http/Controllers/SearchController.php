@@ -85,11 +85,11 @@ class SearchController extends Controller
     }
 
     public function tagger(Request $request){
-        $url = $request->fullurl();
-        $src = parse_url($url)['query'];
-        parse_str($src, $ok);
+        // $url = $request->fullurl();
+        // $src = parse_url($url)['query'];
+        // parse_str($src, $ok);
         
-        $keyword = $ok['tag'];
+        $keyword = $request->keyword;
     	$artikel = ArticleAdmin::withAnyTag($keyword)->paginate(3);
         return view('artikel.artikelsearch', compact('artikel'));
     }
