@@ -262,3 +262,6 @@ Route::get('/searchvideo', [SearchController::class, 'searchvideo'])->name('sear
 //Route search cerita
 Route::resource('/cerita', CeritaController::class);
 Route::get('/searchcerita', [SearchController::class, 'searchcerita'])->name('search');
+
+//Tag
+Route::get('/tag', [SearchController::class, 'tagger'])->name('tag');

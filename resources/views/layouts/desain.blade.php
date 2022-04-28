@@ -235,7 +235,6 @@
             <div class="footer-bottom">
                 <div class="container">
                     <div class="row">
-                   
                         <div class="col-md-6 footer-copyright" style="color: white">&copy; 2021 Prodamas Plus</div>
                         <div class="col-md-6 footer-social">
                             <a href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube"></i></a>
