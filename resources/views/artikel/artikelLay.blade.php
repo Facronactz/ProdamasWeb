@@ -26,7 +26,7 @@
             <div>
                 @foreach ($tags as $tag)
                 <form action="searchartikel">
-                    <input type="hidden" value="{{ $tag->name }}">
+                    <input type="hidden" name="searchartikel" value="{{ $tag->name }}">
                     <button type="submit" class="btn btn-primary me-1">
                         {{ $tag->name }}
                         <span class="badge bg-secondary"> {{ $tag->count }} </span>
