@@ -57,6 +57,7 @@ class PostController extends Controller
                     $request['image']=$imageName;
                     $file->move(public_path("/images"),$imageName);
                     Image::create($request->all());
+                }
 
             return redirect('/admin/list-foto')->with('success', 'Foto Berhasil Ditambahkan!');
     }
