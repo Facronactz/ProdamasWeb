@@ -56,7 +56,7 @@
                             {{ $post->title }}
                         </p>
                     </h3>
-                    <p>{{ $post->created_at }}</p>
+                    {{ $post->created_at }}
                 </div>
             </div>
         </div>
