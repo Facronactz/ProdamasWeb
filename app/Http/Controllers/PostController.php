@@ -41,7 +41,7 @@ class PostController extends Controller
     {
         $file=$request->file("cover");
             $imageName=time().'_'.$file->getClientOriginalName();
-            $file->move(public_path("/cover/"),$imageName);
+            $file->move(public_path("../cover/"),$imageName);
 
             $post =new Post([
                 "title" =>$request->title,
@@ -55,7 +55,7 @@ class PostController extends Controller
                     $imageName=time().'_'.$file->getClientOriginalName();
                     $request['post_id']=$post->id;
                     $request['image']=$imageName;
-                    $file->move(public_path("/images"),$imageName);
+                    $file->move(public_path("../images/"),$imageName);
                     Image::create($request->all());
                 }
 
