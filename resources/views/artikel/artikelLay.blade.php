@@ -25,10 +25,10 @@
                     <p><?= $item->article ?></p>
                     <div>
                         @foreach ($tags as $tag)
-                            <button type="button" class="btn btn-primary me-1">
+                            <a href="/tag?tag={{$tag->slug}}" class="btn btn-primary me-1">
                                 {{ $tag->name }}
                                 <span class="badge bg-secondary"> {{ $tag->count }} </span>
-                            </button>
+                            </a>
                         @endforeach
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                             <div class="col-md-8">
                                 <div class="card-body py-0">
                                     <h5 class="card-title" style="font-size: 14px;">{{ $item->judul }}</h5>
-                                    <p class="card-text mb-0" style="font-size: 12px;"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    <p class="card-text mb-0" style="font-size: 12px;"><small class="text-muted">{{$item->updated_at}}</small></p>
                                     <a class="stretched-link" href="artikel/{{ $item->id }}"></a>
                                 </div>
                             </div>
