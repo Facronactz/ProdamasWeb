@@ -1,9 +1,9 @@
 @extends('admin.master')
 
-@section('foto', 'active')
+@section('post', 'active')
 
 @section('title')
-Foto Submission
+    Foto Kegiatan
 @endsection
 
 @section('content')
@@ -18,25 +18,24 @@ Foto Submission
     <thead class="thead-light">
         <tr>
             <th scope="col">ID</th>
-            <th scope="col">Tanggal</th>
             <th scope="col">Judul</th>
-            <th scope="col">Konten</th>
+            <th scope="col">Deskripsi</th>
+            <th scope="col">Sampul</th>
             {{-- <th scope="col">Caption</th> --}}
             <th scope="col">Aksi</th>
         </tr>
     </thead>
     <tbody>
-        @forelse ($fotos as $key=>$foto)
+        @forelse ($posts as $post)
         <tr>
-            <td>{{$key + 1}}</th>
-            <td>{{$foto->created_at}}</td>
-            <td>{{$foto->judul}}</td>
-            <!-- <td>{{Str::limit($foto->konten, 60)}}</td> -->
-            <td>{{$foto->konten}}</td>
-            {{-- <td>{{$foto->caption}}</td> --}}
+            <th scope="row">{{ $post->id }}</th>
+            <td>{{ $post->title }}</td>
+            <td>{{ $post->body }}</td>
+            <!-- <td>{{ $post->cover }}</td> -->
+            <td><img src="/cover/{{ $post->cover }}" class="img-responsive" style="max-height:100px; max-width:100px" alt="" srcset=""></td>
             <td>
-                <form action="/admin/foto/{{$foto->id}}" method="POST">
-                    <a href="/admin/foto/{{$foto->id}}" class="btn btn-info">Edit</a>
+                <form action="/admin/foto/{{$post->id}}" method="POST">
+                    <a href="/admin/foto/{{$post->id}}" class="btn btn-info">Edit</a>
                     @csrf
                     @method('DELETE')
                     <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Foto?')"
