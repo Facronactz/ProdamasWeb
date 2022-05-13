@@ -171,16 +171,6 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/pokmass/{description_id}', [PokmasAdminController::class, 'edit_desc']);
     Route::put('/admin/pokmass/{description_id}', [PokmasAdminController::class, 'update_desc']);
 
-    //tulis cerita admin
-    Route::get('/admin/add-tuliscerita', [CeritaAdminController::class, 'create']);
-    Route::post('/admin/list-tuliscerita', [CeritaAdminController::class, 'store']);
-    Route::get('/admin/list-tuliscerita', [CeritaAdminController::class, 'index']);
-    Route::get('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'edit']);
-    Route::put('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'update']);
-    Route::delete('/admin/tuliscerita/{tuliscerita_id}', [CeritaAdminController::class, 'destroy']);
-    Route::get('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'edit_desc']);
-    Route::put('/admin/tulis_cerita/{description_id}', [CeritaAdminController::class, 'update_desc']);
-
     //prodamas
     Route::get('/admin/addcont-prodamas', [ProdamasAdminController::class, 'createcont']);
     Route::post('/admin/storecont-prodamas', [ProdamasAdminController::class, 'storecont']);
