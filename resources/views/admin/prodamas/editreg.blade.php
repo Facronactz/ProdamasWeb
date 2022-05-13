@@ -40,7 +40,7 @@ Edit Regulasi
     <div class="form-group">
         <label for="foto">File</label><br>
         <p>{{$regulasi->file}}</p>
-        <input type="file" class="form-control" name="file" id="file">
+        <input type="file" class="form-control" accept="application/pdf" name="file" id="file">
         @error('file')
         <div class="alert alert-danger">
             {{ $message }}

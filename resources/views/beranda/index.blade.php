@@ -409,3 +409,15 @@
     <!--end berlangganan-->
 
 @endsection
+
+{{-- total kunjungan di footer --}}
+@section('views')
+
+<div class="justify-content-sm-end">
+<button class="btn btn-primary mt-2" style="height: auto; width: auto;" type="button" disabled>
+    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+    Kunjungan : {{$totalviews}}
+  </button>
+</div>
+
+@endsection

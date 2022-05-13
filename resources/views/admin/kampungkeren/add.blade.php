@@ -49,7 +49,7 @@ Kampung Keren Baru
 
     <div class="form-group">
         <label for="foto">Foto</label><br>
-        <input type="file" class="form-control" name="foto[]" id="foto[]" multiple>
+        <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="foto[]" id="foto[]" multiple>
         @error('foto')
         <div class="alert alert-danger">
             {{ $message }}

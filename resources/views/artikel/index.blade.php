@@ -41,7 +41,7 @@
                                     <p class="card-text" style="font-size: 14px;"><?= $item->text_sampul ?></p>
                                     <div class="row justify-content-center">
                                         <p class="card-text d-flex justify-content-between" style="font-size: 13px;">
-                                            <small class="text-muted">Last updated 3 mins ago</small>
+                                            <small class="text-muted">{{$item->updated_at}}</small>
                                             <small class="fa fa-eye text-muted my-auto"> {{ $item->views}}</small></p>                                        
                                         </p>
                                     </div>

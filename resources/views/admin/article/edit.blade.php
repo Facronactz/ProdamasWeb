@@ -8,25 +8,24 @@
 
 @section('content')
 
-    <form action="/admin/article/{{ $article->id }}" method="POST" enctype="multipart/form-data">
-        @csrf
-        @method('put')
-        <div class="form-group">
-            <label for="status">Status</label>
-            <input type="text" class="form-control" value="{{ $article->status }}" readonly>
+<form action="/admin/article/{{$article->id}}" method="POST" enctype="multipart/form-data">
+    @csrf
+    @method('put')
+    <div class="form-group">
+        <label for="status">Status</label>
+        <input type="text" class="form-control" value="{{ $article->status }}" readonly>
+    </div>
+    <div class="form-group">
+        <label for="gambar_sampul">Gambar Sampul</label><br>
+        @if ($article->gambar_sampul)
+        <p>{{$article->gambar_sampul}}</p>
+        @endif
+        <input type="file" accept="image/png, image/jpg, image/jpeg" name="gambar_sampul" id="gambar_sampul">
+        @error('gambar_sampul')
+        <div class="alert alert-danger">
+            {{ $message }}
         </div>
-        <div class="form-group">
-            <label for="gambar_sampul">Gambar Sampul</label><br>
-            @if ($article->gambar_sampul)
-                <p>{{ $article->gambar_sampul }}</p>
-            @endif
-            <input type="file" name="gambar_sampul" id="gambar_sampul">
-            @error('gambar_sampul')
-                <div class="alert alert-danger">
-                    {{ $message }}
-                </div>
-            @enderror
-        </div>
+      </div>
         <div class="form-group">
             <label for="text_sampul">Caption Sampul</label>
             <input type="text" class="form-control" name="text_sampul" id="text_sampul" placeholder="text_sampul of article" value="{{ $article->text_sampul }}">

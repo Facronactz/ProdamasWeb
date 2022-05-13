@@ -21,7 +21,7 @@ class ProdamasAdminController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required',
-            'foto' => 'required',
+            'foto' => 'required|mimes:jpeg,jpg,png|max:2200',
             'caption' => 'required',
         ]);
 

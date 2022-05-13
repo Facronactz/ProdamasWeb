@@ -39,7 +39,7 @@ Regulasi Baru
     </div>
     <div class="form-group">
         <label for="foto">File</label><br>
-        <input type="file" class="form-control" name="file[]" id="file[]">
+        <input type="file" class="form-control" accept="application/pdf" name="file[]" id="file[]">
         @error('file')
         <div class="alert alert-danger">
             {{ $message }}

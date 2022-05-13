@@ -20,7 +20,7 @@ Edit Kampung Keren
         </div>
         @enderror
     </div>
-    
+
     <div class="form-group">
         <label for="warna">Warna</label>
         <input name="warna" class="form-control" name="warna" id="warna" placeholder="warna">
@@ -30,13 +30,13 @@ Edit Kampung Keren
         </div>
         @enderror
     </div>
-    
+
     <div class="form-group">
         <label for="konten">Foto</label><br>
         @if ($kampungkeren->foto)
         <p>{{$kampungkeren->foto}}</p>
         @endif
-        <input type="file" class="form-control" name="foto[]" id="foto[]" value="{{$kampungkeren->foto}}">
+        <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="foto[]" id="foto[]" value="{{$kampungkeren->foto}}">
         @error('foto')
         <div class="alert alert-danger">
             {{ $message }}

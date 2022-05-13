@@ -25,7 +25,7 @@ Edit Artikel
         @if ($foto->konten)
         <p>{{$foto->konten}}</p>
         @endif
-        <input type="file" class="form-control" name="konten" id="konten" value="{{$foto->konten}}">
+        <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="konten" id="konten" value="{{$foto->konten}}">
         @error('konten')
         <div class="alert alert-danger">
             {{ $message }}

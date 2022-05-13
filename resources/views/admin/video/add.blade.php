@@ -17,7 +17,7 @@ Tambah Video Baru
     @csrf
     <div class="form-group">
         <label for="gambar_sampul">Upload Gambar Sampul</label><br>
-        <input type="file" class="form-control" name="gambar_sampul" id="gambar_sampul">
+        <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="gambar_sampul" id="gambar_sampul">
         @error('gambar_sampul')
         <div class="alert alert-danger">
             {{ $message }}

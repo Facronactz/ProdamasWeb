@@ -15,9 +15,9 @@ Edit Pokmas
         <label for="konten">Foto</label><br>
         @if ($pokmas->foto)
         <p>{{$pokmas->foto}}</p>
-        
+
         @else
-        <input type="file" class="form-control" name="foto[]" id="foto[]" value="{{$pokmas->foto}}">
+        <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="foto[]" id="foto[]" value="{{$pokmas->foto}}">
         @error('foto')
         <div class="alert alert-danger">
             {{ $message }}

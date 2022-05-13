@@ -18,7 +18,7 @@ class VideoAdminController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'gambar_sampul' => 'required|file|image|max:2200',
+            'gambar_sampul' => 'required|mimes:jpeg,jpg,png|max:2200',
             'judul' => 'required',
             'konten' => 'required',
             'caption' => 'required'
