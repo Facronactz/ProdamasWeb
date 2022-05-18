@@ -18,7 +18,7 @@ class VideoController extends Controller
     public function beranda()
     {
         $video = VideoAdmin::where('id', 'id')->get() 
-                ->orderBy('id', 'asc') 
+                ->orderBy('id', 'desc') 
                 ->take(3) 
                 ->get();
 
