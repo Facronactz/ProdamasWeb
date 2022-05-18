@@ -25,6 +25,7 @@
         <div class="alert alert-danger">
             {{ $message }}
         </div>
+        @enderror
       </div>
         <div class="form-group">
             <label for="text_sampul">Caption Sampul</label>
