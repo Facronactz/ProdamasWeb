@@ -10,7 +10,7 @@
 
 <style>
     .kampungkeren:hover {
-        color: #f58634;
+        opacity: 0.4;
     }
 
     .kaker:hover {
