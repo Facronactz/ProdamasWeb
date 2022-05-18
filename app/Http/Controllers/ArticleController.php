@@ -54,6 +54,7 @@ class ArticleController extends Controller
         // ]);
 
         $artikel = new ArticleAdmin;
+        
         $artikel->status = $request->status;
         $artikel->gambar_sampul =  $new_sampul;
         $artikel->text_sampul = $request->text_sampul;
