@@ -62,11 +62,23 @@ class SearchController extends Controller
         return view('audio.audiosearch', compact('audios'));
     }
 
+    public function searchtagaudio()
+    {
+        $audios = ArticleAdmin::with('Kampung Keren')->get();
+        return view('audio.audiotagsearch', compact('audios'));
+    }
+
     public function searchfoto(Request $request)
     {
         $keyword = $request->searchfoto;
         $fotos = FotoAdmin::where('judul', 'like', "%" . $keyword . "%")->paginate(3);
         return view('foto.fotosearch', compact('fotos'));
+    }
+
+    public function searchtagfoto()
+    {
+        $fotos = ArticleAdmin::with('Kampung Keren')->get();
+        return view('foto.fototagsearch', compact('fotos'));
     }
 
     public function searchvideo(Request $request)
@@ -75,6 +87,13 @@ class SearchController extends Controller
         $videos = VideoAdmin::where('judul', 'like', "%" . $keyword . "%")->paginate(3);
         return view('video.videosearch', compact('videos'));
     }
+    
+    public function searchtagvideo()
+    {
+        $videos = ArticleAdmin::with('Kampung Keren')->get();
+        return view('video.videotagsearch', compact('videos'));
+    }
+
     public function searchcerita(Request $request)
     {
         $keyword = $request->searchcerita;
@@ -82,6 +101,12 @@ class SearchController extends Controller
         ->orWhere('ringkasan', 'like', "%" . $keyword . "%")
         ->paginate(2);
         return view('cerita.searchcerita', compact('tulis_ceritas'))->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+
+    public function searchtagcerita()
+    {
+        $tulis_ceritas = ArticleAdmin::with('Kampung Keren')->get();
+        return view('cerita.ceritatagsearch', compact('tulis_ceritas'));
     }
 
     public function tagger(Request $request){
