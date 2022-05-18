@@ -74,7 +74,7 @@ class VideoAdminController extends Controller
         //         $tagg = trim($tagg, ',');
         //     }
         // }
-        foreach ($video as $item) {
+        foreach ($videos as $item) {
             $tagg = $tagg . ',' . $item->tag_name;
             $tagg = trim($tagg, ',');
         }
