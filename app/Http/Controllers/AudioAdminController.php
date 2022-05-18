@@ -82,9 +82,9 @@ class AudioAdminController extends Controller
     public function update($id, Request $request) {
         $request->validate([
             'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
-            'judul' => 'required',
-            'konten' => 'required', 
-            'caption' => 'required'
+            // 'judul' => 'required',
+            // 'konten' => 'required', 
+            // 'caption' => 'required'
         ]);
 
         $audio = AudioAdmin::findorfail($id);
