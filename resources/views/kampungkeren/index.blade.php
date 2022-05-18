@@ -8,6 +8,12 @@
 <link rel="stylesheet" href="{{ asset('css/kampung.css') }}">
 @endsection
 
+<style>
+    .kampungkeren:hover {
+        color: grey;
+    }
+</style>
+
 @section('content')
 <div class="container-fluid p-0">
     <img class="header-kampung-keren" src="{{ asset('img-tentang/header-kampung-keren.png') }}" alt="" srcset="">
@@ -19,7 +25,7 @@
         <div class="row text-center w-100">
             <div class="w-100">
                 <a href="/tag?tag=Kampung Keren" style="text-decoration: none; color:black">
-                    <h1 class="mb-3">Kampung Keren</h1>
+                    <h1 class="kampungkeren mb-3">Kampung Keren</h1>
                 </a>
 
                 @foreach ($descriptions ?? '' as $description)
@@ -35,7 +41,7 @@
             <div class="col d-flex" style="flex-direction: column;">
                 <img src="{{ asset('kampungkerenProd/' . $karen->foto) }}" alt="">
                 <div class="d-flex justify-content-center" style="min-height:80px; margin: -30px auto; width:180px; background-color:{{ $karen->warna }}; color:white;">
-                    <h2 class="my-auto">{{ $karen->judul }}</h2>
+                    <h2 class="kampungkeren my-auto">{{ $karen->judul }}</h2>
                 </div>
                 <div class="mt-5 mb-4">
                     <p>{{ $karen->caption }}</p>
