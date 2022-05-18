@@ -74,7 +74,7 @@ class VideoAdminController extends Controller
         //         $tagg = trim($tagg, ',');
         //     }
         // }
-        foreach ($video as $item) {
+        foreach ($videos as $item) {
             $tagg = $tagg . ',' . $item->tag_name;
             $tagg = trim($tagg, ',');
         }
@@ -84,9 +84,9 @@ class VideoAdminController extends Controller
     public function update($id, Request $request) {
         $request->validate([
             'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
-            'judul' => 'required',
-            'konten' => 'required', 
-            'caption' => 'required'
+            // 'judul' => 'required',
+            // 'konten' => 'required', 
+            // 'caption' => 'required'
         ]);
 
         $video = VideoAdmin::findorfail($id);
