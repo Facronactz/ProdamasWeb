@@ -30,14 +30,14 @@ class AudioAdminController extends Controller
         $pathThumb = "sampul-".time().".".$extThumb;
         $pathStore = $request->gambar_sampul->move(public_path('../audioProd/thumb'), $pathThumb);
 
+        $tags = explode(",", $request->tags);
         AudioAdmin::create([
             "gambar_sampul" => $pathThumb,
             "judul" => $request["judul"],
             "konten" => $request["konten"],
             "caption" => $request["caption"],
         ]);
-
-        $tags = explode(",", $request->tags);
+        $audio->save();
         $audio->tag($tags);
 
         // // konten audio
