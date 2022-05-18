@@ -68,6 +68,13 @@ class AudioAdminController extends Controller
 */
     public function edit($id) {
         $audio = AudioAdmin::findOrFail($id);
+        $tagg = "";
+
+        foreach ($audio as $item) {
+            $tagg = $tagg . ',' . $item->tag_name;
+            $tagg = trim($tagg, ',');
+        }
+
         return view('admin.audio.edit',compact('audio'));
     }
 
@@ -92,12 +99,16 @@ class AudioAdminController extends Controller
                 'konten' => $request->konten,
                 'caption' => $request->caption
             ]);
+            $hsl = explode(",", $request->tags);
+            $audio->retag($hsl);
         } else {
             $audio->update([
                 'judul' => $request->judul,
                 'konten' => $request->konten,
                 'caption' => $request->caption
             ]);
+            $hsl = explode(",", $request->tags);
+            $audio->retag($hsl);
         }
 
         return redirect('/admin/list-audio')->with('success', 'Audio Berhasil Diupdate!');
