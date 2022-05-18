@@ -37,6 +37,7 @@ class AudioAdminController extends Controller
             "konten" => $request["konten"],
             "caption" => $request["caption"],
         ]);
+        $audio->save();
         $audio->tag($tags);
 
         // // konten audio
