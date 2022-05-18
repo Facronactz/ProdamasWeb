@@ -73,16 +73,16 @@ class VideoAdminController extends Controller
             $tagg = $tagg . ',' . $item->tag_name;
             $tagg = trim($tagg, ',');
         }
-        
+
         return view('admin.video.edit',compact('video' , 'videos' , 'tagg'));
     }
 
     public function update($id, Request $request) {
         $request->validate([
             'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
-            // 'judul' => 'required',
-            // 'konten' => 'required', 
-            // 'caption' => 'required'
+            'judul' => 'required',
+            'konten' => 'required', 
+            'caption' => 'required'
         ]);
 
         $video = VideoAdmin::findorfail($id);
