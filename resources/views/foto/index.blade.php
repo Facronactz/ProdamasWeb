@@ -75,10 +75,10 @@
                                 <div class="col-2" style="width: 50rem;">
                                     <img class="mx-auto d-block: 500px" src="{{ asset('cover/'. $post->cover)}}" width="200" height="200" controls>
                                 </div>
-                                    <div class="card" style="">
+                                    <div class="row mt-5" style="">
                                         @foreach ($post-> image as $image)
-                                        <div class="col-2" style="width: 25rem;">
-                                            <img class="max-width: 200px" src="{{ asset('images/'. $image->image)}}" width="100" height="100" controls>
+                                        <div class="col-sm-3">
+                                            <img id="myImg" alt="Snow" class="width: 100%" src="{{ asset('images/'. $image->image)}}" width="30%" controls>
                                         </div> 
                                                 
                                         @endforeach   
