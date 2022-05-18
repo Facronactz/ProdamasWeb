@@ -9,7 +9,7 @@ use Illuminate\Support\Carbon;
 class ArticleAdmin extends Model
 {
     use HasFactory;
-    use \Conner\Tagging\Taggable;
+    // use \Conner\Tagging\Taggable;
     
     protected $table = "articles";
 
