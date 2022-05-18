@@ -9,6 +9,8 @@ use Illuminate\Support\Carbon;
 class VideoAdmin extends Model
 {
     use HasFactory;
+    use \Conner\Tagging\Taggable;
+    
     protected $table = "videos";
 
     protected $fillable = ["gambar_sampul","judul","konten","caption"];

@@ -9,6 +9,8 @@ use Illuminate\Support\Carbon;
 class AudioAdmin extends Model
 {
     use HasFactory;
+    use \Conner\Tagging\Taggable;
+    
     protected $table = "audios";
 
     protected $fillable = ["gambar_sampul","judul","konten","caption",];
