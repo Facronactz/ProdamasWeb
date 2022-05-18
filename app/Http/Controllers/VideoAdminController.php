@@ -25,6 +25,8 @@ class VideoAdminController extends Controller
         ]);
 
         // sampul video
+
+        $video = new VideoAdmin; 
         $extThumb = $request->gambar_sampul->getClientOriginalExtension();
         $pathThumb = "sampul-".time().".".$extThumb;
         $pathStore = $request->gambar_sampul->move(public_path('../videoProd/sampul'), $pathThumb);
@@ -35,6 +37,11 @@ class VideoAdminController extends Controller
         // $videopath = $konten->storeAs('konten', $videoname);
         // $pathStore = $request->konten->move(public_path('../videoProd/konten'), $videopath);
         
+
+              
+
+        $tags = explode(",", $request->tags);
+        $video->tag($tags);
 
         VideoAdmin::create([
             "gambar_sampul" => $pathThumb,
@@ -48,7 +55,7 @@ class VideoAdminController extends Controller
 
     public function index()
     {
-        $videos = VideoAdmin::all();
+        $video = VideoAdmin::all();
         return view('admin.video.list', compact('videos'));
     }
 
@@ -59,7 +66,19 @@ class VideoAdminController extends Controller
 
     public function edit($id) {
         $video = VideoAdmin::findOrFail($id);
-        return view('admin.video.edit',compact('video'));
+        $video = DB::table('tagging_tagged')->where('taggable_id', '=', $id)->get();
+        $tagg = "";
+        // foreach ($artikel as $post){
+        //     foreach($post->tags as $tag) {
+        //         $tagg = $tagg .','. $tag->name;
+        //         $tagg = trim($tagg, ',');
+        //     }
+        // }
+        foreach ($video as $item) {
+            $tagg = $tagg . ',' . $item->tag_name;
+            $tagg = trim($tagg, ',');
+        }
+        return view('admin.video.edit',compact('video','tagg,'));
     }
 
     public function update($id, Request $request) {
@@ -82,11 +101,15 @@ class VideoAdminController extends Controller
                 'gambar_sampul' => $filePath,
                 'caption' => $request->caption
             ]);
+            $hsl = explode(",", $request->tags);
+            $video->retag($hsl);
         } else {
             $video->update([
                 'judul' => $request->judul,
                 'caption' => $request->caption
             ]);
+            $hsl = explode(",", $request->tags);
+            $video->retag($hsl);
         }
 
         return redirect('/admin/list-video')->with('success', 'Video Berhasil Diupdate');
