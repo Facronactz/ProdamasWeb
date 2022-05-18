@@ -55,7 +55,11 @@ Edit Audio
     </div>
     <div class="form-group">
         <label for="tags">Tag</label>
-        <input class="form-control" type="text" data-role="tagsinput" name="tags">
+        <br>
+        {{-- @foreach ($audio->tags as $tag)
+                <label class="label label-info">{{ $tag->name }}</label>
+        @endforeach --}}
+        <input class="form-control" type="text" data-role="tagsinput" name="tags" value="{{$tagg}}">
         @error('tags')
         <div class="alert alert-danger">
             {{ $message }}
