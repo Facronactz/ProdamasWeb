@@ -9,6 +9,8 @@ use Illuminate\Support\Carbon;
 class FotoAdmin extends Model
 {
     use HasFactory;
+    use \Conner\Tagging\Taggable;
+    
     protected $table = "fotos";
 
     protected $fillable = ["judul","konten","caption"];

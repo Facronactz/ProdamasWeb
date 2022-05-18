@@ -25,9 +25,13 @@ class AudioAdminController extends Controller
         ]);
         // dump($request);
         // sampul
+        $audio = new AudioAdmin();
         $extThumb = $request->gambar_sampul->getClientOriginalExtension();
         $pathThumb = "sampul-".time().".".$extThumb;
         $pathStore = $request->gambar_sampul->move(public_path('../audioProd/thumb'), $pathThumb);
+
+        $tags = explode(",", $request->tags);
+        $audio->tag($tags);
 
         // // konten audio
         // $konten = $request->file('konten');
