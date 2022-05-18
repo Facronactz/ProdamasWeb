@@ -98,7 +98,7 @@ class FotoAdminController extends Controller
 
     public function edit($id) {
         $fotos = FotoAdmin::findOrFail($id);
-        return view('admin.foto.edit',compact('foto'));
+        return view('admin.foto.edit',compact('fotos'));
         $tagg = "";
 
         foreach ($fotos as $item) {
