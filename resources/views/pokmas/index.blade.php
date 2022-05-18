@@ -21,6 +21,7 @@
 
     a {
         text-decoration: none;
+        color: black;
     }
 
     .card {
