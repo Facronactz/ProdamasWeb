@@ -39,7 +39,7 @@ class AudioAdminController extends Controller
             "caption" => $request["caption"],
         ]);
 
-        $audio = $audios->replicate();
+        $audio = $audios->replicate()->fill();
         $audio->save();
         $audio->tag($tags);
 
