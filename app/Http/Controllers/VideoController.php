@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\VideoAdmin;
@@ -11,7 +12,8 @@ class VideoController extends Controller
 {
     public function index()
     {
-        $videos = DB::table('videos')->paginate(4);
+        // $videos = DB::table('videos')->paginate(4);
+        $videos = Video::orderBy('id', 'desc')->paginate(4);
         return view('video.index', ['videos' => $videos]);
     }
 
