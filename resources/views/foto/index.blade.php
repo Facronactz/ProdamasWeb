@@ -71,7 +71,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                         <div class="modal-body">
-                            <div class="float-left mr-3">
+                            <div class="float-left mr-2">
                                 <div class="col-2" style="width: 50rem;">
                                     <img class="mx-auto d-block: 500px" src="{{ asset('cover/'. $post->cover)}}" width="200" height="200" controls>
                                 </div>
