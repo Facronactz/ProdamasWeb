@@ -25,13 +25,13 @@ class AudioAdminController extends Controller
         ]);
         // dump($request);
         // sampul
-        $audio = DB::table('tagging_tagged')->where('taggable_id', '=', $request->id)->get();
+        $audio = new AudioAdmin();
         $extThumb = $request->gambar_sampul->getClientOriginalExtension();
         $pathThumb = "sampul-".time().".".$extThumb;
         $pathStore = $request->gambar_sampul->move(public_path('../audioProd/thumb'), $pathThumb);
 
         $tags = explode(",", $request->tags);
-        $audio->tag($tags);
+        $audio->tag($tags)->where('taggable_id', '=', $request->id);
 
         // // konten audio
         // $konten = $request->file('konten');
