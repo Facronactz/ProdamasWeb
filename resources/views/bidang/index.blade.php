@@ -33,7 +33,10 @@
         <div class="container">
             <div class="row mt-5">
                 <div class="col text-center" style="font-family: Inter, sans-serif; margin-top: 35px">
-                    <h1>Cakupan Bidang</h1>
+                    <a href="/tag?tag=bidang" class="btn btn-primary me-1">
+                        <h1>Cakupan Bidang</h1>
+                    </a>
+                    
                 </div>
             </div>
             <div class="row mt-5" style="font-family: Montserrat, sans-serif">
