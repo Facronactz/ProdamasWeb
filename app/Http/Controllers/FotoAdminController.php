@@ -106,7 +106,7 @@ class FotoAdminController extends Controller
             $tagg = $tagg . ',' . $item->tag_name;
             $tagg = trim($tagg, ',');
         }
-        return view('admin.foto.edit', compact('foto', 'fotos'));
+        return view('admin.foto.edit', compact('foto', 'fotos', 'tagg'));
     }
 
     public function update($id, Request $request) {
