@@ -4,6 +4,11 @@
 
 @section('title', 'Kampung Keren')
 
+<style>
+    a {
+        text-decoration: none;
+    }
+</style>
 @section('head')
 <link rel="stylesheet" href="{{ asset('css/kampung.css') }}">
 @endsection
