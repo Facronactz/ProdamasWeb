@@ -8,7 +8,7 @@
 <div class="row container justify-content-center mx-auto">
     <div class="leftcolumn mt-5">
         <!-- artikel -->
-        <h3 class="mb-4" style="font-family: Inter, sans-serif">Artikel</h3>
+        <h3 style="font-family: Inter, sans-serif">Artikel</h3>
         @if ($artikel->count())
         @foreach ($artikel as $item)
         <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
@@ -38,7 +38,7 @@
         @endif
 
         <!-- foto -->
-        <h3 class="mb-4" style="font-family: Inter, sans-serif">Foto</h3>
+        <h3 style="font-family: Inter, sans-serif">Foto</h3>
         @if ($foto->count())
         @foreach ($foto as $item)
         <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
@@ -68,7 +68,7 @@
         @endif
 
         <!-- video -->
-        <h3 class="mb-4" style="font-family: Inter, sans-serif">Video</h3>
+        <h3 style="font-family: Inter, sans-serif">Video</h3>
         @if ($video->count())
         @foreach ($video as $item)
         <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
@@ -98,7 +98,7 @@
         @endif
 
         <!-- audio -->
-        <h3 class="mb-4" style="font-family: Inter, sans-serif">Audio</h3>
+        <h3 style="font-family: Inter, sans-serif">Audio</h3>
         @if ($audio->count())
         @foreach ($artikel as $item)
         <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
