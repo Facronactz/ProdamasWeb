@@ -97,14 +97,16 @@ class VideoAdminController extends Controller
             $video->update([
                 'judul' => $request->judul,
                 'gambar_sampul' => $filePath,
-                'caption' => $request->caption
+                'caption' => $request->caption,
+                'request' => $request->konten
             ]);
             $hsl = explode(",", $request->tags);
             $video->retag($hsl);
         } else {
             $video->update([
                 'judul' => $request->judul,
-                'caption' => $request->caption
+                'caption' => $request->caption,
+                'request' => $request->konten
             ]);
             $hsl = explode(",", $request->tags);
             $video->retag($hsl);

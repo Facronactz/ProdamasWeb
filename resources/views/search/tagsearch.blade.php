@@ -44,7 +44,7 @@
         <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
             <div class="row g-0">
                 <div class="col-md-4 my-auto">
-                    <img src="{{ asset('cover' . $item->cover) }}" class="img-fluid rounded-start">
+                    <img src="{{ asset('cover/' . $item->cover) }}" class="img-fluid rounded-start">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -78,7 +78,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <a href="video/{{ $item->id }}" class="stretched-link"></a>
+                        <!-- <a href="video/{{ $item->id }}" class="stretched-link"></a> -->
                         <h5 class="card-title" style="font-size: 22px;">{{ $item->judul }}</h5>
                         <p class="card-text" style="font-size: 13px;"><small class="text-muted">{{$item->updated_at}}</small></p>
                     </div>
@@ -96,7 +96,43 @@
             Tidak ada data
         </div>
         @endif
-
+        @foreach ($audios as $item)
+        {{-- Card Modal --}}
+        <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <h5 class="modal-title" id="audioPlayerLabel">{{ $item->judul }}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row row-cols-1 row-cols-md-2 mb-2 g-4 audioPlayerBox centerItms">
+                            <div class="card" style="
+                                                          width: 20rem;
+                                                          border: none;
+                                                          margin-right:1em;
+                                                          ">
+                                <img src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}" class="d-flex justify-content click" style="width: 100%;" alt="...">
+                                <audio controls="controls">
+                                    <source src="{{ $item->konten }}">
+                                </audio>
+                            </div>
+                            <div class="card" style="
+                                                      border: none;
+                                                      ">
+                                <h1> {{ $item->judul }}</h1>
+                                <p> <?= $item->caption ?> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- Akhir Card Audio --}}
+        @endforeach
         <!-- audio -->
         <h3 style="font-family: Inter, sans-serif">Audio</h3>
         @if ($audio->count())
@@ -108,7 +144,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <a href="audio/{{ $item->id }}" class="stretched-link"></a>
+                        <!-- <a href="audio/{{ $item->id }}" class="stretched-link"></a> -->
                         <h5 class="card-title" style="font-size: 22px;">{{ $item->judul }}</h5>
                         <p class="card-text" style="font-size: 13px;"><small class="text-muted">{{$item->updated_at}}</small></p>
                     </div>
