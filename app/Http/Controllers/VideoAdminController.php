@@ -41,14 +41,16 @@ class VideoAdminController extends Controller
               
 
         $tags = explode(",", $request->tags);
-        $video->tag($tags);
+        
 
-        VideoAdmin::create([
+        $video->fill([
             "gambar_sampul" => $pathThumb,
             "judul" => $request["judul"],
             "konten" => $request["konten"],
             "caption" => $request["caption"],
         ]);
+        $video->save();
+        $video->tag($tags);
 
         return redirect('/admin/list-video')->with('success', 'Video Berhasil Ditambahkan');
     }
