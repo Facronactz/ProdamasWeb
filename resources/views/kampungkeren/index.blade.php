@@ -4,11 +4,6 @@
 
 @section('title', 'Kampung Keren')
 
-<style>
-    a {
-        text-decoration: none;
-    }
-</style>
 @section('head')
 <link rel="stylesheet" href="{{ asset('css/kampung.css') }}">
 @endsection
@@ -23,7 +18,7 @@
     <div class="d-flex my-4">
         <div class="row text-center w-100">
             <div class="w-100">
-                <a href="/tag?tag=Kampung Keren">
+                <a href="/tag?tag=Kampung Keren" style="text-decoration: none">
                     <h1 class="mb-3">Kampung Keren</h1>
                 </a>
 
@@ -36,7 +31,7 @@
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 text-center">
         @foreach ($kampungkeren as $karen)
-        <a href="/tag?tag={{$karen->judul}}">
+        <a href="/tag?tag={{$karen->judul}}" style="text-decoration: none">
             <div class="col d-flex" style="flex-direction: column;">
                 <img src="{{ asset('kampungkerenProd/' . $karen->foto) }}" alt="">
                 <div class="d-flex justify-content-center" style="min-height:80px; margin: -30px auto; width:180px; background-color:{{ $karen->warna }}; color:white;">
