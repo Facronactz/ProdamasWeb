@@ -43,7 +43,7 @@ Edit Artikel
     </div>
     <div class="form-group">
         <label for="tags">Tag</label>
-        <input class="form-control" type="text" data-role="tagsinput" name="tags">
+        <input class="form-control" type="text" data-role="tagsinput" name="tags" value="{{$tagg}}">
         @error('tags')
         <div class="alert alert-danger">
             {{ $message }}
