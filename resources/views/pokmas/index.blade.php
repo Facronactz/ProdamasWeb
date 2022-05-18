@@ -41,7 +41,7 @@
         <!-- awal jumbotron -->
         <div class="container-fluid banner">
             <div class="container banner-content">
-                <h2><u>POKMAS</u></h2>
+                <h2><u>PUKMAS</u></h2>
                 @foreach ($descriptions ?? '' as $description)
                     <h5><?= $description->desc_pokmas ?></h5>
                 @endforeach

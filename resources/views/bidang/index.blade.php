@@ -53,7 +53,6 @@
 
     <div class="container mt-5 mb-5">
         @if ($bidang->id %2 != 0)
-        <a href="/tag?tag={{$bidang->judul}}"> ahaha </a>
         <div class="row box">
             <div class="col-6">
                 <div class="bidang-img" style="background-image: url('{{ asset("bidangProd/". $bidang->foto) }}')"></div>
@@ -69,21 +68,19 @@
         </div>
 
         @else
-        <a href="/tag?tag={{$bidang->judul}}">
-            <div class="row box">
-                <div class="d-flex align-items-center justify-content-center col-6">
-                    <div class="item-title">
-                        <h1>{{ $bidang->judul }}</h1>
-                        <br>
-                        <p>{{ $bidang->caption}}</p>
-                    </div>
-                </div>
-
-                <div class="col-6">
-                    <div class="bidang-img" style="background-image: url('{{ asset("bidangProd/". $bidang->foto) }}')"></div>
+        <div class="row box">
+            <div class="d-flex align-items-center justify-content-center col-6">
+                <div class="item-title">
+                    <h1>{{ $bidang->judul }}</h1>
+                    <br>
+                    <p>{{ $bidang->caption}}</p>
                 </div>
             </div>
-        </a>
+
+            <div class="col-6">
+                <div class="bidang-img" style="background-image: url('{{ asset("bidangProd/". $bidang->foto) }}')"></div>
+            </div>
+        </div>
         @endif
     </div>
     @endforeach
