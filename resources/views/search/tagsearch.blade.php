@@ -96,7 +96,7 @@
             Tidak ada data
         </div>
         @endif
-        @foreach ($audios as $item)
+        @foreach ($audio as $item)
         {{-- Card Modal --}}
         <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
