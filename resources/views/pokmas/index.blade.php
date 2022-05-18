@@ -37,6 +37,10 @@
         max-width: 1100px;
         margin: auto;
     }
+
+    .kategori {
+        cursor: pointer;
+    }
 </style>
 @endsection
 
