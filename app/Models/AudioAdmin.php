@@ -10,10 +10,10 @@ class AudioAdmin extends Model
 {
     use HasFactory;
     use \Conner\Tagging\Taggable;
-    
+
     protected $table = "audios";
 
-    protected $fillable = ["gambar_sampul","judul","konten","caption",];
+    protected $fillable = ["id","gambar_sampul","judul","konten","caption",];
 
     public function getCreatedAtAttribute() {
         return Carbon::parse($this->attributes['created_at'])
