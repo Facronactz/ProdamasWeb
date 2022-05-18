@@ -24,6 +24,9 @@ class FotoAdminController extends Controller
             'konten' => 'required|mimes:jpeg,jpg,png|max:2200',
             'caption' => 'required',
         ]);
+
+        $gambar_sampul = $request->gambar_sampul;
+        $new_sampul = time() . ' - ' . $gambar_sampul->getClientOriginalName();
         // dd($request->konten);
 
         // foreach (array_filter($request->konten, 'strlen') as $item => $value) {
@@ -40,6 +43,23 @@ class FotoAdminController extends Controller
         //     FotoAdmin::insert($gambar);
         //     // dd($gambar);
         // }
+        $artikel = new FotoAdmin;
+        $artikel->status = $request->status;
+        $artikel->gambar_sampul =  $new_sampul;
+        $artikel->text_sampul = $request->text_sampul;
+        $artikel->judul = $request->judul;
+        $artikel->slug = $request->slug;
+        $artikel->picture =  $new_sampul;
+        $artikel->article = $request->article;
+
+        $tags = explode(",", $request->tags);
+
+        $gambar_sampul->move(public_path('../articleProd/sampul/'), $new_sampul);
+        $artikel->save();
+        $artikel->tag($tags);
+
+        return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Ditambahkan!');
+    
 
         $files = [];
         foreach ($request->file('konten') as $file) {
@@ -79,6 +99,13 @@ class FotoAdminController extends Controller
     public function edit($id) {
         $foto = FotoAdmin::findOrFail($id);
         return view('admin.foto.edit',compact('foto'));
+        $tagg = "";
+
+        foreach ($foto as $item) {
+            $tagg = $tagg . ',' . $item->tag_name;
+            $tagg = trim($tagg, ',');
+        }
+        return view('admin.foto.edit', compact('foto', 'tagg'));
     }
 
     public function update($id, Request $request) {
