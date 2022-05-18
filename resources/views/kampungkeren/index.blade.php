@@ -13,8 +13,8 @@
         color: #f58634;
     }
 
-    .kampung:hover {
-        opacity: 0.6;
+    .kaker:hover {
+        opacity: 0.7;
     }
 </style>
 
@@ -29,7 +29,7 @@
         <div class="row text-center w-100">
             <div class="w-100">
                 <a href="/tag?tag=Kampung Keren" style="text-decoration: none; color:black">
-                    <h1 class="kampung mb-3">Kampung Keren</h1>
+                    <h1 class="kaker mb-3">Kampung Keren</h1>
                 </a>
 
                 @foreach ($descriptions ?? '' as $description)
