@@ -54,7 +54,7 @@ class FotoAdminController extends Controller
 
         $tags = explode(",", $request->tags);
 
-        $gambar_sampul->move(public_path('../fotoProd/sampul/'), $new_sampul);
+        $gambar_sampul->move(public_path('../fotoProd/'), $new_sampul);
         $fotos->save();
         $fotos->tag($tags);
 
