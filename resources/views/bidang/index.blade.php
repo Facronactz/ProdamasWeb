@@ -53,38 +53,39 @@
 
     <div class="container mt-5 mb-5">
         @if ($bidang->id %2 != 0)
-        <div class="row box">
-            <div class="col-6">
-                <div class="bidang-img" style="background-image: url('{{ asset("bidangProd/". $bidang->foto) }}')"></div>
-            </div>
+        <a href="/tag?tag={{$bidang->judul}}">
+            <div class="row box">
+                <div class="col-6">
+                    <div class="bidang-img" style="background-image: url('{{ asset("bidangProd/". $bidang->foto) }}')"></div>
+                </div>
 
-            <div class="d-flex align-items-center justify-content-center col-6">
-                <div class="item-title">
-                    <a href="/tag?tag={{$bidang->judul}}" class="btn btn-primary me-1">
+                <div class="d-flex align-items-center justify-content-center col-6">
+                    <div class="item-title">
                         <h1>{{ $bidang->judul }}</h1>
-                        <!-- <span class="badge bg-secondary"> {{ $tag->count }} </span> -->
-                    </a>
-                    <br>
-                    <p>{{ $bidang->caption}}</p>
+                        <br>
+                        <p>{{ $bidang->caption}}</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
 
         @else
-        <div class="row box">
-            <div class="d-flex align-items-center justify-content-center col-6">
-                <div class="item-title">
-                    <h1>{{ $bidang->judul }}</h1>
-                    <br>
-                    <p>{{ $bidang->caption}}</p>
+        <a href="/tag?tag={{$bidang->judul}}">
+            <div class="row box">
+                <div class="d-flex align-items-center justify-content-center col-6">
+                    <div class="item-title">
+                        <h1>{{ $bidang->judul }}</h1>
+                        <br>
+                        <p>{{ $bidang->caption}}</p>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="bidang-img" style="background-image: url('{{ asset("bidangProd/". $bidang->foto) }}')"></div>
                 </div>
             </div>
-
-            <div class="col-6">
-                <div class="bidang-img" style="background-image: url('{{ asset("bidangProd/". $bidang->foto) }}')"></div>
-            </div>
-        </div>
-        @endif
+        </a>
+            @endif
     </div>
     @endforeach
 </body>
