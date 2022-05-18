@@ -98,14 +98,15 @@ class FotoAdminController extends Controller
 
     public function edit($id) {
         $fotos = FotoAdmin::findOrFail($id);
-        return view('admin.foto.edit',compact('fotos'));
+        $fotos = DB::table('tagging_tagged')->where('taggable_id', '=', $id)->get();
+        // return view('admin.foto.edit',compact('fotos'));
         $tagg = "";
 
         foreach ($fotos as $item) {
             $tagg = $tagg . ',' . $item->tag_name;
             $tagg = trim($tagg, ',');
         }
-        return view('admin.foto.edit', compact('foto', 'tagg'));
+        return view('admin.foto.edit', compact('fotos', 'tagg'));
     }
 
     public function update($id, Request $request) {
