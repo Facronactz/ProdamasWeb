@@ -78,7 +78,7 @@ class VideoAdminController extends Controller
             $tagg = $tagg . ',' . $item->tag_name;
             $tagg = trim($tagg, ',');
         }
-        return view('admin.video.edit',compact('video','videos'));
+        return view('admin.video.edit',compact('video','videos','tagg'));
     }
 
     public function update($id, Request $request) {
