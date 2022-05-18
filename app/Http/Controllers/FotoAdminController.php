@@ -43,22 +43,22 @@ class FotoAdminController extends Controller
         //     FotoAdmin::insert($gambar);
         //     // dd($gambar);
         // }
-        $artikel = new FotoAdmin;
-        $artikel->status = $request->status;
-        $artikel->gambar_sampul =  $new_sampul;
-        $artikel->text_sampul = $request->text_sampul;
-        $artikel->judul = $request->judul;
-        $artikel->slug = $request->slug;
-        $artikel->picture =  $new_sampul;
-        $artikel->article = $request->article;
+        $foto = new FotoAdmin;
+        $foto->status = $request->status;
+        $foto->gambar_sampul =  $new_sampul;
+        $foto->text_sampul = $request->text_sampul;
+        $foto->judul = $request->judul;
+        $foto->slug = $request->slug;
+        $foto->picture =  $new_sampul;
+        $foto->article = $request->article;
 
         $tags = explode(",", $request->tags);
 
-        $gambar_sampul->move(public_path('../articleProd/sampul/'), $new_sampul);
-        $artikel->save();
-        $artikel->tag($tags);
+        $gambar_sampul->move(public_path('../fotoProd/sampul/'), $new_sampul);
+        $foto->save();
+        $foto->tag($tags);
 
-        return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Ditambahkan!');
+        return redirect('/admin/list-foto')->with('success', 'Foto Berhasil Ditambahkan!');
     
 
         $files = [];

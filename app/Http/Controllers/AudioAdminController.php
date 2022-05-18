@@ -68,22 +68,23 @@ class AudioAdminController extends Controller
 */
     public function edit($id) {
         $audio = AudioAdmin::findOrFail($id);
+        $audios = DB::table('tagging_tagged')->where('taggable_id', '=', $id)->get();
         $tagg = "";
 
-        foreach ($audio as $item) {
+        foreach ($audios as $item) {
             $tagg = $tagg . ',' . $item->tag_name;
             $tagg = trim($tagg, ',');
         }
 
-        return view('admin.audio.edit',compact('audio'));
+        return view('admin.audio.edit',compact('audio', 'audios'));
     }
 
     public function update($id, Request $request) {
         $request->validate([
             'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
-            'judul' => 'required',
-            'konten' => 'required', 
-            'caption' => 'required'
+            // 'judul' => 'required',
+            // 'konten' => 'required', 
+            // 'caption' => 'required'
         ]);
 
         $audio = AudioAdmin::findorfail($id);
