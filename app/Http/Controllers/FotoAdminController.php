@@ -97,11 +97,11 @@ class FotoAdminController extends Controller
     // }
 
     public function edit($id) {
-        $foto = FotoAdmin::findOrFail($id);
+        $fotos = FotoAdmin::findOrFail($id);
         return view('admin.foto.edit',compact('foto'));
         $tagg = "";
 
-        foreach ($foto as $item) {
+        foreach ($fotos as $item) {
             $tagg = $tagg . ',' . $item->tag_name;
             $tagg = trim($tagg, ',');
         }
