@@ -35,6 +35,7 @@
 <div class="container mt-5 mb-5">
     @foreach ($bidangs as $bidang)
     @if ($bidang->id % 2 != 0)
+    <a href="/tag?tag={{ $bidang->judul }}" style="text-decoration: none; color:black">
     <div class="row row-cols-1 row-cols-md-2 box">
         <h1 class="d-md-none d-block d-lg-none d-xl-none d-xxl-none">{{ $bidang->judul }}</h1>
         <div class="col">
@@ -62,6 +63,7 @@
             </div>
         </div>
     </div>
+    </a>
     @endif
     @if ($loop->last)
     @else
