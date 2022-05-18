@@ -70,7 +70,7 @@
                                             Your browser does not support the audio element.
                                         </audio> --}}
                                         <audio controls="controls">
-                                            <source src="{{ $audio->konten }}">
+                                            <source src="https://docs.google.com/uc?export=download&id={{$audio->konten}}">
                                         </audio>
                                     </div>
                                     <div class="card" style="
