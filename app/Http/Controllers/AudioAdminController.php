@@ -25,7 +25,7 @@ class AudioAdminController extends Controller
         ]);
         // dump($request);
         // sampul
-        $audio = new AudioAdmin();
+        $audio = DB::table('tagging_tagged')->where('taggable_id', '=', $request->id)->get();
         $extThumb = $request->gambar_sampul->getClientOriginalExtension();
         $pathThumb = "sampul-".time().".".$extThumb;
         $pathStore = $request->gambar_sampul->move(public_path('../audioProd/thumb'), $pathThumb);
