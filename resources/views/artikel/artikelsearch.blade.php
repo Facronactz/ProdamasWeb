@@ -11,10 +11,10 @@
         <form action="searchartikel">
             <div class="input-group">
                 {{-- <form action="searchartikel"> --}}
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchartikel" value="{{ request('searchartikel') }}">
+                <!-- <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchartikel" value="{{ request('searchartikel') }}">
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-search link-light"></i>
-                </button>
+                </button> -->
             </div>
         </form>
         @if ($artikel->count())
