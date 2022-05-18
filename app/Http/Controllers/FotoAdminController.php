@@ -54,7 +54,7 @@ class FotoAdminController extends Controller
 
         $tags = explode(",", $request->tags);
 
-        $gambar_sampul->move(public_path('../fotoProd/sampul/'), $new_sampul);
+        $gambar_sampul->move(public_path('../fotoProd/'), $new_sampul);
         $fotos->save();
         $fotos->tag($tags);
 
@@ -98,14 +98,15 @@ class FotoAdminController extends Controller
 
     public function edit($id) {
         $foto = FotoAdmin::findOrFail($id);
-        return view('admin.foto.edit',compact('foto'));
+        $fotos = DB::table('tagging_tagged')->where('taggable_id', '=', $id)->get();
+        // return view('admin.foto.edit',compact('fotos'));
         $tagg = "";
 
-        foreach ($foto as $item) {
+        foreach ($fotos as $item) {
             $tagg = $tagg . ',' . $item->tag_name;
             $tagg = trim($tagg, ',');
         }
-        return view('admin.foto.edit', compact('foto', 'tagg'));
+        return view('admin.foto.edit', compact('foto', 'fotos'));
     }
 
     public function update($id, Request $request) {
@@ -127,11 +128,15 @@ class FotoAdminController extends Controller
                 'konten' => $filePath,
                 'caption' => $request->caption
             ]);
+            $hsl = explode(",", $request->tags);
+            $foto->retag($hsl);
         } else {
             $foto->update([
                 'judul' => $request->judul,
                 'caption' => $request->caption
             ]);
+            $hsl = explode(",", $request->tags);
+            $foto->retag($hsl);
         }
 
         return redirect('/admin/list-foto')->with('success', 'Foto Berhasil Diupdate!');
