@@ -31,7 +31,7 @@ class AudioAdminController extends Controller
         $pathStore = $request->gambar_sampul->move(public_path('../audioProd/thumb'), $pathThumb);
 
         $tags = explode(",", $request->tags);
-        $audio->tag($tags);
+        $audio->tag($tags)->where('taggable_id', '=', $request->id);
 
         // // konten audio
         // $konten = $request->file('konten');
