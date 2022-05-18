@@ -91,14 +91,14 @@ class SearchController extends Controller
         
         $keyword = $ok['tag'];
     	$artikel = ArticleAdmin::withAnyTag($keyword)->paginate(3);
-        $fotos = FotoAdmin::withAnyTag($keyword)->paginate(3);
-        $audios = AudioAdmin::withAnyTag($keyword)->paginate(3);
-        $videos = VideoAdmin::withAnyTag($keyword)->paginate(3);
-        return view('search.search', compact(
+        $foto = FotoAdmin::withAnyTag($keyword)->paginate(3);
+        $audio = AudioAdmin::withAnyTag($keyword)->paginate(3);
+        $video = VideoAdmin::withAnyTag($keyword)->paginate(3);
+        return view('artikel.artikelsearch', compact(
             'artikel',
-            'fotos',
-            'audios',
-            'videos'
+            'foto',
+            'audio',
+            'video'
         ));
     }
 }
