@@ -34,10 +34,7 @@ Edit Video
     </div>
     <div class="form-group">
         <label for="konten">Konten</label>
-        @if ($video->konten)
-        <p>{{$video->konten}}</p>
-        @endif
-        <input type="text" name="konten" class="form-control" cols="30" rows="10">
+        <input type="text" name="konten" class="form-control" cols="30" rows="10"value="{{$video->konten}}">
         @error('konten')
         <div class="alert alert-danger">
             {{ $message }}
