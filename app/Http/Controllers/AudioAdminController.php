@@ -31,12 +31,15 @@ class AudioAdminController extends Controller
         $pathStore = $request->gambar_sampul->move(public_path('../audioProd/thumb'), $pathThumb);
 
         $tags = explode(",", $request->tags);
-        AudioAdmin::create([
+
+        
+        $audio->fill([
             "gambar_sampul" => $pathThumb,
             "judul" => $request["judul"],
             "konten" => $request["konten"],
             "caption" => $request["caption"],
         ]);
+
         $audio->save();
         $audio->tag($tags);
 
@@ -45,14 +48,13 @@ class AudioAdminController extends Controller
         // $audioname = $konten->getClientOriginalName();
         // $audiopath = $konten->storeAs('konten', $audioname);
         // $pathStore = $request->konten->move(public_path('../audioProd/fileaudio'), $audiopath);
-/*
+        /*
         $audio_sampul = $request->audio_sampul;
         $new_audio_sampul = time() . ' - ' . $audio_sampul->getClientOriginalName();
 
         $konten = $request->konten;
         $new_konten = time() . ' - ' . $konten->getClientOriginalName();
 */
-
         return redirect('/admin/list-audio')->with('success', 'Audio Berhasil Ditambahkan!');
     }
 
