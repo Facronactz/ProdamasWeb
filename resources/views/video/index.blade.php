@@ -66,7 +66,7 @@
                                             <source src="{{ asset('/videoProd/konten/' . $video->konten) }}">
                                             Your browser does not support the video tag.
                                         </video> --}}
-                                        <iframe width="fixed" height="fixed" src="{{ $video->konten }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <iframe width="fixed" height="fixed" src="https://www.youtube.com/embed/{{$video->konten}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <div class="card" style="
                                                     width: 25rem;
