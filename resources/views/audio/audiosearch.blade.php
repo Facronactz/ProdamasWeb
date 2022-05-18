@@ -65,7 +65,7 @@
                                             ">
                                             <img src="{{ asset('/audioProd/thumb/' . $audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
                                             <audio controls="controls">
-                                                <source src="{{ $audio->konten }}">
+                                                <source src="https://docs.google.com/uc?export=download&id={{$audio->konten}}">
                                             </audio>
                                         </div>
                                         <div class="card" style="
