@@ -63,9 +63,9 @@
                                 
                                 {{-- <iframe src="{{$audio->konten}}" width="absolut" height="absolut" allow="autoplay"></iframe> --}}
                                 <audio controls="controls">
-                                    <source src="{{$audio->konten}}">
-                                  </audio>
-                                <a href="{{$audio->konten}}">{{$audio->judul}}</a>
+                                    <source src="https://docs.google.com/uc?export=download&id={{$audio->konten}}">
+                                </audio>
+                                
                         </div>
                         <div class="card" style="
                                 width: 25rem;
