@@ -22,7 +22,6 @@
     a {
         text-decoration: none;
         color: black;
-        cursor: pointer;
     }
 
     .card {
@@ -47,7 +46,7 @@
     <div class="container-fluid banner">
         <div class="container banner-content">
             <a href="/tag?tag=pokmas">
-                <h2><u>POKMAS</u></h2>
+                <h2 class="kategori"><u>POKMAS</u></h2>
             </a>
             
             @foreach ($descriptions ?? '' as $description)
