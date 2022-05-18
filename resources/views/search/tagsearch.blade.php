@@ -100,7 +100,7 @@
         <!-- audio -->
         <h3 style="font-family: Inter, sans-serif">Audio</h3>
         @if ($audio->count())
-        @foreach ($artikel as $item)
+        @foreach ($audio as $item)
         <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
             <div class="row g-0">
                 <div class="col-md-4 my-auto">
