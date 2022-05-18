@@ -76,7 +76,7 @@ class AudioAdminController extends Controller
             $tagg = trim($tagg, ',');
         }
 
-        return view('admin.audio.edit',compact('audio', 'audios'));
+        return view('admin.audio.edit',compact('audio', 'audios', 'tagg'));
     }
 
     public function update($id, Request $request) {
