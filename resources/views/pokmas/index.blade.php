@@ -19,6 +19,10 @@
         font-family: "Montserrat", sans-serif;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     .card {
         background-color: white;
         width: 100%;
