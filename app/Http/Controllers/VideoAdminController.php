@@ -55,7 +55,7 @@ class VideoAdminController extends Controller
 
     public function index()
     {
-        $video = VideoAdmin::all();
+        $videos = VideoAdmin::all();
         return view('admin.video.list', compact('videos'));
     }
 
@@ -66,7 +66,7 @@ class VideoAdminController extends Controller
 
     public function edit($id) {
         $video = VideoAdmin::findOrFail($id);
-        $video = DB::table('tagging_tagged')->where('taggable_id', '=', $id)->get();
+        $videos = DB::table('tagging_tagged')->where('taggable_id', '=', $id)->get();
         $tagg = "";
         // foreach ($artikel as $post){
         //     foreach($post->tags as $tag) {
@@ -78,7 +78,7 @@ class VideoAdminController extends Controller
             $tagg = $tagg . ',' . $item->tag_name;
             $tagg = trim($tagg, ',');
         }
-        return view('admin.video.edit',compact('video','tagg,'));
+        return view('admin.video.edit',compact('video','videos'));
     }
 
     public function update($id, Request $request) {
