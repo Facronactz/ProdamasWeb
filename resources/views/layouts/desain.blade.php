@@ -100,10 +100,8 @@
         .foot-icon {
             color: #4D148C;
             background-color: white;
-            /* border-radius: 50%; */
-            /* padding: 5px; */
-            line-height: 20px;
-            /* vertical-align: middle; */
+            border-radius: 50%;
+            padding: 5px;
         }
 
         .ph {
