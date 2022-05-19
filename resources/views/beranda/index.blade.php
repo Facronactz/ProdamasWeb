@@ -21,13 +21,13 @@
     }
 
     .carousel-icon-prev {
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
         vertical-align: middle;
         color: white;
         border-radius: 50%;
-        font-size: 18px;
+        font-size: 26px;
         background-color: rgba(0, 0, 0, 0.5);
     }
 </style>
