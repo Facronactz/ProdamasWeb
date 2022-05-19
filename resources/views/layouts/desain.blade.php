@@ -52,7 +52,7 @@
             border-radius: 50%;
             border: 0px solid black;
             width: 30px;
-            height: 30px;
+            height: auto;
         }
 
         .header {
@@ -170,7 +170,7 @@
                                             <div class="container">
                                                 <form action="search" class="mt-3">
                                                     <div style="display:flex; line-height:30px; align-items: center; vertical-align: middle;">
-                                                        <div class="input-group">
+                                                        <div>
                                                             <input class="form-control" type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
                                                         </div>
                                                         <button class="btn-search" type="submit">
