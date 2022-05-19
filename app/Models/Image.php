@@ -9,6 +9,7 @@ use App\Models\Post;
 class Image extends Model
 {
     use HasFactory;
+    protected $table = "images";
     protected $fillable=[
         'image',
         'post_id',
