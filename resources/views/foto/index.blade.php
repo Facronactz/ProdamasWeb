@@ -15,7 +15,7 @@
     </div>
 
     <!-- Awal feed foto -->
-    <div class="row row-cols-1 row-cols-md-3 mb-5 g-4 centerItms feedAudio">
+     <div class="row row-cols-1 row-cols-md-3 mb-5 g-4 centerItms feedAudio">
         @forelse ($posts as $post)
         <div class=" card noBorder cardAudio">
             <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$post->id}}">
