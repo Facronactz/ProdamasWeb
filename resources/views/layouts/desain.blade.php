@@ -270,7 +270,7 @@
                 </div> -->
             </div>
             <div class="col-md-5 col-lg-4 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
-                <div style="font-weight: 700; font-size: 22px">PEMERINTAH KOTA KEDIRI</div>
+                <div style="font-weight: 700; font-size: 20px">PEMERINTAH KOTA KEDIRI</div>
                 <div class="line"></div>
                 <p style="font-weight: 400; font-size: small">
                     Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
