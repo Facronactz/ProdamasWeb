@@ -289,14 +289,14 @@
                 </div>
             </div>
             @endsection --}}
-            <div style="display:flex; justify-content:space-between">
+            <div style="display:flex;">
                 <div class="col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
                     <a href=#><img class="logo-footer" src="{{ asset('img/PRIMARY LOGO WHITE 1.png ') }}" width="130" height="auto" alt="logo-footer" /></a>
                     <!-- <div style="margin-top: 12px">
                     <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
                 </div> -->
                 </div>
-                <div class="row">
+                <div class="row" style="justify-content:space-between">
                     <div class="col-md-6 col-lg-5 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
                         <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
                         <div class="line"></div>
