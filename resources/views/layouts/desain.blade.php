@@ -275,80 +275,79 @@
     <!-- Awal footer -->
     <!-- <footer style="background-image: url('{{url('img/nav_bot.png')}}');background-repeat: no-repeat;background-attachment: local;background-size: cover;"> -->
     <footer>
-        <div class="footer-top" id="footer">
-            <div class="container">
-                <div class="row">
-                    {{-- panggil total kunjungan di footer --}}
-                    <div class="d-flex justify-content-end mt-2">
-                        <div style="margin-top: 15px; border-radius: 15px; color: white; text-align:center; background-color: #F58634; padding:5px">
-                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                            <a style="font-size:15px">Kunjungan: {{$totalviews}}</a>
-                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                        </div>
-                    </div>
-                    {{-- end panggil --}}
-                    {{-- @section('views')
-                    <div class="d-flex justify-content-end mt-2">
-                        <div style="margin-top: 15px; border-radius: 15px; color: white; text-align:center; background-color: #F58634; padding:5px">
-                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                            <a style="font-size:15px">Kunjungan: {{$totalviews}}</a>
-                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                </div>
-            </div>
-            @endsection --}}
+        <div class="footer-top" id="footer" style="border-top: 9px solid #FF6600 ; box-shadow: -2px 5px 10px #aaaaaa;"">
+            <div class=" container">
             <div class="row">
-                <div class=" col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
-                    <a href=#><img class="logo-footer" src="{{ asset('img/PRIMARY LOGO WHITE 1.png ') }}" width="130" height="auto" alt="logo-footer" /></a>
-                    <!-- <div style="margin-top: 12px">
+                {{-- panggil total kunjungan di footer --}}
+                <div class="d-flex justify-content-end mt-2">
+                    <div style="margin-top: 15px; border-radius: 15px; color: white; text-align:center; background-color: #F58634; padding:5px">
+                        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                        <a style="font-size:15px">Kunjungan: {{$totalviews}}</a>
+                        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    </div>
+                </div>
+                {{-- end panggil --}}
+                {{-- @section('views')
+                    <div class="d-flex justify-content-end mt-2">
+                        <div style="margin-top: 15px; border-radius: 15px; color: white; text-align:center; background-color: #F58634; padding:5px">
+                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                            <a style="font-size:15px">Kunjungan: {{$totalviews}}</a>
+                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+            </div>
+        </div>
+        @endsection --}}
+        <div class="row">
+            <div class=" col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
+                <a href=#><img class="logo-footer" src="{{ asset('img/PRIMARY LOGO WHITE 1.png ') }}" width="130" height="auto" alt="logo-footer" /></a>
+                <!-- <div style="margin-top: 12px">
                     <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
                 </div> -->
-                </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
-                            <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
-                            <div class="line"></div>
-                            <p style="font-weight: 400; font-size: 12px">
-                                Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
-                                Kota kediri, Jawa Timur 64146
-                            </p>
-                            <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon"></i> (0354) 682955</p>
-                            <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon ph"></i> prodamas@kedirikota.go.id</p>
-                        </div>
-                        <div class="col-md-6 col-lg-6 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-6">
-                                    <p class="foot-title">
-                                        NAVIGASI</p>
-                                    <div class="line-nav"></div>
-                                    <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
-                                    {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
-                                    <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
-                                    {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
-                                    <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
-                                    <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
-                                </div>
-                                <div class="col-md-6 col-lg-6">
-                                    <p class="foot-title">
-                                        TAUTAN EKSTERNAL</p>
-                                    <div class="line-te"></div>
-                                    <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
-                                    <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
-                                        Sampah</a> <br>
-                                    <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
-                                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-md-6 col-lg-6 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
+                        <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
+                        <div class="line"></div>
+                        <p style="font-weight: 400; font-size: 12px">
+                            Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
+                            Kota kediri, Jawa Timur 64146
+                        </p>
+                        <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon"></i> (0354) 682955</p>
+                        <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon ph"></i> prodamas@kedirikota.go.id</p>
+                    </div>
+                    <div class="col-md-6 col-lg-6 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6">
+                                <p class="foot-title">
+                                    NAVIGASI</p>
+                                <div class="line-nav"></div>
+                                <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
+                                {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
+                                <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
+                                {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
+                                <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
+                                <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <p class="foot-title">
+                                    TAUTAN EKSTERNAL</p>
+                                <div class="line-te"></div>
+                                <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
+                                <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
+                                    Sampah</a> <br>
+                                <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col d-flex">
-                        <div class="line-te" style="margin-right:1rem"></div>
-                        <a style="font-weight: 400; font-size: 12px" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube foot-icon"></i></a>
-                        <a style="font-weight: 400; font-size: 12px" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram foot-icon"></i></a>
-                        <a style="font-weight: 400; font-size: 12px" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
-                        <a style="font-weight: 400; font-size: 12px" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
-                    </div>
-                    <div class="footer-copyright footer-link" style="color: white">&copy; 2021 Prodamas Plus</div>
                 </div>
+                <div class="col d-flex">
+                    <div class="line-te" style="margin-right:1rem"></div>
+                    <a style="font-weight: 400; font-size: 12px" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube foot-icon"></i></a>
+                    <a style="font-weight: 400; font-size: 12px" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram foot-icon"></i></a>
+                    <a style="font-weight: 400; font-size: 12px" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
+                    <a style="font-weight: 400; font-size: 12px" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
+                </div>
+                <div class="footer-copyright footer-link" style="color: white">&copy; 2021 Prodamas Plus</div>
             </div>
         </div>
         </div>
