@@ -73,7 +73,7 @@ Cerita Baru
     </div>
     <div class="form-group">
         <label for="ringkasan">Ringkasan Cerita</label>
-        <textarea name="ringkasan" id="description" class="form-control" placeholder="Tulis cerita disini..." cols="30" rows="10"></textarea>
+        <textarea name="ringkasan" class="form-control" placeholder="Tulis cerita disini..." cols="30" rows="10"></textarea>
         @error('ringkasan')
         <div class="alert alert-danger">
             {{ $message }}
