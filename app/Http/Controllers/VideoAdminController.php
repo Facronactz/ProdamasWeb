@@ -90,9 +90,9 @@ class VideoAdminController extends Controller
         $video = VideoAdmin::findorfail($id);
         $file = $request->file('gambar_sampul');
         if ($file != NULL) {
-            File::delete(public_path("../videoProd/" . $video->gambar_sampul));
+            File::delete(public_path("../videoProd/sampul/" . $video->gambar_sampul));
             $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-            $file->move(public_path('../videoProd/'), $filePath);
+            $file->move(public_path('../videoProd/sampul/'), $filePath);
 
             $video->update([
                 'judul' => $request->judul,

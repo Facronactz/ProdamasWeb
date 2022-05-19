@@ -83,7 +83,6 @@ class AudioAdminController extends Controller
 
     public function update($id, Request $request) {
         $request->validate([
-            'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
             'judul' => 'required',
             'konten' => 'required', 
             'caption' => 'required'
@@ -94,7 +93,7 @@ class AudioAdminController extends Controller
         if ($file != NULL) {
             File::delete(public_path("../audioProd/thumb/" . $audio->gambar_sampul));
             $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-            $file->move(public_path('../audioProd/thumb'), $filePath);
+            $file->move(public_path('../audioProd/thumb/'), $filePath);
 
             $audio->update([
                 'gambar_sampul' => $filePath,
