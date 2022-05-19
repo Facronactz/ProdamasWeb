@@ -24,6 +24,7 @@
         width: 40px;
         height: 40px;
         text-align: center;
+        align-items: center;
         color: white;
         border-radius: 50%;
         background-color: rgba(0, 0, 0, 0.5);
