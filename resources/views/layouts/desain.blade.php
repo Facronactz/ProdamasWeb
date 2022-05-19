@@ -103,10 +103,8 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            line-height: 20px;
-            vertical-align: middle;
-
-            
+            /* line-height: 20px;
+            vertical-align: middle; */
         }
 
         .ph {
