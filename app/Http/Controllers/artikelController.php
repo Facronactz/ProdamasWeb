@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use App\Models\ArticleAdmin;
-use App\Models\AudioAdmin;
-use App\Models\FotoAdmin;
-use App\Models\VideoAdmin;
-use App\Models\Visitor;
 use Share;
+use App\Models\Post;
+use App\Models\Image;
+use App\Models\Visitor;
+use App\Models\FotoAdmin;
+use App\Models\AudioAdmin;
+use App\Models\VideoAdmin;
+use App\Models\ArticleAdmin;
+use Illuminate\Http\Request;
 
 use App\Models\SettingCarousel;
+use Illuminate\Support\Facades\DB;
 
 
 class artikelController extends Controller
