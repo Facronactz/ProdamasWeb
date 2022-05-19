@@ -269,7 +269,7 @@
                     <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
                 </div> -->
             </div>
-            <div class="col-md-5 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
+            <div class="col-md-5 col-lg-5 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
                 <div style="font-weight: 700; font-size: 20px">PEMERINTAH KOTA KEDIRI</div>
                 <div class="line"></div>
                 <p style="font-weight: 400; font-size: 12px">
@@ -279,9 +279,9 @@
                 <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon"></i> (0354) 682955</p>
                 <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon ph"></i> prodamas@kedirikota.go.id</p>
             </div>
-            <div class="col-md-3 col-lg-4 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
+            <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <p style="font-weight: 600; font-weight: bold; font-size:25px;">
                             NAVIGASI</p>
                         <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
