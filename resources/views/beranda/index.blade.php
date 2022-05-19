@@ -337,6 +337,7 @@
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
                                 </button>
+                                <h5>{{ $post->body }}</h5>
                             </div>
                     </div>
             </div>
