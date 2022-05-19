@@ -34,7 +34,7 @@ Edit Audio
     </div>
     <div class="form-group">
         <label for="audio">Konten</label>
-        <input type="text" name="audio" class="form-control" cols="30" rows="10"value="{{$video->konten}}">
+        <input type="text" name="audio" class="form-control" cols="30" rows="10"value="{{$audio->konten}}">
         @error('audio')
         <div class="alert alert-danger">
             {{ $message }}
