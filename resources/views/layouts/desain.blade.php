@@ -105,7 +105,7 @@
                     </button>
 
                     <!-- Content -->
-                    <div class="collapse navbar-collapse justify-content-evenly" id="navbarNavAltMarkup">
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <!-- Middle -->
                         <div class="navbar-nav mx-auto">
                             <a class="nav-link @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{asset('img/ICON HOME.png')}}" style="width: 20px; height: 20px;"></a>
@@ -142,19 +142,6 @@
                             <a class="nav-link @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a>
                         </div>
 
-                        {{-- Search --}}
-                        {{-- <div class="input-group" style="max-width: 10vw">
-                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                    <select class="form-select" id="inputGroupSelect01">
-                        <option selected>Semua</option>
-                        <option value="1">Foto</option>
-                        <option value="2">Audio</option>
-                        <option value="3">Video</option>
-                    </select>
-                    <button class="btn btn-primary">
-                        <i class="fas fa-search link-light"></i>
-                    </button>
-                </div> --}}
                         {{-- Medsos --}}
                         <span class="navbar-text">
                             <div class="d-flex justify-content-evenly">
@@ -173,8 +160,7 @@
                                 <button class="align-self-center btn btn-outline-light login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In<i class="fas fa-sign-in-alt ms-2"></i></button>
                                 @endguest
                             </div>
-
-                        </div>
+                        </span>
                     </div>
                 </div>
             </nav>
