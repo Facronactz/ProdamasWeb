@@ -27,7 +27,6 @@
                 @endforeach
             </div>
         </div>
-
     </div>
     <!--div container-->
 </section>
