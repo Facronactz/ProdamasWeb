@@ -18,6 +18,23 @@ class artikelController extends Controller
 {
         public function index()
         {
+                // total
+                DB::table('counters')->increment('views');
+                $counter = DB::table('counters')->get();
+                
+
+                // code jumlah pengunjung
+                $artikel = DB::table('articles')
+                        ->select(DB::raw('views'));
+                $counter = DB::table('counters')
+                        ->select(DB::raw('views'));
+		        $totalviews = DB::table('tulis_ceritas')
+                        ->select(DB::raw('views'))
+                        ->unionAll($artikel)
+                        ->unionAll($counter)
+                        ->sum('views');
+                // end code jumlah pengunjung
+            
                 $artikel = ArticleAdmin::where('status', 'published')
                         ->orderBy('id', 'desc')
                         ->paginate(4);
@@ -26,7 +43,7 @@ class artikelController extends Controller
                         ->orderBy('id', 'desc')
                         ->take(3)
                         ->get();
-                return view('artikel.index', compact('artikel', 'artikelupdate'));
+                return view('artikel.index', compact('artikel', 'artikelupdate', 'totalviews', 'counter'));
         }
 
         public function beranda()
