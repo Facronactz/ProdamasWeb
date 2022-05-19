@@ -137,7 +137,73 @@
 
     <!--end video-->
 
-    
+    <!-- foto-->
+    <!-- <div class="container-md my-5">
+        <h3 class="mb-4" style="font-family: Inter, sans-serif">Foto</h3>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 px-md-0 px-5">
+            @if ($fotos->count())
+                @foreach ($fotos as $item)
+                    <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
+                        <div class="card h-100 hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
+                            <img src="{{ asset('fotoProd/' . $item->konten) }}" class="card-img-top card-img-fix" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $item->judul }}</h5>
+                                {{-- <p class="card-text">{{ $item->caption }}</p> --}}
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+        </div>
+        <div class="d-flex justify-content-end mt-2">
+            <a href="{{ url('foto') }}" class="btn btn-primary hvr-icon-forward">
+                Selengkapnya
+                <i class="hvr-icon fas fa-arrow-right"></i>
+            </a>
+        </div>
+    @else
+    </div>
+        <div class="alert alert-success" role="alert">
+            Tidak ada data
+        </div>
+        @endif
+    </div>
+
+    @foreach ($fotos as $item)
+        {{-- Card Modal --}}
+        <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <h5 class="modal-title" id="fotoLabel">{{ $item->judul }}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row row-cols-1 row-cols-md-2 mb-2 g-4 videoPlayerBox centerItms">
+                            <div class="card" style="
+                                                  border: none;
+                                                  margin: 0;
+                                                  margin-top: 30px;
+                                                  ">
+                                <img class="d-flex" src="{{ asset('fotoProd/' . $item->konten) }}" controls>
+                            </div>
+                            <div class="card" style="
+                                                  border: none;
+                                                  ">
+                                <h3>{{ $item->judul }}</h3>
+                                {{-- <p>{{ $item->caption }}</p> --}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- Akhir Card foto --}}
+    @endforeach -->
+    <!--end foto -->
+
     <!-- Awal feed foto -->
     <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedAudio justify-content-center">
         @if ($posts->count())
@@ -179,7 +245,7 @@
     @foreach ($posts as $post)
         {{-- Card Modal --}}
         <div class="modal fade" id="audioPlayer{{ $post->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl" style="width: 500px; height: 500px">
+            <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header ">
                         <h2 class="modal-title" id="fotoLabel">{{ $post->title }}</h2>
@@ -188,7 +254,19 @@
                     <div class="modal-body">
                         <div id="carouselIndicators{{ $post->id }}" class="carousel slide" data-ride="carousel">
 
-                            
+                            <!-- <div class="carousel-inner">
+                                @foreach ($post->image as $no => $image)
+                                    @if ($no == 0)
+                                        <div class="carousel-item active">
+                                            <img src="{{ asset('images/' . $image->image) }}" class="d-block w-100" alt="...">
+                                        </div>
+                                    @else
+                                        <div class="carousel-item">
+                                            <img src="{{ asset('images/' . $image->image) }}" class="d-block w-100" alt="...">
+                                        </div>
+                                    @endif
+                                @endforeach -->
+                            <!-- </div> -->
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators{{ $post->id }}" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
