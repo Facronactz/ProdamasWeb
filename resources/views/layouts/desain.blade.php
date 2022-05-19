@@ -109,7 +109,7 @@
                     </button>
 
                     <!-- Content -->
-                    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNavAltMarkup">
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                         <!-- Middle -->
                         <div class="navbar-nav">
                             <a class="nav-link nav-list" aria-current="page" href="{{ url('/') }}"><img class="@yield('beranda')" src="{{asset('img/ICON HOME.png')}}" style="width: 20px; height: 20px; margin-right: 1rem"></a>
