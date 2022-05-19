@@ -74,7 +74,11 @@ class artikelController extends Controller
                         ->take(3)
                         ->get();
 
-                $foto = FotoAdmin::orderBy('id', 'desc')
+                $posts = Post::orderBy('id', 'desc')
+                        ->take(3)
+                        ->get();
+                
+                $images = Image::orderBy('id', 'desc')
                         ->take(3)
                         ->get();
 
@@ -88,7 +92,7 @@ class artikelController extends Controller
                 // Visitor::find('id')->increment('views');
                 // $visitors = Visitor::orderBy('id')->get();
 
-                return view('beranda.index', compact('artikel', 'video', 'foto', 'audio', 'carousels', 'totalviews', 'counter'));
+                return view('beranda.index', compact('artikel', 'video', 'posts', 'audio', 'carousels', 'totalviews', 'counter'));
         }
 
         public function show($id)
