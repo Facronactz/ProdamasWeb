@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap" rel="stylesheet">
 
     <!-- Icon -->
     <link href="{{ asset('img/icon.png') }}" rel="icon" />
@@ -95,10 +96,10 @@
 <body data-bs-spy="scroll" data-bs-target="#scrollspy" data-bs-offset="0" data-bs-method="position">
     <!-- New Nav -->
     <div class="bg-iki">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-kediri sticky-top" style="font-family: Inter; background-color: #4d148c">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-kediri sticky-top" style="font-family: 'Poppins', sans-serif;; background-color: #4d148c">
             <div class="container-fluid mx-xxl-5">
                 <a href="{{ url('/') }}"><img src="https://prodamasdev.kedirikota.go.id/img/logoprodamas.png" alt="" class="d-inline-block align-text-top" width="40" height="40" /></a>
-                <a class="navbar-brand ms-2" href="{{ url('/') }}" style="font-family: Inter">PRODAMAS</a>
+                <a class="navbar-brand ms-2" href="{{ url('/') }}" style="font-family: 'Poppins', sans-serif;">PRODAMAS</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
