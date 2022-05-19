@@ -136,6 +136,10 @@
 
         }
 
+        .iva + .iva {
+            margin-left: 1rem;
+        }
+
         /* .bg-iki {
             background-image: url('{{ url('img/pattern.png') }}');
             background-repeat: no-repeat;
@@ -334,8 +338,8 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-between">
-                        <div class="line-te"></div>
-                        <div class="">
+                        <div class="iva line-te"></div>
+                        <div class="iva">
                             <a style="font-weight: 400; font-size: 12px" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube foot-icon"></i></a>
                             <a style="font-weight: 400; font-size: 12px" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram foot-icon"></i></a>
                             <a style="font-weight: 400; font-size: 12px" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
