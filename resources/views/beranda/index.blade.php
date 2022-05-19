@@ -23,6 +23,9 @@
     .carousel-icon-prev {
         width: 40px;
         height: 40px;
+        text-align: center;
+        color: white;
+        border-radius: 50%;
         background-color: rgba(0, 0, 0, 0.5);
     }
 </style>
@@ -68,7 +71,7 @@
             </div> --}}
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselUtama" data-bs-slide="prev">
-        <span class="carousel-icon-prev" aria-hidden="true"></span>
+        <span class="carousel-icon-prev" aria-hidden="true"><i class="fas fa-arrow-left"></i></span>
         <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselUtama" data-bs-slide="next">
