@@ -279,9 +279,9 @@
                 <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon"></i> (0354) 682955</p>
                 <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon ph"></i> prodamas@kedirikota.go.id</p>
             </div>
-            <div class="col-md-3 col-lg-5 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
+            <div class="col-md-3 col-lg-4 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <p style="font-weight: 600; font-weight: bold; font-size:25px;">
                             NAVIGASI</p>
                         <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
