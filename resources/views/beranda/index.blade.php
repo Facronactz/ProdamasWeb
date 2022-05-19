@@ -11,7 +11,6 @@
         object-position: center;
         height: 350px;
         width: 100%;
-        border-bottom: 7px solid #FF6600 ;
     }
 
     .card-img-fix {

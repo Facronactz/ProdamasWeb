@@ -111,7 +111,7 @@
                     <!-- Content -->
                     <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                         <!-- Middle -->
-                        <div class="navbar-nav">
+                        <div class="navbar-nav" style="border-bottom: 7px solid #FF6600 ;">
                             <a class="nav-link nav-list @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{asset('img/ICON HOME.png')}}" style="width: 20px; height: 20px; margin-right: 1rem"></a>
                             <a class="nav-link nav-list @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
                             <div class="nav-item dropdown nav-list">
