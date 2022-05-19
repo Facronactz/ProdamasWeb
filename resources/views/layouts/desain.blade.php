@@ -102,7 +102,7 @@
             background-color: white;
             width: 20px;
             height: 20px;
-            border-radius: 50%;
+            /* border-radius: 50%; */
             padding: 5px;
             /* line-height: 20px;
             vertical-align: middle; */
