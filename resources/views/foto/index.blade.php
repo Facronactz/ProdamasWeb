@@ -4,10 +4,24 @@
 
 
 @section('content')
-
-<body>
-    <!-- corousel -->
-    
+<div class="container">
+        <div class="div-title mt-3">
+            <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
+            <h1 class="home-title header-text px-2">
+                <span>Foto</span>
+            </h1>
+        </div>
+</div>
+    <div class="container">
+        <!-- <form action="searchvideo">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchvideo" value="{{ request('searchvideo') }}">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-search link-light"></i>
+                </button>
+            </div>
+        </form> -->
+    </div>
     <div class="row row-cols-1 row-cols-md-3 mb-5 g-4 centerItms feedAudio">
         @forelse ($posts as $post)
         <div class=" card noBorder cardAudio">
@@ -80,18 +94,6 @@
         <div class="d-flex justify-content-end w-100 mb-4">
             {{ $posts->links() }}
         </div>
-    <!-- corousel -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
-    </script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-</body>
 
 </html>  
 
