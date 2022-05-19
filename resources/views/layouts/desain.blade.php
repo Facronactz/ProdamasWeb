@@ -98,10 +98,10 @@
         }
 
         .foot-icon {
-            color: black;
+            color: #4D148C;
             background-color: white;
-            width: 10px;
-            height: 10px;
+            width: 40px;
+            height: 40px;
             padding: 3px;
             border-radius: 50%;
         }
