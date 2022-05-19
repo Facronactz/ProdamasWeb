@@ -287,7 +287,7 @@
         </div>
         <!--div footer-top-->
 
-        <div class="footer-bottom">
+        <div class="footer-bottom" style="background: transparent;">
             <div class="container">
                 <div class="row">
                     {{-- @section('views')
