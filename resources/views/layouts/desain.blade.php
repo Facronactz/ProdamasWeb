@@ -161,7 +161,7 @@
                                 <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a> -->
                                 @auth
                                 {{-- Button Admin --}}
-                                <a class="align-self-center btn login-icon ms-3" href="/admin"><i class="fas fa-user-shield ms-2"></i> Admin</a>
+                                <a class="align-self-center btn login-icon" href="/admin"><i class="fas fa-user-shield ms-2"></i> Admin</a>
                                 {{-- Button Logout --}}
                                 <a class="align-self-center btn login-icon ms-3" href="/signout"><i class="fas fa-sign-out-alt ms-2"></i> Log Out</a>
                                 @endauth
