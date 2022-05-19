@@ -101,11 +101,10 @@
             color: #4D148C;
             background-color: white;
             width: 20px;
-            height: 20px;
             /* border-radius: 50%; */
-            padding: 5px;
-            /* line-height: 20px;
-            vertical-align: middle; */
+            /* padding: 5px; */
+            line-height: 20px;
+            /* vertical-align: middle; */
         }
 
         .ph {
