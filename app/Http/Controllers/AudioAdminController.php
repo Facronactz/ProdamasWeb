@@ -107,7 +107,7 @@ class AudioAdminController extends Controller
         } else {
             $audio->update([
                 'judul' => $request->judul,
-                'konten' => $request->konten,
+                'konten' =>  $request->konten,
                 'caption' => $request->caption
             ]);
             $hsl = explode(",", $request->tags);
