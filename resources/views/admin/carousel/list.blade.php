@@ -28,7 +28,7 @@ Carousel Submission
         <tr>
             <td>{{$key + 1}}</th>
             <td>{{$carousel->nama}}</td>
-            <td><img style="max-width: 1200px" src="{{ '../carouselProd/'. $carousel->foto }}" alt=""></td>
+            <td><img style="max-width: 1000px" src="{{ '../carouselProd/'. $carousel->foto }}" alt=""></td>
             <td> 
                 <a href="{{ url('admin/edit-carousel/'.$carousel->id) }}" class="btn btn-info">Edit</a>
               <form action="{{ url('admin/delete-carousel/'.$carousel->id)}}" method="POST">
