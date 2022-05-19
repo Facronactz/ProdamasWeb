@@ -23,8 +23,8 @@
     .carousel-icon-prev {
         width: 40px;
         height: 40px;
-        text-align: center;
-        align-items: center;
+        line-height: 40px;
+        vertical-align: middle;
         color: white;
         border-radius: 50%;
         background-color: rgba(0, 0, 0, 0.5);
