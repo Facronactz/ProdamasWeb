@@ -24,9 +24,9 @@
     </div>
     <div class="row row-cols-1 row-cols-md-3 mb-5 g-4 centerItms feedAudio">
         @forelse ($posts as $post)
-        <div class=" card noBorder cardAudio" style="width: 18rem; cursor: pointer;">
+        <div class=" card noBorder cardAudio" >
             <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$post->id}}">
-                <img src="{{ asset('cover/'. $post->cover) }}" style="width: 250px; height: 270px; object-fit: cover;" class="card-img-top d-flex justify-content mx-auto" alt="foto-prodamas">
+                <img src="{{ asset('cover/'. $post->cover) }}" style="width: 100%; height: 270px; object-fit: cover; object-position: center" class="card-img-top d-flex justify-content" alt="foto-prodamas">
                 <div class="card-body">
                     <h3 class="card-title">
                         <p class=" tittleAudio" href="">
