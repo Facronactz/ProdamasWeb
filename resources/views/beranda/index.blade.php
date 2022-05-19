@@ -244,8 +244,29 @@
             <div class="card h-100 d-block hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                 <img src="{{ asset('fotoProd/' . $item->konten) }}" class="card-img-top card-img-fix" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title"><?= $item->judul ?></h5>
-                    <p class="card-text"><?= $item->caption ?></p>
+                <div id="carouselIndicators{{ $post->id }}" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                @foreach ($post->images as $no => $images)
+                                    @if ($no == 0)
+                                        <div class="carousel-item active">
+                                            <img src="{{ asset('images/' . $images->image) }}" class="d-block w-100" alt="...">
+                                        </div>
+                                    @else
+                                        <div class="carousel-item">
+                                            <img src="{{ asset('images/' . $images->image) }}" class="d-block w-100" alt="...">
+                                        </div>
+                                    @endif
+                                @endforeach
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators{{ $post->id }}" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators{{ $post->id }}" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                 </div>
             </div>
         </div>
