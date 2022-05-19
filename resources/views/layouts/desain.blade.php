@@ -107,7 +107,7 @@
                     <!-- Content -->
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <!-- Middle -->
-                        <div style="display:flex; justify-content:space-between">
+                        <div style="justify-content:space-between">
                             <div class="navbar-nav">
                                 <a class="nav-link @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{asset('img/ICON HOME.png')}}" style="width: 20px; height: 20px;"></a>
                                 <a class="nav-link @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
