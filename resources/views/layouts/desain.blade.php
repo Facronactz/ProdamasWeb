@@ -41,7 +41,10 @@
             color: black !important;
             background-color: white;
             font-weight: 400;
-            margin-left: 3rem
+        }
+
+        .login-icon {
+            opacity: 0;
         }
 
         .login-icon i:hover {
@@ -206,6 +209,7 @@
                                 @endauth
                                 @guest
                                 {{-- Button trigger modal --}}
+                                <a class="align-self-center btn login-icon-sc ms-3" href=""><i class="fas fa-user-shield"></i> Admin</a>
                                 <button class="align-self-center btn login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Sign In</button>
                                 @endguest
                             </div>
