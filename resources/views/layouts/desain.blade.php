@@ -52,6 +52,7 @@
             border-radius: 50%;
             border: 0px solid black;
             width: 30px;
+            margin-left: 0.5rem;
         }
 
         .header {
