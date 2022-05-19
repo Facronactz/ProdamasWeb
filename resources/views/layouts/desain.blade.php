@@ -173,7 +173,7 @@
                                                             <input class="form-control" type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
                                                         </div>
                                                         <button class="btn-search" type="submit">
-                                                            <i class="fa-arrow-right"></i>
+                                                            <i class="fas fa-arrow-right"></i>
                                                         </button>
                                                     </div>
 
