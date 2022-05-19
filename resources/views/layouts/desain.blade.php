@@ -43,6 +43,10 @@
             font-weight: 400;
         }
 
+        .login-icon-sc {
+            opacity: 0;
+        }
+
         .login-icon i:hover {
             color: black !important;
         }
@@ -206,6 +210,7 @@
                                 @guest
                                 {{-- Button trigger modal --}}
                                 <button class="align-self-center btn login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Sign In</button>
+                                <a class="align-self-center btn login-icon-sc ms-3" href=""><i class="fas fa-user-shield"></i> Admin</a>
                                 @endguest
                             </div>
                         </div>
