@@ -8,8 +8,8 @@
     <style>
         .carousel-img {
             object-fit:cover;
-            object-position: top;
-            height: 500px;
+            object-position: center;
+            height: 550px;
             width: 100%;
         }
 
