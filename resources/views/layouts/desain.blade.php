@@ -96,7 +96,7 @@
 <body data-bs-spy="scroll" data-bs-target="#scrollspy" data-bs-offset="0" data-bs-method="position">
     <!-- New Nav -->
     <div class="nav-now" style="background-color: #4d148c">
-        <a href=" {{ url('/') }}"><img src="{{asset('img/wesite logo 1.png')}}" alt="" class="d-inline-block align-text-top" style="width: 15%; padding: 2rem 2rem; margin-bottom: -2rem" /></a>
+        <a href=" {{ url('/') }}"><img src="{{asset('img/wesite logo 1.png')}}" alt="" class="d-inline-block align-text-top" style="width: 165; height: auto; padding: 2rem 2rem; margin-bottom: -2rem" /></a>
         <div class="bg-iki">
             <nav class="navbar navbar-expand-lg navbar-dark bg-kediri sticky-top" style="font-family: 'Poppins', sans-serif;">
                 <div class=" container-fluid mx-xxl-5">
