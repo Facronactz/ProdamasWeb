@@ -194,16 +194,15 @@
                     </div>
                     <div class="modal-body">
                         <div id="carouselIndicators{{ $post->id }}" class="carousel slide" data-ride="carousel">
-
-                           <div class="carousel-inner">
-                                @foreach ($post->image as $no => $image)
+                            <div class="carousel-inner">
+                                @foreach ($post->images as $no => $images)
                                     @if ($no == 0)
                                         <div class="carousel-item active">
-                                            <img src="{{ asset('images/' . $image->image) }}" class="d-block w-100" alt="...">
+                                            <img src="{{ asset('images/' . $images->image) }}" class="d-block w-100" alt="...">
                                         </div>
                                     @else
                                         <div class="carousel-item">
-                                            <img src="{{ asset('images/' . $image->image) }}" class="d-block w-100" alt="...">
+                                            <img src="{{ asset('images/' . $images->image) }}" class="d-block w-100" alt="...">
                                         </div>
                                     @endif
                                 @endforeach
