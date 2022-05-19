@@ -6,6 +6,7 @@ use App\Models\AudioAdmin;
 use App\Models\VideoAdmin;
 use App\Models\CeritaAdmin;
 use App\Models\Post;
+use App\Models\Image;
 use App\Models\ArticleAdmin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -53,13 +54,21 @@ class SearchController extends Controller
         // ->take(3)
         // ->get()
         ;
+
+        $images = Image::where('image', 'like', "%" . $keyword . "%")
+        // ->orWhere('body', 'like', "%" . $keyword . "%")
+        ->paginate()
+        // ->take(3)
+        // ->get()
+        ;
+
         $videos = VideoAdmin::where('judul', 'like', "%" . $keyword . "%")
         ->orWhere('caption', 'like', "%" . $keyword . "%")
         ->paginate()
         // ->take(3)
         // ->get()
         ;
-        return view('search.search', compact('audios','artikel','posts','videos', 'totalviews', 'counter'));
+        return view('search.search', compact('audios','artikel','images','posts','videos', 'totalviews', 'counter'));
     }
 
     public function searchartikel(Request $request)
