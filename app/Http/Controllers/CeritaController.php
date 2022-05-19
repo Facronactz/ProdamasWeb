@@ -12,7 +12,9 @@ class CeritaController extends Controller
     //
     public function index()
     {
-        $tulis_ceritas = Cerita::orderBy('id', 'desc')->get();
+        $tulis_ceritas = Cerita::orderBy('id', 'desc')
+        ->get()
+        ->paginate(4);
         $descriptions = DescriptionAdmin::first()->get();
         return view('cerita.index', compact('tulis_ceritas', 'descriptions'));
     }
