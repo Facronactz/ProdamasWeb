@@ -94,7 +94,7 @@
             height: 2px;
             width: calc(100% - 4rem);
             background-color: white;
-            margin: 0.5rem 0 0.5rem 0;
+            margin: 0.5rem 0 0.8rem 0;
         }
 
         /* .bg-iki {
