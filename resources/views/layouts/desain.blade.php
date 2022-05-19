@@ -99,7 +99,7 @@
         <a href=" {{ url('/') }}"><img src="https://prodamasdev.kedirikota.go.id/img/logoprodamas.png" alt="" class="d-inline-block align-text-top" width="40" height="40" /></a>
         <a class="navbar-brand ms-2" href="{{ url('/') }}" style="font-family: 'Poppins', sans-serif;">PRODAMAS</a>
         <div class="bg-iki">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-kediri sticky-top" style="font-family: 'Poppins', sans-serif;>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-kediri sticky-top" style="font-family: 'Poppins', sans-serif;">
             <div class=" container-fluid mx-xxl-5">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
