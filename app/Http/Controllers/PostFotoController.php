@@ -10,7 +10,7 @@ class PostFotoController extends Controller
 {
     public function index()
     {
-        $posts = Post::orderBy('id', 'desc')->get();
+        $posts = Post::orderBy('id', 'desc')->paginate(4);;
         // $posts = Post::join('images', 'posts.id', '=', 'images.post_id')
         // ->get(['posts.*', 'images.*']);
         // echo json_encode($posts);die();
