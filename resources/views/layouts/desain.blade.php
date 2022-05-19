@@ -167,7 +167,7 @@
                                     <a class="nav-link" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{{asset('img/ICON CARI.png')}}" style="width: 17px; height: 17px;"></a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
                                         <li class="w-100">
-                                            <div class="">
+                                            <div style="width: 80px">
                                                 <form action="search" class="mt-3">
                                                     <div style="display:flex; line-height:30px; align-items: center; vertical-align: middle;">
                                                         <div class="input-group">
