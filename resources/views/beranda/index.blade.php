@@ -62,11 +62,11 @@
             </div> --}}
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselUtama" data-bs-slide="prev">
-        <span class="carousel-icon" aria-hidden="true"></span>
+        <span class="carousel-icon-prev" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselUtama" data-bs-slide="next">
-        <span class="carousel-icon" aria-hidden="true"></span>
+        <span class="carousel-icon-next" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
 </div>
