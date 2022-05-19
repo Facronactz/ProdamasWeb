@@ -250,19 +250,19 @@
                 </div> -->
             </div>
             <div class="col-md-5 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white">
-                <h5 style="font-family: Inter, sans-serif">Pemerintah Kota Kediri</h5>
+                <h5 style="font-family: 'Poppins', sans-serif;">Pemerintah Kota Kediri</h5>
                 <p style="font-size: small">
                     Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
                     Kota kediri, Jawa Timur 64146
                 </p>
-                <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf0e0;
+                <p style="font-family: 'Poppins', sans-serif;; font-weight: 600">&#xf0e0;
                     prodamas@kedirikota.go.id</p>
-                <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf095; (0354) 682955</p>
+                <p style="font-family: 'Poppins', sans-serif;; font-weight: 600">&#xf095; (0354) 682955</p>
             </div>
             <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white">
                 <div class="row">
                     <div class="col-md-6">
-                        <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
+                        <p style="font-family: 'Poppins', sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
                             Navigasi</p>
                         <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
                         {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
@@ -272,7 +272,7 @@
                         <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
                     </div>
                     <div class="col-md-6">
-                        <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
+                        <p style="font-family: 'Poppins', sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
                             Tautan Eksternal</p>
                         <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
                         <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
