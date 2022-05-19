@@ -241,7 +241,7 @@
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
         @foreach ($posts as $post)
         <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
-            <div class="card h-100 d-block hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
+            <div class="card h-100 d-block hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $post->id }}">
                 <img src="{{ asset('cover/' . $post->cover) }}" class="card-img-top card-img-fix" alt="...">
                 <div class="card-body">
                 <div id="carouselIndicators{{ $post->id }}" class="carousel slide" data-ride="carousel">
@@ -314,34 +314,22 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="modal-body">
-                    <div id="carouselIndicators{{ $post->id }}" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            @foreach ($post->images as $no => $images)
-                                @if ($no == 0)
-                                    <div class="carousel-item active">
-                                        <img src="{{ asset('images/' . $images->image) }}" class="d-block w-100" alt="...">
-                                    </div>
-                                @else
-                                    <div class="carousel-item">
-                                        <img src="{{ asset('images/' . $images->image) }}" class="d-block w-100" alt="...">
-                                    </div>
-                                @endif
-                            @endforeach
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators{{ $post->id }}" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators{{ $post->id }}" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                <div class="row row-cols-1 row-cols-md-2 mb-2 g-4 videoPlayerBox centerItms">
+                    <div class="card" style="
+                                  border: none;
+                                  margin: 0;
+                                  margin-top: 30px;
+                                  ">
+                        <img class="d-flex" src="{{ asset('cover/' . $post->cover) }}" controls>
                     </div>
-                    <!-- </div> -->
-
-                    <h6>{{ $post->body }}</h6>
+                    <div class="card" style="
+                                  border: none;
+                                  ">
+                        <h3><?= $post->title ?></h3>
+                        <p><?= $post->body ?></p>
+                    </div>
                 </div>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
             </div>
