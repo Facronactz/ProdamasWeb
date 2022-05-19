@@ -31,6 +31,6 @@ class BidangController extends Controller
 
         $bidangs = Bidang::orderBy('id')->get();
         $descriptions = DescriptionAdmin::first()->get();
-        return view('tentang.bidang', compact('bidangs', 'descriptions', 'totalviews', 'counter'));
+        return view('bidang.index', compact('bidangs', 'descriptions', 'totalviews', 'counter'));
     }
 }
