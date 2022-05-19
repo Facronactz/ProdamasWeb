@@ -309,7 +309,7 @@
                     </div>
                     <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
                         <div class="row">
-                            <div class="col-md-6" style="margin-right:4rem">
+                            <div class="col-md-6" style="margin-right:2rem">
                                 <p class="foot-title">
                                     NAVIGASI</p>
                                 <div class="line-nav"></div>
