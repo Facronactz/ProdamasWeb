@@ -71,11 +71,6 @@
                     {{ $artikel->links() }}
                 </div>
                 @endif
-                @else
-                <div class="alert alert-success" role="alert">
-                    Tidak ada data
-                </div>
-                @endif
             </div>
 
 
