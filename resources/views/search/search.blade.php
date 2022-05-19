@@ -158,16 +158,16 @@
                                 {{ $post->title }}
                                 </p>
                                 </h3>
-                                {{-- {{ $post->created_at }} --}}
+                                <!-- {{ $post->created_at }} -->
                             </div>
                     </div>
                 </div>
-        @empty
-            <div class="alert alert-success" role="alert">
-                Tidak ada data
+                @empty
+                <div class="alert alert-success" role="alert">
+                    Tidak ada data
+                </div>
             </div>
-        @endforelse
-        </div>
+                @endforelse
                 <div class="d-flex justify-content-end mt-2">
                     <a href="{{ url('foto') }}" class="btn btn-primary hvr-icon-forward">
                         Selengkapnya
@@ -195,7 +195,7 @@
                     <div class="modal-body">
                         <div id="carouselIndicators{{ $post->id }}" class="carousel slide" data-ride="carousel">
 
-                           <div class="carousel-inner">
+                            <div class="carousel-inner">
                                 @foreach ($post->image as $no => $image)
                                     @if ($no == 0)
                                         <div class="carousel-item active">
