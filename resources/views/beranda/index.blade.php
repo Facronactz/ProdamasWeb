@@ -28,6 +28,7 @@
         color: white;
         border-radius: 50%;
         font-size: 26px;
+        font-weight: 400;
         background-color: rgba(0, 0, 0, 0.5);
     }
 </style>
