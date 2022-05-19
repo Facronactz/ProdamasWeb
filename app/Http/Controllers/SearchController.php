@@ -281,7 +281,7 @@ class SearchController extends Controller
         $tulis_ceritas = CeritaAdmin::where('judul', 'like', "%" . $keyword . "%")
         ->orWhere('ringkasan', 'like', "%" . $keyword . "%")
         ->paginate(2);
-        return view('cerita.searchcerita', compact('tulis_ceritas', 'totalviews, 'counter'))->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('cerita.searchcerita', compact('tulis_ceritas', 'totalviews', 'counter'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function searchtagcerita()
