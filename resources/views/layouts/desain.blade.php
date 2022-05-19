@@ -104,6 +104,7 @@
             /* border-radius: 50%; */
             /* padding: 5px; */
             line-height: 20px;
+            padding: 0px;
             /* vertical-align: middle; */
         }
 
