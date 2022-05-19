@@ -21,6 +21,8 @@
     }
 
     .carousel-icon-prev {
+        width: 40px;
+        height: 40px;
         background-color: rgba(0, 0, 0, 0.5);
     }
 </style>
