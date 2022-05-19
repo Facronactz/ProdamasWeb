@@ -284,12 +284,13 @@
                     <div class="col-md-6">
                         <p style="font-weight: 700; font-size: 20px">
                             NAVIGASI</p>
-                        <a style="font-weight: 400; font-size: 12px" class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
+                        <div class="line"></div>
+                        <a style="font-weight: 700; font-size: 12px" class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
                         {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
-                        <a style="font-weight: 400; font-size: 12px" class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
+                        <a style="font-weight: 700; font-size: 12px" class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
                         {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
-                        <a style="font-weight: 400; font-size: 12px" class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
-                        <a style="font-weight: 400; font-size: 12px" class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
+                        <a style="font-weight: 700; font-size: 12px" class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
+                        <a style="font-weight: 700; font-size: 12px" class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
                     </div>
                     <div class="col-md-6">
                         <p style="font-weight: 600; font-weight: bold; font-size:25px;">
