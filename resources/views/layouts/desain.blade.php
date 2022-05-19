@@ -56,6 +56,14 @@
             margin-left: 0.5rem;
         }
 
+        .input-search {
+            border: 1px solid rgba(0, 0, 0, 0.31);
+            border-radius: 15px;
+            line-height: 30px;
+            font-size: 12px;
+            text-align: center;
+        }
+
         .header {
             max-height: 90vh;
             max-width: 100%;
@@ -172,7 +180,7 @@
                                                 <form action="search">
                                                     <div style="display:flex; align-items: center; vertical-align: middle;">
                                                         <div>
-                                                            <input type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search" style="border: 1px solid rgba(0, 0, 0, 0.31); border-radius: 15px; line-height:30px">
+                                                            <input class="input-search" type="text" placeholder="Mau cari apa?" name="search" value="{{ request('search') }}" aria-label="Search">
                                                         </div>
                                                         <button class="btn-search" type="submit" style="color:white">
                                                             <i class="fas fa-arrow-right"></i>
