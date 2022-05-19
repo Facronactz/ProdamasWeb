@@ -244,10 +244,10 @@
             </div>
             @endsection --}}
             <div class="col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
-                <a href=#><img class="logo-footer" src="{{ asset('img/PRIMARY LOGO WHITE 1.png ') }}" width="110" height="110" alt="logo-footer" /></a>
-                <div style="margin-top: 12px">
+                <a href=#><img class="logo-footer" src="{{ asset('img/PRIMARY LOGO WHITE 1.png ') }}" width="130" height="auto" alt="logo-footer" /></a>
+                <!-- <div style="margin-top: 12px">
                     <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
-                </div>
+                </div> -->
             </div>
             <div class="col-md-5 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white">
                 <h5 style="font-family: Inter, sans-serif">Pemerintah Kota Kediri</h5>
