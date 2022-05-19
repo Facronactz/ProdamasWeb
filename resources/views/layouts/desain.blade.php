@@ -62,7 +62,7 @@
             line-height: 30px;
             font-size: 12px;
             text-align: center;
-            width: 300px;
+            width: 200px;
         }
 
         .header {
