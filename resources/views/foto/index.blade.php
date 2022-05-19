@@ -4,10 +4,27 @@
 
 
 @section('content')
-
-<div class="row row-cols-1 row-cols-md-3 mb-5 g-4 centerItms feedAudio">
+<div class="container">
+        <div class="div-title mt-3">
+            <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
+            <h1 class="home-title header-text px-2">
+                <span>Foto</span>
+            </h1>
+        </div>
+</div>
+    <div class="container">
+        <!-- <form action="searchvideo">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchvideo" value="{{ request('searchvideo') }}">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-search link-light"></i>
+                </button>
+            </div>
+        </form> -->
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 mb-5 g-4 centerItms feedAudio">
         @forelse ($posts as $post)
-        <div class=" card noBorder cardAudio">
+        <div class=" card noBorder cardAudio" >
             <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$post->id}}">
                 <img src="{{ asset('cover/'. $post->cover) }}" style="width: 100%; height: 270px; object-fit: cover; object-position: center" class="card-img-top d-flex justify-content" alt="foto-prodamas">
                 <div class="card-body">
@@ -73,6 +90,11 @@
             </div>
         </div>
         {{-- Akhir Card foto --}}
-        @endforeach    
+        @endforeach
+        <div class="d-flex justify-content-end w-100 mb-4">
+            {{ $posts->links() }}
+        </div>
+
+</html>  
 
 @endsection

@@ -111,6 +111,13 @@
             margin: 0.5rem 0 0.8rem 0;
         }
 
+        .line-va {
+            height: 2px;
+            width: calc(100%-2rem);
+            background-color: white;
+            margin: 0.5rem 0 0.8rem 0;
+        }
+
         .foot-icon {
             color: #4D148C;
             background-color: white;
@@ -134,6 +141,10 @@
             font-weight: 400;
             font-size: 12px;
 
+        }
+
+        .iva+.iva {
+            margin-left: 1rem;
         }
 
         /* .bg-iki {
@@ -298,7 +309,7 @@
                 </div>
                 <div class="col">
                     <div class="row">
-                        <div class="col-md-6 col-lg-5 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
+                        <div class="col-md-6 col-lg-6 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
                             <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
                             <div class="line"></div>
                             <p style="font-weight: 400; font-size: 12px">
@@ -308,9 +319,9 @@
                             <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon"></i> (0354) 682955</p>
                             <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon ph"></i> prodamas@kedirikota.go.id</p>
                         </div>
-                        <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
-                            <div class="row" style="justify-content:space-between">
-                                <div class="col-md-6">
+                        <div class="col-md-6 col-lg-6 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6">
                                     <p class="foot-title">
                                         NAVIGASI</p>
                                     <div class="line-nav"></div>
@@ -321,7 +332,7 @@
                                     <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
                                     <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-lg-6">
                                     <p class="foot-title">
                                         TAUTAN EKSTERNAL</p>
                                     <div class="line-te"></div>
@@ -333,16 +344,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="line-te"></div>
+                    <div class="d-flex justify-content-between">
+                        <div class="iva line-va"></div>
+                        <div class="iva">
+                            <a style="font-weight: 400; font-size: 12px" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube foot-icon"></i></a>
+                            <a style="font-weight: 400; font-size: 12px" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram foot-icon"></i></a>
+                            <a style="font-weight: 400; font-size: 12px" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
+                            <a style="font-weight: 400; font-size: 12px" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-copyright footer-link" style="color: white">&copy; 2021 Prodamas Plus</div>
                 </div>
             </div>
         </div>
-        </div>
-        <!--div row-->
-        </div>
-        <!--div  container-->
-        </div>
-        <!--div footer-top-->
 
         <div class="footer-bottom" style="background: transparent;">
             <div class="container">
@@ -356,13 +370,6 @@
                 </div>
             </div>
             @endsection --}}
-            <div class="col-md-6 footer-copyright" style="color: white">&copy; 2021 Prodamas Plus</div>
-            <div class="col-md-6 footer-social">
-                <a href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook"></i></a>
-                <a href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok"></i></a>
-            </div>
         </div>
 
     </footer>
