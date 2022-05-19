@@ -327,8 +327,10 @@
                             Sampah</a> <br>
                         <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
                     </div>
+                    <div class="line"></div>
                 </div>
             </div>
+
         </div>
         <!--div row-->
         </div>
