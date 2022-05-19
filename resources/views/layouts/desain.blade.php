@@ -289,7 +289,7 @@
                 </div>
             </div>
             @endsection --}}
-            <div class="row">
+            <div class="d-flex" style="flex: 0 0 100%;">
                 <div class=" col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
                     <a href=#><img class="logo-footer" src="{{ asset('img/PRIMARY LOGO WHITE 1.png ') }}" width="130" height="auto" alt="logo-footer" /></a>
                     <!-- <div style="margin-top: 12px">
@@ -334,7 +334,6 @@
                     </div>
                     <div class="line-te"></div>
                 </div>
-
             </div>
         </div>
         </div>
