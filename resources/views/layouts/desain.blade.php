@@ -113,7 +113,7 @@
 
         .line-va {
             height: 2px;
-            width: calc(100%-6rem);
+            width: calc(100%-2rem);
             background-color: white;
             margin: 0.5rem 0 0.8rem 0;
         }
