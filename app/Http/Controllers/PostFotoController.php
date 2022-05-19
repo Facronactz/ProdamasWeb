@@ -40,13 +40,13 @@ class PostFotoController extends Controller
         // echo json_encode($posts);die();
         return view('foto.index', compact('posts', 'totalviews', 'counter'));
     }
-    public function show($id)
-    {
-        // Post::find($id)->increment('views');
-        $posts = Post::where('id', $id)
-                ->orderBy('id', 'desc')
-                ->get();
-        // dd($tulis_ceritas);
-        return view('foto.index', compact('posts'));
-    }
+//     public function show($id)
+//     {
+//         Post::find($id)->increment('views');
+//         $Posts = Post::where('id', $id)
+//                 ->orderBy('id', 'desc')
+//                 ->get();
+//         // dd($tulis_ceritas);
+//         return view('foto.index', compact('posts'));
+//     }
 }
