@@ -42,8 +42,8 @@ class PostFotoController extends Controller
     }
     public function show($id)
     {
-        Post::find($id)->increment('views');
-        $Posts = Post::where('id', $id)
+        // Post::find($id)->increment('views');
+        $posts = Post::where('id', $id)
                 ->orderBy('id', 'desc')
                 ->get();
         // dd($tulis_ceritas);
