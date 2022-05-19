@@ -100,7 +100,7 @@
         .foot-icon {
             color: #4D148C;
             background-color: white;
-            width: 20px;
+            width: 100%;
             /* border-radius: 50%; */
             /* padding: 5px; */
             line-height: 20px;
@@ -278,8 +278,8 @@
                     Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
                     Kota kediri, Jawa Timur 64146
                 </p>
-                <div style="font-weight: 400; font-size: small"><i class="fas fa-phone foot-icon ph"></i> prodamas@kedirikota.go.id</div>
-                <div style="font-weight: 400; font-size: small"><i class="fas fa-envelope foot-icon"></i> (0354) 682955</div>
+                <p style="font-weight: 400; font-size: small"><i class="fas fa-phone foot-icon ph"></i> prodamas@kedirikota.go.id</p>
+                <p style="font-weight: 400; font-size: small"><i class="fas fa-envelope foot-icon"></i> (0354) 682955</p>
             </div>
             <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
                 <div class="row">
