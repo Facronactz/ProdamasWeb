@@ -331,8 +331,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="line-te"></div>
                 </div>
-                <div class="line-te"></div>
+
             </div>
 
         </div>
