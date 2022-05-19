@@ -51,7 +51,7 @@
             @foreach ($carousels as $key => $carousel)
             <div class="carousel-item @if ($key == 0) {{"active"}}
             @endif">
-                <img src="{{ 'carouselProd/'. $carousel->foto }}" class="d-block w-50 carousel-img" alt="..." />
+                <img src="{{ 'carouselProd/'. $carousel->foto }}" class="d-block w-100 h-70 carousel-img" alt="..." />
             </div>
             @endforeach
             {{-- <div class="carousel-item active">
