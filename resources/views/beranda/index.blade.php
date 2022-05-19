@@ -9,7 +9,7 @@
         .carousel-img {
             object-fit:cover;
             object-position: top;
-            height: 100px;
+            height: 500px;
             width: 100%;
         }
 
