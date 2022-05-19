@@ -55,7 +55,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body row">
-                                    <a href="tulis_ceritas/{{ $cerita->id }}" class="stretched-link"></a>
+                                    {{-- <a href="tulis_ceritas/{{ $cerita->id }}" class="stretched-link"></a> --}}
                                     <h5 class="card-title" style="font-size: 22px;">{{ $cerita->judul }}</h5>
                                     <p class="col-xs-6 col-sm-6 col-lg-10" style="font-size: 13px;"><small class="text-muted">Oleh {{ $cerita->nama }}, {{ $cerita->updated_at}}</small></p>
                                     <p class="col-xs-6 col-sm-6 col-lg-2" style="font-size: 11px;"><small class="fa fa-eye text-muted"> {{ $cerita->views}} </small></p>
