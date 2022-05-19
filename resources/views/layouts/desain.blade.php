@@ -295,7 +295,7 @@
                     <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
                 </div> -->
             </div>
-            <div class="col-md-6 col-lg-5 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
+            <div class="col-md-6 col-lg-5 footer-contact footer-links" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
@@ -307,8 +307,6 @@
                         <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon"></i> (0354) 682955</p>
                         <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon ph"></i> prodamas@kedirikota.go.id</p>
                     </div>
-                </div>
-                <div class="row">
                     <div class="col-md-6">
                         <p class="foot-title">
                             NAVIGASI</p>
@@ -330,11 +328,11 @@
                         <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
                     </div>
                 </div>
+                <div class="line-te"></div>
             </div>
             <!-- <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
 
             </div> -->
-            <div class="line-te"></div>
         </div>
         <!--div row-->
         </div>
