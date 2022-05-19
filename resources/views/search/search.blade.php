@@ -117,7 +117,7 @@
                                                         margin: 0;
                                                         margin-top: 30px;
                                                         ">
-                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/{{$video->konten}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/{{$item->konten}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div class="card" style="
                                                         border: none;
