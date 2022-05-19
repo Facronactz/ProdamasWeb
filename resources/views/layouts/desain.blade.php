@@ -92,8 +92,9 @@
 
         .line {
             height: 2px;
-            width: calc(100% - 3rem);
+            width: calc(100% - 4rem);
             background-color: white;
+            margin: 1rem 0 1rem 0;
         }
 
         /* .bg-iki {
