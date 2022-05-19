@@ -163,11 +163,11 @@
                                 {{-- Button Admin --}}
                                 <a class="align-self-center btn login-icon ms-3" href="/admin"><i class="fas fa-user-shield"></i> Admin</a>
                                 {{-- Button Logout --}}
-                                <a class="align-self-center btn login-icon ms-3" href="/signout"><i class="fas fa-sign-out-alt ms-2"></i> Log Out</a>
+                                <a class="align-self-center btn login-icon ms-3" href="/signout"><i class="fas fa-sign-out-alt"></i> Log Out</a>
                                 @endauth
                                 @guest
                                 {{-- Button trigger modal --}}
-                                <button class="align-self-center login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt ms-2"></i> Sign In</button>
+                                <button class="align-self-center login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Sign In</button>
                                 @endguest
                             </div>
                         </div>
