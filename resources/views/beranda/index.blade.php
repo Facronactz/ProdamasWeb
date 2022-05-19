@@ -411,7 +411,7 @@
 @endsection
 
 {{-- total kunjungan di footer --}}
-{{-- @section('views')
+@section('views')
 
 <div class="d-flex justify-content-end mt-2">
     <div style="margin-top: 15px; border-radius: 15px; color: white; text-align:center; background-color: #F58634; padding:5px">
@@ -421,4 +421,4 @@
     </div>
 </div>
 
-@endsection --}}
+@endsection
