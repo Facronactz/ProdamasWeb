@@ -68,15 +68,6 @@
                     </div>
                 </div>
                 @endforeach
-                <div class="d-flex justify-content-end w-100 my-3">
-                    {{ $tulis_ceritas->links() }}
-                </div>
-            @else
-                <h4 class="text-center">
-                    Tidak Ditemukan
-                </h4>
-                <hr>
-            @endif
             </div>
 
 
