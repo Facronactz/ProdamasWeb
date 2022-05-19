@@ -51,8 +51,8 @@
             background-color: #4E148D;
             border-radius: 50%;
             border: 0px solid black;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
         }
 
         .header {
