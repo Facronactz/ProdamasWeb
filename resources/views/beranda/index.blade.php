@@ -239,10 +239,10 @@
     </div>
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
-        @foreach ($foto as $item)
+        @foreach ($posts as $post)
         <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
             <div class="card h-100 d-block hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
-                <img src="{{ asset('fotoProd/' . $item->konten) }}" class="card-img-top card-img-fix" alt="...">
+                <img src="{{ asset('cover/' . $post->cover) }}" class="card-img-top card-img-fix" alt="...">
                 <div class="card-body">
                 <div id="carouselIndicators{{ $post->id }}" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
