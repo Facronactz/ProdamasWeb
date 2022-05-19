@@ -304,13 +304,13 @@
 </a>
 </div> --}}
 
-@foreach ($foto as $item)
+@foreach ($posts as $post)
 {{-- Card Modal --}}
-<div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
+<div class="modal fade" id="audioPlayer{{ $post->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" style="width: 500px; height: 500px"> 
         <div class="modal-content">
             <div class="modal-header ">
-                <h5 class="modal-title" id="fotoLabel"><?= $item->judul ?></h5>
+                <h5 class="modal-title" id="fotoLabel"><?= $post->title ?></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -320,13 +320,13 @@
                                   margin: 0;
                                   margin-top: 30px;
                                   ">
-                        <img class="d-flex" src="{{ asset('fotoProd/' . $item->konten) }}" controls>
+                        <img class="d-flex" src="{{ asset('cover/' . $post->cover) }}" controls>
                     </div>
                     <div class="card" style="
                                   border: none;
                                   ">
-                        <h3><?= $item->judul ?></h3>
-                        <p><?= $item->caption ?></p>
+                        <h3><?= $post->title ?></h3>
+                        <p><?= $post->body ?></p>
                     </div>
                 </div>
             </div>
