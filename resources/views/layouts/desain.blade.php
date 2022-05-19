@@ -51,7 +51,8 @@
             background-color: #4E148D;
             border-radius: 50%;
             border: 0px solid black;
-            width: 40px;
+            width: 30px;
+            margin-left: 0.5rem;
         }
 
         .header {
@@ -164,13 +165,13 @@
                             <div class="d-flex justify-content-evenly">
                                 <div class="nav-item dropdown nav-list">
                                     <a class="nav-link" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{{asset('img/ICON CARI.png')}}" style="width: 17px; height: 17px;"></a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout" style=" border-radius: 15px;">
                                         <li class="">
                                             <div class="container">
                                                 <form action="search">
                                                     <div style="display:flex; line-height:30px; align-items: center; vertical-align: middle;">
                                                         <div>
-                                                            <input type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
+                                                            <input type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search" style="border: 1px solid rgba(0, 0, 0, 0.31); border-radius: 15px;">
                                                         </div>
                                                         <button class="btn-search" type="submit" style="color:white">
                                                             <i class="fas fa-arrow-right"></i>

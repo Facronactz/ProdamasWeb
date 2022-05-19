@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Bidang;
 use App\Models\DescriptionAdmin;
-use App\Http\Controllers\DB;
+// use App\Http\Controllers\DB;
+use Illuminate\Support\Facades\DB;
 
 class BidangController extends Controller
 {
