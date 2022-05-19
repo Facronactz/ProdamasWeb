@@ -5,17 +5,7 @@
 
 @section('content')
 
-    <div class="container">
-        <div class="div-title mt-3">
-            <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
-            <h1 class="home-title header-text px-2">
-                <span>Foto</span>
-            </h1>
-        </div>
-    </div>
-
-    <!-- Awal feed foto -->
-     <div class="row row-cols-1 row-cols-md-3 mb-5 g-4 centerItms feedAudio">
+<div class="row row-cols-1 row-cols-md-3 mb-5 g-4 centerItms feedAudio">
         @forelse ($posts as $post)
         <div class=" card noBorder cardAudio">
             <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$post->id}}">
@@ -83,13 +73,6 @@
             </div>
         </div>
         {{-- Akhir Card foto --}}
-        @endforeach
-        <div class="d-flex justify-content-end w-100 mb-4">
-            {{ $posts->links() }}
-        </div>
-    <div class="d-flex justify-content-end w-100 mb-4">
-        {{ $posts->links() }}
-    </div>
-    <!-- akhir feed foto -->
+        @endforeach    
 
 @endsection

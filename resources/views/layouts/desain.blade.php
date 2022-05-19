@@ -297,7 +297,7 @@
                 </div> -->
                 </div>
                 <div class="col">
-                    <div class="row" style="justify-content:space-between">
+                    <div class="row">
                         <div class="col-md-6 col-lg-5 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
                             <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
                             <div class="line"></div>
