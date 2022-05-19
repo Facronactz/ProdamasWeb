@@ -13,8 +13,22 @@ class VideoController extends Controller
     public function index()
     {
         // $videos = DB::table('videos')->paginate(4);
+        DB::table('counters')->increment('views');
+                $counter = DB::table('counters')->get();
+                
+
+                // code jumlah pengunjung
+                $artikel = DB::table('articles')
+                        ->select(DB::raw('views'));
+                $counter = DB::table('counters')
+                        ->select(DB::raw('views'));
+		        $totalviews = DB::table('tulis_ceritas')
+                        ->select(DB::raw('views'))
+                        ->unionAll($artikel)
+                        ->unionAll($counter)
+                        ->sum('views');
         $videos = Video::orderBy('id', 'desc')->paginate(4);
-        return view('video.index', ['videos' => $videos]);
+        return view('video.index', ['videos' => $videos], compact('totalviews','counter'));
     }
 
     public function beranda()

@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 use App\Models\ArticleAdmin;
 use App\Models\AudioAdmin;
 use App\Models\FotoAdmin;
 use App\Models\VideoAdmin;
 use App\Models\Visitor;
 use Share;
-use DB;
+
 use App\Models\SettingCarousel;
 
 
