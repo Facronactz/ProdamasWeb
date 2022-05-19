@@ -175,7 +175,7 @@
                             <div class="d-flex justify-content-evenly">
                                 <div class="nav-item dropdown nav-list">
                                     <a class="nav-link" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{{asset('img/ICON CARI.png')}}" style="width: 17px; height: 17px; margin-right: -1rem"></a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout" style="border-radius: 23px;padding:0px;margin-left:-3rem;">
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout" style="border-radius: 23px;padding:0px;margin-left:-10rem;">
                                         <li class="" style="padding:5px">
                                             <div>
                                                 <form action="search">
