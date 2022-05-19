@@ -13,7 +13,6 @@ use App\Http\Controllers\artikelController;
 use App\Http\Controllers\FotoController;
 use App\Http\Controllers\AudioController;
 use App\Http\Controllers\VideoController;
-use App\Http\Controllers\TentangController;
 use App\Http\Controllers\TulisCeritaController;
 use App\Http\Controllers\KampungkerenController;
 use App\Http\Controllers\BidangController;
