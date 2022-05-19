@@ -99,7 +99,7 @@
 
         .line-nav {
             height: 2px;
-            width: calc(100%-0.7rem);
+            width: 80%;
             background-color: white;
             margin: 0.5rem 0 0.8rem 0;
         }
