@@ -66,9 +66,9 @@
                         </div>
                     </div>
                 @endforeach
-                @if ($artikel->hasPages())
+                @if ($cerita->hasPages())
                 <div class="d-flex justify-content-end w-100 my-3">
-                    {{ $artikel->links() }}
+                    {{ $cerita->links() }}
                 </div>
                 @endif
             </div>
