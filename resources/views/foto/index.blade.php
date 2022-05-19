@@ -4,19 +4,12 @@
 
 
 @section('content')
-    <!-- awal jumbotron -->
-    <div class="banner">
-        <video id="background-video" autoplay loop muted poster="kota.png">
-            <source src="img/FOTO.mp4" type="video/mp4" />
-        </video>
-    </div>
-    <!-- akhir jumbotrom -->
 
 
     <!-- Awal feed foto -->
-    <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedAudio">
+    <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedAudio justify-content-center">
         @forelse ($posts as $post)
-            <div class=" card noBorder cardAudio">
+            <div class=" card noBorder cardAudio p-0">
                 <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $post->id }}">
                     <img src="{{ asset('cover/' . $post->cover) }}" style="width: 100%; height: 270px; object-fit: cover; object-position: center" class="card-img-top d-flex justify-content" alt="foto-prodamas">
                     <div class="card-body">
