@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/titleAnimation.css">
     <style>
         .carousel-img {
-            object-fit: cover;
+            object-fit:fill;
             object-position: top;
             max-height: 74vh;
         }
