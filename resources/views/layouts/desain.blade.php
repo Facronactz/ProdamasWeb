@@ -43,7 +43,7 @@
             font-weight: 400;
         }
 
-        .login-icon {
+        .login-icon-sc {
             opacity: 0;
         }
 
