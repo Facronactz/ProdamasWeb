@@ -99,7 +99,7 @@
         <a href=" {{ url('/') }}"><img src="{{asset('img/wesite logo 1.png')}}" alt="" class="d-inline-block align-text-top" style="width: 200px; height: auto; padding: 2rem 1.5rem; margin-bottom: -2rem" /></a>
         <div class="bg-iki">
             <nav class="navbar navbar-expand-lg navbar-dark bg-kediri sticky-top" style="font-family: 'Poppins', sans-serif;">
-                <div class="mx-xxl-5" style="margin-left: 1.5rem">
+                <div class="mx-xxl-5" style="margin-left: 1.2em">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -108,7 +108,7 @@
                     <div class="collapse navbar-collapse justify-content-evenly" id="navbarNavAltMarkup">
                         <!-- Middle -->
                         <div class="navbar-nav mx-auto">
-                            <a class="nav-link @yield('beranda')" aria-current="page" href="{{ url('/') }}">Beranda</a>
+                            <a class="nav-link @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{asset('img/ICON HOME.png')}}" alt=""></a>
                             <a class="nav-link @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
                             <div class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
