@@ -296,16 +296,18 @@
                 </div> -->
             </div>
             <div class="col-md-6 col-lg-5 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
-                <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
-                <div class="line"></div>
-                <p style="font-weight: 400; font-size: 12px">
-                    Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
-                    Kota kediri, Jawa Timur 64146
-                </p>
-                <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon"></i> (0354) 682955</p>
-                <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon ph"></i> prodamas@kedirikota.go.id</p>
-            </div>
-            <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
+                        <div class="line"></div>
+                        <p style="font-weight: 400; font-size: 12px">
+                            Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
+                            Kota kediri, Jawa Timur 64146
+                        </p>
+                        <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon"></i> (0354) 682955</p>
+                        <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon ph"></i> prodamas@kedirikota.go.id</p>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-6">
                         <p class="foot-title">
@@ -329,6 +331,10 @@
                     </div>
                 </div>
             </div>
+            <!-- <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
+
+            </div> -->
+            <div class="line-te"></div>
         </div>
         <!--div row-->
         </div>
