@@ -43,10 +43,6 @@
             font-weight: 400;
         }
 
-        .login-icon-sc {
-            opacity: 0;
-        }
-
         .login-icon i:hover {
             color: black !important;
         }
@@ -179,9 +175,9 @@
                             <div class="d-flex justify-content-evenly">
                                 <div class="nav-item dropdown nav-list">
                                     <a class="nav-link" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{{asset('img/ICON CARI.png')}}" style="width: 17px; height: 17px; margin-right: -1rem"></a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout" style="border-radius: 23px;padding:0px">
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout" style="border-radius: 23px;padding:0px;margin-left:-10rem;">
                                         <li class="" style="padding:5px">
-                                            <div class="">
+                                            <div>
                                                 <form action="search">
                                                     <div style="display:flex; align-items: center; vertical-align: middle;">
                                                         <div>
@@ -210,7 +206,6 @@
                                 @guest
                                 {{-- Button trigger modal --}}
                                 <button class="align-self-center btn login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Sign In</button>
-                                <a class="align-self-center btn login-icon-sc ms-3" href=""><i class="fas fa-user-shield"></i> Admin</a>
                                 @endguest
                             </div>
                         </div>
