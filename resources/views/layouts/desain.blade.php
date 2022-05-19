@@ -62,6 +62,10 @@
             text-shadow: 2px 2px rgb(209, 201, 209);
         }
 
+        .nav-list + .nav-list {
+            margin-right: 2rem;
+        }
+
         /* .bg-iki {
             background-image: url('{{ url('img/pattern.png') }}');
             background-repeat: no-repeat;
@@ -96,21 +100,21 @@
 <body data-bs-spy="scroll" data-bs-target="#scrollspy" data-bs-offset="0" data-bs-method="position">
     <!-- New Nav -->
     <div class="nav-now" style="background-color: #4d148c">
-        <a href=" {{ url('/') }}"><img src="{{asset('img/wesite logo 1.png')}}" alt="" class="d-inline-block align-text-top" style="width: 200px; height: auto; padding: 2rem 1.5rem; margin-bottom: -2rem" /></a>
+        <a href=" {{ url('/') }}"><img src="{{asset('img/wesite logo 1.png')}}" alt="" class="d-inline-block align-text-top" style="width: 200px; height: auto; padding: 2rem 1.2rem; margin-bottom: -2rem" /></a>
         <div class="bg-iki">
             <nav class="navbar navbar-expand-lg navbar-dark bg-kediri sticky-top" style="font-family: 'Poppins', sans-serif;">
-                <div class="mx-xxl-5" style="margin-left: 1.2em">
+                <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <!-- Content -->
-                    <div class="collapse navbar-collapse justify-content-evenly" id="navbarNavAltMarkup">
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <!-- Middle -->
-                        <div class="navbar-nav mx-auto">
-                            <a class="nav-link @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{asset('img/ICON HOME.png')}}" alt="" style="width: 40px; height: 40px"></a>
-                            <a class="nav-link @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
-                            <div class="nav-item dropdown">
+                        <div class="navbar-nav">
+                            <a class="nav-link nav-list @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{asset('img/ICON HOME.png')}}" style="width: 20px; height: 20px; margin-right: 1rem"></a>
+                            <a class="nav-link nav-list @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
+                            <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
                                     <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
@@ -118,7 +122,7 @@
                                     <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio</a></li>
                                 </ul>
                             </div>
-                            <div class="nav-item dropdown">
+                            <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle @yield('media')" id="navbarDropdownMenuLinkMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkMedia">
                                     <li style="width: 50%;"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
@@ -126,7 +130,7 @@
                                     <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
                                 </ul>
                             </div>
-                            <div class="nav-item dropdown">
+                            <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tentang</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
                                     <li class="w-100"><a class="dropdown-item @yield('prodamas')" href="{{ url('/prodamas') }}">Prodamas</a></li>
@@ -136,32 +140,19 @@
                                     <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">MedSos</a></li>
                                 </ul>
                             </div>
-                            <div id="scrollspy">
+                            <div class="nav-list" id="scrollspy">
                                 <a class="nav-link" href="#footer">Kontak</a>
                             </div>
-                            <a class="nav-link @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a>
+                            <a class="nav-link nav-list @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a>
                         </div>
 
-                        {{-- Search --}}
-                        {{-- <div class="input-group" style="max-width: 10vw">
-                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                    <select class="form-select" id="inputGroupSelect01">
-                        <option selected>Semua</option>
-                        <option value="1">Foto</option>
-                        <option value="2">Audio</option>
-                        <option value="3">Video</option>
-                    </select>
-                    <button class="btn btn-primary">
-                        <i class="fas fa-search link-light"></i>
-                    </button>
-                </div> --}}
                         {{-- Medsos --}}
-                        <div>
+                        <span class="navbar-text">
                             <div class="d-flex justify-content-evenly">
-                                <a class="align-self-center" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube mx-2 link-light"></i></a>
+                                <!-- <a class="align-self-center" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube mx-2 link-light"></i></a>
                                 <a class="align-self-center" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram mx-2 link-light"></i></a>
                                 <a class="align-self-center" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook mx-2 link-light"></i></a>
-                                <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a>
+                                <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a> -->
                                 @auth
                                 {{-- Button Admin --}}
                                 <a class="align-self-center btn btn-outline-light login-icon ms-3" href="/admin">Admin<i class="fas fa-user-shield ms-2"></i></a>
@@ -173,8 +164,7 @@
                                 <button class="align-self-center btn btn-outline-light login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In<i class="fas fa-sign-in-alt ms-2"></i></button>
                                 @endguest
                             </div>
-
-                        </div>
+                        </span>
                     </div>
                 </div>
             </nav>
