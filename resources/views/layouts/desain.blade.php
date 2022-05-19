@@ -275,7 +275,7 @@
     <!-- Awal footer -->
     <!-- <footer style="background-image: url('{{url('img/nav_bot.png')}}');background-repeat: no-repeat;background-attachment: local;background-size: cover;"> -->
     <footer>
-        <div class="footer-top" id="footer" style="border-top: 9px solid #FF6600 ; box-shadow: -2px 5px 10px #aaaaaa;"">
+        <div class="footer-top" id="footer" style="border-top: 9px solid #FF6600 ;">
             <div class=" container">
             <div class="row">
                 {{-- panggil total kunjungan di footer --}}
