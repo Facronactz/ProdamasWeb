@@ -36,11 +36,28 @@ class CeritaController extends Controller
     }
     public function show($id)
     {
+        // total
+        DB::table('counters')->increment('views');
+        $counter = DB::table('counters')->get();
+        
+
+        // code jumlah pengunjung
+        $artikel = DB::table('articles')
+                ->select(DB::raw('views'));
+        $counter = DB::table('counters')
+                ->select(DB::raw('views'));
+        $totalviews = DB::table('tulis_ceritas')
+                ->select(DB::raw('views'))
+                ->unionAll($artikel)
+                ->unionAll($counter)
+                ->sum('views');
+        // end code jumlah pengunjung
+        
         Tulis_cerita::find($id)->increment('views');
         $tulis_ceritas = Tulis_cerita::where('id', $id)
             ->orderBy('id', 'desc')
             ->get();
         // dd($tulis_ceritas);
-        return view('cerita.detail', compact('tulis_ceritas'));
+        return view('cerita.detail', compact('tulis_ceritas', 'totalviews', 'counter'));
     }
 }
