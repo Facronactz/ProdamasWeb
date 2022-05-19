@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="css/titleAnimation.css">
     <style>
         .carousel-img {
-            object-fit:fill;
+            object-fit:cover;
             object-position: top;
-            max-height: 74vh;
+            max-height: 100px;
         }
 
         .card-img-fix {
