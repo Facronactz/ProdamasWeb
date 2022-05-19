@@ -9,14 +9,14 @@
         .carousel-img {
             object-fit: cover;
             object-position: top;
-            max-height: 84vh;
+            max-height: 94vh;
         }
 
         .card-img-fix {
             object-fit: cover;
-            height: calc(20vh + 10px);
-            min-height: 200px;
-            max-height: 300px;
+            height: calc(15vh + 10px);
+            min-height: 100px;
+            max-height: 200px;
         }
 
     </style>
