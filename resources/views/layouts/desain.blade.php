@@ -328,9 +328,8 @@
                         <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
                     </div>
                 </div>
-                <div class="line-te"></div>
             </div>
-
+            <div class="line-te"></div>
         </div>
         <!--div row-->
         </div>
