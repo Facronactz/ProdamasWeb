@@ -295,41 +295,43 @@
                     <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
                 </div> -->
             </div>
-            <div class="col-md-6 col-lg-5 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
-                <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
-                <div class="line"></div>
-                <p style="font-weight: 400; font-size: 12px">
-                    Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
-                    Kota kediri, Jawa Timur 64146
-                </p>
-                <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon"></i> (0354) 682955</p>
-                <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon ph"></i> prodamas@kedirikota.go.id</p>
-            </div>
-            <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p class="foot-title">
-                            NAVIGASI</p>
-                        <div class="line-nav"></div>
-                        <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
-                        {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
-                        <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
-                        {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
-                        <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
-                        <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="foot-title">
-                            TAUTAN EKSTERNAL</p>
-                        <div class="line-te"></div>
-                        <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
-                        <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
-                            Sampah</a> <br>
-                        <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
+            <div>
+                <div class="col-md-6 col-lg-5 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
+                    <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
+                    <div class="line"></div>
+                    <p style="font-weight: 400; font-size: 12px">
+                        Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
+                        Kota kediri, Jawa Timur 64146
+                    </p>
+                    <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon"></i> (0354) 682955</p>
+                    <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon ph"></i> prodamas@kedirikota.go.id</p>
+                </div>
+                <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="foot-title">
+                                NAVIGASI</p>
+                            <div class="line-nav"></div>
+                            <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
+                            {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
+                            <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
+                            {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
+                            <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
+                            <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="foot-title">
+                                TAUTAN EKSTERNAL</p>
+                            <div class="line-te"></div>
+                            <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
+                            <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
+                                Sampah</a> <br>
+                            <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
+                        </div>
                     </div>
                 </div>
+                <div class="line-te"></div>
             </div>
-            <div class="line-te"></div>
         </div>
         <!--div row-->
         </div>
