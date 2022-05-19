@@ -220,7 +220,8 @@
     </div>
 
     <!-- Awal footer -->
-    <footer style="background-image: url('{{url('img/nav_bot.png')}}');background-repeat: no-repeat;background-attachment: local;background-size: cover;">
+    <!-- <footer style="background-image: url('{{url('img/nav_bot.png')}}');background-repeat: no-repeat;background-attachment: local;background-size: cover;"> -->
+    <footer>
         <div class="footer-top" id="footer">
             <div class="container">
                 <div class="row">
@@ -243,7 +244,7 @@
             </div>
             @endsection --}}
             <div class="col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
-                <a href=#><img class="logo-footer" src="{{ asset('img/logoprodamas.png ') }}" width="110" height="110" alt="logo-footer" /></a>
+                <a href=#><img class="logo-footer" src="{{ asset('img/PRIMARY LOGO WHITE 1.png ') }}" width="110" height="110" alt="logo-footer" /></a>
                 <div style="margin-top: 12px">
                     <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
                 </div>
