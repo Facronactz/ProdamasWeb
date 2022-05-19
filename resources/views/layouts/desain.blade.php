@@ -99,7 +99,7 @@
 
 <body data-bs-spy="scroll" data-bs-target="#scrollspy" data-bs-offset="0" data-bs-method="position">
     <!-- New Nav -->
-    <div class="nav-now" style="background-color: #4d148c; border-bottom: 9px solid #FF6600 ;">
+    <div class="nav-now" style="background-color: #4d148c; border-bottom: 9px solid #FF6600 ; box-shadow: -2px 5px 10px #aaaaaa;">
         <a href=" {{ url('/') }}"><img src="{{asset('img/wesite logo 1.png')}}" alt="" class="d-inline-block align-text-top" style="width: 200px; height: auto; padding: 2rem 1.2rem; margin-bottom: -2rem" /></a>
         <div class="bg-iki">
             <nav class="navbar navbar-expand-lg navbar-dark bg-kediri sticky-top" style="font-family: 'Poppins', sans-serif;">
