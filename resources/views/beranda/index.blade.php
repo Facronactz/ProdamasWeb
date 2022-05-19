@@ -239,10 +239,10 @@
     </div>
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
-        @foreach ($foto as $item)
+        @foreach ($posts as $post)
         <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
             <div class="card h-100 d-block hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
-                <img src="{{ asset('fotoProd/' . $item->konten) }}" class="card-img-top card-img-fix" alt="...">
+                <img src="{{ asset('cover/' . $post->cover) }}" class="card-img-top card-img-fix" alt="...">
                 <div class="card-body">
                 <div id="carouselIndicators{{ $post->id }}" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
@@ -304,13 +304,13 @@
 </a>
 </div> --}}
 
-@foreach ($foto as $item)
+@foreach ($posts as $post)
 {{-- Card Modal --}}
-<div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
+<div class="modal fade" id="audioPlayer{{ $post->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" style="width: 500px; height: 500px"> 
         <div class="modal-content">
             <div class="modal-header ">
-                <h5 class="modal-title" id="fotoLabel"><?= $item->judul ?></h5>
+                <h5 class="modal-title" id="fotoLabel"><?= $post->title ?></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -320,13 +320,13 @@
                                   margin: 0;
                                   margin-top: 30px;
                                   ">
-                        <img class="d-flex" src="{{ asset('fotoProd/' . $item->konten) }}" controls>
+                        <img class="d-flex" src="{{ asset('cover/' . $post->cover) }}" controls>
                     </div>
                     <div class="card" style="
                                   border: none;
                                   ">
-                        <h3><?= $item->judul ?></h3>
-                        <p><?= $item->caption ?></p>
+                        <h3><?= $post->title ?></h3>
+                        <p><?= $post->body ?></p>
                     </div>
                 </div>
             </div>
