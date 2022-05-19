@@ -38,11 +38,11 @@
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev" aria-hidden="true"></span>
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
-      <span class="carousel-control-next" aria-hidden="true"></span>
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div> --}}
@@ -411,3 +411,14 @@
 @endsection
 
 {{-- total kunjungan di footer --}}
+@section('views')
+
+<div class="d-flex justify-content-end mt-2">
+    <div style="margin-top: 15px; border-radius: 15px; color: white; text-align:center; background-color: #F58634; padding:5px">
+        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+        <a style="font-size:15px">Kunjungan: {{$totalviews}}</a>
+        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+    </div>
+</div>
+
+@endsection
