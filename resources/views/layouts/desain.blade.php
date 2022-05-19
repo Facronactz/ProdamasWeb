@@ -308,8 +308,8 @@
                         <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon ph"></i> prodamas@kedirikota.go.id</p>
                     </div>
                     <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
-                        <div class="row" style="justify-content:space-between">
-                            <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6" style="margin-right:4rem">
                                 <p class="foot-title">
                                     NAVIGASI</p>
                                 <div class="line-nav"></div>
