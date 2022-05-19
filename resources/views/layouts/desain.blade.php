@@ -157,7 +157,7 @@
                 </div> --}}
                         {{-- Medsos --}}
                         <div>
-                            <div class="d-flex justify-content-evenly">
+                            <div class="d-flex justify-content-evenly" align="right">
                                 <!-- <a class="align-self-center" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube mx-2 link-light"></i></a>
                                 <a class="align-self-center" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram mx-2 link-light"></i></a>
                                 <a class="align-self-center" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook mx-2 link-light"></i></a>
