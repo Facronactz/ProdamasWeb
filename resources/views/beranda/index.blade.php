@@ -14,9 +14,9 @@
 
         .card-img-fix {
             object-fit: cover;
-            height: calc(15vh + 10px);
-            min-height: 100px;
-            max-height: 200px;
+            height: calc(20vh + 10px);
+            min-height: 200px;
+            max-height: 300px;
         }
 
     </style>
@@ -51,7 +51,7 @@
             @foreach ($carousels as $key => $carousel)
             <div class="carousel-item @if ($key == 0) {{"active"}}
             @endif">
-                <img src="{{ 'carouselProd/'. $carousel->foto }}" class="d-block w-100 carousel-img" alt="..." />
+                <img src="{{ 'carouselProd/'. $carousel->foto }}" class="d-block w-50 carousel-img" alt="..." />
             </div>
             @endforeach
             {{-- <div class="carousel-item active">
