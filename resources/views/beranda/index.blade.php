@@ -9,7 +9,7 @@
         .carousel-img {
             object-fit:cover;
             object-position: top;
-            max-height: 100px;
+            max-height: 0px;
         }
 
         .card-img-fix {
