@@ -61,15 +61,12 @@
                                     <p class="col-xs-6 col-sm-6 col-lg-2" style="font-size: 11px;"><small class="fa fa-eye text-muted"> {{ $cerita->views}} </small></p>
                                     <p class="card-text col-xs-4" style="font-size: 14px; text-align: justify"><?= $cerita->ringkasan = Str::limit($cerita->ringkasan, 430) ?></p>
                                     <a href="cerita/{{ $cerita->id }}" target="_blank" style="font-size: 14px; text-align: right">Selengkapnya.. <i class="fa fa-chevron-circle-right"></i></a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                    @endforeach                
-                    <div class="d-flex justify-content-end w-100 my-3">
-                        {{ $tulis_ceritas->links() }}
                     </div>
-                </div>
+                @endforeach                
+            </div>
         </div>
         <!--div container-->
     </section>
