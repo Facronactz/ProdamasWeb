@@ -14,7 +14,7 @@ class CeritaController extends Controller
     {
         $tulis_ceritas = Cerita::orderBy('id', 'desc')
         ->get()
-        ->paginate(4);
+        ->paginate();
         $descriptions = DescriptionAdmin::first()->get();
         return view('cerita.index', compact('tulis_ceritas', 'descriptions'));
     }
