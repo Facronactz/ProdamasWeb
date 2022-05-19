@@ -78,7 +78,7 @@
         <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselUtama" data-bs-slide="next">
-        <span class="carousel-icon-next" aria-hidden="true"></span>
+        <span class="carousel-icon-next" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
         <span class="visually-hidden">Next</span>
     </button>
 </div>
