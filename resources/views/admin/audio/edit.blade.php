@@ -33,8 +33,8 @@ Edit Audio
         @enderror
     </div>
     <div class="form-group">
-        <label for="audio">Konten</label>
-        <input type="text" name="audio" class="form-control" cols="30" rows="10"value="{{$audio->konten}}">
+        <label for="konten">Konten</label>
+        <input type="text" name="konten" class="form-control" cols="30" rows="10"value="{{$audio->konten}}">
         @error('audio')
         <div class="alert alert-danger">
             {{ $message }}
