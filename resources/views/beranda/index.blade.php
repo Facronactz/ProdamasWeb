@@ -315,7 +315,7 @@
 @foreach ($posts as $post)
 {{-- Card Modal --}}
 <div class="modal fade" id="audioPlayer{{ $post->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-xl" style="width: 500px; height: 500px">
         <div class="modal-content">
             <div class="modal-header ">
                 <h5 class="modal-title" id="fotoLabel"><?= $post->title ?></h5>
