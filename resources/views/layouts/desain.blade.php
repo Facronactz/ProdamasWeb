@@ -50,9 +50,9 @@
         .btn-search {
             background-color: #4E148D;
             border-radius: 50%;
-            border-color: none;
-            width: 20px;
-            height: 20px;
+            border: 0px solid black;
+            width: 50px;
+            height: 50px;
         }
 
         .header {
