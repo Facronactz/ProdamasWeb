@@ -47,6 +47,7 @@
                 </div>
             </form>
             <div class="col">
+                @if ($tulis_ceritas->count())
                 @foreach ($tulis_ceritas as $cerita)
                     <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
                         <div class="row g-0">
@@ -70,6 +71,12 @@
                 <div class="d-flex justify-content-end w-100 my-3">
                     {{ $tulis_ceritas->links() }}
                 </div>
+            @else
+                <h4 class="text-center">
+                    Tidak Ditemukan
+                </h4>
+                <hr>
+            @endif
             </div>
 
 
