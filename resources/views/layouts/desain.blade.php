@@ -37,6 +37,12 @@
     @endif
 
     <style>
+        .login-icon {
+            color: black !important;
+            background-color: white;
+            font-weight: 400;
+        }
+
         .login-icon i:hover {
             color: black !important;
         }
@@ -155,13 +161,13 @@
                                 <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a> -->
                                 @auth
                                 {{-- Button Admin --}}
-                                <a class="align-self-center btn login-icon ms-3" href="/admin">Admin<i class="fas fa-user-shield ms-2"></i></a>
+                                <a class="align-self-center btn login-icon" href="/admin"><i class="fas fa-user-shield ms-2"></i> Admin</a>
                                 {{-- Button Logout --}}
-                                <a class="align-self-center btn login-icon ms-3" href="/signout">Log Out<i class="fas fa-sign-out-alt ms-2"></i></a>
+                                <a class="align-self-center btn login-icon ms-3" href="/signout"><i class="fas fa-sign-out-alt ms-2"></i> Log Out</a>
                                 @endauth
                                 @guest
                                 {{-- Button trigger modal --}}
-                                <button class="align-self-center login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In<i class="fas fa-sign-in-alt ms-2"></i></button>
+                                <button class="align-self-center login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt ms-2"></i> Sign In</button>
                                 @endguest
                             </div>
                         </div>
