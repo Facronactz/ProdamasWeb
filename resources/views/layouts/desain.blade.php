@@ -334,15 +334,10 @@
                         </div>
                     </div>
                     <div class="line-te"></div>
+                    <div class="footer-copyright footer-link" style="color: white">&copy; 2021 Prodamas Plus</div>
                 </div>
             </div>
         </div>
-        </div>
-        <!--div row-->
-        </div>
-        <!--div  container-->
-        </div>
-        <!--div footer-top-->
 
         <div class="footer-bottom" style="background: transparent;">
             <div class="container">
@@ -356,7 +351,6 @@
                 </div>
             </div>
             @endsection --}}
-            <div class="col-md-6 footer-copyright" style="color: white">&copy; 2021 Prodamas Plus</div>
             <div class="col-md-6 footer-social">
                 <a href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube"></i></a>
                 <a href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram"></i></a>
