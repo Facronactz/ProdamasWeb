@@ -272,12 +272,12 @@
             <div class="col-md-5 col-lg-4 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
                 <div style="font-weight: 700; font-size: 20px">PEMERINTAH KOTA KEDIRI</div>
                 <div class="line"></div>
-                <p style="font-weight: 400; font-size: 16px">
+                <p style="font-weight: 400; font-size: 10px">
                     Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
                     Kota kediri, Jawa Timur 64146
                 </p>
-                <p style="font-weight: 400; font-size: 16px"><i class="fas fa-envelope foot-icon"></i> (0354) 682955</p>
-                <p style="font-weight: 400; font-size: 16px"><i class="fas fa-phone foot-icon ph"></i> prodamas@kedirikota.go.id</p>
+                <p style="font-weight: 400; font-size: 10px"><i class="fas fa-envelope foot-icon"></i> (0354) 682955</p>
+                <p style="font-weight: 400; font-size: 10px"><i class="fas fa-phone foot-icon ph"></i> prodamas@kedirikota.go.id</p>
             </div>
             <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
                 <div class="row">
