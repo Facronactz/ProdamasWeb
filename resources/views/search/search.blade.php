@@ -167,6 +167,7 @@
                 Tidak ada data
             </div>
         @endforelse
+        </div>
                 <div class="d-flex justify-content-end mt-2">
                     <a href="{{ url('foto') }}" class="btn btn-primary hvr-icon-forward">
                         Selengkapnya
