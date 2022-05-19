@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Pokmas;
 use App\Models\DescriptionAdmin;
+use Illuminate\Support\Facades\DB;
 
 class PokmasController extends Controller
 {
