@@ -34,10 +34,7 @@ Edit Audio
     </div>
     <div class="form-group">
         <label for="audio">Konten</label>
-        @if ($audio->konten)
-        <p>{{$audio->konten}}</p>
-        @endif
-        <input type="text" name="audio" class="form-control" cols="30" rows="10">
+        <input type="text" name="audio" class="form-control" cols="30" rows="10"value="{{$audio->konten}}">
         @error('audio')
         <div class="alert alert-danger">
             {{ $message }}
