@@ -100,10 +100,11 @@
         .foot-icon {
             color: #4D148C;
             background-color: white;
-            width: 40px;
-            height: 40px;
-            padding: 3px;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
+            line-height: 20px;
+            vertical-align: middle;
         }
 
         /* .bg-iki {
