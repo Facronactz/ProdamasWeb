@@ -206,7 +206,7 @@
                     {{-- panggil total kunjungan di footer --}}
                     @yield('views')
                     {{-- end panggil --}}
-                    @section('views')
+                    {{-- @section('views')
                     <div class="d-flex justify-content-end mt-2">
                         <div style="margin-top: 15px; border-radius: 15px; color: white; text-align:center; background-color: #F58634; padding:5px">
                             <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
@@ -214,7 +214,7 @@
                             <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
                         </div>
                     </div>
-                    @endsection
+                    @endsection --}}
                     <div class="col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
                         <a href=#><img class="logo-footer" src="{{ asset('img/logoprodamas.png ') }}" width="110" height="110" alt="logo-footer" /></a>
                         <div style="margin-top: 12px">
