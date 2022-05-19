@@ -52,7 +52,7 @@
             border-radius: 50%;
             border: 0px solid black;
             width: 30px;
-            height: 30px;
+            height: auto;
         }
 
         .header {
@@ -166,11 +166,11 @@
                                 <div class="nav-item dropdown nav-list">
                                     <a class="nav-link" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{{asset('img/ICON CARI.png')}}" style="width: 17px; height: 17px;"></a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
-                                        <li class="w-100">
-                                            <div style="width: 80px">
+                                        <li class="">
+                                            <div class="container">
                                                 <form action="search" class="mt-3">
                                                     <div style="display:flex; line-height:30px; align-items: center; vertical-align: middle;">
-                                                        <div class="input-group">
+                                                        <div>
                                                             <input class="form-control" type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
                                                         </div>
                                                         <button class="btn-search" type="submit">
