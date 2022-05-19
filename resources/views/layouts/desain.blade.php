@@ -92,18 +92,22 @@
 
         .line {
             height: 2px;
-            width: calc(100% - 4rem);
+            width: calc(100% - 0.6rem);
             background-color: white;
             margin: 0.5rem 0 0.8rem 0;
         }
 
         .foot-icon {
-            color: black;
+            color: #4D148C;
             background-color: white;
-            width: 10px;
-            height: 10px;
-            padding: 3px;
             border-radius: 50%;
+            padding: 5px;
+            margin-right: 8px;
+        }
+
+        .ph {
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
         }
 
         /* .bg-iki {
@@ -266,20 +270,20 @@
                 </div> -->
             </div>
             <div class="col-md-5 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
-                <div style="font-weight: 700; font-size: 22px">PEMERINTAH KOTA KEDIRI</div>
+                <div style="font-weight: 700; font-size: 20px">PEMERINTAH KOTA KEDIRI</div>
                 <div class="line"></div>
-                <p style="font-weight: 400; font-size: small">
+                <p style="font-weight: 400; font-size: 12px">
                     Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
                     Kota kediri, Jawa Timur 64146
                 </p>
-                <p style="font-weight: 400; font-size: small"><i class="fas fa-phone foot-icon"></i> prodamas@kedirikota.go.id</p>
-                <p style="font-weight: 400; font-size: small"><i class="fas fa-envelope foot-icon"></i> (0354) 682955</p>
+                <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon"></i> (0354) 682955</p>
+                <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon ph"></i> prodamas@kedirikota.go.id</p>
             </div>
-            <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
+            <div class="col-md-3 col-lg-5 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
                 <div class="row">
                     <div class="col-md-6">
                         <p style="font-weight: 600; font-weight: bold; font-size:25px;">
-                            Navigasi</p>
+                            NAVIGASI</p>
                         <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
                         {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
                         <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
@@ -289,7 +293,7 @@
                     </div>
                     <div class="col-md-6">
                         <p style="font-weight: 600; font-weight: bold; font-size:25px;">
-                            Tautan Eksternal</p>
+                            TAUTAN EKSTERNAL</p>
                         <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
                         <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
                             Sampah</a> <br>
