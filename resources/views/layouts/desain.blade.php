@@ -296,7 +296,7 @@
                     <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
                 </div> -->
                 </div>
-                <div class="row">
+                <span class="row">
                     <div class="col-md-6 col-lg-5 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
                         <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
                         <div class="line"></div>
@@ -331,7 +331,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    </span>
                 <div class="line-te"></div>
             </div>
 
