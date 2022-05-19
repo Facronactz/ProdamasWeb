@@ -66,6 +66,9 @@
                         </div>
                     </div>
                 @endforeach
+                <div class="d-flex justify-content-end w-100 my-3">
+                    {{ $tulis_ceritas->links() }}
+                </div>
             </div>
 
 

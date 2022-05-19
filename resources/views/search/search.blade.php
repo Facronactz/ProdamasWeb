@@ -117,16 +117,13 @@
                                                         margin: 0;
                                                         margin-top: 30px;
                                                         ">
-                                <video class="media" width="100%" max-width="850" height="auto" controls>
-                                    <source src="{{ asset('/videoProd/konten/' . $item->konten) }}">
-                                    Your browser does not support the video tag.
-                                </video>
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/{{$item->konten}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div class="card" style="
                                                         border: none;
                                                         ">
                                 <h3> {{ $item->judul }} </h3>
-                                <p> {{ $item->caption }} </p>
+                                <p> <?= $item->caption ?> </p>
                             </div>
                         </div>
                     </div>
@@ -256,7 +253,7 @@
                                                           ">
                                 <img src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}" class="d-flex justify-content click" style="width: 100%;" alt="...">
                                 <audio controls="controls">
-                                    <source src="{{ $item->konten }}">
+                                    <source src="https://docs.google.com/uc?export=download&id={{ $item->konten }}">
                                 </audio>
                             </div>
                             <div class="card" style="
