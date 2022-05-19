@@ -99,7 +99,7 @@
 
 <body data-bs-spy="scroll" data-bs-target="#scrollspy" data-bs-offset="0" data-bs-method="position">
     <!-- New Nav -->
-    <div class="nav-now" style="background-color: #4d148c; border-bottom: 7px solid #FF6600 ;">
+    <div class="nav-now" style="background-color: #4d148c; border-bottom: 9px solid #FF6600 ;">
         <a href=" {{ url('/') }}"><img src="{{asset('img/wesite logo 1.png')}}" alt="" class="d-inline-block align-text-top" style="width: 200px; height: auto; padding: 2rem 1.2rem; margin-bottom: -2rem" /></a>
         <div class="bg-iki">
             <nav class="navbar navbar-expand-lg navbar-dark bg-kediri sticky-top" style="font-family: 'Poppins', sans-serif;">
@@ -155,13 +155,13 @@
                                 <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a> -->
                                 @auth
                                 {{-- Button Admin --}}
-                                <a class="align-self-center btn btn-outline-light login-icon ms-3" href="/admin">Admin<i class="fas fa-user-shield ms-2"></i></a>
+                                <a class="align-self-center btn login-icon ms-3" href="/admin">Admin<i class="fas fa-user-shield ms-2"></i></a>
                                 {{-- Button Logout --}}
-                                <a class="align-self-center btn btn-outline-light login-icon ms-3" href="/signout">Log Out<i class="fas fa-sign-out-alt ms-2"></i></a>
+                                <a class="align-self-center btn login-icon ms-3" href="/signout">Log Out<i class="fas fa-sign-out-alt ms-2"></i></a>
                                 @endauth
                                 @guest
                                 {{-- Button trigger modal --}}
-                                <button class="align-self-center btn btn-outline-light login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In<i class="fas fa-sign-in-alt ms-2"></i></button>
+                                <button class="align-self-center login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In<i class="fas fa-sign-in-alt ms-2"></i></button>
                                 @endguest
                             </div>
                         </div>
