@@ -92,8 +92,9 @@
 
         .line {
             height: 2px;
-            width: calc(100% - 3rem);
+            width: calc(100% - 4rem);
             background-color: white;
+            margin: 0.5rem 0 0.8rem 0;
         }
 
         /* .bg-iki {
@@ -258,7 +259,7 @@
             <div class="col-md-5 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
                 <div style="font-weight: 700; font-size: 22px">PEMERINTAH KOTA KEDIRI</div>
                 <div class="line"></div>
-                <p style="font-size: small">
+                <p style="font-weight: 400; font-size: small">
                     Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
                     Kota kediri, Jawa Timur 64146
                 </p>
