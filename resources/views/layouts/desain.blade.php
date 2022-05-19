@@ -96,7 +96,7 @@
 <body data-bs-spy="scroll" data-bs-target="#scrollspy" data-bs-offset="0" data-bs-method="position">
     <!-- New Nav -->
     <div class="bg-iki">
-        <nav class="" style="font-family: 'Poppins', sans-serif;; background-color: #4d148c">
+        <nav class="navbar  navbar-dark bg-kediri sticky-top" style="font-family: 'Poppins', sans-serif;; background-color: #4d148c">
             <a href="{{ url('/') }}"><img src="https://prodamasdev.kedirikota.go.id/img/logoprodamas.png" alt="" class="d-inline-block align-text-top" width="40" height="40" /></a>
             <a class="navbar-brand ms-2" href="{{ url('/') }}" style="font-family: 'Poppins', sans-serif;">PRODAMAS</a>
             <div class="container-fluid mx-xxl-5">
