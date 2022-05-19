@@ -112,7 +112,7 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                         <!-- Middle -->
                         <div class="navbar-nav">
-                            <a class="nav-link nav-list" aria-current="page" href="{{ url('/') }}"><img class="@yield('beranda')" src="{{asset('img/ICON HOME.png')}}" style="width: 20px; height: 20px; margin-right: 1rem"></a>
+                            <a href="{{ url('/') }}"><img class="nav-link nav-list @yield('beranda')" aria-current="page" src="{{asset('img/ICON HOME.png')}}" style="width: 20px; height: 20px; margin-right: 1rem"></a>
                             <a class="nav-link nav-list @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
                             <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
