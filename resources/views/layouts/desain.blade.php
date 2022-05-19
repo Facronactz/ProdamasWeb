@@ -176,7 +176,7 @@
                                 <div class="nav-item dropdown nav-list">
                                     <a class="nav-link" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{{asset('img/ICON CARI.png')}}" style="width: 17px; height: 17px;"></a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout" style="border-radius: 23px;padding:0px">
-                                        <li class="" style="padding:0px">
+                                        <li class="" style="padding:5px">
                                             <div class="">
                                                 <form action="search">
                                                     <div style="display:flex; align-items: center; vertical-align: middle;">
