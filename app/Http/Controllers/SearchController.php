@@ -47,7 +47,7 @@ class SearchController extends Controller
         // ->take(3)
         // ->get()
         ;
-        $posts = Post::where('judul', 'like', "%" . $keyword . "%")
+        $posts = Post::where('title', 'like', "%" . $keyword . "%")
         ->orWhere('caption', 'like', "%" . $keyword . "%")
         ->paginate()
         // ->take(3)
