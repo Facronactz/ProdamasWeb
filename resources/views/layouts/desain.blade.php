@@ -250,7 +250,7 @@
                 </div> -->
             </div>
             <div class="col-md-5 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
-                <h5>PEMERINTAH KOTA KEDIRI</h5>
+                <div style="font-weight: 700; font-size: 22px">PEMERINTAH KOTA KEDIRI</div>
                 <p style="font-size: small">
                     Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
                     Kota kediri, Jawa Timur 64146
@@ -272,7 +272,7 @@
                         <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
                     </div>
                     <div class="col-md-6">
-                        <p style="font-family: 'Poppins', sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
+                        <p style="font-weight: 600; font-weight: bold; font-size:25px;">
                             Tautan Eksternal</p>
                         <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
                         <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
