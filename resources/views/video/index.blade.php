@@ -18,14 +18,14 @@
     </div>
     {{-- Search Bar --}}
     <div class="container">
-        <form action="searchvideo">
+        <!-- <form action="searchvideo">
             <div class="input-group">
                 <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchvideo" value="{{ request('searchvideo') }}">
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-search link-light"></i>
                 </button>
             </div>
-        </form>
+        </form> -->
     </div>
 
     <!-- Awal feed video -->

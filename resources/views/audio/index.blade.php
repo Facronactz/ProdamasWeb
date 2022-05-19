@@ -19,7 +19,7 @@
     </div>
     <!-- akhir jumbotrom -->
     {{-- Search Bar --}}
-    <div class="container">
+    <!-- <div class="container">
         <form action="searchaudio">
             <div class="input-group">
                 <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchaudio" value="{{ request('searchaudio') }}">
@@ -28,7 +28,7 @@
                 </button>
             </div>
         </form>
-    </div>
+    </div> -->
 
     <!-- Awal feed audio -->
     <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedAudio">

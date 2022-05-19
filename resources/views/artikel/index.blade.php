@@ -20,14 +20,14 @@
 
             <!-- Kiri -->
             <div class="col">
-                <form action="searchartikel">
+                <!-- <form action="searchartikel">
                     <div class="input-group">
                         <input class="form-control" type="text" placeholder="Search" name="searchartikel" value="{{ request('searchartikel') }}" aria-label="Search">
                         <button class="btn btn-primary" type="submit">
                             <i class="fas fa-search link-light"></i>
                         </button>
                     </div>
-                </form>
+                </form> -->
                 @foreach ($artikel as $item)
                     <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
                         <div class="row g-0">

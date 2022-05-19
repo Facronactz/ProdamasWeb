@@ -21,7 +21,7 @@
     <!-- akhir jumbotrom -->
 
     {{-- Search Bar --}}
-    <div class="container">
+    <!-- <div class="container">
         <form action="searchfoto">
             <div class="input-group">
                 <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="searchfoto" value="{{ request('searchfoto') }}">
@@ -30,7 +30,7 @@
                 </button>
             </div>
         </form>
-    </div>
+    </div> -->
 
     <!-- Awal feed foto -->
     <div class="container overflow-hidden">
