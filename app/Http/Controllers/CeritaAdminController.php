@@ -49,8 +49,8 @@ class CeritaAdminController extends Controller
 
         // dd($tulis_ceritas);
 
-        $foto->move(public_path('../public/ceritaProd/sampul/'), $new_foto);  
-        $file->move(public_path('../public/ceritaProd/file/'), $new_file);        
+        $foto->move(public_path('../ceritaProd/sampul/'), $new_foto);  
+        $file->move(public_path('../ceritaProd/file/'), $new_file);        
         $tulis_ceritas->save();
 
         return redirect('/admin/list-tuliscerita')->with('success', 'Cerita Berhasil Ditambahkan!');
