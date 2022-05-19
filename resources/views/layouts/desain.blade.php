@@ -220,7 +220,7 @@
     </div>
 
     <!-- Awal footer -->
-    <footer>
+    <footer style="background-image: {{url('img/nav_bot.png')}}">
         <div class="footer-top" id="footer">
             <div class="container">
                 <div class="row">
