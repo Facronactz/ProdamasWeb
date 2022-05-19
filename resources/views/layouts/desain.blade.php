@@ -347,8 +347,8 @@
                         <a style="font-weight: 400; font-size: 12px" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
                         <a style="font-weight: 400; font-size: 12px" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
                     </div>
+                    <div class="footer-copyright footer-link" style="color: white">&copy; 2021 Prodamas Plus</div>
                 </div>
-                <div class="footer-copyright footer-link" style="color: white">&copy; 2021 Prodamas Plus</div>
             </div>
         </div>
         </div>
