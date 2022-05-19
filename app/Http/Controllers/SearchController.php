@@ -68,7 +68,7 @@ class SearchController extends Controller
         // ->take(3)
         // ->get()
         ;
-        return view('search.search', compact('audios','artikel','image','posts','videos', 'totalviews', 'counter'));
+        return view('search.search', compact('audios','artikel','images','posts','videos', 'totalviews', 'counter'));
     }
 
     public function searchartikel(Request $request)
