@@ -46,7 +46,7 @@ Edit Audio
     </div>
     <div class="form-group">
         <label for="caption">Caption</label>
-        <textarea name="caption" class="form-control" id="description" cols="30" rows="3" value="{{$audio->caption}}"></textarea>
+        <textarea name="caption" class="form-control" id="description" cols="30" rows="3" >{{$audio->caption}}</textarea>
         @error('caption')
         <div class="alert alert-danger">
             {{ $message }}
