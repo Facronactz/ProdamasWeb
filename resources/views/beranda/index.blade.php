@@ -28,7 +28,17 @@
         color: white;
         border-radius: 50%;
         font-size: 26px;
-        font-weight: 400;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .carousel-icon-next {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        vertical-align: middle;
+        color: white;
+        border-radius: 50%;
+        font-size: 26px;
         background-color: rgba(0, 0, 0, 0.5);
     }
 </style>
@@ -78,7 +88,7 @@
         <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselUtama" data-bs-slide="next">
-        <span class="carousel-icon-next" aria-hidden="true"></span>
+        <span class="carousel-icon-next" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
         <span class="visually-hidden">Next</span>
     </button>
 </div>
