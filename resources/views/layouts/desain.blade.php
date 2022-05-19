@@ -336,10 +336,10 @@
                     <div class="row">
                         <div class="col line-te"></div>
                         <div class="col footer-social">
-                            <a style="font-weight: 400; font-size: 12px" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube foot-icon"></i></a>
-                            <a style="font-weight: 400; font-size: 12px" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram foot-icon"></i></a>
-                            <a style="font-weight: 400; font-size: 12px" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
-                            <a style="font-weight: 400; font-size: 12px" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
+                            <a style="font-weight: 400; font-size: 8px" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube foot-icons"></i></a>
+                            <a style="font-weight: 400; font-size: 8px" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram foot-icons"></i></a>
+                            <a style="font-weight: 400; font-size: 8px" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icons"></i></a>
+                            <a style="font-weight: 400; font-size: 8px" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icons"></i></a>
                         </div>
                     </div>
                     <div class="footer-copyright footer-link" style="color: white">&copy; 2021 Prodamas Plus</div>
