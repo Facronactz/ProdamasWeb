@@ -156,7 +156,7 @@
                         <div class="navbar-text">
                             <div class="d-flex justify-content-evenly">
                                 <div class="nav-item dropdown nav-list">
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{{asset('img/ICON CARI.png')}}" style="width: 20px; height: 20px; margin-right: 1rem"></a>
+                                    <a class="nav-link" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{{asset('img/ICON CARI.png')}}" style="width: 18px; height: 18px; margin-right: 1rem"></a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
                                         <li class="w-100">
                                             <div class="container">
