@@ -27,7 +27,7 @@
         vertical-align: middle;
         color: white;
         border-radius: 50%;
-        font-size: 24px;
+        font-size: 25px;
         background-color: rgba(0, 0, 0, 0.5);
     }
 
@@ -38,7 +38,7 @@
         vertical-align: middle;
         color: white;
         border-radius: 50%;
-        font-size: 24px;
+        font-size: 25px;
         background-color: rgba(0, 0, 0, 0.5);
     }
 </style>
