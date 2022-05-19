@@ -243,7 +243,7 @@
         <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
             <div class="card h-100 d-block hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $post->id }}">
                 <img src="{{ asset('cover/' . $post->cover) }}" class="card-img-top card-img-fix" alt="...">
-                <div class="card-body">
+                {{-- <div class="card-body">
                 <div id="carouselIndicators{{ $post->id }}" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 @foreach ($post->images as $no => $images)
@@ -267,7 +267,7 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         @endforeach
