@@ -92,7 +92,7 @@
 
         .line {
             height: 2px;
-            width: calc(100% - 3rem);
+            width: calc(100% - 5rem);
             background-color: white;
             margin: 0.5rem 0 0.8rem 0;
         }
