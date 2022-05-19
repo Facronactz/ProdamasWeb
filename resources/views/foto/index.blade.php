@@ -22,9 +22,10 @@
             </div>
         </form> -->
     </div>
-    <div class="row row-cols-1 row-cols-md-3 mb-5 g-4 centerItms feedAudio">
+    <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 mb-5 gx-4 centerItms feedAudio">
         @forelse ($posts as $post)
-        <div class=" card noBorder cardAudio" >
+        <div class=" card noBorder cardAudio p-0" >
             <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$post->id}}">
                 <img src="{{ asset('cover/'. $post->cover) }}" style="width: 100%; height: 270px; object-fit: cover; object-position: center" class="card-img-top d-flex justify-content" alt="foto-prodamas">
                 <div class="card-body">
@@ -44,12 +45,13 @@
         </div>
         @endforelse
     </div>
+    </div>
 
     
     @foreach ($posts as $post)     
         {{-- Card Modal --}}
         <div class="modal fade" id="audioPlayer{{$post->id}}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl" style="width: 50%">
+            <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h2 class="modal-title" id="fotoLabel">{{ $post->title }}</h2>
