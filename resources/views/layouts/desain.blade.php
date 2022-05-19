@@ -37,6 +37,11 @@
     @endif
 
     <style>
+        .login-icon {
+            color: black !important;
+            background-color: white;
+        }
+
         .login-icon i:hover {
             color: black !important;
         }
