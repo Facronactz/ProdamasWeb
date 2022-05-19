@@ -99,7 +99,7 @@
 
 <body data-bs-spy="scroll" data-bs-target="#scrollspy" data-bs-offset="0" data-bs-method="position">
     <!-- New Nav -->
-    <div class="nav-now" style="background-color: #4d148c">
+    <div class="nav-now" style="background-color: #4d148c; border-bottom: 7px solid #FF6600 ;">
         <a href=" {{ url('/') }}"><img src="{{asset('img/wesite logo 1.png')}}" alt="" class="d-inline-block align-text-top" style="width: 200px; height: auto; padding: 2rem 1.2rem; margin-bottom: -2rem" /></a>
         <div class="bg-iki">
             <nav class="navbar navbar-expand-lg navbar-dark bg-kediri sticky-top" style="font-family: 'Poppins', sans-serif;">
@@ -109,7 +109,7 @@
                     </button>
 
                     <!-- Content -->
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+                    <div class="collapse navbar-collapse justify-content-between" id=" navbarNavAltMarkup">
                         <!-- Middle -->
                         <div class="navbar-nav">
                             <a class="nav-link nav-list @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{asset('img/ICON HOME.png')}}" style="width: 20px; height: 20px; margin-right: 1rem"></a>
