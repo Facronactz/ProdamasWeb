@@ -62,6 +62,10 @@
             text-shadow: 2px 2px rgb(209, 201, 209);
         }
 
+        .nav-list + .nav-list {
+            margin-right: 2rem;
+        }
+
         /* .bg-iki {
             background-image: url('{{ url('img/pattern.png') }}');
             background-repeat: no-repeat;
@@ -107,10 +111,10 @@
                     <!-- Content -->
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <!-- Middle -->
-                        <div class="navbar-nav" style="display:flex; justify-content:space-between">
-                            <a class="nav-link @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{asset('img/ICON HOME.png')}}" style="width: 20px; height: 20px;"></a>
-                            <a class="nav-link @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
-                            <div class="nav-item dropdown">
+                        <div class="navbar-nav">
+                            <a class="nav-link nav-list @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{asset('img/ICON HOME.png')}}" style="width: 20px; height: 20px;"></a>
+                            <a class="nav-link nav-list @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
+                            <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
                                     <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
@@ -118,7 +122,7 @@
                                     <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio</a></li>
                                 </ul>
                             </div>
-                            <div class="nav-item dropdown">
+                            <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle @yield('media')" id="navbarDropdownMenuLinkMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkMedia">
                                     <li style="width: 50%;"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
@@ -126,7 +130,7 @@
                                     <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
                                 </ul>
                             </div>
-                            <div class="nav-item dropdown">
+                            <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tentang</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
                                     <li class="w-100"><a class="dropdown-item @yield('prodamas')" href="{{ url('/prodamas') }}">Prodamas</a></li>
@@ -136,10 +140,10 @@
                                     <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">MedSos</a></li>
                                 </ul>
                             </div>
-                            <div id="scrollspy">
+                            <div class="nav-list" id="scrollspy">
                                 <a class="nav-link" href="#footer">Kontak</a>
                             </div>
-                            <a class="nav-link @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a>
+                            <a class="nav-link nav-list @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a>
                         </div>
 
                         {{-- Medsos --}}
