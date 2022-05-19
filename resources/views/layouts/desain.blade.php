@@ -113,7 +113,7 @@
 
         .line-va {
             height: 2px;
-            width: calc(100%-2rem);
+            width: 100%;
             background-color: white;
             margin: 0.5rem 0 0.8rem 0;
         }
@@ -344,18 +344,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="iva line-va"></div>
-                        <div class="iva">
-                            <a style="font-weight: 400; font-size: 12px" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube foot-icon"></i></a>
-                            <a style="font-weight: 400; font-size: 12px" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram foot-icon"></i></a>
-                            <a style="font-weight: 400; font-size: 12px" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
-                            <a style="font-weight: 400; font-size: 12px" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
-                        </div>
+                    <div class="col">
+                        <div class="line-te"></div>
+                        <a style="font-weight: 400; font-size: 12px" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube foot-icon"></i></a>
+                        <a style="font-weight: 400; font-size: 12px" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram foot-icon"></i></a>
+                        <a style="font-weight: 400; font-size: 12px" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
+                        <a style="font-weight: 400; font-size: 12px" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
                     </div>
-                    <div class="footer-copyright footer-link" style="color: white">&copy; 2021 Prodamas Plus</div>
                 </div>
+                <div class="footer-copyright footer-link" style="color: white">&copy; 2021 Prodamas Plus</div>
             </div>
+        </div>
         </div>
 
         <div class="footer-bottom" style="background: transparent;">
