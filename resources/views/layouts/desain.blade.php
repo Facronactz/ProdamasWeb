@@ -51,8 +51,8 @@
             background-color: #4E148D;
             border-radius: 50%;
             border: 0px solid black;
-            width: 25px;
-            height: 25px;
+            width: 30px;
+            height: 30px;
         }
 
         .header {
@@ -169,12 +169,15 @@
                                         <li class="w-100">
                                             <div class="container">
                                                 <form action="search" class="mt-3">
-                                                    <div class="input-group">
-                                                        <input class="form-control" type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
+                                                    <div style="display:inline-block">
+                                                        <div class="input-group">
+                                                            <input class="form-control" type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
+                                                        </div>
+                                                        <button class="btn-search" type="submit">
+                                                            <i class="fas fa-search link-light"></i>
+                                                        </button>
                                                     </div>
-                                                    <button class="btn-search" type="submit">
-                                                        <i class="fas fa-search link-light"></i>
-                                                    </button>
+
                                                 </form>
                                             </div>
                                         </li>
@@ -219,52 +222,52 @@
                         <div style="margin-top: 15px; border-radius: 15px; color: white; text-align:center; background-color: #F58634; padding:5px">
                             <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
                             <a style="font-size:15px">Kunjungan: {{$totalviews}}</a>
-                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                        </div>
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                </div>
+            </div>
+            @endsection --}}
+            <div class="col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
+                <a href=#><img class="logo-footer" src="{{ asset('img/logoprodamas.png ') }}" width="110" height="110" alt="logo-footer" /></a>
+                <div style="margin-top: 12px">
+                    <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
+                </div>
+            </div>
+            <div class="col-md-5 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white">
+                <h5 style="font-family: Inter, sans-serif">Pemerintah Kota Kediri</h5>
+                <p style="font-size: small">
+                    Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
+                    Kota kediri, Jawa Timur 64146
+                </p>
+                <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf0e0;
+                    prodamas@kedirikota.go.id</p>
+                <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf095; (0354) 682955</p>
+            </div>
+            <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
+                            Navigasi</p>
+                        <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
+                        {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
+                        <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
+                        {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
+                        <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
+                        <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
                     </div>
-                    @endsection --}}
-                    <div class="col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
-                        <a href=#><img class="logo-footer" src="{{ asset('img/logoprodamas.png ') }}" width="110" height="110" alt="logo-footer" /></a>
-                        <div style="margin-top: 12px">
-                            <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white">
-                        <h5 style="font-family: Inter, sans-serif">Pemerintah Kota Kediri</h5>
-                        <p style="font-size: small">
-                            Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
-                            Kota kediri, Jawa Timur 64146
-                        </p>
-                        <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf0e0;
-                            prodamas@kedirikota.go.id</p>
-                        <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf095; (0354) 682955</p>
-                    </div>
-                    <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
-                                    Navigasi</p>
-                                <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
-                                {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
-                                <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
-                                {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
-                                <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
-                                <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
-                            </div>
-                            <div class="col-md-6">
-                                <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
-                                    Tautan Eksternal</p>
-                                <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
-                                <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
-                                    Sampah</a> <br>
-                                <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
-                            </div>
-                        </div>
+                    <div class="col-md-6">
+                        <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
+                            Tautan Eksternal</p>
+                        <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
+                        <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
+                            Sampah</a> <br>
+                        <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
                     </div>
                 </div>
-                <!--div row-->
             </div>
-            <!--div  container-->
+        </div>
+        <!--div row-->
+        </div>
+        <!--div  container-->
         </div>
         <!--div footer-top-->
 
