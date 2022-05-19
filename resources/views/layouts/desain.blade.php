@@ -205,7 +205,7 @@
                                 @endauth
                                 @guest
                                 {{-- Button trigger modal --}}
-                                <button class="align-self-center login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Sign In</button>
+                                <button class="align-self-center btn login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Sign In</button>
                                 @endguest
                             </div>
                         </div>
