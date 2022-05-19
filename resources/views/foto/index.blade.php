@@ -45,8 +45,7 @@
 
     <!-- Awal feed foto -->
     <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedAudio">
-        {{-- Card foto --}}
-        @forelse ($posts ?? '' as $post)
+        @forelse ($posts as $post)
         <div class=" card noBorder cardAudio" style="width: 18rem;">
             <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$post->id}}">
                 <img src="{{ asset('cover/'. $post->cover) }}" style="width: 250px; height: 270px" class="card-img-top d-flex justify-content" alt="foto-prodamas">
@@ -61,7 +60,15 @@
             </div>
         </div>
 
-        @foreach ($posts as $post)     
+        @empty
+        <div class="alert alert-success" role="alert">
+            Tidak ada data
+        </div>
+        @endforelse
+    </div>
+
+    
+    @foreach ($posts as $post)     
         {{-- Card Modal --}}
         <div class="modal fade" id="audioPlayer{{$post->id}}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
@@ -71,19 +78,31 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                         <div class="modal-body">
-                            <div class="float-left mr-3">
-                                <div class="col-2" style="width: 100%;">
-                                    <img class="mx-auto d-block: 500px" src="{{ asset('cover/'. $post->cover)}}" width="200" height="200" controls>
-                                </div>
-                                    <div class="row mt-5" style="">
-                                        @foreach ($post-> image as $image)
-                                            <div class="col-sm-3" >
-                                                <img  id="myImg" alt="Snow" class="width: 100%" src="{{ asset('images/'. $image->image)}}" width="30%" controls>
-                                            </div> 
-                                                
-                                        @endforeach   
+                                <div id="carouselIndicators{{$post->id}}" class="carousel slide" data-ride="carousel">
+                                    
+                                    <div class="carousel-inner">
+                                        @foreach ($post->image as $no => $image)
+                                            @if ($no == 0)
+                                                <div class="carousel-item active">
+                                                    <img src="{{ asset('images/'. $image->image)}}" class="d-block w-100" alt="...">
+                                                </div>
+                                            @else
+                                                <div class="carousel-item">
+                                                    <img src="{{ asset('images/'. $image->image)}}" class="d-block w-100" alt="...">
+                                                </div>
+                                            @endif 
+                                        @endforeach
                                     </div>
-                            </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators{{$post->id}}" data-bs-slide="prev" >
+                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators{{$post->id}}" data-bs-slide="next" >
+                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Next</span>
+                                    </button>
+                                  </div>
+                            <!-- </div> -->
                             
                             <h6>{{ $post->body }}</h6>
                         </div>
@@ -95,12 +114,6 @@
         </div>
         {{-- Akhir Card foto --}}
         @endforeach
-        @empty
-        <div class="alert alert-success" role="alert">
-            Tidak ada data
-        </div>
-        @endforelse
-    </div>
     <!-- akhir feed foto -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
