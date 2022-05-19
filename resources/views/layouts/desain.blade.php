@@ -199,13 +199,13 @@
                                 <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a> -->
                                 @auth
                                 {{-- Button Admin --}}
-                                <a class="align-self-center btn login-icon ms-3" href="/admin"><i class="fas fa-user-shield"></i> Admin</a>
+                                <a class="align-self-center btn login-icon ms-1" href="/admin"><i class="fas fa-user-shield"></i> Admin</a>
                                 {{-- Button Logout --}}
-                                <a class="align-self-center btn login-icon ms-3" href="/signout"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+                                <a class="align-self-center btn login-icon ms-1" href="/signout"><i class="fas fa-sign-out-alt"></i> Log Out</a>
                                 @endauth
                                 @guest
                                 {{-- Button trigger modal --}}
-                                <button class="align-self-center btn login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Sign In</button>
+                                <button class="align-self-center btn login-icon ms-1" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Sign In</button>
                                 @endguest
                             </div>
                         </div>
