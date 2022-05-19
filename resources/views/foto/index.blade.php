@@ -4,6 +4,14 @@
 
 
 @section('content')
+<div class="container">
+        <div class="div-title mt-3">
+            <div class="header-symbol animate__animated animate__flash animate__delay-3s animate__faster"></div>
+            <h1 class="home-title header-text px-2">
+                <span>Foto</span>
+            </h1>
+        </div>
+</div>
 
 <div class="row row-cols-1 row-cols-md-3 mb-5 g-4 centerItms feedAudio">
         @forelse ($posts as $post)
