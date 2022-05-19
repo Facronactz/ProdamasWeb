@@ -95,56 +95,56 @@
 
 <body data-bs-spy="scroll" data-bs-target="#scrollspy" data-bs-offset="0" data-bs-method="position">
     <!-- New Nav -->
-    <div class="nav-now">
+    <div class="nav-now" style="background-color: #4d148c">
         <a href=" {{ url('/') }}"><img src="https://prodamasdev.kedirikota.go.id/img/logoprodamas.png" alt="" class="d-inline-block align-text-top" width="40" height="40" /></a>
         <a class="navbar-brand ms-2" href="{{ url('/') }}" style="font-family: 'Poppins', sans-serif;">PRODAMAS</a>
         <div class="bg-iki">
             <nav class="navbar navbar-expand-lg navbar-dark bg-kediri sticky-top" style="font-family: 'Poppins', sans-serif;">
-            <div class=" container-fluid mx-xxl-5">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <div class=" container-fluid mx-xxl-5">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <!-- Content -->
-                <div class="collapse navbar-collapse justify-content-evenly" id="navbarNavAltMarkup">
-                    <!-- Middle -->
-                    <div class="navbar-nav mx-auto">
-                        <a class="nav-link @yield('beranda')" aria-current="page" href="{{ url('/') }}">Beranda</a>
-                        <a class="nav-link @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
-                                <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
-                                <li class="w-100"><a class="dropdown-item @yield('banksampah')" href="{{ url('/banksampah') }}">E-Bank Sampah</a></li>
-                                <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio</a></li>
-                            </ul>
+                    <!-- Content -->
+                    <div class="collapse navbar-collapse justify-content-evenly" id="navbarNavAltMarkup">
+                        <!-- Middle -->
+                        <div class="navbar-nav mx-auto">
+                            <a class="nav-link @yield('beranda')" aria-current="page" href="{{ url('/') }}">Beranda</a>
+                            <a class="nav-link @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
+                                    <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('banksampah')" href="{{ url('/banksampah') }}">E-Bank Sampah</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle @yield('media')" id="navbarDropdownMenuLinkMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkMedia">
+                                    <li style="width: 50%;"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
+                                    <li style="width: 50%;"><a class="dropdown-item @yield('audio')" href="{{ url('/audio') }}">Audio</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tentang</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
+                                    <li class="w-100"><a class="dropdown-item @yield('prodamas')" href="{{ url('/prodamas') }}">Prodamas</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('bidang')" href="{{ url('/bidang') }}">Bidang</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('kampungkeren')" href="{{ url('/kampungkeren') }}">Kampung Keren</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('pokmas')" href="{{ url('/pokmas') }}">POKMAS</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">MedSos</a></li>
+                                </ul>
+                            </div>
+                            <div id="scrollspy">
+                                <a class="nav-link" href="#footer">Kontak</a>
+                            </div>
+                            <a class="nav-link @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a>
                         </div>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle @yield('media')" id="navbarDropdownMenuLinkMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkMedia">
-                                <li style="width: 50%;"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
-                                <li style="width: 50%;"><a class="dropdown-item @yield('audio')" href="{{ url('/audio') }}">Audio</a></li>
-                                <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
-                            </ul>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tentang</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
-                                <li class="w-100"><a class="dropdown-item @yield('prodamas')" href="{{ url('/prodamas') }}">Prodamas</a></li>
-                                <li class="w-100"><a class="dropdown-item @yield('bidang')" href="{{ url('/bidang') }}">Bidang</a></li>
-                                <li class="w-100"><a class="dropdown-item @yield('kampungkeren')" href="{{ url('/kampungkeren') }}">Kampung Keren</a></li>
-                                <li class="w-100"><a class="dropdown-item @yield('pokmas')" href="{{ url('/pokmas') }}">POKMAS</a></li>
-                                <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">MedSos</a></li>
-                            </ul>
-                        </div>
-                        <div id="scrollspy">
-                            <a class="nav-link" href="#footer">Kontak</a>
-                        </div>
-                        <a class="nav-link @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a>
-                    </div>
 
-                    {{-- Search --}}
-                    {{-- <div class="input-group" style="max-width: 10vw">
+                        {{-- Search --}}
+                        {{-- <div class="input-group" style="max-width: 10vw">
                     <input class="form-control" type="text" placeholder="Search" aria-label="Search">
                     <select class="form-select" id="inputGroupSelect01">
                         <option selected>Semua</option>
@@ -156,111 +156,111 @@
                         <i class="fas fa-search link-light"></i>
                     </button>
                 </div> --}}
-                    {{-- Medsos --}}
-                    <div>
-                        <div class="d-flex justify-content-evenly">
-                            <a class="align-self-center" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube mx-2 link-light"></i></a>
-                            <a class="align-self-center" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram mx-2 link-light"></i></a>
-                            <a class="align-self-center" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook mx-2 link-light"></i></a>
-                            <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a>
-                            @auth
-                            {{-- Button Admin --}}
-                            <a class="align-self-center btn btn-outline-light login-icon ms-3" href="/admin">Admin<i class="fas fa-user-shield ms-2"></i></a>
-                            {{-- Button Logout --}}
-                            <a class="align-self-center btn btn-outline-light login-icon ms-3" href="/signout">Log Out<i class="fas fa-sign-out-alt ms-2"></i></a>
-                            @endauth
-                            @guest
-                            {{-- Button trigger modal --}}
-                            <button class="align-self-center btn btn-outline-light login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In<i class="fas fa-sign-in-alt ms-2"></i></button>
-                            @endguest
-                        </div>
+                        {{-- Medsos --}}
+                        <div>
+                            <div class="d-flex justify-content-evenly">
+                                <a class="align-self-center" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube mx-2 link-light"></i></a>
+                                <a class="align-self-center" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram mx-2 link-light"></i></a>
+                                <a class="align-self-center" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook mx-2 link-light"></i></a>
+                                <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a>
+                                @auth
+                                {{-- Button Admin --}}
+                                <a class="align-self-center btn btn-outline-light login-icon ms-3" href="/admin">Admin<i class="fas fa-user-shield ms-2"></i></a>
+                                {{-- Button Logout --}}
+                                <a class="align-self-center btn btn-outline-light login-icon ms-3" href="/signout">Log Out<i class="fas fa-sign-out-alt ms-2"></i></a>
+                                @endauth
+                                @guest
+                                {{-- Button trigger modal --}}
+                                <button class="align-self-center btn btn-outline-light login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In<i class="fas fa-sign-in-alt ms-2"></i></button>
+                                @endguest
+                            </div>
 
+                        </div>
                     </div>
                 </div>
+            </nav>
         </div>
-        </nav>
-    </div>
 
-    <div style="min-height: 64vh">
-        @yield('content')
-    </div>
+        <div style="min-height: 64vh">
+            @yield('content')
+        </div>
 
-    <!-- Awal footer -->
-    <footer>
-        <div class="footer-top" id="footer">
-            <div class="container">
-                <div class="row">
-                    {{-- panggil total kunjungan di footer --}}
-                    @yield('views')
-                    {{-- end panggil --}}
-                    <div class="col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
-                        <a href=#><img class="logo-footer" src="{{ asset('img/logoprodamas.png ') }}" width="110" height="110" alt="logo-footer" /></a>
-                        <div style="margin-top: 12px">
-                            <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white">
-                        <h5 style="font-family: Inter, sans-serif">Pemerintah Kota Kediri</h5>
-                        <p style="font-size: small">
-                            Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
-                            Kota kediri, Jawa Timur 64146
-                        </p>
-                        <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf0e0;
-                            prodamas@kedirikota.go.id</p>
-                        <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf095; (0354) 682955</p>
-                    </div>
-                    <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
-                                    Navigasi</p>
-                                <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
-                                {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
-                                <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
-                                {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
-                                <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
-                                <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
-                            </div>
-                            <div class="col-md-6">
-                                <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
-                                    Tautan Eksternal</p>
-                                <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
-                                <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
-                                    Sampah</a> <br>
-                                <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
+        <!-- Awal footer -->
+        <footer>
+            <div class="footer-top" id="footer">
+                <div class="container">
+                    <div class="row">
+                        {{-- panggil total kunjungan di footer --}}
+                        @yield('views')
+                        {{-- end panggil --}}
+                        <div class="col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
+                            <a href=#><img class="logo-footer" src="{{ asset('img/logoprodamas.png ') }}" width="110" height="110" alt="logo-footer" /></a>
+                            <div style="margin-top: 12px">
+                                <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
                             </div>
                         </div>
+                        <div class="col-md-5 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white">
+                            <h5 style="font-family: Inter, sans-serif">Pemerintah Kota Kediri</h5>
+                            <p style="font-size: small">
+                                Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
+                                Kota kediri, Jawa Timur 64146
+                            </p>
+                            <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf0e0;
+                                prodamas@kedirikota.go.id</p>
+                            <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf095; (0354) 682955</p>
+                        </div>
+                        <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
+                                        Navigasi</p>
+                                    <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
+                                    {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
+                                    <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
+                                    {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
+                                    <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
+                                    <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
+                                </div>
+                                <div class="col-md-6">
+                                    <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
+                                        Tautan Eksternal</p>
+                                    <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
+                                    <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
+                                        Sampah</a> <br>
+                                    <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!--div row-->
                 </div>
-                <!--div row-->
+                <!--div  container-->
             </div>
-            <!--div  container-->
-        </div>
-        <!--div footer-top-->
+            <!--div footer-top-->
 
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    {{-- @section('views')
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        {{-- @section('views')
                             <div class="d-flex justify-content-end mt-2">
                                 <div style="margin-top: 15px; border-radius: 15px; color: white; text-align:center; background-color: #F58634; padding:5px">
                                     <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
                                     <a style="font-size:15px">Kunjungan: {{$totalviews}}</a>
-                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    </div>
+                </div>
+                @endsection --}}
+                <div class="col-md-6 footer-copyright" style="color: white">&copy; 2021 Prodamas Plus</div>
+                <div class="col-md-6 footer-social">
+                    <a href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
-            @endsection --}}
-            <div class="col-md-6 footer-copyright" style="color: white">&copy; 2021 Prodamas Plus</div>
-            <div class="col-md-6 footer-social">
-                <a href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook"></i></a>
-                <a href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok"></i></a>
-            </div>
-        </div>
-        </div>
-        </div>
-        </div>
+    </div>
+    </div>
+    </div>
     </footer>
     <!-- Akhir footer -->
 
