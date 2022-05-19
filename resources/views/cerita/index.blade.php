@@ -67,7 +67,7 @@
                     </div>
                 @endforeach    
                 <div class="d-flex justify-content-end w-100 mb-4">
-                    {{ $ceritas->links() }}
+                    {{ $tulis_ceritas->links() }}
                 </div>            
             </div>
         </div>
