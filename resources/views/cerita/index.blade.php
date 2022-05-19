@@ -65,10 +65,8 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @endforeach                
             </div>
-
-
         </div>
         <!--div container-->
     </section>
