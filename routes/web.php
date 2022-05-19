@@ -34,6 +34,8 @@ use App\Http\Controllers\CeritaController;
 use App\Http\Controllers\CeritaAdminController;
 //use App\Http\Controllers\SocialShareButtonsController;
 use App\Http\Controllers\SettingCarouselController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostFotoController;
 
 
 /*
@@ -117,12 +119,15 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::post('/admin/status', [ArticleController::class, 'status']);
 
     //foto
-    Route::get('/admin/add-foto', [FotoAdminController::class, 'create']);
-    Route::post('/admin/list-foto', [FotoAdminController::class, 'store']);
-    Route::get('/admin/list-foto', [FotoAdminController::class, 'index']);
-    Route::get('/admin/foto/{foto_id}', [FotoAdminController::class, 'edit']);
-    Route::put('/admin/foto/{foto_id}', [FotoAdminController::class, 'update']);
-    Route::delete('/admin/foto/{foto_id}', [FotoAdminController::class, 'destroy']);
+    Route::get('/admin/add-foto', [PostController::class, 'create']);
+    Route::post('/admin/list-foto', [PostController::class, 'store']);
+    Route::get('/admin/list-foto', [PostController::class, 'index']);
+    Route::get('/admin/foto/{id}', [PostController::class, 'edit']);
+    Route::put('/admin/foto/{id}', [PostController::class, 'update']);
+    Route::delete('/admin/foto/{id}', [PostController::class, 'destroy']);
+    Route::delete('/deleteimage/{id}', [PostController::class, 'deleteimage']);
+    Route::delete('/deletecover/{id}', [PostController::class, 'deletecover']);
+    Route::post('/update/{id}', [PostController::class, 'update']);
 
     //video
     Route::get('/admin/add-video', [VideoAdminController::class, 'create']);
@@ -238,7 +243,7 @@ Route::resource('/audio', AudioController::class);
 Route::get('/searchaudio', [SearchController::class, 'searchaudio'])->name('search');
 
 //Route search foto
-Route::resource('/foto', FotoController::class);
+Route::resource('/foto', PostFotoController::class);
 Route::get('/searchfoto', [SearchController::class, 'searchfoto'])->name('search');
 
 //Route search video
