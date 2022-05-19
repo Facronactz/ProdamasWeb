@@ -110,6 +110,18 @@
             transform: scaleX(-1);
         }
 
+        .foot-title {
+            font-weight: 700;
+            font-size: 20px"
+
+        }
+
+        .footer-link {
+            font-weight: 400;
+            font-size: 12px"
+
+        }
+
         /* .bg-iki {
             background-image: url('{{ url('img/pattern.png') }}');
             background-repeat: no-repeat;
@@ -270,7 +282,7 @@
                 </div> -->
             </div>
             <div class="col-md-6 col-lg-4 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
-                <div style="font-weight: 700; font-size: 20px">PEMERINTAH KOTA KEDIRI</div>
+                <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
                 <div class="line"></div>
                 <p style="font-weight: 400; font-size: 12px">
                     Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
@@ -282,19 +294,20 @@
             <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
                 <div class="row">
                     <div class="col-md-6">
-                        <p style="font-weight: 700; font-size: 20px">
+                        <p class="foot-title">
                             NAVIGASI</p>
                         <div class="line"></div>
-                        <a style="font-weight: 700; font-size: 12px" class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
+                        <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
                         {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
-                        <a style="font-weight: 700; font-size: 12px" class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
+                        <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
                         {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
-                        <a style="font-weight: 700; font-size: 12px" class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
-                        <a style="font-weight: 700; font-size: 12px" class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
+                        <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
+                        <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
                     </div>
                     <div class="col-md-6">
-                        <p style="font-weight: 600; font-weight: bold; font-size:25px;">
+                        <p class="foot-title">
                             TAUTAN EKSTERNAL</p>
+                        <div class="line"></div>
                         <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
                         <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
                             Sampah</a> <br>
