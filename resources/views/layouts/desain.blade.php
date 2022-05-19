@@ -96,10 +96,10 @@
 <body data-bs-spy="scroll" data-bs-target="#scrollspy" data-bs-offset="0" data-bs-method="position">
     <!-- New Nav -->
     <div class="bg-iki">
+        <a href="{{ url('/') }}"><img src="https://prodamasdev.kedirikota.go.id/img/logoprodamas.png" alt="" class="d-inline-block align-text-top" width="40" height="40" /></a>
+        <a class="navbar-brand ms-2" href="{{ url('/') }}" style="font-family: 'Poppins', sans-serif;">PRODAMAS</a>
         <nav class="navbar navbar-expand-lg navbar-dark bg-kediri sticky-top" style="font-family: 'Poppins', sans-serif;; background-color: #4d148c">
             <div class="container-fluid mx-xxl-5">
-                <a href="{{ url('/') }}"><img src="https://prodamasdev.kedirikota.go.id/img/logoprodamas.png" alt="" class="d-inline-block align-text-top" width="40" height="40" /></a>
-                <a class="navbar-brand ms-2" href="{{ url('/') }}" style="font-family: 'Poppins', sans-serif;">PRODAMAS</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -189,7 +189,7 @@
                 <div class="container">
                     <div class="row">
                         {{-- panggil total kunjungan di footer --}}
-                        @yield('views') 
+                        @yield('views')
                         {{-- end panggil --}}
                         <div class="col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
                             <a href=#><img class="logo-footer" src="{{ asset('img/logoprodamas.png ') }}" width="110" height="110" alt="logo-footer" /></a>
