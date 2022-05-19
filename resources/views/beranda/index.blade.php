@@ -82,9 +82,9 @@
         </div>
     </form>
 </div> -->
-
+<br><br>
 <!--Tentang-->
-<section class="tentang mt-4">
+<section class="tentang">
     <div class="container">
         <div class="row">
             <div class="col-md-6 py-4">
