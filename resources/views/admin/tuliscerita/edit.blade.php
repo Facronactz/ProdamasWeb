@@ -58,7 +58,7 @@ Edit Cerita
 
     <div class="form-group">
         <label for="ringkasan">Ringkasan Cerita</label>
-        <textarea name="ringkasan" id="description" class="form-control" cols="30" rows="10">{{$tulis_ceritas->ringkasan}}</textarea>
+        <textarea name="ringkasan" class="form-control" cols="30" rows="10">{{$tulis_ceritas->ringkasan}}</textarea>
         @error('ringkasan')
         <div class="alert alert-danger">
             {{ $message }}
