@@ -51,7 +51,7 @@
     @foreach ($posts as $post)     
         {{-- Card Modal --}}
         <div class="modal fade" id="audioPlayer{{$post->id}}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl" style="width: 50%">
+            <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h2 class="modal-title" id="fotoLabel">{{ $post->title }}</h2>
