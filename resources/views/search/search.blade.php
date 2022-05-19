@@ -138,23 +138,30 @@
     <!--end video-->
 
     <!-- Awal feed foto -->
-    <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedAudio justify-content-center">
+    {{-- <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedAudio justify-content-center">
         @if ($posts->count())
         @forelse ($posts as $post)
             <div class=" card noBorder cardAudio p-0">
                 <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $post->id }}">
-                    <img src="{{ asset('cover/' . $post->cover) }}" style="width: 100%; height: 270px; object-fit: cover; object-position: center" class="card-img-top d-flex justify-content" alt="foto-prodamas">
-                    <div class="card-body">
-                        <h3 class="card-title">
-                            <p class=" tittleAudio" href="">
+                    <img src="{{ asset('cover/' . $post->cover) }}" style="width: 100%; height: 270px; object-fit: cover; object-position: center" class="card-img-top d-flex justify-content" alt="foto-prodamas"> --}}
+    <div class="container-md my-5">
+        <h3 class="mb-4" style="font-family: Inter, sans-serif">Foto</h3>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 px-md-0 px-5">
+                @if ($posts->count())
+                @forelse ($posts as $post)
+                <div class="col my-3 my-lg-0 hvr-bob" style="cursor: pointer">
+                    <div class="card h-100 hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $post->id }}">
+                            <img src="{{ asset('cover/' . $post->cover) }}" class="card-img-top card-img-fix" alt="...">
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                <p class=" tittleAudio" href="">
                                 {{ $post->title }}
-                            </p>
-                        </h3>
-                        {{ $post->created_at }}
+                                </p>
+                                </h3>
+                                {{ $post->created_at }}
+                            </div>
                     </div>
                 </div>
-            </div>
-
         @empty
             <div class="alert alert-success" role="alert">
                 Tidak ada data
@@ -178,7 +185,7 @@
     @foreach ($posts as $post)
         {{-- Card Modal --}}
         <div class="modal fade" id="audioPlayer{{ $post->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
+            <div class="modal-dialog modal-xl" style="width: 500px; height: 500px">
                 <div class="modal-content">
                     <div class="modal-header ">
                         <h2 class="modal-title" id="fotoLabel">{{ $post->title }}</h2>
