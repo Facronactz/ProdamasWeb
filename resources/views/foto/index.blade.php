@@ -1,10 +1,8 @@
 @extends('layouts.desain')
-@section('post','active')
-{{-- @section('search') --}}
-<form class="d-flex">
-    <input class="form-control me-2" type="search" style="font-family: 'Font Awesome 5 Free'; font-weight: 600; border-radius: 30px; height: 30px" placeholder=" &#xf002;" aria-label="Search" />
-</form>
-{{-- @endsection --}}
+@section('foto', 'active')
+@section('media', 'active')
+
+
 @section('content')
 
 <!DOCTYPE html>
@@ -35,15 +33,6 @@
 
 <body>
 
-    <!-- awal jumbotron -->
-    <div class="banner">
-        <video id="background-video" autoplay loop muted poster="kota.png">
-            <source src="img/FOTO.mp4" type="video/mp4" />
-        </video>
-    </div>
-    <!-- akhir jumbotrom -->
-
-    <!-- corousel -->
     
     <div class="row row-cols-1 row-cols-md-3 mb-5 g-4 centerItms feedAudio">
         @forelse ($posts as $post)
