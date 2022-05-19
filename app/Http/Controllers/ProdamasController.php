@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Prodamas;
 use App\Models\Transform;
 use App\Models\Regulasi;
+use Illuminate\Support\Facades\DB;
 
 class ProdamasController extends Controller
 {
