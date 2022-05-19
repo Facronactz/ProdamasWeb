@@ -107,62 +107,60 @@
                     <!-- Content -->
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <!-- Middle -->
-                        <div style="justify-content:space-between">
-                            <div class="navbar-nav">
-                                <a class="nav-link @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{asset('img/ICON HOME.png')}}" style="width: 20px; height: 20px;"></a>
-                                <a class="nav-link @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
-                                <div class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
-                                        <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
-                                        <li class="w-100"><a class="dropdown-item @yield('banksampah')" href="{{ url('/banksampah') }}">E-Bank Sampah</a></li>
-                                        <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio</a></li>
-                                    </ul>
-                                </div>
-                                <div class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle @yield('media')" id="navbarDropdownMenuLinkMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkMedia">
-                                        <li style="width: 50%;"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
-                                        <li style="width: 50%;"><a class="dropdown-item @yield('audio')" href="{{ url('/audio') }}">Audio</a></li>
-                                        <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
-                                    </ul>
-                                </div>
-                                <div class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tentang</a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
-                                        <li class="w-100"><a class="dropdown-item @yield('prodamas')" href="{{ url('/prodamas') }}">Prodamas</a></li>
-                                        <li class="w-100"><a class="dropdown-item @yield('bidang')" href="{{ url('/bidang') }}">Bidang</a></li>
-                                        <li class="w-100"><a class="dropdown-item @yield('kampungkeren')" href="{{ url('/kampungkeren') }}">Kampung Keren</a></li>
-                                        <li class="w-100"><a class="dropdown-item @yield('pokmas')" href="{{ url('/pokmas') }}">POKMAS</a></li>
-                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">MedSos</a></li>
-                                    </ul>
-                                </div>
-                                <div id="scrollspy">
-                                    <a class="nav-link" href="#footer">Kontak</a>
-                                </div>
-                                <a class="nav-link @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a>
+                        <div class="navbar-nav" style="display:flex; justify-content:space-between">
+                            <a class="nav-link @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{asset('img/ICON HOME.png')}}" style="width: 20px; height: 20px;"></a>
+                            <a class="nav-link @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
+                                    <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('banksampah')" href="{{ url('/banksampah') }}">E-Bank Sampah</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio</a></li>
+                                </ul>
                             </div>
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle @yield('media')" id="navbarDropdownMenuLinkMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkMedia">
+                                    <li style="width: 50%;"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
+                                    <li style="width: 50%;"><a class="dropdown-item @yield('audio')" href="{{ url('/audio') }}">Audio</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tentang</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
+                                    <li class="w-100"><a class="dropdown-item @yield('prodamas')" href="{{ url('/prodamas') }}">Prodamas</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('bidang')" href="{{ url('/bidang') }}">Bidang</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('kampungkeren')" href="{{ url('/kampungkeren') }}">Kampung Keren</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('pokmas')" href="{{ url('/pokmas') }}">POKMAS</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">MedSos</a></li>
+                                </ul>
+                            </div>
+                            <div id="scrollspy">
+                                <a class="nav-link" href="#footer">Kontak</a>
+                            </div>
+                            <a class="nav-link @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a>
+                        </div>
 
-                            {{-- Medsos --}}
-                            <span class="navbar-text">
-                                <div class="d-flex justify-content-evenly">
-                                    <!-- <a class="align-self-center" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube mx-2 link-light"></i></a>
+                        {{-- Medsos --}}
+                        <span class="navbar-text">
+                            <div class="d-flex justify-content-evenly">
+                                <!-- <a class="align-self-center" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube mx-2 link-light"></i></a>
                                 <a class="align-self-center" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram mx-2 link-light"></i></a>
                                 <a class="align-self-center" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook mx-2 link-light"></i></a>
                                 <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a> -->
-                                    @auth
-                                    {{-- Button Admin --}}
-                                    <a class="align-self-center btn btn-outline-light login-icon ms-3" href="/admin">Admin<i class="fas fa-user-shield ms-2"></i></a>
-                                    {{-- Button Logout --}}
-                                    <a class="align-self-center btn btn-outline-light login-icon ms-3" href="/signout">Log Out<i class="fas fa-sign-out-alt ms-2"></i></a>
-                                    @endauth
-                                    @guest
-                                    {{-- Button trigger modal --}}
-                                    <button class="align-self-center btn btn-outline-light login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In<i class="fas fa-sign-in-alt ms-2"></i></button>
-                                    @endguest
-                                </div>
-                            </span>
-                        </div>
+                                @auth
+                                {{-- Button Admin --}}
+                                <a class="align-self-center btn btn-outline-light login-icon ms-3" href="/admin">Admin<i class="fas fa-user-shield ms-2"></i></a>
+                                {{-- Button Logout --}}
+                                <a class="align-self-center btn btn-outline-light login-icon ms-3" href="/signout">Log Out<i class="fas fa-sign-out-alt ms-2"></i></a>
+                                @endauth
+                                @guest
+                                {{-- Button trigger modal --}}
+                                <button class="align-self-center btn btn-outline-light login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In<i class="fas fa-sign-in-alt ms-2"></i></button>
+                                @endguest
+                            </div>
+                        </span>
                     </div>
                 </div>
             </nav>
