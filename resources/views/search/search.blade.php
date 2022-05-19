@@ -189,7 +189,7 @@
                         <div id="carouselIndicators{{ $post->id }}" class="carousel slide" data-ride="carousel">
 
                             <div class="carousel-inner">
-                                @foreach ($post->image as $no => $images)
+                                @foreach ($post->image as $no => $image)
                                     @if ($no == 0)
                                         <div class="carousel-item active">
                                             <img src="{{ asset('images/' . $image->image) }}" class="d-block w-100" alt="...">
