@@ -17,7 +17,7 @@ class AudioAdminController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $this->validate($request,[
             'gambar_sampul' => 'required|mimes:jpeg,jpg,png|max:2200',
             'caption' => 'required',
             'judul' => 'required',
