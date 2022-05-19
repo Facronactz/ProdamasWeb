@@ -62,7 +62,7 @@
             text-shadow: 2px 2px rgb(209, 201, 209);
         }
 
-        .nav-list + .nav-list {
+        .nav-list+.nav-list {
             margin-right: 2rem;
         }
 
@@ -109,7 +109,7 @@
                     </button>
 
                     <!-- Content -->
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                         <!-- Middle -->
                         <div class="navbar-nav">
                             <a class="nav-link nav-list @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{asset('img/ICON HOME.png')}}" style="width: 20px; height: 20px; margin-right: 1rem"></a>
@@ -125,8 +125,8 @@
                             <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle @yield('media')" id="navbarDropdownMenuLinkMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkMedia">
-                                    <li style="width: 50%;"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
-                                    <li style="width: 50%;"><a class="dropdown-item @yield('audio')" href="{{ url('/audio') }}">Audio</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('audio')" href="{{ url('/audio') }}">Audio</a></li>
                                     <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
                                 </ul>
                             </div>
@@ -147,7 +147,7 @@
                         </div>
 
                         {{-- Medsos --}}
-                        <span class="navbar-text">
+                        <div class="navbar-text">
                             <div class="d-flex justify-content-evenly">
                                 <!-- <a class="align-self-center" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube mx-2 link-light"></i></a>
                                 <a class="align-self-center" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram mx-2 link-light"></i></a>
@@ -164,7 +164,7 @@
                                 <button class="align-self-center btn btn-outline-light login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In<i class="fas fa-sign-in-alt ms-2"></i></button>
                                 @endguest
                             </div>
-                        </span>
+                        </div>
                     </div>
                 </div>
             </nav>
