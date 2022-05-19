@@ -35,6 +35,7 @@ use App\Http\Controllers\CeritaAdminController;
 //use App\Http\Controllers\SocialShareButtonsController;
 use App\Http\Controllers\SettingCarouselController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostFotoController;
 
 
 /*
@@ -242,7 +243,7 @@ Route::resource('/audio', AudioController::class);
 Route::get('/searchaudio', [SearchController::class, 'searchaudio'])->name('search');
 
 //Route search foto
-Route::resource('/foto', FotoController::class);
+Route::resource('/foto', PostFotoController::class);
 Route::get('/searchfoto', [SearchController::class, 'searchfoto'])->name('search');
 
 //Route search video
