@@ -66,9 +66,16 @@
                         </div>
                     </div>
                 @endforeach
-                <div class="d-flex justify-content-end w-100 mb-4">
-                    {{ $cerita->links() }}
+                @if ($artikel->hasPages())
+                <div class="d-flex justify-content-end w-100 my-3">
+                    {{ $artikel->links() }}
                 </div>
+                @endif
+                @else
+                <div class="alert alert-success" role="alert">
+                    Tidak ada data
+                </div>
+                @endif
             </div>
 
 
