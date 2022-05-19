@@ -188,6 +188,9 @@
             <div class="footer-top" id="footer">
                 <div class="container">
                     <div class="row">
+                        {{-- panggil total kunjungan di footer --}}
+                        @yield('views') 
+                        {{-- end panggil --}}
                         <div class="col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
                             <a href=#><img class="logo-footer" src="{{ asset('img/logoprodamas.png ') }}" width="110" height="110" alt="logo-footer" /></a>
                             <div style="margin-top: 12px">
