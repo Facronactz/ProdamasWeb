@@ -108,7 +108,7 @@
                     <div class="collapse navbar-collapse justify-content-evenly" id="navbarNavAltMarkup">
                         <!-- Middle -->
                         <div class="navbar-nav mx-auto">
-                            <a class="nav-link @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{asset('img/ICON HOME.png')}}" alt="" class="height: 40px"></a>
+                            <a class="nav-link @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{asset('img/ICON HOME.png')}}" alt="" class="width: 40px; height: 40px"></a>
                             <a class="nav-link @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
                             <div class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
