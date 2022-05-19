@@ -188,19 +188,7 @@
                     <div class="modal-body">
                         <div id="carouselIndicators{{ $post->id }}" class="carousel slide" data-ride="carousel">
 
-                            <!-- <div class="carousel-inner">
-                                @foreach ($post->image as $no => $image)
-                                    @if ($no == 0)
-                                        <div class="carousel-item active">
-                                            <img src="{{ asset('images/' . $image->image) }}" class="d-block w-100" alt="...">
-                                        </div>
-                                    @else
-                                        <div class="carousel-item">
-                                            <img src="{{ asset('images/' . $image->image) }}" class="d-block w-100" alt="...">
-                                        </div>
-                                    @endif
-                                @endforeach
-                            </div> -->
+                            
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators{{ $post->id }}" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
