@@ -14,7 +14,7 @@
         <div class="row mt-5">
             <div class="col text-center" style="font-family: Inter, sans-serif; margin-top: 35px">
                 <a href="/tag?tag=Bidang" style="text-decoration: none; color:black">
-                    <h1 class="mb-3">Cakupan Bidang</h1>
+                    <h1 class="mb-3">Cakupan Bidan</h1>
                 </a>
             </div>
         </div>
