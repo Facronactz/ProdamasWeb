@@ -77,7 +77,7 @@
                                             border: none;
                                             ">
                                             <h3> {{ $video->judul }} </h3>
-                                            <p> {{ $video->caption }} </p>
+                                            <p><?= $video->caption ?></p>
                                         </div>
                                     </div>
                                 </div>
