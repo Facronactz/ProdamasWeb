@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="css/titleAnimation.css">
     <style>
         .carousel-img {
-            object-fit: cover;
-            object-position: top;
-            max-height: 94vh;
+            object-fit:cover;
+            object-position: center;
+            height: 350px;
+            width: 100%;
         }
 
         .card-img-fix {
@@ -51,7 +52,7 @@
             @foreach ($carousels as $key => $carousel)
             <div class="carousel-item @if ($key == 0) {{"active"}}
             @endif">
-                <img src="{{ 'carouselProd/'. $carousel->foto }}" class="d-block w-100 carousel-img" alt="..." />
+                <img src="{{ 'carouselProd/'. $carousel->foto }}" class="d-block carousel-img" alt="..." />
             </div>
             @endforeach
             {{-- <div class="carousel-item active">
@@ -187,7 +188,7 @@
                                     <source src="{{ asset('/videoProd/konten/' . $item->konten) }}">
                                     Your browser does not support the video tag.
                                 </video> --}}
-                                <iframe width="fixed" height="fixed" src="{{ $item->konten }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="fixed" height="fixed" src="https://www.youtube.com/embed/{{ $item->konten }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div class="card" style="
                                         border: none;
@@ -346,7 +347,7 @@
                                           ">
                                 <img src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}" class="d-flex justify-content click" style="width: 100%;" alt="...">
                                 <audio controls="controls">
-                                    <source src="{{ $item->konten }}">
+                                    <source src="https://docs.google.com/uc?export=download&id={{ $item->konten }}">
                                 </audio>
                             </div>
                             <div class="card" style="
