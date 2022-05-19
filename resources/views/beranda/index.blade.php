@@ -82,14 +82,14 @@
         </div>
     </form>
 </div> -->
-
+<br><br>
 <!--Tentang-->
 <section class="tentang">
     <div class="container">
         <div class="row">
             <div class="col-md-6 py-4">
                 <h1 class="text-center mb-5">Tentang Prodamas</h1>
-                <p class="fs-5" style="text-align: justify;">Program Pemberdayaan Masyarakat (PRODAMAS) adalah
+                <p class="fs-5" style="text-align: left;">Program Pemberdayaan Masyarakat (PRODAMAS) adalah
                     suatu program dari Pemerintah Kota Kediri
                     yang digunakan untuk melaksanakan kegiatan pembangunan masyarakat ditingkat kelurahan yang berbasis
                     wilayah Rukun Tetangga (RT) yang dimulai sejak tahun 2015 sebagai upaya mewujudkan kemampuan dan
@@ -411,14 +411,3 @@
 @endsection
 
 {{-- total kunjungan di footer --}}
-@section('views')
-
-<div class="d-flex justify-content-end mt-2">
-    <div style="margin-top: 15px; border-radius: 15px; color: white; text-align:center; background-color: #F58634; padding:5px">
-        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-        <a style="font-size:15px">Kunjungan: {{$totalviews}}</a>
-        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-    </div>
-</div>
-
-@endsection

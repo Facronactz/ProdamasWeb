@@ -47,6 +47,24 @@
             color: black !important;
         }
 
+        .btn-search {
+            background-color: #4E148D;
+            border-radius: 50%;
+            border: 0px solid black;
+            width: 30px;
+            height: 30px;
+            margin-left: 0.5rem;
+        }
+
+        .input-search {
+            border: 1px solid rgba(0, 0, 0, 0.31);
+            border-radius: 15px;
+            line-height: 30px;
+            font-size: 12px;
+            text-align: center;
+            width: 200px;
+        }
+
         .header {
             max-height: 90vh;
             max-width: 100%;
@@ -115,7 +133,7 @@
                     </button>
 
                     <!-- Content -->
-                    <div class="collapse navbar-collapse justify-content-between" id=" navbarNavAltMarkup">
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                         <!-- Middle -->
                         <div class="navbar-nav">
                             <a class="nav-link nav-list @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{asset('img/ICON HOME.png')}}" style="width: 20px; height: 20px; margin-right: 1rem"></a>
@@ -156,17 +174,20 @@
                         <div class="navbar-text">
                             <div class="d-flex justify-content-evenly">
                                 <div class="nav-item dropdown nav-list">
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{{asset('img/ICON CARI.png')}}" style="width: 20px; height: 20px; margin-right: 1rem"></a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
-                                        <li class="w-100">
-                                            <div class="container">
-                                                <form action="search" class="mt-3">
-                                                    <div class="input-group">
-                                                        <input class="form-control" type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
-                                                        <button class="btn btn-primary" type="submit">
-                                                            <i class="fas fa-search link-light"></i>
+                                    <a class="nav-link" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{{asset('img/ICON CARI.png')}}" style="width: 17px; height: 17px;"></a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout" style="border-radius: 23px;padding:0px">
+                                        <li class="" style="padding:5px">
+                                            <div class="">
+                                                <form action="search">
+                                                    <div style="display:flex; align-items: center; vertical-align: middle;">
+                                                        <div>
+                                                            <input class="input-search" type="text" placeholder="Mau cari apa?" name="search" value="{{ request('search') }}" aria-label="Search">
+                                                        </div>
+                                                        <button class="btn-search" type="submit" style="color:white">
+                                                            <i class="fas fa-arrow-right"></i>
                                                         </button>
                                                     </div>
+
                                                 </form>
                                             </div>
                                         </li>
@@ -204,50 +225,65 @@
             <div class="container">
                 <div class="row">
                     {{-- panggil total kunjungan di footer --}}
-                    @yield('views')
+                    <div class="d-flex justify-content-end mt-2">
+                        <div style="margin-top: 15px; border-radius: 15px; color: white; text-align:center; background-color: #F58634; padding:5px">
+                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                            <a style="font-size:15px">Kunjungan: {{$totalviews}}</a>
+                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                        </div>
+                    </div>
                     {{-- end panggil --}}
-                    <div class="col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
-                        <a href=#><img class="logo-footer" src="{{ asset('img/logoprodamas.png ') }}" width="110" height="110" alt="logo-footer" /></a>
-                        <div style="margin-top: 12px">
-                            <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
-                        </div>
+                    {{-- @section('views')
+                    <div class="d-flex justify-content-end mt-2">
+                        <div style="margin-top: 15px; border-radius: 15px; color: white; text-align:center; background-color: #F58634; padding:5px">
+                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                            <a style="font-size:15px">Kunjungan: {{$totalviews}}</a>
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                </div>
+            </div>
+            @endsection --}}
+            <div class="col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
+                <a href=#><img class="logo-footer" src="{{ asset('img/logoprodamas.png ') }}" width="110" height="110" alt="logo-footer" /></a>
+                <div style="margin-top: 12px">
+                    <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
+                </div>
+            </div>
+            <div class="col-md-5 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white">
+                <h5 style="font-family: Inter, sans-serif">Pemerintah Kota Kediri</h5>
+                <p style="font-size: small">
+                    Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
+                    Kota kediri, Jawa Timur 64146
+                </p>
+                <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf0e0;
+                    prodamas@kedirikota.go.id</p>
+                <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf095; (0354) 682955</p>
+            </div>
+            <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
+                            Navigasi</p>
+                        <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
+                        {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
+                        <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
+                        {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
+                        <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
+                        <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
                     </div>
-                    <div class="col-md-5 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white">
-                        <h5 style="font-family: Inter, sans-serif">Pemerintah Kota Kediri</h5>
-                        <p style="font-size: small">
-                            Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
-                            Kota kediri, Jawa Timur 64146
-                        </p>
-                        <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf0e0;
-                            prodamas@kedirikota.go.id</p>
-                        <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf095; (0354) 682955</p>
-                    </div>
-                    <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
-                                    Navigasi</p>
-                                <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
-                                {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
-                                <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
-                                {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
-                                <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
-                                <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
-                            </div>
-                            <div class="col-md-6">
-                                <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
-                                    Tautan Eksternal</p>
-                                <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
-                                <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
-                                    Sampah</a> <br>
-                                <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
-                            </div>
-                        </div>
+                    <div class="col-md-6">
+                        <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
+                            Tautan Eksternal</p>
+                        <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
+                        <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
+                            Sampah</a> <br>
+                        <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
                     </div>
                 </div>
-                <!--div row-->
             </div>
-            <!--div  container-->
+        </div>
+        <!--div row-->
+        </div>
+        <!--div  container-->
         </div>
         <!--div footer-top-->
 
