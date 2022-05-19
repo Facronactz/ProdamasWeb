@@ -238,6 +238,15 @@
             <div class="footer-bottom">
                 <div class="container">
                     <div class="row">
+                        @section('views')
+                            <div class="d-flex justify-content-end mt-2">
+                                <div style="margin-top: 15px; border-radius: 15px; color: white; text-align:center; background-color: #F58634; padding:5px">
+                                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                    <a style="font-size:15px">Kunjungan: {{$totalviews}}</a>
+                                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                        @endsection                         
                         <div class="col-md-6 footer-copyright" style="color: white">&copy; 2021 Prodamas Plus</div>
                         <div class="col-md-6 footer-social">
                             <a href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube"></i></a>
