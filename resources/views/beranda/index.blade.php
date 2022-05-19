@@ -19,6 +19,10 @@
         min-height: 200px;
         max-height: 300px;
     }
+
+    .carousel-icon-prev {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 </style>
 @endsection
 
