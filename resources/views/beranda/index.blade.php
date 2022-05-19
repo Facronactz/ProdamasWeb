@@ -244,11 +244,11 @@
             <div class="card h-100 d-block hvr-grow hvr-underline-from-center" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $post->id }}">
                 <img src="{{ asset('cover/' . $post->cover) }}" class="card-img-top card-img-fix" alt="...">
                 <div class="card-body">
-                    <h3 class="card-title">
+                    <h5 class="card-title">
                     <p class=" tittleAudio" href="">
                     {{ $post->title }}
                     </p>
-                    </h3>
+                </h5>
                     {{-- {{ $post->created_at }} --}}
                 </div>
                 {{-- <div class="card-body">
@@ -345,7 +345,7 @@
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
                                 </button>
-                                <h5>{{ $post->body }}</h5>
+                                <h6>{{ $post->body }}</h6>
                             </div>
                     </div>
             </div>
