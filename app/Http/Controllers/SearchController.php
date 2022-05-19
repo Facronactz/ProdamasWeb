@@ -5,6 +5,7 @@ use App\Models\FotoAdmin;
 use App\Models\AudioAdmin;
 use App\Models\VideoAdmin;
 use App\Models\CeritaAdmin;
+use App\Models\Post;
 use App\Models\ArticleAdmin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
