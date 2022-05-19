@@ -100,7 +100,6 @@
         .foot-icon {
             color: #4D148C;
             background-color: white;
-            width: 100%;
             /* border-radius: 50%; */
             /* padding: 5px; */
             line-height: 20px;
