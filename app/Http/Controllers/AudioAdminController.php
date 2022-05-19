@@ -99,7 +99,7 @@ class AudioAdminController extends Controller
             $audio->update([
                 'gambar_sampul' => $filePath,
                 'judul' => $request->judul,
-                'konten' => $request->konten,
+                'konten' => 'required',
                 'caption' => $request->caption
             ]);
             $hsl = explode(",", $request->tags);
@@ -107,7 +107,7 @@ class AudioAdminController extends Controller
         } else {
             $audio->update([
                 'judul' => $request->judul,
-                'konten' => $request->konten,
+                'konten' => 'required',
                 'caption' => $request->caption
             ]);
             $hsl = explode(",", $request->tags);
