@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="css/titleAnimation.css">
     <style>
         .carousel-img {
-            object-fit: cover;
+            object-fit:contain;
             object-position: top;
-            max-height: 94vh;
+            max-height: 74vh;
         }
 
         .card-img-fix {
@@ -51,7 +51,7 @@
             @foreach ($carousels as $key => $carousel)
             <div class="carousel-item @if ($key == 0) {{"active"}}
             @endif">
-                <img src="{{ 'carouselProd/'. $carousel->foto }}" class="d-block w-100 h-70 carousel-img" alt="..." />
+                <img src="{{ 'carouselProd/'. $carousel->foto }}" class="d-block w-100 carousel-img" alt="..." />
             </div>
             @endforeach
             {{-- <div class="carousel-item active">
