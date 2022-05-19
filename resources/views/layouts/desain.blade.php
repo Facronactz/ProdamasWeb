@@ -167,13 +167,13 @@
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
                                         <li class="">
                                             <div class="container">
-                                                <form action="search" class="mt-3">
+                                                <form action="search">
                                                     <div style="display:flex; line-height:30px; align-items: center; vertical-align: middle;">
                                                         <div>
-                                                            <input class="form-control" type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
+                                                            <input type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
                                                         </div>
-                                                        <button class="btn-search" type="submit">
-                                                            <i class="fas fa-search link-light"></i>
+                                                        <button class="btn-search" type="submit" style="color:white">
+                                                            <i class="fas fa-arrow-right"></i>
                                                         </button>
                                                     </div>
 
