@@ -269,7 +269,7 @@
                     <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
                 </div> -->
             </div>
-            <div class="col-md-5 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
+            <div class="col-md-3 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
                 <div style="font-weight: 700; font-size: 22px">PEMERINTAH KOTA KEDIRI</div>
                 <div class="line"></div>
                 <p style="font-weight: 400; font-size: small">
@@ -283,7 +283,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <p style="font-weight: 600; font-weight: bold; font-size:25px;">
-                            Navigasi</p>
+                            NAVIGASI</p>
                         <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
                         {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
                         <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
@@ -293,7 +293,7 @@
                     </div>
                     <div class="col-md-6">
                         <p style="font-weight: 600; font-weight: bold; font-size:25px;">
-                            Tautan Eksternal</p>
+                            TAUTAN EKSTERNAL</p>
                         <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
                         <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
                             Sampah</a> <br>
