@@ -168,7 +168,7 @@
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
                                         <li class="w-100">
                                             <div class="container">
-                                                <form action="search" class="mt-3" style="display: flex;">
+                                                <form action="search" class="mt-3">
                                                     <div class="input-group">
                                                         <input class="form-control" type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
                                                     </div>
