@@ -94,7 +94,7 @@ class AudioAdminController extends Controller
         if ($file != NULL) {
             File::delete(public_path("../audioProd/thumb/" . $audio->gambar_sampul));
             $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-            $file->move(public_path('../audioProd/thumb'), $filePath);
+            $file->move(public_path('../audioProd/thumb/'), $filePath);
 
             $audio->update([
                 'gambar_sampul' => $filePath,
