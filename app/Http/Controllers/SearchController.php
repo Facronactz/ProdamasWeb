@@ -46,7 +46,7 @@ class SearchController extends Controller
         // ->take(3)
         // ->get()
         ;
-        $fotos = FotoAdmin::where('judul', 'like', "%" . $keyword . "%")
+        $posts = Post::where('judul', 'like', "%" . $keyword . "%")
         ->orWhere('caption', 'like', "%" . $keyword . "%")
         ->paginate()
         // ->take(3)
@@ -58,7 +58,7 @@ class SearchController extends Controller
         // ->take(3)
         // ->get()
         ;
-        return view('search.search', compact('audios','artikel','fotos','videos', 'totalviews', 'counter'));
+        return view('search.search', compact('audios','artikel','posts','videos', 'totalviews', 'counter'));
     }
 
     public function searchartikel(Request $request)
