@@ -340,7 +340,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col d-inline-block">
+                    <div class="col d-flex">
                         <div class="line-va"></div>
                         <a style="font-weight: 400; font-size: 12px" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube foot-icon"></i></a>
                         <a style="font-weight: 400; font-size: 12px" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram foot-icon"></i></a>
