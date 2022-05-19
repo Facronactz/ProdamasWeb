@@ -97,6 +97,20 @@
             margin: 0.5rem 0 0.8rem 0;
         }
 
+        .line-nav {
+            height: 2px;
+            width: 100%;
+            background-color: white;
+            margin: 0.5rem 0 0.8rem 0;
+        }
+
+        .line-te {
+            height: 2px;
+            width: 100%;
+            background-color: white;
+            margin: 0.5rem 0 0.8rem 0;
+        }
+
         .foot-icon {
             color: #4D148C;
             background-color: white;
@@ -296,7 +310,7 @@
                     <div class="col-md-6">
                         <p class="foot-title">
                             NAVIGASI</p>
-                        <div class="line" style="width:calc(100%+4rem)"></div>
+                        <div class="line-nav"></div>
                         <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
                         {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
                         <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
@@ -307,7 +321,7 @@
                     <div class="col-md-6">
                         <p class="foot-title">
                             TAUTAN EKSTERNAL</p>
-                        <div class="line" style="width:calc(100%+4rem)"></div>
+                        <div class="line-te"></div>
                         <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
                         <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
                             Sampah</a> <br>
