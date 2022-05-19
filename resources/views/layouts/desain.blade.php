@@ -170,7 +170,7 @@
                                                 <form action="search">
                                                     <div style="display:flex; line-height:30px; align-items: center; vertical-align: middle;">
                                                         <div>
-                                                            <input class="form-control" type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search" style="width: 80px; border-radius: 50%">
+                                                            <input class="form-control" type="text" placeholder="Search" name="search" value="{{ request('search') }}" aria-label="Search">
                                                         </div>
                                                         <button class="btn-search" type="submit" style="color:white">
                                                             <i class="fas fa-arrow-right"></i>
