@@ -4,5 +4,5 @@
 @section('title', 'Progressio')
 
 @section('content')
-    <object data="https://prodamasplus.kedirikota.go.id/auth/login" style="border: none;width: 90%;height: 90vh;" class="mx-auto d-flex"></object>
+    <iframe src="https://prodamasplus.kedirikota.go.id/auth/login" style="border: none;width: 90%;height: 90vh;" class="mx-auto d-flex"></iframe>
 @endsection
