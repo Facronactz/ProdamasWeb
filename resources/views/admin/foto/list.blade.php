@@ -1,6 +1,6 @@
 @extends('admin.master')
 
-@section('post', 'active')
+@section('foto', 'active')
 
 @section('title')
     Foto Kegiatan
