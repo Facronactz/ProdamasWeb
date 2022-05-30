@@ -66,6 +66,6 @@ Kampung Keren Baru
         @enderror
     </div>
     <button type="submit" class="btn btn-primary">Tambah</button>
-    <a href="/admin/list-foto" class="btn btn-outline-primary">Kembali</a>
+    <a href="/admin/list-kampungkeren" class="btn btn-outline-primary">Kembali</a>
 </form>
 @endsection
