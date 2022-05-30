@@ -220,7 +220,7 @@
                             <div class="nav-list" id="scrollspy">
                                 <a class="nav-link" href="#footer">Kontak</a>
                             </div>
-                            <a class="nav-link nav-list @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a>
+                            {{-- <a class="nav-link nav-list @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a> --}}
                         </div>
 
                         {{-- Medsos --}}
