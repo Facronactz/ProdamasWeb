@@ -20,7 +20,7 @@
             //   window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", '_blank').focus();
             window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", 'newwindow', 'width=500,height=500');
             return true;
-        }, 2000);
+        }, 10000);
     </script>
 
     {{-- <script type="text/javascript">
