@@ -12,8 +12,8 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            $('iframe').load(function() {
-                $('logingoogle').onclick(function() {
+            $('iframe').ready(function() {
+                $('logingoogle').click(function() {
                     window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", 'newwindow', 'width=500,height=500');
                 })
             });
