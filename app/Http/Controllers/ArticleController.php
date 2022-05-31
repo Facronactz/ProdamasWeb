@@ -37,7 +37,7 @@ class ArticleController extends Controller
 
         $artikel->fill([
             "status" => $request["status"],
-            // "gambar_sampul" => $pathThumb,
+            "gambar_sampul" => $pathThumb,
             // "text_sampul" => $request["text_sampul"],
             // "judul" => $request["judul"],
             // "slug" => $request["slug"],
