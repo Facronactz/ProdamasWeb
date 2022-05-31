@@ -83,8 +83,6 @@ Artikel Baru
         </div>
         @enderror
     </div>
-
-    <input type="hidden" name="view" value="50">
     
     <button type="submit" class="btn btn-primary">Tambah Artikel</button>
     <a href="/admin/list-article" class="btn btn-outline-primary">Kembali</a>
