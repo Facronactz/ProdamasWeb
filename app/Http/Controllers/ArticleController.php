@@ -29,9 +29,9 @@ class ArticleController extends Controller
         // dump($request);
         // sampul
         $artikel = new ArticleAdmin();
-        $extThumb = $request->gambar_sampul->getClientOriginalExtension();
-        $pathThumb = "sampul-" . time() . "." . $extThumb;
-        $pathStore = $request->gambar_sampul->move(public_path('../articleProd/sampul'), $pathThumb);
+        // $extThumb = $request->gambar_sampul->getClientOriginalExtension();
+        // $pathThumb = "sampul-" . time() . "." . $extThumb;
+        // $pathStore = $request->gambar_sampul->move(public_path('../articleProd/sampul'), $pathThumb);
 
         $tags = explode(",", $request->tags);
 
@@ -46,7 +46,7 @@ class ArticleController extends Controller
         ]);
 
         $artikel->save();
-        $artikel->tag($tags);
+        // $artikel->tag($tags);
 
         return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Ditambahkan!');
     }
