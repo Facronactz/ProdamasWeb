@@ -24,7 +24,6 @@ class ArticleController extends Controller
             // 'judul' => 'required',
             // 'slug' => 'required',
             // 'article' => 'required',
-            'picture' => 'required'
         ]);
         // dump($request);
         // sampul
@@ -42,7 +41,6 @@ class ArticleController extends Controller
             // "judul" => $request["judul"],
             // "slug" => $request["slug"],
             // "article" => $request["article"],
-            "picture" => $pathThumb,
         ]);
 
         $artikel->save();
