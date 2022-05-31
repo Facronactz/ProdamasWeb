@@ -52,22 +52,21 @@ class ArticleController extends Controller
         //     "article" => $request["article"],
         //     // "picture" => $articlename
         // ]);
+        $gambar_sampul->move(public_path('../articleProd/sampul/'), $new_sampul);
 
         $artikel = new ArticleAdmin;
-        
-        $artikel->status = $request->status;
-        $artikel->gambar_sampul =  $new_sampul;
-        $artikel->text_sampul = $request->text_sampul;
-        $artikel->judul = $request->judul;
-        $artikel->slug = $request->slug;
-        $artikel->picture =  $new_sampul;
-        $artikel->article = $request->article;
 
         $tags = explode(",", $request->tags);
 
-        // dd($artikel);
+        $artikel->fill([
+            "statyus" => $request["status"],
+            "gambar_sampul" => $new_sampul,
+            "text_sampul" => $request["text_sampul"],
+            "slug" => $request["slug"],
+            "picture" => $new_sampul,
+            "article" => $request["article"]
+        ]);
 
-        $gambar_sampul->move(public_path('../articleProd/sampul/'), $new_sampul);
         $artikel->save();
         $artikel->tag($tags);
 
