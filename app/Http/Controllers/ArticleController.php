@@ -19,55 +19,30 @@ class ArticleController extends Controller
     {
         $this->validate($request, [
             'status' => 'required',
-            'gambar_sampul' => 'required|max:2200',
+            'gambar_sampul' => 'required',
             'text_sampul' => 'required',
             'judul' => 'required',
             'slug' => 'required',
             'article' => 'required',
-            'picture' => 'required|mimes:jpeg,jpg,png|max:2200'
         ]);
-
-
-        // dd($request->all());
-        $gambar_sampul = $request->gambar_sampul;
-        $new_sampul = time() . ' - ' . $gambar_sampul->getClientOriginalName();
-
-        // sampul artikel
-        // $extThumb = $request->gambar_sampul->getClientOriginalName();
-        // $pathThumb = "sampul-".time().".".$extThumb;
-        // $pathStore = $request->gambar_sampul->move(public_path('aticleProd/sampul'), $pathThumb);
-
-        // // konten artikel
-        // $article = $request->file('aticle');
-        // $articlename = $article->getClientOriginalName();
-        // $articlepath = $article->storeAs('article', $articlename);
-        // $pathStore = $request->article->move(public_path('articleProd/konten'), $articlepath);
-
-        // ArticleAdmin::create([
-        //     "status" => $request["status"],
-        //     "gambar_sampul" => $pathThumb,
-        //     "text_sampul" => $request["text_sampul"],
-        //     "judul" => $request["judul"],
-        //     "slug" => $request["slug"],
-        //     "article" => $request["article"],
-        //     // "picture" => $articlename
-        // ]);
-
-        $artikel = new ArticleAdmin;
-        
-        $artikel->status = $request->status;
-        $artikel->gambar_sampul =  $new_sampul;
-        $artikel->text_sampul = $request->text_sampul;
-        $artikel->judul = $request->judul;
-        $artikel->slug = $request->slug;
-        $artikel->picture =  $new_sampul;
-        $artikel->article = $request->article;
+        // dump($request);
+        // sampul
+        $artikel = new ArticleAdmin();
+        $extThumb = $request->gambar_sampul->getClientOriginalExtension();
+        $pathThumb = "sampul-" . time() . "." . $extThumb;
+        $pathStore = $request->gambar_sampul->move(public_path('../articleProd/sampul'), $pathThumb);
 
         $tags = explode(",", $request->tags);
 
-        // dd($artikel);
+        $artikel->fill([
+            "status" => $request["status"],
+            "gambar_sampul" => $pathThumb,
+            "text_sampul" => $request["text_sampul"],
+            "judul" => $request["judul"],
+            "slug" => $request["slug"],
+            "article" => $request["article"],
+        ]);
 
-        $gambar_sampul->move(public_path('../articleProd/sampul/'), $new_sampul);
         $artikel->save();
         $artikel->tag($tags);
 

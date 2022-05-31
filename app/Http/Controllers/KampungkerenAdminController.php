@@ -19,7 +19,7 @@ class KampungkerenAdminController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required',
-            'foto' => 'required|mimes:jpeg,jpg,png|max:2200',
+            'foto' => 'required',
             'caption' => 'required',
             'warna' => 'required',  
         ]);
