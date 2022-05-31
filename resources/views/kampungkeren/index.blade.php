@@ -48,7 +48,7 @@
                     <h2 class="kampungkeren my-auto">{{ $karen->judul }}</h2>
                 </div>
                 <div class="mt-5 mb-4">
-                    <p>{{ $karen->caption }}</p>
+                    <p><?= $karen->caption ?></p>
                 </div>
             </div>
         </a>
