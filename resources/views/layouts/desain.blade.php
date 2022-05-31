@@ -323,7 +323,7 @@
                                 <div class="line-nav"></div>
                                 <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
                                 {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
-                                <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
+                                <!-- <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br> -->
                                 {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
                                 <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
                                 <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
