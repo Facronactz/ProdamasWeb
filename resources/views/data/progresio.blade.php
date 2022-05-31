@@ -15,7 +15,8 @@
             $('iframe').ready(function() {
                 $('logingoogle').click(function() {
                     window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", 'newwindow', 'width=500,height=500');
-                })
+                    alert("The paragraph was clicked.");
+                });
             });
         });
     </script>
