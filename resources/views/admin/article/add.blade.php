@@ -84,9 +84,8 @@ Artikel Baru
         @enderror
     </div>
 
-    <div class="form-group">
-        <input type="hidden" data-role="tagsinput" name="view" value="50">
-    </div>
+    <input type="hidden" name="view" value="50">
+    
     <button type="submit" class="btn btn-primary">Tambah Artikel</button>
     <a href="/admin/list-article" class="btn btn-outline-primary">Kembali</a>
 </form>
