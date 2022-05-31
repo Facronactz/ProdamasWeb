@@ -170,6 +170,16 @@
             -o-background-size: cover;
             background-size: cover;
         }
+
+        .dropdown-submenu {
+        position: relative;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+        }
     </style>
 
 </head>
@@ -216,13 +226,20 @@
                                     <li class="w-100"><a class="dropdown-item @yield('pokmas')" href="{{ url('/pokmas') }}">POKMAS</a></li>
                                     <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">MedSos</a></li>
                                     {{-- <li class="w-100"><a class="dropdown-item @yield('eko')" href="{{ url('/kubperasi') }}">Kube & Koperasi</a></li> --}}
-                                    <li class="btn-group dropstart w-100">
+                                    {{-- <li class="btn-group dropstart w-100">
                                         <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                           Kube & Koperasi
                                         </button>
-                                        <ul class="submenu dropdown-menu">
+                                        <ul class="dropdown-menu">
                                             <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Peminjam</a></li>
                                             <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Pemberi Dana</a></li>
+                                        </ul>
+                                    </li> --}}
+                                    <li class="dropdown-submenu">
+                                        <a class="w-100" tabindex="-1" href="{{ url('/media') }}">Kube & Koperasi <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                          <li><a tabindex="-1" href="{{ url('/media') }}">Peminjam</a></li>
+                                          <li><a tabindex="-1" href="{{ url('/media') }}">Pemberi Dana</a></li>
                                         </ul>
                                     </li>
                                 </ul>
