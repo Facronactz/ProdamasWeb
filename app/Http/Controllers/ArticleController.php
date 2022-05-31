@@ -59,9 +59,10 @@ class ArticleController extends Controller
         $tags = explode(",", $request->tags);
 
         $artikel->fill([
-            "statyus" => $request["status"],
+            "status" => $request["status"],
             "gambar_sampul" => $new_sampul,
             "text_sampul" => $request["text_sampul"],
+            "judul" => $request["judul"],
             "slug" => $request["slug"],
             "picture" => $new_sampul,
             "article" => $request["article"]
