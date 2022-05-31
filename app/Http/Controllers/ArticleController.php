@@ -29,8 +29,10 @@ class ArticleController extends Controller
 
 
         // dd($request->all());
-        $gambar_sampul = $request->gambar_sampul;
-        $new_sampul = time() . ' - ' . $gambar_sampul->getClientOriginalName();
+        $artikel = new ArticleAdmin;
+        $extThumb = $request->gambar_sampul->getClientOriginalExtension();
+        $pathThumb = "sampul-" . time() . "." . $extThumb;
+        $pathStore = $request->gambar_sampul->move(public_path('../articleProd/sampul/'), $pathThumb);
 
         // sampul artikel
         // $extThumb = $request->gambar_sampul->getClientOriginalName();
@@ -52,19 +54,16 @@ class ArticleController extends Controller
         //     "article" => $request["article"],
         //     // "picture" => $articlename
         // ]);
-        $gambar_sampul->move(public_path('../articleProd/sampul/'), $new_sampul);
-
-        $artikel = new ArticleAdmin;
 
         $tags = explode(",", $request->tags);
 
         $artikel->fill([
             "status" => $request["status"],
-            "gambar_sampul" => $new_sampul,
+            "gambar_sampul" => $pathThumb,
             "text_sampul" => $request["text_sampul"],
             "judul" => $request["judul"],
             "slug" => $request["slug"],
-            "picture" => $new_sampul,
+            "picture" => $pathThumb,
             "article" => $request["article"]
         ]);
 
