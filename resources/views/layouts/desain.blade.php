@@ -211,7 +211,7 @@
                                         <a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio <span class="caret fas fa-caret-right justify-content-between"></span></a>
                                         <ul class="dropdown-menu">
                                             <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Login KK</a></li>
-                                            <li class="w-100"><a class="dropdown-item @yield('progressio')" href="https://prodamasplus.kedirikota.go.id/auth/login_google">Login Google</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('progression')" href="https://prodamasplus.kedirikota.go.id/auth/login_google">Login Google</a></li>
                                         </ul>
                                     </li>
                                 </ul>
