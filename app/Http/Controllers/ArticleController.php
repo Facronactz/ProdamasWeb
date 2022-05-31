@@ -33,7 +33,7 @@ class ArticleController extends Controller
         $pathThumb = "sampul-" . time() . "." . $extThumb;
         $pathStore = $request->gambar_sampul->move(public_path('../articleProd/sampul'), $pathThumb);
 
-        $tags = explode(",", $request->tags);
+        // $tags = explode(",", $request->tags);
 
         $artikel->fill([
             "status" => $request["status"],
@@ -46,7 +46,7 @@ class ArticleController extends Controller
         ]);
 
         $artikel->save();
-        $artikel->tag($tags);
+        // $artikel->tag($tags);
 
         return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Ditambahkan!');
     }
