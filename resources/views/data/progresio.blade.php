@@ -16,7 +16,8 @@
         document.getElementById("logingoogle").onclick = setTimeout(function() {
             //   document.getElementById("logingoogle").href="https://prodamasplus.kedirikota.go.id/auth/login_google";
             //   window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", '_blank').focus();
-            window.open(this.href, 'newwindow', 'width=500,height=500');  return true;
+            window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", 'newwindow', 'width=500,height=500');
+            return true;
         }, 5000);
     </script>
 
