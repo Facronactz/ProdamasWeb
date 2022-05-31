@@ -208,10 +208,10 @@
                                     <li class="w-100"><a class="dropdown-item @yield('banksampah')" href="{{ url('/banksampah') }}">E-Bank Sampah</a></li>
                                     {{-- <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio</a></li> --}}
                                     <li class="dropdown-submenu w-100">
-                                        <a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio <span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <btn class="dropdown-item @yield('progressio')">Progressio <span class="caret fas fa-caret-right ms-3"></span></btn>
                                         <ul class="dropdown-menu">
-                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Login KK</a></li>
-                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Login Google</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Login KK</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('progressio')" href="https://prodamasplus.kedirikota.go.id/auth/login_google">Login Google</a></li>
                                         </ul>
                                     </li>
                                 </ul>
