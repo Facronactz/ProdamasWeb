@@ -20,14 +20,14 @@
         });
     </script>
 
-    <script>
+    {{-- <script>
         document.getElementById("logingoogle").onclick = function() {
             //   document.getElementById("logingoogle").href="https://prodamasplus.kedirikota.go.id/auth/login_google";
             //   window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", '_blank').focus();
             window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", 'newwindow', 'width=500,height=500');
             return true;
         };
-    </script>
+    </script> --}}
 
     {{-- <script type="text/javascript">
         function addEvent(element, evnt, funct) {
