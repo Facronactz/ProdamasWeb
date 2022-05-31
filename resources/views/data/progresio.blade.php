@@ -13,10 +13,12 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('iframe').ready(function() {
-                $('logingoogle').click(function() {
+                document.getElementById("logingoogle").onclick = function() {
+                    //   document.getElementById("logingoogle").href="https://prodamasplus.kedirikota.go.id/auth/login_google";
+                    //   window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", '_blank').focus();
                     window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", 'newwindow', 'width=500,height=500');
-                    alert("The paragraph was clicked.");
-                });
+                    return true;
+                };
             });
         });
     </script>
