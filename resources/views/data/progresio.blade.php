@@ -13,11 +13,10 @@
         document.getElementById("logingoogle").href = "https://prodamasplus.kedirikota.go.id/auth/login_google";
     </script> --}}
     <script type="text/javascript">
-        document.getElementById("logingoogle").onclick = function() {
+        document.getElementById("logingoogle").onclick = setTimeout( function() {
         //   document.getElementById("logingoogle").href="https://prodamasplus.kedirikota.go.id/auth/login_google";
-          window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", '_blank').focus(); 
-          return true;
-        };
+          window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", '_blank').focus();
+        }, 1000);
       </script>
 
 @endsection
