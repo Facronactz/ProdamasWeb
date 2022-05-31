@@ -7,7 +7,7 @@
     <iframe src="https://prodamasplus.kedirikota.go.id/auth/login" style="border: none;width: 90%;height: 90vh;" class="mx-auto d-flex"></iframe>
 @endsection
 
-@section('script')
+@section('scripts')
 
     {{-- <script type="text/javascript">
         document.getElementById("logingoogle").href = "https://prodamasplus.kedirikota.go.id/auth/login_google";
