@@ -19,19 +19,19 @@ class ArticleController extends Controller
     {
         $this->validate($request, [
             'status' => 'required',
-            // 'gambar_sampul' => 'required',
+            'gambar_sampul' => 'required',
             // 'text_sampul' => 'required',
             // 'judul' => 'required',
             // 'slug' => 'required',
             // 'article' => 'required',
-            // 'picture' => 'required'
+            'picture' => 'required'
         ]);
         // dump($request);
         // sampul
         $artikel = new ArticleAdmin();
-        // $extThumb = $request->gambar_sampul->getClientOriginalExtension();
-        // $pathThumb = "sampul-" . time() . "." . $extThumb;
-        // $pathStore = $request->gambar_sampul->move(public_path('../articleProd/sampul'), $pathThumb);
+        $extThumb = $request->gambar_sampul->getClientOriginalExtension();
+        $pathThumb = "sampul-" . time() . "." . $extThumb;
+        $pathStore = $request->gambar_sampul->move(public_path('../articleProd/sampul'), $pathThumb);
 
         $tags = explode(",", $request->tags);
 
@@ -42,7 +42,7 @@ class ArticleController extends Controller
             // "judul" => $request["judul"],
             // "slug" => $request["slug"],
             // "article" => $request["article"],
-            // "picture" => $pathThumb,
+            "picture" => $pathThumb,
         ]);
 
         $artikel->save();
