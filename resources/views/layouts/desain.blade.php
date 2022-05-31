@@ -235,8 +235,8 @@
                                             <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Pemberi Dana</a></li>
                                         </ul>
                                     </li> --}}
-                                    <li class="dropdown-submenu">
-                                        <a class="w-100" tabindex="-1" href="{{ url('/media') }}">Kube & Koperasi <span class="caret"></span></a>
+                                    <li class="dropdown-submenu w-100">
+                                        <a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Kube & Koperasi <span class="caret"></span></a>
                                         <ul class="dropdown-menu">
                                           <li><a tabindex="-1" href="{{ url('/media') }}">Peminjam</a></li>
                                           <li><a tabindex="-1" href="{{ url('/media') }}">Pemberi Dana</a></li>
