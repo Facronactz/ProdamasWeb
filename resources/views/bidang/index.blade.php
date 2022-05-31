@@ -44,7 +44,7 @@
                 <div class="item-title">
                     <h1 class="d-md-block d-none">{{ $bidang->judul }}</h1>
                     <br>
-                    <p>{{ $bidang->caption }}</p>
+                    <p><? $bidang->caption ?></p>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
                 <div class="item-title">
                     <h1 class="d-md-block d-none">{{ $bidang->judul }}</h1>
                     <br>
-                    <p>{{ $bidang->caption }}</p>
+                    <p><? $bidang->caption ?></p>
                 </div>
             </div>
         </div>
