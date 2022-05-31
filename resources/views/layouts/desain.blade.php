@@ -216,7 +216,7 @@
                                     <li class="w-100"><a class="dropdown-item @yield('pokmas')" href="{{ url('/pokmas') }}">POKMAS</a></li>
                                     <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">MedSos</a></li>
                                     {{-- <li class="w-100"><a class="dropdown-item @yield('eko')" href="{{ url('/kubperasi') }}">Kube & Koperasi</a></li> --}}
-                                    <li class="btn-group dropdown w-100">
+                                    <li class="btn-group dropstart w-100">
                                         <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                           Kube & Koperasi
                                         </button>
