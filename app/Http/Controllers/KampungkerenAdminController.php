@@ -21,7 +21,7 @@ class KampungkerenAdminController extends Controller
             'judul' => 'required',
             'foto' => 'required',
             'caption' => 'required',
-            'warna' => 'required',  
+            // 'warna' => 'required',  
         ]);
 
         $files = [];
@@ -29,12 +29,21 @@ class KampungkerenAdminController extends Controller
             if ($file->isValid()) {
                 $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
                 $file->move(public_path('../public/kampungkerenProd/'), $foto);
-                $files[] = [
-                    'judul' => $request->judul,
-                    'foto' => $foto,
-                    'caption' => $request->caption,
-                    'warna' => $request->warna,
-                ];
+                if ($request->warna != null) {
+                    $files[] = [
+                        'judul' => $request->judul,
+                        'foto' => $foto,
+                        'caption' => $request->caption,
+                        'warna' => $request->warna,
+                    ];
+                }
+                else {
+                    $files[] = [
+                        'judul' => $request->judul,
+                        'foto' => $foto,
+                        'caption' => $request->caption,
+                    ];
+                }
             }
         }
         Kampungkeren::insert($files);
