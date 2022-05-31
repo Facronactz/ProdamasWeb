@@ -13,7 +13,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('iframe').ready(function() {
-                $('logingoogle').hide();
+                $('#logingoogle').hide();
             });
         });
     </script>
