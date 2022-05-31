@@ -208,7 +208,7 @@
                                     <li class="w-100"><a class="dropdown-item @yield('banksampah')" href="{{ url('/banksampah') }}">E-Bank Sampah</a></li>
                                     {{-- <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio</a></li> --}}
                                     <li class="dropdown-submenu w-100">
-                                        <a class="dropdown-item justify-content-between d-flex @yield('progressio')" href="{{ url('/progressio') }}">Progressio <span class="caret fas fa-caret-right"></span></a>
+                                        <a class="dropdown-item justify-content-between d-flex @yield('progressio')" href="{{ url('/progressio') }}">Progressio <span class="caret fas fa-caret-right my-auto"></span></a>
                                         <ul class="dropdown-menu">
                                             <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Login KK</a></li>
                                             <li class="w-100"><a class="dropdown-item @yield('progression')" href="https://prodamasplus.kedirikota.go.id/auth/login_google">Login Google</a></li>
@@ -243,7 +243,7 @@
                                         </ul>
                                     </li> --}}
                                     <li class="dropdown-submenu w-100">
-                                        <a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Kube & Koperasi <span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <a class="dropdown-item @yield('sosmed') d-flex justify-content-between" href="{{ url('/media') }}">Kube & Koperasi <span class="caret fas fa-caret-right my-auto"></span></a>
                                         <ul class="dropdown-menu">
                                             <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Peminjam</a></li>
                                             <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Pemberi Dana</a></li>
