@@ -4,6 +4,7 @@
 @section('title', 'Progressio')
 
 @section('content')
+
     <iframe src="https://prodamasplus.kedirikota.go.id/auth/login" style="border: none;width: 90%;height: 90vh;" class="mx-auto d-flex"></iframe>
 @endsection
 
@@ -14,12 +15,12 @@
     </script> --}}
 
     <script type="text/javascript">
-        document.getElementById("logingoogle").onclick = setTimeout(function() {
+        setTimeout(document.getElementById("logingoogle").onclick = function() {
             //   document.getElementById("logingoogle").href="https://prodamasplus.kedirikota.go.id/auth/login_google";
             //   window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", '_blank').focus();
             window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", 'newwindow', 'width=500,height=500');
             return true;
-        }, 5000);
+        }, 2000);
     </script>
 
     {{-- <script type="text/javascript">
