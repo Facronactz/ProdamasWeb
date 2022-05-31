@@ -5,22 +5,28 @@
 
 @section('content')
 
-    <iframe src="https://prodamasplus.kedirikota.go.id/auth/login" style="border: none;width: 90%;height: 90vh;" class="mx-auto d-flex"></iframe>
+    <iframe id="iframe" src="https://prodamasplus.kedirikota.go.id/auth/login" style="border: none;width: 90%;height: 90vh;" class="mx-auto d-flex"></iframe>
 @endsection
 
 @section('scripts')
 
-    {{-- <script type="text/javascript">
-        document.getElementById("logingoogle").href = "https://prodamasplus.kedirikota.go.id/auth/login_google";
-    </script> --}}
-
     <script type="text/javascript">
-        setTimeout(document.getElementById("logingoogle").onclick = function() {
+        $(document).ready(function() {
+            $('iframe').load(function() {
+                $('logingoogle').onclick(function() {
+                    window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", 'newwindow', 'width=500,height=500');
+                })
+            });
+        });
+    </script>
+
+    <script>
+        document.getElementById("logingoogle").onclick = function() {
             //   document.getElementById("logingoogle").href="https://prodamasplus.kedirikota.go.id/auth/login_google";
             //   window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", '_blank').focus();
             window.open("https://prodamasplus.kedirikota.go.id/auth/login_google", 'newwindow', 'width=500,height=500');
             return true;
-        }, 10000);
+        };
     </script>
 
     {{-- <script type="text/javascript">
