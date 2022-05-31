@@ -19,41 +19,19 @@ class ArticleController extends Controller
     {
         $this->validate($request, [
             'status' => 'required',
-            'gambar_sampul' => 'required|max:2200',
+            'gambar_sampul' => 'required',
             'text_sampul' => 'required',
             'judul' => 'required',
             'slug' => 'required',
             'article' => 'required',
-            'picture' => 'required|mimes:jpeg,jpg,png|max:2200'
+            'picture' => 'required'
         ]);
-
-
-        // dd($request->all());
-        $artikel = new ArticleAdmin;
+        // dump($request);
+        // sampul
+        $artikel = new ArticleAdmin();
         $extThumb = $request->gambar_sampul->getClientOriginalExtension();
         $pathThumb = "sampul-" . time() . "." . $extThumb;
-        $pathStore = $request->gambar_sampul->move(public_path('../articleProd/sampul/'), $pathThumb);
-
-        // sampul artikel
-        // $extThumb = $request->gambar_sampul->getClientOriginalName();
-        // $pathThumb = "sampul-".time().".".$extThumb;
-        // $pathStore = $request->gambar_sampul->move(public_path('aticleProd/sampul'), $pathThumb);
-
-        // // konten artikel
-        // $article = $request->file('aticle');
-        // $articlename = $article->getClientOriginalName();
-        // $articlepath = $article->storeAs('article', $articlename);
-        // $pathStore = $request->article->move(public_path('articleProd/konten'), $articlepath);
-
-        // ArticleAdmin::create([
-        //     "status" => $request["status"],
-        //     "gambar_sampul" => $pathThumb,
-        //     "text_sampul" => $request["text_sampul"],
-        //     "judul" => $request["judul"],
-        //     "slug" => $request["slug"],
-        //     "article" => $request["article"],
-        //     // "picture" => $articlename
-        // ]);
+        $pathStore = $request->gambar_sampul->move(public_path('../articleProd/sampul'), $pathThumb);
 
         $tags = explode(",", $request->tags);
 
@@ -63,8 +41,8 @@ class ArticleController extends Controller
             "text_sampul" => $request["text_sampul"],
             "judul" => $request["judul"],
             "slug" => $request["slug"],
-            "picture" => $pathThumb,
-            "article" => $request["article"]
+            "article" => $request["article"],
+            "picture" => $pathThumb
         ]);
 
         $artikel->save();
