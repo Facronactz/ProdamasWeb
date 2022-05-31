@@ -20,10 +20,10 @@ class ArticleController extends Controller
         $this->validate($request, [
             'status' => 'required',
             'gambar_sampul' => 'required',
-            // 'text_sampul' => 'required',
-            // 'judul' => 'required',
-            // 'slug' => 'required',
-            // 'article' => 'required',
+            'text_sampul' => 'required',
+            'judul' => 'required',
+            'slug' => 'required',
+            'article' => 'required',
         ]);
         // dump($request);
         // sampul
@@ -37,14 +37,14 @@ class ArticleController extends Controller
         $artikel->fill([
             "status" => $request["status"],
             "gambar_sampul" => $pathThumb,
-            // "text_sampul" => $request["text_sampul"],
-            // "judul" => $request["judul"],
-            // "slug" => $request["slug"],
-            // "article" => $request["article"],
+            "text_sampul" => $request["text_sampul"],
+            "judul" => $request["judul"],
+            "slug" => $request["slug"],
+            "article" => $request["article"],
         ]);
 
         $artikel->save();
-        // $artikel->tag($tags);
+        $artikel->tag($tags);
 
         return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Ditambahkan!');
     }
