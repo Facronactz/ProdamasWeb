@@ -1,4 +1,4 @@
-@extends('layouts.design')
+@extends('layouts.desain')
 
 @section('content')
 <div>
