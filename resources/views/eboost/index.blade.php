@@ -47,7 +47,7 @@
         <div class="card border-light my-4">
             <div class="row g-0">
                 <div class="col-lg-4 d-flex justify-content-center">
-                    <img src="https://via.placeholder.com/700x400.png?text=Ukuran+Optimal+=+700+x+400px"
+                    <img src="https://via.placeholder.com/700x400.png?text=Ukuran+Optimal+=+700px+x+400px"
                         class="img-fluid" style="max-height: 400px;">
                 </div>
                 <div class="col-lg-8">
@@ -63,7 +63,7 @@
         <div class="card border-light my-4">
             <div class="row g-0">
                 <div class="col-lg-4 d-flex justify-content-center">
-                    <img src="https://via.placeholder.com/700x400.png?text=Ukuran+Optimal+=+700+x+400px"
+                    <img src="https://via.placeholder.com/700x400.png?text=Ukuran+Optimal+=+700px+x+400px"
                         class="img-fluid" style="max-height: 400px;">
                 </div>
                 <div class="col-lg-8">
