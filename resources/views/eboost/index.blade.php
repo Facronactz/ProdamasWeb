@@ -1,5 +1,14 @@
 @extends('layouts.desain')
 
+@section(head)
+    .carousel-img {
+        object-fit: cover;
+        object-position: center;
+        height: 350px;
+        width: 100%;
+    }
+@endsection
+
 @section('content')
 
     <div id="carouselUtama" class="carousel slide" data-bs-ride="carousel">
