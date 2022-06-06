@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
  
 use App\Http\Controllers\Controller;
  
-class UserController extends Controller
+class EBoostController extends Controller
 {
     public function index()
     {
