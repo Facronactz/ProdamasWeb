@@ -1,6 +1,6 @@
 @extends('layouts.desain')
 
-@section(head)
+@section('head')
     .carousel-img {
         object-fit: cover;
         object-position: center;
