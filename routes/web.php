@@ -259,3 +259,6 @@ Route::get('/searchcerita', [SearchController::class, 'searchcerita'])->name('se
 
 //Tag
 Route::get('/tag', [SearchController::class, 'tagger'])->name('tag');
+
+// Sospem
+Route::resource('/e-boost', EBoostController::class);
