@@ -47,7 +47,7 @@
         <div class="card border-light my-4">
             <div class="row g-0">
                 <div class="col-lg-4 d-flex justify-content-center">
-                    <img src="https://awsimages.detik.net.id/community/media/visual/2019/12/20/905dfd3e-6cfd-46ff-b464-e86baa80c305_43.jpeg?w=700&q=90"
+                    <img src="https://via.placeholder.com/700x400.png?text=Ukuran+Optimal+=+700+x+400px"
                         class="img-fluid" style="max-height: 400px;">
                 </div>
                 <div class="col-lg-8">
@@ -63,7 +63,7 @@
         <div class="card border-light my-4">
             <div class="row g-0">
                 <div class="col-lg-4 d-flex justify-content-center">
-                    <img src="https://awsimages.detik.net.id/community/media/visual/2019/12/20/905dfd3e-6cfd-46ff-b464-e86baa80c305_43.jpeg?w=700&q=90"
+                    <img src="https://via.placeholder.com/700x400.png?text=Ukuran+Optimal+=+700+x+400px"
                         class="img-fluid" style="max-height: 400px;">
                 </div>
                 <div class="col-lg-8">

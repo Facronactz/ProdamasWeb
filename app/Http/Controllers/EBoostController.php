@@ -10,4 +10,8 @@ class EBoostController extends Controller
     {
         return view('eboost.index');
     }
+
+    public function UMKM(){
+        return view('eboost.umkm');
+    }
 }
