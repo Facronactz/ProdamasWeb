@@ -263,4 +263,4 @@ Route::get('/tag', [SearchController::class, 'tagger'])->name('tag');
 
 // Sospem
 Route::resource('/e-boost', EBoostController::class);
-Route::resource('/umkm', [EBoostController::class, 'umkm']);
+Route::get('/umkm', [EBoostController::class, 'umkm']);
