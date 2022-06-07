@@ -3,7 +3,6 @@
 namespace Illuminate\Foundation;
 
 use Exception;
-use Conner\Tagging\Providers\TaggingServiceProvider;
 use Illuminate\Contracts\Foundation\Application as ApplicationContract;
 use Illuminate\Filesystem\Filesystem;
 

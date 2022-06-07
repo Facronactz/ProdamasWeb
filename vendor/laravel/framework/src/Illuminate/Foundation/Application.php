@@ -25,7 +25,6 @@ use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
-use Conner\Tagging\Providers\TaggingServiceProvider;
 
 class Application extends Container implements ApplicationContract, CachesConfiguration, CachesRoutes, HttpKernelInterface
 {
@@ -34,7 +33,7 @@ class Application extends Container implements ApplicationContract, CachesConfig
      *
      * @var string
      */
-    const VERSION = '8.71.0';
+    const VERSION = '8.83.15';
 
     /**
      * The base path for the Laravel installation.
@@ -249,7 +248,7 @@ class Application extends Container implements ApplicationContract, CachesConfig
      */
     public function afterLoadingEnvironment(Closure $callback)
     {
-        return $this->afterBootstrapping(
+        $this->afterBootstrapping(
             LoadEnvironmentVariables::class, $callback
         );
     }
@@ -630,6 +629,16 @@ class Application extends Container implements ApplicationContract, CachesConfig
     public function runningUnitTests()
     {
         return $this->bound('env') && $this['env'] === 'testing';
+    }
+
+    /**
+     * Determine if the application is running with debug mode enabled.
+     *
+     * @return bool
+     */
+    public function hasDebugModeEnabled()
+    {
+        return (bool) $this['config']->get('app.debug');
     }
 
     /**
