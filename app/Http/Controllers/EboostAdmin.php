@@ -11,7 +11,7 @@ class EboostAdmin extends Controller
 {
     public function create()
     {
-        return view('admin.bidang.add');
+        return view('admin.eboost.add');
     }
 
     public function store(Request $request)
@@ -36,20 +36,20 @@ class EboostAdmin extends Controller
         }
         Eboost::insert($files);
 
-        return redirect('/admin/list-bidang')->with('success', 'Bidang Berhasil Ditambahkan!');
+        return redirect('/admin/list-eboost')->with('success', 'Eboost Berhasil Ditambahkan!');
     }
 
     public function index()
     {
         $Eboost = Eboost::groupBy('judul')->get();
         $descriptions = DescriptionAdmin::first()->get();
-        return view('admin.bidang.list', compact('bidangs', 'descriptions'));
+        return view('admin.eboost.list', compact('eboost', 'descriptions'));
     }
 
     public function edit($id)
     {
-        $bidang = Eboost::findOrFail($id);
-        return view('admin.bidang.edit', compact('bidang'));
+        $Eboost = Eboost::findOrFail($id);
+        return view('admin.eboost.edit', compact('bidang'));
     }
 
     public function update($id, Request $request)
@@ -60,51 +60,51 @@ class EboostAdmin extends Controller
             'caption' => 'required'
         ]);
 
-        $bidangs = Eboost::findorfail($id);
+        $Eboost = Eboost::findorfail($id);
         $file = $request->file('foto');
         if ($file != NULL) {
-            File::delete(public_path("../bidangProd/" . $bidangs->foto));
+            File::delete(public_path("../bidangProd/" . $Eboost->foto));
             $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
             $file->move(public_path('../bidangProd/'), $filePath);
 
-            $bidangs->update([
+            $Eboost->update([
                 'judul' => $request->judul,
                 'foto' => $filePath,
                 'caption' => $request->caption
             ]);
         } else {
-            $bidangs->update([
+            $Eboost->update([
                 'judul' => $request->judul,
                 'caption' => $request->caption
             ]);
         }
 
-        return redirect('/admin/list-bidang')->with('success', 'Bidang Berhasil Diupdate!');
+        return redirect('/admin/list-eboost')->with('success', 'Eboost Berhasil Diupdate!');
     }
 
     public function destroy($id)
     {
         $submission = DB::table('eboost')->where('id', $id)->delete();
-        return redirect('/admin/list-bidang')->with('success', 'Bidang Berhasil Dihapus!');
+        return redirect('/admin/list-eboost')->with('success', 'Eboost Berhasil Dihapus!');
     }
 
     public function edit_desc($id)
     {
         $descriptions = DescriptionAdmin::findOrFail($id);
-        return view('admin.bidang.editdesc', compact('descriptions'));
+        return view('admin.eboost.editdesc', compact('descriptions'));
     }
 
     public function update_desc($id, Request $request)
     {
         $request->validate([
-            'desc_bidang' => 'required',
+            'desc_eboost' => 'required',
         ]);
 
         $descriptions = DescriptionAdmin::findOrFail($id);
-        $descriptions_data = ["desc_bidang" => $request["desc_bidang"]];
+        $descriptions_data = ["desc_eboost" => $request["desc_eboost"]];
         $descriptions->update($descriptions_data);
 
-        return redirect('/admin/list-bidang')->with('success', 'Deskripsi Berhasil Diupdate!');
+        return redirect('/admin/list-eboost')->with('success', 'Deskripsi Berhasil Diupdate!');
     }
 }
 
