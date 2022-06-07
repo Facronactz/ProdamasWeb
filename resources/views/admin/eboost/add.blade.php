@@ -47,7 +47,7 @@ E-Boost
 
     <div class="form-group">
         <label for="foto_tentang">Foto Tentang</label><br>
-        <input type="file" class="form-control" name="foto_tentang[]" id="foto_tentang[]">
+        <input type="file" class="form-control" name="foto_tentang" id="foto_tentang">
         @error('foto_tentang')
         <div class="alert alert-danger">
             {{ $message }}
@@ -77,7 +77,7 @@ E-Boost
 
     <div class="form-group">
         <label for="foto_info">Foto Info</label><br>
-        <input type="file" class="form-control" name="foto_info[]" id="foto_info[]">
+        <input type="file" class="form-control" name="foto_info" id="foto_info">
         @error('foto_info')
         <div class="alert alert-danger">
             {{ $message }}
