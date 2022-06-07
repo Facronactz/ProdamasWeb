@@ -261,6 +261,9 @@ Route::get('/searchcerita', [SearchController::class, 'searchcerita'])->name('se
 //Tag
 Route::get('/tag', [SearchController::class, 'tagger'])->name('tag');
 
-// Sospem
+// EBoost
 Route::resource('/e-boost', EBoostController::class);
-Route::get('/umkm', [EBoostController::class, 'umkm']);
+// UMKM
+Route::resource('/umkm', UMKMController::class);
+// Koperasi RW
+Route::resource('/koperasirw', KoperasiController::class);
