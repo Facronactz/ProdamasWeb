@@ -25,7 +25,7 @@ UMKM Submission
             </tr>
         </thead>
         <tbody>
-            @forelse ($picts as $pict)
+            @foreach ($picts ?? '' as $pict)
             <tr>
                 <td>{{$pict->kota}}</td>
                 <td>{{$pict->pesantren}}</td>
@@ -36,11 +36,11 @@ UMKM Submission
                     </form>
                 </td>
             </tr>
-            @empty
+            <!-- @empty
             <tr colspan="3">
                 <td>No data</td>
-            </tr>
-            @endforelse
+            </tr> -->
+            @endforeach
         </tbody>
     </table>
 </div>
