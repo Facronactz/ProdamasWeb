@@ -28,6 +28,7 @@ use App\Http\Controllers\KampungkerenAdminController;
 use App\Http\Controllers\BidangAdminController;
 use App\Http\Controllers\PokmasAdminController;
 use App\Http\Controllers\ProdamasAdminController;
+use App\Http\Controllers\UMKMAdminController;
 use App\Http\Controllers\TestregistController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CeritaController;
