@@ -25,7 +25,7 @@ UMKM Submission
             </tr>
         </thead>
         <tbody>
-            @foreach ($picts ?? '' as $pict)
+            @foreach($picts as $pict)
             <tr>
                 <td>{{$pict->kota}}</td>
                 <td>{{$pict->pesantren}}</td>
@@ -36,10 +36,6 @@ UMKM Submission
                     </form>
                 </td>
             </tr>
-            <!-- @empty
-            <tr colspan="3">
-                <td>No data</td>
-            </tr> -->
             @endforeach
         </tbody>
     </table>
