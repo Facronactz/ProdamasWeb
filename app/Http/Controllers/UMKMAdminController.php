@@ -45,9 +45,10 @@ class UMKMAdminController extends Controller
         return redirect('/admin/list-umkm')->with('success', 'UMKM Berhasil Ditambahkan!');
     }
 
-    public function editlist()
+    public function editlist($id)
     {
-        return view('admin.umkm.editlist');
+        $umkm = UMKM::findOrFail($id);
+        return view('admin.umkm.editlist', $umkm);
     }
 
     public function updatelist(Request $request, $id)

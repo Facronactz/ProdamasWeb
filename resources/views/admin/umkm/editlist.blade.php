@@ -27,7 +27,7 @@ UMKM Baru
 
 <form action="/admin/updatelist-umkm" method="POST" enctype="multipart/form-data">
     @csrf
-
+    @method('put')
     <div class="form-group">
         <label for="judul">Judul</label>
         <input name="judul" class="form-control" name="judul" id="judul" value="{{$umkm->judul}}">
