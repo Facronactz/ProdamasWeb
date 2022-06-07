@@ -45,6 +45,53 @@ class UMKMAdminController extends Controller
         return redirect('/admin/list-umkm')->with('success', 'UMKM Berhasil Ditambahkan!');
     }
 
+    public function editlist()
+    {
+        return view('admin.umkm.editlist');
+    }
+
+    public function updatelist(Request $request, $id)
+    {
+        $this->validate($request, [
+            'judul' => 'required',
+            'kecamatan' => 'required',
+            'kelurahan' => 'required',
+            'jenis' => 'required',
+            'tahun' => 'required',
+            'contact' => 'required',
+            'alamat' => 'required',
+        ]);
+
+        $umkms = UMKM::findOrFail($id);
+        $file = $request->file('foto');
+        if ($file != null) {
+            $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
+            $file->move(public_path('../UMKMProd/'), $foto);
+            $umkms::update([
+                'judul' => $request->judul,
+                'foto' => $foto,
+                'kecamatan' => $request->kecamatan,
+                'kelurahan' => $request->kelurahan,
+                'jenis' => $request->jenis,
+                'tahun' => $request->tahun,
+                'contact' => $request->contact,
+                'alamat' => $request->alamat
+            ]);
+        } else {
+            $umkms::update([
+                'judul' => $request->judul,
+                'kecamatan' => $request->kecamatan,
+                'kelurahan' => $request->kelurahan,
+                'jenis' => $request->jenis,
+                'tahun' => $request->tahun,
+                'contact' => $request->contact,
+                'alamat' => $request->alamat
+            ]);
+        }
+
+        return redirect('/admin/list-umkm')->with('success', 'UMKM Berhasil Diedit!');
+    }
+
     public function index()
     {
         $picts = Pict::first()->get();
