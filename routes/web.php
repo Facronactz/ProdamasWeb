@@ -229,7 +229,7 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/list-umkm', [UMKMAdminController::class, 'index']);
     Route::get('/admin/editlist-umkm/{umkm_id}', [UMKMAdminController::class, 'editlist']);
     Route::put('/admin/editlist-umkm/{umkm_id}', [UMKMAdminController::class, 'updatelist']);
-    Route::delete('/admin/delete-carousel/{carousel}', [UMKMAdminController::class, 'destroy']);
+    Route::delete('/admin/editlist-umkm/{umkm_id}', [UMKMAdminController::class, 'destroy']);
     Route::get('/admin/umkm/{pict_id}', [UMKMAdminController::class, 'edit_pict']);
     Route::put('/admin/umkm/{pict_id}', [UMKMAdminController::class, 'update_pict']);
 

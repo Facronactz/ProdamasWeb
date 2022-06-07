@@ -92,6 +92,12 @@ class UMKMAdminController extends Controller
         return redirect('/admin/list-umkm')->with('success', 'UMKM Berhasil Diedit!');
     }
 
+    public function destroyreg($id)
+    {
+        $submission = DB::table('umkm')->where('id', $id)->delete();
+        return redirect('/admin/list-umkm')->with('success', 'UMKM Berhasil Dihapus!');
+    }
+
     public function index()
     {
         $picts = Pict::first()->get();

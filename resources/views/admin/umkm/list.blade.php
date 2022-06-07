@@ -61,8 +61,8 @@ UMKM Submission
             <td>{{$umkm->kelurahan}}</td>
             <td>{{$umkm->jenis}}</td>
             <td>
-                <form action="/admin/umkm/{{$umkm->id}}" method="POST">
-                    <a href="/admin/umkm/{{$umkm->id}}" class="btn btn-info">Edit</a>
+                <form action="/admin/editlist-umkm/{{$umkm->id}}" method="POST">
+                    <a href="/admin/editlist-umkm/{{$umkm->id}}" class="btn btn-info">Edit</a>
                     @csrf
                     @method('DELETE')
                     <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Foto?')" value="Delete">
