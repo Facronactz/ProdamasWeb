@@ -225,7 +225,7 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
 
     // UMKM
     Route::get('/admin/addlist-umkm', [UMKMAdminController::class, 'createlist']);
-    Route::post('/admin/list-umkm', [UMKMAdminController::class, 'storelist']);
+    Route::post('/admin/storelist-umkm', [UMKMAdminController::class, 'storelist']);
     Route::get('/admin/list-umkm', [UMKMAdminController::class, 'index']);
     Route::get('/admin/editlist-umkm/{umkm_id}', [UMKMAdminController::class, 'editlist']);
     Route::put('/admin/editlist-umkm/{umkm_id}', [UMKMAdminController::class, 'updatelist']);
