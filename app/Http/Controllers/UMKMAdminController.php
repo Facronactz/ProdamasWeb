@@ -4,11 +4,50 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pict;
+use App\Models\UMKM;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 
 class UMKMAdminController extends Controller
 {
+    public function createlist()
+    {
+        return view('admin.umkm.addlist');
+    }
+
+    public function storelist(Request $request)
+    {
+        $this->validate($request, [
+            'judul' => 'required',
+            'foto' => 'required',
+            'kelurahan' => 'required',
+            'jenis' => 'required',
+            'tahun' => 'required',
+            'contact' => 'required',
+            'alamat' => 'required',
+        ]);
+
+        $files = [];
+        foreach ($request->file('foto') as $file) {
+            if ($file->isValid()) {
+                $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
+                $file->move(public_path('../UMKMProd/'), $foto);
+                $files[] = [
+                    'judul' => $request->judul,
+                    'foto' => $foto,
+                    'kelurahan' => $request->kelurahan,
+                    'jenis' => $request->jenis,
+                    'tahun' => $request->tahun,
+                    'contact' => $request->contact,
+                    'alamat' => $request->alamat
+                ];
+            }
+        }
+        UMKM::insert($files);
+
+        return redirect('/admin/list-umkm')->with('success', 'Konten Berhasil Ditambahkan!');
+    }
+
     public function index()
     {
         $picts = Pict::first()->get();
