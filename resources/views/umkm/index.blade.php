@@ -43,7 +43,7 @@
           </div>
         </div>
         @endforeach
-        <div class="d-flex justify-content-end w-100 my-3">
+        <div id="kotaslink" class="d-flex justify-content-end w-100 my-3">
           {{ $kotas->links() }}
         </div>
       </div>
@@ -189,12 +189,9 @@
 
 @section('scripts')
 <script>
-  if (window.location.href === 'https://prodamas.kedirikota.go.id/umkm') {
-    $("#kota").hide();
-    $("#pesantren").hide();
-    $("#mojoroto").hide();
-  }
-
+  $("#kota").hide();
+  $("#pesantren").hide();
+  $("#mojoroto").hide();
 
   $("#bKota").click(function() {
     $("#kota").toggle();
@@ -212,6 +209,12 @@
     $("#mojoroto").toggle();
     $("#pesantren").hide();
     $("#kota").hide();
+  });
+
+  $("#kotaslink").click(function() {
+    $("#kota").toggle();
+    $("#pesantren").hide();
+    $("#mojoroto").hide();
   });
 </script>
 @endsection
