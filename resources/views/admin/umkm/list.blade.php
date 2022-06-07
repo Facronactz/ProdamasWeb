@@ -25,7 +25,7 @@ UMKM Submission
             </tr>
         </thead>
         <tbody>
-            @forelse ($picts as $pict)
+            @forelse ($picts ?? '' as $pict)
             <tr>
                 <td>{{$pict->kota}}</td>
                 <td>{{$pict->pesantren}}</td>
