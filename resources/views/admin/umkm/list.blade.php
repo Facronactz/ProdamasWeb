@@ -48,6 +48,7 @@ UMKM Submission
             <th scope="col">Judul</th>
             <th scope="col">Kelurahan</th>
             <th scope="col">Jenis</th>
+            <th scope="col">Contact</th>
             <th scope="col">Aksi</th>
         </tr>
     </thead>
@@ -58,6 +59,7 @@ UMKM Submission
             <td>{{$umkm->judul}}</td>
             <td>{{$umkm->kelurahan}}</td>
             <td>{{$umkm->jenis}}</td>
+            <td>{{$umkm->contact}}</td>
             <td>
                 <form action="/admin/umkm/{{$umkm->id}}" method="POST">
                     <a href="/admin/umkm/{{$umkm->id}}" class="btn btn-info">Edit</a>
