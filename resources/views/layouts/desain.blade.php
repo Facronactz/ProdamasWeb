@@ -208,10 +208,10 @@
                                     <li class="w-100"><a class="dropdown-item @yield('banksampah')" href="{{ url('/banksampah') }}">E-Bank Sampah</a></li>
                                     {{-- <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio</a></li> --}}
                                     <li class="dropdown-submenu w-100">
-                                        <a class="dropdown-item justify-content-between d-flex @yield('progressio')" href="{{ url('/progressio') }}">Progressio <span class="caret fas fa-caret-right my-auto"></span></a>
+                                        <a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio <span class="caret fas fa-caret-right"></span></a>
                                         <ul class="dropdown-menu">
-                                            <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Login KK</a></li>
-                                            <li class="w-100"><a class="dropdown-item @yield('progression')" href="https://prodamasplus.kedirikota.go.id/auth/login_google">Login Google</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Login KK</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Login Google</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -243,10 +243,12 @@
                                         </ul>
                                     </li> --}}
                                     <li class="dropdown-submenu w-100">
-                                        <a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Kube & Koperasi <span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">E-Boost <span class="caret fas fa-caret-right ms-3"></span></a>
                                         <ul class="dropdown-menu">
-                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Peminjam</a></li>
-                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Pemberi Dana</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">UMKM</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">KUBE</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Akses Permodalan</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Koperasi RW</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -316,7 +318,7 @@
                 <div class="d-flex justify-content-end mt-2">
                     <div style="margin-top: 15px; border-radius: 15px; color: white; text-align:center; background-color: #F58634; padding:5px">
                         <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                        <a style="font-size:15px">Kunjungan: {{ $totalviews ?? '' }}</a>
+                        <a style="font-size:15px">Kunjungan: {{$totalviews}}</a>
                         <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
                     </div>
                 </div>
