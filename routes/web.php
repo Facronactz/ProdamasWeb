@@ -40,7 +40,8 @@ use App\Http\Controllers\PostFotoController;
 use App\Http\Controllers\EBoostController;
 use App\Http\Controllers\UMKMController;
 use App\Http\Controllers\KoperasiController;
-
+use App\Http\Controllers\KoperasiAdminController;
+use App\Http\Controllers\EboostAdmin;
 
 /*
 |--------------------------------------------------------------------------
@@ -108,7 +109,6 @@ Route::resource('/umkm', UMKMController::class);
 Route::resource('/koperasirw', KoperasiController::class);
 
 Route::get('/permodalan', [EBoostController::class, 'permodalan']);
-
 
 //login & profil
 Route::get('/loginuser', [AuthController::class, 'index'])->name('login');
@@ -232,6 +232,12 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::delete('/admin/delete-carousel/{carousel}', [UMKMAdminController::class, 'destroy']);
     Route::get('/admin/umkm/{pict_id}', [UMKMAdminController::class, 'edit_pict']);
     Route::put('/admin/umkm/{pict_id}', [UMKMAdminController::class, 'update_pict']);
+
+    // Koperasi RW
+    Route::get('/admin/list-koperasirw', [KoperasiAdminController::class, 'index']);
+
+    // EboostAdmin
+    Route::get('/admin/list-eboost', [EboostAdmin::class, 'index']);
 });
 
 //berlangganan
