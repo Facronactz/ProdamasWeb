@@ -35,7 +35,7 @@ class EboostAdmin extends Controller
                     'caption_tentang' => $request->caption_tentang,
                     'foto_tentang' => $foto,
                      'judul_info' => $request->judul_info,
-                    'caption_info' => $request->judul_info,
+                    'caption_info' => $request->caption_info,
                     'foto_info' => $foto,
                 ];
             }
