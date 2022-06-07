@@ -237,9 +237,9 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/list-koperasirw', [KoperasiAdminController::class, 'index']);
 
     // EboostAdmin
-    Route::get('/admin/add-eboost', [EboostAdmin::class, 'index']);
+    Route::get('/admin/add-eboost', [EboostAdmin::class, 'create']);
     Route::get('/admin/list-eboost', [EboostAdmin::class, 'index']);
-    Route::get('/admin/edit-eboost', [EboostAdmin::class, 'index']);
+    Route::get('/admin/edit-eboost', [EboostAdmin::class, 'edit']);
 });
 
 //berlangganan
