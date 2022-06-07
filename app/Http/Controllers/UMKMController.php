@@ -24,15 +24,9 @@ class UMKMController extends Controller
             ->sum('views');
 
         $picts = Pict::first()->get();
-        $kotas = UMKM::where('kecamatan', 'Kota')->get()
-            ->take(3)
-            ->get();
-        $pesantrens = UMKM::where('kecamatan', 'Pesantren')->get()
-            ->take(3)
-            ->get();
-        $mojorotos = UMKM::where('kecamatan', 'Mojoroto')->get()
-            ->take(3)
-            ->get();
+        $kotas = UMKM::where('kecamatan', 'Kota')->paginate(3);
+        $pesantrens = UMKM::where('kecamatan', 'Pesantren')->paginate(3);
+        $mojorotos = UMKM::where('kecamatan', 'Mojoroto')->paginate(3);
         return view('umkm.index', compact(
             'counter',
             'totalviews',
