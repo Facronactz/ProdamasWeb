@@ -37,7 +37,7 @@ E-Boost
 
     <div class="form-group">
         <label for="caption_tentang">Caption Tentang</label>
-        <textarea name="caption_tentang" class="form-control" name="caption_tentang" id="caption_tentang" placeholder="caption_tentang"></textarea>
+        <textarea name="caption_tentang" class="form-control" name="caption_tentang" id="caption_tentang" placeholder="Caption Tentang"></textarea>
         @error('caption_tentang')
         <div class="alert alert-danger">
             {{ $message }}
@@ -57,7 +57,7 @@ E-Boost
     
     <div class="form-group">
         <label for="judul_info">Judul Info</label>
-        <input name="judul_info" class="form-control" name="judul_info" id="judul_info" placeholder="Judul info">
+        <input name="judul_info" class="form-control" name="judul_info" id="judul_info" placeholder="Judul Info">
         @error('judul_info')
         <div class="alert alert-danger">
             {{ $message }}
@@ -67,7 +67,7 @@ E-Boost
 
     <div class="form-group">
         <label for="caption_info">Caption Info</label>
-        <textarea name="caption_info" class="form-control" name="caption_info" id="caption_info" placeholder="caption_info"></Textarea>
+        <textarea name="caption_info" class="form-control" name="caption_info" id="caption info" placeholder="Caption Info"></Textarea>
         @error('caption_info')
         <div class="alert alert-danger">
             {{ $message }}
