@@ -14,30 +14,36 @@ class EboostAdmin extends Controller
         return view('admin.eboost.add');
     }
 
-    // public function store(Request $request)
-    // {
-    //     $this->validate($request, [
-    //         'judul' => 'required',
-    //         'foto' => 'required',
-    //         'caption' => 'required',
-    //     ]);
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'judul_tentang' => 'required',
+            'caption_tentang' => 'required',
+            'foto_tentang' => 'required',
+            'judul_info' => 'required',
+            'caption_info' => 'required',
+            'foto_info' => 'required',
+        ]);
 
-    //     $files = [];
-    //     foreach ($request->file('foto') as $file) {
-    //         if ($file->isValid()) {
-    //             $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-    //             $file->move(public_path('../bidangProd/'), $foto);
-    //             $files[] = [
-    //                 'judul' => strtoupper($request->judul),
-    //                 'foto' => $foto,
-    //                 'caption' => $request->caption
-    //             ];
-    //         }
-    //     }
-    //     Eboost::insert($files);
+        $files = [];
+        foreach ($request->file('foto') as $file) {
+            if ($file->isValid()) {
+                $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
+                $file->move(public_path('../fotoProd/'), $foto);
+                $files[] = [
+                    'judul_tentang' => $request->judul_tentang,
+                    'caption_tentang' => $request->caption_tentang,
+                    'foto_tentang' => $foto,
+                     'judul_info' => $request->judul_info,
+                    'caption_info' => $request->judul_info,
+                    'foto_info' => $foto,
+                ];
+            }
+        }
+        Eboost::insert($files);
 
-    //     return redirect('/admin/list-eboost')->with('success', 'Eboost Berhasil Ditambahkan!');
-    // }
+        return redirect('/admin/list-eboost')->with('success', 'Eboost Berhasil Ditambahkan!');
+    }
 
     public function index()
     {
