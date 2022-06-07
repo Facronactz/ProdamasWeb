@@ -37,7 +37,7 @@ E-Boost
 
     <div class="form-group">
         <label for="caption_tentang">Caption Tentang</label>
-        <textarea name="caption_tentang" class="form-control" name="caption_tentang" id="caption_tentang"></textarea> placeholder="caption_tentang">
+        <textarea name="caption_tentang" class="form-control" name="caption_tentang" id="caption_tentang" placeholder="caption_tentang"></textarea>
         @error('caption_tentang')
         <div class="alert alert-danger">
             {{ $message }}
