@@ -229,6 +229,8 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
 
     // Koperasi RW
     Route::get('/admin/list-koperasirw', [KoperasiAdminController::class, 'index']);
+    Route::get('/admin/koperasirw/{koperasi_id}', [KoperasiAdminController::class, 'edit']);
+    Route::put('/admin/koperasirw/{koperasi_id}', [KoperasiAdminController::class, 'update']);
 });
 
 //berlangganan

@@ -14,16 +14,9 @@
         </div>
         <div class="container mb-3">
             <div class="mt-2" style="text-indent: 25px;">
-                <p>Koperasi adalah Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, labore? Aliquid illum nisi maiores voluptate ab rem hic perspiciatis aliquam fugiat, saepe cum dolores officiis commodi a, praesentium qui non.
-                Reprehenderit officia similique ut itaque iusto earum beatae perspiciatis, velit tempora exercitationem dolor, saepe aspernatur atque voluptatem culpa, sequi assumenda asperiores vel molestias odio. Aut porro praesentium voluptates molestias est.
-                Explicabo perspiciatis nostrum quos possimus consequatur vel et nisi, facere consectetur nihil non aut magnam qui inventore placeat, sequi enim maxime nam. Qui assumenda voluptatibus magni laboriosam, architecto illo tempora?
-                Doloribus alias similique eos esse itaque repellendus pariatur? Fuga earum deserunt, sit maiores deleniti excepturi provident veritatis ullam accusantium odio? Et, mollitia placeat. Laudantium, at fuga et doloribus deleniti impedit.
-                Eos temporibus facere ipsa maxime et. Nobis, similique tempore ut numquam consequuntur hic, corporis magni, voluptate nisi ab dignissimos sunt. Numquam in id natus, dignissimos vel doloremque quae. Quisquam, necessitatibus.</p>
-                <p>Manfaat Kube Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quibusdam earum dolore itaque iste aut eius minima voluptas velit sed, non odio enim ullam mollitia quas rem, aperiam aliquid quisquam?
-                Aut alias laboriosam doloribus mollitia non impedit iure. Adipisci esse minus, voluptates nisi perspiciatis quos vel optio dolores facere iure eveniet modi exercitationem a ea corrupti provident id? Quaerat, delectus?
-                Perspiciatis nihil reprehenderit velit magni possimus error adipisci illo distinctio ad consequatur. Earum perspiciatis maxime commodi nulla enim deserunt eligendi maiores. Earum nemo magni debitis delectus id. Voluptas, ex repellendus!
-                Velit sed voluptas deserunt incidunt, aliquam ratione dolores repellendus perspiciatis necessitatibus qui aliquid facilis dolorum quas expedita, natus sunt illum eum laudantium. Cupiditate rem, in voluptatem quaerat quos illum quasi?
-                Labore minima pariatur, quidem ratione odit quia aspernatur dolores consequuntur expedita ab officiis omnis modi quibusdam laborum quod sequi fuga eligendi iste dolor laudantium reiciendis optio quam? Ut, ducimus? Ea.</p>
+                @foreach ($koperasi as $kop)
+                <?= $kop->deskripsi ?>
+                @endforeach
             </div>
             <div>
                 <img class="img-fluid d-flex mx-auto" src="https://via.placeholder.com/1000x300.png?text=Syarat+Pembentukan" alt="" srcset="">
