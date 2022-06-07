@@ -36,11 +36,11 @@ UMKM Submission
                     </form>
                 </td>
             </tr>
-            @empty
+            <!-- @empty
             <tr colspan="3">
                 <td>No data</td>
-            </tr>
-        @endforeach
+            </tr> -->
+            @endforeach
         </tbody>
     </table>
 </div>
