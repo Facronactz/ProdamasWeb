@@ -26,16 +26,19 @@ class EboostAdmin extends Controller
         ]);
 
 
-        $file=$request->file('foto');
+        $file=$request->file('foto_tentang');
+        $file2=$request->file('foto_info');
         $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
+        $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file2->getClientOriginalName());
                 $file->move(public_path('../fotoProd/'), $foto);
+                $file2->move(public_path('../fotoProd/'), $foto2);
                 eboost::insert( [
                     'judul_tentang' => $request->judul_tentang,
                     'caption_tentang' => $request->caption_tentang,
                     'foto_tentang' => $foto,
                      'judul_info' => $request->judul_info,
                     'caption_info' => $request->caption_info,
-                    'foto_info' => $foto,
+                    'foto_info' => $foto2,
                 ]);
 
 
