@@ -27,10 +27,10 @@ Koperasi RW Submission
             @foreach($koperasi as $kop)
             <tr>
                 <td>{{$kop->id}}</td>
-                <td>{{$kop->deskripsi}}</td>
+                <td><?= substr($kop->deskripsi, 0, 500) ?>
                 <td>
                     <form action="/admin/koperasirw/{{$kop->id}}" method="POST">
-                        <a href="/admin/koperasi/{{$kop->id}}" class="btn btn-info">Edit</a>
+                        <a href="/admin/koperasirw/{{$kop->id}}" class="btn btn-info">Edit</a>
                     </form>
                 </td>
             </tr>
