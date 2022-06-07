@@ -255,14 +255,14 @@
                                             </li>
                                             <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Akses Permodalan</a></li>
                                             <li class="dropdown-submenu w-100">
-                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/koperasi') }}">Koperasi RW <span class="d-flex justify-content-between caret fas fa-caret-right"></span></a>
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/koperasi') }}">Koperasi RW <span class="caret fas fa-caret-right ms-3"></span></a>
                                                 <ul class="dropdown-menu">
                                                     <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Informasi Koperasi RW</a></li>
                                                     <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Daftar Koperasi RW</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown-submenu w-100">
-                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Publikasi <span class="d-flex justify-content-between caret fas fa-caret-right"></span></a>
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Publikasi <span class="caret fas fa-caret-right ms-3"></span></a>
                                             <ul class="dropdown-menu">
                                                 <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Pemasaran</a></li>
                                                 <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Informasi Pelatihan</a></li>
