@@ -28,7 +28,7 @@ Pict Sentra UMKM
 <form action="/admin/list-umkm" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
-        <label for="kota">Kec. Kota</label>
+        <label for="kota">Kec. Kota</label><br>
         <input type="file" accept="image/png, image/jpg, image/jpeg" name="kota[]" class="form-control[]" name="kota" id="kota" value="{{$picts->kota}}">
         @error('kota')
         <div class="alert alert-danger">
@@ -38,7 +38,7 @@ Pict Sentra UMKM
     </div>
 
     <div class="form-group">
-        <label for="pesantren">Kec. Pesantren</label>
+        <label for="pesantren">Kec. Pesantren</label><br>
         <input type="file" accept="image/png, image/jpg, image/jpeg" name="pesantren[]" class="form-control[]" name="pesantren" id="pesantren" value="{{$picts->pesantren}}">
         @error('pesantren')
         <div class="alert alert-danger">
@@ -48,7 +48,7 @@ Pict Sentra UMKM
     </div>
 
     <div class="form-group">
-        <label for="mojoroto">Kec. Mojoroto</label>
+        <label for="mojoroto">Kec. Mojoroto</label><br>
         <input type="file" accept="image/png, image/jpg, image/jpeg" name="mojoroto[]" class="form-control[]" name="mojoroto" id="mojoroto" value="{{$picts->mojoroto}}">
         @error('mojoroto')
         <div class="alert alert-danger">
