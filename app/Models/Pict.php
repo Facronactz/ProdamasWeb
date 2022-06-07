@@ -11,7 +11,7 @@ class Pict extends Model
     use HasFactory;
     protected $table = "pict";
     public $incrementing = false;
-    protected $fillable = ["id", "foto_kota", "foto_pesantren", "foto_mojoroto"];
+    protected $fillable = ["id", "kota", "pesantren", "mojoroto"];
 
     public function getCreatedAtAttribute()
     {

@@ -15,9 +15,9 @@ class CreatePictTable extends Migration
     {
         Schema::create('pict', function (Blueprint $table) {
             $table->id();
-            $table->string("foto_kota");
-            $table->string("foto_pesantren");
-            $table->string("foto_mojoroto");
+            $table->string("kota");
+            $table->string("pesantren");
+            $table->string("mojoroto");
             $table->timestamps();
         });
     }

@@ -25,11 +25,12 @@ Pict Sentra UMKM
 </div>
 @endif
 
-<form action="/admin/list-umkm" method="POST" enctype="multipart/form-data">
+<form action="/admin/umkm/{{$picts->id}}" method="POST" enctype="multipart/form-data">
     @csrf
+    @method('put')
     <div class="form-group">
         <label for="kota">Kec. Kota</label><br>
-        <input type="file" accept="image/png, image/jpg, image/jpeg" name="kota[]" class="form-control[]" name="kota" id="kota" value="{{$picts->kota}}">
+        <input type="file" accept="image/png, image/jpg, image/jpeg" name="kota" class="form-control" id="kota" value="{{$picts->kota}}">
         @error('kota')
         <div class="alert alert-danger">
             {{ $message }}
@@ -39,7 +40,7 @@ Pict Sentra UMKM
 
     <div class="form-group">
         <label for="pesantren">Kec. Pesantren</label><br>
-        <input type="file" accept="image/png, image/jpg, image/jpeg" name="pesantren[]" class="form-control[]" name="pesantren" id="pesantren" value="{{$picts->pesantren}}">
+        <input type="file" accept="image/png, image/jpg, image/jpeg" name="pesantren" class="form-control" id="pesantren" value="{{$picts->pesantren}}">
         @error('pesantren')
         <div class="alert alert-danger">
             {{ $message }}
@@ -49,7 +50,7 @@ Pict Sentra UMKM
 
     <div class="form-group">
         <label for="mojoroto">Kec. Mojoroto</label><br>
-        <input type="file" accept="image/png, image/jpg, image/jpeg" name="mojoroto[]" class="form-control[]" name="mojoroto" id="mojoroto" value="{{$picts->mojoroto}}">
+        <input type="file" accept="image/png, image/jpg, image/jpeg" name="mojoroto" class="form-control" id="mojoroto" value="{{$picts->mojoroto}}">
         @error('mojoroto')
         <div class="alert alert-danger">
             {{ $message }}

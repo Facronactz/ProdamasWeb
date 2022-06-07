@@ -107,6 +107,7 @@ Route::resource('/umkm', UMKMController::class);
 // Koperasi RW
 Route::resource('/koperasirw', KoperasiController::class);
 
+Route::get('/permodalan', [EBoostController::class, 'permodalan']);
 
 //login & profil
 Route::get('/loginuser', [AuthController::class, 'index'])->name('login');

@@ -89,6 +89,12 @@
                         <p>UMKM</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="/admin/list-eboost" class="nav-link @yield('eboost')">
+                        <i class="nav-icon fas fa"></i>
+                        <p>E-Boost</p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
