@@ -189,9 +189,11 @@
 
 @section('scripts')
 <script>
-  $("#kota").hide();
-  $("#pesantren").hide();
-  $("#mojoroto").hide();
+  if (window.location.href === 'https://prodamas.kedirikota.go.id/umkm') {
+    $("#kota").hide();
+    $("#pesantren").hide();
+    $("#mojoroto").hide();
+  }
 
 
   $("#bKota").click(function() {
