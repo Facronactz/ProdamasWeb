@@ -68,7 +68,7 @@ class UMKMAdminController extends Controller
         if ($file != null) {
             $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
             $file->move(public_path('../UMKMProd/'), $foto);
-            $umkms::update([
+            $umkms->update([
                 'judul' => $request->judul,
                 'foto' => $foto,
                 'kecamatan' => $request->kecamatan,
@@ -79,7 +79,7 @@ class UMKMAdminController extends Controller
                 'alamat' => $request->alamat
             ]);
         } else {
-            $umkms::update([
+            $umkms->update([
                 'judul' => $request->judul,
                 'kecamatan' => $request->kecamatan,
                 'kelurahan' => $request->kelurahan,
