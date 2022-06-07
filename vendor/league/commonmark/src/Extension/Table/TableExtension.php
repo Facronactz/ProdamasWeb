@@ -15,14 +15,22 @@ declare(strict_types=1);
 
 namespace League\CommonMark\Extension\Table;
 
+<<<<<<< HEAD
+use League\CommonMark\ConfigurableEnvironmentInterface;
+use League\CommonMark\Extension\ExtensionInterface;
+=======
 use League\CommonMark\Environment\EnvironmentBuilderInterface;
 use League\CommonMark\Extension\ConfigurableExtensionInterface;
 use League\CommonMark\Renderer\HtmlDecorator;
 use League\Config\ConfigurationBuilderInterface;
 use Nette\Schema\Expect;
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
 
 final class TableExtension implements ConfigurableExtensionInterface
 {
+<<<<<<< HEAD
+    public function register(ConfigurableEnvironmentInterface $environment): void
+=======
     public function configureSchema(ConfigurationBuilderInterface $builder): void
     {
         $builder->addSchema('table', Expect::structure([
@@ -35,6 +43,7 @@ final class TableExtension implements ConfigurableExtensionInterface
     }
 
     public function register(EnvironmentBuilderInterface $environment): void
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
     {
         $tableRenderer = new TableRenderer();
         if ($environment->getConfiguration()->get('table/wrap/enabled')) {
@@ -42,11 +51,19 @@ final class TableExtension implements ConfigurableExtensionInterface
         }
 
         $environment
-            ->addBlockStartParser(new TableStartParser())
+            ->addBlockParser(new TableParser())
 
+<<<<<<< HEAD
+            ->addBlockRenderer(Table::class, new TableRenderer())
+            ->addBlockRenderer(TableSection::class, new TableSectionRenderer())
+            ->addBlockRenderer(TableRow::class, new TableRowRenderer())
+            ->addBlockRenderer(TableCell::class, new TableCellRenderer())
+        ;
+=======
             ->addRenderer(Table::class, $tableRenderer)
             ->addRenderer(TableSection::class, new TableSectionRenderer())
             ->addRenderer(TableRow::class, new TableRowRenderer())
             ->addRenderer(TableCell::class, new TableCellRenderer());
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
     }
 }

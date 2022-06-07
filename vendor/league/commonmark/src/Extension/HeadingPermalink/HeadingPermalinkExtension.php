@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of the league/commonmark package.
  *
@@ -13,17 +11,18 @@ declare(strict_types=1);
 
 namespace League\CommonMark\Extension\HeadingPermalink;
 
-use League\CommonMark\Environment\EnvironmentBuilderInterface;
+use League\CommonMark\ConfigurableEnvironmentInterface;
 use League\CommonMark\Event\DocumentParsedEvent;
-use League\CommonMark\Extension\ConfigurableExtensionInterface;
-use League\Config\ConfigurationBuilderInterface;
-use Nette\Schema\Expect;
+use League\CommonMark\Extension\ExtensionInterface;
 
 /**
  * Extension which automatically anchor links to heading elements
  */
-final class HeadingPermalinkExtension implements ConfigurableExtensionInterface
+final class HeadingPermalinkExtension implements ExtensionInterface
 {
+<<<<<<< HEAD
+    public function register(ConfigurableEnvironmentInterface $environment)
+=======
     public function configureSchema(ConfigurationBuilderInterface $builder): void
     {
         $builder->addSchema('heading_permalink', Expect::structure([
@@ -40,8 +39,9 @@ final class HeadingPermalinkExtension implements ConfigurableExtensionInterface
     }
 
     public function register(EnvironmentBuilderInterface $environment): void
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
     {
         $environment->addEventListener(DocumentParsedEvent::class, new HeadingPermalinkProcessor(), -100);
-        $environment->addRenderer(HeadingPermalink::class, new HeadingPermalinkRenderer());
+        $environment->addInlineRenderer(HeadingPermalink::class, new HeadingPermalinkRenderer());
     }
 }

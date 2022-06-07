@@ -13,6 +13,9 @@ declare(strict_types=1);
 
 namespace League\CommonMark;
 
+<<<<<<< HEAD
+class MarkdownConverter extends Converter
+=======
 use League\CommonMark\Environment\EnvironmentInterface;
 use League\CommonMark\Output\RenderedContentInterface;
 use League\CommonMark\Parser\MarkdownParser;
@@ -21,28 +24,24 @@ use League\CommonMark\Renderer\HtmlRenderer;
 use League\CommonMark\Renderer\MarkdownRendererInterface;
 
 class MarkdownConverter implements ConverterInterface, MarkdownConverterInterface
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
 {
-    /** @psalm-readonly */
-    protected EnvironmentInterface $environment;
-
-    /** @psalm-readonly */
-    protected MarkdownParserInterface $markdownParser;
-
-    /** @psalm-readonly */
-    protected MarkdownRendererInterface $htmlRenderer;
+    /** @var EnvironmentInterface */
+    protected $environment;
 
     public function __construct(EnvironmentInterface $environment)
     {
         $this->environment = $environment;
 
-        $this->markdownParser = new MarkdownParser($environment);
-        $this->htmlRenderer   = new HtmlRenderer($environment);
+        parent::__construct(new DocParser($environment), new HtmlRenderer($environment));
     }
 
     public function getEnvironment(): EnvironmentInterface
     {
         return $this->environment;
     }
+<<<<<<< HEAD
+=======
 
     /**
      * Converts Markdown to HTML.
@@ -89,4 +88,5 @@ class MarkdownConverter implements ConverterInterface, MarkdownConverterInterfac
     {
         return $this->convert($markdown);
     }
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
 }

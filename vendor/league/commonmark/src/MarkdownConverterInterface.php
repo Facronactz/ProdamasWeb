@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of the league/commonmark package.
  *
@@ -13,8 +11,6 @@ declare(strict_types=1);
 
 namespace League\CommonMark;
 
-use League\CommonMark\Output\RenderedContentInterface;
-
 /**
  * Interface for a service which converts Markdown to HTML.
  *
@@ -25,9 +21,17 @@ interface MarkdownConverterInterface
     /**
      * Converts Markdown to HTML.
      *
+<<<<<<< HEAD
+     * @param string $markdown
+=======
      * @deprecated since 2.2; use {@link ConverterInterface::convert()} instead
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
      *
      * @throws \RuntimeException
+     *
+     * @return string HTML
+     *
+     * @api
      */
-    public function convertToHtml(string $markdown): RenderedContentInterface;
+    public function convertToHtml(string $markdown): string;
 }
