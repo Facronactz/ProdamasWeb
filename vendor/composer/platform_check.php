@@ -4,13 +4,8 @@
 
 $issues = array();
 
-<<<<<<< HEAD
 if (!(PHP_VERSION_ID >= 70300)) {
     $issues[] = 'Your Composer dependencies require a PHP version ">= 7.3.0". You are running ' . PHP_VERSION . '.';
-=======
-if (!(PHP_VERSION_ID >= 70400)) {
-    $issues[] = 'Your Composer dependencies require a PHP version ">= 7.4.0". You are running ' . PHP_VERSION . '.';
->>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
 }
 
 if ($issues) {
