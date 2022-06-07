@@ -39,12 +39,12 @@ class EboostAdmin extends Controller
     //     return redirect('/admin/list-eboost')->with('success', 'Eboost Berhasil Ditambahkan!');
     // }
 
-    // public function index()
-    // {
-    //     $Eboost = Eboost::groupBy('judul')->get();
-    //     $descriptions = DescriptionAdmin::first()->get();
-    //     return view('admin.eboost.list', compact('eboost', 'descriptions'));
-    // }
+    public function index()
+    {
+        $Eboost = Eboost::groupBy('judul')->get();
+        $descriptions = DescriptionAdmin::first()->get();
+        return view('admin.eboost.list', compact('eboost', 'descriptions'));
+    }
 
     public function edit($id)
     {
