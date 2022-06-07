@@ -25,22 +25,19 @@ class EboostAdmin extends Controller
             'foto_info' => 'required',
         ]);
 
-        $files = [];
-        foreach ($request->file('foto') as $file) {
-            if ($file->isValid()) {
-                $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
+
+        $file=$request->file('foto');
+        $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
                 $file->move(public_path('../fotoProd/'), $foto);
-                $files[] = [
+                eboost::insert( [
                     'judul_tentang' => $request->judul_tentang,
                     'caption_tentang' => $request->caption_tentang,
                     'foto_tentang' => $foto,
                      'judul_info' => $request->judul_info,
                     'caption_info' => $request->caption_info,
                     'foto_info' => $foto,
-                ];
-            }
-        }
-        Eboost::insert($files);
+                ]);
+
 
         return redirect('/admin/list-eboost')->with('success', 'Eboost Berhasil Ditambahkan!');
     }
