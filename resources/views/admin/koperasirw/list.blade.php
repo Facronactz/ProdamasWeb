@@ -30,7 +30,7 @@ Koperasi RW Submission
                 <td><?= substr($kop->deskripsi, 0, 500) ?>
                 <td>
                     <form action="/admin/koperasirw/{{$kop->id}}" method="POST">
-                        <a href="/admin/koperasi/{{$kop->id}}" class="btn btn-info">Edit</a>
+                        <a href="/admin/koperasirw/{{$kop->id}}" class="btn btn-info">Edit</a>
                     </form>
                 </td>
             </tr>
