@@ -30,7 +30,7 @@
               <dl class="row my-0">
                 <dt class="col-sm-5">Kelurahan</dt>
                 <dd class="col-sm-7 my-0">: {{$kota->kelurahan}}</dd>
-                <dt class="col-sm-5">jenis</dt>
+                <dt class="col-sm-5">Jenis</dt>
                 <dd class="col-sm-7 my-0">: {{$kota->jenis}}</dd>
                 <dt class="col-sm-5">Thn Berdiri</dt>
                 <dd class="col-sm-7 my-0">: {{$kota->tahun}}</dd>
@@ -61,7 +61,7 @@
               <dl class="row my-0">
                 <dt class="col-sm-5">Kelurahan</dt>
                 <dd class="col-sm-7 my-0">: {{$pesantren->kelurahan}}</dd>
-                <dt class="col-sm-5">jenis</dt>
+                <dt class="col-sm-5">Jenis</dt>
                 <dd class="col-sm-7 my-0">: {{$pesantren->jenis}}</dd>
                 <dt class="col-sm-5">Thn Berdiri</dt>
                 <dd class="col-sm-7 my-0">: {{$pesantren->tahun}}</dd>
@@ -92,7 +92,7 @@
               <dl class="row my-0">
                 <dt class="col-sm-5">Kelurahan</dt>
                 <dd class="col-sm-7 my-0">: {{$mojoroto->kelurahan}}</dd>
-                <dt class="col-sm-5">jenis</dt>
+                <dt class="col-sm-5">Jenis</dt>
                 <dd class="col-sm-7 my-0">: {{$mojoroto->jenis}}</dd>
                 <dt class="col-sm-5">Thn Berdiri</dt>
                 <dd class="col-sm-7 my-0">: {{$mojoroto->tahun}}</dd>
