@@ -27,25 +27,20 @@ class UMKMAdminController extends Controller
             'alamat' => 'required',
         ]);
 
-        $files = [];
-        foreach ($request->file('foto') as $file) {
-            if ($file->isValid()) {
-                $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-                $file->move(public_path('../UMKMProd/'), $foto);
-                $files[] = [
-                    'judul' => $request->judul,
-                    'foto' => $foto,
-                    'kelurahan' => $request->kelurahan,
-                    'jenis' => $request->jenis,
-                    'tahun' => $request->tahun,
-                    'contact' => $request->contact,
-                    'alamat' => $request->alamat
-                ];
-            }
-        }
-        UMKM::insert($files);
+        $file = $request->file('foto');
+        $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
+        $file->move(public_path('../UMKMProd/'), $foto);
+        UMKM::insert([
+            'judul' => $request->judul,
+            'foto' => $foto,
+            'kelurahan' => $request->kelurahan,
+            'jenis' => $request->jenis,
+            'tahun' => $request->tahun,
+            'contact' => $request->contact,
+            'alamat' => $request->alamat
+        ]);
 
-        return redirect('/admin/list-umkm')->with('success', 'Konten Berhasil Ditambahkan!');
+        return redirect('/admin/list-umkm')->with('success', 'UMKM Berhasil Ditambahkan!');
     }
 
     public function index()
