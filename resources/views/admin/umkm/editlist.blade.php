@@ -25,7 +25,7 @@ UMKM Baru
 </div>
 @endif
 
-<form action="/admin/editlist-umkm" method="POST" enctype="multipart/form-data">
+<form action="/admin/editlist-umkm/{{$umkm->id}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('put')
     <div class="form-group">
