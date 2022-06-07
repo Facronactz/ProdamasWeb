@@ -27,6 +27,7 @@ Pict Sentra UMKM
 
 <form action="/admin/list-umkm" method="POST" enctype="multipart/form-data">
     @csrf
+    @method('put')
     <div class="form-group">
         <label for="kota">Kec. Kota</label><br>
         <input type="file" accept="image/png, image/jpg, image/jpeg" name="kota[]" class="form-control[]" name="kota" id="kota" value="{{$picts->kota}}">
