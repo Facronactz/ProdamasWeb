@@ -25,7 +25,7 @@ Pict Sentra UMKM
 </div>
 @endif
 
-<form action="/admin/list-umkm/{{$picts->id}}" method="POST" enctype="multipart/form-data">
+<form action="/admin/umkm/{{$picts->id}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('put')
     <div class="form-group">
