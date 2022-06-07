@@ -28,7 +28,6 @@ use App\Http\Controllers\KampungkerenAdminController;
 use App\Http\Controllers\BidangAdminController;
 use App\Http\Controllers\PokmasAdminController;
 use App\Http\Controllers\ProdamasAdminController;
-use App\Http\Controllers\UMKMAdminController;
 use App\Http\Controllers\TestregistController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CeritaController;
@@ -97,15 +96,6 @@ Route::resource('pokmas', PokmasController::class);
 
 //prodamas
 Route::resource('prodamas', ProdamasController::class);
-
-// EBoost
-Route::resource('/e-boost', EBoostController::class);
-
-// UMKM
-Route::resource('/umkm', UMKMController::class);
-
-// Koperasi RW
-Route::resource('/koperasirw', KoperasiController::class);
 
 
 //login & profil
@@ -220,11 +210,6 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/edit-carousel/{carousel}', [SettingCarouselController::class, 'edit']);
     Route::put('/admin/edit-carousel/{carousel}', [SettingCarouselController::class, 'update']);
     Route::delete('/admin/delete-carousel/{carousel}', [SettingCarouselController::class, 'destroy']);
-
-    //umkm
-    Route::get('/admin/list-umkm', [UMKMAdminController::class, 'index']);
-    Route::get('/admin/umkm/{pict_id}', [UMKMAdminController::class, 'edit_pict']);
-    Route::put('/admin/umkm/{pict_id}', [UMKMAdminController::class, 'update_pict']);
 });
 
 //berlangganan
@@ -277,3 +262,10 @@ Route::get('/searchcerita', [SearchController::class, 'searchcerita'])->name('se
 
 //Tag
 Route::get('/tag', [SearchController::class, 'tagger'])->name('tag');
+
+// EBoost
+Route::resource('/e-boost', EBoostController::class);
+// UMKM
+Route::resource('/umkm', UMKMController::class);
+// Koperasi RW
+Route::resource('/koperasirw', KoperasiController::class);

@@ -83,12 +83,6 @@
                         <p>Tulis Cerita</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/admin/list-umkm" class="nav-link @yield('umkm')">
-                        <i class="nav-icon fas fa"></i>
-                        <p>UMKM</p>
-                    </a>
-                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
