@@ -11,7 +11,7 @@ class DescriptionAdmin extends Model
     use HasFactory;
     protected $table = "descriptions";
     public $incrementing = false;
-    protected $fillable = ["id", "desc_kampungkeren", "desc_bidang", "desc_pokmas", "desc_tuliscerita"];
+    protected $fillable = ["id", "desc_kampungkeren", "desc_bidang", "desc_pokmas", "desc_tuliscerita","desc_eboost"];
 
     public function getCreatedAtAttribute()
     {
