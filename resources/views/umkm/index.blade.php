@@ -23,63 +23,24 @@
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         <div class="col">
           <div class="card">
-            <h3 class="card-header">UMKM Mawar</h3>
-            <img src="https://awsimages.detik.net.id/community/media/visual/2019/12/20/905dfd3e-6cfd-46ff-b464-e86baa80c305_43.jpeg?w=700&q=90" class="" alt="..." />
+            @foreach ($kotas as $kota)
+            <h3 class="card-header">{{$kota->judul}}</h3>
+            <img src="{{asset('UMKMProd/'.$kota->foto)}}" class="" alt="..." />
             <div class="card-body">
               <dl class="row my-0">
                 <dt class="col-sm-5">Kelurahan</dt>
-                <dd class="col-sm-7 my-0">: Bandar</dd>
+                <dd class="col-sm-7 my-0">: {{$kota->kelurahan}}</dd>
                 <dt class="col-sm-5">jenis</dt>
-                <dd class="col-sm-7 my-0">: Pangan</dd>
+                <dd class="col-sm-7 my-0">: {{$kota->jenis}}</dd>
                 <dt class="col-sm-5">Thn Berdiri</dt>
-                <dd class="col-sm-7 my-0">: 2009</dd>
+                <dd class="col-sm-7 my-0">: {{$kota->tahun}}</dd>
                 <dt class="col-sm-5">Contact</dt>
-                <dd class="col-sm-7 my-0">: 08123123123</dd>
+                <dd class="col-sm-7 my-0">: {{$kota->contact}}</dd>
                 <dt class="col-sm-5">Alamat:</dt>
-                <dd class="col-sm-7 my-0">: JL. BLABLA NO 54 GG 4 RT 2 RW 5</dd>
+                <dd class="col-sm-7 my-0">: {{$kota->alamat}}</dd>
               </dl>
             </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card">
-            <h3 class="card-header">UMKM Mawar</h3>
-            <img src="https://awsimages.detik.net.id/community/media/visual/2019/12/20/905dfd3e-6cfd-46ff-b464-e86baa80c305_43.jpeg?w=700&q=90" class="" alt="..." />
-            <div class="card-body">
-              <dl class="row my-0">
-                <dt class="col-sm-5">Kelurahan</dt>
-                <dd class="col-sm-7 my-0">: Bandar</dd>
-                <dt class="col-sm-5">jenis</dt>
-                <dd class="col-sm-7 my-0">: Pangan</dd>
-                <dt class="col-sm-5">Thn Berdiri</dt>
-                <dd class="col-sm-7 my-0">: 2009</dd>
-                <dt class="col-sm-5">Contact</dt>
-                <dd class="col-sm-7 my-0">: 08123123123</dd>
-                <dt class="col-sm-5">Alamat:</dt>
-                <dd class="col-sm-7 my-0">: JL. BLABLA NO 54 GG 4 RT 2 RW 5</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <h3 class="card-header">UMKM Mawar</h3>
-            <img src="https://awsimages.detik.net.id/community/media/visual/2019/12/20/905dfd3e-6cfd-46ff-b464-e86baa80c305_43.jpeg?w=700&q=90" class="" alt="..." />
-            <div class="card-body">
-              <dl class="row my-0">
-                <dt class="col-sm-5">Kelurahan</dt>
-                <dd class="col-sm-7 my-0">: Bandar</dd>
-                <dt class="col-sm-5">jenis</dt>
-                <dd class="col-sm-7 my-0">: Pangan</dd>
-                <dt class="col-sm-5">Thn Berdiri</dt>
-                <dd class="col-sm-7 my-0">: 2009</dd>
-                <dt class="col-sm-5">Contact</dt>
-                <dd class="col-sm-7 my-0">: 08123123123</dd>
-                <dt class="col-sm-5">Alamat:</dt>
-                <dd class="col-sm-7 my-0">: JL. BLABLA NO 54 GG 4 RT 2 RW 5</dd>
-              </dl>
-            </div>
+            @endforeach
           </div>
         </div>
       </div>

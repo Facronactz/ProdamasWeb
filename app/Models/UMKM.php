@@ -11,7 +11,7 @@ class UMKM extends Model
     use HasFactory;
     protected $table = "umkm";
 
-    protected $fillable = ["foto_kota", "foto_pesantren", "foto_mojoroto", "judul", "foto", "kelurahan", "jenis", "tahun", "contact", "alamat"];
+    protected $fillable = ["judul", "foto", "kecamatan", "kelurahan", "jenis", "tahun", "contact", "alamat"];
 
     public function getCreatedAtAttribute()
     {

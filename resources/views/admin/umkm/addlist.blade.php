@@ -47,6 +47,15 @@ UMKM Baru
         @enderror
     </div>
     <div class="form-group">
+        <label for="kecamatan">Kecamatan</label>
+        <input name="kecamatan" class="form-control" name="kecamatan" id="kecamatan" placeholder="Kecamatan">
+        @error('kelurahan')
+        <div class="alert alert-danger">
+            {{ $message }}
+        </div>
+        @enderror
+    </div>
+    <div class="form-group">
         <label for="kelurahan">Kelurahan</label>
         <input name="kelurahan" class="form-control" name="kelurahan" id="kelurahan" placeholder="Kelurahan">
         @error('kelurahan')
