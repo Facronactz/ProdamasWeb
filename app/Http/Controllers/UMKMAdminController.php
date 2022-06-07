@@ -48,7 +48,7 @@ class UMKMAdminController extends Controller
     public function editlist($id)
     {
         $umkm = UMKM::findOrFail($id);
-        return view('admin.umkm.editlist', $umkm);
+        return view('admin.umkm.editlist', compact('umkm'));
     }
 
     public function updatelist(Request $request, $id)
