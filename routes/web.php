@@ -37,6 +37,7 @@ use App\Http\Controllers\SettingCarouselController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostFotoController;
 use App\Http\Controllers\EBoostController;
+use App\Http\Controllers\UMKMController;
 
 
 /*
