@@ -32,8 +32,8 @@ class EBoostController extends Controller
     public function koperasirw(){
         return view('koperasirw.kube');
     }
-    public function aksespermodalan(){
-        return view('aksespermodalan.kube');
+    public function permodalan(){
+        return view('eboost.permodalan');
     }
     public function publikasi(){
         return view('publikasi.kube');
