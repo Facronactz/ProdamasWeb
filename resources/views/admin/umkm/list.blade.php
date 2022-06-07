@@ -40,6 +40,42 @@ UMKM Submission
         </tbody>
     </table>
 </div>
+<a href="/admin/addlist-umkm" class="btn btn-primary mb-3">Tambah UMKM</a>
+<table class="table" id="tableFoto">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Judul</th>
+            <th scope="col">Kelurahan</th>
+            <th scope="col">Jenis</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        @forelse ($umkms as $key=>$umkm)
+        <tr>
+            <td>{{$key + 1}}</th>
+            <td>{{$umkm->judul}}</td>
+            <td>{{$umkm->kelurahan}}</td>
+            <td>{{$umkm->jenis}}</td>
+            <td>{{$umkm->contact}}</td>
+            <td>
+                <form action="/admin/umkm/{{$umkm->id}}" method="POST">
+                    <a href="/admin/umkm/{{$umkm->id}}" class="btn btn-info">Edit</a>
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Foto?')" value="Delete">
+                </form>
+            </td>
+        </tr>
+        @empty
+        <tr colspan="3">
+            <td>No data</td>
+        </tr>
+        @endforelse
+    </tbody>
+</table>
 @endsection
 
 @section('table')
