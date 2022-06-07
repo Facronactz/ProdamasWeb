@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pict;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class UMKMAdminController extends Controller
 {
@@ -28,12 +30,24 @@ class UMKMAdminController extends Controller
         ]);
 
         $picts = Pict::findOrFail($id);
-        $picts_data = [
-            "foto_kota" => $request["foto_kota"],
-            "foto_pesantren" => $request["foto_pesantren"],
-            "foto_mojoroto" => $request["foto_mojoroto"],
-        ];
-        $picts->update($picts_data);
+        $kota = $request->file('kota');
+        $pesantren = $request->file('pesantren');
+        $mojoroto = $request->file('mojoroto');
+        File::delete(public_path("../UMKMProd/" . $picts->kota));
+        File::delete(public_path("../UMKMProd/" . $picts->pesantren));
+        File::delete(public_path("../UMKMProd/" . $picts->mojoroto));
+        $kotaPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $kota->getClientOriginalName());
+        $pesantrenPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $pesantren->getClientOriginalName());
+        $mojorotoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $mojoroto->getClientOriginalName());
+        $kota->move(public_path('../prodamasProd/'), $kotaPath);
+        $pesantren->move(public_path('../prodamasProd/'), $pesantrenPath);
+        $mojoroto->move(public_path('../prodamasProd/'), $mojorotoPath);
+
+        $picts->update([
+            'kota' => $kotaPath,
+            'pesantren' => $pesantrenPath,
+            'mojoroto' => $mojorotoPath
+        ]);
 
         return redirect('/admin/list-umkm')->with('success', 'Picture Berhasil Diupdate!');
     }
