@@ -14,37 +14,37 @@ class EboostAdmin extends Controller
         return view('admin.eboost.add');
     }
 
-    public function store(Request $request)
-    {
-        $this->validate($request, [
-            'judul' => 'required',
-            'foto' => 'required',
-            'caption' => 'required',
-        ]);
+    // public function store(Request $request)
+    // {
+    //     $this->validate($request, [
+    //         'judul' => 'required',
+    //         'foto' => 'required',
+    //         'caption' => 'required',
+    //     ]);
 
-        $files = [];
-        foreach ($request->file('foto') as $file) {
-            if ($file->isValid()) {
-                $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-                $file->move(public_path('../bidangProd/'), $foto);
-                $files[] = [
-                    'judul' => strtoupper($request->judul),
-                    'foto' => $foto,
-                    'caption' => $request->caption
-                ];
-            }
-        }
-        Eboost::insert($files);
+    //     $files = [];
+    //     foreach ($request->file('foto') as $file) {
+    //         if ($file->isValid()) {
+    //             $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
+    //             $file->move(public_path('../bidangProd/'), $foto);
+    //             $files[] = [
+    //                 'judul' => strtoupper($request->judul),
+    //                 'foto' => $foto,
+    //                 'caption' => $request->caption
+    //             ];
+    //         }
+    //     }
+    //     Eboost::insert($files);
 
-        return redirect('/admin/list-eboost')->with('success', 'Eboost Berhasil Ditambahkan!');
-    }
+    //     return redirect('/admin/list-eboost')->with('success', 'Eboost Berhasil Ditambahkan!');
+    // }
 
-    public function index()
-    {
-        $Eboost = Eboost::groupBy('judul')->get();
-        $descriptions = DescriptionAdmin::first()->get();
-        return view('admin.eboost.list', compact('eboost', 'descriptions'));
-    }
+    // public function index()
+    // {
+    //     $Eboost = Eboost::groupBy('judul')->get();
+    //     $descriptions = DescriptionAdmin::first()->get();
+    //     return view('admin.eboost.list', compact('eboost', 'descriptions'));
+    // }
 
     public function edit($id)
     {
