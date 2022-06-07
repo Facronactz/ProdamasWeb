@@ -30,7 +30,7 @@ UMKM Baru
 
     <div class="form-group">
         <label for="judul">Judul</label>
-        <input name="judul" class="form-control" name="judul" id="judul" value="{{$umkms->judul}}">
+        <input name="judul" class="form-control" name="judul" id="judul" value="{{$umkm->judul}}">
         @error('judul')
         <div class="alert alert-danger">
             {{ $message }}
@@ -39,7 +39,7 @@ UMKM Baru
     </div>
     <div class="form-group">
         <label for="foto">Foto</label><br>
-        <p>{{$umkms->foto}}</p>
+        <p>{{$umkm->foto}}</p>
         <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="foto" id="foto">
         @error('foto')
         <div class="alert alert-danger">
@@ -49,7 +49,7 @@ UMKM Baru
     </div>
     <div class="form-group">
         <label for="kecamatan">Kecamatan</label>
-        <input name="kecamatan" class="form-control" name="kecamatan" id="kecamatan" value="{{$umkms->kecamatan}}">
+        <input name="kecamatan" class="form-control" name="kecamatan" id="kecamatan" value="{{$umkm->kecamatan}}">
         @error('kelurahan')
         <div class="alert alert-danger">
             {{ $message }}
@@ -58,7 +58,7 @@ UMKM Baru
     </div>
     <div class="form-group">
         <label for="kelurahan">Kelurahan</label>
-        <input name="kelurahan" class="form-control" name="kelurahan" id="kelurahan" value="{{$umkms->kelurahan}}">
+        <input name="kelurahan" class="form-control" name="kelurahan" id="kelurahan" value="{{$umkm->kelurahan}}">
         @error('kelurahan')
         <div class="alert alert-danger">
             {{ $message }}
@@ -67,7 +67,7 @@ UMKM Baru
     </div>
     <div class="form-group">
         <label for="jenis">Jenis</label>
-        <input name="jenis" class="form-control" name="jenis" id="jenis" value="{{$umkms->jenis}}">
+        <input name="jenis" class="form-control" name="jenis" id="jenis" value="{{$umkm->jenis}}">
         @error('jenis')
         <div class="alert alert-danger">
             {{ $message }}
@@ -76,7 +76,7 @@ UMKM Baru
     </div>
     <div class="form-group">
         <label for="tahun">Tahun</label>
-        <input name="tahun" class="form-control" name="tahun" id="tahun" value="{{$umkms->tahun}}">
+        <input name="tahun" class="form-control" name="tahun" id="tahun" value="{{$umkm->tahun}}">
         @error('tahun')
         <div class="alert alert-danger">
             {{ $message }}
@@ -85,7 +85,7 @@ UMKM Baru
     </div>
     <div class="form-group">
         <label for="contact">Contact</label>
-        <input name="contact" class="form-control" name="contact" id="contact" value="{{$umkms->contact}}">
+        <input name="contact" class="form-control" name="contact" id="contact" value="{{$umkm->contact}}">
         @error('contact')
         <div class="alert alert-danger">
             {{ $message }}
@@ -94,7 +94,7 @@ UMKM Baru
     </div>
     <div class="form-group">
         <label for="alamat">Alamat</label>
-        <input name="alamat" class="form-control" name="alamat" id="alamat" value="{{$umkms->alamat}}">
+        <input name="alamat" class="form-control" name="alamat" id="alamat" value="{{$umkm->alamat}}">
         @error('alamat')
         <div class="alert alert-danger">
             {{ $message }}
