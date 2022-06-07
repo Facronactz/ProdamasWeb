@@ -1,6 +1,6 @@
 @extends('admin.master')
 
-@section('umkm', 'active')
+@section('koperasirw', 'active')
 
 @section('title')
 Koperasi RW Submission
