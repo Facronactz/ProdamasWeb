@@ -43,6 +43,9 @@
           </div>
         </div>
         @endforeach
+        <div class="d-flex justify-content-end w-100 my-3">
+          {{ $kotas->links() }}
+        </div>
       </div>
     </div>
 
