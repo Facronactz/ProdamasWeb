@@ -29,7 +29,7 @@ Pict Sentra UMKM
     @csrf
     <div class="form-group">
         <label for="kota">Kec. Kota</label>
-        <input type="file" accept="image/png, image/jpg, image/jpeg" name="kota[]" class="form-control[]" name="kota" id="kota" value="{{$pict->kota}}">
+        <input type="file" accept="image/png, image/jpg, image/jpeg" name="kota[]" class="form-control[]" name="kota" id="kota" value="{{$picts->kota}}">
         @error('kota')
         <div class="alert alert-danger">
             {{ $message }}
@@ -39,7 +39,7 @@ Pict Sentra UMKM
 
     <div class="form-group">
         <label for="pesantren">Kec. Pesantren</label>
-        <input type="file" accept="image/png, image/jpg, image/jpeg" name="pesantren[]" class="form-control[]" name="pesantren" id="pesantren" value="{{$pict->pesantren}}">
+        <input type="file" accept="image/png, image/jpg, image/jpeg" name="pesantren[]" class="form-control[]" name="pesantren" id="pesantren" value="{{$picts->pesantren}}">
         @error('pesantren')
         <div class="alert alert-danger">
             {{ $message }}
@@ -49,7 +49,7 @@ Pict Sentra UMKM
 
     <div class="form-group">
         <label for="mojoroto">Kec. Mojoroto</label>
-        <input type="file" accept="image/png, image/jpg, image/jpeg" name="mojoroto[]" class="form-control[]" name="mojoroto" id="mojoroto" value="{{$pict->mojoroto}}">
+        <input type="file" accept="image/png, image/jpg, image/jpeg" name="mojoroto[]" class="form-control[]" name="mojoroto" id="mojoroto" value="{{$picts->mojoroto}}">
         @error('mojoroto')
         <div class="alert alert-danger">
             {{ $message }}
