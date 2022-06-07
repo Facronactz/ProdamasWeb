@@ -6,8 +6,8 @@
 [![Build Status](https://img.shields.io/travis/thephpleague/commonmark/1.5.svg?style=flat-square)](https://travis-ci.org/thephpleague/commonmark)
 [![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/thephpleague/commonmark.svg?style=flat-square)](https://scrutinizer-ci.com/g/thephpleague/commonmark/code-structure)
 [![Quality Score](https://img.shields.io/scrutinizer/g/thephpleague/commonmark.svg?style=flat-square)](https://scrutinizer-ci.com/g/thephpleague/commonmark)
+[![Psalm Type Coverage](https://shepherd.dev/github/thephpleague/commonmark/coverage.svg)](https://shepherd.dev/github/thephpleague/commonmark)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/126/badge)](https://bestpractices.coreinfrastructure.org/projects/126)
-
 [![Sponsor development of this project](https://img.shields.io/badge/sponsor%20this%20package-%E2%9D%A4-ff69b4.svg?style=flat-square)](https://www.colinodell.com/sponsor)
 
 ![league/commonmark](commonmark-banner.png)
@@ -32,7 +32,7 @@ $converter = new CommonMarkConverter([
     'allow_unsafe_links' => false,
 ]);
 
-echo $converter->convertToHtml('# Hello World!');
+echo $converter->convert('# Hello World!');
 
 // <h1>Hello World!</h1>
 ```
@@ -47,7 +47,7 @@ $converter = new GithubFlavoredMarkdownConverter([
     'allow_unsafe_links' => false,
 ]);
 
-echo $converter->convertToHtml('# Hello World!');
+echo $converter->convert('# Hello World!');
 
 // <h1>Hello World!</h1>
 ```
@@ -117,7 +117,11 @@ Any classes or methods marked `@internal` are not intended for use outside of th
 
 ## 🛠️ Maintenance & Support
 
+<<<<<<< HEAD
 When a new **minor** version (e.g. `1.4` -> `1.5`) is released, the previous one (`1.4`) will continue to receive security and critical bug fixes for *at least* 3 months.
+=======
+When a new **minor** version (e.g. `2.0` -> `2.1`) is released, the previous one (`2.0`) will continue to receive security and critical bug fixes for *at least* 3 months.
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
 
 When a new **major** version is released (e.g. `1.5` -> `2.0`), the previous one (`1.5`) will receive critical bug fixes for *at least* 3 months and security updates for 6 months after that new release comes out.
 

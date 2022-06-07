@@ -15,20 +15,55 @@ declare(strict_types=1);
 
 namespace League\CommonMark\Extension\Table;
 
+<<<<<<< HEAD
 use League\CommonMark\ConfigurableEnvironmentInterface;
 use League\CommonMark\Extension\ExtensionInterface;
+=======
+use League\CommonMark\Environment\EnvironmentBuilderInterface;
+use League\CommonMark\Extension\ConfigurableExtensionInterface;
+use League\CommonMark\Renderer\HtmlDecorator;
+use League\Config\ConfigurationBuilderInterface;
+use Nette\Schema\Expect;
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
 
-final class TableExtension implements ExtensionInterface
+final class TableExtension implements ConfigurableExtensionInterface
 {
+<<<<<<< HEAD
     public function register(ConfigurableEnvironmentInterface $environment): void
+=======
+    public function configureSchema(ConfigurationBuilderInterface $builder): void
     {
+        $builder->addSchema('table', Expect::structure([
+            'wrap' => Expect::structure([
+                'enabled' => Expect::bool()->default(false),
+                'tag' => Expect::string()->default('div'),
+                'attributes' => Expect::arrayOf(Expect::string()),
+            ]),
+        ]));
+    }
+
+    public function register(EnvironmentBuilderInterface $environment): void
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
+    {
+        $tableRenderer = new TableRenderer();
+        if ($environment->getConfiguration()->get('table/wrap/enabled')) {
+            $tableRenderer = new HtmlDecorator($tableRenderer, $environment->getConfiguration()->get('table/wrap/tag'), $environment->getConfiguration()->get('table/wrap/attributes'));
+        }
+
         $environment
             ->addBlockParser(new TableParser())
 
+<<<<<<< HEAD
             ->addBlockRenderer(Table::class, new TableRenderer())
             ->addBlockRenderer(TableSection::class, new TableSectionRenderer())
             ->addBlockRenderer(TableRow::class, new TableRowRenderer())
             ->addBlockRenderer(TableCell::class, new TableCellRenderer())
         ;
+=======
+            ->addRenderer(Table::class, $tableRenderer)
+            ->addRenderer(TableSection::class, new TableSectionRenderer())
+            ->addRenderer(TableRow::class, new TableRowRenderer())
+            ->addRenderer(TableCell::class, new TableCellRenderer());
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
     }
 }

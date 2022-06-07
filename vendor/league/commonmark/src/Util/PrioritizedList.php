@@ -51,7 +51,11 @@ final class PrioritizedList implements \IteratorAggregate
      * @phpstan-return iterable<int, T>
      */
     #[\ReturnTypeWillChange]
+<<<<<<< HEAD
     public function getIterator(): iterable
+=======
+    public function getIterator(): \Traversable
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
     {
         if ($this->optimized === null) {
             \krsort($this->list);

@@ -1,7 +1,12 @@
 <?php return array(
     'root' => array(
+<<<<<<< HEAD
         'pretty_version' => 'dev-branch-achi',
         'version' => 'dev-branch-achi',
+=======
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -40,6 +45,18 @@
                 0 => '*',
             ),
         ),
+<<<<<<< HEAD
+=======
+        'dflydev/dot-access-data' => array(
+            'pretty_version' => 'v3.0.1',
+            'version' => '3.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../dflydev/dot-access-data',
+            'aliases' => array(),
+            'reference' => '0992cc19268b259a39e86f296da5f0677841f42c',
+            'dev_requirement' => false,
+        ),
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
         'doctrine/inflector' => array(
             'pretty_version' => '2.0.4',
             'version' => '2.0.4.0',
@@ -395,8 +412,13 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
+<<<<<<< HEAD
             'pretty_version' => 'dev-branch-achi',
             'version' => 'dev-branch-achi',
+=======
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -440,12 +462,30 @@
             'dev_requirement' => false,
         ),
         'league/commonmark' => array(
+<<<<<<< HEAD
             'pretty_version' => '1.6.7',
             'version' => '1.6.7.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../league/commonmark',
             'aliases' => array(),
             'reference' => '2b8185c13bc9578367a5bf901881d1c1b5bbd09b',
+=======
+            'pretty_version' => '2.3.2',
+            'version' => '2.3.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../league/commonmark',
+            'aliases' => array(),
+            'reference' => '6eddb90a9e4a1a8c5773226068fcfb48cb36812a',
+            'dev_requirement' => false,
+        ),
+        'league/config' => array(
+            'pretty_version' => 'v1.1.1',
+            'version' => '1.1.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../league/config',
+            'aliases' => array(),
+            'reference' => 'a9d39eeeb6cc49d10a6e6c36f22c4c1f4a767f3e',
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
             'dev_requirement' => false,
         ),
         'league/flysystem' => array(
@@ -508,6 +548,27 @@
             'reference' => '97a34af22bde8d0ac20ab34b29d7bfe360902055',
             'dev_requirement' => false,
         ),
+<<<<<<< HEAD
+=======
+        'nette/schema' => array(
+            'pretty_version' => 'v1.2.2',
+            'version' => '1.2.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nette/schema',
+            'aliases' => array(),
+            'reference' => '9a39cef03a5b34c7de64f551538cbba05c2be5df',
+            'dev_requirement' => false,
+        ),
+        'nette/utils' => array(
+            'pretty_version' => 'v3.2.7',
+            'version' => '3.2.7.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nette/utils',
+            'aliases' => array(),
+            'reference' => '0af4e3de4df9f1543534beab255ccf459e7a2c99',
+            'dev_requirement' => false,
+        ),
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
         'nikic/php-parser' => array(
             'pretty_version' => 'v4.14.0',
             'version' => '4.14.0.0',
@@ -653,12 +714,21 @@
             'dev_requirement' => true,
         ),
         'psr/container' => array(
+<<<<<<< HEAD
             'pretty_version' => '1.1.1',
             'version' => '1.1.1.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../psr/container',
             'aliases' => array(),
             'reference' => '8622567409010282b7aeebe4bb841fe98b58dcaf',
+=======
+            'pretty_version' => '1.1.2',
+            'version' => '1.1.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/container',
+            'aliases' => array(),
+            'reference' => '513e0666f7216c7459170d56df27dfcefe1689ea',
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
             'dev_requirement' => false,
         ),
         'psr/container-implementation' => array(

@@ -49,6 +49,7 @@ final class HeadingPermalinkRenderer implements InlineRendererInterface, Configu
             $idPrefix .= '-';
         }
 
+<<<<<<< HEAD
         $attrs = [
             'id'          => $idPrefix . $slug,
             'href'        => '#' . $slug,
@@ -57,6 +58,24 @@ final class HeadingPermalinkRenderer implements InlineRendererInterface, Configu
             'aria-hidden' => 'true',
             'title'       => $this->config->get('heading_permalink/title', 'Permalink'),
         ];
+=======
+        $fragmentPrefix = (string) $this->config->get('heading_permalink/fragment_prefix');
+        if ($fragmentPrefix !== '') {
+            $fragmentPrefix .= '-';
+        }
+
+        $attrs = $node->data->getData('attributes');
+        $attrs->set('id', $idPrefix . $slug);
+        $attrs->set('href', '#' . $fragmentPrefix . $slug);
+        $attrs->append('class', $this->config->get('heading_permalink/html_class'));
+
+        $hidden = $this->config->get('heading_permalink/aria_hidden');
+        if ($hidden) {
+            $attrs->set('aria-hidden', 'true');
+        }
+
+        $attrs->set('title', $this->config->get('heading_permalink/title'));
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
 
         $innerContents = $this->config->get('heading_permalink/inner_contents');
         if ($innerContents !== null) {

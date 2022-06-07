@@ -39,10 +39,16 @@ final class FootnoteParser implements BlockParserInterface
             return false;
         }
 
+<<<<<<< HEAD
         $cursor->advanceToNextNonSpaceOrTab();
         $cursor->advanceBy(\strlen($match[0]));
         $str = $cursor->getRemainder();
         \preg_replace('/^\[\^([^\n^\]]+)\]\:\s/', '', $str);
+=======
+        if ($cursor->isIndented()) {
+            $this->indentation ??= $cursor->getIndent();
+            $cursor->advanceBy($this->indentation, true);
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
 
         if (\preg_match('/^\[\^([^\n^\]]+)\]\:\s/', $match[0], $matches) > 0) {
             $context->addBlock($this->createFootnote($matches[1]));

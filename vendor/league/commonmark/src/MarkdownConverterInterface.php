@@ -13,13 +13,19 @@ namespace League\CommonMark;
 
 /**
  * Interface for a service which converts Markdown to HTML.
+ *
+ * @deprecated since 2.2; use {@link ConverterInterface} instead
  */
 interface MarkdownConverterInterface
 {
     /**
      * Converts Markdown to HTML.
      *
+<<<<<<< HEAD
      * @param string $markdown
+=======
+     * @deprecated since 2.2; use {@link ConverterInterface::convert()} instead
+>>>>>>> afcee33ce49d18ea9c50b50300a4641f51faf2d5
      *
      * @throws \RuntimeException
      *
