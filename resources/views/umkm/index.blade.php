@@ -21,9 +21,9 @@
     <div id="kota">
       <h1>Kec. Kota</h1>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        @foreach ($kotas as $kota)
         <div class="col">
           <div class="card">
-            @foreach ($kotas as $kota)
             <h3 class="card-header">{{$kota->judul}}</h3>
             <img src="{{asset('UMKMProd/'.$kota->foto)}}" class="" alt="..." />
             <div class="card-body">
@@ -40,9 +40,9 @@
                 <dd class="col-sm-7 my-0">: {{$kota->alamat}}</dd>
               </dl>
             </div>
-            @endforeach
           </div>
         </div>
+        @endforeach
       </div>
     </div>
 
