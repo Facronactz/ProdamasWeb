@@ -9,12 +9,8 @@
 
         <div style="height:4px; background-color: rgb(0, 0, 0);"> </div>
         <div class="container">
-        <div class="m-4 mb-5 text-center">
+        <div class="m-4 mb-4 text-center">
             <h1><strong>APA SIH KOPERASI RW ITU?</strong></h1>
-            <h4>Segala informasi mengenai koperasi RW <br> di Kota Kediri</h4>
-        </div>
-        <div>
-            <img class="img-fluid" src="https://via.placeholder.com/1920x400.png?text=Ukuran+Optimal+=+1920+x+400px" alt="" srcset="">
         </div>
         <div class="container mb-3">
             <div class="mt-2" style="text-indent: 25px;">
