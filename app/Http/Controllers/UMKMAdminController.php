@@ -9,7 +9,8 @@ class UMKMAdminController extends Controller
 {
     public function index()
     {
-        return view('admin.umkm.list');
+        $picts = Pict::first()->get();
+        return view('admin.umkm.list', compact('picts'));
     }
 
     public function edit_pict($id)
