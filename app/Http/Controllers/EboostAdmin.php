@@ -41,7 +41,7 @@ class EboostAdmin extends Controller
 
     public function index()
     {
-        $Eboost = Eboost::groupBy('judul')->get();
+        $Eboost = Eboost::groupBy('judul_tentang','judul_info')->get();
         $descriptions = DescriptionAdmin::first()->get();
         return view('admin.eboost.list', compact('eboost', 'descriptions'));
     }
