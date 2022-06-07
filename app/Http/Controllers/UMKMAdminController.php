@@ -20,6 +20,7 @@ class UMKMAdminController extends Controller
         $this->validate($request, [
             'judul' => 'required',
             'foto' => 'required',
+            'kecamatan' => 'required',
             'kelurahan' => 'required',
             'jenis' => 'required',
             'tahun' => 'required',
@@ -33,6 +34,7 @@ class UMKMAdminController extends Controller
         UMKM::insert([
             'judul' => $request->judul,
             'foto' => $foto,
+            'kecamatan' => $request->kecamatan,
             'kelurahan' => $request->kelurahan,
             'jenis' => $request->jenis,
             'tahun' => $request->tahun,
