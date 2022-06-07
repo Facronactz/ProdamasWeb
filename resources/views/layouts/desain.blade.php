@@ -255,7 +255,7 @@
                                             </li>
                                             <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Akses Permodalan</a></li>
                                             <li class="dropdown-submenu w-100">
-                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/koperasi') }}">Koperasi RW</a>
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/koperasirw') }}">Koperasi RW</a>
                                                 <ul class="dropdown-menu">
                                                     <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Informasi Koperasi RW</a></li>
                                                     <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Daftar Koperasi RW</a></li>
