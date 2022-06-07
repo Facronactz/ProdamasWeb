@@ -243,7 +243,7 @@
                                         </ul>
                                     </li> --}}
                                     <li class="dropdown-submenu w-100">
-                                        <a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">E-Boost <span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <a class="dropdown-item @yield('sosmed')" href="{{ url('/e-boost') }}">E-Boost <span class="caret fas fa-caret-right ms-3"></span></a>
                                         <ul class="dropdown-menu">
                                             <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">UMKM</a></li>
                                             <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">KUBE</a></li>
