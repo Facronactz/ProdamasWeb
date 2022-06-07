@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use App\Models\Pict;
 
 class UMKMController extends Controller
 {
@@ -20,6 +21,8 @@ class UMKMController extends Controller
         ->unionAll($artikel)
             ->unionAll($counter)
             ->sum('views');
-        return view('umkm.index', compact('counter', 'totalviews'));
+
+        $picts = Pict::first()->get();
+        return view('umkm.index', compact('counter', 'totalviews', 'picts'));
     }
 }
