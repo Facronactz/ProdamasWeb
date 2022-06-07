@@ -11,7 +11,7 @@ class Eboost extends Model
     use HasFactory;
     protected $table = "eboost";
 
-    protected $fillable = ["judul_tentang", "caption_tentang","judul_info",
+    protected $fillable = ["id","judul_tentang", "caption_tentang","judul_info",
             "caption_info","foto_tentang", "foto_info"];
 
     public function getCreatedAtAttribute()
