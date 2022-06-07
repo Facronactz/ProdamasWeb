@@ -1,9 +1,9 @@
 @extends('admin.master')
 
-@section('kampungkeren', 'active')
+@section('umkm', 'active')
 
 @section('title')
-Kampung Keren Baru
+Pict Sentra UMKM
 @endsection
 
 @section('content')
@@ -25,12 +25,12 @@ Kampung Keren Baru
 </div>
 @endif
 
-<form action="/admin/list-kampungkeren" method="POST" enctype="multipart/form-data">
+<form action="/admin/list-umkm" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
-        <label for="judul">Judul</label>
-        <input name="judul" class="form-control" name="judul" id="judul" placeholder="Judul">
-        @error('judul')
+        <label for="kota">Kec. Kota</label>
+        <input type="file" accept="image/png, image/jpg, image/jpeg" name="kota[]" class="form-control[]" name="kota" id="kota" value="{{$pict->kota}}">
+        @error('kota')
         <div class="alert alert-danger">
             {{ $message }}
         </div>
@@ -38,9 +38,9 @@ Kampung Keren Baru
     </div>
 
     <div class="form-group">
-        <label for="warna">Warna</label>
-        <input name="warna" class="form-control" name="warna" id="warna" placeholder="warna">
-        @error('warna')
+        <label for="pesantren">Kec. Pesantren</label>
+        <input type="file" accept="image/png, image/jpg, image/jpeg" name="pesantren[]" class="form-control[]" name="pesantren" id="pesantren" value="{{$pict->pesantren}}">
+        @error('pesantren')
         <div class="alert alert-danger">
             {{ $message }}
         </div>
@@ -48,24 +48,15 @@ Kampung Keren Baru
     </div>
 
     <div class="form-group">
-        <label for="foto">Foto</label><br>
-        <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="foto[]" id="foto[]">
-        @error('foto')
+        <label for="mojoroto">Kec. Mojoroto</label>
+        <input type="file" accept="image/png, image/jpg, image/jpeg" name="mojoroto[]" class="form-control[]" name="mojoroto" id="mojoroto" value="{{$pict->mojoroto}}">
+        @error('mojoroto')
         <div class="alert alert-danger">
             {{ $message }}
         </div>
         @enderror
     </div>
-    <div class="form-group">
-        <label for="caption">Caption</label>
-        <textarea name="caption" id="description" class="form-control" cols="30" rows="10"></textarea>
-        @error('caption')
-        <div class="alert alert-danger">
-            {{ $message }}
-        </div>
-        @enderror
-    </div>
-    <button type="submit" class="btn btn-primary">Tambah</button>
-    <a href="/admin/list-kampungkeren" class="btn btn-outline-primary">Kembali</a>
+    <button type="submit" class="btn btn-primary">Edit</button>
+    <a href="/admin/list-umkm" class="btn btn-outline-primary">Kembali</a>
 </form>
 @endsection
