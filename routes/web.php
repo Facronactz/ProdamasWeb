@@ -41,6 +41,7 @@ use App\Http\Controllers\EBoostController;
 use App\Http\Controllers\UMKMController;
 use App\Http\Controllers\KoperasiController;
 use App\Http\Controllers\KoperasiAdminController;
+use App\Http\Controllers\EboostAdmin;
 
 /*
 |--------------------------------------------------------------------------
@@ -229,6 +230,9 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
 
     // Koperasi RW
     Route::get('/admin/list-koperasirw', [KoperasiAdminController::class, 'index']);
+
+    // EboostAdmin
+    Route::get('/admin/list-eboost', [EboostAdmin::class, 'index']);
 });
 
 //berlangganan
