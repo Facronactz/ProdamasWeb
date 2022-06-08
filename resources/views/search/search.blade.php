@@ -47,7 +47,7 @@
                         <div class="card h-100 hvr-grow hvr-underline-from-center">
                             <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                             <div class="card-body">
-                                <a class="stretched-link" href="artikel/{{ $item->id }}"></a>
+                                <a class="stretched-link" href="artikel/{{ $item->id }}" target="_blank"></a>
                                 <h5 class="card-title">{{ $item->judul }}</h5>
                                 {{-- <p class="card-text">{{ $item->text_sampul }}</p> --}}
                             </div>
