@@ -102,7 +102,7 @@
                 </div>
                 <!-- </div> -->
 
-                <h5>{{ $post->body }}</h5>
+                <h5 class="pt-3">{{ $post->body }}</h5>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
