@@ -29,7 +29,7 @@ Koperasi RW Submission
             <tr>
                 <td>{{$kop->id}}</td>
                 <td><?= substr($kop->informasi, 0, 500) ?>
-                <td>{{ $kop->foto_syarat }}
+                <td>{{ $kop->foto_syarat }}</td>
                 <td>
                     <form action="/admin/koperasirw/{{$kop->id}}" method="POST">
                         <a href="/admin/koperasirw/{{$kop->id}}" class="btn btn-info">Edit</a>
