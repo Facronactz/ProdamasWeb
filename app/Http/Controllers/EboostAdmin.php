@@ -55,33 +55,46 @@ class EboostAdmin extends Controller
     public function edit($id)
     {
         $Eboost = Eboost::findOrFail($id);
-        return view('admin.eboost.edit', compact('bidang'));
+        return view('admin.eboost.edit', compact('eboost'));
     }
 
     public function update($id, Request $request)
     {
         $request->validate([
-            'judul' => 'required',
-            'foto' => 'mimes:jpeg,jpg,png|max:2200',
-            'caption' => 'required'
+            'judul_tentang' => 'required',
+            'caption_tentang' => 'required',
+            'foto_tentang' => 'required',
+            'judul_info' => 'required',
+            'caption_info' => 'required',
+            'foto_info' => 'required',
         ]);
 
-        $Eboost = Eboost::findorfail($id);
+        $eboost = Eboost::findorfail($id);
         $file = $request->file('foto');
         if ($file != NULL) {
-            File::delete(public_path("../bidangProd/" . $Eboost->foto));
-            $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-            $file->move(public_path('../bidangProd/'), $filePath);
+            File::delete(public_path("../fotoProd/" . $eboost->foto));
+            $file=$request->file('foto_tentang');
+            $file2=$request->file('foto_info');
+            $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
+            $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file2->getClientOriginalName());
+                    $file->move(public_path('../fotoProd/'), $foto);
+                    $file2->move(public_path('../fotoProd/'), $foto2);
+            
 
-            $Eboost->update([
-                'judul' => $request->judul,
-                'foto' => $filePath,
-                'caption' => $request->caption
+            $eboost->update([
+                'judul_tentang' => $request->judul_tentang,
+                    'caption_tentang' => $request->caption_tentang,
+                    'foto_tentang' => $foto,
+                     'judul_info' => $request->judul_info,
+                    'caption_info' => $request->caption_info,
+                    'foto_info' => $foto2,
             ]);
         } else {
-            $Eboost->update([
-                'judul' => $request->judul,
-                'caption' => $request->caption
+            $eboost->update([
+                'judul_tentang' => $request->judul_tentang,
+                    'caption_tentang' => $request->caption_tentang,
+                     'judul_info' => $request->judul_info,
+                    'caption_info' => $request->caption_info,
             ]);
         }
 
