@@ -107,11 +107,11 @@ Route::resource('/e-boost', EBoostController::class);
 // Route::resource('/umkm', UMKMController::class);
 Route::get('/umkm', function () {
     $kotas = UMKM::where('kecamatan', 'Kota')->paginate(3);
-    $kotas->withPath('/listumkm/kota');
+    $kotas->withPath('/umkm/kota');
     $pesantrens = UMKM::where('kecamatan', 'Pesantren')->paginate(3);
-    $pesantrens->withPath('/listumkm/pesantren');
+    $pesantrens->withPath('/umkm/pesantren');
     $mojorotos = UMKM::where('kecamatan', 'Mojoroto')->paginate(3);
-    $mojorotos->withPath('/listumkm/mojoroto');
+    $mojorotos->withPath('/umkm/mojoroto');
 });
 
 // Koperasi RW
