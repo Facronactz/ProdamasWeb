@@ -32,8 +32,8 @@ Edit Informasi Koperasi RW
     </div>
     <div class="form-group">
         <label for="foto">Alur Pembentukan</label><br>
-        <p>{{$koperasi->foto_syarat}}</p>
-        <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="foto_syarat" id="foto_syarat" value="{{$koperasi->foto_syarat}}">
+        <p>{{$koperasi->foto_alur}}</p>
+        <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="foto_alur" id="foto_alur" value="{{$koperasi->foto_alur}}">
         @error('foto')
         <div class="alert alert-danger">
             {{ $message }}
@@ -42,8 +42,8 @@ Edit Informasi Koperasi RW
     </div>
     <div class="form-group">
         <label for="foto">Legalitas</label><br>
-        <p>{{$koperasi->foto_syarat}}</p>
-        <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="foto_syarat" id="foto_syarat" value="{{$koperasi->foto_syarat}}">
+        <p>{{$koperasi->foto_legalitas}}</p>
+        <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="foto_legalitas" id="foto_legalitas" value="{{$koperasi->foto_legalitas}}">
         @error('foto')
         <div class="alert alert-danger">
             {{ $message }}
