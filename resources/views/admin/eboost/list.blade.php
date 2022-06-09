@@ -1,7 +1,5 @@
 @extends('admin.master')
-
 @section('eboost', 'active')
-
 @section('title')
 E-Boost Submission
 @endsection
@@ -72,7 +70,7 @@ E-Boost Submission
 @section('table')
 <script>
     $(document).ready(function() {
-        $('#tableFoto').DataTable(); //sesuikan id tabel yg dibat
+        $('#tableEboost').DataTable(); //sesuikan id tabel yg dibat
     });
 </script>
 @endsection

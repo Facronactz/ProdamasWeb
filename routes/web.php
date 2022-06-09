@@ -40,7 +40,8 @@ use App\Http\Controllers\PostFotoController;
 use App\Http\Controllers\EBoostController;
 use App\Http\Controllers\UMKMController;
 use App\Http\Controllers\KoperasiController;
-
+use App\Http\Controllers\KoperasiAdminController;
+use App\Http\Controllers\EboostAdmin;
 
 /*
 |--------------------------------------------------------------------------
@@ -223,9 +224,25 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::delete('/admin/delete-carousel/{carousel}', [SettingCarouselController::class, 'destroy']);
 
     // UMKM
+    Route::get('/admin/addlist-umkm', [UMKMAdminController::class, 'createlist']);
+    Route::post('/admin/storelist-umkm', [UMKMAdminController::class, 'storelist']);
     Route::get('/admin/list-umkm', [UMKMAdminController::class, 'index']);
+    Route::get('/admin/editlist-umkm/{umkm_id}', [UMKMAdminController::class, 'editlist']);
+    Route::put('/admin/editlist-umkm/{umkm_id}', [UMKMAdminController::class, 'updatelist']);
+    Route::delete('/admin/editlist-umkm/{umkm_id}', [UMKMAdminController::class, 'destroylist']);
     Route::get('/admin/umkm/{pict_id}', [UMKMAdminController::class, 'edit_pict']);
     Route::put('/admin/umkm/{pict_id}', [UMKMAdminController::class, 'update_pict']);
+
+    // Koperasi RW
+    Route::get('/admin/list-koperasirw', [KoperasiAdminController::class, 'index']);
+    Route::get('/admin/koperasirw/{koperasi_id}', [KoperasiAdminController::class, 'edit']);
+    Route::put('/admin/koperasirw/{koperasi_id}', [KoperasiAdminController::class, 'update']);
+
+    // EboostAdmin
+    Route::get('/admin/add-eboost', [EboostAdmin::class, 'create']);
+    Route::post('/admin/list-eboost', [EboostAdmin::class, 'store']);
+    Route::get('/admin/list-eboost', [EboostAdmin::class, 'index']);
+    Route::get('/admin/edit-eboost', [EboostAdmin::class, 'edit']);
 });
 
 //berlangganan

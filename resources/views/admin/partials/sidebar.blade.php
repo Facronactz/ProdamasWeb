@@ -95,6 +95,12 @@
                         <p>E-Boost</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="/admin/list-koperasirw" class="nav-link @yield('koperasirw')">
+                        <i class="nav-icon fas fa-edit"></i>
+                        <p>Koperasi RW</p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
