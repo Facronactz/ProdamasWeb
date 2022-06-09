@@ -42,6 +42,7 @@ use App\Http\Controllers\UMKMController;
 use App\Http\Controllers\KoperasiController;
 use App\Http\Controllers\KoperasiAdminController;
 use App\Http\Controllers\EboostAdmin;
+use App\Models\UMKM;
 
 /*
 |--------------------------------------------------------------------------
@@ -104,6 +105,14 @@ Route::resource('/e-boost', EBoostController::class);
 
 // UMKM
 Route::resource('/umkm', UMKMController::class);
+Route::get('/umkm', function () {
+    $kotas = UMKM::where('kecamatan', 'Kota')->paginate(3);
+    $kotas->withPath('/umkm/kota');
+    $pesantrens = UMKM::where('kecamatan', 'Pesantren')->paginate(3);
+    $pesantrens->withPath('/umkm/pesantren');
+    $mojorotos = UMKM::where('kecamatan', 'Mojoroto')->paginate(3);
+    $mojorotos->withPath('/umkm/mojoroto');
+});
 
 // Koperasi RW
 Route::resource('/koperasirw', KoperasiController::class);
