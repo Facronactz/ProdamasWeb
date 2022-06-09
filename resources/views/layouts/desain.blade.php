@@ -476,11 +476,11 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Sign In Using Social Media</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Sign In hanya untuk admin website Prodamas Plus Kota Kediri</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <button class="btn w-100 btn-google my-2"><i class="fab fa-google"></i>
+                    {{-- <button class="btn w-100 btn-google my-2"><i class="fab fa-google"></i>
                         Google
                     </button>
                     <button class="btn btn-facebook w-100 my-2"><i class="fab fa-facebook-f"></i>
@@ -494,7 +494,7 @@
                     </button>
                     <button class="btn btn-telp w-100 my-2"><i class="fas fa-phone-alt"></i>
                         No HP
-                    </button>
+                    </button> --}}
                     <a class="btn btn-admin w-100 my-2" href="{{ url('loginuser') }}"><i class="fas fa-user-shield"></i>
                         Admin
                     </a>

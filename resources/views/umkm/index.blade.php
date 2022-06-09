@@ -139,4 +139,15 @@
     $("#kota").hide();
   });
 </script>
+<script>
+  $(function() {
+  $("#pagination").click(function(e) {
+    if (e.target.class == "page-link" || $(e.target).parents("#pagination").length) {
+      alert("Inside div");
+    } else {
+      alert("Outside div");
+    }
+  });
+})
+</script>
 @endsection
