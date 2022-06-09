@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use Illuminate\Routing\Route;
 use App\Models\UMKM;
 use App\Models\Pict;
 
 class UMKMController extends Controller
 {
-    public function show()
+    public function index()
     {
         DB::table('counters')->increment('views');
         $counter = DB::table('counters')
@@ -24,9 +25,17 @@ class UMKMController extends Controller
             ->sum('views');
 
         $picts = Pict::first()->get();
-        $kotas = UMKM::where('kecamatan', 'Kota')->paginate(3);
-        $pesantrens = UMKM::where('kecamatan', 'Pesantren')->paginate(3);
-        $mojorotos = UMKM::where('kecamatan', 'Mojoroto')->paginate(3);
+        Route::get('/umkm', function () {
+            $kotas = UMKM::where('kecamatan', 'Kota')->paginate(3);
+            $kotas->withPath('/umkm/kota');
+            $pesantrens = UMKM::where('kecamatan', 'Pesantren')->paginate(3);
+            $pesantrens->withPath('/umkm/pesantren');
+            $mojorotos = UMKM::where('kecamatan', 'Mojoroto')->paginate(3);
+            $mojorotos->withPath('/umkm/mojoroto');
+        });
+        // $kotas = UMKM::where('kecamatan', 'Kota')->paginate(3);
+        // $pesantrens = UMKM::where('kecamatan', 'Pesantren')->paginate(3);
+        // $mojorotos = UMKM::where('kecamatan', 'Mojoroto')->paginate(3);
         return view('umkm.index', compact(
             'counter',
             'totalviews',
