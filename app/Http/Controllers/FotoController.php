@@ -7,6 +7,8 @@ namespace App\Http\Controllers;
 use App\Models\FotoAdmin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Menu;
+
 
 class FotoController extends Controller
 {
@@ -28,6 +30,7 @@ class FotoController extends Controller
                         ->unionAll($counter)
                         ->sum('views');
         $fotos = FotoAdmin::orderBy('id', 'desc')->paginate(2);
-        return view('foto.index', compact('fotos','totalviews','counter'));
+        $menus = Menu::orderBy('id')->get();
+        return view('foto.index', compact('fotos','totalviews','counter', 'menus'));
     }
 }

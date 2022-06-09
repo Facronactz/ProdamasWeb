@@ -10,6 +10,7 @@ use App\Models\FotoAdmin;
 use App\Models\AudioAdmin;
 use App\Models\VideoAdmin;
 use App\Models\ArticleAdmin;
+use App\Models\Menu;
 use Illuminate\Http\Request;
 
 use App\Models\SettingCarousel;
@@ -91,10 +92,12 @@ class artikelController extends Controller
                 // dd($audio);
                 $carousels = SettingCarousel::orderBy('id', 'desc')->take(3)->get();
 
+                $menus = Menu::orderBy('id')->get();
+
                 // Visitor::find('id')->increment('views');
                 // $visitors = Visitor::orderBy('id')->get();
 
-                return view('beranda.index', compact('artikel', 'video', 'posts', 'audio', 'carousels', 'totalviews', 'counter'));
+                return view('beranda.index', compact('artikel', 'video', 'posts', 'audio', 'carousels', 'totalviews', 'counter', 'menus'));
         }
 
         public function show($id)
@@ -114,6 +117,7 @@ class artikelController extends Controller
                         ->unionAll($artikel)
                         ->unionAll($counter)
                         ->sum('views');
+                $menus = Menu::orderBy('id')->get();
                 // end code jumlah pengunjung
                 
                 Articleadmin::find($id)->increment('views');
@@ -128,7 +132,7 @@ class artikelController extends Controller
                 foreach ($artikel as $item){
                         $tags = $item->tags;
                 }
-                return view('artikel.artikelLay', compact('artikel', 'artikelupdate', 'tags', 'totalviews', 'counter'));
+                return view('artikel.artikelLay', compact('artikel', 'artikelupdate', 'tags', 'totalviews','counter', 'menus'));
         }
 
         // public function ShareWidget()

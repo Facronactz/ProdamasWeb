@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use App\Models\UMKM;
 use App\Models\Pict;
+use App\Models\Menu;
 
 class UMKMController extends Controller
 {
@@ -23,6 +24,7 @@ class UMKMController extends Controller
             ->unionAll($artikel)
             ->unionAll($counter)
             ->sum('views');
+        $menus = Menu::orderBy('id')->get();
 
         $picts = Pict::first()->get();
         $kotas = UMKM::where('kecamatan', 'Kota')->paginate(3);
@@ -35,7 +37,8 @@ class UMKMController extends Controller
             'picts',
             'kotas',
             'pesantrens',
-            'mojorotos'
+            'mojorotos',
+            'menus'
         ));
     }
 }

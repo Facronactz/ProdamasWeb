@@ -6,6 +6,8 @@ use App\Models\Image;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Menu;
+
 
 class PostFotoController extends Controller
 {
@@ -28,7 +30,8 @@ class PostFotoController extends Controller
                         ->sum('views');
                 // end code jumlah pengunjung
         
-        $posts = Post::orderBy('id', 'desc')->paginate(4);;
+        $posts = Post::all()->paginate(4);
+        $menus = Menu::orderBy('id')->get();
         // $posts = Post::join('images', 'posts.id', '=', 'images.post_id')
         // ->get(['posts.*', 'images.*']);
         // echo json_encode($posts);die();
@@ -38,7 +41,7 @@ class PostFotoController extends Controller
         }
         
         // echo json_encode($posts);die();
-        return view('foto.index', compact('posts', 'totalviews', 'counter'));
+        return view('foto.index', compact('posts', 'totalviews','counter', 'menus'));
     }
 //     public function show($id)
 //     {

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Audio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Menu;
+
 
 class AudioController extends Controller
 {
@@ -26,6 +28,7 @@ class AudioController extends Controller
                         ->unionAll($counter)
                         ->sum('views');
         $audios = Audio::orderBy('id', 'desc')->paginate(4);
-        return view('audio.index', compact('audios','totalviews','counter'));
+        $menus = Menu::orderBy('id')->get();
+        return view('audio.index', compact('audios','totalviews','counter', 'menus'));
     }
 }
