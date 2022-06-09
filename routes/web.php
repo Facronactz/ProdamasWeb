@@ -104,8 +104,8 @@ Route::resource('prodamas', ProdamasController::class);
 Route::resource('/e-boost', EBoostController::class);
 
 // UMKM
-Route::resource('/umkm', UMKMController::class);
-Route::get('/listumkm', function () {
+// Route::resource('/umkm', UMKMController::class);
+Route::get('/umkm', function () {
     $kotas = UMKM::where('kecamatan', 'Kota')->paginate(3);
     $kotas->withPath('/listumkm/kota');
     $pesantrens = UMKM::where('kecamatan', 'Pesantren')->paginate(3);
