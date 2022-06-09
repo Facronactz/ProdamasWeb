@@ -18,6 +18,12 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
+                    <a href="{{ url('/admin/list-menu') }}" class="nav-link @yield('menu')">
+                        <i class="nav-icon fas fa"></i>
+                        <p>Menu</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ url('/admin/list-carousel') }}" class="nav-link @yield('carousel')">
                         <i class="nav-icon fas fa-archway"></i>
                         <p>Carousel Header</p>
