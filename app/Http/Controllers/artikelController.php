@@ -97,7 +97,7 @@ class artikelController extends Controller
                 // Visitor::find('id')->increment('views');
                 // $visitors = Visitor::orderBy('id')->get();
 
-                return view('beranda.index', compact('artikel', 'video', 'posts', 'audio', 'carousels', 'totalviews', 'counter', 'menu'));
+                return view('beranda.index', compact('artikel', 'video', 'posts', 'audio', 'carousels', 'totalviews', 'counter', 'menus'));
         }
 
         public function show($id)
