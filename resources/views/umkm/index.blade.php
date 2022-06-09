@@ -125,18 +125,38 @@
     $("#kota").toggle();
     $("#pesantren").hide();
     $("#mojoroto").hide();
+    localStorage.setItem("kecamatan", "#bKota")
   });
 
   $("#bPesantren").click(function() {
     $("#pesantren").toggle();
     $("#kota").hide();
     $("#mojoroto").hide();
+    localStorage.setItem("kecamatan", "#bPesantren")
   });
 
   $("#bMojoroto").click(function() {
     $("#mojoroto").toggle();
     $("#pesantren").hide();
     $("#kota").hide();
+    localStorage.setItem("kecamatan", "#bMojoroto")
   });
+</script>
+
+<script>
+  if (localStorage.getItem("pagination") == "true") {
+    $(localStorage.getItem("kecamatan")).trigger('click')
+    localStorage.setItem("pagination", "false")
+  }
+</script>
+
+<script>
+  $(function() {
+  $("#pagination").click(function(e) {
+    if (e.target.class == "page-link" || $(e.target).parents("#pagination").length) {
+      localStorage.setItem("pagination", "true")
+    }
+  });
+})
 </script>
 @endsection

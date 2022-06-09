@@ -27,7 +27,7 @@ class FotoController extends Controller
                         ->unionAll($artikel)
                         ->unionAll($counter)
                         ->sum('views');
-        $fotos = FotoAdmin::orderBy('id', 'desc')->paginate(4);
+        $fotos = FotoAdmin::orderBy('id', 'desc')->paginate(2);
         return view('foto.index', compact('fotos','totalviews','counter'));
     }
 }
