@@ -27,14 +27,27 @@ class KoperasiAdminController extends Controller
 
         $koperasis = Koperasirw::findorfail($id);
 
-        $foto = $request->file('foto_syarat');
+        $syarat = $request->file('foto_syarat');
+        $alur = $request->file('foto_alur');
+        $legalitas = $request->file('foto_legalitas');
+
         File::delete(public_path("../koperasiProd/" . $koperasis->foto_syarat));
-        $fotoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $foto->getClientOriginalName());
-        $foto->move(public_path('../koperasiProd/'), $fotoPath);
+        File::delete(public_path("../koperasiProd/" . $koperasis->foto_alur));
+        File::delete(public_path("../koperasiProd/" . $koperasis->foto_legalitas));
+
+        $fotoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $syarat->getClientOriginalName());
+        $fotoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $alur->getClientOriginalName());
+        $fotoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $legalitas->getClientOriginalName());
+
+        $syarat->move(public_path('../koperasiProd/'), $fotoPath);
+        $alur->move(public_path('../koperasiProd/'), $fotoPath);
+        $legalitas->move(public_path('../koperasiProd/'), $fotoPath);
 
         $koperasis->update([
             'informasi' => $request->informasi,
-            'foto_syarat' => $fotoPath
+            'foto_syarat' => $fotoPath,
+            'foto_alur' => $fotoPath,
+            'foto_legalitas' => $fotoPath
         ]);
 
         return redirect('/admin/list-koperasirw')->with('success', 'Informasi Koperasi Berhasil Diedit!');
