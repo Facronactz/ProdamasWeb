@@ -60,7 +60,7 @@ class EboostAdmin extends Controller
 
     public function update($id, Request $request)
     {
-        $request->validate([
+        $this->validate($request, [
             'judul_tentang' => 'required',
             'caption_tentang' => 'required',
             'foto_tentang' => 'required',
@@ -70,9 +70,8 @@ class EboostAdmin extends Controller
         ]);
 
         $eboost = Eboost::findorfail($id);
-        $file = $request->file('foto');
+        $file = $request->file('foto_tentang','foto_info');
         if ($file != NULL) {
-            File::delete(public_path("../fotoProd/" . $eboost->foto));
             $file=$request->file('foto_tentang');
             $file2=$request->file('foto_info');
             $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
@@ -107,23 +106,23 @@ class EboostAdmin extends Controller
         return redirect('/admin/list-eboost')->with('success', 'Eboost Berhasil Dihapus!');
     }
 
-    public function edit_desc($id)
-    {
-        $descriptions = DescriptionAdmin::findOrFail($id);
-        return view('admin.eboost.editdesc', compact('descriptions'));
-    }
+    // public function edit_desc($id)
+    // {
+    //     $descriptions = DescriptionAdmin::findOrFail($id);
+    //     return view('admin.eboost.editdesc', compact('descriptions'));
+    // }
 
-    public function update_desc($id, Request $request)
-    {
-        $request->validate([
-            'desc_eboost' => 'required',
-        ]);
+    // public function update_desc($id, Request $request)
+    // {
+    //     $request->validate([
+    //         'desc_eboost' => 'required',
+    //     ]);
 
-        $descriptions = DescriptionAdmin::findOrFail($id);
-        $descriptions_data = ["desc_eboost" => $request["desc_eboost"]];
-        $descriptions->update($descriptions_data);
+    //     $descriptions = DescriptionAdmin::findOrFail($id);
+    //     $descriptions_data = ["desc_eboost" => $request["desc_eboost"]];
+    //     $descriptions->update($descriptions_data);
 
-        return redirect('/admin/list-eboost')->with('success', 'Deskripsi Berhasil Diupdate!');
-    }
+    //     return redirect('/admin/list-eboost')->with('success', 'Deskripsi Berhasil Diupdate!');
+    // }
 }
 

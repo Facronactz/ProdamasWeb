@@ -51,8 +51,8 @@ E-Boost Submission
             <td>{{$eboosts->caption_info}}</td>
             <td>{{$eboosts->foto_info}}</td>
             <td>
-                <form action="/admin/eboost/{{$eboosts->id}}" method="POST">
-                    <a href="/admin/eboost/{{$eboosts->id}}" class="btn btn-info">Edit</a>
+                <form action="/admin/edit-eboost/{{$eboosts->id}}" method="POST">
+                    <a href="/admin/edit-eboost/{{$eboosts->id}}" class="btn btn-info">Edit</a>
                     @csrf
                     @method('DELETE')
                     <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Foto?')" value="Delete">

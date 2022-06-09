@@ -5,7 +5,7 @@ Edit E-Boost
 @endsection
 @section('content')
 
-<form action="/admin/eboost/{{$eboost->id}}" method="POST" enctype="application/x-www-form-urlencoded">
+<form action="/admin/edit-eboost/{{$eboost->id}}" method="POST" enctype="application/x-www-form-urlencoded">
 @csrf
     <div class="form-group">
         <label for="judul_tentang">Judul Tentang</label>
@@ -29,6 +29,7 @@ Edit E-Boost
 
     <div class="form-group">
         <label for="foto_tentang">Foto Tentang</label><br>
+        <p>{{$eboost->foto_tentang}}</p>
         <input type="file" class="form-control" name="foto_tentang" id="foto_tentang">
         @error('foto_tentang')
         <div class="alert alert-danger">
@@ -59,6 +60,7 @@ Edit E-Boost
 
     <div class="form-group">
         <label for="foto_info">Foto Info</label><br>
+        <p>{{$eboost->foto_info}}</p>
         <input type="file" class="form-control" name="foto_info" id="foto_info">
         @error('foto_info')
         <div class="alert alert-danger">
