@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\File;
 use App\Models\Koperasirw;
 use App\Models\Menu;
 
-
 class KoperasiController extends Controller
 {
     public function index()
@@ -26,9 +25,9 @@ class KoperasiController extends Controller
         ->unionAll($counter)
         ->sum('views');
 
-        $menus = Menu::orderBy('id')->get();
-
         $menus = Menu::where('status', 'Show')->get();
+
+        $koperasi = Koperasirw::first()->get();
         return view('koperasi.index', compact('counter', 'totalviews','koperasi', 'menus'));
     }
 }

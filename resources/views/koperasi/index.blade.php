@@ -15,7 +15,8 @@
         <div class="container mb-3">
             <div class="mt-2" style="text-indent: 25px;">
                 @foreach ($koperasi as $kop)
-                <?= $kop->deskripsi ?>
+                <?= $kop->informasi ?>
+                {{ $kop->foto_syarat }}
                 @endforeach
             </div>
             <div>

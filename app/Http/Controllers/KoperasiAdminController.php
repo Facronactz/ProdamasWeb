@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Koperasirw;
+use Illuminate\Support\Facades\File;
 
 class KoperasiAdminController extends Controller
 {
@@ -21,13 +22,27 @@ class KoperasiAdminController extends Controller
 
     public function update($id, Request $request) {
         $request->validate([
-            'deskripsi' => 'required',
+            'informasi' => 'required',
         ]);
 
-        $koperasi = Koperasirw::findOrFail($id);
-        $koperasi_data = ["deskripsi" => $request["deskripsi"]];
-        $koperasi->update($koperasi_data);
+        $koperasis = Koperasirw::findorfail($id);
 
-        return redirect('/admin/list-koperasirw')->with('success', 'Deskripsi Koperasi Berhasil Diedit!');
+        $foto = $request->file('foto_syarat');
+        if ($foto != NULL) {
+            File::delete(public_path("../koperasiProd/" . $koperasis->foto));
+            $fotoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $foto->getClientOriginalName());
+            $foto->move(public_path('../koperasiProd/'), $fotoPath);
+
+            $koperasis->update([
+                'informasi' => $request->informasi,
+                'foto_syarat' => $fotoPath
+            ]);
+        } else {
+            $koperasis->update([
+                'informasi' => $request->informasi
+            ]);
+        }
+
+        return redirect('/admin/list-koperasirw')->with('success', 'Informasi Koperasi Berhasil Diedit!');
     }
 }

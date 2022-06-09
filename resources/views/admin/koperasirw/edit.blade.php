@@ -3,7 +3,7 @@
 @section('koperasirw', 'active')
 
 @section('title')
-Edit Deskripsi Koperasi RW
+Edit Informasi Koperasi RW
 @endsection
 
 @section('content')
@@ -12,13 +12,23 @@ Edit Deskripsi Koperasi RW
     @csrf
     @method('put')
     <div class="form-group">
-        @error('deskripsi')
+        @error('informasi')
         <div class="alert alert-danger">
             {{ $message }}
         </div>
         @enderror
-        <label for="deskripsi">Deskripsi Koperasi</label>
-        <textarea name="deskripsi" id="description" class="form-control" cols="30" rows="3"><?= $koperasi->deskripsi ?></textarea>
+        <label for="informasi">Informasi Koperasi</label>
+        <textarea name="informasi" id="description" class="form-control" cols="30" rows="3"><?= $koperasi->informasi ?></textarea>
+    </div>
+    <div class="form-group">
+        <label for="foto">Syarat</label><br>
+        <p>{{$koperasi->foto_syarat}}</p>
+        <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="foto_syarat" id="foto_syarat" value="{{$koperasi->foto_syarat}}">
+        @error('foto')
+        <div class="alert alert-danger">
+            {{ $message }}
+        </div>
+        @enderror
     </div>
     <button type="submit" class="btn btn-primary">Edit</button>
     <a href="/admin/list-koperasirw" class="btn btn-outline-primary">Back</a>

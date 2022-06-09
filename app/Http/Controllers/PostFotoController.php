@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Menu;
 
-
 class PostFotoController extends Controller
 {
     public function index()
@@ -30,14 +29,15 @@ class PostFotoController extends Controller
                         ->sum('views');
                 // end code jumlah pengunjung
         
-        $posts = Post::all()->paginate(4);
+        $posts = Post::orderBy('id', 'desc')->get();
         $menus = Menu::where('status', 'Show')->get();
+
         // $posts = Post::join('images', 'posts.id', '=', 'images.post_id')
         // ->get(['posts.*', 'images.*']);
         // echo json_encode($posts);die();
         foreach($posts as $post){
-            $post['image'] = Image::where('post_id', $post->id)
-            ->get();
+            $post['image'] = Image::where('post_id', $post->id)->
+            get();
         }
         
         // echo json_encode($posts);die();
