@@ -68,9 +68,13 @@
                     <div class="carousel-indicators">
                         @foreach ($post->image as $no => $image)
                         @if ($no == 0)
-                            <button type="button" data-bs-target="#carouselIndicators{{$post->id}}" data-bs-slide-to="{{$no}}" class="active" aria-current="true" aria-label="Slide {{$no}}"></button>
+                            <button type="button" data-bs-target="#carouselIndicators{{$post->id}}" data-bs-slide-to="{{$no}}" class="active" aria-current="true" aria-label="Slide {{$no}}">
+                                <img class="d-block w-100 img-fluid" src="{{ asset('images/'. $image->image)}}" alt="">
+                            </button>
                         @else
-                            <button type="button" data-bs-target="#carouselIndicators{{$post->id}}" data-bs-slide-to="{{$no}}" aria-label="Slide {{$no}}"></button>
+                            <button type="button" data-bs-target="#carouselIndicators{{$post->id}}" data-bs-slide-to="{{$no}}" aria-label="Slide {{$no}}">
+                                <img class="d-block w-100 img-fluid" src="{{ asset('images/'. $image->image)}}" alt="">
+                            </button>
                         @endif
                         @endforeach
                     </div>
