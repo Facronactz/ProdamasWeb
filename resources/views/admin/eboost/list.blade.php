@@ -44,7 +44,6 @@ E-Boost Submission
         @forelse ($eboost as $key=>$eboosts)
         <tr>
             <td>{{$key + 1}}</th>
-            <td>{{$eboosts->id}}</td>
             <td>{{$eboosts->judul_tentang}}</td>
             <td>{{$eboosts->caption_tentang}}</td>
             <td>{{$eboosts->foto_tentang}}</td>
