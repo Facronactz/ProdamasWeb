@@ -5,7 +5,7 @@ Edit E-Boost
 @endsection
 @section('content')
 
-<form action="/admin/list-eboost/{{$eboost->id}}" method="POST" enctype="application/x-www-form-urlencoded">
+<form action="/admin/edit-eboost/{{$eboost->id}}" method="POST" enctype="application/x-www-form-urlencoded">
 @csrf
     <div class="form-group">
         <label for="judul_tentang">Judul Tentang</label>
