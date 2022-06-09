@@ -21,30 +21,30 @@ Edit Informasi Koperasi RW
         <textarea name="informasi" id="description" class="form-control" cols="30" rows="3"><?= $koperasi->informasi ?></textarea>
     </div>
     <div class="form-group">
-        <label for="foto">Syarat Pembentukan</label><br>
+        <label for="syarat">Syarat Pembentukan</label><br>
         <p>{{$koperasi->foto_syarat}}</p>
         <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="foto_syarat" id="foto_syarat" value="{{$koperasi->foto_syarat}}">
-        @error('foto')
+        @error('syarat')
         <div class="alert alert-danger">
             {{ $message }}
         </div>
         @enderror
     </div>
     <div class="form-group">
-        <label for="foto">Alur Pembentukan</label><br>
+        <label for="alur">Alur Pembentukan</label><br>
         <p>{{$koperasi->foto_alur}}</p>
         <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="foto_alur" id="foto_alur" value="{{$koperasi->foto_alur}}">
-        @error('foto')
+        @error('alur')
         <div class="alert alert-danger">
             {{ $message }}
         </div>
         @enderror
     </div>
     <div class="form-group">
-        <label for="foto">Legalitas</label><br>
+        <label for="legalitas">Legalitas</label><br>
         <p>{{$koperasi->foto_legalitas}}</p>
         <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="foto_legalitas" id="foto_legalitas" value="{{$koperasi->foto_legalitas}}">
-        @error('foto')
+        @error('legalitas')
         <div class="alert alert-danger">
             {{ $message }}
         </div>
