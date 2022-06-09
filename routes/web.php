@@ -46,6 +46,7 @@ use App\Http\Controllers\KoperasiAdminController;
 use App\Http\Controllers\ProdamasAdminController;
 use App\Http\Controllers\SettingCarouselController;
 use App\Http\Controllers\KampungkerenAdminController;
+use App\Http\Controllers\WirausahaController;
 
 /*
 |--------------------------------------------------------------------------
