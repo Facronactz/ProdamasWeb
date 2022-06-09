@@ -36,8 +36,8 @@ class PostFotoController extends Controller
         // ->get(['posts.*', 'images.*']);
         // echo json_encode($posts);die();
         foreach($posts as $post){
-            $post['image'] = Image::where('post_id', $post->id)->paginate(4)
-            ->get();
+            $post['image'] = Image::where('post_id', $post->id)->
+            get()->paginate(4);
         }
         
         // echo json_encode($posts);die();
