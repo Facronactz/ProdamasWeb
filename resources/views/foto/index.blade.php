@@ -28,7 +28,7 @@
             </div>
         </form> -->
 </div>
-<div class="container">
+<div class="">
     <div class="row row-cols-1 row-cols-md-3 mb-5">
         @forelse ($posts as $post)
         <div class=" card noBorder cardAudio p-0 m-2">
