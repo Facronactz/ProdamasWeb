@@ -13,7 +13,7 @@ E-Boost Submission
 
 <div class="form-group">
     <label for="desc_eboost">Deskripsi</label>
-    <table class="table">
+    <!-- <table class="table">
         @foreach ($eboost ?? '' as $eboosts)
         <tr>
             <td><?= $eboosts->desc_eboost ?></td>
@@ -24,7 +24,7 @@ E-Boost Submission
             </td>
         </tr>
         @endforeach
-    </table>
+    </table> -->
 </div>
 <a href="/admin/add-eboost" class="btn btn-primary mb-3">Tambah E-Boost</a>
 <table class="table" id="tableEboost">
@@ -49,7 +49,7 @@ E-Boost Submission
             <td>{{$eboosts->foto_tentang}}</td>
             <td>{{$eboosts->judul_info}}</td>
             <td>{{$eboosts->caption_info}}</td>
-            <td>{{$eboosts->foto_info}}</td
+            <td>{{$eboosts->foto_info}}</td>
             <td>
                 <form action="/admin/eboost/{{$eboosts->id}}" method="POST">
                     <a href="/admin/eboost/{{$eboosts->id}}" class="btn btn-info">Edit</a>
