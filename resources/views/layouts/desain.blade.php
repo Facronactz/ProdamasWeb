@@ -210,6 +210,15 @@
                             <a class="nav-link nav-list @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{ asset('img/ICON HOME.png') }}" style="width: 20px; height: 20px; margin-right: 1rem"></a>
                             <a class="nav-link nav-list @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
                             <div class="nav-item dropdown nav-list">
+                                <a class="nav-link dropdown-toggle @yield('media')" id="navbarDropdownMenuLinkMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkMedia">
+                                    <li class="w-100"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('audio')" href="{{ url('/audio') }}">Audio</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/media') }}">MedSos</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
                                     <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
@@ -217,15 +226,6 @@
                                     <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}" target="_blank">Progressio</a></li>
                                     {{-- <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio</a></li> --}}
                                     {{-- <a class="@yield('progressio')" href="https://progressio.kedirikota.go.id/auth/login">Progressio <span class="caret fas fa-caret-right"></span></a> --}}
-                                </ul>
-                            </div>
-                            <div class="nav-item dropdown nav-list">
-                                <a class="nav-link dropdown-toggle @yield('media')" id="navbarDropdownMenuLinkMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkMedia">
-                                    <li class="w-100"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('audio')" href="{{ url('/audio') }}">Audio</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/media') }}">MedSos</a></li>
                                 </ul>
                             </div>
                             <div class="nav-item dropdown nav-list">
