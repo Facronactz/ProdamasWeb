@@ -52,8 +52,8 @@ MenuBaru
         <label for="status">Status</label>
         <select class="form-control" name="status" id="status" placeholder="Status">
             <option value="">- pilih -</option>
-            <option value="show">Show</option>
-            <option value="hidden">Hidden</option>
+            <option value="Show">Show</option>
+            <option value="Hidden">Hidden</option>
         </select>
         @error('status')
         <div class="alert alert-danger">
