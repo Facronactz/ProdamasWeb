@@ -36,7 +36,7 @@ Menu Submission
                     <a href="/admin/menu/{{$menu->id}}" class="btn btn-info">Edit</a>
                     @csrf
                     @method('DELETE')
-                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Foto?')" value="Delete">
+                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Menu?')" value="Delete">
                 </form>
             </td>
         </tr>
@@ -60,19 +60,19 @@ Menu Submission
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="id" id="id" value="{{$menu->id}}">
-                    @if ($menu->status == 'show')
+                    @if ($menu->status == 'Show')
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Status</label>
                         <select class="form-select" id="status" name="status">
                             <option selected>{{$menu->status}}</option>
-                            <option value="hidden">Hidden</option>
+                            <option value="Hidden">Hidden</option>
                         </select>
                     </div>
                     @else
                     <label for="exampleFormControlInput1" class="form-label">Status</label>
                     <select class="form-select" id="status" name="status">
                         <option selected>{{$menu->status}}</option>
-                        <option value="show">Show</option>
+                        <option value="Show">Show</option>
                     </select>
                     @endif
                 </div>

@@ -65,7 +65,7 @@ UMKM Submission
                     <a href="/admin/editlist-umkm/{{$umkm->id}}" class="btn btn-info">Edit</a>
                     @csrf
                     @method('DELETE')
-                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Foto?')" value="Delete">
+                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus UMKM?')" value="Delete">
                 </form>
             </td>
         </tr>
