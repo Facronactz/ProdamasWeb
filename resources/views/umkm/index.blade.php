@@ -144,7 +144,7 @@
 </script>
 
 <script>
-  if (localStorage.getItem("pagination")) {
+  if (localStorage.getItem("pagination") == "true") {
     $(localStorage.getItem("kecamatan")).trigger('click')
     localStorage.setItem("pagination", "false")
   }
