@@ -30,7 +30,7 @@ class FotoController extends Controller
                         ->unionAll($counter)
                         ->sum('views');
         $fotos = FotoAdmin::orderBy('id', 'desc')->paginate(2);
-        $menus = Menu::orderBy('id')->get();
+        $menus = Menu::where('status', 'Show')->get();
         return view('foto.index', compact('fotos','totalviews','counter', 'menus'));
     }
 }

@@ -28,7 +28,7 @@ class AudioController extends Controller
                         ->unionAll($counter)
                         ->sum('views');
         $audios = Audio::orderBy('id', 'desc')->paginate(4);
-        $menus = Menu::orderBy('id')->get();
+        $menus = Menu::where('status', 'Show')->get();
         return view('audio.index', compact('audios','totalviews','counter', 'menus'));
     }
 }

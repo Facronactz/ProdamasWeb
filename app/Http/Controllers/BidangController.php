@@ -32,7 +32,7 @@ class BidangController extends Controller
 
                 $bidangs = Bidang::orderBy('id')->get();
                 $descriptions = DescriptionAdmin::first()->get();
-                $menus = Menu::orderBy('id')->get();
+                $menus = Menu::where('status', 'Show')->get();
                 return view('bidang.index', compact('bidangs', 'descriptions', 'totalviews', 'counter', 'menus'));
         }
 }
