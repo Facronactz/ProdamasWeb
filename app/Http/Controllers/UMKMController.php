@@ -10,7 +10,7 @@ use App\Models\Pict;
 
 class UMKMController extends Controller
 {
-    public function index()
+    public function show()
     {
         DB::table('counters')->increment('views');
         $counter = DB::table('counters')
