@@ -280,7 +280,7 @@
                                 <a class="nav-link" href="#footer">Kontak</a>
                             </div>
                             @foreach ($menus ?? '' as $menu)
-                            <a href="{{$menu->link}}" class="nav-link nav-list @yield('{{$menu->judul}}')">{{$menu->judul}}</a>
+                            <a href="{{url($menu->link)}}" class="nav-link nav-list @yield('{{$menu->judul}}')">{{$menu->judul}}</a>
                             @endforeach
                             {{-- <a class="nav-link nav-list @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a> --}}
                         </div>
