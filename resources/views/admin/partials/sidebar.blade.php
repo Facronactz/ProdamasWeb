@@ -67,13 +67,13 @@
                 </li>
                 <li class="nav-item">
                     <a href="/admin/list-kampungkeren" class="nav-link @yield('kampungkeren')">
-                        <i class="fas fa-city"></i>
+                        <i class="nav-icon fas fa-city"></i>
                         <p>Kampung Keren</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="/admin/list-bidang" class="nav-link @yield('bidang')">
-                        <i class="fas fa-bezier-curve"></i></i>
+                        <i class="nav-icon fas fa-bezier-curve"></i></i>
                         <p>Bidang</p>
                     </a>
                 </li>
@@ -91,7 +91,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="/admin/list-eboost" class="nav-link @yield('eboost')">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="nav-icon fas fa-chart-line"></i>
                         <p>E-Boost</p>
                     </a>
                 </li>
@@ -103,7 +103,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="/admin/list-koperasirw" class="nav-link @yield('koperasirw')">
-                        <i class="nav-icon fas fa-edit"></i>
+                        <i class="nav-icon fas fa-store-alt"></i>
                         <p>Koperasi RW</p>
                     </a>
                 </li>
