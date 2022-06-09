@@ -63,7 +63,7 @@
                 <h2 class="modal-title" id="fotoLabel">{{ $post->title }}</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body mb-4">
+            <div class="modal-body">
                 <div id="carouselIndicators{{$post->id}}" class="carousel slide" data-ride="carousel" style="margin-bottom: 120px">
                     <div class="carousel-indicators" style="margin-bottom: -20px">
                         @foreach ($post->image as $no => $image)
