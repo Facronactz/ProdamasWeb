@@ -16,7 +16,7 @@
 
     <style>
         body {
-            background-image: url("bg_progressio.png");
+            background-image: url("{{asset('img/bg_progressio.png')}}");
             background-repeat: no-repeat;
             background-size: fill;
             margin: 0;
