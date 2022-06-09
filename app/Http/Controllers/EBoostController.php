@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use App\Models\Menu;
  
 class EBoostController extends Controller
 {
@@ -20,22 +21,7 @@ class EBoostController extends Controller
             ->unionAll($artikel)
             ->unionAll($counter)
             ->sum('views');
-        return view('eboost.index', compact('counter', 'totalviews'));
-    }
-
-    public function umkm(){
-        return view('eboost.umkm');
-    }
-    public function kube(){
-        return view('eboost.kube');
-    }
-    public function koperasirw(){
-        return view('koperasirw.kube');
-    }
-    public function permodalan(){
-        return view('eboost.permodalan');
-    }
-    public function publikasi(){
-        return view('publikasi.kube');
+        $menus = Menu::orderBy('id')->get();
+        return view('eboost.index', compact('counter','totalviews', 'menus'));
     }
 }

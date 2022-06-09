@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use App\Models\Koperasirw;
+use App\Models\Menu;
+
 
 class KoperasiController extends Controller
 {
@@ -24,7 +26,9 @@ class KoperasiController extends Controller
         ->unionAll($counter)
         ->sum('views');
 
+        $menus = Menu::orderBy('id')->get();
+
         $koperasi = Koperasirw::first()->get();
-        return view('koperasi.index', compact('counter', 'totalviews', 'koperasi'));
+        return view('koperasi.index', compact('counter', 'totalviews','koperasi', 'menus'));
     }
 }

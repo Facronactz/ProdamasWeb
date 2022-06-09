@@ -6,6 +6,7 @@ use App\Models\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\VideoAdmin;
+use App\Models\Menu;
 
 
 class VideoController extends Controller
@@ -27,8 +28,9 @@ class VideoController extends Controller
                         ->unionAll($artikel)
                         ->unionAll($counter)
                         ->sum('views');
+        $menus = Menu::orderBy('id')->get();
         $videos = Video::orderBy('id', 'desc')->paginate(4);
-        return view('video.index', ['videos' => $videos], compact('totalviews','counter'));
+        return view('video.index', ['videos' => $videos], compact('totalviews','counter', 'menus'));
     }
 
     public function beranda()
