@@ -30,7 +30,7 @@ Pict Sentra UMKM
     @method('put')
     <div class="form-group">
         <label for="kota">Kec. Kota</label><br>
-        <p>{{$pict->kota}}</p>
+        <p>{{$picts->kota}}</p>
         <input type="file" accept="image/png, image/jpg, image/jpeg" name="kota" class="form-control" id="kota" value="{{$picts->kota}}">
         @error('kota')
         <div class="alert alert-danger">
@@ -41,7 +41,7 @@ Pict Sentra UMKM
 
     <div class="form-group">
         <label for="pesantren">Kec. Pesantren</label><br>
-        <p>{{$pict->pesantren}}</p>
+        <p>{{$picts->pesantren}}</p>
         <input type="file" accept="image/png, image/jpg, image/jpeg" name="pesantren" class="form-control" id="pesantren" value="{{$picts->pesantren}}">
         @error('pesantren')
         <div class="alert alert-danger">
@@ -52,7 +52,7 @@ Pict Sentra UMKM
 
     <div class="form-group">
         <label for="mojoroto">Kec. Mojoroto</label><br>
-        <p>{{$pict->mojoroto}}</p>
+        <p>{{$picts->mojoroto}}</p>
         <input type="file" accept="image/png, image/jpg, image/jpeg" name="mojoroto" class="form-control" id="mojoroto" value="{{$picts->mojoroto}}">
         @error('mojoroto')
         <div class="alert alert-danger">
