@@ -478,7 +478,7 @@
         $(".modal").on('hide.bs.modal', function() {
             $('.youtube-iframe').each(function(index) {
                 $(this).attr('src', $(this).attr('src'));
-                return false;
+                // return false;
             });
         });
     </script>
