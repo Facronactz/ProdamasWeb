@@ -16,7 +16,7 @@
             <div class="mt-2" style="text-indent: 25px;">
                 @foreach ($koperasi as $kop)
                 <?= $kop->informasi ?>
-                {{ asset('koperasiProd/'.$kop->foto_syarat) }}
+                <img src="{{ asset('koperasiProd/'.$kop->foto_syarat) }}" alt="">
                 @endforeach
             </div>
             <div>
