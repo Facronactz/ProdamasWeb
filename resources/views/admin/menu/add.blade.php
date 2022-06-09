@@ -25,7 +25,7 @@ MenuBaru
 </div>
 @endif
 
-<form action="/admin/storelist-umkm" method="POST" enctype="multipart/form-data">
+<form action="/admin/list-menu" method="POST" enctype="multipart/form-data">
     @csrf
 
     <div class="form-group">
