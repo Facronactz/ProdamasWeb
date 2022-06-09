@@ -11,7 +11,7 @@ class Koperasirw extends Model
     use HasFactory;
     protected $table = "koperasi";
     public $incrementing = false;
-    protected $fillable = ["id", "deskripsi"];
+    protected $fillable = ["id", "informasi", "foto_syarat"];
 
     public function getCreatedAtAttribute()
     {
