@@ -23,7 +23,7 @@ Edit Menu
 
     <div class="form-group">
         <label for="link">Link</label>
-        <input name="link" class="form-control" name="link" id="link" value="$menu->link">
+        <input name="link" class="form-control" name="link" id="link" value="{{$menu->link}}">
         @error('link')
         <div class="alert alert-danger">
             {{ $message }}
