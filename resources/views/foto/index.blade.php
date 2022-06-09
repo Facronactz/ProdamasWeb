@@ -69,11 +69,11 @@
                         @foreach ($post->image as $no => $image)
                         @if ($no == 0)
                             <button style="width: 160px" type="button" data-bs-target="#carouselIndicators{{$post->id}}" data-bs-slide-to="{{$no}}" class="active" aria-current="true" aria-label="Slide {{$no}}">
-                                <img class="d-block w-100 img-fluid" src="{{ asset('images/'. $image->image)}}" alt="">
+                                <img class="d-block w-100 img-fluid" style="max-height: 120px" src="{{ asset('images/'. $image->image)}}" alt="">
                             </button>
                         @else
                             <button style="width: 160px" type="button" data-bs-target="#carouselIndicators{{$post->id}}" data-bs-slide-to="{{$no}}" aria-label="Slide {{$no}}">
-                                <img class="d-block w-100 img-fluid" src="{{ asset('images/'. $image->image)}}" alt="">
+                                <img class="d-block w-100 img-fluid" style="max-height: 120px" src="{{ asset('images/'. $image->image)}}" alt="">
                             </button>
                         @endif
                         @endforeach
