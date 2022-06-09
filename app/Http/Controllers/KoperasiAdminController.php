@@ -23,6 +23,9 @@ class KoperasiAdminController extends Controller
     public function update($id, Request $request) {
         $request->validate([
             'informasi' => 'required',
+            'foto_syarat'=> 'required',
+            'foto_alur'=> 'required',
+            'foto_legalitas'=> 'required',
         ]);
 
         $koperasis = Koperasirw::findorfail($id);
