@@ -114,12 +114,6 @@ class UMKMAdminController extends Controller
 
     public function update_pict($id, Request $request)
     {
-        $request->validate([
-            'kota' => 'required',
-            'pesantren' => 'required',
-            'mojoroto' => 'required',
-        ]);
-
         $picts = Pict::findOrFail($id);
         $kota = $request->file('kota');
         $pesantren = $request->file('pesantren');
