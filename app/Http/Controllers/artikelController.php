@@ -117,7 +117,6 @@ class artikelController extends Controller
                         ->unionAll($artikel)
                         ->unionAll($counter)
                         ->sum('views');
-                $menus = Menu::orderBy('id')->get();
                 // end code jumlah pengunjung
                 
                 Articleadmin::find($id)->increment('views');
@@ -132,6 +131,7 @@ class artikelController extends Controller
                 foreach ($artikel as $item){
                         $tags = $item->tags;
                 }
+                $menus = DB::table('menu')->get();
                 return view('artikel.artikelLay', compact('artikel', 'artikelupdate', 'tags', 'totalviews','counter', 'menus'));
         }
 
