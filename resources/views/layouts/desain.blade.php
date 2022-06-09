@@ -277,7 +277,7 @@
                                 </ul>
                             </div>
                             @foreach ($menus ?? '' as $menu)
-                            <a href="{{$menu->link}}" class="nav-link nav-list @yield('{{$menu->judul}}')">{{$menu->judul}}</a>
+                            <a href="{{url($menu->link)}}" class="nav-link nav-list @yield('{{$menu->judul}}')">{{$menu->judul}}</a>
                             @endforeach
                             <div class="nav-list" id="scrollspy">
                                 <a class="nav-link" href="#footer">Kontak</a>
