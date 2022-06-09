@@ -94,7 +94,7 @@
         {{-- Akhir Card foto --}}
         @endforeach
         <div class="d-flex justify-content-end w-100 mb-4">
-            {{ $posts->links() }}
+            <!-- {{ $posts->links() }} -->
         </div>
 
 </html>  
