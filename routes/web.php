@@ -29,6 +29,7 @@ use App\Http\Controllers\BidangAdminController;
 use App\Http\Controllers\PokmasAdminController;
 use App\Http\Controllers\ProdamasAdminController;
 use App\Http\Controllers\UMKMAdminController;
+use App\Http\Controllers\MenuAdminController;
 use App\Http\Controllers\TestregistController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CeritaController;
@@ -124,6 +125,15 @@ Route::post('/test123', [TestregistController::class, 'store']);
 Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil menggunakan linknya
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/profil/{id}/edit', [ProfilController::class, 'index']);
+
+    //menu
+    Route::get('/admin/add-menu', [MenuAdminController::class, 'create']);
+    Route::post('/admin/list-menu', [MenuAdminController::class, 'store']);
+    Route::get('/admin/list-menu', [MenuAdminController::class, 'index']);
+    Route::get('/admin/menu/{menu_id}', [MenuAdminController::class, 'edit']);
+    Route::put('/admin/menu/{menu_id}', [MenuAdminController::class, 'update']);
+    Route::delete('/admin/menu/{menu_id}', [MenuAdminController::class, 'destroy']);
+    Route::post('/admin/menu/status', [MenuAdminController::class, 'status']);
 
     //artikel admin
     Route::get('/admin/add-article', [ArticleController::class, 'create']);
