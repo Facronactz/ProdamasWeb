@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Menu;
+
 
 class DataController extends Controller
 {
@@ -23,9 +25,10 @@ class DataController extends Controller
                 ->unionAll($artikel)
                 ->unionAll($counter)
                 ->sum('views');
+                $menus = Menu::orderBy('id')->get();
         // end code jumlah pengunjung
 
-        return view('data.grafik', compact('counter', 'totalviews'));
+        return view('data.grafik', compact('counter','totalviews', 'menus'));
     }
 
     public function peta(){
@@ -44,8 +47,9 @@ class DataController extends Controller
                 ->unionAll($artikel)
                 ->unionAll($counter)
                 ->sum('views');
+                $menus = Menu::orderBy('id')->get();
         // end code jumlah pengunjung
-        return view('data.peta', compact('counter', 'totalviews'));
+        return view('data.peta', compact('counter','totalviews', 'menus'));
     }
 
     public function banksampah(){
@@ -64,9 +68,10 @@ class DataController extends Controller
                 ->unionAll($artikel)
                 ->unionAll($counter)
                 ->sum('views');
+                $menus = Menu::orderBy('id')->get();
         // end code jumlah pengunjung
 
-        return view('data.banksampah', compact('counter', 'totalviews'));
+        return view('data.banksampah', compact('counter','totalviews', 'menus'));
     }
 
     public function progressio(){
@@ -85,8 +90,9 @@ class DataController extends Controller
                 ->unionAll($artikel)
                 ->unionAll($counter)
                 ->sum('views');
+                $menus = Menu::orderBy('id')->get();
         // end code jumlah pengunjung
         
-        return view('data.progresio', compact('counter', 'totalviews'));
+        return view('data.progresio', compact('counter','totalviews', 'menus'));
     }
 }
