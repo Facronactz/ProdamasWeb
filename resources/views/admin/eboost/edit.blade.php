@@ -7,6 +7,7 @@ Edit E-Boost
 
 <form action="/admin/edit-eboost/{{$eboost->id}}" method="POST" enctype="application/x-www-form-urlencoded">
 @csrf
+@method('put')
     <div class="form-group">
         <label for="judul_tentang">Judul Tentang</label>
         <input name="judul_tentang" class="form-control" name="judul_tentang" id="judul_tentang" placeholder="Judul Tentang" value="{{ $eboost->judul_tentang }}">
