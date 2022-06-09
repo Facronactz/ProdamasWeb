@@ -60,7 +60,7 @@ class EboostAdmin extends Controller
 
     public function update($id, Request $request)
     {
-        $request->validate([
+        $this->validate($request, [
             'judul_tentang' => 'required',
             'caption_tentang' => 'required',
             'foto_tentang' => 'required',
@@ -70,7 +70,7 @@ class EboostAdmin extends Controller
         ]);
 
         $eboost = Eboost::findorfail($id);
-        $file = $request->file('foto');
+        $file = $request->file('foto_tentang','foto_info');
         if ($file != NULL) {
             $file=$request->file('foto_tentang');
             $file2=$request->file('foto_info');
