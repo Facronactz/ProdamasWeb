@@ -476,10 +476,10 @@
         $('iframe[src*="https://www.youtube.com/embed/"]').addClass("youtube-iframe");
 
         $(".modal").on('hide.bs.modal', function() {
-            try {
-                $video = $(this).find('.youtube-iframe');
-                $video[0].attr('src', $video[0].attr('src'));
-            }
+            $('.youtube-iframe').each(function(index) {
+                $(this).attr('src', $(this).attr('src'));
+                // return false;
+            });
 
             try {
                 $audio = $(this).find('audio');
