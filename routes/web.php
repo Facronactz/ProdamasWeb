@@ -105,6 +105,9 @@ Route::resource('prodamas', ProdamasController::class);
 // EBoost
 Route::resource('/e-boost', EBoostController::class);
 
+//  Kurnia
+Route::resource('/kurnia', KurniaController::class);
+
 // UMKM
 Route::resource('/umkm', UMKMController::class);
 
