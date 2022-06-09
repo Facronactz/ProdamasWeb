@@ -23,7 +23,7 @@ Edit Kampung Keren
 
     <div class="form-group">
         <label for="warna">Warna</label>
-        <input name="warna" class="form-control" name="warna" id="warna" placeholder="warna">
+        <input name="warna" class="form-control" name="warna" id="warna" value="{{$kampungkeren->warna}}">
         @error('warna')
         <div class="alert alert-danger">
             {{ $message }}

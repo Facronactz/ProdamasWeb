@@ -125,6 +125,15 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/profil/{id}/edit', [ProfilController::class, 'index']);
 
+    //menu
+    Route::get('/admin/add-menu', [MenuController::class, 'create']);
+    Route::post('/admin/list-menu', [MenuController::class, 'store']);
+    Route::get('/admin/list-menu', [MenuController::class, 'index']);
+    Route::get('/admin/menu/{menu_id}', [MenuController::class, 'edit']);
+    Route::put('/admin/menu/{menu_id}', [MenuController::class, 'update']);
+    Route::delete('/admin/menu/{menu_id}', [MenuController::class, 'destroy']);
+    Route::post('/admin/menu/status', [MenuController::class, 'status']);
+
     //artikel admin
     Route::get('/admin/add-article', [ArticleController::class, 'create']);
     Route::post('/admin/list-article', [ArticleController::class, 'store']);
