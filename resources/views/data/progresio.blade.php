@@ -16,7 +16,7 @@
 
     <style>
         body {
-            background-image: url("bg_bggenerator_com(1).png");
+            background-image: url("{{asset('img/bg_progressio.png')}}");
             background-repeat: no-repeat;
             background-size: fill;
             margin: 0;
@@ -149,7 +149,7 @@
     <header class="py-3 px-3 mb-4 border-bottom" style="background-color: #4d148c;">
         <div class="d-flex align-items-center justify-content-between text-light text-decoration-none">
             <a href="https://prodamas.kedirikota.go.id/"><img class=" my-auto"
-                    src="https://prodamas.kedirikota.go.id/img/wesite logo 1.png" style="width: 200px" alt=""
+                    src="{{asset('img/wesite logo 1.png')}}" style="width: 200px" alt=""
                     srcset=""></a>
             <h1><strong> Progressio</strong></h1>
         </div>
