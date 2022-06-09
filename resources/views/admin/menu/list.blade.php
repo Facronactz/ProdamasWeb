@@ -60,7 +60,7 @@ Menu Submission
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="id" id="id" value="{{$menu->id}}">
-                    @if ($menu->status == 'show')
+                    @if ($menu->status == 'Show')
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Status</label>
                         <select class="form-select" id="status" name="status">
