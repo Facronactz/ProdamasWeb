@@ -252,7 +252,7 @@
                                                     <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">UMKM</a></li>
                                                 </ul>
                                             </li>
-                                    </li>
+                                        </li>
                                     <li class="dropdown-submenu w-100">
                                     <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Akses Permodalan <span class="caret fas fa-caret-right ms-3"></span></a>
                                         <ul class="dropdown-menu">
@@ -285,6 +285,27 @@
                             @endforeach
                             <div class="nav-list" id="scrollspy">
                                 <a class="nav-link" href="#footer">Kontak</a>
+                            </div>
+                            <div class="nav-item dropdown nav-list">
+                                <a class="nav-link dropdown-toggle @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">E-Boost</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
+                                    <li class="dropdown-submenu w-100">
+                                    <li class="w-100"><a class="dropdown-item @yield('prodamas')" href="{{ url('/prodamas') }}">Pelaku Usaha</a></li>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-submenu w-100">
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Wirausaha</a></li>
+                                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">KUBE</a></li>
+                                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">UMKM</a></li>
+                                                </ul>
+                                            </li>
+                                        </li>
+                                    </ul>
+                                    <li class="w-100"><a class="dropdown-item @yield('bidang')" href="{{ url('/bidang') }}">Akses Permodalan</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('kampungkeren')" href="{{ url('/kampungkeren') }}">Pemasaran</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('pokmas')" href="{{ url('/pokmas') }}">Publikasi</a></li>
+                                </ul>
                             </div>
                             {{-- <a class="nav-link nav-list @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a> --}}
                         </div>
