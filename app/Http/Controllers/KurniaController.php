@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use App\Models\Menu;
  
-class EBoostController extends Controller
+class KurniaController extends Controller
 {
 public function index()
     {
