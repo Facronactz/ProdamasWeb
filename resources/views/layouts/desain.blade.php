@@ -283,9 +283,6 @@
                             @foreach ($menus ?? '' as $menu)
                                 <a href="{{ url($menu->link) }}" class="nav-link nav-list @yield('{{ $menu->judul }}')">{{ $menu->judul }}</a>
                             @endforeach
-                            <div class="nav-list" id="scrollspy">
-                                <a class="nav-link" href="#footer">Kontak</a>
-                            </div>
                             <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">E-Boost</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
@@ -306,6 +303,9 @@
                                                 <li class="w-100"><a class="dropdown-item @yield('pokmas')" href="{{ url('/pokmas') }}">Publikasi</a></li>
                                         </ul>
                                 </ul>
+                            </div>
+                            <div class="nav-list" id="scrollspy">
+                                <a class="nav-link" href="#footer">Kontak</a>
                             </div>
                             {{-- <a class="nav-link nav-list @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a> --}}
                         </div>
