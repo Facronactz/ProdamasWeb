@@ -119,16 +119,24 @@ class UMKMAdminController extends Controller
         $pesantren = $request->file('pesantren');
         $mojoroto = $request->file('mojoroto');
 
-        File::delete(public_path("../UMKMProd/" . $picts->kota));
-        File::delete(public_path("../UMKMProd/" . $picts->pesantren));
-        File::delete(public_path("../UMKMProd/" . $picts->mojoroto));
-        $kotaPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $kota->getClientOriginalName());
-        $pesantrenPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $pesantren->getClientOriginalName());
-        $mojorotoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $mojoroto->getClientOriginalName());
-        $kota->move(public_path('../UMKMProd/'), $kotaPath);
-        $pesantren->move(public_path('../UMKMProd/'), $pesantrenPath);
-        $mojoroto->move(public_path('../UMKMProd/'), $mojorotoPath);
+        if ($kota != null) {
+            File::delete(public_path("../UMKMProd/" . $picts->kota));
+            $kotaPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $kota->getClientOriginalName());
+            $kota->move(public_path('../UMKMProd/'), $kotaPath);
+        }
 
+        if ($pesantren != null) {
+            File::delete(public_path("../UMKMProd/" . $picts->pesantren));
+            $pesantrenPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $pesantren->getClientOriginalName());
+            $pesantren->move(public_path('../UMKMProd/'), $pesantrenPath);
+        }
+
+        if ($mojoroto != null) {
+            File::delete(public_path("../UMKMProd/" . $picts->mojoroto));
+            $mojorotoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $mojoroto->getClientOriginalName());
+            $mojoroto->move(public_path('../UMKMProd/'), $mojorotoPath);
+        }
+        
         $picts->update([
             'kota' => $kotaPath,
             'pesantren' => $pesantrenPath,
