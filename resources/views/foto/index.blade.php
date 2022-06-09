@@ -29,7 +29,7 @@
         </form> -->
 </div>
 <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 mb-5 p-2">
+    <div class="row row-cols-1 mb-5" style="max-width: 200px">
         @forelse ($posts as $post)
         <div class=" card noBorder cardAudio p-0">
             <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$post->id}}">
