@@ -123,25 +123,28 @@ class UMKMAdminController extends Controller
             File::delete(public_path("../UMKMProd/" . $picts->kota));
             $kotaPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $kota->getClientOriginalName());
             $kota->move(public_path('../UMKMProd/'), $kotaPath);
+            $picts->update([
+                'kota' => $kotaPath,
+            ]);
         }
 
         if ($pesantren != null) {
             File::delete(public_path("../UMKMProd/" . $picts->pesantren));
             $pesantrenPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $pesantren->getClientOriginalName());
             $pesantren->move(public_path('../UMKMProd/'), $pesantrenPath);
+            $picts->update([
+                'pesantren' => $pesantrenPath,
+            ]);
         }
 
         if ($mojoroto != null) {
             File::delete(public_path("../UMKMProd/" . $picts->mojoroto));
             $mojorotoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $mojoroto->getClientOriginalName());
             $mojoroto->move(public_path('../UMKMProd/'), $mojorotoPath);
+            $picts->update([
+                'mojoroto' => $mojorotoPath
+            ]);
         }
-        
-        $picts->update([
-            'kota' => $kotaPath,
-            'pesantren' => $pesantrenPath,
-            'mojoroto' => $mojorotoPath
-        ]);
 
         return redirect('/admin/list-umkm')->with('success', 'Picture Berhasil Diupdate!');
     }
