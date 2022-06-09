@@ -8,7 +8,7 @@ Edit Informasi Koperasi RW
 
 @section('content')
 
-<form action="/admin/koperasirw/{{ $koperasi->id }}" method="POST" enctype="application/x-www-form-urlencoded">
+<form action="/admin/koperasirw/{{ $koperasi->id }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('put')
     <div class="form-group">

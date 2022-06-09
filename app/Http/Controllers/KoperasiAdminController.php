@@ -28,20 +28,14 @@ class KoperasiAdminController extends Controller
         $koperasis = Koperasirw::findorfail($id);
 
         $foto = $request->file('foto_syarat');
-        if ($foto != NULL) {
-            File::delete(public_path("../koperasiProd/" . $koperasis->foto));
-            $fotoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $foto->getClientOriginalName());
-            $foto->move(public_path('../koperasiProd/'), $fotoPath);
+        File::delete(public_path("../koperasiProd/" . $koperasis->foto_syarat));
+        $fotoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $foto->getClientOriginalName());
+        $foto->move(public_path('../koperasiProd/'), $fotoPath);
 
-            $koperasis->update([
-                'informasi' => $request->informasi,
-                'foto_syarat' => $fotoPath
-            ]);
-        } else {
-            $koperasis->update([
-                'informasi' => $request->informasi
-            ]);
-        }
+        $koperasis->update([
+            'informasi' => $request->informasi,
+            'foto_syarat' => $fotoPath
+        ]);
 
         return redirect('/admin/list-koperasirw')->with('success', 'Informasi Koperasi Berhasil Diedit!');
     }
