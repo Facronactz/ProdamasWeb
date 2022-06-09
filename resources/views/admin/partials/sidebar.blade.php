@@ -19,7 +19,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
                     <a href="{{ url('/admin/list-menu') }}" class="nav-link @yield('menu')">
-                        <i class="nav-icon fas fa"></i>
+                        <i class="nav-icon fas fa-bars"></i>
                         <p>Menu</p>
                     </a>
                 </li>
