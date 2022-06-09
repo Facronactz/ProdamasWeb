@@ -291,7 +291,7 @@
                                 <a class="nav-link dropdown-toggle dropdown-toggle-split @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">E-Boost</a> --}}
                             <div class="nav-item dropdown nav-list">
                                 <a role="button" class="nav-link nav-list" href="{{ url('/e-boost') }}">E-Boost</a>
-                                <a role="button" style="position: relative; left: 60px; top: 100px;" class="nav-link nav-list dropdown-toggle dropdown-toggle-split" id="dropdownMenuEboost" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                                <a role="button" style="position: relative; left: 60px;" class="nav-link nav-list dropdown-toggle dropdown-toggle-split" id="dropdownMenuEboost" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
                                     <span class="visually-hidden">Toggle Dropdown</span>
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuEboost">
