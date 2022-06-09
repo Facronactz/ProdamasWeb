@@ -284,7 +284,7 @@
                                 <a href="{{ url($menu->link) }}" class="nav-link nav-list @yield('{{ $menu->judul }}')">{{ $menu->judul }}</a>
                             @endforeach
                             <div class="nav-item dropdown nav-list">
-                                <a class="nav-link dropdown-toggle @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">E-Boost</a>
+                                <a class="nav-link dropdown-toggle dropdown-toggle-split @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">E-Boost</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
                                     <li class="dropdown-submenu w-100">
                                         <a class="dropdown-item @yield('sosmed')" href="{{ url('/e-boost') }}">E-Boost <span class="caret fas fa-caret-right ms-3"></span></a>
