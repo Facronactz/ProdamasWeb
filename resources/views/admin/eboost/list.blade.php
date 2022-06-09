@@ -30,6 +30,7 @@ E-Boost Submission
 <table class="table" id="tableEboost">
     <thead class="thead-light">
         <tr>
+            <th scope="col">ID</th>
             <th scope="col">Judul Tentang</th>
             <th scope="col">Caption Tentang</th>
             <th scope="col">Foto Tentang</th>
