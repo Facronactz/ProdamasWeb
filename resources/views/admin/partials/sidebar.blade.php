@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color: #E7DCF3">
     <!-- Brand Logo -->
-    <a href="{{url('/')}}" class="brand-link">
+    <a href="{{ url('/') }}" class="brand-link">
         <img src="{{ asset('img/logoprodamas.png') }}" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-bold">PRODAMAS</span>
     </a>
@@ -67,13 +67,13 @@
                 </li>
                 <li class="nav-item">
                     <a href="/admin/list-kampungkeren" class="nav-link @yield('kampungkeren')">
-                        <i class="nav-icon fas fa-house-user"></i>
+                        <i class="fas fa-city"></i>
                         <p>Kampung Keren</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="/admin/list-bidang" class="nav-link @yield('bidang')">
-                        <i class="nav-icon fas fa-address-card"></i>
+                        <i class="fas fa-bezier-curve"></i></i>
                         <p>Bidang</p>
                     </a>
                 </li>
@@ -90,15 +90,15 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/list-umkm" class="nav-link @yield('umkm')">
-                        <i class="nav-icon fas fa"></i>
-                        <p>UMKM</p>
+                    <a href="/admin/list-eboost" class="nav-link @yield('eboost')">
+                        <i class="fas fa-chart-line"></i>
+                        <p>E-Boost</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/list-eboost" class="nav-link @yield('eboost')">
-                        <i class="nav-icon fas fa"></i>
-                        <p>E-Boost</p>
+                    <a href="/admin/list-umkm" class="nav-link @yield('umkm')">
+                        <i class="nav-icon fas fa-house-user"></i>
+                        <p>UMKM</p>
                     </a>
                 </li>
                 <li class="nav-item">
