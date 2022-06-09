@@ -46,7 +46,8 @@ class artikelController extends Controller
                         ->orderBy('id', 'desc')
                         ->take(3)
                         ->get();
-                return view('artikel.index', compact('artikel', 'artikelupdate', 'totalviews', 'counter'));
+                $menus = Menu::orderBy('id')->get();
+                return view('artikel.index', compact('artikel', 'artikelupdate', 'totalviews','counter', 'menus'));
         }
 
         public function beranda()
@@ -131,7 +132,7 @@ class artikelController extends Controller
                 foreach ($artikel as $item){
                         $tags = $item->tags;
                 }
-                $menus = DB::table('menu')->get();
+                $menus = Menu::orderBy('id')->get();
                 return view('artikel.artikelLay', compact('artikel', 'artikelupdate', 'tags', 'totalviews','counter', 'menus'));
         }
 
