@@ -106,23 +106,23 @@ class EboostAdmin extends Controller
         return redirect('/admin/list-eboost')->with('success', 'Eboost Berhasil Dihapus!');
     }
 
-    public function edit_desc($id)
-    {
-        $descriptions = DescriptionAdmin::findOrFail($id);
-        return view('admin.eboost.editdesc', compact('descriptions'));
-    }
+    // public function edit_desc($id)
+    // {
+    //     $descriptions = DescriptionAdmin::findOrFail($id);
+    //     return view('admin.eboost.editdesc', compact('descriptions'));
+    // }
 
-    public function update_desc($id, Request $request)
-    {
-        $request->validate([
-            'desc_eboost' => 'required',
-        ]);
+    // public function update_desc($id, Request $request)
+    // {
+    //     $request->validate([
+    //         'desc_eboost' => 'required',
+    //     ]);
 
-        $descriptions = DescriptionAdmin::findOrFail($id);
-        $descriptions_data = ["desc_eboost" => $request["desc_eboost"]];
-        $descriptions->update($descriptions_data);
+    //     $descriptions = DescriptionAdmin::findOrFail($id);
+    //     $descriptions_data = ["desc_eboost" => $request["desc_eboost"]];
+    //     $descriptions->update($descriptions_data);
 
-        return redirect('/admin/list-eboost')->with('success', 'Deskripsi Berhasil Diupdate!');
-    }
+    //     return redirect('/admin/list-eboost')->with('success', 'Deskripsi Berhasil Diupdate!');
+    // }
 }
 
