@@ -29,7 +29,7 @@ class PostFotoController extends Controller
                         ->sum('views');
                 // end code jumlah pengunjung
         
-        $posts = Post::orderBy('id', 'desc');
+        $posts = Post::orderBy('id', 'desc')->get();
         $menus = Menu::where('status', 'Show')->get();
 
         // $posts = Post::join('images', 'posts.id', '=', 'images.post_id')
