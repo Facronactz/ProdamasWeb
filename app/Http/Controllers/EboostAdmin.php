@@ -54,7 +54,7 @@ class EboostAdmin extends Controller
 
     public function edit($id)
     {
-        $Eboost = Eboost::findOrFail($id);
+        $eboost = Eboost::findOrFail($id);
         return view('admin.eboost.edit', compact('eboost'));
     }
 
