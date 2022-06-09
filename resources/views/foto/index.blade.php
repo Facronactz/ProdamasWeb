@@ -31,7 +31,7 @@
 <div class="container">
     <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedVideo">
         @forelse ($posts as $post)
-        <div class=" card noBorder cardAudio p-0 m-2" style="width: 23rem">
+        <div class=" card noBorder cardAudio p-0 m-2" style="width: 22.5rem">
             <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$post->id}}">
                 <img src="{{ asset('cover/'. $post->cover) }}" style="width: 100%; height: 250px; object-fit: cover; object-position: center" class="card-img-top d-flex justify-content" alt="foto-prodamas">
                 <div class="card-body">
