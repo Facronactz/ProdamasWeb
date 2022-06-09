@@ -24,7 +24,7 @@ class MediaController extends Controller
                         ->unionAll($artikel)
                         ->unionAll($counter)
                         ->sum('views');
-                $menus = Menu::orderBy('id')->get();
+                $menus = Menu::where('status', 'Show')->get();
                 return view('media.index', compact('totalviews', 'counter', 'menus'));
         }
 }

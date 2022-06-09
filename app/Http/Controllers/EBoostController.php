@@ -21,7 +21,7 @@ class EBoostController extends Controller
             ->unionAll($artikel)
             ->unionAll($counter)
             ->sum('views');
-        $menus = Menu::orderBy('id')->get();
+        $menus = Menu::where('status', 'Show')->get();
         return view('eboost.index', compact('counter','totalviews', 'menus'));
     }
 }

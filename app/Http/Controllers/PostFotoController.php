@@ -31,7 +31,7 @@ class PostFotoController extends Controller
                 // end code jumlah pengunjung
         
         $posts = Post::all()->paginate(4);
-        $menus = Menu::orderBy('id')->get();
+        $menus = Menu::where('status', 'Show')->get();
         // $posts = Post::join('images', 'posts.id', '=', 'images.post_id')
         // ->get(['posts.*', 'images.*']);
         // echo json_encode($posts);die();

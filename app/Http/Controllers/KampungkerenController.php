@@ -32,7 +32,7 @@ class KampungkerenController extends Controller
 
                 $descriptions = DescriptionAdmin::first()->get();
                 $kampungkeren = Kampungkeren::orderBy('id', 'desc')->paginate(6);
-                $menus = Menu::orderBy('id')->get();
+                $menus = Menu::where('status', 'Show')->get();
                 return view('kampungkeren.index', compact('kampungkeren', 'descriptions', 'totalviews','counter', 'menus'));
         }
 }

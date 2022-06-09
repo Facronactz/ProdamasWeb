@@ -28,7 +28,7 @@ class VideoController extends Controller
                         ->unionAll($artikel)
                         ->unionAll($counter)
                         ->sum('views');
-        $menus = Menu::orderBy('id')->get();
+        $menus = Menu::where('status', 'Show')->get();
         $videos = Video::orderBy('id', 'desc')->paginate(4);
         return view('video.index', ['videos' => $videos], compact('totalviews','counter', 'menus'));
     }

@@ -46,7 +46,7 @@ class artikelController extends Controller
                         ->orderBy('id', 'desc')
                         ->take(3)
                         ->get();
-                $menus = Menu::orderBy('id')->get();
+                $menus = Menu::where('status', 'Show')->get();
                 return view('artikel.index', compact('artikel', 'artikelupdate', 'totalviews','counter', 'menus'));
         }
 
@@ -93,7 +93,7 @@ class artikelController extends Controller
                 // dd($audio);
                 $carousels = SettingCarousel::orderBy('id', 'desc')->take(3)->get();
 
-                $menus = Menu::orderBy('id')->get();
+                $menus = Menu::where('status', 'Show')->get();
 
                 // Visitor::find('id')->increment('views');
                 // $visitors = Visitor::orderBy('id')->get();
@@ -132,7 +132,7 @@ class artikelController extends Controller
                 foreach ($artikel as $item){
                         $tags = $item->tags;
                 }
-                $menus = Menu::orderBy('id')->get();
+                $menus = Menu::where('status', 'Show')->get();
                 return view('artikel.artikelLay', compact('artikel', 'artikelupdate', 'tags', 'totalviews','counter', 'menus'));
         }
 
