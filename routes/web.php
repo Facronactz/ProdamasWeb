@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MenuController;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BincangController;
@@ -58,7 +59,6 @@ use App\Models\UMKM;
 
 //tampilan
 Route::get('/', [artikelController::class, 'beranda'])->name('dashboard');
-Route::get('', [MenuController::class, 'index']);
 
 // data
 Route::get('/grafik', [DataController::class, 'grafik']);
