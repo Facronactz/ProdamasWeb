@@ -65,6 +65,15 @@
             </div>
             <div class="modal-body mb-4">
                 <div id="carouselIndicators{{$post->id}}" class="carousel slide mb-4" data-ride="carousel">
+                    <div class="carousel-indicators">
+                        @foreach ($post->image as $no => $image)
+                        @if ($no == 0)
+                            <button type="button" data-bs-target="#carouselIndicators{{$post->id}}" data-bs-slide-to="{{$no}}" class="active" aria-current="true" aria-label="Slide {{$no}}"></button>
+                        @else
+                            <button type="button" data-bs-target="#carouselIndicators{{$post->id}}" data-bs-slide-to="{{$no}}" aria-label="Slide {{$no}}"></button>
+                        @endif
+                        @endforeach
+                    </div>
                     <div class="carousel-inner">
                         @foreach ($post->image as $no => $image)
                         @if ($no == 0)

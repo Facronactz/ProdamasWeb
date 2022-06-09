@@ -46,6 +46,7 @@ use App\Http\Controllers\KoperasiAdminController;
 use App\Http\Controllers\ProdamasAdminController;
 use App\Http\Controllers\SettingCarouselController;
 use App\Http\Controllers\KampungkerenAdminController;
+use App\Http\Controllers\WirausahaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -108,6 +109,9 @@ Route::resource('/e-boost', EBoostController::class);
 
 //  Kurnia
 Route::resource('/kurnia', KurniaController::class);
+
+//  Wirausaha
+Route::resource('/wirausaha', WirausahaController::class);
 
 // UMKM
 Route::resource('/umkm', UMKMController::class);
