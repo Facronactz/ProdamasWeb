@@ -21,6 +21,8 @@ Koperasi RW Submission
                 <th scope="col">ID</th>
                 <th scope="col">Informasi</th>
                 <th scope="col">Syarat</th>
+                <th scope="col">Alur</th>
+                <th scope="col">Legalitas</th>
                 <th scope="col">Aksi</th>
             </tr>
         </thead>
@@ -30,6 +32,8 @@ Koperasi RW Submission
                 <td>{{$kop->id}}</td>
                 <td><?= substr($kop->informasi, 0, 500) ?></td>
                 <td>{{ $kop->foto_syarat }}</td>
+                <td>{{ $kop->foto_alur }}</td>
+                <td>{{ $kop->foto_legalitas }}</td>
                 <td>
                     <form action="/admin/koperasirw/{{$kop->id}}" method="POST">
                         <a href="/admin/koperasirw/{{$kop->id}}" class="btn btn-info">Edit</a>

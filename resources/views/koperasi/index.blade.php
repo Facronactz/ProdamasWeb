@@ -16,19 +16,19 @@
             <div class="mt-2" style="text-indent: 25px;">
                 @foreach ($koperasi as $kop)
                 <?= $kop->informasi ?>
-                <img src="{{ asset('koperasiProd/'.$kop->foto_syarat) }}" alt="">
+                {{-- <img src="{{ asset('koperasiProd/'.$kop->foto_syarat) }}" alt=""> --}}
                 @endforeach
             </div>
             <div>
-                <img class="img-fluid d-flex mx-auto" src="https://via.placeholder.com/1000x300.png?text=Syarat+Pembentukan" alt="" srcset="">
+                <img class="img-fluid d-flex mx-auto" src="{{ asset('koperasiProd/'.$kop->foto_syarat) }}" alt="" srcset="">
             </div>
             <hr>
             <div>
-                <img class="img-fluid d-flex mx-auto" src="https://via.placeholder.com/1000x300.png?text=Alur+Pembentukan" alt="" srcset="">
+                <img class="img-fluid d-flex mx-auto" src="{{ asset('koperasiProd/'.$kop->foto_alur) }}" alt="" srcset="">
             </div>
             <hr>
             <div>
-                <img class="img-fluid d-flex mx-auto" src="https://via.placeholder.com/1000x300.png?text=Legalitas" alt="" srcset="">
+                <img class="img-fluid d-flex mx-auto" src="{{ asset('koperasiProd/'.$kop->foto_legalitas) }}" alt="" srcset="">
             </div>
         </div>
 
