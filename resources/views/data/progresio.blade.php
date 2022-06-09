@@ -1,3 +1,5 @@
+@section('progressio', 'active')
+
 <!DOCTYPE html>
 <html lang="en">
 
