@@ -170,7 +170,7 @@
                     </div>
                 </div>
                 <!-- <button class="btn btn-primary btn-lg" type="button"></button> -->
-                <a class="btn btn-google my-2 btn-lg" href="https://progressio.kedirikota.go.id/auth/login_google" target="_blank"><i class="fab fa-google"></i>
+                <a class="btn btn-google my-2 btn-lg" href="https://progressio.kedirikota.go.id/auth/login_google"><i class="fab fa-google"></i>
                     Masuk / Log in
                 </a>
             </div>
