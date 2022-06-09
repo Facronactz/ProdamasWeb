@@ -65,14 +65,14 @@
             </div>
             <div class="modal-body mb-4">
                 <div id="carouselIndicators{{$post->id}}" class="carousel slide mb-4" data-ride="carousel">
-                    <div class="carousel-indicators">
+                    <div class="carousel-indicators" style="margin-bottom = -20px">
                         @foreach ($post->image as $no => $image)
                         @if ($no == 0)
-                            <button type="button" data-bs-target="#carouselIndicators{{$post->id}}" data-bs-slide-to="{{$no}}" class="active" aria-current="true" aria-label="Slide {{$no}}">
+                            <button style="width: 160px" type="button" data-bs-target="#carouselIndicators{{$post->id}}" data-bs-slide-to="{{$no}}" class="active" aria-current="true" aria-label="Slide {{$no}}">
                                 <img class="d-block w-100 img-fluid" src="{{ asset('images/'. $image->image)}}" alt="">
                             </button>
                         @else
-                            <button type="button" data-bs-target="#carouselIndicators{{$post->id}}" data-bs-slide-to="{{$no}}" aria-label="Slide {{$no}}">
+                            <button style="width: 160px" type="button" data-bs-target="#carouselIndicators{{$post->id}}" data-bs-slide-to="{{$no}}" aria-label="Slide {{$no}}">
                                 <img class="d-block w-100 img-fluid" src="{{ asset('images/'. $image->image)}}" alt="">
                             </button>
                         @endif
