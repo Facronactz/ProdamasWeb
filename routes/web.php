@@ -58,6 +58,7 @@ use App\Models\UMKM;
 
 //tampilan
 Route::get('/', [artikelController::class, 'beranda'])->name('dashboard');
+Route::get('', [MenuController::class, 'index']);
 
 // data
 Route::get('/grafik', [DataController::class, 'grafik']);
