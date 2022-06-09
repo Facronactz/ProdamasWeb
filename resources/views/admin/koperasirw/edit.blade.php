@@ -40,7 +40,7 @@ Edit Informasi Koperasi RW
         </div>
         @enderror
     </div>
-    <div class="form-group">
+    {{-- <div class="form-group">
         <label for="legalitas">Legalitas</label><br>
         <p>{{$koperasi->foto_legalitas}}</p>
         <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="foto_legalitas" id="foto_legalitas" value="{{$koperasi->foto_legalitas}}">
@@ -49,7 +49,7 @@ Edit Informasi Koperasi RW
             {{ $message }}
         </div>
         @enderror
-    </div>
+    </div> --}}
     <button type="submit" class="btn btn-primary">Edit</button>
     <a href="/admin/list-koperasirw" class="btn btn-outline-primary">Back</a>
 </form>
