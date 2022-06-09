@@ -296,15 +296,14 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuEboost">
                                     <li class="dropdown-submenu w-100">
-                                            <li class="dropdown-submenu w-100">
-                                                <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
-                                                    <ul class="dropdown-menu">
-                                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/wirausaha') }}">Wirausaha</a></li>
-                                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">KUBE</a></li>
-                                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">UMKM</a></li>
-                                                    </ul>
-                                                </li>
-                                            </li>
+                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/wirausaha') }}">Wirausaha</a></li>
+                                                <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">KUBE</a></li>
+                                                <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">UMKM</a></li>
+                                            </ul>
+                                        </li>
+                                    </li>
                                                 <li class="w-100"><a class="dropdown-item @yield('bidang')" href="{{ url('/bidang') }}">Akses Permodalan</a></li>
                                                 <li class="w-100"><a class="dropdown-item @yield('kampungkeren')" href="{{ url('/kampungkeren') }}">Pemasaran</a></li>
                                                 <li class="w-100"><a class="dropdown-item @yield('pokmas')" href="{{ url('/pokmas') }}">Publikasi</a></li>
