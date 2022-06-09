@@ -14,12 +14,13 @@ Koperasi RW Submission
 @endif
 
 <div class="form-group">
-    <label style="display:block">Deskripsi Koperasi RW</label>
+    <label style="display:block">Informasi Koperasi RW</label>
     <table class="table">
         <thead class="thead-light">
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Deskripsi</th>
+                <th scope="col">Informasi</th>
+                <th scope="col">Syarat</th>
                 <th scope="col">Aksi</th>
             </tr>
         </thead>
@@ -27,7 +28,8 @@ Koperasi RW Submission
             @foreach($koperasi as $kop)
             <tr>
                 <td>{{$kop->id}}</td>
-                <td><?= substr($kop->deskripsi, 0, 500) ?>
+                <td><?= substr($kop->informasi, 0, 500) ?>
+                <td>{{ $kop->foto_syarat }}
                 <td>
                     <form action="/admin/koperasirw/{{$kop->id}}" method="POST">
                         <a href="/admin/koperasirw/{{$kop->id}}" class="btn btn-info">Edit</a>
