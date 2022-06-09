@@ -167,7 +167,7 @@
                         Pemerintah Kota Kediri. Anda dapat melihat perkembangan dari 0-100% yang menyakup seluruh bidang Prodamas Plus dari tahun 2017 sampai 2021</p>
                     <div class="col-md-3 d-md-flex d-none">
                         <img src="{{asset('img/PRIMARY LOGO.png')}}" alt="" srcset=""
-                            class="mx-auto">
+                            class="mx-auto img-fluid">
                     </div>
                 </div>
                 <!-- <button class="btn btn-primary btn-lg" type="button"></button> -->
