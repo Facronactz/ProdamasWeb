@@ -21,6 +21,8 @@ Koperasi RW Submission
                 <th scope="col">ID</th>
                 <th scope="col">Informasi</th>
                 <th scope="col">Syarat</th>
+                <th scope="col">Alur</th>
+                <th scope="col">Legalitas</th>
                 <th scope="col">Aksi</th>
             </tr>
         </thead>
