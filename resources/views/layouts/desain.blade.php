@@ -13,8 +13,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat&family=Poppins:wght@600&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Icon -->
-    <link href="{{ asset('img/icon.png') }}" rel="icon" />
+    <!-- FavIcon -->
+    {{-- <link href="{{ asset('img/icon.png') }}" rel="icon" /> --}}
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <!-- Font Awesome -->
@@ -31,9 +35,9 @@
     <link rel="stylesheet" href="{{ asset('css/social-color.css') }}">
     @yield('head')
     @hasSection('title')
-    <title>Prodamas Plus - @yield('title')</title>
+        <title>Prodamas Plus - @yield('title')</title>
     @else
-    <title>Prodamas Plus</title>
+        <title>Prodamas Plus</title>
     @endif
 
     <style>
@@ -187,7 +191,7 @@
 <body data-bs-spy="scroll" data-bs-target="#scrollspy" data-bs-offset="0" data-bs-method="position">
     <!-- New Nav -->
     <div class="nav-now" style="background-color: #4d148c; border-bottom: 9px solid #FF6600 ; box-shadow: -2px 5px 10px #aaaaaa;">
-        <a href=" {{ url('/') }}"><img src="{{asset('img/wesite logo 1.png')}}" alt="" class="d-inline-block align-text-top" style="width: 200px; height: auto; padding: 2rem 1.2rem; margin-bottom: -2rem" /></a>
+        <a href=" {{ url('/') }}"><img src="{{ asset('img/wesite logo 1.png') }}" alt="" class="d-inline-block align-text-top" style="width: 200px; height: auto; padding: 2rem 1.2rem; margin-bottom: -2rem" /></a>
         <div class="bg-iki">
             <nav class="navbar navbar-expand-lg navbar-dark bg-kediri sticky-top" style="font-family: 'Poppins', sans-serif;">
                 <div class="container-fluid">
@@ -199,14 +203,14 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                         <!-- Middle -->
                         <div class="navbar-nav">
-                            <a class="nav-link nav-list @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{asset('img/ICON HOME.png')}}" style="width: 20px; height: 20px; margin-right: 1rem"></a>
+                            <a class="nav-link nav-list @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{ asset('img/ICON HOME.png') }}" style="width: 20px; height: 20px; margin-right: 1rem"></a>
                             <a class="nav-link nav-list @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
                             <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
                                     <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('banksampah')" href="{{ url('/banksampah') }}">E-Bank Sampah</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{url('/progressio') }}" target="_blank">Progressio</a></li>
+                                    {{-- <li class="w-100"><a class="dropdown-item @yield('banksampah')" href="{{ url('/banksampah') }}">E-Bank Sampah</a></li> --}}
+                                    <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}" target="_blank">Progressio</a></li>
                                     {{-- <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio</a></li> --}}
                                     {{-- <a class="@yield('progressio')" href="https://progressio.kedirikota.go.id/auth/login">Progressio <span class="caret fas fa-caret-right"></span></a> --}}
                                 </ul>
@@ -237,47 +241,47 @@
                                     <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Pemberi Dana</a></li>
                                 </ul>
                                 </li> --}}
-                                <li class="dropdown-submenu w-100">
-                                    <a class="dropdown-item @yield('sosmed')" href="{{ url('/e-boost') }}">E-Boost <span class="caret fas fa-caret-right ms-3"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="dropdown-submenu w-100">
-                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
-                                            <ul class="dropdown-menu">
-                                                <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Wirausaha</a></li>
-                                                <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">KUBE</a></li>
-                                                <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">UMKM</a></li>
-                                            </ul>
-                                        </li>
-                                </li>
-                                <li class="dropdown-submenu w-100">
-                                <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Akses Permodalan <span class="caret fas fa-caret-right ms-3"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/koperasirw') }}">Koperasi</a></li>
-                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Kurnia</a></li>
-                                    </ul>
-                                </li>
-                                </li>
-                                <li class="dropdown-submenu w-100">
-                                <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/koperasirw') }}">Pemasaran<span class="caret fas fa-caret-right ms-3"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Artikel</a></li>
-                                    </ul>
-                                </li>
-                                </li>
-                                <li class="dropdown-submenu w-100">
-                                <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Publikasi <span class="caret fas fa-caret-right ms-3"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Informasi Pelatihan</a></li>
-                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Testimoni</a></li>
-                                    </ul>
-                                </li>
-                                </li>
+                                    <li class="dropdown-submenu w-100">
+                                        <a class="dropdown-item @yield('sosmed')" href="{{ url('/e-boost') }}">E-Boost <span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-submenu w-100">
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Wirausaha</a></li>
+                                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">KUBE</a></li>
+                                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">UMKM</a></li>
+                                                </ul>
+                                            </li>
+                                    </li>
+                                    <li class="dropdown-submenu w-100">
+                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Akses Permodalan <span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/koperasirw') }}">Koperasi</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Kurnia</a></li>
+                                        </ul>
+                                    </li>
+                                    </li>
+                                    <li class="dropdown-submenu w-100">
+                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/koperasirw') }}">Pemasaran<span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Artikel</a></li>
+                                        </ul>
+                                    </li>
+                                    </li>
+                                    <li class="dropdown-submenu w-100">
+                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Publikasi <span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Informasi Pelatihan</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Testimoni</a></li>
+                                        </ul>
+                                    </li>
+                                    </li>
                                 </ul>
                                 </li>
                                 </ul>
                             </div>
                             @foreach ($menus ?? '' as $menu)
-                            <a href="{{url($menu->link)}}" class="nav-link nav-list @yield('{{$menu->judul}}')">{{$menu->judul}}</a>
+                                <a href="{{ url($menu->link) }}" class="nav-link nav-list @yield('{{ $menu->judul }}')">{{ $menu->judul }}</a>
                             @endforeach
                             <div class="nav-list" id="scrollspy">
                                 <a class="nav-link" href="#footer">Kontak</a>
@@ -289,7 +293,7 @@
                         <div class="navbar-text">
                             <div class="d-flex justify-content-evenly">
                                 <div class="nav-item dropdown nav-list">
-                                    <a class="nav-link" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{{asset('img/ICON CARI.png')}}" style="width: 17px; height: 17px; margin-right: -1rem"></a>
+                                    <a class="nav-link" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="{{ asset('img/ICON CARI.png') }}" style="width: 17px; height: 17px; margin-right: -1rem"></a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout" style="border-radius: 23px;padding:0px;margin-left:-10rem;">
                                         <li class="" style="padding:5px">
                                             <div>
@@ -313,14 +317,14 @@
                                 <a class="align-self-center" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook mx-2 link-light"></i></a>
                                 <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a> -->
                                 @auth
-                                {{-- Button Admin --}}
-                                <a class="align-self-center btn login-icon ms-3" href="/admin"><i class="fas fa-user-shield"></i> Admin</a>
-                                {{-- Button Logout --}}
-                                <a class="align-self-center btn login-icon ms-3" href="/signout"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+                                    {{-- Button Admin --}}
+                                    <a class="align-self-center btn login-icon ms-3" href="/admin"><i class="fas fa-user-shield"></i> Admin</a>
+                                    {{-- Button Logout --}}
+                                    <a class="align-self-center btn login-icon ms-3" href="/signout"><i class="fas fa-sign-out-alt"></i> Log Out</a>
                                 @endauth
                                 @guest
-                                {{-- Button trigger modal --}}
-                                <button class="align-self-center btn login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Sign In</button>
+                                    {{-- Button trigger modal --}}
+                                    <button class="align-self-center btn login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Sign In</button>
                                 @endguest
                             </div>
                         </div>
@@ -335,7 +339,7 @@
     </div>
 
     <!-- Awal footer -->
-    <!-- <footer style="background-image: url('{{url('img/nav_bot.png')}}');background-repeat: no-repeat;background-attachment: local;background-size: cover;"> -->
+    <!-- <footer style="background-image: url('{{ url('img/nav_bot.png') }}');background-repeat: no-repeat;background-attachment: local;background-size: cover;"> -->
     <footer>
         <div class="footer-top" id="footer" style="border-top: 9px solid #FF6600 ;">
             <div class=" container">
@@ -358,66 +362,66 @@
                 </div>
             </div>
             @endsection --}}
-            <div class="row">
-                <div class=" col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
-                    <a href=#><img class="logo-footer" src="{{ asset('img/PRIMARY LOGO WHITE 1.png ') }}" width="130" height="auto" alt="logo-footer" /></a>
-                    <!-- <div style="margin-top: 12px">
+                    <div class="row">
+                        <div class=" col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
+                            <a href=#><img class="logo-footer" src="{{ asset('img/PRIMARY LOGO WHITE 1.png ') }}" width="130" height="auto" alt="logo-footer" /></a>
+                            <!-- <div style="margin-top: 12px">
                     <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
                 </div> -->
-                </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
-                            <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
-                            <div class="line"></div>
-                            <p style="font-weight: 400; font-size: 12px">
-                                Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
-                                Kota kediri, Jawa Timur 64146
-                            </p>
-                            <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon"></i> (0354) 682955</p>
-                            <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon ph"></i> prodamas@kedirikota.go.id</p>
                         </div>
-                        <div class="col-md-6 col-lg-6 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
+                        <div class="col">
                             <div class="row">
-                                <div class="col-md-6 col-lg-6">
-                                    <p class="foot-title">
-                                        NAVIGASI</p>
-                                    <div class="line-nav"></div>
-                                    <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
-                                    {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
-                                    <!-- <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br> -->
-                                    {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
-                                    <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
-                                    <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
+                                <div class="col-md-6 col-lg-6 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
+                                    <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
+                                    <div class="line"></div>
+                                    <p style="font-weight: 400; font-size: 12px">
+                                        Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
+                                        Kota kediri, Jawa Timur 64146
+                                    </p>
+                                    <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon"></i> (0354) 682955</p>
+                                    <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon ph"></i> prodamas@kedirikota.go.id</p>
                                 </div>
-                                <div class="col-md-6 col-lg-6">
-                                    <p class="foot-title">
-                                        TAUTAN EKSTERNAL</p>
-                                    <div class="line-te"></div>
-                                    <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
-                                    <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank
-                                        Sampah</a> <br>
-                                    <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
+                                <div class="col-md-6 col-lg-6 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
+                                    <div class="row">
+                                        <div class="col-md-6 col-lg-6">
+                                            <p class="foot-title">
+                                                NAVIGASI</p>
+                                            <div class="line-nav"></div>
+                                            <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
+                                            {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
+                                            <!-- <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br> -->
+                                            {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
+                                            <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
+                                            <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                            <p class="foot-title">
+                                                TAUTAN EKSTERNAL</p>
+                                            <div class="line-te"></div>
+                                            <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
+                                            {{-- <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank Sampah</a> <br> --}}
+                                            <a class="footer-link" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA">Harmoni TV</a>
+                                            <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="col d-flex">
+                                <div class="line-te" style="margin-right:1rem"></div>
+                                <a style="font-weight: 400; font-size: 12px" href="https://www.youtube.com/channel/UCpfY7_qJn3rupJvZQhb3zww"><i class="fab fa-youtube foot-icon"></i></a>
+                                <a style="font-weight: 400; font-size: 12px" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram foot-icon"></i></a>
+                                <a style="font-weight: 400; font-size: 12px" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
+                                <a style="font-weight: 400; font-size: 12px" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
+                            </div>
+                            <div class="footer-copyright footer-link" style="color: white">&copy; 2022 Prodamas Plus</div>
                         </div>
                     </div>
-                    <div class="col d-flex">
-                        <div class="line-te" style="margin-right:1rem"></div>
-                        <a style="font-weight: 400; font-size: 12px" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i class="fab fa-youtube foot-icon"></i></a>
-                        <a style="font-weight: 400; font-size: 12px" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram foot-icon"></i></a>
-                        <a style="font-weight: 400; font-size: 12px" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
-                        <a style="font-weight: 400; font-size: 12px" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
-                    </div>
-                    <div class="footer-copyright footer-link" style="color: white">&copy; 2022 Prodamas Plus</div>
                 </div>
-            </div>
-        </div>
 
-        <div class="footer-bottom" style="background: transparent;">
-            <div class="container">
-                <div class="row">
-                    {{-- @section('views')
+                <div class="footer-bottom" style="background: transparent;">
+                    <div class="container">
+                        <div class="row">
+                            {{-- @section('views')
                             <div class="d-flex justify-content-end mt-2">
                                 <div style="margin-top: 15px; border-radius: 15px; color: white; text-align:center; background-color: #F58634; padding:5px">
                                     <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
@@ -426,13 +430,13 @@
                 </div>
             </div>
             @endsection --}}
-        </div>
+                        </div>
 
     </footer>
     <!-- Akhir footer -->
 
     <!-- jQuery -->
-    <script src="{{asset('/adminlte/plugins/jquery/jquery.min.js')}}"></script>
+    <script src="{{ asset('/adminlte/plugins/jquery/jquery.min.js') }}"></script>
 
     <!--Script dropdown-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -468,8 +472,7 @@
             });
         });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     @yield('scripts')
     @yield('table')

@@ -16,7 +16,7 @@
 
     <style>
         body {
-            background-image: url("bg_progressio.png");
+            background-image: url("{{asset('img/bg_progressio.png')}}");
             background-repeat: no-repeat;
             background-size: fill;
             margin: 0;
@@ -157,7 +157,7 @@
 
     <section class="d-flex justify-content-center align-items-center align-content-center w-100 flex-column"
         style="height: calc(90vh - 100px)">
-        <img src="PRIMARY LOGO.png" alt="" srcset="" class="mx-auto img-fluid mb-4 d-block d-md-none" style="max-width: 30vw">
+        <img src="{{asset('img/PRIMARY LOGO.png')}}" alt="" srcset="" class="mx-auto img-fluid mb-4 d-block d-md-none" style="max-width: 30vw">
         <div class="p-2 mb-4 rounded-3 mx-2" style="background-color: #fff1ffb6; max-width: 1000px;">
             <div class="container-fluid py-3">
                 <h1 class="display-5 fw-bold">Selamat Datang di <span class="underline px-1">Progressio</span></h1>
