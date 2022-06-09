@@ -72,7 +72,6 @@ class EboostAdmin extends Controller
         $eboost = Eboost::findorfail($id);
         $file = $request->file('foto');
         if ($file != NULL) {
-            File::delete(public_path("../fotoProd/" . $eboost->foto));
             $file=$request->file('foto_tentang');
             $file2=$request->file('foto_info');
             $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
