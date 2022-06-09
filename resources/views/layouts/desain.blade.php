@@ -442,7 +442,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
-    <script>
+    {{-- <script>
         $(function() {
             $('.modal').on('hide.bs.modal', function() {
                 $audio = $(this).find('audio');
@@ -469,6 +469,16 @@
                         return $media[0].paused ? $media[0].play() : $media[0].pause();
                     });
                 }
+            });
+        });
+    </script> --}}
+    <script>
+        $('iframe[src*="https://www.youtube.com/embed/"]').addClass("youtube-iframe");
+
+        $(".modal").on('hide.bs.modal', function() {
+            $('.youtube-iframe').each(function(index) {
+                $(this).attr('src', $(this).attr('src'));
+                return false;
             });
         });
     </script>
