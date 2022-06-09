@@ -37,4 +37,52 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <div style="height:4px; background-color: rgb(0, 0, 0);"> </div>
+    <div class="container">
+        <div class="m-4 mb-5 text-center">
+            <h1><strong>Kurnia</strong></h1>
+            <h4>Segala informasi mengenai kegiatan peningkatan perekonomian <br> di Kota Kediri</h4>
+        </div>
+        <div class="card border-light my-4">
+            <div class="row g-0">
+                <div class="col-lg-4 d-flex justify-content-center">
+                    <img src="https://via.placeholder.com/700x400.png?text=Ukuran+Optimal+=+700px+x+400px"
+                        class="img-fluid" style="max-height: 400px;">
+                </div>
+                <div class="col-lg-8">
+                    <div class="card-body">
+                        <h2 class="card-title">Alur Permodalan</h2>
+                        <div style="height: 2px; background-color:#000000"></div>
+                        <p class="card-text align-middle" style="font-size: 20px">Menindaklanjuti permasalahan masyarakat di Kota Kediri, E-Boost hadir untuk membantu Anda dalam mengetahui informasi mengenai Wirausaha/UMKM, Koperasi RW, KUBE dan informasi lainnya. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card border-light my-4">
+            <div class="row g-0">
+                <div class="col-lg-4 d-flex justify-content-center">
+                    <img src="https://via.placeholder.com/700x400.png?text=Ukuran+Optimal+=+700px+x+400px"
+                        class="img-fluid" style="max-height: 400px;">
+                </div>
+                <div class="col-lg-8">
+                    <div class="card-body">
+                        <h2 class="card-title">Informasi Kurnia</h2>
+                        <div style="height: 2px; background-color:#000000"></div>
+                        <p class="card-text align-middle" style="font-size: 20px">Selamat datang di E-BOOST. Dalam rangka mencapai pertumbuhan ekonomi yang stabil dan berkelanjutan, perlu didukung kokohnya stabilitas makroekonomi dan sistem keuangan. Untuk mendukung upaya tersebut diperlukan pemberdayaan sektor riil khususnya pengembangan Usaha, Mikro, Kecil, dan Menengah (UMKM) yang berkontribusi besar dalam pertumbuhan ekonomi di Indonesia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pt2" style="font-size: 20px; text-align:justify; text-indent: 25px">
+            <p>
+                Untuk menghadapi persaingan pasar global saat ini tidaklah mudah, karena produk UMKM akan bersaing dengan produk negara lain. Peningkatan akses dan jangkauan akses UMKM terhadap jasa keuangan sangat dibutuhkan untuk menghadapi persaingan tersebut. Sehingga pengembangan UMKM tidak luput dari kontribusi pembiayaan dari perbankan dan lembaga keuangan lainnya yang masih memiliki keterbatasan informasi mengenai UMKM potensial lengkap dengan kelayakan usahanya. Selanjutnya, agar terdapat peningkatan penyaluran modal UMKM, diperlukan informasi laporan keuangan yang memadai dari UMKM baik yang telah atau belum terhubung dengan perbankan atau lembaga keuangan lainnya.
+            </p>
+                
+                <p>Sementara itu, UMKM memiliki keterbatasan informasi mengenai produk dan lembaga modal yang sesuai dengan kebutuhan untuk melakukan pengembangan usahanya. Selain itu, diperlukan pula informasi mengenai prosedur dan persyaratan yang harus dipenuhi dalam mengakses pembiayaan</p>
+                
+                <p>Untuk mengatasi kesenjangan informasi dimaksud, E-BOOST hadir  menyediakan media informasi berupa Minisite Info UMKM, KUBE, KOPERASII  yang dapat mendapattkan pembiayaan kepada UMKM melalui Koperasi atau KURNIA. Beragam informasi kami sajikan meliputi informasi komoditi UMKM yang potensial di berbagai daerah, profil UMKM yang layak dibiayai, pola pembiayaan komoditi unggulan, model bisnis pengembangan UMKM, alur skema dan regulasi permodalan, termasuk template proposal , informasi Koperasi, dll.</p>
+        </div>
+    </div>
 @endsection
