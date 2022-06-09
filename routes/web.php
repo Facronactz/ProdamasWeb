@@ -241,8 +241,8 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
 
     // EboostAdmin
     Route::get('/admin/add-eboost', [EboostAdmin::class, 'create']);
-    Route::get('/admin/edit-eboost/{eboost_id}', [EboostAdmin::class, 'edit']);
-    Route::put('/admin/edit-eboost/{eboost_id}', [EboostAdmin::class, 'update']);
+    Route::get('/admin/edit-eboost/{eboosts_id}', [EboostAdmin::class, 'edit']);
+    Route::put('/admin/edit-eboost/{eboosts_id}', [EboostAdmin::class, 'update']);
     Route::post('/admin/list-eboost', [EboostAdmin::class, 'store']);
     Route::get('/admin/list-eboost', [EboostAdmin::class, 'index']);
 });
