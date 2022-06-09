@@ -52,9 +52,9 @@
                 </div>
                 <div class="col-lg-8">
                     <div class="card-body">
-                        <h2 class="card-title">{{$request->judul_tentang}}</h2>
+                        <h2 class="card-title">{{$judul_tentang}}</h2>
                         <div style="height: 2px; background-color:#000000"></div>
-                        <p class="card-text align-middle" style="font-size: 20px">{{$request->caption_tentang}} </p>
+                        <p class="card-text align-middle" style="font-size: 20px">{{$caption_tentang}} </p>
                     </div>
                 </div>
             </div>
@@ -63,14 +63,14 @@
         <div class="card border-light my-4">
             <div class="row g-0">
                 <div class="col-lg-4 d-flex justify-content-center">
-                    <img src="{{$request->foto_tentang}}"
+                    <img src="{{$foto_tentang}}"
                         class="img-fluid" style="max-height: 400px;">
                 </div>
                 <div class="col-lg-8">
                     <div class="card-body">
-                        <h2 class="card-title">{{$request->judul_info}}</h2>
+                        <h2 class="card-title">{{$judul_info}}</h2>
                         <div style="height: 2px; background-color:#000000"></div>
-                        <p class="card-text align-middle" style="font-size: 20px">{{$request->caption_info}}</p>
+                        <p class="card-text align-middle" style="font-size: 20px">{{$caption_info}}</p>
                     </div>
                 </div>
             </div>
