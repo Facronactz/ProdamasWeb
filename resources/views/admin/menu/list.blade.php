@@ -65,14 +65,14 @@ Menu Submission
                         <label for="exampleFormControlInput1" class="form-label">Status</label>
                         <select class="form-select" id="status" name="status">
                             <option selected>{{$menu->status}}</option>
-                            <option value="hidden">Hidden</option>
+                            <option value="Hidden">Hidden</option>
                         </select>
                     </div>
                     @else
                     <label for="exampleFormControlInput1" class="form-label">Status</label>
                     <select class="form-select" id="status" name="status">
                         <option selected>{{$menu->status}}</option>
-                        <option value="show">Show</option>
+                        <option value="Show">Show</option>
                     </select>
                     @endif
                 </div>
