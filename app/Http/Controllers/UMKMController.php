@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use App\Models\UMKM;
 use App\Models\Pict;
-use Illuminate\Routing\Route;
 
 class UMKMController extends Controller
 {
@@ -25,11 +24,7 @@ class UMKMController extends Controller
             ->sum('views');
 
         $picts = Pict::first()->get();
-        Route::get('/umkm', function () {
-            $kotas = UMKM::where('kecamatan', 'Kota')->paginate(3);
-            $kotas->withPath('/umkm/kota');
-        });
-
+        $kotas = UMKM::where('kecamatan', 'Kota')->paginate(3);
         $pesantrens = UMKM::where('kecamatan', 'Pesantren')->paginate(3);
         $mojorotos = UMKM::where('kecamatan', 'Mojoroto')->paginate(3);
         return view('umkm.index', compact(
