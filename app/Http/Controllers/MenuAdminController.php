@@ -61,7 +61,7 @@ class MenuAdminController extends Controller
 
     public function destroy($id)
     {
-        $submission = DB::table('menus')->where('id', $id)->delete();
+        $submission = DB::table('menu')->where('id', $id)->delete();
         return redirect('/admin/list-menu')->with('success', 'Menu Berhasil Dihapus!');
     }
 

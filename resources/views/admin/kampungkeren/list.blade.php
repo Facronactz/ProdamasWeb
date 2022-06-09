@@ -51,7 +51,7 @@ Kampung Keren Submission
                     <a href="/admin/kampungkeren/{{$karen->id}}" class="btn btn-info">Edit</a>
                     @csrf
                     @method('DELETE')
-                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Foto?')" value="Delete">
+                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Kampung Keren?')" value="Delete">
                 </form>
             </td>
         </tr>
