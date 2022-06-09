@@ -28,7 +28,7 @@ class KoperasiController extends Controller
 
         $menus = Menu::orderBy('id')->get();
 
-        $koperasi = Koperasirw::first()->get();
+        $menus = Menu::where('status', 'Show')->get();
         return view('koperasi.index', compact('counter', 'totalviews','koperasi', 'menus'));
     }
 }

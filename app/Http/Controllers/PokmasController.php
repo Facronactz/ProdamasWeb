@@ -28,7 +28,7 @@ class PokmasController extends Controller
                         ->sum('views');
                 $pokmass = Pokmas::orderBy('id')->get();
                 $descriptions = DescriptionAdmin::first()->get();
-                $menus = Menu::orderBy('id')->get();
+                $menus = Menu::where('status', 'Show')->get();
                 return view('pokmas.index', compact('pokmass', 'descriptions', 'totalviews', 'counter', 'menus'));
         }
 }

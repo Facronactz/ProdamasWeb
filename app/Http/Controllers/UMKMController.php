@@ -24,7 +24,7 @@ class UMKMController extends Controller
             ->unionAll($artikel)
             ->unionAll($counter)
             ->sum('views');
-        $menus = Menu::orderBy('id')->get();
+        $menus = Menu::where('status', 'Show')->get();
 
         $picts = Pict::first()->get();
         $kotas = UMKM::where('kecamatan', 'Kota')->paginate(3);

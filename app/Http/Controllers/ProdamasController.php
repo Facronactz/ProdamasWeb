@@ -34,7 +34,7 @@ class ProdamasController extends Controller
                 $prodamass = prodamas::orderBy('id')->get();
                 $transforms = transform::first()->get();
                 $regulasis = regulasi::orderBy('id')->get();
-                $menus = Menu::orderBy('id')->get();
+                $menus = Menu::where('status', 'Show')->get();
                 return view('prodamas.index', compact('prodamass', 'transforms', 'regulasis', 'totalviews','counter', 'menus'));
         }
 }

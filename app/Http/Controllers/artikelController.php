@@ -46,7 +46,8 @@ class artikelController extends Controller
                         ->orderBy('id', 'desc')
                         ->take(3)
                         ->get();
-                return view('artikel.index', compact('artikel', 'artikelupdate', 'totalviews', 'counter'));
+                $menus = Menu::where('status', 'Show')->get();
+                return view('artikel.index', compact('artikel', 'artikelupdate', 'totalviews','counter', 'menus'));
         }
 
         public function beranda()
@@ -92,7 +93,7 @@ class artikelController extends Controller
                 // dd($audio);
                 $carousels = SettingCarousel::orderBy('id', 'desc')->take(3)->get();
 
-                $menus = Menu::orderBy('id')->get();
+                $menus = Menu::where('status', 'Show')->get();
 
                 // Visitor::find('id')->increment('views');
                 // $visitors = Visitor::orderBy('id')->get();
@@ -117,7 +118,6 @@ class artikelController extends Controller
                         ->unionAll($artikel)
                         ->unionAll($counter)
                         ->sum('views');
-                $menus = Menu::orderBy('id')->get();
                 // end code jumlah pengunjung
                 
                 Articleadmin::find($id)->increment('views');
@@ -132,6 +132,7 @@ class artikelController extends Controller
                 foreach ($artikel as $item){
                         $tags = $item->tags;
                 }
+                $menus = Menu::where('status', 'Show')->get();
                 return view('artikel.artikelLay', compact('artikel', 'artikelupdate', 'tags', 'totalviews','counter', 'menus'));
         }
 
