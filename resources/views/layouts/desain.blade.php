@@ -245,7 +245,7 @@
                                     <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Pemberi Dana</a></li>
                                 </ul>
                                 </li> --}}
-                                <li class="dropdown-submenu w-100">
+                                {{-- <li class="dropdown-submenu w-100">
                                     <a class="dropdown-item @yield('sosmed')" href="{{ url('/e-boost') }}">E-Boost <span class="caret fas fa-caret-right ms-3"></span></a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-submenu w-100">
@@ -282,14 +282,13 @@
                                 </li>
                                 </ul>
                                 </li>
-                                </ul>
+                                </ul> --}}
                             </div>
                             @foreach ($menus ?? '' as $menu)
                             <a href="{{ url($menu->link) }}" class="nav-link nav-list @yield('{{ $menu->judul }}')">{{ $menu->judul }}</a>
                             @endforeach
                             <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle dropdown-toggle-split @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">E-Boost </a>
-                                
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuEboost">
                                     <li class="dropdown-submenu w-100">
                                         <a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
