@@ -287,13 +287,8 @@
                             @foreach ($menus ?? '' as $menu)
                             <a href="{{ url($menu->link) }}" class="nav-link nav-list @yield('{{ $menu->judul }}')">{{ $menu->judul }}</a>
                             @endforeach
-                            {{-- <div class="nav-item dropdown nav-list">
-                                <a class="nav-link dropdown-toggle dropdown-toggle-split @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">E-Boost</a> --}}
                             <div class="nav-item dropdown nav-list">
-                                <a role="button" class="nav-link nav-list" href="{{ url('/e-boost') }}">E-Boost</a>
-                                <a role="button" style="width: 17px; height: 17px; margin-right: -1rem;" class="nav-link nav-list dropdown-toggle dropdown-toggle-split" id="dropdownMenuEboost" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
-                                    <span class="visually-hidden">Toggle Dropdown</span>
-                                </a>
+                                <a class="nav-link dropdown-toggle dropdown-toggle-split @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">E-Boost</a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuEboost">
                                     <li class="dropdown-submenu w-100">
                                         <a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
@@ -302,7 +297,6 @@
                                             <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/wirausaha') }}">Wirausaha</a></li>
                                             <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">UMKM</a></li>
                                             <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">KUBE</a></li>
-                                        
                                     </li>
                                 </ul>
                                 </li>
