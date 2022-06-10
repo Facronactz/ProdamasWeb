@@ -63,17 +63,17 @@
                 <h2 class="modal-title" id="fotoLabel">{{ $post->title }}</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body mb-4">
-                <div id="carouselIndicators{{$post->id}}" class="carousel slide mb-4" data-ride="carousel">
-                    <div class="carousel-indicators" style="margin-bottom = -20px">
+            <div class="modal-body">
+                <div id="carouselIndicators{{$post->id}}" class="carousel slide" data-ride="carousel" style="margin-bottom: 120px">
+                    <div class="carousel-indicators" style="margin-bottom: -20px">
                         @foreach ($post->image as $no => $image)
                         @if ($no == 0)
                             <button style="width: 160px" type="button" data-bs-target="#carouselIndicators{{$post->id}}" data-bs-slide-to="{{$no}}" class="active" aria-current="true" aria-label="Slide {{$no}}">
-                                <img class="d-block w-100 img-fluid" src="{{ asset('images/'. $image->image)}}" alt="">
+                                <img class="d-block w-100 img-fluid" style="max-height: 120px" src="{{ asset('images/'. $image->image)}}" alt="">
                             </button>
                         @else
                             <button style="width: 160px" type="button" data-bs-target="#carouselIndicators{{$post->id}}" data-bs-slide-to="{{$no}}" aria-label="Slide {{$no}}">
-                                <img class="d-block w-100 img-fluid" src="{{ asset('images/'. $image->image)}}" alt="">
+                                <img class="d-block w-100 img-fluid" style="max-height: 120px" src="{{ asset('images/'. $image->image)}}" alt="">
                             </button>
                         @endif
                         @endforeach
@@ -102,7 +102,7 @@
                 </div>
                 <!-- </div> -->
 
-                <h5>{{ $post->body }}</h5>
+                <h5 class="pt-3">{{ $post->body }}</h5>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>

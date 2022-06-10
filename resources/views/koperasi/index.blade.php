@@ -32,9 +32,6 @@
             </div>
         </div>
 
-
-        <div style="height:4px; background-color: rgb(0, 0, 0);"> </div>
-        <div class="container">
         <div class="m-4 mb-5">
             <h1>Daftar Koperasi RW</h1>
             <div class="row row-cols-3 g-5">
