@@ -302,7 +302,7 @@
                                             <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/wirausaha') }}">Wirausaha</a></li>
                                             <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">UMKM</a></li>
                                             <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">KUBE</a></li>
-                                        </ul>
+                                        
                                     </li>
                                 </ul>
                                 </li>
