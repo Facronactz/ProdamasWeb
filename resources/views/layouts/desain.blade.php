@@ -35,9 +35,9 @@
     <link rel="stylesheet" href="{{ asset('css/social-color.css') }}">
     @yield('head')
     @hasSection('title')
-    <title>Prodamas Plus - @yield('title')</title>
+        <title>Prodamas Plus - @yield('title')</title>
     @else
-    <title>Prodamas Plus</title>
+        <title>Prodamas Plus</title>
     @endif
 
     <style>
@@ -179,10 +179,6 @@
             position: relative;
         }
 
-        .arrow-menu {
-            position: relative;
-        }
-
         .dropdown-submenu .dropdown-menu {
             top: 0;
             left: 100%;
@@ -210,15 +206,6 @@
                             <a class="nav-link nav-list @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{ asset('img/ICON HOME.png') }}" style="width: 20px; height: 20px; margin-right: 1rem"></a>
                             <a class="nav-link nav-list @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
                             <div class="nav-item dropdown nav-list">
-                                <a class="nav-link dropdown-toggle @yield('media')" id="navbarDropdownMenuLinkMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkMedia">
-                                    <li class="w-100"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('audio')" href="{{ url('/audio') }}">Audio</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/media') }}">MedSos</a></li>
-                                </ul>
-                            </div>
-                            <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
                                     <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
@@ -229,61 +216,96 @@
                                 </ul>
                             </div>
                             <div class="nav-item dropdown nav-list">
+                                <a class="nav-link dropdown-toggle @yield('media')" id="navbarDropdownMenuLinkMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkMedia">
+                                    <li class="w-100"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('audio')" href="{{ url('/audio') }}">Audio</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/media') }}">MedSos</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tentang</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
                                     <li class="w-100"><a class="dropdown-item @yield('prodamas')" href="{{ url('/prodamas') }}">Prodamas</a></li>
                                     <li class="w-100"><a class="dropdown-item @yield('bidang')" href="{{ url('/bidang') }}">Bidang</a></li>
                                     <li class="w-100"><a class="dropdown-item @yield('kampungkeren')" href="{{ url('/kampungkeren') }}">Kampung Keren</a></li>
                                     <li class="w-100"><a class="dropdown-item @yield('pokmas')" href="{{ url('/pokmas') }}">POKMAS</a></li>
+                                    {{-- <li class="w-100"><a class="dropdown-item @yield('eko')" href="{{ url('/kubperasi') }}">Kube & Koperasi</a></li> --}}
+                                    {{-- <li class="btn-group dropstart w-100">
+                                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                          Kube & Koperasi
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Peminjam</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Pemberi Dana</a></li>
+                                </ul>
+                                </li> --}}
+                                    <li class="dropdown-submenu w-100">
+                                        <a class="dropdown-item @yield('sosmed')" href="{{ url('/e-boost') }}">E-Boost <span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-submenu w-100">
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Wirausaha</a></li>
+                                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">KUBE</a></li>
+                                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">UMKM</a></li>
+                                                </ul>
+                                            </li>
+                                        </li>
+                                    <li class="dropdown-submenu w-100">
+                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Akses Permodalan <span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/koperasirw') }}">Koperasi</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/kurnia') }}">Kurnia</a></li>
+                                        </ul>
+                                    </li>
+                                    </li>
+                                    <li class="dropdown-submenu w-100">
+                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/koperasirw') }}">Pemasaran<span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Artikel</a></li>
+                                        </ul>
+                                    </li>
+                                    </li>
+                                    <li class="dropdown-submenu w-100">
+                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Publikasi <span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Informasi Pelatihan</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Testimoni</a></li>
+                                        </ul>
+                                    </li>
+                                    </li>
+                                </ul>
+                                </li>
                                 </ul>
                             </div>
                             @foreach ($menus ?? '' as $menu)
-                            <a href="{{ url($menu->link) }}" class="nav-link nav-list @yield('{{ $menu->judul }}')">{{ $menu->judul }}</a>
+                                <a href="{{ url($menu->link) }}" class="nav-link nav-list @yield('{{ $menu->judul }}')">{{ $menu->judul }}</a>
                             @endforeach
-                            <div class="nav-item dropdown nav-list">
-                                <a class="nav-link dropdown-toggle dropdown-toggle-split @yield('eboost')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">E-Boost</a>
-                                <li class="dropdown-submenu w-100">
-                                    <a class="dropdown-item @yield('eboost')" href="{{ url('/e-boost') }}">Eboost <span class="caret fas fa-caret-right ms-3"></span></a>
-                                </li>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuEboost">
-                                    <li class="dropdown-submenu w-100">
-                                        <a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-submenu w-100">
-                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/wirausaha') }}">Wirausaha</a></li>
-                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">UMKM</a></li>
-                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">KUBE</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <li class="dropdown-submenu w-100">
-                                    <a class="dropdown-item @yield('sosmed')" href="{{ url('/permodalan') }}">Akses Permodalan <span class="caret fas fa-caret-right ms-3"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="dropdown-submenu w-100">
-                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/koperasirw') }}">Koperasi</a></li>
-                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/kurnia') }}">Kurnia</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="dropdown-submenu w-100">
-                                    <a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Pemasaran<span class="caret fas fa-caret-right ms-3"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="dropdown-submenu w-100">
-                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/wirausaha') }}">Artikel</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="dropdown-submenu w-100">
-                                    <a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Publikasi<span class="caret fas fa-caret-right ms-3"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="dropdown-submenu w-100">
-                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/wirausaha') }}">Informasi Pelatihan</a></li>
-                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/wirausaha') }}">Testimoni</a></li>
-                                    </ul>
-                                </li>
-                            </div>
                             <div class="nav-list" id="scrollspy">
                                 <a class="nav-link" href="#footer">Kontak</a>
+                            </div>
+                            <div class="nav-item dropdown nav-list">
+                                <a class="nav-link dropdown-toggle @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">E-Boost</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout">
+                                    <li class="dropdown-submenu w-100">
+                                        <a class="dropdown-item @yield('sosmed')" href="{{ url('/e-boost') }}">E-Boost <span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-submenu w-100">
+                                                <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
+                                                    <ul class="dropdown-menu">
+                                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/wirausaha') }}">Wirausaha</a></li>
+                                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">KUBE</a></li>
+                                                        <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">UMKM</a></li>
+                                                    </ul>
+                                                </li>
+                                            </li>
+                                                <li class="w-100"><a class="dropdown-item @yield('bidang')" href="{{ url('/bidang') }}">Akses Permodalan</a></li>
+                                                <li class="w-100"><a class="dropdown-item @yield('kampungkeren')" href="{{ url('/kampungkeren') }}">Pemasaran</a></li>
+                                                <li class="w-100"><a class="dropdown-item @yield('pokmas')" href="{{ url('/pokmas') }}">Publikasi</a></li>
+                                        </ul>
+                                </ul>
                             </div>
                             {{-- <a class="nav-link nav-list @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a> --}}
                         </div>
@@ -316,14 +338,14 @@
                                 <a class="align-self-center" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook mx-2 link-light"></i></a>
                                 <a class="align-self-center" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok mx-2 link-light"></i></a> -->
                                 @auth
-                                {{-- Button Admin --}}
-                                <a class="align-self-center btn login-icon ms-3" href="/admin"><i class="fas fa-user-shield"></i> Admin</a>
-                                {{-- Button Logout --}}
-                                <a class="align-self-center btn login-icon ms-3" href="/signout"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+                                    {{-- Button Admin --}}
+                                    <a class="align-self-center btn login-icon ms-3" href="/admin"><i class="fas fa-user-shield"></i> Admin</a>
+                                    {{-- Button Logout --}}
+                                    <a class="align-self-center btn login-icon ms-3" href="/signout"><i class="fas fa-sign-out-alt"></i> Log Out</a>
                                 @endauth
                                 @guest
-                                {{-- Button trigger modal --}}
-                                <button class="align-self-center btn login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Sign In</button>
+                                    {{-- Button trigger modal --}}
+                                    <button class="align-self-center btn login-icon ms-3" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt"></i> Sign In</button>
                                 @endguest
                             </div>
                         </div>
@@ -361,66 +383,66 @@
                 </div>
             </div>
             @endsection --}}
-            <div class="row">
-                <div class=" col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
-                    <a href=#><img class="logo-footer" src="{{ asset('img/PRIMARY LOGO WHITE 1.png ') }}" width="130" height="auto" alt="logo-footer" /></a>
-                    <!-- <div style="margin-top: 12px">
+                    <div class="row">
+                        <div class=" col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
+                            <a href=#><img class="logo-footer" src="{{ asset('img/PRIMARY LOGO WHITE 1.png ') }}" width="130" height="auto" alt="logo-footer" /></a>
+                            <!-- <div style="margin-top: 12px">
                     <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
                 </div> -->
-                </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
-                            <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
-                            <div class="line"></div>
-                            <p style="font-weight: 400; font-size: 12px">
-                                Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
-                                Kota kediri, Jawa Timur 64146
-                            </p>
-                            <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon"></i> (0354) 682955</p>
-                            <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon ph"></i> prodamas@kedirikota.go.id</p>
                         </div>
-                        <div class="col-md-6 col-lg-6 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
+                        <div class="col">
                             <div class="row">
-                                <div class="col-md-6 col-lg-6">
-                                    <p class="foot-title">
-                                        NAVIGASI</p>
-                                    <div class="line-nav"></div>
-                                    <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
-                                    {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
-                                    <!-- <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br> -->
-                                    {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
-                                    <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
-                                    <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
+                                <div class="col-md-6 col-lg-6 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
+                                    <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
+                                    <div class="line"></div>
+                                    <p style="font-weight: 400; font-size: 12px">
+                                        Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
+                                        Kota kediri, Jawa Timur 64146
+                                    </p>
+                                    <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon"></i> (0354) 682955</p>
+                                    <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon ph"></i> prodamas@kedirikota.go.id</p>
                                 </div>
-                                <div class="col-md-6 col-lg-6">
-                                    <p class="foot-title">
-                                        TAUTAN EKSTERNAL</p>
-                                    <div class="line-te"></div>
-                                    <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br>
-                                    {{-- <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank Sampah</a> <br> --}}
-                                    <a class="footer-link" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA">Harmoni TV</a><br>
-                                    <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
+                                <div class="col-md-6 col-lg-6 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
+                                    <div class="row">
+                                        <div class="col-md-6 col-lg-6">
+                                            <p class="foot-title">
+                                                NAVIGASI</p>
+                                            <div class="line-nav"></div>
+                                            <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
+                                            {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
+                                            <!-- <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br> -->
+                                            {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
+                                            <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
+                                            <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                            <p class="foot-title">
+                                                TAUTAN EKSTERNAL</p>
+                                            <div class="line-te"></div>
+                                            <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br>
+                                            {{-- <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank Sampah</a> <br> --}}
+                                            <a class="footer-link" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA">Harmoni TV</a><br>
+                                            <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="col d-flex">
+                                <div class="line-te" style="margin-right:1rem"></div>
+                                <a style="font-weight: 400; font-size: 12px" href="https://www.youtube.com/channel/UCpfY7_qJn3rupJvZQhb3zww"><i class="fab fa-youtube foot-icon"></i></a>
+                                <a style="font-weight: 400; font-size: 12px" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram foot-icon"></i></a>
+                                <a style="font-weight: 400; font-size: 12px" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
+                                <a style="font-weight: 400; font-size: 12px" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
+                            </div>
+                            <div class="footer-copyright footer-link" style="color: white">&copy; 2022 Prodamas Plus</div>
                         </div>
                     </div>
-                    <div class="col d-flex">
-                        <div class="line-te" style="margin-right:1rem"></div>
-                        <a style="font-weight: 400; font-size: 12px" href="https://www.youtube.com/channel/UCpfY7_qJn3rupJvZQhb3zww"><i class="fab fa-youtube foot-icon"></i></a>
-                        <a style="font-weight: 400; font-size: 12px" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram foot-icon"></i></a>
-                        <a style="font-weight: 400; font-size: 12px" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
-                        <a style="font-weight: 400; font-size: 12px" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
-                    </div>
-                    <div class="footer-copyright footer-link" style="color: white">&copy; 2022 Prodamas Plus</div>
                 </div>
-            </div>
-        </div>
 
-        <div class="footer-bottom" style="background: transparent;">
-            <div class="container">
-                <div class="row">
-                    {{-- @section('views')
+                <div class="footer-bottom" style="background: transparent;">
+                    <div class="container">
+                        <div class="row">
+                            {{-- @section('views')
                             <div class="d-flex justify-content-end mt-2">
                                 <div style="margin-top: 15px; border-radius: 15px; color: white; text-align:center; background-color: #F58634; padding:5px">
                                     <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
@@ -429,7 +451,7 @@
                 </div>
             </div>
             @endsection --}}
-        </div>
+                        </div>
 
     </footer>
     <!-- Akhir footer -->
