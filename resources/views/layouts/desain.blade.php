@@ -179,6 +179,10 @@
             position: relative;
         }
 
+        .arrow-menu {
+            position: relative;
+        }
+
         .dropdown-submenu .dropdown-menu {
             top: 0;
             left: 100%;
@@ -206,6 +210,15 @@
                             <a class="nav-link nav-list @yield('beranda')" aria-current="page" href="{{ url('/') }}"><img src="{{ asset('img/ICON HOME.png') }}" style="width: 20px; height: 20px; margin-right: 1rem"></a>
                             <a class="nav-link nav-list @yield('artikel')" href="{{ url('/artikel') }}">Artikel</a>
                             <div class="nav-item dropdown nav-list">
+                                <a class="nav-link dropdown-toggle @yield('media')" id="navbarDropdownMenuLinkMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkMedia">
+                                    <li class="w-100"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('audio')" href="{{ url('/audio') }}">Audio</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/media') }}">MedSos</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
                                     <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
@@ -213,15 +226,6 @@
                                     <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}" target="_blank">Progressio</a></li>
                                     {{-- <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio</a></li> --}}
                                     {{-- <a class="@yield('progressio')" href="https://progressio.kedirikota.go.id/auth/login">Progressio <span class="caret fas fa-caret-right"></span></a> --}}
-                                </ul>
-                            </div>
-                            <div class="nav-item dropdown nav-list">
-                                <a class="nav-link dropdown-toggle @yield('media')" id="navbarDropdownMenuLinkMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkMedia">
-                                    <li class="w-100"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('audio')" href="{{ url('/audio') }}">Audio</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/media') }}">MedSos</a></li>
                                 </ul>
                             </div>
                             <div class="nav-item dropdown nav-list">
@@ -283,16 +287,21 @@
                             @foreach ($menus ?? '' as $menu)
                             <a href="{{ url($menu->link) }}" class="nav-link nav-list @yield('{{ $menu->judul }}')">{{ $menu->judul }}</a>
                             @endforeach
-                            <div class="nav-list" id="scrollspy">
-                                <a class="nav-link" href="#footer">Kontak</a>
-                            </div>
+                            {{-- <div class="nav-item dropdown nav-list">
+                                <a class="nav-link dropdown-toggle dropdown-toggle-split @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">E-Boost</a> --}}
                             <div class="nav-item dropdown nav-list">
-                                <a class="nav-link dropdown-toggle @yield('main-tentang')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">E-Boost</a>
-                                <ul class="dropdown-menu">
+                                <a role="button" class="nav-link nav-list" href="{{ url('/e-boost') }}">E-Boost</a>
+                                <a role="button" style="width: 17px; height: 17px; margin-right: -1rem;" class="nav-link nav-list dropdown-toggle dropdown-toggle-split" id="dropdownMenuEboost" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuEboost">
                                     <li class="dropdown-submenu w-100">
-                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/wirausaha') }}">Wirausaha</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">KUBE</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">UMKM</a></li>
+                                        <a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-submenu w-100">
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/wirausaha') }}">Wirausaha</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">KUBE</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/umkm') }}">UMKM</a></li>
                                     </li>
                                 </ul>
                                 </li>
@@ -321,6 +330,11 @@
                                         <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/wirausaha') }}">Testimoni</a></li>
                                 </li>
                                 </ul>
+                                </li>
+                                </ul>
+                            </div>
+                            <div class="nav-list" id="scrollspy">
+                                <a class="nav-link" href="#footer">Kontak</a>
                             </div>
                             {{-- <a class="nav-link nav-list @yield('cerita')" href="{{ url('/cerita') }}">Masyarakat Bercerita</a> --}}
                         </div>
