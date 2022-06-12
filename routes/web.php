@@ -257,6 +257,13 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/list-koperasirw', [KoperasiAdminController::class, 'index']);
     Route::get('/admin/koperasirw/{koperasi_id}', [KoperasiAdminController::class, 'edit']);
     Route::put('/admin/koperasirw/{koperasi_id}', [KoperasiAdminController::class, 'update']);
+    Route::get('/admin/editpict/{pict_id}', [KoperasiAdminController::class, 'edit_pict']);
+    Route::put('/admin/editpict/{pict_id}', [KoperasiAdminController::class, 'update_pict']);
+    Route::get('/admin/add-koperasirw', [KoperasiAdminController::class, 'createlist']);
+    Route::post('/admin/storelist-koperasirw', [KoperasiAdminController::class, 'storelist']);
+    Route::get('/admin/edit-koperasirw/{daf_id}', [KoperasiAdminController::class, 'editlist']);
+    Route::put('/admin/edit-koperasirw/{daf_id}', [KoperasiAdminController::class, 'updatelist']);
+    Route::delete('/admin/edit-koperasirw/{daf_id}', [KoperasiAdminController::class, 'destroylist']);
 
     // EboostAdmin
     Route::get('/admin/add-eboost', [EboostAdmin::class, 'create']);
