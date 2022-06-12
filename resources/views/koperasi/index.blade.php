@@ -16,7 +16,6 @@
             <div class="mt-2" style="text-indent: 25px;">
                 @foreach ($koperasi as $kop)
                 <?= $kop->informasi ?>
-                {{-- <img src="{{ asset('koperasiProd/'.$kop->foto_syarat) }}" alt=""> --}}
                 @endforeach
             </div>
             <div>
@@ -32,243 +31,156 @@
             </div>
         </div>
 
-        <div class="m-4 mb-5">
-            <h1>Daftar Koperasi RW</h1>
+        <div class="mb-5">
+            <h1>Daftar Sentra UMKM</h1>
             <div class="row row-cols-3 g-5">
-                <img id="bKota" style="cursor: pointer;" class="col" src="https://via.placeholder.com/250x150.png?text=Kec.+Kota" alt="" srcset="">
-                <img id="bPesantren" style="cursor: pointer;" class="col" src="https://via.placeholder.com/250x150.png?text=Kec.+Pesantren" alt="" srcset="">
-                <img id="bMojoroto" style="cursor: pointer;" class="col" src="https://via.placeholder.com/250x150.png?text=Kec.+Mojoroto" alt="" srcset="">
+              @foreach($picts as $pict)
+              <img id="bKota" style="cursor: pointer;" class="col" src="{{asset('UMKMProd/'.$pict->kota)}}" alt="" srcset="">
+              <img id="bPesantren" style="cursor: pointer;" class="col" src="{{asset('UMKMProd/'.$pict->pesantren)}}" alt="" srcset="">
+              <img id="bMojoroto" style="cursor: pointer;" class="col" src="{{asset('UMKMProd/'.$pict->mojoroto)}}" alt="" srcset="">
+              @endforeach
             </div>
-        </div>
-
-        <div id="kota">
+          </div>
+      
+          <div id="kota">
             <h1>Kec. Kota</h1>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                <div class="col">
-                    <div class="card">
-                        <h3 class="card-header">KOPERASI RW 01</h3>
-                        <img src="https://awsimages.detik.net.id/community/media/visual/2019/12/20/905dfd3e-6cfd-46ff-b464-e86baa80c305_43.jpeg?w=700&q=90" class="" alt="..." />
-                        <div class="card-body">
-                            <dl class="row my-0">
-                                <dt class="col-sm-5">Kelurahan</dt>
-                                <dd class="col-sm-7 my-0">: Bandar</dd>
-                                <dt class="col-sm-5">jenis</dt>
-                                <dd class="col-sm-7 my-0">: Pangan</dd>
-                                <dt class="col-sm-5">Thn Berdiri</dt>
-                                <dd class="col-sm-7 my-0">: 2009</dd>
-                                <dt class="col-sm-5">Contact</dt>
-                                <dd class="col-sm-7 my-0">: 08123123123</dd>
-                                <dt class="col-sm-5">Alamat:</dt>
-                                <dd class="col-sm-7 my-0">: JL. BLABLA NO 54 GG 4 RT 2 RW 5</dd>
-                            </dl>
-                        </div>
-                    </div>
+              @foreach ($kotas as $kota)
+              <div class="col">
+                <div class="card">
+                  <h3 class="card-header">{{$kota->judul}}</h3>
+                  <img src="{{asset('koperasidaftarProd/'.$kota->foto)}}" class="" alt="..." />
+                  <div class="card-body">
+                    <dl class="row my-0">
+                      <dt class="col-sm-5">Kelurahan</dt>
+                      <dd class="col-sm-7 my-0">: {{$kota->kelurahan}}</dd>
+                      <dt class="col-sm-5">Jenis</dt>
+                      <dd class="col-sm-7 my-0">: {{$kota->jenis}}</dd>
+                      <dt class="col-sm-5">Thn Berdiri</dt>
+                      <dd class="col-sm-7 my-0">: {{$kota->tahun}}</dd>
+                      <dt class="col-sm-5">Contact</dt>
+                      <dd class="col-sm-7 my-0">: {{$kota->contact}}</dd>
+                      <dt class="col-sm-5">Alamat:</dt>
+                      <dd class="col-sm-7 my-0">: {{$kota->alamat}}</dd>
+                    </dl>
+                  </div>
                 </div>
-
-                <div class="col">
-                    <div class="card">
-                        <h3 class="card-header">KOPERASI RW 01</h3>
-                        <img src="https://awsimages.detik.net.id/community/media/visual/2019/12/20/905dfd3e-6cfd-46ff-b464-e86baa80c305_43.jpeg?w=700&q=90" class="" alt="..." />
-                        <div class="card-body">
-                            <dl class="row my-0">
-                                <dt class="col-sm-5">Kelurahan</dt>
-                                <dd class="col-sm-7 my-0">: Bandar</dd>
-                                <dt class="col-sm-5">jenis</dt>
-                                <dd class="col-sm-7 my-0">: Pangan</dd>
-                                <dt class="col-sm-5">Thn Berdiri</dt>
-                                <dd class="col-sm-7 my-0">: 2009</dd>
-                                <dt class="col-sm-5">Contact</dt>
-                                <dd class="col-sm-7 my-0">: 08123123123</dd>
-                                <dt class="col-sm-5">Alamat:</dt>
-                                <dd class="col-sm-7 my-0">: JL. BLABLA NO 54 GG 4 RT 2 RW 5</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <h3 class="card-header">KOPERASI RW 01</h3>
-                        <img src="https://awsimages.detik.net.id/community/media/visual/2019/12/20/905dfd3e-6cfd-46ff-b464-e86baa80c305_43.jpeg?w=700&q=90" class="" alt="..." />
-                        <div class="card-body">
-                            <dl class="row my-0">
-                                <dt class="col-sm-5">Kelurahan</dt>
-                                <dd class="col-sm-7 my-0">: Bandar</dd>
-                                <dt class="col-sm-5">jenis</dt>
-                                <dd class="col-sm-7 my-0">: Pangan</dd>
-                                <dt class="col-sm-5">Thn Berdiri</dt>
-                                <dd class="col-sm-7 my-0">: 2009</dd>
-                                <dt class="col-sm-5">Contact</dt>
-                                <dd class="col-sm-7 my-0">: 08123123123</dd>
-                                <dt class="col-sm-5">Alamat:</dt>
-                                <dd class="col-sm-7 my-0">: JL. BLABLA NO 54 GG 4 RT 2 RW 5</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              @endforeach
+              <div class="d-flex justify-content-end w-100 my-3">
+                {{ $kotas->links() }}
+              </div>
             </div>
-        </div>
-
-        <div id="pesantren">
+          </div>
+      
+          <div id="pesantren">
             <h1>Kec. Pesantren</h1>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                <div class="col">
-                    <div class="card">
-                        <h3 class="card-header">KOPERASI RW 02</h3>
-                        <img src="https://awsimages.detik.net.id/community/media/visual/2019/12/20/905dfd3e-6cfd-46ff-b464-e86baa80c305_43.jpeg?w=700&q=90" class="" alt="..." />
-                        <div class="card-body">
-                            <dl class="row my-0">
-                                <dt class="col-sm-5">Kelurahan</dt>
-                                <dd class="col-sm-7 my-0">: Bandar</dd>
-                                <dt class="col-sm-5">jenis</dt>
-                                <dd class="col-sm-7 my-0">: Pangan</dd>
-                                <dt class="col-sm-5">Thn Berdiri</dt>
-                                <dd class="col-sm-7 my-0">: 2009</dd>
-                                <dt class="col-sm-5">Contact</dt>
-                                <dd class="col-sm-7 my-0">: 08123123123</dd>
-                                <dt class="col-sm-5">Alamat:</dt>
-                                <dd class="col-sm-7 my-0">: JL. BLABLA NO 54 GG 4 RT 2 RW 5</dd>
-                            </dl>
-                        </div>
-                    </div>
+              @foreach ($pesantrens as $pesantren)
+              <div class="col">
+                <div class="card">
+                  <h3 class="card-header">{{$pesantren->judul}}</h3>
+                  <img src="{{asset('koperasidaftarProd/'.$pesantren->foto)}}" class="" alt="..." />
+                  <div class="card-body">
+                    <dl class="row my-0">
+                      <dt class="col-sm-5">Kelurahan</dt>
+                      <dd class="col-sm-7 my-0">: {{$pesantren->kelurahan}}</dd>
+                      <dt class="col-sm-5">Jenis</dt>
+                      <dd class="col-sm-7 my-0">: {{$pesantren->jenis}}</dd>
+                      <dt class="col-sm-5">Thn Berdiri</dt>
+                      <dd class="col-sm-7 my-0">: {{$pesantren->tahun}}</dd>
+                      <dt class="col-sm-5">Contact</dt>
+                      <dd class="col-sm-7 my-0">: {{$pesantren->contact}}</dd>
+                      <dt class="col-sm-5">Alamat:</dt>
+                      <dd class="col-sm-7 my-0">: {{$pesantren->alamat}}</dd>
+                    </dl>
+                  </div>
                 </div>
-
-                <div class="col">
-                    <div class="card">
-                        <h3 class="card-header">KOPERASI RW 02</h3>
-                        <img src="https://awsimages.detik.net.id/community/media/visual/2019/12/20/905dfd3e-6cfd-46ff-b464-e86baa80c305_43.jpeg?w=700&q=90" class="" alt="..." />
-                        <div class="card-body">
-                            <dl class="row my-0">
-                                <dt class="col-sm-5">Kelurahan</dt>
-                                <dd class="col-sm-7 my-0">: Bandar</dd>
-                                <dt class="col-sm-5">jenis</dt>
-                                <dd class="col-sm-7 my-0">: Pangan</dd>
-                                <dt class="col-sm-5">Thn Berdiri</dt>
-                                <dd class="col-sm-7 my-0">: 2009</dd>
-                                <dt class="col-sm-5">Contact</dt>
-                                <dd class="col-sm-7 my-0">: 08123123123</dd>
-                                <dt class="col-sm-5">Alamat:</dt>
-                                <dd class="col-sm-7 my-0">: JL. BLABLA NO 54 GG 4 RT 2 RW 5</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <h3 class="card-header">KOPERASI RW 02</h3>
-                        <img src="https://awsimages.detik.net.id/community/media/visual/2019/12/20/905dfd3e-6cfd-46ff-b464-e86baa80c305_43.jpeg?w=700&q=90" class="" alt="..." />
-                        <div class="card-body">
-                            <dl class="row my-0">
-                                <dt class="col-sm-5">Kelurahan</dt>
-                                <dd class="col-sm-7 my-0">: Bandar</dd>
-                                <dt class="col-sm-5">jenis</dt>
-                                <dd class="col-sm-7 my-0">: Pangan</dd>
-                                <dt class="col-sm-5">Thn Berdiri</dt>
-                                <dd class="col-sm-7 my-0">: 2009</dd>
-                                <dt class="col-sm-5">Contact</dt>
-                                <dd class="col-sm-7 my-0">: 08123123123</dd>
-                                <dt class="col-sm-5">Alamat:</dt>
-                                <dd class="col-sm-7 my-0">: JL. BLABLA NO 54 GG 4 RT 2 RW 5</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              @endforeach
+              <div class="d-flex justify-content-end w-100 my-3">
+                {{ $pesantrens->links() }}
+              </div>
             </div>
-        </div>
-
-        <div id="mojoroto">
+          </div>
+      
+          <div id="mojoroto">
             <h1>Kec. Mojoroto</h1>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                <div class="col">
-                    <div class="card">
-                        <h3 class="card-header">KOPERASI RW 03</h3>
-                        <img src="https://awsimages.detik.net.id/community/media/visual/2019/12/20/905dfd3e-6cfd-46ff-b464-e86baa80c305_43.jpeg?w=700&q=90" class="" alt="..." />
-                        <div class="card-body">
-                            <dl class="row my-0">
-                                <dt class="col-sm-5">Kelurahan</dt>
-                                <dd class="col-sm-7 my-0">: Bandar</dd>
-                                <dt class="col-sm-5">jenis</dt>
-                                <dd class="col-sm-7 my-0">: Pangan</dd>
-                                <dt class="col-sm-5">Thn Berdiri</dt>
-                                <dd class="col-sm-7 my-0">: 2009</dd>
-                                <dt class="col-sm-5">Contact</dt>
-                                <dd class="col-sm-7 my-0">: 08123123123</dd>
-                                <dt class="col-sm-5">Alamat:</dt>
-                                <dd class="col-sm-7 my-0">: JL. BLABLA NO 54 GG 4 RT 2 RW 5</dd>
-                            </dl>
-                        </div>
-                    </div>
+              @foreach ($mojorotos as $mojoroto)
+              <div class="col">
+                <div class="card">
+                  <h3 class="card-header">{{$mojoroto->judul}}</h3>
+                  <img src="{{asset('koperasidaftarProd/'.$mojoroto->foto)}}" class="" alt="..." />
+                  <div class="card-body">
+                    <dl class="row my-0">
+                      <dt class="col-sm-5">Kelurahan</dt>
+                      <dd class="col-sm-7 my-0">: {{$mojoroto->kelurahan}}</dd>
+                      <dt class="col-sm-5">Jenis</dt>
+                      <dd class="col-sm-7 my-0">: {{$mojoroto->jenis}}</dd>
+                      <dt class="col-sm-5">Thn Berdiri</dt>
+                      <dd class="col-sm-7 my-0">: {{$mojoroto->tahun}}</dd>
+                      <dt class="col-sm-5">Contact</dt>
+                      <dd class="col-sm-7 my-0">: {{$mojoroto->contact}}</dd>
+                      <dt class="col-sm-5">Alamat:</dt>
+                      <dd class="col-sm-7 my-0">: {{$mojoroto->alamat}}</dd>
+                    </dl>
+                  </div>
                 </div>
-
-                <div class="col">
-                    <div class="card">
-                        <h3 class="card-header">KOPERASI RW 03</h3>
-                        <img src="https://awsimages.detik.net.id/community/media/visual/2019/12/20/905dfd3e-6cfd-46ff-b464-e86baa80c305_43.jpeg?w=700&q=90" class="" alt="..." />
-                        <div class="card-body">
-                            <dl class="row my-0">
-                                <dt class="col-sm-5">Kelurahan</dt>
-                                <dd class="col-sm-7 my-0">: Bandar</dd>
-                                <dt class="col-sm-5">jenis</dt>
-                                <dd class="col-sm-7 my-0">: Pangan</dd>
-                                <dt class="col-sm-5">Thn Berdiri</dt>
-                                <dd class="col-sm-7 my-0">: 2009</dd>
-                                <dt class="col-sm-5">Contact</dt>
-                                <dd class="col-sm-7 my-0">: 08123123123</dd>
-                                <dt class="col-sm-5">Alamat:</dt>
-                                <dd class="col-sm-7 my-0">: JL. BLABLA NO 54 GG 4 RT 2 RW 5</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <h3 class="card-header">KOPERASI RW 03</h3>
-                        <img src="https://awsimages.detik.net.id/community/media/visual/2019/12/20/905dfd3e-6cfd-46ff-b464-e86baa80c305_43.jpeg?w=700&q=90" class="" alt="..." />
-                        <div class="card-body">
-                            <dl class="row my-0">
-                                <dt class="col-sm-5">Kelurahan</dt>
-                                <dd class="col-sm-7 my-0">: Bandar</dd>
-                                <dt class="col-sm-5">jenis</dt>
-                                <dd class="col-sm-7 my-0">: Pangan</dd>
-                                <dt class="col-sm-5">Thn Berdiri</dt>
-                                <dd class="col-sm-7 my-0">: 2009</dd>
-                                <dt class="col-sm-5">Contact</dt>
-                                <dd class="col-sm-7 my-0">: 08123123123</dd>
-                                <dt class="col-sm-5">Alamat:</dt>
-                                <dd class="col-sm-7 my-0">: JL. BLABLA NO 54 GG 4 RT 2 RW 5</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              @endforeach
+              <div class="d-flex justify-content-end w-100 my-3">
+                {{ $mojorotos->links() }}
+              </div>
             </div>
+          </div>
+      
         </div>
-
-    </div>
-</div>
-@endsection
-
-@section('scripts')
-<script>
-    $("#kota").hide();
-    $("#pesantren").hide();
-    $("#mojoroto").hide();
-
-
-    $("#bKota").click(function() {
-        $("#kota").toggle();
+      </div>
+      @endsection
+      
+      @section('scripts')
+      <script>
+        $("#kota").hide();
         $("#pesantren").hide();
         $("#mojoroto").hide();
-    });
-
-    $("#bPesantren").click(function() {
-        $("#pesantren").toggle();
-        $("#kota").hide();
-        $("#mojoroto").hide();
-    });
-
-    $("#bMojoroto").click(function() {
-        $("#mojoroto").toggle();
-        $("#pesantren").hide();
-        $("#kota").hide();
-    });
-</script>
-@endsection
+      
+        $("#bKota").click(function() {
+          $("#kota").toggle();
+          $("#pesantren").hide();
+          $("#mojoroto").hide();
+          localStorage.setItem("kecamatan", "#bKota")
+        });
+      
+        $("#bPesantren").click(function() {
+          $("#pesantren").toggle();
+          $("#kota").hide();
+          $("#mojoroto").hide();
+          localStorage.setItem("kecamatan", "#bPesantren")
+        });
+      
+        $("#bMojoroto").click(function() {
+          $("#mojoroto").toggle();
+          $("#pesantren").hide();
+          $("#kota").hide();
+          localStorage.setItem("kecamatan", "#bMojoroto")
+        });
+      </script>
+      
+      <script>
+        if (localStorage.getItem("pagination") == "true") {
+          $(localStorage.getItem("kecamatan")).trigger('click')
+          localStorage.setItem("pagination", "false")
+        }
+      </script>
+      
+      <script>
+        $(function() {
+        $("#pagination").click(function(e) {
+          if (e.target.class == "page-link" || $(e.target).parents("#pagination").length) {
+            localStorage.setItem("pagination", "true")
+          }
+        });
+      })
+      </script>
+      @endsection
