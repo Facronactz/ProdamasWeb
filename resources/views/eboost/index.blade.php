@@ -47,8 +47,9 @@
         <div class="card border-light my-4">
             <div class="row g-0">
                 <div class="col-lg-4 d-flex justify-content-center">
-                    <img src="{{asset('fotoProd/'.$foto->foto_tentang)}}"
-                        class="img-fluid" style="max-height: 400px;">
+                    @foreach
+                    <img src="{{asset('fotoProd/'.$file->foto_tentang)}}"
+                        class="img-fluid" style="max-height: 400px;">                    
                 </div>
                 <div class="col-lg-8">
                     <div class="card-body">
@@ -56,6 +57,7 @@
                         <div style="height: 2px; background-color:#000000"></div>
                         <p class="card-text align-middle" style="font-size: 20px">Menindaklanjuti permasalahan masyarakat di Kota Kediri, E-Boost hadir untuk membantu Anda dalam mengetahui informasi mengenai Wirausaha/UMKM, Koperasi RW, KUBE dan informasi lainnya. </p>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>
