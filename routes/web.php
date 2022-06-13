@@ -272,6 +272,7 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::post('/admin/list-eboost', [EboostAdmin::class, 'store']);
     Route::get('/admin/list-eboost', [EboostAdmin::class, 'index']);
     Route::post('/admin/store-eboost', [EboostAdmin::class, 'store']);
+    Route::delete('/admin/edit-eboost/{eboosts_id}', [EboostAdmin::class, 'destroy']);
 });
 
 //berlangganan
