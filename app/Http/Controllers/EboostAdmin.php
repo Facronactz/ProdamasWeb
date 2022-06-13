@@ -70,14 +70,14 @@ class EboostAdmin extends Controller
         ]);
 
         $eboost = Eboost::findorfail($id);
-        $file = $request->get('foto_tentang','foto_info');
+        $file = $request->file('foto_tentang','foto_info');
         if ($file != NULL) {
-            $file= $request->get('foto_tentang');
-            $file2= $request->get('foto_info');
-            $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->get('upload_foto_tentang')->getClientOriginalName(). '.'. $request->get('foto_tentang')->getClientOriginalExtension());
-            $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->get('upload_foto_info')->getClientOriginalName(). '.' . $request->get('foto_info')->getClientOriginalExtension());
-                    $file->get('foto_tentang')->move(public_path('../fotoProd/'), $foto);
-                    $file2->get('foto_info')->move(public_path('../fotoProd/'), $foto2);
+           // $file= $request->get('foto_tentang');
+           // $file2= $request->get('foto_info');
+            $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->file('upload_foto_tentang')->getClientOriginalName(). '.'. $request->file('foto_tentang')->getClientOriginalExtension());
+            $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->file('upload_foto_info')->getClientOriginalName(). '.' . $request->file('foto_info')->getClientOriginalExtension());
+                    $request->file('foto_tentang')->move(public_path('../fotoProd/'), $foto);
+                    $request->file('foto_info')->move(public_path('../fotoProd/'), $foto2);
             
 
             $eboost->update([
