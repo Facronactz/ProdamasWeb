@@ -107,6 +107,12 @@
                         <p>Koperasi RW</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="/admin/list-koperasirw" class="nav-link @yield('koperasirw')">
+                        <i class="nav-icon fas fa-store-alt"></i>
+                        <p>Wirausaha</p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
