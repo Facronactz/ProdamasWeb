@@ -70,7 +70,7 @@ class EboostAdmin extends Controller
         ]);
 
         $eboost = Eboost::findorfail($id);
-        $file = $request->file->store('foto_tentang','foto_info');
+        $file = $request->file('foto_tentang','foto_info');
         if ($file != NULL) {
            $file= $request->file('foto_tentang');
            $file2= $request->file('foto_info');
