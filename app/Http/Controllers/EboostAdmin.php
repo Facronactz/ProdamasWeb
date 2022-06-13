@@ -32,7 +32,7 @@ class EboostAdmin extends Controller
         $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file2->getClientOriginalName());
                 $file->move(public_path('../fotoProd/'), $foto);
                 $file2->move(public_path('../fotoProd/'), $foto2);
-                eboost::insert( [
+                Eboost::insert( [
                     'judul_tentang' => $request->judul_tentang,
                     'caption_tentang' => $request->caption_tentang,
                     'foto_tentang' => $foto,
@@ -72,8 +72,8 @@ class EboostAdmin extends Controller
         $eboost = Eboost::findorfail($id);
         $file = $request->file('foto_tentang','foto_info');
         if ($file != NULL) {
-            $file= var_dump($request->file('foto_tentang'));
-            $file2= var_dump($request->file('foto_info'));
+            $file= $request->file('foto_tentang');
+            $file2= $request->file('foto_info');
             $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
             $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file2->getClientOriginalName());
                     $file->move(public_path('../fotoProd/'), $foto);
