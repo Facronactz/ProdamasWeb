@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Eboost;
+use App\Models\Wirausaha;
 use App\Models\DescriptionAdmin;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
