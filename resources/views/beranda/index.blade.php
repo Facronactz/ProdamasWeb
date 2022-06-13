@@ -137,7 +137,7 @@
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3 multiple-items">
         @foreach ($artikel as $item)
-        <div class="col my-3 my-lg-0 hvr-bob">
+        <div class="col-4 my-3 my-lg-0 hvr-bob">
             <div class="card h-100 d-block hvr-grow hvr-underline-from-center">
                 <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                 <div class="card-body">
