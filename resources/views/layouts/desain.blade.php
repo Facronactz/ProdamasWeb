@@ -501,7 +501,7 @@
       $('.multiple-items').slick({
           infinite: false,
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 2,
           adaptiveHeight: true,
           cssEase: 'ease',
           prevArrow: '<button type="button" class="carousel-icon-prev slick-prev bg-primary btn-primary"></button>',
