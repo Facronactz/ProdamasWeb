@@ -273,6 +273,15 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/list-eboost', [EboostAdmin::class, 'index']);
     Route::post('/admin/store-eboost', [EboostAdmin::class, 'store']);
     Route::delete('/admin/edit-eboost/{eboosts_id}', [EboostAdmin::class, 'destroy']);
+
+    // Wirausaha
+    Route::get('/admin/add-wirausaha', [WirausahaAdminController::class, 'create']);
+    Route::get('/admin/edit-wirausaha/{wirausahas_id}', [WirausahaAdminController::class, 'edit']);
+    Route::put('/admin/edit-wirausaha/{wirausahas_id}', [WirausahaAdminController::class, 'update']);
+    Route::post('/admin/list-wirausaha', [WirausahaAdminController::class, 'store']);
+    Route::get('/admin/list-wirausaha', [WirausahaAdminController::class, 'index']);
+    Route::post('/admin/store-wirausaha', [WirausahaAdminController::class, 'store']);
+    Route::delete('/admin/edit-wirausaha/{wirausahas_id}', [WirausahaAdminController::class, 'destroy']);
 });
 
 //berlangganan
