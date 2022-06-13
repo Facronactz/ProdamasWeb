@@ -108,7 +108,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/list-koperasirw" class="nav-link @yield('koperasirw')">
+                    <a href="/admin/list-wirausaha" class="nav-link @yield('wirausaha')">
                         <i class="nav-icon fas fa-store-alt"></i>
                         <p>Wirausaha</p>
                     </a>
