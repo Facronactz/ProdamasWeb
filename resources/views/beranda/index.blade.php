@@ -139,8 +139,9 @@
     <div class="px-md-0 px-3 multiple-items">
         @foreach ($artikel as $item)
         {{-- <div class="col-4 my-3 my-lg-0 hvr-bob"> --}}
-        <div class="my-3 mx-3 my-lg-0 hvr-bob">
-            <div class="card h-100 d-block hvr-grow hvr-underline-from-center">
+        {{-- <div class="my-3 mx-3 my-lg-0 hvr-bob"> --}}
+            {{-- <div class="card h-100 d-block hvr-grow hvr-underline-from-center"> --}}
+            <div class="card h-100 m-3 my-lg-0 d-block hvr-grow hvr-underline-from-center">
                 <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                 <div class="card-body">
                     <a class="stretched-link" href="artikel/{{ $item->id }}"></a>
@@ -148,7 +149,7 @@
                     <p class="card-text">{{ $item->text_sampul }}</p>
                 </div>
             </div>
-        </div>
+        {{-- </div> --}}
         @endforeach
     </div>
     <div class="d-flex justify-content-end mt-2">
