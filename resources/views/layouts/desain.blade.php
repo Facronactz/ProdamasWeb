@@ -497,11 +497,12 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script>
-        $('.multiple-items').slick({
+    $(document).ready(function(){
+      $('.multiple-items').slick({
           infinite: true,
           slidesToShow: 3,
           slidesToScroll: 3
-        });
+      });
     </script>
 
     {{-- <script>
