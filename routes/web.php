@@ -337,5 +337,5 @@ Route::resource('/cerita', CeritaController::class);
 Route::get('/searchcerita', [SearchController::class, 'searchcerita'])->name('search');
 
 //Tag
-Route::get('/tags', [SearchController::class, 'tagger'])->name('tag');
-Route::get('/tag', [SearchController::class, 'eboost'])->name('tag');
+Route::get('/tag', [SearchController::class, 'tagger'])->name('tag');
+Route::get('/tags', [SearchController::class, 'eboost'])->name('tags');

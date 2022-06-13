@@ -397,7 +397,7 @@ class SearchController extends Controller
                 $src = parse_url($url)['query'];
                 parse_str($src, $ok);
 
-                $keyword = $ok['tag'];
+                $keyword = $ok['tags'];
                 $artikel = ArticleAdmin::withAnyTag($keyword)->paginate(10);
                 return view('search.eboosttag', compact('artikel', 'totalviews', 'counter', 'menus'));
         }
