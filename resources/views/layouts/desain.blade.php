@@ -35,8 +35,8 @@
     <link rel="stylesheet" href="{{ asset('css/social-color.css') }}">
 
     {{-- Carousel --}}
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
     @yield('head')
     @hasSection('title')
@@ -316,18 +316,19 @@
                                 </ul>
                                 </li>
                                 <li class="dropdown-submenu w-100">
-                                    <a class="dropdown-item @yield('e-boost')" href="{{ url('/tags?tags=pemasaran') }}">Pemasaran<span class="caret fas fa-caret-right ms-3"></span></a>
+                                    <a class="dropdown-item @yield('e-boost')">Pemasaran<span class="caret fas fa-caret-right ms-3"></span></a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-submenu w-100">
-                                        <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/searchartikel?searchartikel=pemasaran') }}">Artikel</a></li>
+                                        <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/tags?tags=pemasaran') }}">Artikel</a></li>
                                 </li>
                                 </ul>
                                 </li>
-                                <li class="dropdown-submenu w-100">
-                                    <a class="dropdown-item @yield('e-boost')" href="{{ url('/umkm') }}">Publikasi<span class="caret fas fa-caret-right ms-3"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="dropdown-submenu w-100">
-                                        {{-- <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/wirausaha') }}">Informasi Pelatihan</a></li> --}}
+                                <li class=" dropdown-submenu w-100">
+                                                <a class="dropdown-item @yield('e-boost')" href="{{ url('/umkm') }}">Publikasi<span class="caret fas fa-caret-right ms-3"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="dropdown-submenu w-100">
+                                                        {{-- <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/wirausaha') }}">Informasi Pelatihan
+                                            </a></li> --}}
                                         <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/testimoni') }}">Testimoni</a></li>
                                 </li>
                                 </ul>
@@ -497,17 +498,17 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script>
-    $(document).ready(function(){
-      $('.multiple-items').slick({
-          infinite: false,
-          slidesToShow: 3,
-          slidesToScroll: 2,
-          adaptiveHeight: true,
-          cssEase: 'ease',
-          prevArrow: '<button type="button" class="carousel-icon-prev slick-prev bg-primary btn-primary"></button>',
-          nextArrow: '<button type="button" class="carousel-icon-next slick-next bg-primary btn-primary"></button>'
-      });
-    });
+        $(document).ready(function() {
+            $('.multiple-items').slick({
+                infinite: false,
+                slidesToShow: 3,
+                slidesToScroll: 2,
+                adaptiveHeight: true,
+                cssEase: 'ease',
+                prevArrow: '<button type="button" class="carousel-icon-prev slick-prev bg-primary btn-primary"></button>',
+                nextArrow: '<button type="button" class="carousel-icon-next slick-next bg-primary btn-primary"></button>'
+            });
+        });
     </script>
 
     {{-- <script>
