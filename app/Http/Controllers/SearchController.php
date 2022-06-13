@@ -371,4 +371,34 @@ class SearchController extends Controller
                         'menus'
                 ));
         }
+
+        public function eboost(Request $request)
+        {
+                // total
+                DB::table('counters')->increment('views');
+                $counter = DB::table('counters')->get();
+
+
+                // code jumlah pengunjung
+                $artikel = DB::table('articles')
+                        ->select(DB::raw('views'));
+                $counter = DB::table('counters')
+                        ->select(DB::raw('views'));
+                $totalviews = DB::table('tulis_ceritas')
+                ->select(DB::raw('views'))
+                        ->unionAll($artikel)
+                        ->unionAll($counter)
+                        ->sum('views');
+                $menus = Menu::where('status', 'Show')->get();
+                // end code jumlah pengunjung
+
+
+                $url = $request->fullurl();
+                $src = parse_url($url)['query'];
+                parse_str($src, $ok);
+
+                $keyword = $ok['tag'];
+                $artikel = ArticleAdmin::withAnyTag($keyword)->paginate(10);
+                return view('search.eboosttag', compact('artikel', 'totalviews', 'counter', 'menus'));
+        }
 }
