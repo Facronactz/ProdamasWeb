@@ -70,14 +70,14 @@ class EboostAdmin extends Controller
         ]);
 
         $eboost = Eboost::findorfail($id);
-        $file = $request->file('foto_tentang','foto_info');
+        $file = $request->get('foto_tentang','foto_info');
         if ($file != NULL) {
-            $file= $request->file('foto_tentang');
-            $file2= $request->file('foto_info');
+            $file= $request->get('foto_tentang');
+            $file2= $request->get('foto_info');
             $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
             $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file2->getClientOriginalName());
-                    $file->move(public_path('../fotoProd/'), $foto);
-                    $file2->move(public_path('../fotoProd/'), $foto2);
+                    $file->get('foto_tentang')->move(public_path('../fotoProd/'), $foto);
+                    $file2->('foto_info')->move(public_path('../fotoProd/'), $foto2);
             
 
             $eboost->update([
@@ -106,23 +106,23 @@ class EboostAdmin extends Controller
         return redirect('/admin/list-eboost')->with('success', 'Eboost Berhasil Dihapus!');
     }
 
-     public function edit_desc($id)
-     {
-         $descriptions = DescriptionAdmin::findOrFail($id);
-         return view('admin.eboost.editdesc', compact('descriptions'));
-     }
+ //  public function edit_desc($id)
+ // {
+ //        $descriptions = DescriptionAdmin::findOrFail($id);
+ //        return view('admin.eboost.editdesc', compact('descriptions'));
+ //    }
+//
+ //    public function update_desc($id, Request $request)
+ //    {
+ //        $request->validate([
+ //            'desc_eboost' => 'required',
+ //        ]);
+//
+ //        $descriptions = DescriptionAdmin::findOrFail($id);
+ //        $descriptions_data = ["desc_eboost" => $request["desc_eboost"]];
+ //        $descriptions->update($descriptions_data);
 
-     public function update_desc($id, Request $request)
-     {
-         $request->validate([
-             'desc_eboost' => 'required',
-         ]);
-
-         $descriptions = DescriptionAdmin::findOrFail($id);
-         $descriptions_data = ["desc_eboost" => $request["desc_eboost"]];
-         $descriptions->update($descriptions_data);
-
-         return redirect('/admin/list-eboost')->with('success', 'Deskripsi Berhasil Diupdate!');
-    }
+ //        return redirect('/admin/list-eboost')->with('success', 'Deskripsi Berhasil Diupdate!');
+ //   }
 }
 
