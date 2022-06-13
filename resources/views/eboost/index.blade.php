@@ -47,7 +47,7 @@
         <div class="card border-light my-4">
             <div class="row g-0">
                 <div class="col-lg-4 d-flex justify-content-center">
-                    <img src="{{$eboost->foto_tentang}}"
+                    <img src="{{$foto->foto_tentang}}"
                         class="img-fluid" style="max-height: 400px;">
                 </div>
                 <div class="col-lg-8">
