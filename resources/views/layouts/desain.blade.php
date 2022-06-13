@@ -502,7 +502,7 @@
           infinite: true,
           slidesToShow: 3,
           slidesToScroll: 3,
-          nextArrow: "<button type="button" class="carousel-icon-next">Next</button>"
+          nextArrow: <button type="button" class="slick-prev carousel-icon-next">Next</button>
       });
     });
     </script>
