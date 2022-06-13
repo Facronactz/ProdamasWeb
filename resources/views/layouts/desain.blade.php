@@ -503,6 +503,7 @@
           slidesToShow: 3,
           slidesToScroll: 3
       });
+    });
     </script>
 
     {{-- <script>
