@@ -502,7 +502,7 @@
           infinite: true,
           slidesToShow: 3,
           slidesToScroll: 3,
-          nextArrow: $($.parseHTML('<button type="button" class="carousel-icon-next">Next</button>'))
+          nextArrow: $($.parseHTML('<button type="button" class="carousel-icon-next slick-next">Next</button>'))
       });
     });
     </script>
