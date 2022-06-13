@@ -503,7 +503,7 @@
           slidesToShow: 3,
           slidesToScroll: 3,
           adaptiveHeight: true,
-          cssEase: ease,
+          cssEase: 'ease',
           prevArrow: '<button type="button" class="carousel-icon-prev slick-prev bg-primary btn-primary"></button>',
           nextArrow: '<button type="button" class="carousel-icon-next slick-next bg-primary btn-primary"></button>'
       });
