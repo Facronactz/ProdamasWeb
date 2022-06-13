@@ -1,5 +1,5 @@
 @extends('admin.master')
-@section('eboost', 'active')
+@section('wirausaha', 'active')
 @section('title')
 E-Boost Submission
 @endsection
@@ -12,50 +12,46 @@ E-Boost Submission
 @endif
 
 <div class="form-group">
-    <label for="desc_eboost">Deskripsi</label>
+    <label for="desc_wirausaha">Deskripsi</label>
     <!-- <table class="table">
-        @foreach ($eboost ?? '' as $eboosts)
+        @foreach ($wirausaha ?? '' as $wirausahas)
         <tr>
-            <td><?= $eboosts->desc_eboost ?></td>
+            <td><?= $wirausahas->desc_wirausaha ?></td>
             <td align="right">
-                <form action="/admin/eboost/{{ $eboosts->id }}" method="POST">
-                    <a href="/admin/eboost/{{ $eboosts->id }}" class="btn btn-info">Edit</a>
+                <form action="/admin/wirausaha/{{ $wirausahas->id }}" method="POST">
+                    <a href="/admin/wirausaha/{{ $wirausahas->id }}" class="btn btn-info">Edit</a>
                 </form>
             </td>
         </tr>
         @endforeach
     </table> -->
 </div>
-<a href="/admin/add-eboost" class="btn btn-primary mb-3">Tambah E-Boost</a>
-<table class="table" id="tableEboost">
+<a href="/admin/add-wirausaha" class="btn btn-primary mb-3">Tambah E-Boost</a>
+<table class="table" id="tablewirausaha">
     <thead class="thead-light">
         <tr>
             <th scope="col">ID</th>
-            <th scope="col">Judul Tentang</th>
-            <th scope="col">Caption Tentang</th>
+            <th scope="col">Tentang</th>
             <th scope="col">Foto Tentang</th>
-            <th scope="col">Judul Info</th>
-            <th scope="col">Caption Info</th>
+            <th scope="col">Info</th>
             <th scope="col">Foto Info</th>
             <th scope="col">Aksi</th>
         </tr>
     </thead>
     <tbody>
-        @forelse ($eboost as $key=>$eboosts)
+        @forelse ($wirausaha as $key=>$wirausahas)
         <tr>
             <td>{{$key + 1}}</th>
-            <td>{{$eboosts->judul_tentang}}</td>
-            <td>{{$eboosts->caption_tentang}}</td>
-            <td>{{$eboosts->foto_tentang}}</td>
-            <td>{{$eboosts->judul_info}}</td>
-            <td>{{$eboosts->caption_info}}</td>
-            <td>{{$eboosts->foto_info}}</td>
+            <td>{{$wirausahas->tentang}}</td>
+            <td>{{$wirausahas->foto_tentang}}</td>
+            <td>{{$wirausahas->info}}</td>
+            <td>{{$wirausahas->foto_info}}</td>
             <td>
-                <form action="/admin/edit-eboost/{{$eboosts->id}}" method="POST">
-                    <a href="/admin/edit-eboost/{{$eboosts->id}}" class="btn btn-info">Edit</a>
+                <form action="/admin/edit-wirausaha/{{$wirausahas->id}}" method="POST">
+                    <a href="/admin/edit-wirausaha/{{$wirausahas->id}}" class="btn btn-info">Edit</a>
                     @csrf
                     @method('DELETE')
-                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus EBoost?')" value="Delete">
+                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Wirausaha?')" value="Delete">
                 </form>
             </td>
         </tr>
@@ -71,7 +67,7 @@ E-Boost Submission
 @section('table')
 <script>
     $(document).ready(function() {
-        $('#tableEboost').DataTable(); //sesuikan id tabel yg dibat
+        $('#tableWirausaha').DataTable(); //sesuikan id tabel yg dibat
     });
 </script>
 @endsection

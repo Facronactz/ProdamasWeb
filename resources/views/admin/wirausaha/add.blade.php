@@ -1,5 +1,5 @@
 @extends('admin.master')
-@section('eboost', 'active')
+@section('wirausaha', 'active')
 @section('title')
 E-Boost
 @endsection
@@ -23,20 +23,11 @@ E-Boost
 </div>
 @endif
 
-<form action="/admin/list-eboost" method="POST" enctype="multipart/form-data">
+<form action="/admin/list-wirausaha" method="POST" enctype="multipart/form-data">
     @csrf
+    
     <div class="form-group">
-        <label for="judul_tentang">Judul Tentang</label>
-        <input name="judul_tentang" class="form-control" name="judul_tentang" id="judul_tentang" placeholder="Judul Tentang">
-        @error('judul_tentang')
-        <div class="alert alert-danger">
-            {{ $message }}
-        </div>
-        @enderror
-    </div>
-
-    <div class="form-group">
-        <label for="caption_tentang">Caption Tentang</label>
+        <label for="caption_tentang">Tentang</label>
         <textarea name="caption_tentang" class="form-control" name="caption_tentang" id="caption_tentang" placeholder="Caption Tentang"></textarea>
         @error('caption_tentang')
         <div class="alert alert-danger">
@@ -49,16 +40,6 @@ E-Boost
         <label for="foto_tentang">Foto Tentang</label><br>
         <input type="file" class="form-control" name="foto_tentang" id="foto_tentang">
         @error('foto_tentang')
-        <div class="alert alert-danger">
-            {{ $message }}
-        </div>
-        @enderror
-    </div>
-    
-    <div class="form-group">
-        <label for="judul_info">Judul Info</label>
-        <input name="judul_info" class="form-control" name="judul_info" id="judul_info" placeholder="Judul Info">
-        @error('judul_info')
         <div class="alert alert-danger">
             {{ $message }}
         </div>
@@ -86,6 +67,6 @@ E-Boost
     </div>
 
     <button type="submit" class="btn btn-primary">Tambah</button>
-    <a href="/admin/list-eboost" class="btn btn-outline-primary">Kembali</a>
+    <a href="/admin/list-wirausaha" class="btn btn-outline-primary">Kembali</a>
 </form>
 @endsection
