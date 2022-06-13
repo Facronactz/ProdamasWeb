@@ -28,8 +28,8 @@ Wirausaha
     
     <div class="form-group">
         <label for="caption_tentang">Tentang</label>
-        <textarea name="caption_tentang" class="form-control" name="caption_tentang" id="caption_tentang" placeholder="Caption Tentang"></textarea>
-        @error('caption_tentang')
+        <textarea name="tentang" class="form-control" name="tentang" id="tentang" placeholder="Tentang"></textarea>
+        @error('tentang')
         <div class="alert alert-danger">
             {{ $message }}
         </div>
@@ -47,9 +47,9 @@ Wirausaha
     </div>
 
     <div class="form-group">
-        <label for="caption_info">Caption Info</label>
-        <textarea name="caption_info" class="form-control" name="caption_info" id="caption info" placeholder="Caption Info"></Textarea>
-        @error('caption_info')
+        <label for="info">Info</label>
+        <textarea name="info" class="form-control" name="info" id="info" placeholder="Info"></Textarea>
+        @error('info')
         <div class="alert alert-danger">
             {{ $message }}
         </div>

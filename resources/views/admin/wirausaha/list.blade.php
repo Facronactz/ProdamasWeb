@@ -27,7 +27,7 @@ Wirausaha Submission
     </table> -->
 </div>
 <a href="/admin/add-wirausaha" class="btn btn-primary mb-3">Tambah Wirausaha</a>
-<table class="table" id="tablewirausaha">
+<table class="table" id="tableWirausaha">
     <thead class="thead-light">
         <tr>
             <th scope="col">ID</th>
