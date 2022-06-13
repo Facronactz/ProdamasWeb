@@ -77,7 +77,7 @@ class EboostAdmin extends Controller
             $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
             $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file2->getClientOriginalName());
                     $file->get('foto_tentang')->move(public_path('../fotoProd/'), $foto);
-                    $file2->('foto_info')->move(public_path('../fotoProd/'), $foto2);
+                    $file2->get('foto_info')->move(public_path('../fotoProd/'), $foto2);
             
 
             $eboost->update([
