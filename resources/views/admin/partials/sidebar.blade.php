@@ -109,7 +109,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="/admin/list-wirausaha" class="nav-link @yield('wirausaha')">
-                        <i class="nav-icon fas fa-user-chart"></i>
+                        <i class="nav-icon fas fa-address-card"></i>
                         <p>Wirausaha</p>
                     </a>
                 </li>
