@@ -71,7 +71,7 @@ class artikelController extends Controller
             
                 $artikel = ArticleAdmin::where('status', 'published')
                         ->orderBy('id', 'desc')
-                        ->take(3)
+                        ->take(6)
                         ->get();
 
                 $video = VideoAdmin::orderBy('id', 'desc')
