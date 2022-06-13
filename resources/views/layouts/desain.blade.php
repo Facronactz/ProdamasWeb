@@ -316,10 +316,10 @@
                                 </ul>
                                 </li>
                                 <li class="dropdown-submenu w-100">
-                                    <a class="dropdown-item @yield('e-boost')" href="{{ url('/umkm') }}">Pemasaran<span class="caret fas fa-caret-right ms-3"></span></a>
+                                    <a class="dropdown-item @yield('e-boost')" href="{{ url('/searchartikel?searchartikel=pemasaran') }}">Pemasaran<span class="caret fas fa-caret-right ms-3"></span></a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-submenu w-100">
-                                        <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/wirausaha') }}">Artikel</a></li>
+                                        <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/searchartikel?searchartikel=pemasaran') }}">Artikel</a></li>
                                 </li>
                                 </ul>
                                 </li>
@@ -328,7 +328,7 @@
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-submenu w-100">
                                         {{-- <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/wirausaha') }}">Informasi Pelatihan</a></li> --}}
-                                        <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/wirausaha') }}">Testimoni</a></li>
+                                        <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/testimoni') }}">Testimoni</a></li>
                                 </li>
                                 </ul>
                                 </li>

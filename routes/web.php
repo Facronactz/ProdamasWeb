@@ -48,7 +48,7 @@ use App\Http\Controllers\SettingCarouselController;
 use App\Http\Controllers\KampungkerenAdminController;
 use App\Http\Controllers\WirausahaController;
 use App\Http\Controllers\WirausahaAdminController;
-
+use App\Http\Controllers\TestimoniController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -116,6 +116,9 @@ Route::resource('/wirausaha', WirausahaController::class);
 
 // UMKM
 Route::resource('/umkm', UMKMController::class);
+
+// Publikasi
+Route::resource('/testimoni', TestimoniController::class);
 
 // Koperasi RW
 Route::resource('/koperasirw', KoperasiController::class);
