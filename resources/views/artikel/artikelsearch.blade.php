@@ -8,6 +8,7 @@
 @section('content')
 <div class="row container justify-content-center mx-auto">
     <div class="leftcolumn mt-5">
+        <h1> Artikel Pemasaran</h1>
         <form action="searchartikel">
             <div class="input-group">
                 {{-- <form action="searchartikel"> --}}
