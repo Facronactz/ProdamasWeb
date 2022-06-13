@@ -502,7 +502,8 @@
           infinite: true,
           slidesToShow: 3,
           slidesToScroll: 3,
-          prevArrow: '<button type="button" class="carousel-icon-prev slick-prev"></button>'
+          prevArrow: '<button type="button" class="carousel-icon-prev slick-prev bg-primary btn-primary"></button>'
+          next Arrow: '<button type="button" class="carousel-icon-next  slick-next  bg-primary btn-primary"></button>'
       });
     });
     </script>
