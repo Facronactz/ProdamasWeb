@@ -74,8 +74,8 @@ class EboostAdmin extends Controller
         if ($file != NULL) {
             $file= $request->get('foto_tentang');
             $file2= $request->get('foto_info');
-            $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-            $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file2->getClientOriginalName());
+            $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName(). '.'.$file->get('foto_tentang')->getClientOriginalExtension());
+            $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file2->getClientOriginalName(). '.' . $file2->get('foto_info')->getClientOriginalExtension());
                     $file->get('foto_tentang')->move(public_path('../fotoProd/'), $foto);
                     $file2->get('foto_info')->move(public_path('../fotoProd/'), $foto2);
             
