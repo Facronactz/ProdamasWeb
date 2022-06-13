@@ -41,7 +41,7 @@
     <div style="height:4px; background-color: rgb(0, 0, 0);"> </div>
     <div class="container">
         <div class="m-4 mb-5 text-center">
-            <h1><strong>E-Boost</strong></h1>
+            <h1><strong>TESTIMONI</strong></h1>
             <h4>Segala informasi mengenai kegiatan peningkatan perekonomian <br> di Kota Kediri</h4>
         </div>
         <div class="card border-light my-4">
