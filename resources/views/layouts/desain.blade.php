@@ -316,7 +316,7 @@
                                 </ul>
                                 </li>
                                 <li class="dropdown-submenu w-100">
-                                    <a class="dropdown-item @yield('e-boost')" href="{{ url('/searchartikel?searchartikel=pemasaran') }}">Pemasaran<span class="caret fas fa-caret-right ms-3"></span></a>
+                                    <a class="dropdown-item @yield('e-boost')" href="{{ url('/tags?tags=pemasaran') }}">Pemasaran<span class="caret fas fa-caret-right ms-3"></span></a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-submenu w-100">
                                         <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/searchartikel?searchartikel=pemasaran') }}">Artikel</a></li>
