@@ -1,7 +1,7 @@
 @extends('admin.master')
 @section('wirausaha', 'active')
 @section('title')
-E-Boost Submission
+Wirausaha Submission
 @endsection
 
 @section('content')
