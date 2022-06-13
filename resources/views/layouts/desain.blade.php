@@ -499,9 +499,11 @@
     <script>
     $(document).ready(function(){
       $('.multiple-items').slick({
-          infinite: true,
+          infinite: false,
           slidesToShow: 3,
           slidesToScroll: 3,
+          adaptiveHeight: true,
+          cssEase: ease,
           prevArrow: '<button type="button" class="carousel-icon-prev slick-prev bg-primary btn-primary"></button>',
           nextArrow: '<button type="button" class="carousel-icon-next slick-next bg-primary btn-primary"></button>'
       });
