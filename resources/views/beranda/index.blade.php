@@ -141,7 +141,7 @@
         {{-- <div class="col-4 my-3 my-lg-0 hvr-bob"> --}}
         {{-- <div class="my-3 mx-3 my-lg-0 hvr-bob"> --}}
             {{-- <div class="card h-100 d-block hvr-grow hvr-underline-from-center"> --}}
-            <div class="card h-100 m-3 my-lg-0 hvr-grow hvr-underline-from-center">
+            <div class="card h-100 m-3 my-lg-0 hvr-underline-from-center">
                 <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
                 <div class="card-body" style="height: 250px;">
                     <a class="stretched-link" href="artikel/{{ $item->id }}"></a>
