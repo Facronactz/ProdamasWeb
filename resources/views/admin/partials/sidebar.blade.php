@@ -17,6 +17,7 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <?= $user ?>
                 @if($user->level == 'super')
                 <li class="nav-item">
                     <a href="{{ url('/admin/list-menu') }}" class="nav-link @yield('menu')">
