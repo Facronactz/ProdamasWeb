@@ -19,7 +19,7 @@ Edit Foto
                     @csrf
                     @method('delete')
                     </form> --}}
-            <img src="/cover/{{ $posts->cover }}" class="img-responsive" style="max-height: 100px; max-width: 100px;" alt="" srcset="">
+            <img src="{{ asset('/cover/').$posts->cover }}" class="img-responsive" style="max-height: 100px; max-width: 100px;" alt="" srcset="">
             <br>
             @if (count($posts->images)>0)
             <p>Foto Isi Kegiatan:</p>
