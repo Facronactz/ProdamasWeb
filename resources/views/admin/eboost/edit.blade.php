@@ -76,8 +76,8 @@ Edit E-Boost
             {{ $message }}
         </div>
         @enderror
-        <label for="informasi">Deskripsi</label>
-        <textarea name="informasi" id="description" class="form-control" cols="30" rows="3"><?= $eboost->deskripsi ?></textarea>
+        <label for="deskripsi">Deskripsi</label>
+        <textarea name="deskripsi" id="description" class="form-control" cols="30" rows="3"><?= $eboost->deskripsi ?></textarea>
     </div>
 
     <button type="submit" class="btn btn-primary">Edit</button>

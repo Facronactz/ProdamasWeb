@@ -206,6 +206,7 @@
         @endif
 
         @foreach ($audio as $item)
+        {{-- Card Modal --}}
         <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
@@ -222,7 +223,7 @@
                                                           ">
                                 <img src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}" class="d-flex justify-content click" style="width: 100%;" alt="...">
                                 <audio controls="controls">
-                                    <source src="{{ $item->konten }}">
+                                    <source src="https://docs.google.com/uc?export=download&id={{ $item->konten }}">
                                 </audio>
                             </div>
                             <div class="card" style="
