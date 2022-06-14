@@ -22,6 +22,9 @@ class WirausahaController extends Controller
             ->unionAll($counter)
             ->sum('views');
         $menus = Menu::where('status', 'Show')->get();
-        return view('wirausaha.index', compact('counter', 'totalviews', 'menus'));
+
+        $koperasi = Wirausaha::first()->get();
+
+        return view('wirausaha.index', compact('counter', 'koperasi', 'totalviews', 'menus'));
     }
 }
