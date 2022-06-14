@@ -44,13 +44,14 @@ class PostController extends Controller
             $file = $request->file("cover");
             $imageName = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path("../cover/"), $imageName);
-
-            $post = new Post([
+            $tags = explode(",", $request->tags);
+            $foto->fill([
                 "title" => $request->title,
                 "body" => $request->body,
                 "cover" => $imageName,
             ]);
-            $post->save();
+            $foto->save();
+            $foto->tag($tags);
         }
 
         if ($request->hasFile("images")) {
@@ -63,9 +64,6 @@ class PostController extends Controller
                 Image::create($request->all());
             }
         }
-
-        $tags = explode(",", $request->tags);
-        $foto->tag($tags);
 
         return redirect('/admin/list-foto')->with('success', 'Foto Berhasil Ditambahkan!');
     }
