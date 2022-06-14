@@ -32,9 +32,7 @@ Wirausaha Submission
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Tentang</th>
-            <th scope="col">Foto Tentang</th>
             <th scope="col">Info</th>
-            <th scope="col">Foto Info</th>
             <th scope="col">Deskripsi</th>
             <th scope="col">Aksi</th>
         </tr>
@@ -44,10 +42,8 @@ Wirausaha Submission
         <tr>
             <td>{{$key + 1}}</th>
             <td><?=$wirausahas->tentang?></td>
-            <td>{{$wirausahas->foto_tentang}}</td>
-            <td><?=$wirausahas->info?></td>
-            <td>{{$wirausahas->foto_info}}</td>
-            <td><?= substr($wirausahas->deskripsi, 0, 150) ?></td>
+            <td><?= substr($wirausahas->info, 0, 100) ?></td>
+            <td><?= substr($wirausahas->deskripsi, 0, 100) ?></td>
             <td>
                 <form action="/admin/edit-wirausaha/{{$wirausahas->id}}" method="POST">
                     <a href="/admin/edit-wirausaha/{{$wirausahas->id}}" class="btn btn-info">Edit</a>
