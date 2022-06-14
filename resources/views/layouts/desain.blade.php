@@ -427,7 +427,7 @@
             @endsection --}}
             <div class="row mx-auto">
                 <div class="footer-logo d-md-block d-flex col-md-auto my-auto" style="margin-top: 45px">
-                    <img class="logo-footer mx-auto" src="{{ asset('img/PRIMARY LOGO WHITE 1.png ') }}" width="130" height="auto" alt="logo-footer" />
+                    <img class="logo-footer mx-auto me-lg-4 mb-3" src="{{ asset('img/PRIMARY LOGO WHITE 1.png ') }}" width="130" height="auto" alt="logo-footer" />
                     <!-- <div style="margin-top: 12px">
                     <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
                 </div> -->
