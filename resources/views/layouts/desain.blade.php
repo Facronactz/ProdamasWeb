@@ -228,7 +228,7 @@
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
                                     <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
                                     <li class="dropdown-submenu w-100">
-                                        <a class="dropdown-item @yield('kosong')" href="{{ url('/kosong') }}">Prodamas Dalam Angka</a>
+                                        <a class="dropdown-item @yield('kosong')" href="{{ url('/kosong') }}">Prodamas Dalam Angka<span class="caret fas fa-caret-right ms-3"></span></a>
                                         <ul class="dropdown-menu">
                                             <li class="dropdown-submenu w-100">
                                                 <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">Anggaran & Realisasi</a></li>
