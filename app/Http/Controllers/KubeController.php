@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kube;
+use App\Models\KubeDaftar;
 use App\Models\Pict;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
