@@ -5,7 +5,7 @@ Edit Wirausaha
 @endsection
 @section('content')
 
-<form action="/admin/edit-wirausaha/{{$wirausaha->id}}" method="POST" enctype="application/x-www-form-urlencoded">
+<form action="/admin/edit-wirausaha/{{$wirausaha->id}}" method="POST" enctype="multipart/form-data">
 @csrf
 @method('put')
 
