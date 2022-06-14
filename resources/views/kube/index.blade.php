@@ -16,7 +16,7 @@
             <div class="mt-2" style="text-indent: 25px;">
                 @foreach ($kube as $kop)
                 <?= $kop->informasi ?>
-                {{ $kop->foto_syarat }}
+                {{ asset('kubeProd/').$kop->foto_syarat }}
                 @endforeach
             </div>
             <div>
