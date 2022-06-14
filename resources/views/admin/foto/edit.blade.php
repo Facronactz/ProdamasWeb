@@ -14,16 +14,16 @@ Edit Foto
     <div class="row">
         <div class="col-lg-3">
             <p>Foto Sampul Kegiatan:</p>
-            {{-- <form action="/deletecover/{{ $posts->id }}" method="post">
+            {{-- <form action="/deletecover/{{ $post->id }}" method="post">
                     <button class="btn text-danger">X</button>
                     @csrf
                     @method('delete')
                     </form> --}}
-            <img src="{{ asset('/cover/').$posts->cover }}" class="img-responsive" style="max-height: 100px; max-width: 100px;" alt="" srcset="">
+            <img src="/cover/{{ $post->cover }}" class="img-responsive" style="max-height: 100px; max-width: 100px;" alt="" srcset="">
             <br>
-            @if (count($posts->images)>0)
+            @if (count($post->images)>0)
             <p>Foto Isi Kegiatan:</p>
-            @foreach ($posts->images as $img)
+            @foreach ($post->images as $img)
             <form action="/deleteimage/{{ $img->id }}" method="post">
                 <button class="btn text-danger">X</button>
                 @csrf
@@ -34,12 +34,12 @@ Edit Foto
             @endif
         </div>
         <div class="col-lg-6">
-            <form action="/update/{{ $posts->id }}" method="post" enctype="multipart/form-data">
+            <form action="/update/{{ $post->id }}" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     @csrf
                     @method("post")
-                    <input type="text" name="title" class="form-control m-2" placeholder="title" value="{{ $posts->title }}">
-                    <Textarea name="body" cols="20" rows="4" class="form-control m-2" placeholder="body">{{ $posts->body }}</Textarea>
+                    <input type="text" name="title" class="form-control m-2" placeholder="title" value="{{ $post->title }}">
+                    <Textarea name="body" cols="20" rows="4" class="form-control m-2" placeholder="body">{{ $post->body }}</Textarea>
                     <label class="m-2">Sampul Foto Kegiatan</label>
                     <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="cover">
 
