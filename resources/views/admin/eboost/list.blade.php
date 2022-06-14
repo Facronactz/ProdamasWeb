@@ -51,7 +51,7 @@ E-Boost Submission
             <td>{{$eboosts->judul_info}}</td>
             <td>{{$eboosts->caption_info}}</td>
             <td>{{$eboosts->foto_info}}</td>
-            <td><?= $eboosts->deskripsi ?></td>
+            <td><?= substr($eboosts->deskripsi, 0, 500) ?></td>
             <td>
                 <form action="/admin/edit-eboost/{{$eboosts->id}}" method="POST">
                     <a href="/admin/edit-eboost/{{$eboosts->id}}" class="btn btn-info">Edit</a>
