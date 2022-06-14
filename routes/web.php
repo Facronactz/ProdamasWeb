@@ -49,6 +49,8 @@ use App\Http\Controllers\KampungkerenAdminController;
 use App\Http\Controllers\WirausahaController;
 use App\Http\Controllers\WirausahaAdminController;
 use App\Http\Controllers\TestimoniController;
+use App\Http\Controllers\KubeController;
+use App\Http\Controllers\KubeAdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -286,6 +288,18 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/list-wirausaha', [WirausahaAdminController::class, 'index']);
     Route::post('/admin/store-wirausaha', [WirausahaAdminController::class, 'store']);
     Route::delete('/admin/edit-wirausaha/{wirausahas_id}', [WirausahaAdminController::class, 'destroy']);
+
+    // Kube
+    Route::get('/admin/list-kube', [KubeAdminController::class, 'index']);
+    Route::get('/admin/kube/{kube_id}', [KubeAdminController::class, 'edit']);
+    Route::put('/admin/kube/{kube_id}', [KubeAdminController::class, 'update']);
+    Route::get('/admin/editpict/{pict_id}', [KubeAdminController::class, 'edit_pict']);
+    Route::put('/admin/editpict/{pict_id}', [KubeAdminController::class, 'update_pict']);
+    Route::get('/admin/add-kube', [KubeAdminController::class, 'createlist']);
+    Route::post('/admin/storelist-kube', [KubeAdminController::class, 'storelist']);
+    Route::get('/admin/edit-kube/{daf_id}', [KubeAdminController::class, 'editlist']);
+    Route::put('/admin/edit-kube/{daf_id}', [KubeAdminController::class, 'updatelist']);
+    Route::delete('/admin/edit-kube/{daf_id}', [KubeAdminController::class, 'destroylist']);
 });
 
 //berlangganan
