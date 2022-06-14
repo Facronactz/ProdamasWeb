@@ -344,7 +344,7 @@
                                 </ul>
                             </div>
                             @foreach ($menus ?? '' as $menu)
-                            <a href="{{ url($menu->link) }}" class="nav-link nav-list @yield('{{ $menu->judul }}')">{{ $menu->judul }}</a>
+                            <a href="{{ url($menu->link) }}" target="_blank" class="nav-link nav-list @yield('{{ $menu->judul }}')">{{ $menu->judul }}</a>
                             @endforeach
                             <div class="nav-list" id="scrollspy">
                                 <a class="nav-link" href="#footer">Kontak</a>
@@ -405,7 +405,7 @@
     <!-- <footer style="background-image: url('{{ url('img/nav_bot.png') }}');background-repeat: no-repeat;background-attachment: local;background-size: cover;"> -->
     <footer>
         <div class="footer-top" id="footer" style="border-top: 9px solid #FF6600 ;">
-            <div class=" container">
+            <div class="container-md">
                 <div class="row">
                     {{-- panggil total kunjungan di footer --}}
                     <div class="d-flex justify-content-end mt-2">
@@ -425,9 +425,9 @@
                 </div>
             </div>
             @endsection --}}
-            <div class="row">
-                <div class=" col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
-                    <a href=#><img class="logo-footer" src="{{ asset('img/PRIMARY LOGO WHITE 1.png ') }}" width="130" height="auto" alt="logo-footer" /></a>
+            <div class="row mx-auto">
+                <div class="footer-logo d-md-block d-flex col-md-auto my-auto" style="margin-top: 45px">
+                    <img class="logo-footer mx-auto" src="{{ asset('img/PRIMARY LOGO WHITE 1.png ') }}" width="130" height="auto" alt="logo-footer" />
                     <!-- <div style="margin-top: 12px">
                     <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
                 </div> -->
@@ -474,10 +474,10 @@
                     </div>
                     <div class="col d-flex">
                         <div class="line-te" style="margin-right:1rem"></div>
-                        <a style="font-weight: 400; font-size: 12px" href="https://www.youtube.com/channel/UCpfY7_qJn3rupJvZQhb3zww"><i class="fab fa-youtube foot-icon"></i></a>
-                        <a style="font-weight: 400; font-size: 12px" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram foot-icon"></i></a>
-                        <a style="font-weight: 400; font-size: 12px" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
-                        <a style="font-weight: 400; font-size: 12px" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
+                        <a style="font-weight: 400; font-size: 12px" target="_blank" href="https://www.youtube.com/channel/UCpfY7_qJn3rupJvZQhb3zww"><i class="fab fa-youtube foot-icon"></i></a>
+                        <a style="font-weight: 400; font-size: 12px" target="_blank" href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram foot-icon"></i></a>
+                        <a style="font-weight: 400; font-size: 12px" target="_blank" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
+                        <a style="font-weight: 400; font-size: 12px" target="_blank" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
                     </div>
                     <div class="footer-copyright footer-link" style="color: white">&copy; 2022 Prodamas Plus Supported by Dinas Kominfo & Tim Magang Merdeka</div>
                 </div>
