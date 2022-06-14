@@ -42,7 +42,7 @@
         @if ($foto->count())
         @foreach ($foto as $item)
         <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
-            <div class="row g-0">
+            <div class="row g-0" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                 <div class="col-md-4 my-auto">
                     <img src="{{ asset('cover/' . $item->cover) }}" class="img-fluid rounded-start">
                 </div>
@@ -66,6 +66,50 @@
             Tidak ada data
         </div>
         @endif
+
+        @foreach ($foto as $item)
+        <div class="modal fade" id="audioPlayer{{ $post->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" style="width: 500px; height: 500px">
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <h2 class="modal-title" id="fotoLabel">{{ $item->title }}</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="carouselIndicators{{ $item->id }}" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                @foreach ($item->images as $no => $images)
+                                @if ($no == 0)
+                                <div class="carousel-item active">
+                                    <img src="{{ asset('images/' . $images->image) }}" class="d-block w-100" alt="...">
+                                </div>
+                                @else
+                                <div class="carousel-item">
+                                    <img src="{{ asset('images/' . $images->image) }}" class="d-block w-100" alt="...">
+                                </div>
+                                @endif
+                                @endforeach
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators{{ $post->id }}" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators{{ $post->id }}" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- </div> -->
+
+                        <h6>{{ $foto->body }}</h6>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
 
         <!-- video -->
         <h3 style="font-family: Inter, sans-serif">Video</h3>
@@ -137,7 +181,7 @@
         @if ($audio->count())
         @foreach ($audio as $item)
         <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
-            <div class="row g-0">
+            <div class="row g-0" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                 <div class="col-md-4 my-auto">
                     <img src="{{ asset('audioProd/thumb/' . $item->gambar_sampul) }}" class="img-fluid rounded-start">
                 </div>
@@ -163,7 +207,6 @@
         @endif
 
         @foreach ($audio as $item)
-        {{-- Card Modal --}}
         <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
