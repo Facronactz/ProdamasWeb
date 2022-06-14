@@ -28,6 +28,21 @@ class KubeController extends Controller
         $menus = Menu::where('status', 'Show')->get();
 
         $kube = Kube::first()->get();
-        return view('kube.index', compact('counter', 'totalviews', 'kube', 'menus'));
+
+        $picture = Pict::first()->get();
+        $kotakube = KubeDaftar::where('kecamatan', 'Kota')->paginate(3);
+        $pesantrenkube = KubeDaftar::where('kecamatan', 'Pesantren')->paginate(3);
+        $mojorotokube = KubeiDaftar::where('kecamatan', 'Mojoroto')->paginate(3);
+        
+        return view('kube.index', compact(
+            'counter',
+            'totalviews',
+            'koperasi',
+            'picture',
+            'kotakube',
+            'pesantrenkube',
+            'mojorotokube',
+            'menus'
+        ));
     }
 }

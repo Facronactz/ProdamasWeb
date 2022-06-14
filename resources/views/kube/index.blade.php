@@ -29,7 +29,7 @@
       <div class="mb-5">
         <h1>Daftar Sentra KUBE</h1>
         <div class="row row-cols-3 g-5">
-          @foreach($picts as $pict)
+          @foreach($picts?? ''  as $pict)
           <img id="bKota" style="cursor: pointer;" class="col" src="{{asset('UMKMProd/'.$pict->kota)}}" alt="" srcset="">
           <img id="bPesantren" style="cursor: pointer;" class="col" src="{{asset('UMKMProd/'.$pict->pesantren)}}" alt="" srcset="">
           <img id="bMojoroto" style="cursor: pointer;" class="col" src="{{asset('UMKMProd/'.$pict->mojoroto)}}" alt="" srcset="">
@@ -44,7 +44,7 @@
           <div class="col">
             <div class="card">
               <h3 class="card-header">{{$kota->judul}}</h3>
-              <img src="{{asset('koperasidaftarProd/'.$kota->foto)}}" class="" alt="..." />
+              <img src="{{asset('kubedaftarProd/'.$kota->foto)}}" class="" alt="..." />
               <div class="card-body">
                 <dl class="row my-0">
                   <dt class="col-sm-5">Kelurahan</dt>
@@ -75,7 +75,7 @@
           <div class="col">
             <div class="card">
               <h3 class="card-header">{{$pesantren->judul}}</h3>
-              <img src="{{asset('koperasidaftarProd/'.$pesantren->foto)}}" class="" alt="..." />
+              <img src="{{asset('kubedaftarProd/'.$pesantren->foto)}}" class="" alt="..." />
               <div class="card-body">
                 <dl class="row my-0">
                   <dt class="col-sm-5">Kelurahan</dt>
@@ -106,7 +106,7 @@
           <div class="col">
             <div class="card">
               <h3 class="card-header">{{$mojoroto->judul}}</h3>
-              <img src="{{asset('koperasidaftarProd/'.$mojoroto->foto)}}" class="" alt="..." />
+              <img src="{{asset('kubedaftarProd/'.$mojoroto->foto)}}" class="" alt="..." />
               <div class="card-body">
                 <dl class="row my-0">
                   <dt class="col-sm-5">Kelurahan</dt>
