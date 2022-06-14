@@ -48,14 +48,13 @@ Edit Foto
                     <label class="m-2">Tag</label>
                     <input id="input-file-now-custom-3" class="form-control m-2" type="text" data-role="tagsinput" name="tags" value="{{$tagg ?? ''}}">
                 </div>
+
+                <button type="submit" class="btn btn-primary">Edit Foto</button>
+                <a href="/admin/list-foto" class="btn btn-outline-primary">Kembali</a>
+            </form>
         </div>
-
-        <button type="submit" class="btn btn-primary">Edit Foto</button>
-        <a href="/admin/list-foto" class="btn btn-outline-primary">Kembali</a>
-        </form>
     </div>
-</div>
-</body>
+    </body>
 
-<!-- batas -->
-@endsection
+    <!-- batas -->
+    @endsection
