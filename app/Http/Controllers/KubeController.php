@@ -6,6 +6,7 @@ use App\Models\Kube;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use App\Models\Menu;
 
 class KubeController extends Controller
 {
@@ -24,7 +25,9 @@ class KubeController extends Controller
         ->unionAll($counter)
         ->sum('views');
 
+        $menus = Menu::where('status', 'Show')->get();
+
         $kube = Kube::first()->get();
-        return view('kube.index', compact('counter', 'totalviews', 'kube'));
+        return view('kube.index', compact('counter', 'totalviews', 'kube', 'menus'));
     }
 }
