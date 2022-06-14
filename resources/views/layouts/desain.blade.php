@@ -485,7 +485,7 @@
                         <a style="font-weight: 400; font-size: 12px" target="_blank" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
                     </div>
                     <div class="footer-copyright footer-link" style="color: white">
-                        <div class="row row-cols-2">
+                        <div class="row row-cols-1 row-cols-md-2">
                             <span class="col">&copy; 2022 Pemerintah Kota Kediri</span>
                             <span class="col"><strong>Supported by</strong> Dinas Kominfo & Tim Magang Merdeka</span>
                         </div>
