@@ -436,10 +436,10 @@
                     <div class="row mb-3 mt-4">
                         <div class="col-md-6 footer-contact" style="color: white; font-family: 'Poppins', sans-serif;">
                             <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
-                            <div class="line"></div>
                             <p style="font-weight: 400; font-size: 12px">
                                 Bagian Administrasi Pemerintahan
                             </p>
+                            <div class="line"></div>
                             <p style="font-weight: 400; font-size: 12px">
                                 Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
                                 Kota kediri, Jawa Timur 64146
