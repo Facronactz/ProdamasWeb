@@ -7,6 +7,7 @@ use App\Models\Post;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
@@ -88,7 +89,14 @@ class PostController extends Controller
     public function edit($id)
     {
         $posts = Post::findOrFail($id);
-        return view('admin.foto.edit')->with('posts', $posts);
+        $post = DB::table('tagging_tagged')->where('taggable_id', '=', $id)->get();
+        $tagg = "";
+
+        foreach ($post as $item) {
+            $tagg = $tagg . ',' . $item->tag_name;
+            $tagg = trim($tagg, ',');
+        }
+        return view('admin.foto.edit')->with('posts', 'post', 'tagg');
     }
 
     /**
@@ -117,6 +125,8 @@ class PostController extends Controller
             "body" => $request->body,
             "cover" => $post->cover,
         ]);
+        $hsl = explode(",", $request->tags);
+        $post->retag($hsl);
 
         if ($request->hasFile("images")) {
             $files = $request->file("images");
