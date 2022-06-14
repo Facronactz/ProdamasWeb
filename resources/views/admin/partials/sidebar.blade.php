@@ -1,5 +1,3 @@
-@echo $user
-@stop
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color: #d3c4e2">
     <!-- Brand Logo -->
     <a href="{{ url('/') }}" class="brand-link">
