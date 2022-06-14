@@ -4,21 +4,24 @@
         <img src="{{ asset('img/logoprodamas.png') }}" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-bold">PRODAMAS</span>
     </a>
+    
+    $level = (DB::table('users')->where('id','=', Auth::user()->id)->first())->level
 
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Sidebar user (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="info">
-                <a href="#" class="d-block">Selamat Datang</a>{{(DB::table('users')->where('id','=', Auth::user()->id)->first())->level}}
+                <a href="#" class="d-block">Selamat Datang {{$level}}</a>
             </div>
         </div>
+        
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 {{-- @if($user->level == 'super') --}}
-                @if((DB::table('users')->where('id','=', Auth::user()->id)->first())->level == 'super')
+                @if($level == 'super')
                 <li class="nav-item">
                     <a href="{{ url('/admin/list-menu') }}" class="nav-link @yield('menu')">
                         <i class="nav-icon fas fa-bars"></i>
@@ -31,6 +34,7 @@
                         <p>Carousel Header</p>
                     </a>
                 </li>
+                @endif
                 <li class="nav-item">
                     <a href="/admin/list-article" class="nav-link @yield('artikel')">
                         <i class="nav-icon far fa-newspaper"></i>
@@ -61,6 +65,7 @@
                         <p>Audio</p>
                     </a>
                 </li>
+                @if($level == 'super')
                 <li class="nav-item">
                     <a href="/admin/list-prodamas" class="nav-link @yield('prodamas')">
                         <i class="nav-icon fas fa-landmark"></i>
@@ -92,7 +97,7 @@
                     </a>
                 </li>
                 @endif
-                @if((DB::table('users')->where('id','=', Auth::user()->id)->first())->level == 'super'||(DB::table('users')->where('id','=', Auth::user()->id)->first())->level == 'sospem' )
+                @if($level == 'super'||$level == 'sospem')
                 <li class="nav-item">
                     <a href="/admin/list-eboost" class="nav-link @yield('eboost')">
                         <i class="nav-icon fas fa-chart-line"></i>
