@@ -86,5 +86,6 @@
         <?= $e->deskripsi ?>
     </div>
 </div>
+</div>
 
 @endsection
