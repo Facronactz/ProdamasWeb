@@ -11,7 +11,7 @@ class Kube extends Model
     use HasFactory;
     protected $table = "kube";
     public $incrementing = false;
-    protected $fillable = ["id", "informasi", "foto_syarat"];
+    protected $fillable = ["id", "informasi", "foto_syarat", "foto_alur"];
 
     public function getCreatedAtAttribute()
     {
