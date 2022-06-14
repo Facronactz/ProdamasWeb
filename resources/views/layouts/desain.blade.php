@@ -224,11 +224,11 @@
                                 </ul>
                             </div>
                             <div class="nav-item dropdown nav-list">
-                                <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
+                                <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">Data</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
                                     <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
                                     <li class="dropdown-submenu w-100">
-                                        <a class="dropdown-item @yield('kosong')" href="{{ url('/kosong') }}">Prodamas Dalam Angka<span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <a class="dropdown-item @yield('kosong')">Prodamas Dalam Angka<span class="caret fas fa-caret-right ms-3"></span></a>
                                         <ul class="dropdown-menu">
                                             <li class="dropdown-submenu w-100">
                                                 <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">Anggaran & Realisasi</a></li>
