@@ -458,7 +458,9 @@
                                     <!-- <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br> -->
                                     {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
                                     <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
-                                    <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a> <br>
+                                    <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Angka</a> <br>
+                                    <a class="footer-link" href="{{ url('peta') }}">E-Boost</a> <br>
+                                    {{-- <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a> <br> --}}
                                     <a class="footer-link" href="{{ url('msib') }}">Tim Pengembang</a>
                                 </div>
                                 <div class="col-md-6 my-md-0 mt-4">
