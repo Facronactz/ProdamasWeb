@@ -33,9 +33,9 @@ Foto Baru
   <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="cover">
   <label class="m-2">Isi Foto Kegiatan (*maksimal 8 foto kegiatan)</label>
   <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="images[]" multiple>
-  <label class="m-2" for="tags">Tag</label>
+  <label class="m-2">Tag</label>
   <input id="input-file-now-custom-3" class="form-control m-2" type="text" data-role="tagsinput" name="tags">
-  <button type="submit" class="btn btn-primary">Tambah Foto</button>
+  <button type="submit" class="btn btn-primary mt-2">Tambah Foto</button>
   <a href="/admin/list-foto" class="btn btn-outline-primary">Kembali</a>
 </form>
 @endsection
