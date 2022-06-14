@@ -465,7 +465,7 @@
                                     <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br>
                                     {{-- <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank Sampah</a> <br> --}}
                                     <a class="footer-link" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA">Harmoni TV</a><br>
-                                    <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
+                                    <a class="footer-link" href="https://progressio.kedirikota.go.id/auth/login">Progressio</a>
                                 </div>
                             </div>
                         </div>
