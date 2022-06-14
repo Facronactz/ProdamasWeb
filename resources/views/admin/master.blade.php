@@ -154,7 +154,7 @@
                         ['view', ['fullscreen']],
                     ],
                 }),
-                $('.description').summernote({
+                $('.summernote').summernote({
                     callbacks: {
                         onPaste: function(e) {
                             var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
