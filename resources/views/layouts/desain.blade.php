@@ -318,7 +318,7 @@
                                     <a class="dropdown-item @yield('e-boost')">Akses Permodalan <span class="caret fas fa-caret-right ms-3"></span></a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-submenu w-100">
-                                        <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/koperasirw') }}">Koperasi</a></li>
+                                        <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/koperasirw') }}">Koperasi RW</a></li>
                                         <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/kurnia') }}">Kurnia</a></li>
                                 </li>
                                 </ul>
