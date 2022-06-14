@@ -39,19 +39,20 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $foto = new Post;
-        $file = $request->file("cover");
-        $imageName = time() . '_' . $file->getClientOriginalName();
-        $file->move(public_path("../cover/"), $imageName);
-        $tags = explode(",", $request->tags);
-        $foto->fill([
-            "title" => $request->title,
-            "body" => $request->body,
-            "cover" => $imageName,
-        ]);
-        $foto->save();
-        $foto->tag($tags);
-
+        $foto = new Post();
+        if ($request->hasFile("cover")) {
+            $file = $request->file("cover");
+            $imageName = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path("../cover/"), $imageName);
+            $tags = explode(",", $request->tags);
+            $foto->fill([
+                "title" => $request->title,
+                "body" => $request->body,
+                "cover" => $imageName,
+            ]);
+            $foto->save();
+            $foto->tag($tags);
+        }
 
         if ($request->hasFile("images")) {
             $files = $request->file("images");
