@@ -43,7 +43,7 @@
     <div class="m-4 mb-5 text-center">
         <h1><strong>Wirausaha</strong></h1>
         <h4>Segala informasi mengenai kegiatan peningkatan perekonomian<br>
-        di Kota Kediri.
+            di Kota Kediri.
         </h4>
     </div>
     <div class="card border-light my-4">
@@ -59,8 +59,8 @@
                     <h2 class="card-title">Tentang Wirausaha</h2>
                     <div style="height: 2px; background-color:#000000"></div>
                     <div class="card-text align-middle" style="font-size: 20px">
-                    {{-- <p class="card-text align-middle" style="font-size: 20px">Menindaklanjuti permasalahan masyarakat di Kota Kediri, E-Boost hadir untuk membantu Anda dalam mengetahui informasi mengenai Wirausaha/UMKM, Koperasi RW, KUBE dan informasi lainnya. </p> --}}
-                    <p class="card-text align-middle" style="font-size: 20px"><?= $e->tentang ?></p>
+                        {{-- <p class="card-text align-middle" style="font-size: 20px">Menindaklanjuti permasalahan masyarakat di Kota Kediri, E-Boost hadir untuk membantu Anda dalam mengetahui informasi mengenai Wirausaha/UMKM, Koperasi RW, KUBE dan informasi lainnya. </p> --}}
+                        <p class="card-text align-middle" style="font-size: 20px"><?= $e->tentang ?></p>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,6 @@
     <div class="pt2" style="font-size: 20px; text-align:justify; text-indent: 25px">
         <?= $e->deskripsi ?>
     </div>
-</div>
 </div>
 
 @endsection
