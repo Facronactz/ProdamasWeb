@@ -289,9 +289,6 @@
                                 </li>
                                 </ul> --}}
                             </div>
-                            @foreach ($menus ?? '' as $menu)
-                            <a href="{{ url($menu->link) }}" class="nav-link nav-list @yield('{{ $menu->judul }}')">{{ $menu->judul }}</a>
-                            @endforeach
                             <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle dropdown-toggle-split @yield('e-boost')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">E-Boost </a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuEboost">
@@ -335,6 +332,9 @@
                                 </li>
                                 </ul>
                             </div>
+                            @foreach ($menus ?? '' as $menu)
+                            <a href="{{ url($menu->link) }}" class="nav-link nav-list @yield('{{ $menu->judul }}')">{{ $menu->judul }}</a>
+                            @endforeach
                             <div class="nav-list" id="scrollspy">
                                 <a class="nav-link" href="#footer">Kontak</a>
                             </div>
