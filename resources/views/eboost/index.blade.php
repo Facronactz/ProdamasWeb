@@ -55,7 +55,7 @@
                 <div class="card-body">
                     <h2 class="card-title">{{ $e->judul_tentang }}</h2>
                     <div style="height: 2px; background-color:#000000"></div>
-                    <p class="card-text align-middle" style="font-size: 20px">{{ $e->caption_tentang }}</p>
+                    <p class="card-text align-middle" style="font-size: 20px"><?= $e->caption_tentang ?></p>
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@
                 <div class="card-body">
                     <h2 class="card-title">{{ $e->judul_info }}</h2>
                     <div style="height: 2px; background-color:#000000"></div>
-                    <p class="card-text align-middle" style="font-size: 20px">{{ $e->caption_info }}</p>
+                    <p class="card-text align-middle" style="font-size: 20px"><?= $e->caption_info ?></p>
                 </div>
             </div>
         </div>
