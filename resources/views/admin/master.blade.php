@@ -17,7 +17,7 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
-    
+
     <!-- FavIcon -->
     {{-- <link href="{{ asset('img/icon.png') }}" rel="icon" /> --}}
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -43,7 +43,6 @@
         .bootstrap-tagsinput {
             width: 100%;
         }
-
     </style>
 </head>
 
@@ -77,24 +76,24 @@
                 <div class="card">
                     <div class="card-body">
                         @hasSection('content')
-                            @yield('content')
+                        @yield('content')
                         @else
-                            {{-- Admin Menu --}}
-                            <div class="container-fluid">
-                                <div class="g-3 row justify-content-center my-3">
-                                    @foreach ($menus as $menu)
-                                    <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2" style="background: {{$menu->color}}; min-width: 200px;">
-                                        <div class="card-body row">
-                                            <div class="m-auto" style="color: #f4f6f9;">
-                                                <i class="{{$menu->icon}} fa-7x"></i>
-                                                <a href="{{$menu->link}}" class="stretched-link"></a>
-                                                <h2>{{ $menu->name }}</h2>
-                                            </div>
+                        {{-- Admin Menu --}}
+                        <div class="container-fluid">
+                            <div class="g-3 row justify-content-center my-3">
+                                @foreach ($menus as $menu)
+                                <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2" style="background: {{$menu->color}}; min-width: 200px;">
+                                    <div class="card-body row">
+                                        <div class="m-auto" style="color: #f4f6f9;">
+                                            <i class="{{$menu->icon}} fa-7x"></i>
+                                            <a href="{{$menu->link}}" class="stretched-link"></a>
+                                            <h2>{{ $menu->name }}</h2>
                                         </div>
                                     </div>
-                                    @endforeach
                                 </div>
+                                @endforeach
                             </div>
+                        </div>
                         @endif
                     </div>
                     <!-- /.card-body -->
@@ -142,19 +141,33 @@
     <script>
         $(document).ready(function() {
             $('#description').summernote({
-                callbacks: {
-                    onPaste: function(e) {
-                        var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
-                        e.preventDefault();
-                        document.execCommand('insertText', false, bufferText);
+                    callbacks: {
+                        onPaste: function(e) {
+                            var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
+                            e.preventDefault();
+                            document.execCommand('insertText', false, bufferText);
+                        },
                     },
-                },
-                toolbar: [
-                    ['style', ['bold', 'italic', 'underline']],
-                    ['para', ['ul', 'ol', 'paragraph']],
-                    ['view', ['fullscreen']],
-                ],
-            })
+                    toolbar: [
+                        ['style', ['bold', 'italic', 'underline']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['view', ['fullscreen']],
+                    ],
+                }),
+                $('.summernote').summernote({
+                    callbacks: {
+                        onPaste: function(e) {
+                            var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
+                            e.preventDefault();
+                            document.execCommand('insertText', false, bufferText);
+                        },
+                    },
+                    toolbar: [
+                        ['style', ['bold', 'italic', 'underline']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['view', ['fullscreen']],
+                    ],
+                })
         });
     </script>
 

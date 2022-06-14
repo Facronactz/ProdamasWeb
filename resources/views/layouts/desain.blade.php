@@ -433,7 +433,7 @@
                 </div> -->
                 </div>
                 <div class="col">
-                    <div class="row mb-3 mt-3">
+                    <div class="row mb-2 mt-2">
                         <div class="col-md-6 footer-contact" style="color: white; font-family: 'Poppins', sans-serif;">
                             <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
                             <p style="font-weight: 400; font-size: 12px">

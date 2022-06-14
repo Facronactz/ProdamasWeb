@@ -20,7 +20,7 @@ Edit E-Boost
 
     <div class="form-group">
         <label for="caption_tentang">Caption Tentang</label>
-        <textarea name="caption_tentang" id="description" class="form-control" placeholder="Caption Tentang">{{ $eboost->caption_tentang }}</textarea>
+        <textarea name="caption_tentang" class="form-control summernote" placeholder="Caption Tentang">{{ $eboost->caption_tentang }}</textarea>
         @error('caption_tentang')
         <div class="alert alert-danger">
             {{ $message }}
@@ -51,7 +51,7 @@ Edit E-Boost
 
     <div class="form-group">
         <label for="caption_info">Caption Info</label>
-        <textarea name="caption_info" id="description" class="form-control" name="caption_info" placeholder="Caption Info">{{ $eboost->caption_info }}</Textarea>
+        <textarea name="caption_info" class="form-control summernote" name="caption_info" placeholder="Caption Info">{{ $eboost->caption_info }}</Textarea>
         @error('caption_info')
         <div class="alert alert-danger">
             {{ $message }}
@@ -77,7 +77,7 @@ Edit E-Boost
         </div>
         @enderror
         <label for="deskripsi">Deskripsi</label>
-        <textarea name="deskripsi" id="description" class="form-control" cols="30" rows="3"><?= $eboost->deskripsi ?></textarea>
+        <textarea name="deskripsi" class="form-control summernote" cols="30" rows="3"><?= $eboost->deskripsi ?></textarea>
     </div>
 
     <button type="submit" class="btn btn-primary">Edit</button>
