@@ -63,10 +63,8 @@ class EboostAdmin extends Controller
         $request->validate([
             'judul_tentang' => 'required',
             'caption_tentang' => 'required',
-            'foto_tentang' => 'required',
             'judul_info' => 'required',
             'caption_info' => 'required',
-            'foto_info' => 'required',
             'deskripsi' => 'required'
         ]);
 
