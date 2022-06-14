@@ -26,6 +26,6 @@ class WirausahaController extends Controller
 
         $wirausaha = Wirausaha::first()->get();
 
-        return view('wirausaha.index', compact('counter', 'koperasi', 'totalviews', 'menus'));
+        return view('wirausaha.index', compact('counter', 'wirausaha', 'totalviews', 'menus'));
     }
 }
