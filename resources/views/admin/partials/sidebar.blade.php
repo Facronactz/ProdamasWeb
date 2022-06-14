@@ -1,3 +1,5 @@
+@echo $user
+@break
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color: #d3c4e2">
     <!-- Brand Logo -->
     <a href="{{ url('/') }}" class="brand-link">
@@ -17,7 +19,7 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                @if($user== 'super')
+                @if($user == 'super')
                 <li class="nav-item">
                     <a href="{{ url('/admin/list-menu') }}" class="nav-link @yield('menu')">
                         <i class="nav-icon fas fa-bars"></i>
