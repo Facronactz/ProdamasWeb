@@ -89,14 +89,14 @@ class PostController extends Controller
     public function edit($id)
     {
         $posts = Post::findOrFail($id);
-        $post = DB::table('tagging_tagged')->where('taggable_id', '=', $id)->get();
+        $foto = DB::table('tagging_tagged')->where('taggable_id', '=', $id)->get();
         $tagg = "";
 
-        foreach ($post as $item) {
+        foreach ($foto as $item) {
             $tagg = $tagg . ',' . $item->tag_name;
             $tagg = trim($tagg, ',');
         }
-        return view('admin.foto.edit')->with('posts', 'post', 'tagg');
+        return view('admin.foto.edit')->with('posts', $posts, 'foto', 'tagg');
     }
 
     /**
