@@ -111,11 +111,17 @@
         <div class="row">
             <div class="col-md-6 py-4">
                 <h1 class="text-center mb-5">Tentang Prodamas</h1>
-                <p class="fs-5" style="text-align: left;">Program Pemberdayaan Masyarakat (PRODAMAS) adalah
+                {{-- <p class="fs-5" style="text-align: left;">Program Pemberdayaan Masyarakat (PRODAMAS) adalah
                     suatu program dari Pemerintah Kota Kediri
                     yang digunakan untuk melaksanakan kegiatan pembangunan masyarakat ditingkat kelurahan yang berbasis
                     wilayah Rukun Tetangga (RT) yang dimulai sejak tahun 2015 sebagai upaya mewujudkan kemampuan dan
-                    kemandirian masyarakat dalam pembangunan.</p>
+                    kemandirian masyarakat dalam pembangunan.</p> --}}
+                <p class="fs-5" style="text-align: left;">Pemberdayaan Masyarakat adalah proses pembangunan dimana masyarakat
+                    berinisiatif untuk memulai proses kegiatan untuk memperbaiki situasi dan
+                    kondisi diri sendiri dan lingkungannya. Progam Pemberdayaan Masyarakat Plus yang selanjutnya disebut Prodamas Plus adalah suatu program lanjutan dari Prodamas untuk mendorong
+                    partisipasi dan peran aktif masyarakat dalam pembangunan ditingkat
+                    kelurahan yang berbasis di wilayah Rukun Tetangga.
+                </p>
             </div>
             <div class="col-md-6 py-4">
                 <img src="img/tentangProdamas.jpeg" class="img-fluid rounded-3">
