@@ -9,6 +9,7 @@ use App\Models\Post;
 class Image extends Model
 {
     use HasFactory;
+    use \Conner\Tagging\Taggable;
     protected $table = "images";
     protected $fillable=[
         'image',
