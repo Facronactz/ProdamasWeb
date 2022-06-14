@@ -71,7 +71,7 @@
       <div id="pesantren">
         <h1>Kec. Pesantren</h1>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          @foreach ($pesantrens as $pesantren)
+          @foreach ($pesantrenkube as $pesantren)
           <div class="col">
             <div class="card">
               <h3 class="card-header">{{$pesantren->judul}}</h3>
