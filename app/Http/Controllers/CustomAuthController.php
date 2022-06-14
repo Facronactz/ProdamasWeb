@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Hash;
 use Session;
 use App\User;
@@ -70,9 +71,11 @@ class CustomAuthController extends Controller
     public function admin()
     {
         if (Auth::check()) {
-
+            $id = Auth::user()->id;
+            $user['level'] = DB::table('users')->where('id','=', $id)->first();
+            
             $menus = admin_menu::all();
-            return view('admin.master', compact('menus'));
+            return view('admin.master', compact('menus', 'user'));
         }
 
         return redirect("/loginuser")->withSuccess('You are not allowed to access');

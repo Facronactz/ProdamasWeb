@@ -11,7 +11,7 @@ E-Boost Submission
 </div>
 @endif
 
-<div class="form-group">
+{{-- <div class="form-group">
     <label for="desc_eboost">Deskripsi</label>
     <!-- <table class="table">
         @foreach ($eboost ?? '' as $eboosts)
@@ -25,7 +25,7 @@ E-Boost Submission
         </tr>
         @endforeach
     </table> -->
-</div>
+</div> --}}
 {{-- <a href="/admin/add-eboost" class="btn btn-primary mb-3">Tambah E-Boost</a> --}}
 <table class="table" id="tableEboost">
     <thead class="thead-light">
