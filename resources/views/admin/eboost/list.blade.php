@@ -46,10 +46,10 @@ E-Boost Submission
         <tr>
             <td>{{$key + 1}}</th>
             <td>{{$eboosts->judul_tentang}}</td>
-            <td>{{$eboosts->caption_tentang}}</td>
+            <td><?=$eboosts->caption_tentang?></td>
             <td>{{$eboosts->foto_tentang}}</td>
             <td>{{$eboosts->judul_info}}</td>
-            <td>{{$eboosts->caption_info}}</td>
+            <td><?=$eboosts->caption_info?></td>
             <td>{{$eboosts->foto_info}}</td>
             <td><?= substr($eboosts->deskripsi, 0, 150) ?></td>
             <td>
