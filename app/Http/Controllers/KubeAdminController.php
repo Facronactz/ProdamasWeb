@@ -41,27 +41,27 @@ class KubeAdminController extends Controller
             File::delete(public_path("../kubeProd/" . $kube->foto_syarat));
             $syaratPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $syarat->getClientOriginalName());
             $syarat->move(public_path('../kubeProd/'), $syaratPath);
-            $koperasi->update([
+            $kube->update([
                 'foto_syarat' => $syaratPath,
             ]);
         }
 
         if ($alur != null) {
-            File::delete(public_path("../kubeProd/" . $koperasi->foto_alur));
+            File::delete(public_path("../kubeProd/" . $kube->foto_alur));
             $alurPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $alur->getClientOriginalName());
             $alur->move(public_path('../kubeProd/'), $alurPath);
-            $koperasi->update([
+            $kube->update([
                 'foto_alur' => $alurPath,
             ]);
         }
 
     
-        $koperasi->update([
+        $kube->update([
             'informasi' => $request->informasi,
         ]);
 
 
-        return redirect('/admin/list-kube')->with('success', 'Informasi Koperasi Berhasil Diedit!');
+        return redirect('/admin/list-kube')->with('success', 'Informasi Kube Berhasil Diedit!');
     }
 
     //sampul per kecamatan
@@ -105,10 +105,10 @@ class KubeAdminController extends Controller
             ]);
         }
 
-        return redirect('/admin/list-kube')->with('success', 'Foto Sentra Koperasi RW Berhasil Diupdate!');
+        return redirect('/admin/list-kube')->with('success', 'Foto Sentra Kube Berhasil Diupdate!');
     }
 
-    //daftar koperasi
+    //daftar kube
     public function createlist()
     {
         return view('admin.kube.adddaftar');
@@ -129,7 +129,7 @@ class KubeAdminController extends Controller
 
         $file = $request->file('foto');
         $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-        $file->move(public_path('../koperasidaftarProd/'), $foto);
+        $file->move(public_path('../kubedaftarProd/'), $foto);
         KubeDaftar::insert([
             'judul' => $request->judul,
             'foto' => $foto,
