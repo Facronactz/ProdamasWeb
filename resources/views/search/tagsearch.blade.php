@@ -68,7 +68,7 @@
         @endif
 
         @foreach ($foto as $item)
-        <div class="modal fade" id="audioPlayer{{ $post->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+        <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" style="width: 500px; height: 500px">
                 <div class="modal-content">
                     <div class="modal-header ">
@@ -90,11 +90,11 @@
                                 @endif
                                 @endforeach
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators{{ $post->id }}" data-bs-slide="prev">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators{{ $item->id }}" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators{{ $post->id }}" data-bs-slide="next">
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators{{ $item->id }}" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
