@@ -89,7 +89,7 @@
                             <div class="container-fluid">
                                 <div class="g-3 row justify-content-center my-3">
                                     @foreach ($menus as $menu)
-                                        @if ($level == 'super' || $menu->level == $level)
+                                        @if ($level == 'super' || $menu->level == 'basic' || $menu->level == $level)
                                             <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2" style="background: {{ $menu->color }}; min-width: 200px;">
                                                 <div class="card-body row">
                                                     <div class="m-auto" style="color: #f4f6f9;">
