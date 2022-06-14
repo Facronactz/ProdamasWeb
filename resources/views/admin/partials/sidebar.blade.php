@@ -113,6 +113,12 @@
                         <p>Wirausaha</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="/admin/list-kube" class="nav-link @yield('kube')">
+                        <i class="nav-icon fas fa-edit"></i>
+                        <p>Kube</p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

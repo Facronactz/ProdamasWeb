@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\File;
 use App\Models\Menu;
+use App\Models\Wirausaha;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 
 class WirausahaController extends Controller
 {
@@ -22,6 +23,9 @@ class WirausahaController extends Controller
             ->unionAll($counter)
             ->sum('views');
         $menus = Menu::where('status', 'Show')->get();
-        return view('wirausaha.index', compact('counter', 'totalviews', 'menus'));
+
+        $wirausaha = Wirausaha::first()->get();
+
+        return view('wirausaha.index', compact('counter', 'wirausaha', 'totalviews', 'menus'));
     }
 }

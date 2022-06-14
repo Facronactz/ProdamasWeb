@@ -48,14 +48,20 @@
     </div>
     <div class="card border-light my-4">
         <div class="row g-0">
+            @foreach ($wirausaha as $e)
+            @endforeach
             <div class="col-lg-4 d-flex justify-content-center">
-                <img src="https://via.placeholder.com/700x400.png?text=Ukuran+Optimal+=+700px+x+400px" class="img-fluid" style="max-height: 400px;">
+                {{-- <img src="https://via.placeholder.com/700x400.png?text=Ukuran+Optimal+=+700px+x+400px" class="img-fluid" style="max-height: 400px;"> --}}
+                <img src="{{ asset('fotoProd/'.$e->foto_tentang) }}" class="img-fluid" style="max-height: 400px;">
             </div>
             <div class="col-lg-8">
                 <div class="card-body">
                     <h2 class="card-title">Tentang Wirausaha</h2>
                     <div style="height: 2px; background-color:#000000"></div>
-                    <p class="card-text align-middle" style="font-size: 20px">Menindaklanjuti permasalahan masyarakat di Kota Kediri, E-Boost hadir untuk membantu Anda dalam mengetahui informasi mengenai Wirausaha/UMKM, Koperasi RW, KUBE dan informasi lainnya. </p>
+                    <div class="card-text align-middle" style="font-size: 20px">
+                    {{-- <p class="card-text align-middle" style="font-size: 20px">Menindaklanjuti permasalahan masyarakat di Kota Kediri, E-Boost hadir untuk membantu Anda dalam mengetahui informasi mengenai Wirausaha/UMKM, Koperasi RW, KUBE dan informasi lainnya. </p> --}}
+                    <p class="card-text align-middle" style="font-size: 20px">{{ $e->tentang }}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -64,13 +70,13 @@
     <div class="card border-light my-4">
         <div class="row g-0">
             <div class="col-lg-4 d-flex justify-content-center">
-                <img src="https://via.placeholder.com/700x400.png?text=Ukuran+Optimal+=+700px+x+400px" class="img-fluid" style="max-height: 400px;">
+                <img src="{{ asset('fotoProd/'.$e->foto_info) }}" class="img-fluid" style="max-height: 400px;">
             </div>
             <div class="col-lg-8">
                 <div class="card-body">
                     <h2 class="card-title">Informasi Wirausaha</h2>
                     <div style="height: 2px; background-color:#000000"></div>
-                    <p class="card-text align-middle" style="font-size: 20px">Selamat datang di E-BOOST. Dalam rangka mencapai pertumbuhan ekonomi yang stabil dan berkelanjutan, perlu didukung kokohnya stabilitas makroekonomi dan sistem keuangan. Untuk mendukung upaya tersebut diperlukan pemberdayaan sektor riil khususnya pengembangan Usaha, Mikro, Kecil, dan Menengah (UMKM) yang berkontribusi besar dalam pertumbuhan ekonomi di Indonesia.</p>
+                    <p class="card-text align-middle" style="font-size: 20px">{{ $e->info }}</p>
                 </div>
             </div>
         </div>

@@ -48,7 +48,6 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <a href="foto/{{ $item->id }}" class="stretched-link"></a>
                         <h5 class="card-title" style="font-size: 22px;">{{ $item->title }}</h5>
                         <p class="card-text" style="font-size: 13px;"><small class="text-muted">{{$item->updated_at}}</small></p>
                     </div>
@@ -68,7 +67,7 @@
         @endif
 
         @foreach ($foto as $item)
-        <div class="modal fade" id="audioPlayer{{ $post->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+        <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl" style="width: 500px; height: 500px">
                 <div class="modal-content">
                     <div class="modal-header ">
@@ -90,18 +89,18 @@
                                 @endif
                                 @endforeach
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators{{ $post->id }}" data-bs-slide="prev">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators{{ $item->id }}" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators{{ $post->id }}" data-bs-slide="next">
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators{{ $item->id }}" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
                         <!-- </div> -->
 
-                        <h6>{{ $foto->body }}</h6>
+                        <h6>{{ $item->body }}</h6>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -207,6 +206,7 @@
         @endif
 
         @foreach ($audio as $item)
+        {{-- Card Modal --}}
         <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
@@ -223,7 +223,7 @@
                                                           ">
                                 <img src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}" class="d-flex justify-content click" style="width: 100%;" alt="...">
                                 <audio controls="controls">
-                                    <source src="{{ $item->konten }}">
+                                    <source src="https://docs.google.com/uc?export=download&id={{ $item->konten }}">
                                 </audio>
                             </div>
                             <div class="card" style="

@@ -310,7 +310,7 @@
                                             <li class="dropdown-submenu w-100">
                                             <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/wirausaha') }}">Wirausaha</a></li>
                                             <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/umkm') }}">UMKM</a></li>
-                                            <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/umkm') }}">KUBE</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/kube') }}">KUBE</a></li>
                                     </li>
                                 </ul>
                                 </li>

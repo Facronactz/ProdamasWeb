@@ -63,10 +63,9 @@ class EboostAdmin extends Controller
         $request->validate([
             'judul_tentang' => 'required',
             'caption_tentang' => 'required',
-            'foto_tentang' => 'required',
             'judul_info' => 'required',
             'caption_info' => 'required',
-            'foto_info' => 'required',
+            'deskripsi' => 'required'
         ]);
 
         $eboost = Eboost::findorfail($id);
@@ -94,6 +93,7 @@ class EboostAdmin extends Controller
             'caption_tentang' => $request->caption_tentang,
             'judul_info' => $request->judul_info,
             'caption_info' => $request->caption_info,
+            'deskripsi' => $request->deskripsi,
         ]);
 
         return redirect('/admin/list-eboost')->with('success', 'Eboost Berhasil Diupdate!');
