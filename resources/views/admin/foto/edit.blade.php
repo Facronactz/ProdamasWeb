@@ -14,11 +14,11 @@ Edit Foto
     <div class="row">
         <div class="col-lg-3">
             <p>Foto Sampul Kegiatan:</p>
-            <!-- <form action="/deletecover/{{ $posts->id }}" method="post">
+            {{-- <form action="/deletecover/{{ $posts->id }}" method="post">
                     <button class="btn text-danger">X</button>
                     @csrf
                     @method('delete')
-                    </form>  -->
+                    </form> --}}
             <img src="/cover/{{ $posts->cover }}" class="img-responsive" style="max-height: 100px; max-width: 100px;" alt="" srcset="">
             <br>
             @if (count($posts->images)>0)
