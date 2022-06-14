@@ -25,13 +25,13 @@ Foto Sentra Kube
 </div>
 @endif
 
-<form action="/admin/editpict/{{$picts->id}}" method="POST" enctype="multipart/form-data">
+<form action="/admin/editpict/{{$picture->id}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('put')
     <div class="form-group">
         <label for="kota">Kec. Kota</label><br>
-        <p>{{$picts->kota}}</p>
-        <input type="file" accept="image/png, image/jpg, image/jpeg" name="kota" class="form-control" id="kota" value="{{$picts->kota}}">
+        <p>{{$picture->kota}}</p>
+        <input type="file" accept="image/png, image/jpg, image/jpeg" name="kota" class="form-control" id="kota" value="{{$picture->kota}}">
         @error('kota')
         <div class="alert alert-danger">
             {{ $message }}
@@ -41,8 +41,8 @@ Foto Sentra Kube
 
     <div class="form-group">
         <label for="pesantren">Kec. Pesantren</label><br>
-        <p>{{$picts->pesantren}}</p>
-        <input type="file" accept="image/png, image/jpg, image/jpeg" name="pesantren" class="form-control" id="pesantren" value="{{$picts->pesantren}}">
+        <p>{{$picture->pesantren}}</p>
+        <input type="file" accept="image/png, image/jpg, image/jpeg" name="pesantren" class="form-control" id="pesantren" value="{{$picture->pesantren}}">
         @error('pesantren')
         <div class="alert alert-danger">
             {{ $message }}
@@ -52,8 +52,8 @@ Foto Sentra Kube
 
     <div class="form-group">
         <label for="mojoroto">Kec. Mojoroto</label><br>
-        <p>{{$picts->mojoroto}}</p>
-        <input type="file" accept="image/png, image/jpg, image/jpeg" name="mojoroto" class="form-control" id="mojoroto" value="{{$picts->mojoroto}}">
+        <p>{{$picture->mojoroto}}</p>
+        <input type="file" accept="image/png, image/jpg, image/jpeg" name="mojoroto" class="form-control" id="mojoroto" value="{{$picture->mojoroto}}">
         @error('mojoroto')
         <div class="alert alert-danger">
             {{ $message }}
