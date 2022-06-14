@@ -519,8 +519,8 @@
                 slidesToScroll: 2,
                 adaptiveHeight: true,
                 cssEase: 'ease',
-                prevArrow: '<button type="button" class="carousel-icon-prev slick-prev bg-primary btn-primary"></button>',
-                nextArrow: '<button type="button" class="carousel-icon-next slick-next bg-primary btn-primary"></button>',
+                prevArrow: '<button type="button" class="carousel-icon-prev slick-prev bg-primary btn-primary mx-3" style="z-index: 2;"></button>',
+                nextArrow: '<button type="button" class="carousel-icon-next slick-next bg-primary btn-primary mx-3" style="z-index: 2;"></button>',
                 responsive: [{
                     
                     breakpoint: 992,
