@@ -5,14 +5,15 @@
         <span class="brand-text font-weight-bold">PRODAMAS</span>
     </a>
     @php
-    $level = (DB::table('users')->where('id','=', Auth::user()->id)->first())->level
+    $user = DB::table('users')->where('id','=', Auth::user()->id)->first()
+    $level = $user->level
     @endphp
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Sidebar user (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="info">
-                <a href="#" class="d-block">Selamat Datang {{$level}}</a>
+                <a href="#" class="d-block">Selamat Datang {{$user -> name}}</a>
             </div>
         </div>
         
