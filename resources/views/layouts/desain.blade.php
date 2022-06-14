@@ -301,7 +301,7 @@
                                 </ul> --}}
                             </div>
                             <div class="nav-item dropdown nav-list">
-                                <a class="nav-link dropdown-toggle dropdown-toggle-split @yield('e-boost')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">E-Boost </a>
+                                <a class="nav-link dropdown-toggle dropdown-toggle-split @yield('e-boost')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" data-bs-reference="parent">E-Boost </a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuEboost">
                                     <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/e-boost') }}">E-Boost</a></li>
                                     <li class="dropdown-submenu w-100">
