@@ -70,9 +70,9 @@
         <!-- video -->
         <h3 style="font-family: Inter, sans-serif">Video</h3>
         @if ($video->count())
-        @foreach ($video as $item)
         <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
-            <div class="row g-0">
+            @foreach ($video as $item)
+            <div class="row g-0" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                 <div class="col-md-4 my-auto">
                     <img src="{{ asset('videoProd/sampul/' . $item->gambar_sampul) }}" class="img-fluid rounded-start">
                 </div>
@@ -84,8 +84,9 @@
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
-        @endforeach
+
         @if ($video->hasPages())
         <div class="d-flex justify-content-end w-100 my-3">
             {{ $video->links() }}
@@ -96,6 +97,40 @@
             Tidak ada data
         </div>
         @endif
+
+        @foreach ($video as $item)
+        <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="fotoLabel">{{ $item->judul }}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row row-cols-1 row-cols-md-2 mb-2 g-4 videoPlayerBox centerItms">
+                            <div class="card" style="
+                                                        width: 25rem;
+                                                        border: none;
+                                                        margin: 0;
+                                                        margin-top: 30px;
+                                                        ">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/{{$item->konten}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="card" style="
+                                                        border: none;
+                                                        ">
+                                <h3> {{ $item->judul }} </h3>
+                                <p> <?= $item->caption ?> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
 
         <!-- audio -->
         <h3 style="font-family: Inter, sans-serif">Audio</h3>
