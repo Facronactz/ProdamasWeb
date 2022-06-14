@@ -17,7 +17,7 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                @if($user->level == 'super')
+                {{-- @if($user->level == 'super') --}}
                 <li class="nav-item">
                     <a href="{{ url('/admin/list-menu') }}" class="nav-link @yield('menu')">
                         <i class="nav-icon fas fa-bars"></i>
@@ -120,7 +120,7 @@
                         <p>Kube</p>
                     </a>
                 </li>
-                @endif
+                {{-- @endif --}}
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
