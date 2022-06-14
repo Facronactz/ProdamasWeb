@@ -34,7 +34,7 @@ class KubeController extends Controller
         $picture = Pict::first()->get();
         $kotakube = KubeDaftar::where('kecamatan', 'Kota')->paginate(3);
         $pesantrenkube = KubeDaftar::where('kecamatan', 'Pesantren')->paginate(3);
-        $mojorotokube = KubeiDaftar::where('kecamatan', 'Mojoroto')->paginate(3);
+        $mojorotokube = KubeDaftar::where('kecamatan', 'Mojoroto')->paginate(3);
         
         return view('kube.index', compact(
             'counter',
