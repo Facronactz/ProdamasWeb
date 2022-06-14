@@ -15,11 +15,11 @@ Edit Foto
         <div class="col-lg-3">
             <p>Foto Sampul Kegiatan:</p>
             {{-- <form action="/deletecover/{{ $posts->id }}" method="post">
-                    <button class="btn text-danger">X</button>
-                    @csrf
-                    @method('delete')
-                    </form> --}}
-            <img src="{{ asset('/cover/').$posts->cover }}" class="img-responsive" style="max-height: 100px; max-width: 100px;" alt="" srcset="">
+            <button class="btn text-danger">X</button>
+            @csrf
+            @method('delete')
+            </form> --}}
+            <img src="/cover/{{ $posts->cover }}" class="img-responsive" style="max-height: 100px; max-width: 100px;" alt="" srcset="">
             <br>
             @if (count($posts->images)>0)
             <p>Foto Isi Kegiatan:</p>
@@ -46,16 +46,15 @@ Edit Foto
                     <label class="m-2">Isi Foto Kegiatan (*maksimal 8 foto kegiatan)</label>
                     <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="images[]" multiple>
                     <label class="m-2">Tag</label>
-                    <input id="input-file-now-custom-3" class="form-control m-2" type="text" data-role="tagsinput" name="tags" value="{{$tagg}}">
+                    <input id="input-file-now-custom-3" class="form-control m-2" type="text" data-role="tagsinput" name="tags" value="{{$tagg ?? ''}}">
                 </div>
+
+                <button type="submit" class="btn btn-primary">Edit Foto</button>
+                <a href="/admin/list-foto" class="btn btn-outline-primary">Kembali</a>
+            </form>
         </div>
-
-        <button type="submit" class="btn btn-primary">Edit Foto</button>
-        <a href="/admin/list-foto" class="btn btn-outline-primary">Kembali</a>
-        </form>
     </div>
-</div>
-</body>
+    </body>
 
-<!-- batas -->
-@endsection
+    <!-- batas -->
+    @endsection
