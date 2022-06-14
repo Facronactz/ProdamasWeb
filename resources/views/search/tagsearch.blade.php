@@ -38,7 +38,7 @@
         @endif
 
         <!-- foto -->
-        <h3 style="font-family: Inter, sans-serif">Foto</h3>
+        {{-- <h3 style="font-family: Inter, sans-serif">Foto</h3>
         @if ($foto->count())
         @foreach ($foto as $item)
         <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
@@ -109,7 +109,7 @@
                 </div>
             </div>
         </div>
-        @endforeach
+        @endforeach --}}
 
         <!-- video -->
         <h3 style="font-family: Inter, sans-serif">Video</h3>
