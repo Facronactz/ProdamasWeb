@@ -101,7 +101,7 @@
                         </div>
                         <!-- </div> -->
 
-                        <h6>{{ $foto->body }}</h6>
+                        <h6>{{ $item->body }}</h6>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
