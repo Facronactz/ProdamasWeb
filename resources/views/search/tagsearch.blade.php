@@ -70,8 +70,8 @@
         <!-- video -->
         <h3 style="font-family: Inter, sans-serif">Video</h3>
         @if ($video->count())
+        @foreach ($video as $item)
         <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
-            @foreach ($video as $item)
             <div class="row g-0" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                 <div class="col-md-4 my-auto">
                     <img src="{{ asset('videoProd/sampul/' . $item->gambar_sampul) }}" class="img-fluid rounded-start">
@@ -84,8 +84,8 @@
                     </div>
                 </div>
             </div>
-            @endforeach
         </div>
+        @endforeach
 
         @if ($video->hasPages())
         <div class="d-flex justify-content-end w-100 my-3">
