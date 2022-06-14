@@ -11,7 +11,7 @@ Edit Wirausaha
 
     <div class="form-group">
         <label for="tentang">Tentang</label>
-        <textarea name="tentang" class="form-control" name="tentang" id="tentang" placeholder="Tentang">{{ $wirausaha->tentang }}</textarea>
+        <textarea name="tentang" id="description" class="form-control" name="tentang" id="tentang" placeholder="Tentang">{{ $wirausaha->tentang }}</textarea>
         @error('tentang')
         <div class="alert alert-danger">
             {{ $message }}
@@ -32,7 +32,7 @@ Edit Wirausaha
     
     <div class="form-group">
         <label for="info">Info</label>
-        <textarea name="info" class="form-control" name="info" id="info" placeholder="Info">{{ $wirausaha->info }}</Textarea>
+        <textarea name="info" id="description" class="form-control" name="info" id="info" placeholder="Info">{{ $wirausaha->info }}</Textarea>
         @error('info')
         <div class="alert alert-danger">
             {{ $message }}
