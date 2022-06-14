@@ -455,16 +455,17 @@
                                     <!-- <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br> -->
                                     {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
                                     <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
-                                    <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
+                                    <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a> <br>
+                                    <a class="footer-link" href="{{ url('msib') }}">Tim Pengembang</a>
                                 </div>
                                 <div class="col-md-6 col-lg-6">
                                     <p class="foot-title">
                                         TAUTAN EKSTERNAL</p>
                                     <div class="line-te"></div>
-                                    <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br>
+                                    <a class="footer-link" target="_blank" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br>
                                     {{-- <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank Sampah</a> <br> --}}
-                                    <a class="footer-link" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA">Harmoni TV</a><br>
-                                    <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
+                                    <a class="footer-link" target="_blank" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA">Harmoni TV</a><br>
+                                    <a class="footer-link" target="_blank" href="https://progressio.kedirikota.go.id/auth/login">Progressio</a>
                                 </div>
                             </div>
                         </div>
