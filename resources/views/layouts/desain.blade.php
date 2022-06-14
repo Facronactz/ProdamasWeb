@@ -464,8 +464,10 @@
                                     <div class="line-te"></div>
                                     <a class="footer-link" target="_blank" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br>
                                     {{-- <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank Sampah</a> <br> --}}
+                                    <a class="footer-link" target="_blank" href="https://progressio.kedirikota.go.id/auth/login">Progressio</a><br>
+                                    <a class="footer-link" target="_blank" href="https://emas.pendidikan.kedirikota.go.id/">EMAS</a><br>
+                                    <a class="footer-link" target="_blank" href="https://surga.kedirikota.go.id/">SURGA</a><br>
                                     <a class="footer-link" target="_blank" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA">Harmoni TV</a><br>
-                                    <a class="footer-link" target="_blank" href="https://progressio.kedirikota.go.id/auth/login">Progressio</a>
                                 </div>
                             </div>
                         </div>
@@ -477,7 +479,7 @@
                         <a style="font-weight: 400; font-size: 12px" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
                         <a style="font-weight: 400; font-size: 12px" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
                     </div>
-                    <div class="footer-copyright footer-link" style="color: white">&copy; 2022 Prodamas Plus</div>
+                    <div class="footer-copyright footer-link" style="color: white">&copy; 2022 Prodamas Plus Supported by Dinas Kominfo & Tim Magang Merdeka</div>
                 </div>
             </div>
         </div>
