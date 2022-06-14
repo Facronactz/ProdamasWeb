@@ -4,9 +4,9 @@
         <img src="{{ asset('img/logoprodamas.png') }}" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-bold">PRODAMAS</span>
     </a>
-    
+    @php
     $level = (DB::table('users')->where('id','=', Auth::user()->id)->first())->level
-
+    @endphp
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Sidebar user (optional) -->
