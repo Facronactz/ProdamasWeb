@@ -458,15 +458,15 @@
                                     <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a> <br>
                                     <a class="footer-link" href="{{ url('msib') }}">Tim Pengembang</a>
                                 </div>
-                                <div class="col-md-6 mb-3 my-md-0 mt-4">
+                                <div class="col-md-6 my-md-0 mt-4">
                                     <p class="foot-title">
                                         TAUTAN EKSTERNAL</p>
                                     <div class="line-te"></div>
                                     <a class="footer-link" target="_blank" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br>
                                     {{-- <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank Sampah</a> <br> --}}
                                     <a class="footer-link" target="_blank" href="https://progressio.kedirikota.go.id/auth/login">Progressio</a><br>
-                                    <a class="footer-link" target="_blank" href="https://emas.pendidikan.kedirikota.go.id/">EMAS</a><br>
-                                    <a class="footer-link" target="_blank" href="https://surga.kedirikota.go.id/">SURGA</a><br>
+                                    <a class="footer-link" target="_blank" href="https://emas.pendidikan.kedirikota.go.id/">English Massive (EMAS)</a><br>
+                                    <a class="footer-link" target="_blank" href="https://surga.kedirikota.go.id/">Sistem Layanan Pengaduan SURGA</a><br>
                                     <a class="footer-link" target="_blank" href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA">Harmoni TV</a><br>
                                 </div>
                             </div>
