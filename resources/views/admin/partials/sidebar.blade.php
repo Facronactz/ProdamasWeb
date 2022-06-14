@@ -32,7 +32,7 @@
                         <li class="nav-item">
                             <a href="{{ $menu->link }}" class="nav-link @yield($menu->yield)">
                                 <i class="nav-icon {{ $menu->icon }}"></i>
-                                <p>{ $menu->name }}</p>
+                                <p>{{ $menu->name }}</p>
                             </a>
                         </li>
                         {{-- <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2" style="background: {{ $menu->color }}; min-width: 200px;">
