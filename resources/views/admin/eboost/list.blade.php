@@ -26,7 +26,7 @@ E-Boost Submission
         @endforeach
     </table> -->
 </div>
-<a href="/admin/add-eboost" class="btn btn-primary mb-3">Tambah E-Boost</a>
+{{-- <a href="/admin/add-eboost" class="btn btn-primary mb-3">Tambah E-Boost</a> --}}
 <table class="table" id="tableEboost">
     <thead class="thead-light">
         <tr>
