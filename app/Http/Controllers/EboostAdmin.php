@@ -49,7 +49,7 @@ class EboostAdmin extends Controller
     {
         $eboost = Eboost::groupBy('judul_tentang','judul_info')->get();
         // $descriptions = DescriptionAdmin::first()->get();
-        return view('admin.eboost.list', compact('eboost', 'descriptions'));
+        return view('admin.eboost.list', compact('eboost'));
     }
 
     public function edit($id)
