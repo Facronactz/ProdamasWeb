@@ -58,7 +58,7 @@ class WirausahaAdminController extends Controller
 
     public function update($id, Request $request)
     {
-        $this->validate($request, [
+        $request->validate([
             'tentang' => 'required',
             'foto_tentang' => 'required',
             'info' => 'required',
@@ -70,18 +70,18 @@ class WirausahaAdminController extends Controller
         $info = $request->file('foto_info');
 
         if ($tentang != NULL) {
-            File::delete(public_path("../e-boostProd/" . $eboost->foto_tentang));
+            File::delete(public_path("../e-boostProd/" . $wirausaha->foto_tentang));
             $tentangPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $tentang->getClientOriginalName());
             $tentang->move(public_path('../e-boostProd/'), $tentangPath);
-            $eboost->update([
+            $wirausaha->update([
                 'foto_tentang' => $tentangPath,
             ]);
         }
         if ($info != null) {
-            File::delete(public_path("../e-boostProd/" . $eboost->foto_info));
+            File::delete(public_path("../e-boostProd/" . $wirausaha->foto_info));
             $infoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $info->getClientOriginalName());
             $info->move(public_path('../e-boostProd/'), $infoPath);
-            $eboost->update([
+            $wirausaha->update([
                 'foto_info' => $infoPath
             ]);
         }    
