@@ -14,7 +14,7 @@
         </div>
         <div class="container mb-3">
             <div class="mt-2" style="text-indent: 25px;">
-                @foreach ($koperasi as $kop)
+                @foreach ($wirausaha as $kop)
                 <?= $kop->informasi ?>
                 @endforeach
             </div>
