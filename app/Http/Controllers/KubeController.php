@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kube;
+use App\Models\Pict;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
@@ -26,8 +27,8 @@ class KubeController extends Controller
         ->sum('views');
 
         $menus = Menu::where('status', 'Show')->get();
-
+        $picts = Pict::first()->get();
         $kube = Kube::first()->get();
-        return view('kube.index', compact('counter', 'totalviews', 'kube', 'menus'));
+        return view('kube.index', compact('counter', 'totalviews', 'kube', 'menus', 'picts'));
     }
 }

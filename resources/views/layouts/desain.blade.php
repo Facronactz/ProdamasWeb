@@ -438,6 +438,9 @@
                             <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
                             <div class="line"></div>
                             <p style="font-weight: 400; font-size: 12px">
+                                Bagian Administrasi Pemerintahan
+                            </p>
+                            <p style="font-weight: 400; font-size: 12px">
                                 Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
                                 Kota kediri, Jawa Timur 64146
                             </p>
@@ -455,7 +458,9 @@
                                     <!-- <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br> -->
                                     {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
                                     <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
-                                    <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a> <br>
+                                    <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Angka</a> <br>
+                                    <a class="footer-link" href="{{ url('e-boost') }}">E-Boost</a> <br>
+                                    {{-- <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a> <br> --}}
                                     <a class="footer-link" href="{{ url('msib') }}">Tim Pengembang</a>
                                 </div>
                                 <div class="col-md-6 my-md-0 mt-4">
@@ -479,7 +484,7 @@
                         <a style="font-weight: 400; font-size: 12px" target="_blank" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
                         <a style="font-weight: 400; font-size: 12px" target="_blank" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
                     </div>
-                    <div class="footer-copyright footer-link" style="color: white">&copy; 2022 Prodamas Plus Supported by Dinas Kominfo & Tim Magang Merdeka</div>
+                    <div class="footer-copyright footer-link" style="color: white">&copy; 2022 Pemerintah Kota Kediri supported by Dinas Kominfo & Tim Magang Merdeka</div>
                 </div>
             </div>
         </div>

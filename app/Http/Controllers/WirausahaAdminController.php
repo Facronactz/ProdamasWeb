@@ -59,9 +59,7 @@ class WirausahaAdminController extends Controller
     {
         $request->validate([
             'tentang' => 'required',
-            'foto_tentang' => 'required',
             'info' => 'required',
-            'foto_info' => 'required',
             'deskripsi' => 'required',
         ]);
 
