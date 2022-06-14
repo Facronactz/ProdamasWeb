@@ -66,30 +66,39 @@ class WirausahaAdminController extends Controller
         ]);
 
         $wirausaha = Wirausaha::findorfail($id);
-        $file = $request->file('foto_tentang');
-        $file2 = $request->file('foto_info');
-        if ($file != NULL) {
-           $file= $request->file('foto_tentang');
-           $file2= $request->file('foto_info');
-            $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->file('upload_foto_tentang')->getClientOriginalName(). '.'. $request->file('foto_tentang')->getClientOriginalExtension());
-            $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->file('upload_foto_info')->getClientOriginalName(). '.' . $request->file('foto_info')->getClientOriginalExtension());
-                    $request->file('foto_tentang')->move(public_path('../e-boostProd/'), $foto);
-                    $request->file('foto_info')->move(public_path('../e-boostProd/'), $foto2);
-            
+        $tentang = $request->file('foto_tentang');
+        $info = $request->file('foto_info');
 
-            $wirausaha->update([
-                'tentang' => $request->tentang,
-                'foto_tentang' => $request->foto_tentang,
-                'foto_tentang' => $foto,
-                'info' => $request->info,
-                'foto_info' => $foto2,
-            ]);
-        } else {
-            $wirausaha->update([
-                'tentang' => $request->tentang,
-                'info' => $request->info,
+        if ($tentang != NULL) {
+            File::delete(public_path("../e-boostProd/" . $eboost->foto_tentang));
+            $tentangPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $tentang->getClientOriginalName());
+            $tentang->move(public_path('../e-boostProd/'), $tentangPath);
+            $eboost->update([
+                'foto_tentang' => $tentangPath,
             ]);
         }
+        if ($info != null) {
+            File::delete(public_path("../e-boostProd/" . $eboost->foto_info));
+            $infoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $info->getClientOriginalName());
+            $info->move(public_path('../e-boostProd/'), $infoPath);
+            $eboost->update([
+                'foto_info' => $infoPath
+            ]);
+        }    
+        $wirausaha->update([
+            'tentang' => $request->tentang,
+            'foto_tentang' => $request->foto_tentang,
+            'foto_tentang' => $foto,
+            'info' => $request->info,
+            'foto_info' => $foto2,
+            ]);
+
+        // }else {
+        //     $wirausaha->update([
+        //         'tentang' => $request->tentang,
+        //         'info' => $request->info,
+        //     ]);
+        // }
 
         return redirect('/admin/list-wirausaha')->with('success', 'Wirausaha Berhasil Diupdate!');
     }
