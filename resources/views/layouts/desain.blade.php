@@ -441,9 +441,6 @@
                             </p>
                             <div class="line"></div>
                             <p style="font-weight: 400; font-size: 12px">
-                                Bagian Administrasi Pemerintahan
-                            </p>
-                            <p style="font-weight: 400; font-size: 12px">
                                 Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
                                 Kota kediri, Jawa Timur 64146
                             </p>
