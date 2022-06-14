@@ -5,8 +5,8 @@
         <span class="brand-text font-weight-bold">PRODAMAS</span>
     </a>
     @php
-    $user = DB::table('users')->where('id','=', Auth::user()->id)->first()
-    $level = $user->level
+    $user = DB::table('users')->where('id','=', Auth::user()->id)->first();
+    $level = $user->level;
     @endphp
     <!-- Sidebar -->
     <div class="sidebar">
