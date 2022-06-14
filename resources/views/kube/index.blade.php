@@ -2,7 +2,7 @@
 
 @section('content')
 <div>
-  <img class="img-fluid" src="https://via.placeholder.com/1920x400.png?text=Ukuran+Optimal+=+1920px+x+400px">
+  <img class="img-fluid" src="{{asset('kubeProd/KUBE.png')}}">
 </div>
 <div class="container">
   <div class="m-4">
@@ -29,7 +29,7 @@
       <div class="mb-5">
         <h1>Daftar Sentra KUBE</h1>
         <div class="row row-cols-3 g-5">
-          @foreach($picture  as $pict)
+          @foreach($picture as $pict)
           <img id="bKota" style="cursor: pointer;" class="col" src="{{asset('UMKMProd/'.$pict->kota)}}" alt="" srcset="">
           <img id="bPesantren" style="cursor: pointer;" class="col" src="{{asset('UMKMProd/'.$pict->pesantren)}}" alt="" srcset="">
           <img id="bMojoroto" style="cursor: pointer;" class="col" src="{{asset('UMKMProd/'.$pict->mojoroto)}}" alt="" srcset="">
@@ -67,7 +67,7 @@
           </div>
         </div>
       </div>
-  
+
       <div id="pesantren">
         <h1>Kec. Pesantren</h1>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
@@ -98,7 +98,7 @@
           </div>
         </div>
       </div>
-  
+
       <div id="mojoroto">
         <h1>Kec. Mojoroto</h1>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
@@ -129,31 +129,31 @@
           </div>
         </div>
       </div>
-  
+
     </div>
   </div>
   @endsection
-  
+
   @section('scripts')
   <script>
     $("#kota").hide();
     $("#pesantren").hide();
     $("#mojoroto").hide();
-  
+
     $("#bKota").click(function() {
       $("#kota").toggle();
       $("#pesantren").hide();
       $("#mojoroto").hide();
       localStorage.setItem("kecamatan", "#bKota")
     });
-  
+
     $("#bPesantren").click(function() {
       $("#pesantren").toggle();
       $("#kota").hide();
       $("#mojoroto").hide();
       localStorage.setItem("kecamatan", "#bPesantren")
     });
-  
+
     $("#bMojoroto").click(function() {
       $("#mojoroto").toggle();
       $("#pesantren").hide();
@@ -161,21 +161,21 @@
       localStorage.setItem("kecamatan", "#bMojoroto")
     });
   </script>
-  
+
   <script>
     if (localStorage.getItem("pagination") == "true") {
       $(localStorage.getItem("kecamatan")).trigger('click')
       localStorage.setItem("pagination", "false")
     }
   </script>
-  
+
   <script>
     $(function() {
-    $("#pagination").click(function(e) {
-      if (e.target.class == "page-link" || $(e.target).parents("#pagination").length) {
-        localStorage.setItem("pagination", "true")
-      }
-    });
-  })
+      $("#pagination").click(function(e) {
+        if (e.target.class == "page-link" || $(e.target).parents("#pagination").length) {
+          localStorage.setItem("pagination", "true")
+        }
+      });
+    })
   </script>
   @endsection

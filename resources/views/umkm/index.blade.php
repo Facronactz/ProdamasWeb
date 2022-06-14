@@ -2,7 +2,7 @@
 
 @section('content')
 <div>
-  <img class="img-fluid" src="https://via.placeholder.com/1920x400.png?text=Ukuran+Optimal+=+1920px+x+400px">
+  <img class="img-fluid" src="{{asset('UMKMProd/UMKM.png')}}">
 </div>
 <div class="container">
   <div class="m-4">
@@ -152,11 +152,11 @@
 
 <script>
   $(function() {
-  $("#pagination").click(function(e) {
-    if (e.target.class == "page-link" || $(e.target).parents("#pagination").length) {
-      localStorage.setItem("pagination", "true")
-    }
-  });
-})
+    $("#pagination").click(function(e) {
+      if (e.target.class == "page-link" || $(e.target).parents("#pagination").length) {
+        localStorage.setItem("pagination", "true")
+      }
+    });
+  })
 </script>
 @endsection
