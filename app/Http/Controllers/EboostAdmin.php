@@ -9,46 +9,46 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 class EboostAdmin extends Controller
 {
-    public function create()
-    {
-        return view('admin.eboost.add');
-    }
+    // public function create()
+    // {
+    //     return view('admin.eboost.add');
+    // }
 
-    public function store(Request $request)
-    {
-        $this->validate($request, [
-            'judul_tentang' => 'required',
-            'caption_tentang' => 'required',
-            'foto_tentang' => 'required',
-            'judul_info' => 'required',
-            'caption_info' => 'required',
-            'foto_info' => 'required',
-        ]);
-
-
-        $file=$request->file('foto_tentang');
-        $file2=$request->file('foto_info');
-        $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-        $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file2->getClientOriginalName());
-                $file->move(public_path('../e-boostProd/'), $foto);
-                $file2->move(public_path('../e-boostProd/'), $foto2);
-                Eboost::insert( [
-                    'judul_tentang' => $request->judul_tentang,
-                    'caption_tentang' => $request->caption_tentang,
-                    'foto_tentang' => $foto,
-                     'judul_info' => $request->judul_info,
-                    'caption_info' => $request->caption_info,
-                    'foto_info' => $foto2,
-                ]);
+    // public function store(Request $request)
+    // {
+    //     $this->validate($request, [
+    //         'judul_tentang' => 'required',
+    //         'caption_tentang' => 'required',
+    //         'foto_tentang' => 'required',
+    //         'judul_info' => 'required',
+    //         'caption_info' => 'required',
+    //         'foto_info' => 'required',
+    //     ]);
 
 
-        return redirect('/admin/list-eboost')->with('success', 'Eboost Berhasil Ditambahkan!');
-    }
+    //     $file=$request->file('foto_tentang');
+    //     $file2=$request->file('foto_info');
+    //     $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
+    //     $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file2->getClientOriginalName());
+    //             $file->move(public_path('../e-boostProd/'), $foto);
+    //             $file2->move(public_path('../e-boostProd/'), $foto2);
+    //             Eboost::insert( [
+    //                 'judul_tentang' => $request->judul_tentang,
+    //                 'caption_tentang' => $request->caption_tentang,
+    //                 'foto_tentang' => $foto,
+    //                  'judul_info' => $request->judul_info,
+    //                 'caption_info' => $request->caption_info,
+    //                 'foto_info' => $foto2,
+    //             ]);
+
+
+    //     return redirect('/admin/list-eboost')->with('success', 'Eboost Berhasil Ditambahkan!');
+    // }
 
     public function index()
     {
         $eboost = Eboost::groupBy('judul_tentang','judul_info')->get();
-        $descriptions = DescriptionAdmin::first()->get();
+        // $descriptions = DescriptionAdmin::first()->get();
         return view('admin.eboost.list', compact('eboost', 'descriptions'));
     }
 
@@ -60,7 +60,7 @@ class EboostAdmin extends Controller
 
     public function update($id, Request $request)
     {
-        $this->validate($request, [
+        $request->validate([
             'judul_tentang' => 'required',
             'caption_tentang' => 'required',
             'foto_tentang' => 'required',

@@ -5,7 +5,7 @@ Edit E-Boost
 @endsection
 @section('content')
 
-<form action="/admin/edit-eboost/{{$eboost->id}}" method="POST" enctype="application/x-www-form-urlencoded">
+<form action="/admin/edit-eboost/{{$eboost->id}}" method="POST" enctype="multipart/form-data">
 @csrf
 @method('put')
     <div class="form-group">
