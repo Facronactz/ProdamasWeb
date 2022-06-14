@@ -220,7 +220,7 @@
                                     <li class="w-100"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
                                     <li class="w-100"><a class="dropdown-item @yield('audio')" href="{{ url('/audio') }}">Audio</a></li>
                                     <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/media') }}">MedSos</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/media') }}">Media Sosial</a></li>
                                 </ul>
                             </div>
                             <div class="nav-item dropdown nav-list">
