@@ -151,7 +151,7 @@
                     toolbar: [
                         ['style', ['bold', 'italic', 'underline']],
                         ['para', ['ul', 'ol', 'paragraph']],
-                        ['view', ['fullscreen']],
+                        ['view', ['fullscreen', 'codeview']],
                     ],
                 }),
                 $('.summernote').summernote({
@@ -165,7 +165,7 @@
                     toolbar: [
                         ['style', ['bold', 'italic', 'underline']],
                         ['para', ['ul', 'ol', 'paragraph']],
-                        ['view', ['fullscreen']],
+                        ['view', ['fullscreen', 'codeview']],
                     ],
                 })
         });
