@@ -484,7 +484,12 @@
                         <a style="font-weight: 400; font-size: 12px" target="_blank" href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook foot-icon"></i></a>
                         <a style="font-weight: 400; font-size: 12px" target="_blank" href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok foot-icon"></i></a>
                     </div>
-                    <div class="footer-copyright footer-link" style="color: white">&copy; 2022 Pemerintah Kota Kediri supported by Dinas Kominfo & Tim Magang Merdeka</div>
+                    <div class="footer-copyright footer-link" style="color: white">
+                        <div class="row row-cols-2">
+                            <span class="col">&copy; 2022 Pemerintah Kota Kediri</span>
+                            <span class="col"><strong>Supported by</strong> Dinas Kominfo & Tim Magang Merdeka</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
