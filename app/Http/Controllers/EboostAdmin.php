@@ -30,8 +30,8 @@ class EboostAdmin extends Controller
         $file2=$request->file('foto_info');
         $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
         $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file2->getClientOriginalName());
-                $file->move(public_path('../fotoProd/'), $foto);
-                $file2->move(public_path('../fotoProd/'), $foto2);
+                $file->move(public_path('../e-boostProd/'), $foto);
+                $file2->move(public_path('../e-boostProd/'), $foto2);
                 Eboost::insert( [
                     'judul_tentang' => $request->judul_tentang,
                     'caption_tentang' => $request->caption_tentang,
@@ -77,8 +77,8 @@ class EboostAdmin extends Controller
            $file2= $request->file('foto_info');
             $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->file('upload_foto_tentang')->getClientOriginalName(). '.'. $request->file('foto_tentang')->getClientOriginalExtension());
             $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->file('upload_foto_info')->getClientOriginalName(). '.' . $request->file('foto_info')->getClientOriginalExtension());
-                    $request->file('foto_tentang')->move(public_path('../fotoProd/'), $foto);
-                    $request->file('foto_info')->move(public_path('../fotoProd/'), $foto2);
+                    $request->file('foto_tentang')->move(public_path('../e-boostProd/'), $foto);
+                    $request->file('foto_info')->move(public_path('../e-boostProd/'), $foto2);
             
 
             $eboost->update([
