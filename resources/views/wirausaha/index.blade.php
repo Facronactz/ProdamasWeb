@@ -83,13 +83,7 @@
     </div>
 
     <div class="pt2" style="font-size: 20px; text-align:justify; text-indent: 25px">
-        <p>
-            Untuk menghadapi persaingan pasar global saat ini tidaklah mudah, karena produk UMKM akan bersaing dengan produk negara lain. Peningkatan akses dan jangkauan akses UMKM terhadap jasa keuangan sangat dibutuhkan untuk menghadapi persaingan tersebut. Sehingga pengembangan UMKM tidak luput dari kontribusi pembiayaan dari perbankan dan lembaga keuangan lainnya yang masih memiliki keterbatasan informasi mengenai UMKM potensial lengkap dengan kelayakan usahanya. Selanjutnya, agar terdapat peningkatan penyaluran modal UMKM, diperlukan informasi laporan keuangan yang memadai dari UMKM baik yang telah atau belum terhubung dengan perbankan atau lembaga keuangan lainnya.
-        </p>
-
-        <p>Sementara itu, UMKM memiliki keterbatasan informasi mengenai produk dan lembaga modal yang sesuai dengan kebutuhan untuk melakukan pengembangan usahanya. Selain itu, diperlukan pula informasi mengenai prosedur dan persyaratan yang harus dipenuhi dalam mengakses pembiayaan</p>
-
-        <p>Untuk mengatasi kesenjangan informasi dimaksud, E-BOOST hadir menyediakan media informasi berupa Minisite Info UMKM, KUBE, KOPERASII yang dapat mendapattkan pembiayaan kepada UMKM melalui Koperasi atau KURNIA. Beragam informasi kami sajikan meliputi informasi komoditi UMKM yang potensial di berbagai daerah, profil UMKM yang layak dibiayai, pola pembiayaan komoditi unggulan, model bisnis pengembangan UMKM, alur skema dan regulasi permodalan, termasuk template proposal , informasi Koperasi, dll.</p>
+        <?= $e->deskripsi ?>
     </div>
 </div>
 

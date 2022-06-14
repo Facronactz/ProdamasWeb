@@ -11,7 +11,7 @@ class Wirausaha extends Model
     use HasFactory;
     protected $table = "wirausaha";
 
-    protected $fillable = ["id","tentang", "info", "foto_tentang", "foto_info"];
+    protected $fillable = ["id","tentang", "info", "foto_tentang", "foto_info", "deskripsi"];
 
     public function getCreatedAtAttribute()
     {
