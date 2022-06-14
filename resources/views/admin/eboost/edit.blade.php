@@ -70,6 +70,16 @@ Edit E-Boost
         @enderror
     </div>
 
+    <div class="form-group">
+        @error('deskripsi')
+        <div class="alert alert-danger">
+            {{ $message }}
+        </div>
+        @enderror
+        <label for="informasi">Deskripsi</label>
+        <textarea name="informasi" id="description" class="form-control" cols="30" rows="3"><?= $eboost->deskripsi ?></textarea>
+    </div>
+
     <button type="submit" class="btn btn-primary">Edit</button>
     <a href="/admin/list-eboost" class="btn btn-outline-primary">Kembali</a>
 </form>

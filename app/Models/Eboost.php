@@ -12,7 +12,7 @@ class Eboost extends Model
     protected $table = "eboost";
 
     protected $fillable = ["id","judul_tentang", "caption_tentang","judul_info",
-            "caption_info","foto_tentang", "foto_info"];
+            "caption_info","foto_tentang", "foto_info", "deskripsi"];
 
     public function getCreatedAtAttribute()
     {
