@@ -24,7 +24,7 @@ class WirausahaController extends Controller
             ->sum('views');
         $menus = Menu::where('status', 'Show')->get();
 
-        $koperasi = Wirausaha::first()->get();
+        $wirausaha = Wirausaha::first()->get();
 
         return view('wirausaha.index', compact('counter', 'koperasi', 'totalviews', 'menus'));
     }
