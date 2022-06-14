@@ -58,7 +58,7 @@ class WirausahaAdminController extends Controller
 
     public function update($id, Request $request)
     {
-        $this->validate($request, [
+        $request->validate([
             'tentang' => 'required',
             'foto_tentang' => 'required',
             'info' => 'required',
