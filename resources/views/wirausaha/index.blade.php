@@ -48,12 +48,13 @@
     </div>
     <div class="card border-light my-4">
         <div class="row g-0">
+            @foreach ($wirausaha as $e)
+            @endforeach
             <div class="col-lg-4 d-flex justify-content-center">
-                <img src="https://via.placeholder.com/700x400.png?text=Ukuran+Optimal+=+700px+x+400px" class="img-fluid" style="max-height: 400px;">
+                {{-- <img src="https://via.placeholder.com/700x400.png?text=Ukuran+Optimal+=+700px+x+400px" class="img-fluid" style="max-height: 400px;"> --}}
+                <img src="{{ asset('fotoProd/'.$e->foto_tentang) }}" class="img-fluid" style="max-height: 400px;">
             </div>
             <div class="col-lg-8">
-                @foreach ($wirausaha as $e)
-                @endforeach
                 <div class="card-body">
                     <h2 class="card-title">Tentang Wirausaha</h2>
                     <div style="height: 2px; background-color:#000000"></div>
