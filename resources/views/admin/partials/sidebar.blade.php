@@ -123,6 +123,7 @@
                     </a>
                 </li>
                 @endif
+                @endif
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
