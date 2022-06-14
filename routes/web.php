@@ -119,6 +119,9 @@ Route::resource('/wirausaha', WirausahaController::class);
 // UMKM
 Route::resource('/umkm', UMKMController::class);
 
+//KUBE
+Route::resource('/kube', KubeController::class);
+
 // Publikasi
 Route::resource('/testimoni', TestimoniController::class);
 
