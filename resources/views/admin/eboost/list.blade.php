@@ -37,6 +37,7 @@ E-Boost Submission
             <th scope="col">Judul Info</th>
             <th scope="col">Caption Info</th>
             <th scope="col">Foto Info</th>
+            <th scope="col">Deskripsi</th>
             <th scope="col">Aksi</th>
         </tr>
     </thead>
@@ -50,6 +51,7 @@ E-Boost Submission
             <td>{{$eboosts->judul_info}}</td>
             <td>{{$eboosts->caption_info}}</td>
             <td>{{$eboosts->foto_info}}</td>
+            <td>{{$eboosts->deskripsi}}</td>
             <td>
                 <form action="/admin/edit-eboost/{{$eboosts->id}}" method="POST">
                     <a href="/admin/edit-eboost/{{$eboosts->id}}" class="btn btn-info">Edit</a>
