@@ -88,9 +88,10 @@ class WirausahaAdminController extends Controller
         $wirausaha->update([
             'tentang' => $request->tentang,
             'foto_tentang' => $request->foto_tentang,
-            'foto_tentang' => $foto,
+            // 'foto_tentang' => $foto,
             'info' => $request->info,
-            'foto_info' => $foto2,
+            // 'foto_info' => $foto2,
+            'foto_info' => $request->foto_info,
             ]);
 
         // }else {
