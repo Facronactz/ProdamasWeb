@@ -506,7 +506,21 @@
                 adaptiveHeight: true,
                 cssEase: 'ease',
                 prevArrow: '<button type="button" class="carousel-icon-prev slick-prev bg-primary btn-primary"></button>',
-                nextArrow: '<button type="button" class="carousel-icon-next slick-next bg-primary btn-primary"></button>'
+                nextArrow: '<button type="button" class="carousel-icon-next slick-next bg-primary btn-primary"></button>',
+                responsive: [{
+                    
+                    breakpoint: 600,
+                    settings: {
+                      slidesToShow: 2,
+                      dots: true
+                    }
+
+                    }, {
+                    
+                    breakpoint: 300,
+                    settings: "unslick" // destroys slick
+                    
+                }]
             });
         });
     </script>
