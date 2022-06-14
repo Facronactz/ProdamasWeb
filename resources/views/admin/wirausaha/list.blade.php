@@ -47,7 +47,7 @@ Wirausaha Submission
             <td>{{$wirausahas->foto_tentang}}</td>
             <td>{{$wirausahas->info}}</td>
             <td>{{$wirausahas->foto_info}}</td>
-            <td>{{$wirausahas->deskripsi}}</td>
+            <td><?= substr($wirausahas->deskripsi, 0, 150) ?></td>
             <td>
                 <form action="/admin/edit-wirausaha/{{$wirausahas->id}}" method="POST">
                     <a href="/admin/edit-wirausaha/{{$wirausahas->id}}" class="btn btn-info">Edit</a>
