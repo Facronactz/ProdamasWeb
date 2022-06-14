@@ -91,6 +91,7 @@
                         <p>Tulis Cerita</p>
                     </a>
                 </li>
+                @if((DB::table('users')->where('id','=', Auth::user()->id)->first())->level == 'super'||DB::table('users')->where('id','=', Auth::user()->id)->first())->level == 'sospem')
                 <li class="nav-item">
                     <a href="/admin/list-eboost" class="nav-link @yield('eboost')">
                         <i class="nav-icon fas fa-chart-line"></i>
@@ -121,6 +122,7 @@
                         <p>Kube</p>
                     </a>
                 </li>
+                @endif
                 @endif
             </ul>
         </nav>
