@@ -11,7 +11,7 @@ Wirausaha Submission
 </div>
 @endif
 
-<div class="form-group">
+{{-- <div class="form-group">
     <label for="desc_wirausaha">Deskripsi</label>
     <!-- <table class="table">
         @foreach ($wirausaha ?? '' as $wirausahas)
@@ -25,7 +25,7 @@ Wirausaha Submission
         </tr>
         @endforeach
     </table> -->
-</div>
+</div> --}}
 {{-- <a href="/admin/add-wirausaha" class="btn btn-primary mb-3">Tambah Wirausaha</a> --}}
 <table class="table" id="tableWirausaha">
     <thead class="thead-light">
