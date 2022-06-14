@@ -53,9 +53,14 @@
             </div>
             <div class="col-lg-8">
                 <div class="card-body">
-                    <h2 class="card-title">Tentang Wirausaha</h2>
-                    <div style="height: 2px; background-color:#000000"></div>
-                    <p class="card-text align-middle" style="font-size: 20px">Menindaklanjuti permasalahan masyarakat di Kota Kediri, E-Boost hadir untuk membantu Anda dalam mengetahui informasi mengenai Wirausaha/UMKM, Koperasi RW, KUBE dan informasi lainnya. </p>
+                    {{-- <h2 class="card-title">Tentang Wirausaha</h2>
+                    <div style="height: 2px; background-color:#000000"></div> --}}
+                    <div class="card-text align-middle" style="font-size: 20px">
+                    {{-- <p class="card-text align-middle" style="font-size: 20px">Menindaklanjuti permasalahan masyarakat di Kota Kediri, E-Boost hadir untuk membantu Anda dalam mengetahui informasi mengenai Wirausaha/UMKM, Koperasi RW, KUBE dan informasi lainnya. </p> --}}
+                    @foreach ($info as $kop)
+                    <?= $kop->informasi ?>
+                    @endforeach
+                    </div>
                 </div>
             </div>
         </div>
