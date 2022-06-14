@@ -49,7 +49,7 @@ class DataController extends Controller
                         ->unionAll($artikel)
                         ->unionAll($counter)
                         ->sum('views');
-                $menus = Menu::orderBy('id')->get();
+                $menus = Menu::where('status', 'Show')->get();
                 // end code jumlah pengunjung
                 return view('data.peta', compact('counter', 'totalviews', 'menus'));
         }
@@ -71,7 +71,7 @@ class DataController extends Controller
                         ->unionAll($artikel)
                         ->unionAll($counter)
                         ->sum('views');
-                $menus = Menu::orderBy('id')->get();
+                $menus = Menu::where('status', 'Show')->get();
                 // end code jumlah pengunjung
 
                 return view('data.banksampah', compact('counter', 'totalviews', 'menus'));
@@ -94,7 +94,7 @@ class DataController extends Controller
                         ->unionAll($artikel)
                         ->unionAll($counter)
                         ->sum('views');
-                $menus = Menu::orderBy('id')->get();
+                $menus = Menu::where('status', 'Show')->get();
                 // end code jumlah pengunjung
 
                 return view('data.progresio', compact('counter', 'totalviews', 'menus'));

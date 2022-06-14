@@ -338,3 +338,4 @@ Route::get('/searchcerita', [SearchController::class, 'searchcerita'])->name('se
 
 //Tag
 Route::get('/tag', [SearchController::class, 'tagger'])->name('tag');
+Route::get('/tags', [SearchController::class, 'eboost'])->name('tags');
