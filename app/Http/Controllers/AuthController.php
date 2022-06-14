@@ -41,9 +41,9 @@ class AuthController extends Controller {
 
         //email & password ini sama dengan name yang di loginuser
         if(Auth::attempt($request->only('username', 'password'))){
-
+            $name = $request->level;
             //pindah ke halaman dashboard atau beranda
-            return redirect('admin');
+            return redirect('admin', compact('name'));
         }
 
         //gagal login
