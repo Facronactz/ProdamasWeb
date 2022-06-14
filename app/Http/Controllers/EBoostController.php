@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
  
 use App\Http\Controllers\Controller;
+use App\Models\Eboost;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use App\Models\Menu;
@@ -22,6 +23,7 @@ class EBoostController extends Controller
             ->unionAll($counter)
             ->sum('views');
         $menus = Menu::where('status', 'Show')->get();
-        return view('eboost.index', compact('counter','totalviews', 'menus'));
+        $eboost = Eboost::first()->get();
+        return view('eboost.index', compact('counter','totalviews', 'menus', 'eboost'));
     }
 }

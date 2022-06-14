@@ -220,23 +220,24 @@
                                     <li class="w-100"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
                                     <li class="w-100"><a class="dropdown-item @yield('audio')" href="{{ url('/audio') }}">Audio</a></li>
                                     <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/media') }}">MedSos</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/media') }}">Media Sosial</a></li>
                                 </ul>
                             </div>
                             <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle @yield('data')" id="navbarDropdownMenuLinkData" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
                                     <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('kosong')" href="{{ url('/kosong') }}">Prodamas Dalam Angka</a></li>
-                                    <ul class="dropdown-menu">
-                                        <li class="dropdown-submenu w-100">
-                                            <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">Anggaran & Realisasi</a></li>
-                                            <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">Ruang Terbuka Hijau</a></li>
-                                            <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">English Masive</a></li>
-                                            <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">Koperasi RW</a></li>
-                                        </li>
-                                    </ul>
-
+                                    <li class="dropdown-submenu w-100">
+                                        <a class="dropdown-item @yield('kosong')" href="{{ url('/kosong') }}">Prodamas Dalam Angka<span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-submenu w-100">
+                                                <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">Anggaran & Realisasi</a></li>
+                                                <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">Ruang Terbuka Hijau</a></li>
+                                                <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">English Masive</a></li>
+                                                <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">Koperasi RW</a></li>
+                                            </li>
+                                        </ul>
+                                    </li>
                                     <li class="w-100"><a class="dropdown-item @yield('kosong')" href="{{ url('/kosong') }}">Data Trend</a></li>
                                     <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}" target="_blank">Progressio</a></li>
                                     {{-- <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio</a></li> --}}
