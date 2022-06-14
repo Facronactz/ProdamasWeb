@@ -509,7 +509,7 @@
                 nextArrow: '<button type="button" class="carousel-icon-next slick-next bg-primary btn-primary"></button>',
                 responsive: [{
                     
-                    breakpoint: 600,
+                    breakpoint: 992,
                     settings: {
                       slidesToShow: 2,
                       dots: true
@@ -517,8 +517,11 @@
 
                     }, {
                     
-                    breakpoint: 300,
-                    settings: "unslick" // destroys slick
+                    breakpoint: 576,
+                    settings: {
+                      slidesToShow: 1,
+                      dots: true
+                    }
                     
                 }]
             });

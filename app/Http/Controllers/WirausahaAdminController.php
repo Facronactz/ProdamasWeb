@@ -87,7 +87,7 @@ class WirausahaAdminController extends Controller
         } else {
             $wirausaha->update([
                 'tentang' => $request->tentang,
-                'caption_info' => $request->caption_info,
+                'info' => $request->info,
             ]);
         }
 
