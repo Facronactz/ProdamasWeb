@@ -58,7 +58,7 @@ class PostController extends Controller
             $files = $request->file("images");
             foreach ($files as $file) {
                 $imageName = time() . '_' . $file->getClientOriginalName();
-                $request['post_id'] = $post->id;
+                $request['post_id'] = $foto->id;
                 $request['image'] = $imageName;
                 $file->move(public_path("../images/"), $imageName);
                 Image::create($request->all());
