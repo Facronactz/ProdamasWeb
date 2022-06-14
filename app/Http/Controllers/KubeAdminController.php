@@ -18,9 +18,9 @@ class KubeAdminController extends Controller
     public function index()
     {
         $kube = Kube::first()->get();
-        $picts = Pict::first()->get();
+        $picture = Pict::first()->get();
         $daftar = KubeDaftar::first()->get();
-        return view('admin.kube.list', compact('kube', 'picts', 'daftar'));
+        return view('admin.kube.list', compact('kube', 'picture', 'daftar'));
     }
 
     public function edit($id)
@@ -67,40 +67,40 @@ class KubeAdminController extends Controller
     //sampul per kecamatan
     public function edit_pict($id)
     {
-        $picts = Pict::findOrFail($id);
-        return view('admin.kube.editpict', compact('picts'));
+        $picture = Pict::findOrFail($id);
+        return view('admin.kube.editpict', compact('picture'));
     }
 
     public function update_pict($id, Request $request)
     {
-        $picts = Pict::findOrFail($id);
+        $picture = Pict::findOrFail($id);
         $kota = $request->file('kota');
         $pesantren = $request->file('pesantren');
         $mojoroto = $request->file('mojoroto');
 
         if ($kota != null) {
-            File::delete(public_path("../UMKMProd/" . $picts->kota));
+            File::delete(public_path("../UMKMProd/" . $picture->kota));
             $kotaPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $kota->getClientOriginalName());
             $kota->move(public_path('../UMKMProd/'), $kotaPath);
-            $picts->update([
+            $picture->update([
                 'kota' => $kotaPath,
             ]);
         }
 
         if ($pesantren != null) {
-            File::delete(public_path("../UMKMProd/" . $picts->pesantren));
+            File::delete(public_path("../UMKMProd/" . $picture->pesantren));
             $pesantrenPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $pesantren->getClientOriginalName());
             $pesantren->move(public_path('../UMKMProd/'), $pesantrenPath);
-            $picts->update([
+            $picture->update([
                 'pesantren' => $pesantrenPath,
             ]);
         }
 
         if ($mojoroto != null) {
-            File::delete(public_path("../UMKMProd/" . $picts->mojoroto));
+            File::delete(public_path("../UMKMProd/" . $picture->mojoroto));
             $mojorotoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $mojoroto->getClientOriginalName());
             $mojoroto->move(public_path('../UMKMProd/'), $mojorotoPath);
-            $picts->update([
+            $picture->update([
                 'mojoroto' => $mojorotoPath
             ]);
         }
