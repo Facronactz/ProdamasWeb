@@ -10,7 +10,7 @@
         <!-- Sidebar user (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="info">
-                <a href="#" class="d-block">Selamat Datang Admin!</a>
+                <a href="#" class="d-block">Selamat Datang</a>{{(DB::table('users')->where('id','=', Auth::user()->id)->first())->level}}
             </div>
         </div>
 
@@ -91,7 +91,7 @@
                         <p>Tulis Cerita</p>
                     </a>
                 </li>
-                @if((DB::table('users')->where('id','=', Auth::user()->id)->first())->level == 'super' ||(DB::table('users')->where('id','=', Auth::user()->id)->first())->level == 'sospem' )
+                @if((DB::table('users')->where('id','=', Auth::user()->id)->first())->level == 'super'||(DB::table('users')->where('id','=', Auth::user()->id)->first())->level == 'sospem' )
                 <li class="nav-item">
                     <a href="/admin/list-eboost" class="nav-link @yield('eboost')">
                         <i class="nav-icon fas fa-chart-line"></i>
