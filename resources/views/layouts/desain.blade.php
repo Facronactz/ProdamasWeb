@@ -433,8 +433,8 @@
                 </div> -->
                 </div>
                 <div class="col">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white; font-family: 'Poppins', sans-serif;">
+                    <div class="row mb-3 mt-4">
+                        <div class="col-md-6 footer-contact" style="color: white; font-family: 'Poppins', sans-serif;">
                             <div class="foot-title">PEMERINTAH KOTA KEDIRI</div>
                             <div class="line"></div>
                             <p style="font-weight: 400; font-size: 12px">
@@ -444,9 +444,9 @@
                             <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon"></i> (0354) 682955</p>
                             <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon ph"></i> prodamas@kedirikota.go.id</p>
                         </div>
-                        <div class="col-md-6 col-lg-6 footer-links" style="margin-top: 40px; color: white; font-family: 'Poppins', sans-serif;">
+                        <div class="col-md-6 footer-links" style="color: white; font-family: 'Poppins', sans-serif;">
                             <div class="row">
-                                <div class="col-md-6 col-lg-6">
+                                <div class="col-md-6 my-md-0 mt-4">
                                     <p class="foot-title">
                                         NAVIGASI</p>
                                     <div class="line-nav"></div>
@@ -458,7 +458,7 @@
                                     <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a> <br>
                                     <a class="footer-link" href="{{ url('msib') }}">Tim Pengembang</a>
                                 </div>
-                                <div class="col-md-6 col-lg-6">
+                                <div class="col-md-6 mb-3 my-md-0 mt-4">
                                     <p class="foot-title">
                                         TAUTAN EKSTERNAL</p>
                                     <div class="line-te"></div>
