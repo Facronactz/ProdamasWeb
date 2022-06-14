@@ -1,6 +1,6 @@
 @extends('admin.master')
 
-@section('umkm', 'active')
+@section('kube', 'active')
 
 @section('title')
 Kube Submission
