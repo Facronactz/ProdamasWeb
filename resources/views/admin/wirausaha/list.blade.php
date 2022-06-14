@@ -19,12 +19,12 @@ Wirausaha Submission
             <td><?= $wirausahas->desc_wirausaha ?></td>
             <td align="right">
                 <form action="/admin/wirausaha/{{ $wirausahas->id }}" method="POST">
-                    <a href="/admin/wirausaha/{{ $wirausahas->id }}" class="btn btn-info">Edit</a>
-                </form>
-            </td>
-        </tr>
-        @endforeach
-    </table> -->
+<a href="/admin/wirausaha/{{ $wirausahas->id }}" class="btn btn-info">Edit</a>
+</form>
+</td>
+</tr>
+@endforeach
+</table> -->
 </div> --}}
 {{-- <a href="/admin/add-wirausaha" class="btn btn-primary mb-3">Tambah Wirausaha</a> --}}
 <table class="table" id="tableWirausaha">
@@ -41,9 +41,12 @@ Wirausaha Submission
         @forelse ($wirausaha as $key=>$wirausahas)
         <tr>
             <td>{{$key + 1}}</th>
-            <td><?= substr($wirausahas->tentang, 0, 100)?></td>
+            <td>{{$wirausahas->tentang}}</td>
+            <td>{{$wirausahas->info}}</td>
+            <td>{{$wirausahas->deskripsi}}</td>
+            {{-- <td><?= substr($wirausahas->tentang, 0, 100) ?></td>
             <td><?= substr($wirausahas->info, 0, 100) ?></td>
-            <td><?= substr($wirausahas->deskripsi, 0, 100) ?></td>
+            <td><?= substr($wirausahas->deskripsi, 0, 100) ?></td> --}}
             <td>
                 <form action="/admin/edit-wirausaha/{{$wirausahas->id}}" method="POST">
                     <a href="/admin/edit-wirausaha/{{$wirausahas->id}}" class="btn btn-info">Edit</a>
