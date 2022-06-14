@@ -51,6 +51,16 @@ Edit Wirausaha
         @enderror
     </div>
 
+    <div class="form-group">
+        @error('deskripsi')
+        <div class="alert alert-danger">
+            {{ $message }}
+        </div>
+        @enderror
+        <label for="deskripsi">Deskripsi</label>
+        <textarea name="deskripsi" id="description" class="form-control" cols="30" rows="3"><?= $wirausaha->deskripsi ?></textarea>
+    </div>
+
     <button type="submit" class="btn btn-primary">Edit</button>
     <a href="/admin/list-wirausaha" class="btn btn-outline-primary">Kembali</a>
 </form>
