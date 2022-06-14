@@ -48,7 +48,6 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <a href="foto/{{ $item->id }}" class="stretched-link"></a>
                         <h5 class="card-title" style="font-size: 22px;">{{ $item->title }}</h5>
                         <p class="card-text" style="font-size: 13px;"><small class="text-muted">{{$item->updated_at}}</small></p>
                     </div>
