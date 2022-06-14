@@ -54,7 +54,7 @@ Kube Submission
             </tr>
         </thead>
         <tbody>
-            @foreach($picts as $pict)
+            @foreach($picture as $pict)
             <tr>
                 <td>{{$pict->kota}}</td>
                 <td>{{$pict->pesantren}}</td>

@@ -29,7 +29,7 @@
       <div class="mb-5">
         <h1>Daftar Sentra KUBE</h1>
         <div class="row row-cols-3 g-5">
-          @foreach($picts as $pict)
+          @foreach($picture  as $pict)
           <img id="bKota" style="cursor: pointer;" class="col" src="{{asset('UMKMProd/'.$pict->kota)}}" alt="" srcset="">
           <img id="bPesantren" style="cursor: pointer;" class="col" src="{{asset('UMKMProd/'.$pict->pesantren)}}" alt="" srcset="">
           <img id="bMojoroto" style="cursor: pointer;" class="col" src="{{asset('UMKMProd/'.$pict->mojoroto)}}" alt="" srcset="">
@@ -40,11 +40,11 @@
       <div id="kota">
         <h1>Kec. Kota</h1>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          @foreach ($kotas as $kota)
+          @foreach ($kotakube as $kota)
           <div class="col">
             <div class="card">
               <h3 class="card-header">{{$kota->judul}}</h3>
-              <img src="{{asset('koperasidaftarProd/'.$kota->foto)}}" class="" alt="..." />
+              <img src="{{asset('kubedaftarProd/'.$kota->foto)}}" class="" alt="..." />
               <div class="card-body">
                 <dl class="row my-0">
                   <dt class="col-sm-5">Kelurahan</dt>
@@ -63,7 +63,7 @@
           </div>
           @endforeach
           <div class="d-flex justify-content-end w-100 my-3">
-            {{ $kotas->links() }}
+            {{ $kotakube->links() }}
           </div>
         </div>
       </div>
@@ -71,11 +71,11 @@
       <div id="pesantren">
         <h1>Kec. Pesantren</h1>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          @foreach ($pesantrens as $pesantren)
+          @foreach ($pesantrenkube as $pesantren)
           <div class="col">
             <div class="card">
               <h3 class="card-header">{{$pesantren->judul}}</h3>
-              <img src="{{asset('koperasidaftarProd/'.$pesantren->foto)}}" class="" alt="..." />
+              <img src="{{asset('kubedaftarProd/'.$pesantren->foto)}}" class="" alt="..." />
               <div class="card-body">
                 <dl class="row my-0">
                   <dt class="col-sm-5">Kelurahan</dt>
@@ -94,7 +94,7 @@
           </div>
           @endforeach
           <div class="d-flex justify-content-end w-100 my-3">
-            {{ $pesantrens->links() }}
+            {{ $pesantrenkube->links() }}
           </div>
         </div>
       </div>
@@ -102,11 +102,11 @@
       <div id="mojoroto">
         <h1>Kec. Mojoroto</h1>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          @foreach ($mojorotos as $mojoroto)
+          @foreach ($mojorotokube as $mojoroto)
           <div class="col">
             <div class="card">
               <h3 class="card-header">{{$mojoroto->judul}}</h3>
-              <img src="{{asset('koperasidaftarProd/'.$mojoroto->foto)}}" class="" alt="..." />
+              <img src="{{asset('kubedaftarProd/'.$mojoroto->foto)}}" class="" alt="..." />
               <div class="card-body">
                 <dl class="row my-0">
                   <dt class="col-sm-5">Kelurahan</dt>
@@ -125,7 +125,7 @@
           </div>
           @endforeach
           <div class="d-flex justify-content-end w-100 my-3">
-            {{ $mojorotos->links() }}
+            {{ $mojorotokube->links() }}
           </div>
         </div>
       </div>
