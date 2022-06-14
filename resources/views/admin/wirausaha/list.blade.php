@@ -35,6 +35,7 @@ Wirausaha Submission
             <th scope="col">Foto Tentang</th>
             <th scope="col">Info</th>
             <th scope="col">Foto Info</th>
+            <th scope="col">Deskripsi</th>
             <th scope="col">Aksi</th>
         </tr>
     </thead>
@@ -46,6 +47,7 @@ Wirausaha Submission
             <td>{{$wirausahas->foto_tentang}}</td>
             <td>{{$wirausahas->info}}</td>
             <td>{{$wirausahas->foto_info}}</td>
+            <td>{{$wirausahas->deskripsi}}</td>
             <td>
                 <form action="/admin/edit-wirausaha/{{$wirausahas->id}}" method="POST">
                     <a href="/admin/edit-wirausaha/{{$wirausahas->id}}" class="btn btn-info">Edit</a>

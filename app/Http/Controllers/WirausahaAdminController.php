@@ -62,6 +62,7 @@ class WirausahaAdminController extends Controller
             'foto_tentang' => 'required',
             'info' => 'required',
             'foto_info' => 'required',
+            'deskripsi' => 'required',
         ]);
 
         $wirausaha = Wirausaha::findorfail($id);
@@ -77,7 +78,7 @@ class WirausahaAdminController extends Controller
             ]);
         }
         if ($info != null) {
-            File::delete(public_path("../wirausahaProd/" . $wirausaha->foto_info));
+            File::delete(public_path("../wirausahatProd/" . $wirausaha->foto_info));
             $infoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $info->getClientOriginalName());
             $info->move(public_path('../wirausahaProd/'), $infoPath);
             $wirausaha->update([
@@ -87,6 +88,7 @@ class WirausahaAdminController extends Controller
         $wirausaha->update([
             'tentang' => $request->tentang,
             'info' => $request->info,
+            'deskripsi' => $request->deskripsi,
         ]);
 
         // }else {
