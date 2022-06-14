@@ -305,7 +305,7 @@
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuEboost">
                                     <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/e-boost') }}">E-Boost</a></li>
                                     <li class="dropdown-submenu w-100">
-                                        <a class="dropdown-item @yield('e-boost')" href="{{ url('/umkm') }}">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <a class="dropdown-item @yield('e-boost')">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
                                         <ul class="dropdown-menu">
                                             <li class="dropdown-submenu w-100">
                                             <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/wirausaha') }}">Wirausaha</a></li>
@@ -332,7 +332,7 @@
                                 </ul>
                                 </li>
                                 <li class=" dropdown-submenu w-100">
-                                                <a class="dropdown-item @yield('e-boost')" href="{{ url('/umkm') }}">Publikasi<span class="caret fas fa-caret-right ms-3"></span></a>
+                                                <a class="dropdown-item @yield('e-boost')">Publikasi<span class="caret fas fa-caret-right ms-3"></span></a>
                                                 <ul class="dropdown-menu">
                                                     <li class="dropdown-submenu w-100">
                                                         {{-- <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/wirausaha') }}">Informasi Pelatihan
