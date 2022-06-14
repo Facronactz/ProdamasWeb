@@ -39,7 +39,7 @@ class KubeController extends Controller
         return view('kube.index', compact(
             'counter',
             'totalviews',
-            'koperasi',
+            'kube',
             'picture',
             'kotakube',
             'pesantrenkube',
