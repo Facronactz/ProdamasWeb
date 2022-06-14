@@ -26,7 +26,7 @@ Wirausaha Submission
         @endforeach
     </table> -->
 </div>
-<a href="/admin/add-wirausaha" class="btn btn-primary mb-3">Tambah Wirausaha</a>
+{{-- <a href="/admin/add-wirausaha" class="btn btn-primary mb-3">Tambah Wirausaha</a> --}}
 <table class="table" id="tableWirausaha">
     <thead class="thead-light">
         <tr>
