@@ -152,7 +152,7 @@
 
 <script>
   $(function() {
-    $("#pagination").click(function(e) {
+    $(".pagination").click(function(e) {
       if (e.target.class == "page-link" || $(e.target).parents("#pagination").length) {
         localStorage.setItem("pagination", "true")
       }
