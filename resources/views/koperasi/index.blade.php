@@ -32,7 +32,7 @@
       </div>
 
       <div class="mb-5">
-        <h1>Daftar Sentra UMKM</h1>
+        <h1>Daftar Sentra Koperasi RW</h1>
         <div class="row row-cols-3 g-5">
           @foreach($picts as $pict)
           <img id="bKota" style="cursor: pointer;" class="col" src="{{asset('UMKMProd/'.$pict->kota)}}" alt="" srcset="">
