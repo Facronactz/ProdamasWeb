@@ -126,9 +126,6 @@ Route::resource('/umkm', UMKMController::class);
 //KUBE
 Route::resource('/kube', KubeController::class);
 
-// Publikasi
-Route::resource('/testimoni', TestimoniController::class);
-
 // Koperasi RW
 Route::resource('/koperasirw', KoperasiController::class);
 

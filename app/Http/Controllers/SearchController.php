@@ -400,6 +400,6 @@ class SearchController extends Controller
 
                 $keyword = $ok['tags'];
                 $artikel = ArticleAdmin::withAnyTag($keyword)->paginate(10);
-                return view('search.eboosttag', compact('artikel', 'totalviews', 'counter', 'menus'));
+                return view('search.eboosttag', compact('artikel', 'totalviews', 'counter', 'menus', 'keyword'));
         }
 }

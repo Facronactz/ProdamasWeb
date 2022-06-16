@@ -2,7 +2,7 @@
 
 @section('content')
 <div>
-    <img class="img-fluid" src="{{asset('kubeProd/KUBE.png')}}">
+    <img class="img-fluid" src="{{asset('wirausahaProd/WIRAUSAHA.png')}}">
 </div>
 <div class="container">
     <div class="m-4">
