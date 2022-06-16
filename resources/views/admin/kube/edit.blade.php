@@ -40,7 +40,17 @@ Edit Informasi Kube
         </div>
         @enderror
     </div>
-    
+    <div class="form-group">
+        <label for="proposal">Proposal</label><br>
+        <p>{{$kube->proposal}}</p>
+        <input type="file" class="form-control" accept="application/pdf" name="proposal" id="proposal" value="{{$kube->proposal}}">
+        @error('proposal')
+        <div class="alert alert-danger">
+            {{ $message }}
+        </div>
+        @enderror
+    </div>
+
     <button type="submit" class="btn btn-primary">Edit</button>
     <a href="/admin/list-kube" class="btn btn-outline-primary">Back</a>
 </form>
