@@ -41,7 +41,7 @@ Wirausaha Submission
         @forelse ($wirausaha as $key=>$wirausahas)
         <tr>
             <td>{{$key + 1}}</td>
-            <td><?= $wirausahas->tentang ?></td>
+            <td><?= substr($wirausahas->tentang,0,20) ?></td>
             {{-- <td><?=$wirausahas->info?></td>
             <td><?=$wirausahas->deskripsi?></td> --}}
             <td>
