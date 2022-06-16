@@ -1,6 +1,12 @@
 @extends('layouts.desain')
 
 @section('content')
+<style>
+  a {
+    text-decoration: none;
+    color: black;
+  }
+</style>
 <div>
   <img class="img-fluid" src="{{asset('kubeProd/KUBE.png')}}">
 </div>
@@ -25,9 +31,11 @@
           <img class="img-fluid d-flex mx-auto" src="{{ asset('kubeProd/'.$kop->foto_alur)}}" alt="" srcset="">
         </div>
         <div class="mt-3">
-          <table class="table table-hover" style="width: 50%;">
+          <table class="table table-hover" style="width: 50%; margin:auto">
             <tr>
-              <th scope="row">Template Proposal KUBE</th>
+              <th>Template Proposal KUBE</th>
+            </tr>
+            <tr>
               <td><a href="{{asset('kubeProd/'.$kop->proposal)}}" download="Template Proposal KUBE">Download Di Sini</a></td>
             </tr>
           </table>
