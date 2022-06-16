@@ -30,7 +30,8 @@ class KubeAdminController extends Controller
         return view('admin.kube.edit', compact('kube'));
     }
 
-    public function update($id, Request $request) {
+    public function update($id, Request $request)
+    {
         $request->validate([
             'informasi' => 'required',
         ]);
@@ -38,6 +39,7 @@ class KubeAdminController extends Controller
         $syarat = $request->file('foto_syarat');
         $alur = $request->file('foto_alur');
         $proposal = $request->file('proposal');
+        $legalitas = $request->file('legalitas');
 
         if ($syarat != null) {
             File::delete(public_path("../kubeProd/" . $kube->foto_syarat));
@@ -66,7 +68,16 @@ class KubeAdminController extends Controller
             ]);
         }
 
-    
+        if ($legalitas != null) {
+            File::delete(public_path("../kubeProd/" . $kube->legalitas));
+            $legalitasPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $legalitas->getClientOriginalName());
+            $legalitas->move(public_path('../kubeProd/'), $legalitasPath);
+            $kube->update([
+                'legalitas' => $legalitasPath,
+            ]);
+        }
+
+
         $kube->update([
             'informasi' => $request->informasi,
         ]);
@@ -207,5 +218,4 @@ class KubeAdminController extends Controller
         $submission = DB::table('kube_sentra')->where('id', $id)->delete();
         return redirect('/admin/list-kube')->with('success', 'Kube Berhasil Dihapus!');
     }
-
 }
