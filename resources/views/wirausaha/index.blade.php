@@ -46,7 +46,6 @@
             di Kota Kediri.
         </h4>
     </div>
-    
     <div class="card border-light my-4">
         <div class="row g-0">
             @foreach ($wirausaha as $e)
