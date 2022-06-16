@@ -37,6 +37,7 @@ class KubeAdminController extends Controller
         $kube = Kube::findOrFail($id);
         $syarat = $request->file('foto_syarat');
         $alur = $request->file('foto_alur');
+        $proposal = $request->file('proposal');
 
         if ($syarat != null) {
             File::delete(public_path("../kubeProd/" . $kube->foto_syarat));
@@ -53,6 +54,15 @@ class KubeAdminController extends Controller
             $alur->move(public_path('../kubeProd/'), $alurPath);
             $kube->update([
                 'foto_alur' => $alurPath,
+            ]);
+        }
+
+        if ($proposal != null) {
+            File::delete(public_path("../kubeProd/" . $kube->proposal));
+            $propPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $proposal->getClientOriginalName());
+            $proposal->move(public_path('../kubeProd/'), $propPath);
+            $kube->update([
+                'proposal' => $propPath,
             ]);
         }
 
