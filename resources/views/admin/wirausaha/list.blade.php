@@ -42,8 +42,8 @@ Wirausaha Submission
         <tr>
             <td>{{$key + 1}}</td>
             <td><?= $wirausahas->tentang ?></td>
-            <td>{{ $wirausahas->info }}</td>
-            <td>{{ $wirausahas->deskripsi }}</td>
+            <td><?= $wirausahas->info ?></td>
+            <td><?= $wirausahas->deskripsi ?></td>
             
             {{-- <td><?= $wirausahas->tentang ?></td>
             <td><?= $wirausahas->info ?></td> --}}
