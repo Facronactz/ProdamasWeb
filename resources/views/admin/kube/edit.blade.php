@@ -53,7 +53,7 @@ Edit Informasi Kube
 
     div class="form-group">
     <label for="alur">Legalitas </label><br>
-    <p>{{$kube->legalitas}</p>
+    <p>{{$kube->legalitas}}</p>
     <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="legalitas" id="legalitas" value="{{$kube->legalitas}}">
     @error('legalitas')
     <div class="alert alert-danger">
