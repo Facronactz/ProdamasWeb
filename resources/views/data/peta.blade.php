@@ -10,7 +10,8 @@
 
 @section('content')
     {{-- <div  class='row' > --}}
-    <div class='tableauPlaceholder' id='viz1642533848968' style='position: relative'>
+        <iframe src="https://public.tableau.com/views/Geomap_Kediri_Polos/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" frameborder="0"></iframe>
+    <!-- <div class='tableauPlaceholder' id='viz1642533848968' style='position: relative'>
         <object class='tableauViz' style='display:none;'>
             <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
             <param name='embed_code_version' value='3' />
@@ -26,7 +27,7 @@
             <param name='language' value='en-US' />
             <param name='filter' value='publish=yes' />
         </object>
-    </div>
+    </div> -->
     {{-- </div> --}}
 
     <script type='text/javascript'>
