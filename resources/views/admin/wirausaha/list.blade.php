@@ -31,7 +31,7 @@ Wirausaha Submission
     <thead class="thead-light">
         <tr>
             <th scope="col">ID</th>
-            <th scope="col">Info</th>
+            <th scope="col">Tentang</th>
             <th scope="col">Aksi</th>
         </tr>
     </thead>
@@ -39,7 +39,7 @@ Wirausaha Submission
         @forelse ($wirausaha as $key=>$wirausahas)
         <tr>
             <td>{{$key + 1}}</td>
-            <td><?= $wirausahas->info ?></td>
+            <td><?= $wirausahas->tentang ?></td>
             <td>
                 <form action="/admin/edit-wirausaha/{{$wirausahas->id}}" method="POST">
                     <a href="/admin/edit-wirausaha/{{$wirausahas->id}}" class="btn btn-info">Edit</a>
