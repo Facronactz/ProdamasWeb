@@ -1,6 +1,6 @@
 @extends('layouts.desain')
 @section('data', 'active')
-@section('peta', 'active')
+@section('emas', 'active')
 
 @section('title', 'Prodamas Dalam Peta')
 
