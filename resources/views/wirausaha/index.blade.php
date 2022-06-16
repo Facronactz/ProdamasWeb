@@ -46,22 +46,19 @@
             di Kota Kediri.
         </h4>
     </div>
-    @foreach ($wirausaha as $e)
+    
     <div class="card border-light my-4">
         <div class="row g-0">
-
+            @foreach ($wirausaha as $e)
+            @endforeach
             <div class="col-lg-4 d-flex justify-content-center">
-                {{-- <img src="https://via.placeholder.com/700x400.png?text=Ukuran+Optimal+=+700px+x+400px" class="img-fluid" style="max-height: 400px;"> --}}
                 <img src="{{ asset('wirausahaProd/'.$e->foto_tentang) }}" class="img-fluid" style="max-height: 400px;">
             </div>
             <div class="col-lg-8">
                 <div class="card-body">
                     <h2 class="card-title">Tentang Wirausaha</h2>
                     <div style="height: 2px; background-color:#000000"></div>
-                    <div class="card-text align-middle" style="font-size: 20px">
-                        {{-- <p class="card-text align-middle" style="font-size: 20px">Menindaklanjuti permasalahan masyarakat di Kota Kediri, E-Boost hadir untuk membantu Anda dalam mengetahui informasi mengenai Wirausaha/UMKM, Koperasi RW, KUBE dan informasi lainnya. </p> --}}
-                        <p class="card-text align-middle" style="font-size: 20px"><?= $e->tentang ?></p>
-                    </div>
+                    <p class="card-text align-middle" style="font-size: 20px"><?= $e->tentang ?></p>
                 </div>
             </div>
         </div>
@@ -85,7 +82,6 @@
     <div class="pt2" style="font-size: 20px; text-align:justify; text-indent: 25px">
         <?= $e->deskripsi ?>
     </div>
-    @endforeach
 </div>
 
 @endsection
