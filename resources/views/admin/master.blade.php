@@ -76,24 +76,35 @@
                 <div class="card">
                     <div class="card-body">
                         @hasSection('content')
-                        @yield('content')
+                            @yield('content')
                         @else
-                        {{-- Admin Menu --}}
-                        <div class="container-fluid">
-                            <div class="g-3 row justify-content-center my-3">
-                                @foreach ($menus as $menu)
-                                <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2" style="background: {{$menu->color}}; min-width: 200px;">
-                                    <div class="card-body row">
-                                        <div class="m-auto" style="color: #f4f6f9;">
-                                            <i class="{{$menu->icon}} fa-7x"></i>
-                                            <a href="{{$menu->link}}" class="stretched-link"></a>
-                                            <h2>{{ $menu->name }}</h2>
-                                        </div>
-                                    </div>
+                            {{-- Admin Menu --}}
+
+                            @php
+                                $user = DB::table('users')
+                                    ->where('id', '=', Auth::user()->id)
+                                    ->first();
+                                $level = $user->level;
+                            @endphp
+                            <div class="container-fluid">
+                                <div class="g-3 row justify-content-center my-3">
+
+                                    {{-- Sidebar dan Dashboard admin ditambahkan secara manual di tabel DB 'admin_menu' --}}
+                                    @foreach ($menus as $menu)
+                                        @if ($level == 'super' || $menu->level == 'basic' || $menu->level == $level)
+                                            <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2" style="background: {{ $menu->color }}; min-width: 200px;">
+                                                <div class="card-body row">
+                                                    <div class="m-auto" style="color: #f4f6f9;">
+                                                        <i class="{{ $menu->icon }} fa-7x"></i>
+                                                        <a href="{{ $menu->link }}" class="stretched-link"></a>
+                                                        <h2>{{ $menu->name }}</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endif
+                                    @endforeach
                                 </div>
-                                @endforeach
                             </div>
-                        </div>
                         @endif
                     </div>
                     <!-- /.card-body -->

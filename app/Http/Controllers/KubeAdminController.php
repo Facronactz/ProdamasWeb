@@ -7,6 +7,7 @@ use App\Models\Kube;
 use App\Models\Pict;
 use App\Models\KubeDaftar;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\DB;
 
 class KubeAdminController extends Controller
 {
