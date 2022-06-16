@@ -40,7 +40,7 @@
                     <div class="card-body">
                         <h2 class="card-title">Informasi Wirausaha</h2>
                         <div style="height: 2px; background-color:#000000"></div>
-                        
+                        <div class="card-text align-middle" style="font-size: 20px"><?= $e->info ?></div>
                     </div>
                 </div>
             </div>
