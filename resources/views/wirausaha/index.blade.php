@@ -39,9 +39,14 @@
                 <div class="col-lg-8">
                     <div class="card-body">
                         <h2 class="card-title">Informasi Wirausaha</h2>
+                        <div style="height: 2px; background-color:#000000"></div>
+                        <p class="card-text align-middle" style="font-size: 20px"><?= $e->info ?></p>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="pt2" style="font-size: 20px; text-align:justify; text-indent: 25px">
         </div>
 
     </div>
