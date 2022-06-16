@@ -24,11 +24,11 @@
         <div>
           <img class="img-fluid d-flex mx-auto" src="{{ asset('kubeProd/'.$kop->foto_alur)}}" alt="" srcset="">
         </div>
-        <div>
-          <table class="table table-hover">
+        <div class="mt-3">
+          <table class="table table-hover" style="width: 50%;">
             <tr>
               <th scope="row">Template Proposal KUBE</th>
-              <td><a href="{{asset('kubeProd/'.$kop->proposal)}}" download="Template Proposal KUBE"></a></td>
+              <td><a href="{{asset('kubeProd/'.$kop->proposal)}}" download="Template Proposal KUBE">Download Di Sini</a></td>
             </tr>
           </table>
         </div>
