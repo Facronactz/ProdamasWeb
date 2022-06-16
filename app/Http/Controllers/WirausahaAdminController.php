@@ -44,9 +44,9 @@ class WirausahaAdminController extends Controller
 
     public function index()
     {
-        $wirausahas = Wirausaha::all();
+        $wirausaha = Wirausaha::all();
         $descriptions = DescriptionAdmin::first()->get();
-        return view('admin.wirausaha.list', compact('wirausahas', 'descriptions'));
+        return view('admin.wirausaha.list', compact('wirausaha', 'descriptions'));
     }
 
     public function edit($id)

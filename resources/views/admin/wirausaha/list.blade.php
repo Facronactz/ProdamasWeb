@@ -38,15 +38,15 @@ Wirausaha Submission
         </tr>
     </thead>
     <tbody>
-        @forelse ($wirausahas as $key=>$wirausaha)
+        @forelse ($wirausaha as $key=>$wirausahas)
         <tr>
             <td>{{$key + 1}}</td>
-            <td><?=$wirausaha->tentang?></td>
-            <td>{{$wirausaha->info}}</td>
-            <td>{{$wirausaha->deskripsi}}</td>
+            <td><?=$wirausahas->tentang?></td>
+            <td>{{$wirausahas->info}}</td>
+            <td>{{$wirausahas->deskripsi}}</td>
             <td>
-                <form action="/admin/edit-wirausaha/{{$wirausaha->id}}" method="POST">
-                    <a href="/admin/edit-wirausaha/{{$wirausaha->id}}" class="btn btn-info">Edit</a>
+                <form action="/admin/edit-wirausaha/{{$wirausahas->id}}" method="POST">
+                    <a href="/admin/edit-wirausaha/{{$wirausahas->id}}" class="btn btn-info">Edit</a>
                     @csrf
                     @method('DELETE')
                     <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Wirausaha?')" value="Delete">
