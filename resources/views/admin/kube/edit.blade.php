@@ -51,15 +51,15 @@ Edit Informasi Kube
         @enderror
     </div>
 
-    div class="form-group">
-    <label for="alur">Legalitas </label><br>
-    <p>{{$kube->legalitas}}</p>
-    <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="legalitas" id="legalitas" value="{{$kube->legalitas}}">
-    @error('legalitas')
-    <div class="alert alert-danger">
-        {{ $message }}
-    </div>
-    @enderror
+    <div class="form-group">
+        <label for="alur">Legalitas </label><br>
+        <p>{{$kube->legalitas}}</p>
+        <input type="file" class="form-control" accept="image/png, image/jpg, image/jpeg" name="legalitas" id="legalitas" value="{{$kube->legalitas}}">
+        @error('legalitas')
+        <div class="alert alert-danger">
+            {{ $message }}
+        </div>
+        @enderror
     </div>
 
     <button type="submit" class="btn btn-primary">Edit</button>
