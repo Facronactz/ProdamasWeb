@@ -36,7 +36,7 @@
               <th>Template Proposal KUBE</th>
             </tr>
             <tr>
-              <td><a href="{{asset('kubeProd/'.$kop->proposal)}}" download="Template Proposal KUBE">Download Di Sini</a></td>
+              <td><a href="{{asset('kubeProd/'.$kop->proposal)}}" download="Template Proposal KUBE.pdf">Download Di Sini</a></td>
             </tr>
           </table>
         </div>
