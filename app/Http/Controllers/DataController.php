@@ -54,6 +54,94 @@ class DataController extends Controller
                 return view('data.peta', compact('counter', 'totalviews', 'menus'));
         }
 
+        public function emas()
+        {
+                // total
+                DB::table('counters')->increment('views');
+                $counter = DB::table('counters')->get();
+
+
+                // code jumlah pengunjung
+                $artikel = DB::table('articles')
+                        ->select(DB::raw('views'));
+                $counter = DB::table('counters')
+                        ->select(DB::raw('views'));
+                $totalviews = DB::table('tulis_ceritas')
+                ->select(DB::raw('views'))
+                        ->unionAll($artikel)
+                        ->unionAll($counter)
+                        ->sum('views');
+                $menus = Menu::where('status', 'Show')->get();
+                // end code jumlah pengunjung
+                return view('data.emas', compact('counter', 'totalviews', 'menus'));
+        }
+
+        public function koperasi()
+        {
+                // total
+                DB::table('counters')->increment('views');
+                $counter = DB::table('counters')->get();
+
+
+                // code jumlah pengunjung
+                $artikel = DB::table('articles')
+                        ->select(DB::raw('views'));
+                $counter = DB::table('counters')
+                        ->select(DB::raw('views'));
+                $totalviews = DB::table('tulis_ceritas')
+                ->select(DB::raw('views'))
+                        ->unionAll($artikel)
+                        ->unionAll($counter)
+                        ->sum('views');
+                $menus = Menu::where('status', 'Show')->get();
+                // end code jumlah pengunjung
+                return view('data.koperasirw', compact('counter', 'totalviews', 'menus'));
+        }
+
+        public function anggaran()
+        {
+                // total
+                DB::table('counters')->increment('views');
+                $counter = DB::table('counters')->get();
+
+
+                // code jumlah pengunjung
+                $artikel = DB::table('articles')
+                        ->select(DB::raw('views'));
+                $counter = DB::table('counters')
+                        ->select(DB::raw('views'));
+                $totalviews = DB::table('tulis_ceritas')
+                ->select(DB::raw('views'))
+                        ->unionAll($artikel)
+                        ->unionAll($counter)
+                        ->sum('views');
+                $menus = Menu::where('status', 'Show')->get();
+                // end code jumlah pengunjung
+                return view('data.anggaran', compact('counter', 'totalviews', 'menus'));
+        }
+
+        public function rth()
+        {
+                // total
+                DB::table('counters')->increment('views');
+                $counter = DB::table('counters')->get();
+
+
+                // code jumlah pengunjung
+                $artikel = DB::table('articles')
+                        ->select(DB::raw('views'));
+                $counter = DB::table('counters')
+                        ->select(DB::raw('views'));
+                $totalviews = DB::table('tulis_ceritas')
+                ->select(DB::raw('views'))
+                        ->unionAll($artikel)
+                        ->unionAll($counter)
+                        ->sum('views');
+                $menus = Menu::where('status', 'Show')->get();
+                // end code jumlah pengunjung
+                return view('data.rth', compact('counter', 'totalviews', 'menus'));
+        }
+
         public function banksampah()
         {
                 // total

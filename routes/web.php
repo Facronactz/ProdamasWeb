@@ -69,6 +69,10 @@ Route::get('/', [artikelController::class, 'beranda'])->name('dashboard');
 Route::get('/grafik', [DataController::class, 'grafik']);
 Route::get('/banksampah', [DataController::class, 'banksampah']);
 Route::get('/peta', [DataController::class, 'peta']);
+Route::get('/emas', [DataController::class, 'emas']);
+Route::get('/koperasi', [DataController::class, 'koperasi']);
+Route::get('/anggaran', [DataController::class, 'anggaran']);
+Route::get('/rth', [DataController::class, 'rth']);
 Route::view('/progressio', 'data.progresio');
 
 // informasi
