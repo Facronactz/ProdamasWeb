@@ -8,7 +8,14 @@
 <div class="row container justify-content-center mx-auto">
     <div class="leftcolumn mt-5">
         <!-- artikel -->
+        @if($keyword == 'pemasaran') {
         <h3 style="font-family: Inter, sans-serif">Artikel Pemasaran</h3>
+        }
+        @else {
+        <h3 style="font-family: Inter, sans-serif">Artikel Testimoni</h3>
+        }
+        @endif
+
         @if ($artikel->count())
         @foreach ($artikel as $item)
         <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
