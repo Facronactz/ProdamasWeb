@@ -142,6 +142,28 @@ class DataController extends Controller
                 return view('data.rth', compact('counter', 'totalviews', 'menus'));
         }
 
+        public function datatrend()
+        {
+                // total
+                DB::table('counters')->increment('views');
+                $counter = DB::table('counters')->get();
+
+
+                // code jumlah pengunjung
+                $artikel = DB::table('articles')
+                        ->select(DB::raw('views'));
+                $counter = DB::table('counters')
+                        ->select(DB::raw('views'));
+                $totalviews = DB::table('tulis_ceritas')
+                ->select(DB::raw('views'))
+                        ->unionAll($artikel)
+                        ->unionAll($counter)
+                        ->sum('views');
+                $menus = Menu::where('status', 'Show')->get();
+                // end code jumlah pengunjung
+                return view('data.datatrend', compact('counter', 'totalviews', 'menus'));
+        }
+
         public function banksampah()
         {
                 // total
