@@ -33,7 +33,7 @@
         <div class="p-3">
           <table class="table table-hover" style="width: 30%; margin:auto; text-align:center">
             <tr>
-              <th>Template Proposal KUBE</th>
+              <th scope="col">Template Proposal KUBE</th>
             </tr>
             <tr>
               <td><a href="{{asset('kubeProd/'.$kop->proposal)}}" download="Template Proposal KUBE.pdf">Download Di Sini</a></td>
