@@ -233,7 +233,7 @@
                                             <li class="dropdown-submenu w-100">
                                                 <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">Anggaran & Realisasi</a></li>
                                                 <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">Ruang Terbuka Hijau</a></li>
-                                                <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">English Masive</a></li>
+                                                <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/emas') }}">English Masive</a></li>
                                                 <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">Koperasi RW</a></li>
                                             </li>
                                         </ul>
