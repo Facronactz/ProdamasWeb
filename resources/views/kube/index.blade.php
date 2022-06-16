@@ -30,8 +30,8 @@
         <div>
           <img class="img-fluid d-flex mx-auto" src="{{ asset('kubeProd/'.$kop->foto_alur)}}" alt="" srcset="">
         </div>
-        <div class="mt-3">
-          <table class="table table-hover" style="width: 50%; margin:auto">
+        <div class="p-3">
+          <table class="table table-hover" style="width: 20%; margin:auto">
             <tr>
               <th>Template Proposal KUBE</th>
             </tr>
