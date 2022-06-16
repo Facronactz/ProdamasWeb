@@ -73,6 +73,7 @@ Route::get('/emas', [DataController::class, 'emas']);
 Route::get('/koperasi', [DataController::class, 'koperasi']);
 Route::get('/anggaran', [DataController::class, 'anggaran']);
 Route::get('/rth', [DataController::class, 'rth']);
+Route::get('/datatrend', [DataController::class, 'datatrend']);
 Route::view('/progressio', 'data.progresio');
 
 // informasi
