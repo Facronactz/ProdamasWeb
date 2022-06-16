@@ -19,12 +19,12 @@ Wirausaha Submission
             <td><?= $wirausahas->desc_wirausaha ?></td>
             <td align="right">
                 <form action="/admin/wirausaha/{{ $wirausahas->id }}" method="POST">
-                    <a href="/admin/wirausaha/{{ $wirausahas->id }}" class="btn btn-info">Edit</a>
-                </form>
-            </td>
-        </tr>
-        @endforeach
-    </table> -->
+<a href="/admin/wirausaha/{{ $wirausahas->id }}" class="btn btn-info">Edit</a>
+</form>
+</td>
+</tr>
+@endforeach
+</table> -->
 </div> --}}
 {{-- <a href="/admin/add-wirausaha" class="btn btn-primary mb-3">Tambah Wirausaha</a> --}}
 <table class="table" id="tableWirausaha">
@@ -38,16 +38,15 @@ Wirausaha Submission
         </tr>
     </thead>
     <tbody>
-        @forelse ($wirausaha as $key=>$wirausahas)
+        @forelse ($wirausahas as $key=>$wirausaha)
         <tr>
             <td>{{$key + 1}}</td>
-
-            <td><?= substr($wirausahas->tentang, 0, 50) ?></td>
-            <td> {{$wirausahas->info}} </td>
-            <td> {{$wirausahas->deskripsi}} </td>
+            <td><?= substr($wirausaha->tentang, 0, 50) ?></td>
+            <td> {{$wirausaha->info}} </td>
+            <td> {{$wirausaha->deskripsi}} </td>
             <td>
-                <form action="/admin/edit-wirausaha/{{$wirausahas->id}}" method="POST">
-                    <a href="/admin/edit-wirausaha/{{$wirausahas->id}}" class="btn btn-info">Edit</a>
+                <form action="/admin/edit-wirausaha/{{$wirausaha->id}}" method="POST">
+                    <a href="/admin/edit-wirausaha/{{$wirausaha->id}}" class="btn btn-info">Edit</a>
                     @csrf
                     @method('DELETE')
                     <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Wirausaha?')" value="Delete">
