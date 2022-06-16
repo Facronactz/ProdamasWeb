@@ -43,9 +43,6 @@ Wirausaha Submission
             <td>
                 <form action="/admin/edit-wirausaha/{{$wirausahas->id}}" method="POST">
                     <a href="/admin/edit-wirausaha/{{$wirausahas->id}}" class="btn btn-info">Edit</a>
-                    @csrf
-                    @method('DELETE')
-                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Wirausaha?')" value="Delete">
                 </form>
             </td>
         </tr>
