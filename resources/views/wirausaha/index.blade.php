@@ -49,7 +49,6 @@
     <div class="card border-light my-4">
         <div class="row g-0">
             @foreach ($wirausaha as $e)
-            @endforeach
             <div class="col-lg-4 d-flex justify-content-center">
                 <img src="{{ asset('wirausahaProd/'.$e->foto_tentang) }}" class="img-fluid" style="max-height: 400px;">
             </div>
@@ -60,6 +59,7 @@
                     <p class="card-text align-middle" style="font-size: 20px"><?= $e->tentang ?></p>
                 </div>
             </div>
+            @endforeach
         </div>
     </div>
     <hr>
@@ -79,7 +79,9 @@
     </div>
 
     <div class="pt2" style="font-size: 20px; text-align:justify; text-indent: 25px">
+        @foreach ($wirausaha as $e)
         <?= $e->deskripsi ?>
+        @endforeach
     </div>
 </div>
 
