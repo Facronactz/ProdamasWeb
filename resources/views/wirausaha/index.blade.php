@@ -46,6 +46,12 @@
             </div>
         </div>
 
+        <div class="pt2" style="font-size: 20px; text-align:justify; text-indent: 25px">
+            @foreach ($wirausaha as $e)
+            <?= $e->deskripsi ?>
+            @endforeach
+        </div>
+
         
 
     </div>
