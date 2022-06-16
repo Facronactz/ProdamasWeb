@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-<div class='tableauPlaceholder' id='viz1655364489987' style='position: relative'>
+<div class='tableauPlaceholder' id='viz1655364489987' style='position: relative; padding:0 50px; margin:50px 0'>
     <noscript>
         <a href='#'>
             <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Lu&#47;LuasRTH&#47;Dashboard1&#47;1_rss.png' style='border: none' />
