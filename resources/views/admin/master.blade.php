@@ -18,6 +18,13 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 
+    <!-- FavIcon -->
+    {{-- <link href="{{ asset('img/icon.png') }}" rel="icon" /> --}}
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('/adminlte/plugins/summernote/summernote-bs4.min.css') }}">
@@ -36,7 +43,6 @@
         .bootstrap-tagsinput {
             width: 100%;
         }
-
     </style>
 </head>
 
@@ -73,18 +79,29 @@
                             @yield('content')
                         @else
                             {{-- Admin Menu --}}
+
+                            @php
+                                $user = DB::table('users')
+                                    ->where('id', '=', Auth::user()->id)
+                                    ->first();
+                                $level = $user->level;
+                            @endphp
                             <div class="container-fluid">
                                 <div class="g-3 row justify-content-center my-3">
+
+                                    {{-- Sidebar dan Dashboard admin ditambahkan secara manual di tabel DB 'admin_menu' --}}
                                     @foreach ($menus as $menu)
-                                    <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2" style="background: {{$menu->color}}; min-width: 200px;">
-                                        <div class="card-body row">
-                                            <div class="m-auto" style="color: #f4f6f9;">
-                                                <i class="{{$menu->icon}} fa-7x"></i>
-                                                <a href="{{$menu->link}}" class="stretched-link"></a>
-                                                <h2>{{ $menu->name }}</h2>
+                                        @if ($level == 'super' || $menu->level == 'basic' || $menu->level == $level)
+                                            <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2" style="background: {{ $menu->color }}; min-width: 200px;">
+                                                <div class="card-body row">
+                                                    <div class="m-auto" style="color: #f4f6f9;">
+                                                        <i class="{{ $menu->icon }} fa-7x"></i>
+                                                        <a href="{{ $menu->link }}" class="stretched-link"></a>
+                                                        <h2>{{ $menu->name }}</h2>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
+                                        @endif
                                     @endforeach
                                 </div>
                             </div>
@@ -135,19 +152,33 @@
     <script>
         $(document).ready(function() {
             $('#description').summernote({
-                callbacks: {
-                    onPaste: function(e) {
-                        var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
-                        e.preventDefault();
-                        document.execCommand('insertText', false, bufferText);
+                    callbacks: {
+                        onPaste: function(e) {
+                            var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
+                            e.preventDefault();
+                            document.execCommand('insertText', false, bufferText);
+                        },
                     },
-                },
-                toolbar: [
-                    ['style', ['bold', 'italic', 'underline']],
-                    ['para', ['ul', 'ol', 'paragraph']],
-                    ['view', ['fullscreen']],
-                ],
-            })
+                    toolbar: [
+                        ['style', ['bold', 'italic', 'underline']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['view', ['fullscreen', 'codeview']],
+                    ],
+                }),
+                $('.summernote').summernote({
+                    callbacks: {
+                        onPaste: function(e) {
+                            var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
+                            e.preventDefault();
+                            document.execCommand('insertText', false, bufferText);
+                        },
+                    },
+                    toolbar: [
+                        ['style', ['bold', 'italic', 'underline']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['view', ['fullscreen', 'codeview']],
+                    ],
+                })
         });
     </script>
 

@@ -25,27 +25,26 @@ class WirausahaAdminController extends Controller
         ]);
 
 
-        $file=$request->file('foto_tentang');
-        $file2=$request->file('foto_info');
+        $file = $request->file('foto_tentang');
+        $file2 = $request->file('foto_info');
         $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
         $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file2->getClientOriginalName());
-                $file->move(public_path('../fotoProd/'), $foto);
-                $file2->move(public_path('../fotoProd/'), $foto2);
-                Wirausaha::insert( [
-                    'tentang' => $request->tentang,
-                    'foto_tentang' => $request->foto_tentang,
-                    'foto_tentang' => $foto,
-                    'info' => $request->info,
-                    'foto_info' => $foto2,
-                ]);
-
+        $file->move(public_path('../wirausahaProd/'), $foto);
+        $file2->move(public_path('../wirausahaProd/'), $foto2);
+        Wirausaha::create([
+            'tentang' => $request->tentang,
+            'foto_tentang' => $request->foto_tentang,
+            'foto_tentang' => $foto,
+            'info' => $request->info,
+            'foto_info' => $foto2,
+        ]);
 
         return redirect('/admin/list-wirausaha')->with('success', 'Wirausaha Berhasil Ditambahkan!');
     }
 
     public function index()
     {
-        $wirausaha = Wirausaha::groupBy('tentang','info')->get();
+        $wirausaha = Wirausaha::groupBy('tentang', 'info')->get();
         $descriptions = DescriptionAdmin::first()->get();
         return view('admin.wirausaha.list', compact('wirausaha', 'descriptions'));
     }
@@ -58,38 +57,44 @@ class WirausahaAdminController extends Controller
 
     public function update($id, Request $request)
     {
-        $this->validate($request, [
+        $request->validate([
             'tentang' => 'required',
-            'foto_tentang' => 'required',
             'info' => 'required',
-            'foto_info' => 'required',
+            'deskripsi' => 'required',
         ]);
 
         $wirausaha = Wirausaha::findorfail($id);
-        $file = $request->file('foto_tentang');
-        $file2 = $request->file('foto_info');
-        if ($file != NULL) {
-           $file= $request->file('foto_tentang');
-           $file2= $request->file('foto_info');
-            $foto = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->file('upload_foto_tentang')->getClientOriginalName(). '.'. $request->file('foto_tentang')->getClientOriginalExtension());
-            $foto2 = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->file('upload_foto_info')->getClientOriginalName(). '.' . $request->file('foto_info')->getClientOriginalExtension());
-                    $request->file('foto_tentang')->move(public_path('../fotoProd/'), $foto);
-                    $request->file('foto_info')->move(public_path('../fotoProd/'), $foto2);
-            
+        $tentang = $request->file('foto_tentang');
+        $info = $request->file('foto_info');
 
+        if ($tentang != NULL) {
+            File::delete(public_path("../wirausahaProd/" . $wirausaha->foto_tentang));
+            $tentangPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $tentang->getClientOriginalName());
+            $tentang->move(public_path('../wirausahaProd/'), $tentangPath);
             $wirausaha->update([
-                'tentang' => $request->tentang,
-                'foto_tentang' => $request->foto_tentang,
-                'foto_tentang' => $foto,
-                'info' => $request->info,
-                'foto_info' => $foto2,
-            ]);
-        } else {
-            $wirausaha->update([
-                'tentang' => $request->tentang,
-                'caption_info' => $request->caption_info,
+                'foto_tentang' => $tentangPath,
             ]);
         }
+        if ($info != null) {
+            File::delete(public_path("../wirausahatProd/" . $wirausaha->foto_info));
+            $infoPath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $info->getClientOriginalName());
+            $info->move(public_path('../wirausahaProd/'), $infoPath);
+            $wirausaha->update([
+                'foto_info' => $infoPath
+            ]);
+        }
+        $wirausaha->update([
+            'tentang' => $request->tentang,
+            'info' => $request->info,
+            'deskripsi' => $request->deskripsi,
+        ]);
+
+        // }else {
+        //     $wirausaha->update([
+        //         'tentang' => $request->tentang,
+        //         'info' => $request->info,
+        //     ]);
+        // }
 
         return redirect('/admin/list-wirausaha')->with('success', 'Wirausaha Berhasil Diupdate!');
     }
@@ -99,5 +104,4 @@ class WirausahaAdminController extends Controller
         $submission = DB::table('wirausaha')->where('id', $id)->delete();
         return redirect('/admin/list-wirausaha')->with('success', 'Wirausaha Berhasil Dihapus!');
     }
-
 }

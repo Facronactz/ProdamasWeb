@@ -110,12 +110,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 py-4">
-                <h1 class="text-center mb-5">Tentang Prodamas</h1>
-                <p class="fs-5" style="text-align: left;">Program Pemberdayaan Masyarakat (PRODAMAS) adalah
+                <h1 class="text-center mb-3">Tentang Prodamas</h1>
+                {{-- <p class="fs-5" style="text-align: left;">Program Pemberdayaan Masyarakat (PRODAMAS) adalah
                     suatu program dari Pemerintah Kota Kediri
                     yang digunakan untuk melaksanakan kegiatan pembangunan masyarakat ditingkat kelurahan yang berbasis
                     wilayah Rukun Tetangga (RT) yang dimulai sejak tahun 2015 sebagai upaya mewujudkan kemampuan dan
-                    kemandirian masyarakat dalam pembangunan.</p>
+                    kemandirian masyarakat dalam pembangunan.</p> --}}
+                <p class="fs-5" style="text-align: left;">Program Pemberdayaan Masyarakat adalah proses pembangunan dimana masyarakat
+                    berinisiatif untuk memulai proses kegiatan untuk memperbaiki situasi dan
+                    kondisi diri sendiri dan lingkungannya. <br>
+                    Progam Pemberdayaan Masyarakat Plus yang selanjutnya disebut Prodamas Plus adalah suatu program lanjutan dari Prodamas untuk mendorong
+                    partisipasi dan peran aktif masyarakat dalam pembangunan ditingkat
+                    kelurahan yang berbasis di wilayah Rukun Tetangga.
+                </p>
             </div>
             <div class="col-md-6 py-4">
                 <img src="img/tentangProdamas.jpeg" class="img-fluid rounded-3">
@@ -135,18 +142,21 @@
         </h1>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3">
+    {{-- <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-md-0 px-3 multiple-items"> --}}
+    <div class="px-md-0 px-3 multiple-items">
         @foreach ($artikel as $item)
-        <div class="col my-3 my-lg-0 hvr-bob">
-            <div class="card h-100 d-block hvr-grow hvr-underline-from-center">
+        {{-- <div class="col-4 my-3 my-lg-0 hvr-bob"> --}}
+        {{-- <div class="my-3 mx-3 my-lg-0 hvr-bob"> --}}
+            {{-- <div class="card h-100 d-block hvr-grow hvr-underline-from-center"> --}}
+            <div class="card h-100 m-3 my-lg-0 hvr-underline-from-center">
                 <img src="{{ asset('articleProd/sampul/' . $item->gambar_sampul) }}" class="card-img-top card-img-fix" alt="...">
-                <div class="card-body">
+                <div class="card-body" style="height: 250px;">
                     <a class="stretched-link" href="artikel/{{ $item->id }}"></a>
                     <h5 class="card-title"><?= $item->judul ?></h5>
                     <p class="card-text">{{ $item->text_sampul }}</p>
                 </div>
             </div>
-        </div>
+        {{-- </div> --}}
         @endforeach
     </div>
     <div class="d-flex justify-content-end mt-2">

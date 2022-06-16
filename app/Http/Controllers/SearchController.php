@@ -12,6 +12,7 @@ use App\Models\ArticleAdmin;
 use App\Models\Menu;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Database\Schema\PostgresBuilder;
 use Illuminate\Support\Facades\DB;
 
 
@@ -358,7 +359,7 @@ class SearchController extends Controller
 
                 $keyword = $ok['tag'];
                 $artikel = ArticleAdmin::withAnyTag($keyword)->paginate(3);
-                $foto = FotoAdmin::withAnyTag($keyword)->paginate(3);
+                $foto = Post::withAnyTag($keyword)->paginate(3);
                 $audio = AudioAdmin::withAnyTag($keyword)->paginate(3);
                 $video = VideoAdmin::withAnyTag($keyword)->paginate(3);
                 return view('search.tagsearch', compact(
@@ -370,5 +371,35 @@ class SearchController extends Controller
                         'counter',
                         'menus'
                 ));
+        }
+
+        public function eboost(Request $request)
+        {
+                // total
+                DB::table('counters')->increment('views');
+                $counter = DB::table('counters')->get();
+
+
+                // code jumlah pengunjung
+                $artikel = DB::table('articles')
+                        ->select(DB::raw('views'));
+                $counter = DB::table('counters')
+                        ->select(DB::raw('views'));
+                $totalviews = DB::table('tulis_ceritas')
+                ->select(DB::raw('views'))
+                        ->unionAll($artikel)
+                        ->unionAll($counter)
+                        ->sum('views');
+                $menus = Menu::where('status', 'Show')->get();
+                // end code jumlah pengunjung
+
+
+                $url = $request->fullurl();
+                $src = parse_url($url)['query'];
+                parse_str($src, $ok);
+
+                $keyword = $ok['tags'];
+                $artikel = ArticleAdmin::withAnyTag($keyword)->paginate(10);
+                return view('search.eboosttag', compact('artikel', 'totalviews', 'counter', 'menus'));
         }
 }

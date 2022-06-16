@@ -42,13 +42,12 @@
         @if ($foto->count())
         @foreach ($foto as $item)
         <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
-            <div class="row g-0">
+            <div class="row g-0" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                 <div class="col-md-4 my-auto">
                     <img src="{{ asset('cover/' . $item->cover) }}" class="img-fluid rounded-start">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <a href="foto/{{ $item->id }}" class="stretched-link"></a>
                         <h5 class="card-title" style="font-size: 22px;">{{ $item->title }}</h5>
                         <p class="card-text" style="font-size: 13px;"><small class="text-muted">{{$item->updated_at}}</small></p>
                     </div>
@@ -67,12 +66,56 @@
         </div>
         @endif
 
+        @foreach ($foto as $item)
+        <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" style="width: 500px; height: 500px">
+                <div class="modal-content">
+                    <div class="modal-header ">
+                        <h2 class="modal-title" id="fotoLabel">{{ $item->title }}</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="carouselIndicators{{ $item->id }}" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                @foreach ($item->images as $no => $images)
+                                @if ($no == 0)
+                                <div class="carousel-item active">
+                                    <img src="{{ asset('images/' . $images->image) }}" class="d-block w-100" alt="...">
+                                </div>
+                                @else
+                                <div class="carousel-item">
+                                    <img src="{{ asset('images/' . $images->image) }}" class="d-block w-100" alt="...">
+                                </div>
+                                @endif
+                                @endforeach
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators{{ $item->id }}" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators{{ $item->id }}" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- </div> -->
+
+                        <h6>{{ $item->body }}</h6>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
+
         <!-- video -->
         <h3 style="font-family: Inter, sans-serif">Video</h3>
         @if ($video->count())
         @foreach ($video as $item)
         <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
-            <div class="row g-0">
+            <div class="row g-0" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                 <div class="col-md-4 my-auto">
                     <img src="{{ asset('videoProd/sampul/' . $item->gambar_sampul) }}" class="img-fluid rounded-start">
                 </div>
@@ -86,6 +129,7 @@
             </div>
         </div>
         @endforeach
+
         @if ($video->hasPages())
         <div class="d-flex justify-content-end w-100 my-3">
             {{ $video->links() }}
@@ -97,12 +141,46 @@
         </div>
         @endif
 
+        @foreach ($video as $item)
+        <div class="modal fade" id="audioPlayer{{ $item->id }}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="fotoLabel">{{ $item->judul }}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row row-cols-1 row-cols-md-2 mb-2 g-4 videoPlayerBox centerItms">
+                            <div class="card" style="
+                                                        width: 25rem;
+                                                        border: none;
+                                                        margin: 0;
+                                                        margin-top: 30px;
+                                                        ">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/{{$item->konten}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="card" style="
+                                                        border: none;
+                                                        ">
+                                <h3> {{ $item->judul }} </h3>
+                                <p> <?= $item->caption ?> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
+
         <!-- audio -->
         <h3 style="font-family: Inter, sans-serif">Audio</h3>
         @if ($audio->count())
         @foreach ($audio as $item)
         <div class="card mb-3 p-0 hvr-sweep-to-left hvr-bob">
-            <div class="row g-0">
+            <div class="row g-0" data-bs-toggle="modal" data-bs-target="#audioPlayer{{ $item->id }}">
                 <div class="col-md-4 my-auto">
                     <img src="{{ asset('audioProd/thumb/' . $item->gambar_sampul) }}" class="img-fluid rounded-start">
                 </div>
@@ -145,7 +223,7 @@
                                                           ">
                                 <img src="{{ asset('/audioProd/thumb/' . $item->gambar_sampul) }}" class="d-flex justify-content click" style="width: 100%;" alt="...">
                                 <audio controls="controls">
-                                    <source src="{{ $item->konten }}">
+                                    <source src="https://docs.google.com/uc?export=download&id={{ $item->konten }}">
                                 </audio>
                             </div>
                             <div class="card" style="

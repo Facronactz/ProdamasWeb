@@ -11,7 +11,7 @@ E-Boost Submission
 </div>
 @endif
 
-<div class="form-group">
+{{-- <div class="form-group">
     <label for="desc_eboost">Deskripsi</label>
     <!-- <table class="table">
         @foreach ($eboost ?? '' as $eboosts)
@@ -25,8 +25,8 @@ E-Boost Submission
         </tr>
         @endforeach
     </table> -->
-</div>
-<a href="/admin/add-eboost" class="btn btn-primary mb-3">Tambah E-Boost</a>
+</div> --}}
+{{-- <a href="/admin/add-eboost" class="btn btn-primary mb-3">Tambah E-Boost</a> --}}
 <table class="table" id="tableEboost">
     <thead class="thead-light">
         <tr>
@@ -37,6 +37,7 @@ E-Boost Submission
             <th scope="col">Judul Info</th>
             <th scope="col">Caption Info</th>
             <th scope="col">Foto Info</th>
+            <th scope="col">Deskripsi</th>
             <th scope="col">Aksi</th>
         </tr>
     </thead>
@@ -45,11 +46,12 @@ E-Boost Submission
         <tr>
             <td>{{$key + 1}}</th>
             <td>{{$eboosts->judul_tentang}}</td>
-            <td>{{$eboosts->caption_tentang}}</td>
+            <td><?= substr($eboosts->caption_tentang, 0, 150) ?></td>
             <td>{{$eboosts->foto_tentang}}</td>
             <td>{{$eboosts->judul_info}}</td>
-            <td>{{$eboosts->caption_info}}</td>
+            <td><?= substr($eboosts->caption_info, 0, 150) ?></td>
             <td>{{$eboosts->foto_info}}</td>
+            <td><?= substr($eboosts->deskripsi, 0, 150) ?></td>
             <td>
                 <form action="/admin/edit-eboost/{{$eboosts->id}}" method="POST">
                     <a href="/admin/edit-eboost/{{$eboosts->id}}" class="btn btn-info">Edit</a>

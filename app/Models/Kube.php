@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 
-class Wirausaha extends Model
+class Kube extends Model
 {
     use HasFactory;
-    protected $table = "wirausaha";
-
-    protected $fillable = ["id","tentang", "info", "foto_tentang", "foto_info", "deskripsi"];
+    protected $table = "kube";
+    public $incrementing = false;
+    protected $fillable = ["id", "informasi", "foto_syarat", "foto_alur", "proposal"];
 
     public function getCreatedAtAttribute()
     {
         return Carbon::parse($this->attributes['created_at'])
-        ->translatedFormat('d F Y');
+            ->translatedFormat('d F Y');
     }
 }
