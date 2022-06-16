@@ -42,7 +42,7 @@ Wirausaha Submission
         <tr>
             <td>{{$key + 1}}</td>
             <td><?= $wirausahas->tentang ?></td>
-            <td>b</td>
+            <td>{{ $wirausahas->info }}</td>
             <td>a</td>
             
             {{-- <td><?= $wirausahas->tentang ?></td>
