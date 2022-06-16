@@ -8,12 +8,10 @@
 <div class="row container justify-content-center mx-auto">
     <div class="leftcolumn mt-5">
         <!-- artikel -->
-        @if($keyword == 'pemasaran') {
+        @if($keyword == 'pemasaran')
         <h3 style="font-family: Inter, sans-serif">Artikel Pemasaran</h3>
-        }
-        @else {
+        @else
         <h3 style="font-family: Inter, sans-serif">Artikel Testimoni</h3>
-        }
         @endif
 
         @if ($artikel->count())
