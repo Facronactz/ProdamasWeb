@@ -231,10 +231,10 @@
                                         <a class="dropdown-item @yield('kosong')">Prodamas Dalam Angka<span class="caret fas fa-caret-right ms-3"></span></a>
                                         <ul class="dropdown-menu">
                                             <li class="dropdown-submenu w-100">
-                                                <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">Anggaran & Realisasi</a></li>
-                                                <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">Ruang Terbuka Hijau</a></li>
-                                                <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/emas') }}">English Masive</a></li>
-                                                <li class="w-100"><a class="dropdown-item @yield('e-kosong')" href="{{ url('/kosong') }}">Koperasi RW</a></li>
+                                                <li class="w-100"><a class="dropdown-item @yield('data')" href="{{ url('/anggaran') }}">Anggaran & Realisasi</a></li>
+                                                <li class="w-100"><a class="dropdown-item @yield('data')" href="{{ url('/rth') }}">Ruang Terbuka Hijau</a></li>
+                                                <li class="w-100"><a class="dropdown-item @yield('data')" href="{{ url('/emas') }}">English Masive</a></li>
+                                                <li class="w-100"><a class="dropdown-item @yield('data')" href="{{ url('/koperasi') }}">Koperasi RW</a></li>
                                             </li>
                                         </ul>
                                     </li>
