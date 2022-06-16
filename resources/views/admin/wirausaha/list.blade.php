@@ -41,17 +41,13 @@ Wirausaha Submission
         @forelse ($wirausaha as $key=>$wirausahas)
         <tr>
             <td>{{$key + 1}}</td>
-            <td><?= $wirausahas->tentang ?></td>
-            <td><?= $wirausahas->info ?></td>
-            <td>{{  $wirausahas->deskripsi }}</td>
-            
             {{-- <td><?= $wirausahas->tentang ?></td>
-            <td><?= $wirausahas->info ?></td> --}}
-            {{-- <td><?= $wirausahas->deskripsi ?></td> --}}
-            
-            {{-- <td><?= substr($wirausahas->tentang, 0, 100)?></td>
+            <td><?= $wirausahas->info ?></td>
+            <td>{{  $wirausahas->deskripsi }}</td> --}}
+
+            <td><?= substr($wirausahas->tentang, 0, 100)?></td>
             <td><?= substr($wirausahas->info, 0, 100) ?></td>
-            <td><?= substr($wirausahas->deskripsi, 0, 100) ?></td> --}}
+            <td><?= substr($wirausahas->deskripsi, 0, 100) ?></td>
             <td>
                 <form action="/admin/edit-wirausaha/{{$wirausahas->id}}" method="POST">
                     <a href="/admin/edit-wirausaha/{{$wirausahas->id}}" class="btn btn-info">Edit</a>
