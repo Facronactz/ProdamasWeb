@@ -33,7 +33,7 @@ Wirausaha Submission
             <th scope="col">ID</th>
             <th scope="col">Tentang</th>
             <th scope="col">Info</th>
-            {{-- <th scope="col">Deskripsi</th> --}}
+            <th scope="col">Deskripsi</th>
             <th scope="col">Aksi</th>
         </tr>
     </thead>
@@ -41,7 +41,8 @@ Wirausaha Submission
         @forelse ($wirausaha as $key=>$wirausahas)
         <tr>
             <td>{{$key + 1}}</td>
-            <td>a</td>
+            <td><?= $wirausahas->tentang ?></td>
+            <td><?= $wirausahas->info ?></td>
             <td>a</td>
             
             {{-- <td><?= $wirausahas->tentang ?></td>
