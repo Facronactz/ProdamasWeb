@@ -1,7 +1,7 @@
 @extends('layouts.desain')
 
 @section('content')
-<div>
+{{-- <div>
     <img class="img-fluid" src="{{asset('kubeProd/KUBE.png')}}">
 </div>
 <div class="container">
@@ -50,6 +50,6 @@
             @endforeach
         </div>
     </div>
-</div>
+</div> --}}
 
 @endsection
