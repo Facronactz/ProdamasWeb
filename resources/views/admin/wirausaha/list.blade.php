@@ -32,8 +32,8 @@ Wirausaha Submission
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Tentang</th>
-            <!-- <th scope="col">Info</th>
-            <th scope="col">Deskripsi</th> -->
+            <th scope="col">Info</th>
+            <!-- <th scope="col">Deskripsi</th> -->
             <th scope="col">Aksi</th>
         </tr>
     </thead>
@@ -42,8 +42,8 @@ Wirausaha Submission
         <tr>
             <td>{{$key + 1}}</td>
             <td><?=$wirausahas->tentang ?></td>
-            {{-- <td><?=$wirausahas->info?></td>
-            <td><?=$wirausahas->deskripsi?></td> --}}
+            <td><?=$wirausahas->info?></td>
+            {{-- <td><?=$wirausahas->deskripsi?></td> --}}
             <td>
                 <form action="/admin/edit-wirausaha/{{$wirausahas->id}}" method="POST">
                     <a href="/admin/edit-wirausaha/{{$wirausahas->id}}" class="btn btn-info">Edit</a>
