@@ -238,7 +238,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="w-100"><a class="dropdown-item @yield('kosong')" href="{{ url('/kosong') }}">Data Trend</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('kosong')" href="{{ url('/datatrend') }}">Data Trend</a></li>
                                     <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}" target="_blank">Progressio</a></li>
                                     {{-- <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio</a></li> --}}
                                     {{-- <a class="@yield('progressio')" href="https://progressio.kedirikota.go.id/auth/login">Progressio <span class="caret fas fa-caret-right"></span></a> --}}
