@@ -26,7 +26,7 @@
             <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
             <param name='display_count' value='yes' /><param name='language' value='en-US' />
         </object>
-    </div>                
+</div>                
     
     <script type='text/javascript'>                    
     var divElement = document.getElementById('viz1655364489987');                    
