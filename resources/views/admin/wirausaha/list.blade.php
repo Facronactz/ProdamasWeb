@@ -42,7 +42,7 @@ Wirausaha Submission
         <tr>
             <td>{{$key + 1}}</td>
             <td><?=$wirausahas->tentang ?></td>
-            <td><?=$wirausahas->info?></td>
+            <td><?=substr($wirausahas->info,0,100)?></td>
             {{-- <td><?=$wirausahas->deskripsi?></td> --}}
             <td>
                 <form action="/admin/edit-wirausaha/{{$wirausahas->id}}" method="POST">
