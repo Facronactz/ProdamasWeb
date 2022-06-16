@@ -22,6 +22,7 @@ Kube Submission
                 <th scope="col">Informasi</th>
                 <th scope="col">Syarat</th>
                 <th scope="col">Alur</th>
+                <th scope="col">Legalitas</th>
                 <th scope="col">Aksi</th>
             </tr>
         </thead>
@@ -32,6 +33,7 @@ Kube Submission
                 <td><?= substr($kop->informasi, 0, 500) ?></td>
                 <td>{{ $kop->foto_syarat }}</td>
                 <td>{{ $kop->foto_alur }}</td>
+                <td>{{ $kop->legalitas }}</td>
                 <td>
                     <form action="/admin/kube/{{$kop->id}}" method="POST">
                         <a href="/admin/kube/{{$kop->id}}" class="btn btn-info">Edit</a>
