@@ -46,16 +46,16 @@
     </div>
     <div class="card border-light my-4">
         <div class="row g-0">
-            @foreach ($kurnia as $k)
+            @foreach ($kurnia as $kur)
             @endforeach
             <div class="col-lg-4 d-flex justify-content-center">
-                <img src="{{ asset('kurniaProd/'.$e->foto_alur) }}" class="img-fluid" style="max-height: 400px;">
+                <img src="{{ asset('kurniaProd/'.$kur->foto_alur) }}" class="img-fluid" style="max-height: 400px;">
             </div>
             <div class="col-lg-8">
                 <div class="card-body">
-                    <h2 class="card-title">{{ $e->judul_alur }}</h2>
+                    <h2 class="card-title">{{ $kur->judul_alur }}</h2>
                     <div style="height: 2px; background-color:#000000"></div>
-                    <p class="card-text align-middle" style="font-size: 20px"><?= $e->caption_alur ?></p>
+                    <p class="card-text align-middle" style="font-size: 20px"><?= $kur->caption_alur ?></p>
                 </div>
             </div>
         </div>
@@ -64,20 +64,20 @@
     <div class="card border-light my-4">
         <div class="row g-0">
             <div class="col-lg-4 d-flex justify-content-center">
-                <img src="{{ asset('kurniaProd/'.$e->foto_info) }}" class="img-fluid" style="max-height: 400px;">
+                <img src="{{ asset('kurniaProd/'.$kur->foto_info) }}" class="img-fluid" style="max-height: 400px;">
             </div>
             <div class="col-lg-8">
                 <div class="card-body">
-                    <h2 class="card-title">{{ $e->judul_info }}</h2>
+                    <h2 class="card-title">{{ $kur->judul_info }}</h2>
                     <div style="height: 2px; background-color:#000000"></div>
-                    <p class="card-text align-middle" style="font-size: 20px"><?= $e->caption_info ?></p>
+                    <p class="card-text align-middle" style="font-size: 20px"><?= $kur->caption_info ?></p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="pt2" style="font-size: 20px; text-align:justify; text-indent: 25px">
-        <?= $e->deskripsi ?>
+        <?= $kur->deskripsi ?>
     </div>
 </div>
 
