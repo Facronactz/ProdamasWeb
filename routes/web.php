@@ -51,6 +51,8 @@ use App\Http\Controllers\WirausahaAdminController;
 use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\KubeController;
 use App\Http\Controllers\KubeAdminController;
+use App\Http\Controllers\KurniaAdminController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
