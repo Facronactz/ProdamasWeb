@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
  
 use App\Http\Controllers\Controller;
+use App\Models\Kurnia;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use App\Models\Menu;
@@ -22,6 +23,7 @@ public function index()
             ->unionAll($counter)
             ->sum('views');
         $menus = Menu::where('status', 'Show')->get();
-        return view('kurnia.index', compact('counter','totalviews', 'menus'));
+        $kurnia = Kurnia::first()->get();
+        return view('kurnia.index', compact('counter','totalviews', 'menus', 'kurnia'));
     }
 }
