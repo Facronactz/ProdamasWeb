@@ -305,6 +305,15 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/edit-kube/{daf_id}', [KubeAdminController::class, 'editlist']);
     Route::put('/admin/edit-kube/{daf_id}', [KubeAdminController::class, 'updatelist']);
     Route::delete('/admin/edit-kube/{daf_id}', [KubeAdminController::class, 'destroylist']);
+
+    // Kurnia
+    Route::get('/admin/add-kurnia', [KurniaAdminController::class, 'create']);
+    Route::get('/admin/edit-kurnia/{kurnias_id}', [KurniaAdminController::class, 'edit']);
+    Route::put('/admin/edit-kurnia/{kurnias_id}', [KurniaAdminController::class, 'update']);
+    Route::post('/admin/list-kurnia', [KurniaAdminController::class, 'store']);
+    Route::get('/admin/list-kurnia', [KurniaAdminController::class, 'index']);
+    Route::post('/admin/store-kurnia', [KurniaAdminController::class, 'store']);
+    Route::delete('/admin/edit-kurnia/{kurnias_id}', [KurniaAdminController::class, 'destroy']);
 });
 
 //berlangganan
