@@ -441,8 +441,8 @@
                             </p>
                             <div class="line"></div>
                             <p style="font-weight: 400; font-size: 12px">
-                                Jalan Basuki Rahmat No.15, Kelurahan Pocananan, <br />
-                                Kota kediri, Jawa Timur 64146
+                                Jalan Basuki Rahmat No.15, Kelurahan Pocanan, <br />
+                                Kota Kediri, Jawa Timur 64146
                             </p>
                             <p style="font-weight: 400; font-size: 12px"><i class="fas fa-phone foot-icon"></i> (0354) 682955</p>
                             <p style="font-weight: 400; font-size: 12px"><i class="fas fa-envelope foot-icon ph"></i> prodamas@kedirikota.go.id</p>
