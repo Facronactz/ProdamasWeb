@@ -273,10 +273,15 @@
             $('#viz1655369620324').hide();
             $('#viz1655369645991').hide();
         });
-        
+
         $(document).ready(function() {
             $("#selector").change(function() {
+                if(localStorage.getItem('geomap') != null) {
+                    var b = localStorage.getItem('geomap');
+                    $('#' + b).hide();
+                }
                 var a = $('#selector').find(":selected").val();
+                localStorage.setItem("geomap", a);
                 $('#' + a).show();
             });
         });
