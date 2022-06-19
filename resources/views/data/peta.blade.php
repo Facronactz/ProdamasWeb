@@ -22,7 +22,7 @@
     </div>
 
     {{-- // Geomap Polos --}}
-    <div class='tableauPlaceholder visually-hidden' id='viz1655361597858' style='position: relative; padding:0 50px; margin:50px 0'>
+    <div class='tableauPlaceholder' id='viz1655361597858' style='position: relative; padding:0 50px; margin:50px 0'>
         <noscript>
             <a href='#'>
                 <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;Geomap_Kediri_Polos&#47;Dashboard1&#47;1_rss.png' style='border: none' />
@@ -64,7 +64,7 @@
     </script>
 
     {{-- Geomap RTH --}}
-    <div class='tableauPlaceholder visually-hidden' id='viz1655367819237' style='position: relative; padding:0 50px; margin:50px 0'>
+    <div class='tableauPlaceholder' id='viz1655367819237' style='position: relative; padding:0 50px; margin:50px 0'>
         <noscript>
             <a href='#'>
                 <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NZ&#47;NZS65W7CD&#47;1_rss.png' style='border: none' />
@@ -103,7 +103,7 @@
     </script>
 
     {{-- Geomap KUBE --}}
-    <div class='tableauPlaceholder visually-hidden' id='viz1655369223584' style='position: relative; padding:0 50px; margin:50px 0'>
+    <div class='tableauPlaceholder' id='viz1655369223584' style='position: relative; padding:0 50px; margin:50px 0'>
         <noscript>
             <a href='#'>
                 <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;Geomap_KUBE&#47;Dashboard1&#47;1_rss.png' style='border: none' />
@@ -145,7 +145,7 @@
     </script>
 
     {{-- Geomap Koperasi RW --}}
-    <div class='tableauPlaceholder visually-hidden' id='viz1655369578626' style='position: relative; padding:0 50px; margin:50px 0'>
+    <div class='tableauPlaceholder' id='viz1655369578626' style='position: relative; padding:0 50px; margin:50px 0'>
         <noscript>
             <a href='#'>
                 <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;Geomap_Koperasi_RW&#47;Dashboard1&#47;1_rss.png' style='border: none' />
@@ -187,7 +187,7 @@
     </script>
 
     {{-- Geomap Kampung Keren --}}
-    <div class='tableauPlaceholder visually-hidden' id='viz1655369620324' style='position: relative; padding:0 50px; margin:50px 0'>
+    <div class='tableauPlaceholder' id='viz1655369620324' style='position: relative; padding:0 50px; margin:50px 0'>
         <noscript>
             <a href='#'>
                 <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;Geomap_Kampung_Keren&#47;Dashboard1&#47;1_rss.png' style='border: none' />
@@ -229,7 +229,7 @@
     </script>
 
     {{-- Geomap EMAS --}}
-    <div class='tableauPlaceholder visually-hidden' id='viz1655369645991' style='position: relative; padding:0 50px; margin:50px 0'>
+    <div class='tableauPlaceholder' id='viz1655369645991' style='position: relative; padding:0 50px; margin:50px 0'>
         <noscript><a href='#'>
                 <img alt='SPOT EMAS tahun 2021 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ge&#47;Geomap_EMAS&#47;Sheet1&#47;1_rss.png' style='border: none' />
             </a>
@@ -266,6 +266,12 @@
 
     <script>
         $(document).ready(function(){
+            $('#viz1655361597858').hide();
+            $('#viz1655367819237').hide();
+            $('#viz1655369223584').hide();
+            $('#viz1655369578626').hide();
+            $('#viz1655369620324').hide();
+            $('#viz1655369645991').hide();
             $("#selector").change(function(){
                 var a = $('#selector').find(":selected").val();
                 $('#'+a).show();
