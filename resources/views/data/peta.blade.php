@@ -265,12 +265,15 @@
 @section('scripts')
 
     <script>
-        $('#viz1655361597858').hide();
-        $('#viz1655367819237').hide();
-        $('#viz1655369223584').hide();
-        $('#viz1655369578626').hide();
-        $('#viz1655369620324').hide();
-        $('#viz1655369645991').hide();
+        $(document).ready(function() {
+            $('#viz1655361597858').hide();
+            $('#viz1655367819237').hide();
+            $('#viz1655369223584').hide();
+            $('#viz1655369578626').hide();
+            $('#viz1655369620324').hide();
+            $('#viz1655369645991').hide();
+        });
+        
         $(document).ready(function() {
             $("#selector").change(function() {
                 var a = $('#selector').find(":selected").val();
