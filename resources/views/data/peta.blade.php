@@ -11,7 +11,7 @@
 @section('content')
 
     <div class="container-md my-3">
-        <select id="selector" class="form-select" aria-label="Default select example">
+        <select id="selector" class="form-select" aria-label="Geomap selector">
             <option value="viz1655361597858" selected>Peta Kota Kediri berdasarkan Kecamatan</option>
             <option value="viz1655367819237">Ruang Terbuka Hijau (RTH) tahun 2022 dalam Peta</option>
             <option value="viz1655369223584">Kelompok Usaha Bersama (KUBE) dalam Peta tahun 2022</option>
@@ -284,6 +284,10 @@
                 localStorage.setItem("geomap", a);
                 $('#' + a).removeClass('visually-hidden');
             });
+        });
+
+        $(document).on('unload', function() {
+            localStorage.removeItem("geomap");
         });
     </script>
 @endsection
