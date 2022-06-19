@@ -264,10 +264,12 @@
 
 @section('scripts')
 
-    $(document).ready(function(){
-        $("#selector").change(function(){
-            var a = $('#selector').find(":selected").val();
-            $('#'+a).show();
+    <script>
+        $(document).ready(function(){
+            $("#selector").change(function(){
+                var a = $('#selector').find(":selected").val();
+                $('#'+a).show();
+            });
         });
-    });
+    </script>
 @endsection
