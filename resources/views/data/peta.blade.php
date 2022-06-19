@@ -265,14 +265,14 @@
 @section('scripts')
 
     <script>
-        // $(document).ready(function() {
-        //     $('#viz1655361597858').addClass('visually-hidden');
-        //     $('#viz1655367819237').addClass('visually-hidden');
-        //     $('#viz1655369223584').addClass('visually-hidden');
-        //     $('#viz1655369578626').addClass('visually-hidden');
-        //     $('#viz1655369620324').addClass('visually-hidden');
-        //     $('#viz1655369645991').addClass('visually-hidden');
-        // });
+        $("iframe").ready(function() {
+            $('#viz1655361597858').addClass('visually-hidden');
+            $('#viz1655367819237').addClass('visually-hidden');
+            $('#viz1655369223584').addClass('visually-hidden');
+            $('#viz1655369578626').addClass('visually-hidden');
+            $('#viz1655369620324').addClass('visually-hidden');
+            $('#viz1655369645991').addClass('visually-hidden');
+        });
 
         $(document).ready(function() {
             $("#selector").change(function() {
