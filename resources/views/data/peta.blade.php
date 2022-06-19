@@ -276,18 +276,18 @@
 
         $(document).ready(function() {
             $("#selector").change(function() {
-                if(localStorage.getItem('geomap') != null) {
-                    var b = localStorage.getItem('geomap');
+                if(sessionStorage.getItem('geomap') != null) {
+                    var b = sessionStorage.getItem('geomap');
                     $('#' + b).addClass('visually-hidden');
                 }
                 var a = $('#selector').find(":selected").val();
-                localStorage.setItem("geomap", a);
+                sessionStorage.setItem("geomap", a);
                 $('#' + a).removeClass('visually-hidden');
             });
         });
 
-        $(document).on('unload', function() {
-            localStorage.removeItem("geomap");
+        $(window).on('unload', function() {
+            sessionStorage.removeItem("geomap");
         });
     </script>
 @endsection
