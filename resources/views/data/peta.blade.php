@@ -10,7 +10,7 @@
 
 @section('content')
 
-    <div class="container-md">
+    <div class="container-md mx-3">
         <select id="selector" class="form-select" aria-label="Default select example">
             <option value="viz1655361597858" selected>Peta Kota Kediri berdasarkan Kecamatan</option>
             <option value="viz1655367819237">Ruang Terbuka Hijau (RTH) tahun 2022 dalam Peta</option>
@@ -266,23 +266,23 @@
 
     <script>
         $(document).ready(function() {
-            $('#viz1655361597858').hide();
-            $('#viz1655367819237').hide();
-            $('#viz1655369223584').hide();
-            $('#viz1655369578626').hide();
-            $('#viz1655369620324').hide();
-            $('#viz1655369645991').hide();
+            $('#viz1655361597858').addClass('visually-hidden'));
+            $('#viz1655367819237').addClass('visually-hidden'));
+            $('#viz1655369223584').addClass('visually-hidden'));
+            $('#viz1655369578626').addClass('visually-hidden'));
+            $('#viz1655369620324').addClass('visually-hidden'));
+            $('#viz1655369645991').addClass('visually-hidden'));
         });
 
         $(document).ready(function() {
             $("#selector").change(function() {
                 if(localStorage.getItem('geomap') != null) {
                     var b = localStorage.getItem('geomap');
-                    $('#' + b).hide();
+                    $('#' + b).addClass('visually-hidden'));
                 }
                 var a = $('#selector').find(":selected").val();
                 localStorage.setItem("geomap", a);
-                $('#' + a).show();
+                $('#' + a).removeClass('visually-hidden');
             });
         });
     </script>
