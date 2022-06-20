@@ -11,7 +11,7 @@ Edit Data Trend
 <form action="/admin/trend/{{1}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('put')
-    <!-- <div class="form-group">
+    <div class="form-group">
         <label for="kota">Kota</label>
         <textarea name="kota" class="form-control tableau">{{$trend->kota}}</textarea>
         @error('kota')
@@ -19,7 +19,7 @@ Edit Data Trend
             {{ $message }}
         </div>
         @enderror
-    </div> -->
+    </div>
 
     <div class="form-group">
         <label for="kecamatan">Kecamatan</label>
@@ -31,7 +31,7 @@ Edit Data Trend
         @enderror
     </div>
 
-    <!-- <div class="form-group">
+    <div class="form-group">
         <label for="kelurahan">Kelurahan</label>
         <textarea name="kelurahan" class="form-control tableau">{{$trend->kelurahan}}</textarea>
         @error('kelurahan')
@@ -39,9 +39,9 @@ Edit Data Trend
             {{ $message }}
         </div>
         @enderror
-    </div> -->
+    </div>
 
     <button type="submit" class="btn btn-primary">Edit</button>
-    <a href="/admin/trend/{{1}}" class="btn btn-outline-primary">Back</a>
+    <a href="/admin/" class="btn btn-outline-primary">Back</a>
 </form>
 @endsection
