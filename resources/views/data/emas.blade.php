@@ -26,11 +26,11 @@
 
     <div class="mt-3"><?=$emas->konten?></div>
     <div style="font-size:small">(<em>Sumber Data</em>: {{$emas->sumber}})</div>
-    @endforeach
     <div class="row row-cols-1 row-cols-3">
         <div class="col"><img src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt=""></div>
         <div class="col"><img src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt=""></div>
         <div class="col"><img src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt=""></div>
     </div>
+    @endforeach
 </div>
 @endsection
