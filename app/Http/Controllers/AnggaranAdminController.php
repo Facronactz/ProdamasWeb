@@ -36,7 +36,7 @@ class AnggaranAdminController extends Controller
         $anggaran->update([
             'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
-            'tebleau' => $request->tebleau,
+            'tableau' => $request->tableau,
             'konten' => $request->konten,
             'sumber' => $request->sumber,
         ]);
