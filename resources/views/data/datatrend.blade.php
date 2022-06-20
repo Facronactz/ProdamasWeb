@@ -54,16 +54,6 @@
                     <param name='language' value='en-US' />
                 </object>
             </div>
-            <script type='text/javascript'>
-                var divElement = document.getElementById('viz1655393574272');
-                var vizElement = divElement.getElementsByTagName('object')[0];
-                vizElement.style.width = '100%';
-                vizElement.style.height = (divElement.offsetWidth * 0.4) + 'px';
-                // vizElement.style.height = '800px';
-                var scriptElement = document.createElement('script');
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);
-            </script>
         </div>
 
         {{-- Kecamatan --}}
@@ -83,15 +73,6 @@
                     <param name='display_count' value='yes' />
                     <param name='language' value='en-US' />
                 </object></div>
-            <script type='text/javascript'>
-                var divElement = document.getElementById('viz1655709500765');
-                var vizElement = divElement.getElementsByTagName('object')[0];
-                vizElement.style.width = '100%';
-                vizElement.style.height = (divElement.offsetWidth * 0.4) + 'px';
-                var scriptElement = document.createElement('script');
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);
-            </script>
         </div>
 
         {{-- Kota --}}
@@ -117,16 +98,6 @@
                     <param name='language' value='en-US' />
                 </object>
             </div>
-            <script type='text/javascript'>
-                var divElement = document.getElementById('viz1655395721778');
-                var vizElement = divElement.getElementsByTagName('object')[0];
-                vizElement.style.width = '100%';
-                vizElement.style.height = (divElement.offsetWidth * 0.4) + 'px';
-                // vizElement.style.height = '800px';
-                var scriptElement = document.createElement('script');
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);
-            </script>
         </div>
     </div>
 
@@ -181,6 +152,41 @@
 
 
     {{-- </div> --}}
+@endsection
+
+@section('scripts')
+
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1655393574272');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.4) + 'px';
+        // vizElement.style.height = '800px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1655709500765');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.4) + 'px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1655395721778');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.4) + 'px';
+        // vizElement.style.height = '800px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
 @endsection
 
 @section('')
