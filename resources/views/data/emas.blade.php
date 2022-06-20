@@ -20,7 +20,7 @@
         <?= $emas->tableau_tutor ?>
     </div>
 
-    <div>
+    <div class="mt-3">
         <?= $emas->tableau_partisipan ?>
     </div>
 
