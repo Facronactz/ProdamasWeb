@@ -53,6 +53,8 @@ use App\Http\Controllers\KubeController;
 use App\Http\Controllers\KubeAdminController;
 use App\Http\Controllers\KurniaAdminController;
 use App\Http\Controllers\AnggaranAdminController;
+use App\Http\Controllers\DataKoperasiAdminController;
+
 use App\Http\Controllers\RTHAdminController;
 
 /*
@@ -327,6 +329,12 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/list-anggaran', [AnggaranAdminController::class, 'index']);
     Route::delete('/admin/anggaran/{anggaran_id}', [AnggaranAdminController::class, 'destroy']);
 
+    //Data Koperasi
+    // Anggaran
+    Route::get('/admin/datakoperasi/{datakoperasi_id}', [DataKoperasiAdminController::class, 'edit']);
+    Route::put('/admin/datakoperasi/{datakoperasi_id}', [DataKoperasiAdminController::class, 'update']);
+    Route::get('/admin/list-datakoperasi', [DataKoperasiAdminController::class, 'index']);
+    Route::delete('/admin/datakoperasi/{datakoperasi_id}', [DataKoperasiAdminController::class, 'destroy']);
     // RTH
     Route::get('/admin/rth/{rth_id}', [RTHAdminController::class, 'edit']);
     Route::put('/admin/rth/{rth_id}', [RTHAdminController::class, 'update']);

@@ -104,7 +104,8 @@ class UMKMAdminController extends Controller
     {
         $picts = Pict::first()->get();
         $umkms = UMKM::all();
-        return view('admin.umkm.list', compact('picts', 'umkms'));
+        $descriptions = DescriptionAdmin::first()->get();
+        return view('admin.umkm.list', compact('picts', 'umkms', 'descriptions'));
     }
 
     public function edit_pict($id)
@@ -164,8 +165,9 @@ class UMKMAdminController extends Controller
 
 
         $descriptions = DescriptionAdmin::findOrFail($id);
-        $descriptions_data = ["desc_umkm" => $request["desc_umkm"]];
-        $descriptions->update($descriptions_data);
+        $descriptions->update([
+            'desc_umkm' => $request->desc_umkm
+        ]);
 
         return redirect('/admin/list-umkm')->with('success', 'Deskripsi Berhasil Diupdate!');
     }
