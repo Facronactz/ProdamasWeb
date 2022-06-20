@@ -55,30 +55,7 @@ class BidangAdminController extends Controller
 
     public function update($id, Request $request)
     {
-        $request->validate([
-            'judul' => 'required',
-            'foto' => 'required',
-            'caption' => 'required'
-        ]);
-
-        $bidangs = Bidang::findorfail($id);
-        $file = $request->file('foto');
-        if ($file != NULL) {
-            File::delete(public_path("../bidangProd/" . $bidangs->foto));
-            $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-            $file->move(public_path('../bidangProd/'), $filePath);
-
-            $bidangs->update([
-                'judul' => $request->judul,
-                'foto' => $filePath,
-                'caption' => $request->caption
-            ]);
-        } else {
-            $bidangs->update([
-                'judul' => $request->judul,
-                'caption' => $request->caption
-            ]);
-        }
+        
 
         return redirect('/admin/list-bidang')->with('success', 'Bidang Berhasil Diupdate!');
     }
