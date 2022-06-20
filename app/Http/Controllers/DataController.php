@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Menu;
+use App\Models\Anggaran;
 
 
 class DataController extends Controller
@@ -116,8 +117,9 @@ class DataController extends Controller
                         ->unionAll($counter)
                         ->sum('views');
                 $menus = Menu::where('status', 'Show')->get();
+                $anggaran = Anggaran::first()->get();
                 // end code jumlah pengunjung
-                return view('data.anggaran', compact('counter', 'totalviews', 'menus'));
+                return view('data.anggaran', compact('counter', 'totalviews', 'menus', 'anggaran'));
         }
 
         public function rth()
