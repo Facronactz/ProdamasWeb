@@ -106,7 +106,7 @@
                                             @endphp
                                             <div style="width: 100%; height: 25px; border-bottom: 1px solid black; text-align: center">
                                                 <span style="font-size: 40px; background-color: #ffffff; padding: 0 10px;">
-                                                    {{header->name}}
+                                                    {{$header->name}}
                                                     <!--Padding is optional-->
                                                 </span>
                                             </div>
