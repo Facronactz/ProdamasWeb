@@ -42,7 +42,7 @@ Edit English Masive
     </div>
 
     <div class="form-group">
-        <label for="code">Tableau Tutor</label>
+        <label for="tableau_tutor">Tableau Tutor</label>
         <textarea name="tableau_tutor" class="form-control" id="tableau_tutor">{{$dataemas->tableau_tutor}}</textarea>
         @error('tableau_tutor')
         <div class="alert alert-danger">
@@ -62,7 +62,7 @@ Edit English Masive
     </div>
 
     <div class="form-group">
-        <label for="code">Tableau Partisipan</label>
+        <label for="tableau_partisipan">Tableau Partisipan</label>
         <textarea name="tableau_partisipan" class="form-control" id="tableau_partisipan">{{$dataemas->tableau_partisipan}}</textarea>
         @error('tableau_partisipan')
         <div class="alert alert-danger">
