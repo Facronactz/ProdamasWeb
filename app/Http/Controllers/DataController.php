@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Menu;
 use App\Models\Anggaran;
-
+use App\Models\DataKoperasi;
 
 class DataController extends Controller
 {
@@ -95,8 +95,9 @@ class DataController extends Controller
                         ->unionAll($counter)
                         ->sum('views');
                 $menus = Menu::where('status', 'Show')->get();
+                $datakoperasi = DataKoperasi::first()->get();
                 // end code jumlah pengunjung
-                return view('data.koperasirw', compact('counter', 'totalviews', 'menus'));
+                return view('data.koperasirw', compact('counter', 'totalviews', 'menus', 'datakoperasi'));
         }
 
         public function anggaran()
