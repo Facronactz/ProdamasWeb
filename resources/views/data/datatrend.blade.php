@@ -51,7 +51,7 @@
         vizElement.parentNode.insertBefore(scriptElement, vizElement);
     </script>
     {{--  --}}
-    <div class='tableauPlaceholder' id='viz1655707617330' style='position: relative'><noscript><a href='#'><img alt='Data Trend Anggaran, Serapan, dan Sisa Per Kecamatan di Kota Kediri ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Per_Kecamatan&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+    <div class='tableauPlaceholder' id='viz1655707617330' style='position: relative; padding:0 50px; margin:50px 0''><noscript><a href='#'><img alt='Data Trend Anggaran, Serapan, dan Sisa Per Kecamatan di Kota Kediri ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Per_Kecamatan&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
             <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
             <param name='embed_code_version' value='3' />
             <param name='site_root' value='' />
