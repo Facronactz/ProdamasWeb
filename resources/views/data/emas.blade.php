@@ -16,16 +16,10 @@
         <p style="font-weight:700">{{$emas->deskripsi}}</p>
     </div>
 
-    <div style="text-align:left">
-        <h4>{{$emas->judul_tutor}}</h4>
-    </div>
     <div>
         <?= $emas->tableau_tutor ?>
     </div>
 
-    <div style="text-align:left">
-        <h4>{{$emas->judul_partisipan}}</h4>
-    </div>
     <div>
         <?= $emas->tableau_partisipan ?>
     </div>
