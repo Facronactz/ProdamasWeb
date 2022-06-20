@@ -9,6 +9,14 @@
 @endsection
 
 @section('content')
+
+<div class="container-md my-3">
+    <select id="selector" class="form-select" aria-label="Geomap selector">
+        <option value="viz1655393574272" selected>Data Trend Anggaran, Serapan, dan Sisa Kota Kediri</option>
+        <option value="viz1655395412741">Data Trend Anggaran, Serapan, dan Sisa Kota Kediri Per Kecamatan</option>
+        <option value="viz1655395721778">Data Trend Anggaran, Serapan, dan Sisa Kota Kediri Per Kelurahan</option>
+    </select>
+</div>
 {{-- <div  class='row' > --}}
 <div class='tableauPlaceholder' id='viz1655393574272' style='position: relative; padding:0 50px; margin:50px 0'>
     <noscript>
@@ -100,4 +108,31 @@
             vizElement.parentNode.insertBefore(scriptElement, vizElement);                
         </script>
 {{-- </div> --}}
+@endsection
+
+@section('scripts')
+    
+<script>
+    $("iframe").ready(function() {
+        $('#viz1655393574272').addClass('visually-hidden');
+        $('#viz1655395412741').addClass('visually-hidden');
+        $('#viz1655395721778').addClass('visually-hidden');
+    });
+
+    $(document).ready(function() {
+        $("#selector").change(function() {
+            if(sessionStorage.getItem('geomap') != null) {
+                var b = sessionStorage.getItem('geomap');
+                $('#' + b).addClass('visually-hidden');
+            }
+            var a = $('#selector').find(":selected").val();
+            sessionStorage.setItem("geomap", a);
+            $('#' + a).removeClass('visually-hidden');
+        });
+    });
+
+    $(window).on('unload', function() {
+        sessionStorage.removeItem("geomap");
+    });
+</script>
 @endsection
