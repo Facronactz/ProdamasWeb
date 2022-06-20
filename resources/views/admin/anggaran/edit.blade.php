@@ -33,7 +33,7 @@ Edit Anggaran
 
     <div class="form-group">
         <label for="tableau">Tableau</label>
-        <textarea style="height:400px"name="tableau" class="form-control" id="tableau">{{$anggaran->tableau}}</textarea>
+        <textarea style="height:250px"name="tableau" class="form-control" id="tableau">{{$anggaran->tableau}}</textarea>
         @error('tableau')
         <div class="alert alert-danger">
             {{ $message }}
