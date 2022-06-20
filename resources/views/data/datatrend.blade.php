@@ -189,7 +189,7 @@
     </script>
 @endsection
 
-@section('')
+{{-- @section('')
 
     <script>
         $("iframe").ready(function() {
@@ -217,4 +217,4 @@
             sessionStorage.removeItem("datatrend");
         });
     </script>
-@endsection
+@endsection --}}
