@@ -27,9 +27,9 @@
     <div class="mt-3"><?=$emas->konten?></div>
     <div style="font-size:small">(<em>Sumber Data</em>: {{$emas->sumber}})</div>
     <div class="row row-cols-1 row-cols-3">
-        <div class="col"><img src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt=""></div>
-        <div class="col"><img src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt=""></div>
-        <div class="col"><img src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt=""></div>
+        <img class="col" src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt="">
+        <img class="col" src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt="">
+        <img class="col" src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt="">
     </div>
     @endforeach
 </div>
