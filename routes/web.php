@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\FotoController;
+use App\Http\Controllers\KubeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UMKMController;
@@ -26,36 +27,36 @@ use App\Http\Controllers\BincangController;
 use App\Http\Controllers\KoperasiController;
 use App\Http\Controllers\PostFotoController;
 use App\Http\Controllers\ProdamasController;
+use App\Http\Controllers\RTHAdminController;
 use App\Http\Controllers\FotoAdminController;
 use App\Http\Controllers\InformasiController;
+use App\Http\Controllers\KubeAdminController;
 use App\Http\Controllers\MenuAdminController;
+use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\UMKMAdminController;
+use App\Http\Controllers\WirausahaController;
+//use App\Http\Controllers\SocialShareButtonsController;
 use App\Http\Controllers\AudioAdminController;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\EditprofilController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\TestregistController;
-//use App\Http\Controllers\SocialShareButtonsController;
 use App\Http\Controllers\VideoAdminController;
 use App\Http\Controllers\BidangAdminController;
 use App\Http\Controllers\CeritaAdminController;
+use App\Http\Controllers\KurniaAdminController;
 use App\Http\Controllers\PokmasAdminController;
 use App\Http\Controllers\TulisCeritaController;
 use App\Http\Controllers\KampungkerenController;
+use App\Http\Controllers\AnggaranAdminController;
+use App\Http\Controllers\DataEmasAdminController;
 use App\Http\Controllers\KoperasiAdminController;
 use App\Http\Controllers\ProdamasAdminController;
-use App\Http\Controllers\SettingCarouselController;
-use App\Http\Controllers\KampungkerenAdminController;
-use App\Http\Controllers\WirausahaController;
 use App\Http\Controllers\WirausahaAdminController;
-use App\Http\Controllers\TestimoniController;
-use App\Http\Controllers\KubeController;
-use App\Http\Controllers\KubeAdminController;
-use App\Http\Controllers\KurniaAdminController;
-use App\Http\Controllers\AnggaranAdminController;
-use App\Http\Controllers\DataKoperasiAdminController;
+use App\Http\Controllers\SettingCarouselController;
 
-use App\Http\Controllers\RTHAdminController;
+use App\Http\Controllers\DataKoperasiAdminController;
+use App\Http\Controllers\KampungkerenAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -330,11 +331,18 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::delete('/admin/anggaran/{anggaran_id}', [AnggaranAdminController::class, 'destroy']);
 
     //Data Koperasi
-    // Anggaran
     Route::get('/admin/datakoperasi/{datakoperasi_id}', [DataKoperasiAdminController::class, 'edit']);
     Route::put('/admin/datakoperasi/{datakoperasi_id}', [DataKoperasiAdminController::class, 'update']);
     Route::get('/admin/list-datakoperasi', [DataKoperasiAdminController::class, 'index']);
     Route::delete('/admin/datakoperasi/{datakoperasi_id}', [DataKoperasiAdminController::class, 'destroy']);
+
+    //Data Emas
+    Route::get('/admin/englishmasive/{dataemas_id}', [DataEmasAdminController::class, 'edit']);
+    Route::put('/admin/englishmasive/{dataemas_id}', [DataEmasAdminController::class, 'update']);
+    Route::get('/admin/list-englishmasive', [DataEmasAdminController::class, 'index']);
+    Route::delete('/admin/englishmasive/{dataemas_id}', [DataEmasAdminController::class, 'destroy']);
+
+
     // RTH
     Route::get('/admin/rth/{rth_id}', [RTHAdminController::class, 'edit']);
     Route::put('/admin/rth/{rth_id}', [RTHAdminController::class, 'update']);
