@@ -25,7 +25,7 @@ Edit Bidang
         @if ($bidang->foto)
         <p>{{$bidang->foto}}</p>
         @endif
-        <input type="file" class="form-control" name="foto[]" id="foto[]" value="{{$bidang->foto}}">
+        <input type="file" class="form-control" name="foto" id="foto" value="{{$bidang->foto}}">
         @error('foto')
         <div class="alert alert-danger">
             {{ $message }}
