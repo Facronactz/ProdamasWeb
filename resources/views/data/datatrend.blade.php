@@ -131,7 +131,8 @@
 
     <script>
         $("iframe").ready(function() {
-            $('#viz1655393574272').addClass('visually-hidden');
+            // $('#viz1655393574272').addClass('visually-hidden');
+            sessionStorage.setItem("geomap", 'viz1655393574272');
             $('#viz1655395412741').addClass('visually-hidden');
             $('#viz1655395721778').addClass('visually-hidden');
         });
