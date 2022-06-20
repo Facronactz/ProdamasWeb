@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Menu;
 use App\Models\Anggaran;
+use App\Models\RTH;
+
 use App\Models\DataKoperasi;
 
 class DataController extends Controller
@@ -73,7 +75,7 @@ class DataController extends Controller
                         ->unionAll($counter)
                         ->sum('views');
                 $menus = Menu::where('status', 'Show')->get();
-                $englishmasive = EnglishMasive::first()->get();
+                $dataemas = EnglishMasive::first()->get();
                 // end code jumlah pengunjung
                 return view('data.emas', compact('counter', 'totalviews', 'menus', 'englishmasive'));
         }
@@ -142,8 +144,9 @@ class DataController extends Controller
                         ->unionAll($counter)
                         ->sum('views');
                 $menus = Menu::where('status', 'Show')->get();
+                $rths = Rth::first()->get();
                 // end code jumlah pengunjung
-                return view('data.rth', compact('counter', 'totalviews', 'menus'));
+                return view('data.rth', compact('counter', 'totalviews', 'menus', 'rths'));
         }
 
         public function datatrend()

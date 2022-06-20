@@ -2,7 +2,7 @@
 @section('data', 'active')
 @section('koperasi', 'active')
 
-@section('title', 'Prodamas Dalam Peta')
+@section('title', 'Prodamas Dalam Angka')
 
 @section('head')
 {{-- <link rel="stylesheet" href="css/peta.css"> --}}
