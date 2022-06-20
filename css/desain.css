@@ -49,8 +49,8 @@ ul ul ul {
 
 ul:before,
 ul:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    display: table; 
     
 }
 
