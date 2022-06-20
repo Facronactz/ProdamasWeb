@@ -31,9 +31,9 @@
     <div class="container">
         <div class="row row-cols-1 row-cols-3">
             @foreach($dataemas as $emas)
-            <img id="gambar1" style="cursor: pointer;" class="col" src="{{asset($dataemas->gambar1)}}" alt="" srcset="">
-            <img id="gambar2" style="cursor: pointer;" class="col" src="{{asset($dataemas->gambar2)}}" alt="" srcset="">
-            <img id="gambar3" style="cursor: pointer;" class="col" src="{{asset($dataemas->gambar3)}}" alt="" srcset="">
+            <img id="gambar1" style="cursor: pointer;" class="col" src="{{ asset('emasProd/'.$emas->gambar1) }}" alt="" srcset="">
+            <img id="gambar2" style="cursor: pointer;" class="col" src="{{ asset('emasProd/'.$emas->gambar2) }}" alt="" srcset="">
+            <img id="gambar3" style="cursor: pointer;" class="col" src="{{ asset('emasProd/'.$emas->gambar3) }}" alt="" srcset="">
             @endforeach
         </div>
     </div>
