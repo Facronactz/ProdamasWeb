@@ -17,14 +17,14 @@
     </div>
 
     <div style="text-align:left">
-        <h3>{{$emas->judul_tutor}}</h3>
+        <h4>{{$emas->judul_tutor}}</h4>
     </div>
     <div>
         <?= $emas->tableau_tutor ?>
     </div>
 
     <div style="text-align:left">
-        <h3>{{$emas->judul_partisipan}}</h3>
+        <h4>{{$emas->judul_partisipan}}</h4>
     </div>
     <div>
         <?= $emas->tableau_partisipan ?>
