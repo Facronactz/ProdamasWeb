@@ -6,7 +6,10 @@
 </div>
 <div class="container">
   <div class="m-4">
-
+    <div class="mb-5 text-center">
+      <h1><strong>UMKM</strong></h1>
+      <h4></h4>
+    </div>
     <div class="mb-5">
       <h1>Daftar Sentra UMKM</h1>
       <div class="row row-cols-3 g-5">

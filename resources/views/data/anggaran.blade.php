@@ -19,8 +19,8 @@
     <div>
         <?= $anggaran->tableau ?>
     </div>
-    <div class="mt-3">{{$anggaran->konten}}</div>
-    <div style="font-size:small">(<em>Sumber Data</em>: <?= $anggaran->sumber ?>)</div>
+    <div class="mt-3"><?=$anggaran->konten?></div>
+    <div style="font-size:small">(<em>Sumber Data</em>: {{$anggaran->sumber}})</div>
     @endforeach
 </div>
 
