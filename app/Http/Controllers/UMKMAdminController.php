@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Pict;
 use App\Models\UMKM;
+use App\Models\DescriptionAdmin;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 
@@ -103,7 +104,8 @@ class UMKMAdminController extends Controller
     {
         $picts = Pict::first()->get();
         $umkms = UMKM::all();
-        return view('admin.umkm.list', compact('picts', 'umkms'));
+        $descriptions = DescriptionAdmin::first()->get();
+        return view('admin.umkm.list', compact('picts', 'umkms', 'descriptions'));
     }
 
     public function edit_pict($id)
@@ -147,5 +149,26 @@ class UMKMAdminController extends Controller
         }
 
         return redirect('/admin/list-umkm')->with('success', 'Picture Berhasil Diupdate!');
+    }
+
+    public function edit_desc($id)
+    {
+        $descriptions = DescriptionAdmin::findOrFail($id);
+        return view('admin.umkm.editdesc', compact('descriptions'));
+    }
+
+    public function update_desc($id, Request $request)
+    {
+        $request->validate([
+            'desc_umkm' => 'required',
+        ]);
+
+
+        $descriptions = DescriptionAdmin::findOrFail($id);
+        $descriptions->update([
+            'desc_umkm' => $request->desc_umkm
+        ]);
+
+        return redirect('/admin/list-umkm')->with('success', 'Deskripsi Berhasil Diupdate!');
     }
 }

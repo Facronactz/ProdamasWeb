@@ -53,6 +53,9 @@ use App\Http\Controllers\KubeController;
 use App\Http\Controllers\KubeAdminController;
 use App\Http\Controllers\KurniaAdminController;
 use App\Http\Controllers\AnggaranAdminController;
+use App\Http\Controllers\DataKoperasiAdminController;
+
+use App\Http\Controllers\RTHAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -266,6 +269,8 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::delete('/admin/editlist-umkm/{umkm_id}', [UMKMAdminController::class, 'destroylist']);
     Route::get('/admin/umkm/{pict_id}', [UMKMAdminController::class, 'edit_pict']);
     Route::put('/admin/umkm/{pict_id}', [UMKMAdminController::class, 'update_pict']);
+    Route::get('/admin/editdesc/{description_id}', [UMKMAdminController::class, 'edit_desc']);
+    Route::put('/admin/editdesc/{description_id}', [UMKMAdminController::class, 'update_desc']);
 
     // Koperasi RW
     Route::get('/admin/list-koperasirw', [KoperasiAdminController::class, 'index']);
@@ -323,6 +328,18 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::put('/admin/anggaran/{anggaran_id}', [AnggaranAdminController::class, 'update']);
     Route::get('/admin/list-anggaran', [AnggaranAdminController::class, 'index']);
     Route::delete('/admin/anggaran/{anggaran_id}', [AnggaranAdminController::class, 'destroy']);
+
+    //Data Koperasi
+    // Anggaran
+    Route::get('/admin/datakoperasi/{datakoperasi_id}', [DataKoperasiAdminController::class, 'edit']);
+    Route::put('/admin/datakoperasi/{datakoperasi_id}', [DataKoperasiAdminController::class, 'update']);
+    Route::get('/admin/list-datakoperasi', [DataKoperasiAdminController::class, 'index']);
+    Route::delete('/admin/datakoperasi/{datakoperasi_id}', [DataKoperasiAdminController::class, 'destroy']);
+    // RTH
+    Route::get('/admin/rth/{rth_id}', [RTHAdminController::class, 'edit']);
+    Route::put('/admin/rth/{rth_id}', [RTHAdminController::class, 'update']);
+    Route::get('/admin/list-rth', [RTHAdminController::class, 'index']);
+    Route::delete('/admin/rth/{rth_id}', [RTHAdminController::class, 'destroy']);
 });
 
 //berlangganan

@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 
-class DescriptionAdmin extends Model
+class DataKoperasi extends Model
 {
     use HasFactory;
-    protected $table = "descriptions";
-    public $incrementing = false;
-    protected $fillable = ["id", "desc_kampungkeren", "desc_bidang", "desc_pokmas", "desc_tuliscerita","desc_umkm"];
+    protected $table = "data_koperasi";
+
+    protected $fillable = ["judul", "deskripsi", "tableau", "konten", "sumber", "created_at", "updated_at"];
 
     public function getCreatedAtAttribute()
     {
