@@ -17,7 +17,7 @@
     </div>
 
     <div>
-        <?= $emas->tableau ?>
+        <?= $emas->tableau_tutor ?>
     </div>
     <div class="mt-3"><?=$emas->konten?></div>
     <div style="font-size:small">(<em>Sumber Data</em>: {{$emas->sumber}})</div>
