@@ -27,21 +27,21 @@
     {{-- Kota --}}
     <div class="tab-pane show active" id="pills-kota" role="tabpanel" aria-labelledby="pills-kota-tab">
         @foreach($trends as $trend)
-        <?=$trends->kota?>
+        <?=$trend->kota?>
         @endforeach
     </div>
 
     {{-- Kecamatan --}}
     <div class="tab-pane" id="pills-kecamatan" role="tabpanel" aria-labelledby="pills-kecamatan-tab">
         @foreach($trends as $trend)
-        <?=$trends->kecamatan?>
+        <?=$trend->kecamatan?>
         @endforeach
     </div>
 
     {{-- Kota --}}
     <div class="tab-pane" id="pills-kelurahan" role="tabpanel" aria-labelledby="pills-kelurahan-tab">
         @foreach($trends as $trend)
-        <?=$trends->kelurahan?>
+        <?=$trend->kelurahan?>
         @endforeach
     </div>
 </div>
