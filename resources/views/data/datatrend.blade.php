@@ -158,7 +158,7 @@
     <script>
         $("iframe").ready(function() {
             // $('#viz1655393574272').addClass('visually-hidden');
-            $('#selector').val('viz1655393574272')
+            $('#selector').val('viz1655393574272');
 
             sessionStorage.setItem("datatrend", 'viz1655393574272');
             $('#viz1655707617330').addClass('visually-hidden');
