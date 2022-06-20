@@ -75,8 +75,7 @@
                 <!-- Default box -->
                 <div class="card">
                     <div class="card-body">
-        <img class="col" src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt="">
-
+                        
                         @hasSection('content')
                             @yield('content')
                         @else

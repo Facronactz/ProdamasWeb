@@ -29,9 +29,9 @@
 
     @endforeach    
     <div class="row row-cols-1 row-cols-3">
-        <img class="col" src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt="">
-        <img class="col" src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt="">
-        <img class="col" src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt="">
+        <img class="col" src="{{asset('UMKMProd/'.$pict->kota)}}" alt="">
+        <img class="col" src="{{asset('UMKMProd/'.$pict->kota)}}" alt="">
+        <img class="col" src="{{asset('UMKMProd/'.$pict->kota)}}" alt="">
     </div>
 </div>
 @endsection
