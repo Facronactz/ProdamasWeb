@@ -57,16 +57,16 @@ class BidangAdminController extends Controller
     {
         $request->validate([
             'judul' => 'required',
-            'foto' => 'mimes:jpeg,jpg,png|max:2200',
+            'foto' => 'required',
             'caption' => 'required'
         ]);
 
         $bidangs = Bidang::findorfail($id);
-        $file = $request->file('foto');
-        if ($file != NULL) {
+        $fotobid = $request->file('foto');
+        if ($fotobid != NULL) {
             File::delete(public_path("../bidangProd/" . $bidangs->foto));
-            $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $file->getClientOriginalName());
-            $file->move(public_path('../bidangProd/'), $filePath);
+            $filePath = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $fotobid->getClientOriginalName());
+            $fotobid->move(public_path("../bidangProd/"), $filePath);
 
             $bidangs->update([
                 'judul' => $request->judul,

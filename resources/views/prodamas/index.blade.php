@@ -20,7 +20,7 @@
 @section('content')
     <!-- awal jumbotron -->
     <div class="container-fluid p-0">
-        <img class="prodamas-header" src="{{ asset('img-tentang/header-tentang-prodamas.png') }}" alt="" srcset="">
+        <img class="prodamas-header" src="{{ asset('img-tentang/PRODAMASnew.png') }}" alt="" srcset="">
     </div>
     <!-- akhir jumbotrom -->
 
