@@ -9,7 +9,7 @@
     <div class="mb-5 text-center">
       <h1><strong>UMKM</strong></h1>
       @foreach($descriptions as $description)
-      <h4>{{$description->desc_umkm}}</h4>
+      <h4><?=$description->desc_umkm?></h4>
       @endforeach
     </div>
     <div class="mb-5">
