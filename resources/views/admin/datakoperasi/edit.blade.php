@@ -8,12 +8,12 @@ Edit Data Koperasi
 
 @section('content')
 
-<form action="/admin/datakoperasi/{{$kop->id}}" method="POST" enctype="multipart/form-data">
+<form action="/admin/datakoperasi/{{$datakoperasi->id}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('put')
     <div class="form-group">
         <label for="judul">Judul</label>
-        <input type="text" class="form-control" name="judul" id="judul" placeholder="judul" value="{{$kop->judul}}">
+        <input type="text" class="form-control" name="judul" id="judul" placeholder="judul" value="{{$datakoperasi->judul}}">
         @error('judul')
         <div class="alert alert-danger">
             {{ $message }}
@@ -23,7 +23,7 @@ Edit Data Koperasi
 
     <div class="form-group">
         <label for="deskripsi">Deskripsi</label>
-        <input type="text" name="deskripsi" class="form-control" value="{{$kop->deskripsi}}">
+        <input type="text" name="deskripsi" class="form-control" value="{{$datakoperasi->deskripsi}}">
         @error('deskripsi')
         <div class="alert alert-danger">
             {{ $message }}
@@ -33,7 +33,7 @@ Edit Data Koperasi
 
     <div class="form-group">
         <label for="code">Tableau</label>
-        <textarea name="tableau" class="form-control" id="tableau">{{$kop->tableau}}</textarea>
+        <textarea name="tableau" class="form-control" id="tableau">{{$datakoperasi->tableau}}</textarea>
         @error('tableau')
         <div class="alert alert-danger">
             {{ $message }}
@@ -43,7 +43,7 @@ Edit Data Koperasi
 
     <div class="form-group">
         <label for="konten">Konten</label>
-        <textarea name="konten" class="form-control" id="data">{{$kop->konten}}</textarea>
+        <textarea name="konten" class="form-control" id="data">{{$datakoperasi->konten}}</textarea>
         @error('konten')
         <div class="alert alert-danger">
             {{ $message }}
@@ -53,7 +53,7 @@ Edit Data Koperasi
 
     <div class="form-group">
         <label for="sumber">Sumber</label>
-        <input type="text" name="sumber" class="form-control" id="sumber" value="{{$kop->sumber}}">
+        <input type="text" name="sumber" class="form-control" id="sumber" value="{{$datakoperasi->sumber}}">
         @error('konten')
         <div class="alert alert-danger">
             {{ $message }}
