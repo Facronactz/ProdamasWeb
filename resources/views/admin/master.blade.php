@@ -193,6 +193,18 @@
                         ['para', ['ul', 'ol', 'paragraph']],
                         ['view', ['fullscreen', 'codeview']],
                     ],
+                }),
+                $('#tableau').summernote({
+                    callbacks: {
+                        onPaste: function(e) {
+                            var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
+                            e.preventDefault();
+                            document.execCommand('insertText', false, bufferText);
+                        },
+                    },
+                    toolbar: [
+                        ['view', ['fullscreen', 'codeview']],
+                    ],
                 })
         });
     </script>
