@@ -100,7 +100,7 @@
                                             }
                                             $current = $level;
                                         @endphp
-                                        @if ($divide)
+                                            @if ($divide)
                                             @php
                                                 $header = DB::table('users_level')->where('level', '=', 'current')->first();
                                             @endphp
@@ -110,6 +110,7 @@
                                                     <!--Padding is optional-->
                                                 </span>
                                             </div>
+                                            @endif
                                             @if ($level == 'super' || $menu->level == 'basic' || $menu->level == $level)
                                                 <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2" style="background: {{ $menu->color }}; min-width: 200px;">
                                                     <div class="card-body row">
