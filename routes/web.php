@@ -54,9 +54,9 @@ use App\Http\Controllers\KoperasiAdminController;
 use App\Http\Controllers\ProdamasAdminController;
 use App\Http\Controllers\WirausahaAdminController;
 use App\Http\Controllers\SettingCarouselController;
-
 use App\Http\Controllers\DataKoperasiAdminController;
 use App\Http\Controllers\KampungkerenAdminController;
+use App\Http\Controllers\DataTrendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -342,12 +342,15 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/list-englishmasive', [DataEmasAdminController::class, 'index']);
     Route::delete('/admin/englishmasive/{dataemas_id}', [DataEmasAdminController::class, 'destroy']);
 
-
     // RTH
     Route::get('/admin/rth/{rth_id}', [RTHAdminController::class, 'edit']);
     Route::put('/admin/rth/{rth_id}', [RTHAdminController::class, 'update']);
     Route::get('/admin/list-rth', [RTHAdminController::class, 'index']);
     Route::delete('/admin/rth/{rth_id}', [RTHAdminController::class, 'destroy']);
+
+    // Data Trend
+    Route::get('/admin/trend/{trend_id}', [DataTrendController::class, 'edit']);
+    Route::put('/admin/trend/{trend_id}', [DataTrendController::class, 'update']);
 });
 
 //berlangganan
