@@ -316,6 +316,12 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::get('/admin/list-kurnia', [KurniaAdminController::class, 'index']);
     Route::post('/admin/store-kurnia', [KurniaAdminController::class, 'store']);
     Route::delete('/admin/edit-kurnia/{kurnias_id}', [KurniaAdminController::class, 'destroy']);
+
+    // Anggaran
+    Route::get('/admin/edit-anggaran/{anggaran_id}', [AnggaranAdminController::class, 'edit']);
+    Route::put('/admin/edit-anggaran/{anggaran_id}', [AnggaranAdminController::class, 'update']);
+    Route::get('/admin/list-anggaran', [AnggaranAdminController::class, 'index']);
+    Route::delete('/admin/edit-anggaran/{anggaran_id}', [AnggaranAdminController::class, 'destroy']);
 });
 
 //berlangganan

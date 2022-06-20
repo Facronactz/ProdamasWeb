@@ -6,14 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 
-class ArticleAdmin extends Model
+class Anggaran extends Model
 {
     use HasFactory;
-    use \Conner\Tagging\Taggable;
+    protected $table = "anggaran";
 
-    protected $table = "articles";
-
-    protected $fillable = ["status", "gambar_sampul", "text_sampul", "judul", "slug", "article"];
+    protected $fillable = ["judul", "deskripsi", "tableau", "konten", "sumber", "created_at", "updated_at"];
 
     public function getCreatedAtAttribute()
     {
