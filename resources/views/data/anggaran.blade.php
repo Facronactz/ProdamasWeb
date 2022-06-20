@@ -6,6 +6,11 @@
 
 @section('head')
 <link rel="stylesheet" href="css/peta.css">
+<style>
+    ul{
+        display: block;
+    }
+</style>
 @endsection
 
 @section('content')
