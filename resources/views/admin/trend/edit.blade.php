@@ -42,6 +42,6 @@ Edit Data Trend
     </div>
 
     <button type="submit" class="btn btn-primary">Edit</button>
-    <a href="/admin/trend/{{1}}" class="btn btn-outline-primary">Back</a>
+    <a href="/admin/" class="btn btn-outline-primary">Back</a>
 </form>
 @endsection
