@@ -11,7 +11,7 @@
 @section('content')
 
     <div class="container-md my-3">
-        <select id="selector" class="form-select" aria-label="Geomap selector">
+        <select id="selector" class="form-select" aria-label="datatrend selector">
             <option value="viz1655393574272" selected>Data Trend Anggaran, Serapan, dan Sisa Kota Kediri</option>
             <option value="viz1655395412741">Data Trend Anggaran, Serapan, dan Sisa Kota Kediri Per Kecamatan</option>
             <option value="viz1655395721778">Data Trend Anggaran, Serapan, dan Sisa Kota Kediri Per Kelurahan</option>
@@ -132,25 +132,25 @@
     <script>
         $("iframe").ready(function() {
             // $('#viz1655393574272').addClass('visually-hidden');
-            sessionStorage.setItem("geomap", 'viz1655393574272');
+            sessionStorage.setItem("datatrend", 'viz1655393574272');
             $('#viz1655395412741').addClass('visually-hidden');
             $('#viz1655395721778').addClass('visually-hidden');
         });
 
         $(document).ready(function() {
             $("#selector").change(function() {
-                if (sessionStorage.getItem('geomap') != null) {
-                    var b = sessionStorage.getItem('geomap');
+                if (sessionStorage.getItem('datatrend') != null) {
+                    var b = sessionStorage.getItem('datatrend');
                     $('#' + b).addClass('visually-hidden');
                 }
                 var a = $('#selector').find(":selected").val();
-                sessionStorage.setItem("geomap", a);
+                sessionStorage.setItem("datatrend", a);
                 $('#' + a).removeClass('visually-hidden');
             });
         });
 
         $(window).on('unload', function() {
-            sessionStorage.removeItem("geomap");
+            sessionStorage.removeItem("datatrend");
         });
     </script>
 @endsection

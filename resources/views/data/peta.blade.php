@@ -237,7 +237,8 @@
 
     <script>
         $("iframe").ready(function() {
-            $('#viz1655361597858').addClass('visually-hidden');
+            sessionStorage.setItem('geomap', 'viz1655361597858');
+            // $('#viz1655361597858').addClass('visually-hidden');
             $('#viz1655367819237').addClass('visually-hidden');
             $('#viz1655369223584').addClass('visually-hidden');
             $('#viz1655369578626').addClass('visually-hidden');
