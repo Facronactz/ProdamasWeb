@@ -73,8 +73,9 @@ class DataController extends Controller
                         ->unionAll($counter)
                         ->sum('views');
                 $menus = Menu::where('status', 'Show')->get();
+                $englishmasive = EnglishMasive::first()->get();
                 // end code jumlah pengunjung
-                return view('data.emas', compact('counter', 'totalviews', 'menus'));
+                return view('data.emas', compact('counter', 'totalviews', 'menus', 'englishmasive'));
         }
 
         public function koperasi()

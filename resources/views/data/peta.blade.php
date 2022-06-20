@@ -14,10 +14,10 @@
     <div class="container-md my-3">
         <select id="selector" class="form-select" aria-label="Geomap selector">
             <option value="viz1655361597858" selected>Peta Kota Kediri berdasarkan Kecamatan</option>
-            <option value="viz1655367819237">Ruang Terbuka Hijau (RTH) tahun 2022 dalam Peta</option>
-            <option value="viz1655369223584">Kelompok Usaha Bersama (KUBE) dalam Peta tahun 2022</option>
+            <option value="viz1655367819237">Ruang Terbuka Hijau (RTH) tahun 2022</option>
+            <option value="viz1655369223584">Kelompok Usaha Bersama (KUBE) tahun 2022</option>
             <option value="viz1655369578626">Koperasi RW Penerima Dana Hibah Tahun 2021</option>
-            <option value="viz1655369620324">Kampung Keren tahun 2022 dalam Peta</option>
+            <option value="viz1655369620324">Kampung Keren tahun 2022</option>
             <option value="viz1655369645991">SPOT EMAS tahun 2021</option>
         </select>
     </div>
