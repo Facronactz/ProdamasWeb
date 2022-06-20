@@ -102,7 +102,7 @@
                                         @endphp
                                             @if ($divide)
                                             @php
-                                                $header = DB::table('users_level')->where('level', '=', 'current')->first();
+                                                $header = DB::table('users_level')->where('level', '=', $current)->first();
                                             @endphp
                                             <div style="width: 100%; height: 25px; border-bottom: 1px solid black; text-align: center">
                                                 <span style="font-size: 40px; background-color: #ffffff; padding: 0 10px;">
