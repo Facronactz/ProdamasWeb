@@ -13,7 +13,7 @@ Edit English Masive
     @method('put')
     <div class="form-group">
         <label for="judul">Judul</label>
-        <input type="text" class="form-control" name="judul" id="judul" placeholder="judul" value="{{$english_masive->judul}}">
+        <input type="text" class="form-control" name="judul" id="judul" placeholder="judul" value="{{$dataemas->judul}}">
         @error('judul')
         <div class="alert alert-danger">
             {{ $message }}
