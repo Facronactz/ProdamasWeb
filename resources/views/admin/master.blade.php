@@ -102,14 +102,14 @@
                                                 </div>
                                             </div>
                                         @else
-                                            <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Fungsi dinonaktifkan untuk akun ini. Silahkan hubungi admin">
-                                                <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2 btn-secondary" style="min-width: 200px;">
+                                            <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2 btn-secondary" style="min-width: 200px;">
+                                                <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Fungsi dinonaktifkan untuk akun ini. Silahkan hubungi admin">
                                                     <div class="card-body row">
                                                         <i class="{{ $menu->icon }} fa-7x"></i>
                                                         <h2>{{ $menu->name }}</h2>
                                                     </div>
-                                                </div>
-                                            </span>
+                                                </span>
+                                            </div>
                                         @endif
                                     @endforeach
                                 </div>
