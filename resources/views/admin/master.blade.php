@@ -102,9 +102,9 @@
                                                 </div>
                                             </div>
                                         @else
-                                            <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2" style="background: {{ $menu->color }}; min-width: 200px;">
+                                            <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2 btn-secondary" style="min-width: 200px;">
                                                 <div class="card-body row">
-                                                    <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+                                                    <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Fungsi dinonaktifkan untuk akun ini. Silahkan hubungi admin">
                                                         <button class="btn btn-secondary" type="button" disabled>
                                                             <i class="{{ $menu->icon }} fa-7x"></i>
                                                             <h2>{{ $menu->name }}</h2>
