@@ -30,9 +30,11 @@
     @endforeach    
     <div class="container">
         <div class="row row-cols-1 row-cols-3">
-            <img class="col" src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt="">
-            <img class="col" src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt="">
-            <img class="col" src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt="">
+            @foreach($dataemas as $emas)
+            <img id="gambar1" style="cursor: pointer;" class="col" src="{{asset($emas->gambar1)}}" alt="" srcset="">
+            <img id="gambar2" style="cursor: pointer;" class="col" src="{{asset($emas->gambar2)}}" alt="" srcset="">
+            <img id="gambar3" style="cursor: pointer;" class="col" src="{{asset($emas->gambar3)}}" alt="" srcset="">
+            @endforeach
         </div>
     </div>
 </div>
