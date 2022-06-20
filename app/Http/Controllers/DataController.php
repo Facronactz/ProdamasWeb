@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Menu;
 use App\Models\Anggaran;
 use App\Models\RTH;
-
 use App\Models\DataKoperasi;
+use App\Models\EnglishMasive;
 
 class DataController extends Controller
 {
