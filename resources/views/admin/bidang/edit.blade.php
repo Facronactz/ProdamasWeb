@@ -8,7 +8,7 @@ Edit Bidang
 
 @section('content')
 
-<form action="/admin/bidang/{{$bidang->id}}" method="POST" enctype="application/x-www-form-urlencoded">
+<form action="/admin/bidang/{{$bidang->id}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('put')
     <div class="form-group">
