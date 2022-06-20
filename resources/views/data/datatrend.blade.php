@@ -68,25 +68,23 @@
 
         {{-- Kecamatan --}}
         <div class="tab-pane fade" id="pills-kecamatan" role="tabpanel" aria-labelledby="pills-kecamatan-tab">
-            <div class='tableauPlaceholder' id='viz1655707617330' style='position: relative; padding:0 50px; margin:50px 0''><noscript><a href='#'><img alt='Data Trend Anggaran, Serapan, dan Sisa Per Kecamatan di Kota Kediri ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Per_Kecamatan&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript>
-                <object class='tableauViz' style='display:none;'>
+            <div class='tableauPlaceholder' id='viz1655709500765' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Per_Kecamatan&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
                     <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
                     <param name='embed_code_version' value='3' />
                     <param name='site_root' value='' />
-                    <param name='name' value='Trend_Per_Kecamatan&#47;Sheet1' />
+                    <param name='name' value='Trend_Per_Kecamatan&#47;Dashboard1' />
                     <param name='tabs' value='no' />
                     <param name='toolbar' value='yes' />
-                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Per_Kecamatan&#47;Sheet1&#47;1.png' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Per_Kecamatan&#47;Dashboard1&#47;1.png' />
                     <param name='animate_transition' value='yes' />
                     <param name='display_static_image' value='yes' />
                     <param name='display_spinner' value='yes' />
                     <param name='display_overlay' value='yes' />
                     <param name='display_count' value='yes' />
                     <param name='language' value='en-US' />
-                </object>
-            </div>
+                </object></div>
             <script type='text/javascript'>
-                var divElement = document.getElementById('viz1655707617330');
+                var divElement = document.getElementById('viz1655709500765');
                 var vizElement = divElement.getElementsByTagName('object')[0];
                 vizElement.style.width = '100%';
                 vizElement.style.height = '800px';
