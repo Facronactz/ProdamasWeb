@@ -5,7 +5,7 @@
 @section('title', 'Prodamas Dalam Peta')
 
 @section('head')
-<link rel="stylesheet" href="css/peta.css">
+{{-- <link rel="stylesheet" href="css/peta.css"> --}}
 @endsection
 
 @section('content')

@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\UMKM;
 use App\Models\Pict;
 use App\Models\Menu;
+use App\Models\DescriptionAdmin;
 
 class UMKMController extends Controller
 {
@@ -30,6 +31,7 @@ class UMKMController extends Controller
         $kotas = UMKM::where('kecamatan', 'Kota')->paginate(3);
         $pesantrens = UMKM::where('kecamatan', 'Pesantren')->paginate(3);
         $mojorotos = UMKM::where('kecamatan', 'Mojoroto')->paginate(3);
+        $descriptions = DescriptionAdmin::first()->get();
         
         return view('umkm.index', compact(
             'counter',
@@ -38,7 +40,8 @@ class UMKMController extends Controller
             'kotas',
             'pesantrens',
             'mojorotos',
-            'menus'
+            'menus',
+            'descriptions'
         ));
     }
 }
