@@ -26,14 +26,14 @@
 
     <div class="mt-3"><?=$emas->konten?></div>
     <div style="font-size:small">(<em>Sumber Data</em>: {{$emas->sumber}})</div>
- 
+
+    @endforeach    
     <div class="container">
         <div class="row row-cols-1 row-cols-3">
-            <img id="gambar1" style="cursor: pointer;" class="col" src="{{asset($emas->gambar1)}}" alt="" srcset="">
-            <img id="gambar2" style="cursor: pointer;" class="col" src="{{asset($emas->gambar2)}}" alt="" srcset="">
-            <img id="gambar3" style="cursor: pointer;" class="col" src="{{asset($emas->gambar3)}}" alt="" srcset="">
+            <img class="col" src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt="">
+            <img class="col" src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt="">
+            <img class="col" src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt="">
         </div>
     </div>
-    @endforeach   
 </div>
 @endsection
