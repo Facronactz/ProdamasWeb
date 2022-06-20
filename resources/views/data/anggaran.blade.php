@@ -11,7 +11,7 @@
 @section('content')
 <div style="padding:0 50px; margin:50px 0;">
     <div style="text-align:center">
-        <h2 style="text-decoration:underline">{{$anggaran->judul}}</h2>
+        {{--<h2 style="text-decoration:underline">{{$anggaran->judul}}</h2>--}}
         <p style="font-weight:700">{{$anggaran->deskripsi}}</p>
     </div>
 
