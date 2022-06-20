@@ -5,12 +5,7 @@
 @section('title', 'Prodamas Dalam Peta')
 
 @section('head')
-<link rel="stylesheet" href="css/peta.css">
-<style>
-    ul{
-        display: block;
-    }
-</style>
+{{-- <link rel="stylesheet" href="css/peta.css"> --}}
 @endsection
 
 @section('content')
