@@ -30,9 +30,9 @@
     @endforeach    
     <div class="container">
         <div class="row row-cols-1 row-cols-3">
-            <img class="col" src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt="">
-            <img class="col" src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt="">
-            <img class="col" src="https://via.placeholder.com/728x90.png?text=gambar+emas" alt="">
+            <img class="col" src="https://via.placeholder.com/400x300.png?text=gambar+emas" alt="">
+            <img class="col" src="https://via.placeholder.com/400x300.png?text=gambar+emas" alt="">
+            <img class="col" src="https://via.placeholder.com/400x300.png?text=gambar+emas" alt="">
         </div>
     </div>
 </div>
