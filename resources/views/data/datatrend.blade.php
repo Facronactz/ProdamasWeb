@@ -31,14 +31,8 @@
     </ul>
     <div class="tab-content" id="pills-tabContent">
         {{-- Kota --}}
-        <div class="tab-pane show active" id="pills-kota" role="tabpanel" aria-labelledby="pills-kota-tab">
-            <div class='tableauPlaceholder' id='viz1655393574272' style='position: relative; padding:0 50px; margin:50px 0'>
-                <noscript>
-                    <a href='#'>
-                        <img alt='Data Trend Anggaran, Serapan, dan Sisa Kota Kediri ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Kota_Kediri&#47;Sheet1&#47;1_rss.png' style='border: none' />
-                    </a>
-                </noscript>
-                <object class='tableauViz' style='display:none;'>
+        <div class="tab-pane active m-2" id="panel-kota">
+            <div class='tableauPlaceholder' id='viz1655687902206' style='position: relative'><noscript><a href='#'><img alt='Data Trend Anggaran, Serapan, dan Sisa Kota Kediri ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Kota_Kediri&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
                     <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
                     <param name='embed_code_version' value='3' />
                     <param name='site_root' value='' />
@@ -101,15 +95,23 @@
 @section('scripts')
 
     <script type='text/javascript'>
-        var divElement = document.getElementById('viz1655393574272');
+        var divElement = document.getElementById('viz1655687902206');
         var vizElement = divElement.getElementsByTagName('object')[0];
-        vizElement.style.width = '100%';
-        vizElement.style.height = (divElement.offsetWidth * 0.4) + 'px';
-        // vizElement.style.height = '800px';
+        if (divElement.offsetWidth > 800) {
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        } else if (divElement.offsetWidth > 500) {
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        } else {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '727px';
+        }
         var scriptElement = document.createElement('script');
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
         vizElement.parentNode.insertBefore(scriptElement, vizElement);
     </script>
+
 
     <script type='text/javascript'>
         var divElement = document.getElementById('viz1655688094243');
