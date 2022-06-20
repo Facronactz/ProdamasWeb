@@ -37,12 +37,12 @@ class DataTrendController extends Controller
             'kelurahan' => $request->kelurahan,
         ]);
 
-        return redirect('/admin/list-trend')->with('success', 'Data Trend Berhasil Diupdate!');
+        return redirect('/admin/trend/{{1}}')->with('success', 'Data Trend Berhasil Diupdate!');
     }
 
     public function destroy($id)
     {
         $submission = DB::table('trend')->where('id', $id)->delete();
-        return redirect('/admin/list-trend')->with('success', 'Data Trend Berhasil Dihapus!');
+        return redirect('/admin/trend/{{1}}')->with('success', 'Data Trend Berhasil Dihapus!');
     }
 }
