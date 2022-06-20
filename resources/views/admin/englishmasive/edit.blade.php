@@ -53,7 +53,7 @@ Edit English Masive
 
     <div class="form-group">
         <label for="konten">Konten</label>
-        <input type="text" name="konten" class="form-control" id="konten" value="{{$dataemas->konten}}">
+        <textarea name="konten" class="form-control summernote" name="konten" id="konten" placeholder="konten">{{ $dataemas->konten }}</Textarea>
         @error('konten')
         <div class="alert alert-danger">
             {{ $message }}
