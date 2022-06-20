@@ -13,7 +13,7 @@ Edit Data Trend
     @method('put')
     <div class="form-group">
         <label for="kota">Kota</label>
-        <textarea name="kota" class="form-control tableau">{{$trend->kota}}</textarea>
+        <textarea name="kota" class="form-control tableau"><?=$trend->kota?></textarea>
         @error('kota')
         <div class="alert alert-danger">
             {{ $message }}
@@ -23,7 +23,7 @@ Edit Data Trend
 
     <div class="form-group">
         <label for="kecamatan">Kecamatan</label>
-        <textarea name="kecamatan" class="form-control tableau">{{$trend->kecamatan}}</textarea>
+        <textarea name="kecamatan" class="form-control tableau"><?$trend->kecamatan?></textarea>
         @error('kecamatan')
         <div class="alert alert-danger">
             {{ $message }}
@@ -33,7 +33,7 @@ Edit Data Trend
 
     <div class="form-group">
         <label for="kelurahan">Kelurahan</label>
-        <textarea name="kelurahan" class="form-control tableau">{{$trend->kelurahan}}</textarea>
+        <textarea name="kelurahan" class="form-control tableau"><?$trend->kelurahan?></textarea>
         @error('kelurahan')
         <div class="alert alert-danger">
             {{ $message }}
