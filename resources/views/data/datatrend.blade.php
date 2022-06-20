@@ -31,7 +31,7 @@
     </ul>
     <div class="tab-content" id="pills-tabContent">
         {{-- Kota --}}
-        <div class="tab-pane fade show active" id="pills-kota" role="tabpanel" aria-labelledby="pills-kota-tab">
+        <div class="tab-pane show active" id="pills-kota" role="tabpanel" aria-labelledby="pills-kota-tab">
             <div class='tableauPlaceholder' id='viz1655393574272' style='position: relative; padding:0 50px; margin:50px 0'>
                 <noscript>
                     <a href='#'>
@@ -67,7 +67,7 @@
         </div>
 
         {{-- Kecamatan --}}
-        <div class="tab-pane fade" id="pills-kecamatan" role="tabpanel" aria-labelledby="pills-kecamatan-tab">
+        <div class="tab-pane" id="pills-kecamatan" role="tabpanel" aria-labelledby="pills-kecamatan-tab">
             <div class='tableauPlaceholder' id='viz1655709500765' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Per_Kecamatan&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
                     <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
                     <param name='embed_code_version' value='3' />
@@ -95,7 +95,7 @@
         </div>
 
         {{-- Kota --}}
-        <div class="tab-pane fade" id="pills-kelurahan" role="tabpanel" aria-labelledby="pills-kelurahan-tab">
+        <div class="tab-pane" id="pills-kelurahan" role="tabpanel" aria-labelledby="pills-kelurahan-tab">
             <div class='tableauPlaceholder' id='viz1655395721778' style='position: relative; padding:0 50px; margin:50px 0'> <noscript>
                     <a href='#'>
                         <img alt='Data Trend Anggaran, Serapan, dan Sisa Per Kelurahan di Kota Kediri ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;TrendPerKelurahan&#47;Sheet1&#47;1_rss.png' style='border: none' />
