@@ -93,12 +93,13 @@
                                     {{-- Sidebar dan Dashboard admin ditambahkan secara manual di tabel DB 'admin_menu' --}}
                                     @foreach ($menus as $menu)
                                         @php
-                                            if ($current != $level) {
+                                            $menu_level = $menu->level;
+                                            if ($current != $menu_level) {
                                                 $divide = true;
                                             } else {
                                                 $divide = false;
                                             }
-                                            $current = $level;
+                                            $current = $menu_level;
                                         @endphp
                                             @if ($divide)
                                             @php
