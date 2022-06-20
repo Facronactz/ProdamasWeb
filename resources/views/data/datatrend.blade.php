@@ -31,7 +31,7 @@
     </ul>
     <div class="tab-content" id="pills-tabContent">
         {{-- Kota --}}
-        <div class="tab-pane active m-2" id="panel-kota">
+        <div class="tab-pane show active" id="pills-kota" role="tabpanel" aria-labelledby="pills-kota-tab">
             <div class='tableauPlaceholder' id='viz1655687902206' style='position: relative'><noscript><a href='#'><img alt='Data Trend Anggaran, Serapan, dan Sisa Kota Kediri ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Kota_Kediri&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
                     <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
                     <param name='embed_code_version' value='3' />
@@ -99,10 +99,10 @@
         var vizElement = divElement.getElementsByTagName('object')[0];
         if (divElement.offsetWidth > 800) {
             vizElement.style.width = '100%';
-            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+            vizElement.style.height = (divElement.offsetWidth * 0.4) + 'px';
         } else if (divElement.offsetWidth > 500) {
             vizElement.style.width = '100%';
-            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+            vizElement.style.height = (divElement.offsetWidth * 0.4) + 'px';
         } else {
             vizElement.style.width = '100%';
             vizElement.style.height = '727px';
