@@ -58,8 +58,8 @@
                 var divElement = document.getElementById('viz1655393574272');
                 var vizElement = divElement.getElementsByTagName('object')[0];
                 vizElement.style.width = '100%';
-                // vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
-                vizElement.style.height = '800px';
+                vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+                // vizElement.style.height = '800px';
                 var scriptElement = document.createElement('script');
                 scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
                 vizElement.parentNode.insertBefore(scriptElement, vizElement);
@@ -86,8 +86,16 @@
             <script type='text/javascript'>
                 var divElement = document.getElementById('viz1655709500765');
                 var vizElement = divElement.getElementsByTagName('object')[0];
-                vizElement.style.width = '100%';
-                vizElement.style.height = '800px';
+                if (divElement.offsetWidth > 800) {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                } else if (divElement.offsetWidth > 500) {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                } else {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = '727px';
+                }
                 var scriptElement = document.createElement('script');
                 scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
                 vizElement.parentNode.insertBefore(scriptElement, vizElement);
@@ -121,8 +129,8 @@
                 var divElement = document.getElementById('viz1655395721778');
                 var vizElement = divElement.getElementsByTagName('object')[0];
                 vizElement.style.width = '100%';
-                // vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                vizElement.style.height = '800px';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                // vizElement.style.height = '800px';
                 var scriptElement = document.createElement('script');
                 scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
                 vizElement.parentNode.insertBefore(scriptElement, vizElement);
