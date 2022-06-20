@@ -12,7 +12,21 @@ UMKM Submission
     {{session('success')}}
 </div>
 @endif
-
+<div class="form-group">
+    <label for="desc_umkm">Deskripsi</label>
+    <table class="table">
+        @foreach ($descriptions ?? '' as $description)
+        <tr>
+            <td><?= $description->desc_umkm ?></td>
+            <td align="right">
+                <form action="/admin/editdesc/{{ $description->id }}" method="POST">
+                    <a href="/admin/editdesc/{{ $description->id }}" class="btn btn-info">Edit</a>
+                </form>
+            </td>
+        </tr>
+        @endforeach
+    </table>
+</div>
 <div class="form-group">
     <label style="display:block">Pict Sentra UMKM</label>
     <table class="table">

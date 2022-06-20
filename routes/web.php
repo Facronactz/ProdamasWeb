@@ -266,6 +266,8 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::delete('/admin/editlist-umkm/{umkm_id}', [UMKMAdminController::class, 'destroylist']);
     Route::get('/admin/umkm/{pict_id}', [UMKMAdminController::class, 'edit_pict']);
     Route::put('/admin/umkm/{pict_id}', [UMKMAdminController::class, 'update_pict']);
+    Route::get('/admin/editdesc/{description_id}', [UMKMAdminController::class, 'edit_desc']);
+    Route::put('/admin/editdesc/{description_id}', [UMKMAdminController::class, 'update_desc']);
 
     // Koperasi RW
     Route::get('/admin/list-koperasirw', [KoperasiAdminController::class, 'index']);
