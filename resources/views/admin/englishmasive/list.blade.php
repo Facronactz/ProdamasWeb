@@ -29,7 +29,7 @@ English Masive Submission
             </tr>
         </thead>
         <tbody>
-            @foreach($english_masives as $english_masive)
+            @foreach($dataemas as $english_masive)
             <tr>
                 <td>{{$english_masive->id}}</td>
                 <td>{{$english_masive->judul}}</td>
@@ -38,6 +38,7 @@ English Masive Submission
                 <td>{{$english_masive->tableau_tutor}}</td>
                 <td>{{$english_masive->judul_partisipan}}</td>
                 <td>{{$english_masive->tableau_partisipan}}</td>
+                <td>{{$english_masive->konten}}</td>
                 <td>{{$english_masive->sumber }}</td>
                 <td>
                     <form action="/admin/englishmasive/{{$english_masive->id}}" method="POST">
