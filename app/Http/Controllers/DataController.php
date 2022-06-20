@@ -77,7 +77,7 @@ class DataController extends Controller
                 $menus = Menu::where('status', 'Show')->get();
                 $dataemas = EnglishMasive::first()->get();
                 // end code jumlah pengunjung
-                return view('data.emas', compact('counter', 'totalviews', 'menus', 'englishmasive'));
+                return view('data.emas', compact('counter', 'totalviews', 'menus', 'dataemas'));
         }
 
         public function koperasi()
