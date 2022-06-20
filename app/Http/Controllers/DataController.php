@@ -117,9 +117,9 @@ class DataController extends Controller
                         ->unionAll($counter)
                         ->sum('views');
                 $menus = Menu::where('status', 'Show')->get();
-                $anggaran = Anggaran::first()->get();
+                $anggarans = Anggaran::first()->get();
                 // end code jumlah pengunjung
-                return view('data.anggaran', compact('counter', 'totalviews', 'menus', 'anggaran'));
+                return view('data.anggaran', compact('counter', 'totalviews', 'menus', 'anggarans'));
         }
 
         public function rth()
