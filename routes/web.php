@@ -52,6 +52,7 @@ use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\KubeController;
 use App\Http\Controllers\KubeAdminController;
 use App\Http\Controllers\KurniaAdminController;
+use App\Http\Controllers\AnggaranAdminController;
 
 /*
 |--------------------------------------------------------------------------
