@@ -37,7 +37,7 @@ class DataTrendController extends Controller
             'kelurahan' => $request->kelurahan,
         ]);
 
-        return redirect('/admin/trend/{{1}}')->with('success', 'Data Trend Berhasil Diupdate!');
+        return redirect('/admin/trend/1')->with('success', 'Data Trend Berhasil Diupdate!');
     }
 
     public function destroy($id)
