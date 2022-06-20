@@ -18,79 +18,115 @@
         </select>
     </div> --}}
 
-    <div class="col-12 d-flex flex-column">
-        <div class="d-flex flex-fill card p-2" style="background-color: #CFD8DC;">
-            <div class="my-card-title m-2">Data Trend</div>
-
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#panel-kota">Kota</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#panel-kecamatan">Kecamatan</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#panel-kelurahan">Kelurahan</a>
-                </li>
-            </ul>
-
-
-            <div class="tab-content">
-                <div class="tab-pane active m-2" id="panel-kota">
-                    <div class='tableauPlaceholder' id='viz1655687902206' style='position: relative'><noscript><a href='#'><img alt='Data Trend Anggaran, Serapan, dan Sisa Kota Kediri ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Kota_Kediri&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
-                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                            <param name='embed_code_version' value='3' />
-                            <param name='site_root' value='' />
-                            <param name='name' value='Trend_Kota_Kediri&#47;Sheet1' />
-                            <param name='tabs' value='no' />
-                            <param name='toolbar' value='yes' />
-                            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Kota_Kediri&#47;Sheet1&#47;1.png' />
-                            <param name='animate_transition' value='yes' />
-                            <param name='display_static_image' value='yes' />
-                            <param name='display_spinner' value='yes' />
-                            <param name='display_overlay' value='yes' />
-                            <param name='display_count' value='yes' />
-                            <param name='language' value='en-US' />
-                        </object>
-                    </div>
-                </div>
-                <div class="tab-pane  m-2" id="panel-kecamatan">
-                    <div class='tableauPlaceholder' id='viz1655688094243' style='position: relative'><noscript><a href='#'><img alt='Data Trend Anggaran, Serapan, dan Sisa Per Kecamatan di Kota Kediri ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Per_Kecamatan&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
-                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                            <param name='embed_code_version' value='3' />
-                            <param name='site_root' value='' />
-                            <param name='name' value='Trend_Per_Kecamatan&#47;Sheet1' />
-                            <param name='tabs' value='no' />
-                            <param name='toolbar' value='yes' />
-                            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Per_Kecamatan&#47;Sheet1&#47;1.png' />
-                            <param name='animate_transition' value='yes' />
-                            <param name='display_static_image' value='yes' />
-                            <param name='display_spinner' value='yes' />
-                            <param name='display_overlay' value='yes' />
-                            <param name='display_count' value='yes' />
-                            <param name='language' value='en-US' />
-                        </object>
-                    </div>
-                </div>
-                <div class="tab-pane  m-2" id="panel-kelurahan">
-                    <div class='tableauPlaceholder' id='viz1655688275145' style='position: relative'><noscript><a href='#'><img alt='Data Trend Anggaran, Serapan, dan Sisa Per Kelurahan di Kota Kediri ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;TrendPerKelurahan&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
-                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                            <param name='embed_code_version' value='3' />
-                            <param name='site_root' value='' />
-                            <param name='name' value='TrendPerKelurahan&#47;Sheet1' />
-                            <param name='tabs' value='no' />
-                            <param name='toolbar' value='yes' />
-                            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;TrendPerKelurahan&#47;Sheet1&#47;1.png' />
-                            <param name='animate_transition' value='yes' />
-                            <param name='display_static_image' value='yes' />
-                            <param name='display_spinner' value='yes' />
-                            <param name='display_overlay' value='yes' />
-                            <param name='display_count' value='yes' />
-                            <param name='language' value='en-US' />
-                        </object>
-                    </div>
-                </div>
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-kota-tab" data-bs-toggle="pill" data-bs-target="#pills-kota" type="button" role="tab" aria-controls="pills-kota" aria-selected="true">Kota</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-kecamatan-tab" data-bs-toggle="pill" data-bs-target="#pills-kecamatan" type="button" role="tab" aria-controls="pills-kecamatan" aria-selected="false">Kecamatan</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-kelurahan-tab" data-bs-toggle="pill" data-bs-target="#pills-kelurahan" type="button" role="tab" aria-controls="pills-kelurahan" aria-selected="false">Kelurahan</button>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        {{-- Kota --}}
+        <div class="tab-pane show active" id="pills-kota" role="tabpanel" aria-labelledby="pills-kota-tab">
+            <div class='tableauPlaceholder' id='viz1655393574272' style='position: relative; padding:0 50px; margin:50px 0'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Data Trend Anggaran, Serapan, dan Sisa Kota Kediri ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Kota_Kediri&#47;Sheet1&#47;1_rss.png' style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='Trend_Kota_Kediri&#47;Sheet1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Kota_Kediri&#47;Sheet1&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
             </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1655393574272');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.4) + 'px';
+                // vizElement.style.height = '800px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+
+        {{-- Kecamatan --}}
+        <div class="tab-pane" id="pills-kecamatan" role="tabpanel" aria-labelledby="pills-kecamatan-tab">
+            <div class='tableauPlaceholder' id='viz1655709500765' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Per_Kecamatan&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='Trend_Per_Kecamatan&#47;Dashboard1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Trend_Per_Kecamatan&#47;Dashboard1&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object></div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1655709500765');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.4) + 'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+
+        {{-- Kota --}}
+        <div class="tab-pane" id="pills-kelurahan" role="tabpanel" aria-labelledby="pills-kelurahan-tab">
+            <div class='tableauPlaceholder' id='viz1655395721778' style='position: relative; padding:0 50px; margin:50px 0'> <noscript>
+                    <a href='#'>
+                        <img alt='Data Trend Anggaran, Serapan, dan Sisa Per Kelurahan di Kota Kediri ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;TrendPerKelurahan&#47;Sheet1&#47;1_rss.png' style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='TrendPerKelurahan&#47;Sheet1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;TrendPerKelurahan&#47;Sheet1&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1655395721778');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.4) + 'px';
+                // vizElement.style.height = '800px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
         </div>
     </div>
 
