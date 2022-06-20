@@ -16,9 +16,20 @@
         <p style="font-weight:700">{{$emas->deskripsi}}</p>
     </div>
 
+    <div style="text-align:left">
+        <h3>{{$emas->judul_tutor}}</h3>
+    </div>
     <div>
         <?= $emas->tableau_tutor ?>
     </div>
+
+    <div style="text-align:left">
+        <h3>{{$emas->judul_partisipan}}</h3>
+    </div>
+    <div>
+        <?= $emas->tableau_partisipan ?>
+    </div>
+
     <div class="mt-3"><?=$emas->konten?></div>
     <div style="font-size:small">(<em>Sumber Data</em>: {{$emas->sumber}})</div>
     @endforeach
