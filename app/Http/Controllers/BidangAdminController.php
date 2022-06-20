@@ -57,7 +57,7 @@ class BidangAdminController extends Controller
     {
         $request->validate([
             'judul' => 'required',
-            'foto' => 'mimes:jpeg,jpg,png|max:2200',
+            'foto' => 'required',
             'caption' => 'required'
         ]);
 
