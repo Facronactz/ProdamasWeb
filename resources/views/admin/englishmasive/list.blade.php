@@ -31,6 +31,9 @@ English Masive Submission
                 <td>{{$english_masive->judul}}</td>
                 <td>{{$english_masive->deskripsi }}</td>
                 <td>{{$english_masive->sumber }}</td>
+                <td>{{$english_masive->gambar1}}</td>
+                <td>{{$english_masive->gambar2}}</td>
+                <td>{{$english_masive->gambar3}}</td>
                 <td>
                     <form action="/admin/englishmasive/{{$english_masive->id}}" method="POST">
                         <a href="/admin/englishmasive/{{$english_masive->id}}" class="btn btn-info">Edit</a>
