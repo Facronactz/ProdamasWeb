@@ -12,7 +12,7 @@ class AnggaranAdminController extends Controller
     public function index()
     {
         $anggarans = Anggaran::first()->get();
-        return view('admin.anggaran.list', compact('anggaran'));
+        return view('admin.anggaran.list', compact('anggarans'));
     }
 
     public function edit($id)
