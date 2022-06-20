@@ -13,7 +13,7 @@ Edit English Masive
     @method('put')
     <div class="form-group">
         <label for="judul">Judul</label>
-        <input type="text" class="form-control" name="judul" id="judul" placeholder="judul" value="{{$english_masive->judul}}">
+        <input type="text" class="form-control" name="judul" id="judul" placeholder="judul" value="{{$dataemas->judul}}">
         @error('judul')
         <div class="alert alert-danger">
             {{ $message }}
@@ -42,8 +42,8 @@ Edit English Masive
     </div>
 
     <div class="form-group">
-        <label for="code">Tableau Tutor</label>
-        <textarea name="tableau_tutor" class="form-control" id="tableau_tutor">{{$dataemas->tableau_tutor}}</textarea>
+        <label for="tableau_tutor">Tableau Tutor</label>
+        <textarea name="tableau_tutor" class="form-control tableau" id="tableau">{{$dataemas->tableau_tutor}}</textarea>
         @error('tableau_tutor')
         <div class="alert alert-danger">
             {{ $message }}
@@ -62,8 +62,8 @@ Edit English Masive
     </div>
 
     <div class="form-group">
-        <label for="code">Tableau Partisipan</label>
-        <textarea name="tableau_partisipan" class="form-control" id="tableau_partisipan">{{$dataemas->tableau_partisipan}}</textarea>
+        <label for="tableau_partisipan">Tableau Partisipan</label>
+        <textarea name="tableau_partisipan" class="form-control tableau" id="tableau">{{$dataemas->tableau_partisipan}}</textarea>
         @error('tableau_partisipan')
         <div class="alert alert-danger">
             {{ $message }}
