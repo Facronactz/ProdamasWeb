@@ -23,25 +23,25 @@
         </li>
     </ul>
 </div>
-<div class="tab-content" id="pills-tabContent">
+<div class="tab-content" id="pills-tabContent" style="padding:0 50px; margin:50px 0">
     {{-- Kota --}}
     <div class="tab-pane show active" id="pills-kota" role="tabpanel" aria-labelledby="pills-kota-tab">
         @foreach($trends as $trend)
-        $trends->kota
+        <?=$trends->kota?>
         @endforeach
     </div>
 
     {{-- Kecamatan --}}
     <div class="tab-pane" id="pills-kecamatan" role="tabpanel" aria-labelledby="pills-kecamatan-tab">
         @foreach($trends as $trend)
-        $trends->kecamatan
+        <?=$trends->kecamatan?>
         @endforeach
     </div>
 
     {{-- Kota --}}
     <div class="tab-pane" id="pills-kelurahan" role="tabpanel" aria-labelledby="pills-kelurahan-tab">
         @foreach($trends as $trend)
-        $trends->kelurahan
+        <?=$trends->kelurahan?>
         @endforeach
     </div>
 </div>
