@@ -34,13 +34,13 @@
             @endforeach
         </div>
 
-        <div class="tab-pane" id="pills-kelurahan" role="tabpanel" aria-labelledby="pills-kelurahan-tab">
+        <div class="tab-pane" id="pills-kecamatan" role="tabpanel" aria-labelledby="pills-kecamatan-tab">
             @foreach($trends as $trend)
             <?= $trend->kelurahan ?>
             @endforeach
         </div>
-        
-        <div class="tab-pane" id="pills-kecamatan" role="tabpanel" aria-labelledby="pills-kecamatan-tab">
+
+        <div class="tab-pane" id="pills-kelurahan" role="tabpanel" aria-labelledby="pills-kelurahan-tab">
             @foreach($trends as $trend)
             <?= $trend->kecamatan ?>
             @endforeach
