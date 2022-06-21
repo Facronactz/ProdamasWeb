@@ -53,7 +53,7 @@ Edit English Masive
 
     <div class="form-group">
         <label for="konten">Konten</label>
-        <input type="text" name="konten" class="form-control" id="konten" value="{{$dataemas->konten}}">
+        <textarea name="konten" class="form-control summernote" name="konten" id="konten" placeholder="konten">{{ $dataemas->konten }}</Textarea>
         @error('konten')
         <div class="alert alert-danger">
             {{ $message }}
@@ -70,7 +70,7 @@ Edit English Masive
         </div>
         @enderror
     </div>
-
+{{-- 
     <div class="form-group">
         <label for="gambar1">Gambar 1</label><br>
         <p>{{$dataemas->gambar1}}</p>
@@ -101,7 +101,7 @@ Edit English Masive
         <div class="alert alert-danger">
             {{ $message }}
         </div>
-        @enderror
+        @enderror --}}
 
     <button type="submit" class="btn btn-primary">Edit</button>
     <a href="/admin/list-englishmasive" class="btn btn-outline-primary">Back</a>
