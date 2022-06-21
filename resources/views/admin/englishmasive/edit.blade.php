@@ -70,7 +70,7 @@ Edit English Masive
         </div>
         @enderror
     </div>
-{{-- 
+    
     <div class="form-group">
         <label for="gambar1">Gambar 1</label><br>
         <p>{{$dataemas->gambar1}}</p>
