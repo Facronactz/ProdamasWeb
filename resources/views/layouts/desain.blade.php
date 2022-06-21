@@ -305,7 +305,7 @@
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuEboost">
                                     <li class="w-100"><a class="dropdown-item @yield('eboost')" href="{{ url('/e-boost') }}">E-Boost</a></li>
                                     <li class="dropdown-submenu w-100">
-                                        <a class="dropdown-item @yield('e-boost')">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <a class="dropdown-item @yield('')">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
                                         <ul class="dropdown-menu">
                                             <li class="dropdown-submenu w-100">
                                             <li class="w-100"><a class="dropdown-item @yield('wirausaha')" href="{{ url('/wirausaha') }}">Wirausaha</a></li>
@@ -315,7 +315,7 @@
                                 </ul>
                                 </li>
                                 <li class="dropdown-submenu w-100">
-                                    <a class="dropdown-item @yield('e-boost')">Akses Permodalan <span class="caret fas fa-caret-right ms-3"></span></a>
+                                    <a class="dropdown-item @yield('')">Akses Permodalan <span class="caret fas fa-caret-right ms-3"></span></a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-submenu w-100">
                                         <li class="w-100"><a class="dropdown-item @yield('koperasirw')" href="{{ url('/koperasirw') }}">Koperasi RW</a></li>
@@ -324,7 +324,7 @@
                                 </ul>
                                 </li>
                                 <li class="dropdown-submenu w-100">
-                                    <a class="dropdown-item @yield('e-boost')">Pemasaran<span class="caret fas fa-caret-right ms-3"></span></a>
+                                    <a class="dropdown-item @yield('')">Pemasaran<span class="caret fas fa-caret-right ms-3"></span></a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-submenu w-100">
                                         <li class="w-100"><a class="dropdown-item @yield('pemasaran')" href="{{ url('/tags?tags=pemasaran') }}">Artikel</a></li>
@@ -332,7 +332,7 @@
                                 </ul>
                                 </li>
                                 <li class=" dropdown-submenu w-100">
-                                    <a class="dropdown-item @yield('e-boost')">Publikasi<span class="caret fas fa-caret-right ms-3"></span></a>
+                                    <a class="dropdown-item @yield('')">Publikasi<span class="caret fas fa-caret-right ms-3"></span></a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-submenu w-100">
                                             {{-- <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/wirausaha') }}">Informasi Pelatihan
