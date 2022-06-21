@@ -11,8 +11,8 @@ class DataEmasAdminController extends Controller
 {
     public function index()
     {
-        $dataemass = EnglishMasive::first()->get();
-        return view('admin.englishmasive.list', compact('dataemass'));
+        $dataemas = EnglishMasive::first()->get();
+        return view('admin.englishmasive.list', compact('dataemas'));
     }
 
     public function edit($id)
