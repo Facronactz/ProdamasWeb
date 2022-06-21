@@ -61,7 +61,6 @@
             </li>
         </ul>
     </div>
-    <div class="tab-content" id="pills-tabContent">
         {{-- Kota --}}
             @foreach($trends as $trend)
             <?= $trend->kota ?>
@@ -75,7 +74,6 @@
             @foreach($trends as $trend)
             <?= $trend->kelurahan ?>
             @endforeach
-    </div>
 </div>
 @endsection
 
