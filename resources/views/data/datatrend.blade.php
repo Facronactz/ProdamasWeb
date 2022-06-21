@@ -13,6 +13,41 @@
 @section('content')
 
 <div style="padding:0 50px; margin:50px 0">
+    {{-- <div class="row mx-auto">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-kota-tab" data-bs-toggle="pill" data-bs-target="#pills-kota" type="button" role="tab" aria-controls="pills-kota" aria-selected="true">Kota</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-kecamatan-tab" data-bs-toggle="pill" data-bs-target="#pills-kecamatan" type="button" role="tab" aria-controls="pills-kecamatan" aria-selected="false">Kecamatan</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-kelurahan-tab" data-bs-toggle="pill" data-bs-target="#pills-kelurahan" type="button" role="tab" aria-controls="pills-kelurahan" aria-selected="false">Kelurahan</button>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content" id="pills-tabContent"> --}}
+        {{-- Kota --}}
+        {{-- <div class="tab-pane show active" id="pills-kota" role="tabpanel" aria-labelledby="pills-kota-tab">
+            @foreach($trends as $trend)
+            <?= $trend->kota ?>
+            @endforeach
+        </div>
+
+        <div class="tab-pane" id="pills-kecamatan" role="tabpanel" aria-labelledby="pills-kecamatan-tab">
+            @foreach($trends as $trend)
+            <?= $trend->kecamatan ?>
+            @endforeach
+        </div>
+
+        <div class="tab-pane" id="pills-kelurahan" role="tabpanel" aria-labelledby="pills-kelurahan-tab">
+            @foreach($trends as $trend)
+            <?= $trend->kelurahan ?>
+            @endforeach
+        </div> --}}
+    </div>
+    
+    {{-- test --}}
     <div class="row mx-auto">
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
@@ -26,28 +61,19 @@
             </li>
         </ul>
     </div>
-    <div class="tab-content" id="pills-tabContent">
         {{-- Kota --}}
-        <div class="tab-pane show active" id="pills-kota" role="tabpanel" aria-labelledby="pills-kota-tab">
             @foreach($trends as $trend)
             <?= $trend->kota ?>
             @endforeach
-        </div>
 
-        {{-- Kecamatan --}}
-        <div class="tab-pane" id="pills-kecamatan" role="tabpanel" aria-labelledby="pills-kecamatan-tab">
             @foreach($trends as $trend)
             <?= $trend->kecamatan ?>
             @endforeach
-        </div>
 
         {{-- Kota --}}
-        <div class="tab-pane" id="pills-kelurahan" role="tabpanel" aria-labelledby="pills-kelurahan-tab">
             @foreach($trends as $trend)
             <?= $trend->kelurahan ?>
             @endforeach
-        </div>
-    </div>
 </div>
 @endsection
 
