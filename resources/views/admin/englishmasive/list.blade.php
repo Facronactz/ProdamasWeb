@@ -25,7 +25,7 @@ English Masive Submission
             </tr>
         </thead>
         <tbody>
-            @foreach($dataemass as $english_masive)
+            @foreach($dataemas as $english_masive)
             <tr>
                 <td>{{$english_masive->id}}</td>
                 <td>{{$english_masive->judul}}</td>
