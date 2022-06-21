@@ -338,7 +338,7 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
 
     //Data Emas
     Route::get('/admin/edit-englishmasive/{dataemas_id}', [DataEmasAdminController::class, 'edit']);
-    Route::put('/admin/edit-englishmasive/{dataemas_id}', [DataEmasAdminController::class, 'update']);
+    Route::put('/admin/list-englishmasive/{dataemas_id}', [DataEmasAdminController::class, 'update']);
     Route::get('/admin/list-englishmasive', [DataEmasAdminController::class, 'index']);
     Route::delete('/admin/englishmasive/{dataemas_id}', [DataEmasAdminController::class, 'destroy']);
 
