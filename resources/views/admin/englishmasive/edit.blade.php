@@ -101,7 +101,7 @@ Edit English Masive
         <div class="alert alert-danger">
             {{ $message }}
         </div>
-        @enderror --}}
+        @enderror
  -->
     <button type="submit" class="btn btn-primary">Edit</button>
     <a href="/admin/list-englishmasive" class="btn btn-outline-primary">Back</a>
