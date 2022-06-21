@@ -1,5 +1,6 @@
 @extends('layouts.desain')
 @section('data', 'active')
+@section('angka', 'active')
 @section('koperasi', 'active')
 
 @section('title', 'Prodamas Dalam Angka')
