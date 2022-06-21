@@ -25,15 +25,15 @@ English Masive Submission
             </tr>
         </thead>
         <tbody>
-            @foreach($english_masive as $dataemas)
+            @foreach($dataemas as $english_masive)
             <tr>
-                <td>{{$dataemas->id}}</td>
-                <td>{{$dataemas->judul}}</td>
-                <td>{{$dataemas->deskripsi }}</td>
-                <td>{{$dataemas->sumber }}</td>
+                <td>{{$english_masive->id}}</td>
+                <td>{{$english_masive->judul}}</td>
+                <td>{{$english_masive->deskripsi }}</td>
+                <td>{{$english_masive->sumber }}</td>
                 <td>
-                    <form action="/admin/edit-englishmasive/{{$dataemas->id}}" method="POST">
-                        <a href="/admin/edit-englishmasive/{{$dataemas->id}}" class="btn btn-info">Edit</a>
+                    <form action="/admin/edit-englishmasive/{{$english_masive->id}}" method="POST">
+                        <a href="/admin/edit-englishmasive/{{$english_masive->id}}" class="btn btn-info">Edit</a>
                     </form>
                 </td>
             </tr>
