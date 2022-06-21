@@ -14,7 +14,7 @@
 
 <div style="padding:0 50px; margin:50px 0">
     <div class="row mx-auto">
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        {{-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="pills-kota-tab" data-bs-toggle="pill" data-bs-target="#pills-kota" type="button" role="tab" aria-controls="pills-kota" aria-selected="true">Kota</button>
             </li>
@@ -24,11 +24,11 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-kelurahan-tab" data-bs-toggle="pill" data-bs-target="#pills-kelurahan" type="button" role="tab" aria-controls="pills-kecamatan" aria-selected="false">Kelurahan</button>
             </li>
-        </ul>
-    </div>
-    <div class="tab-content" id="pills-tabContent">
+        </ul> --}}
+    {{-- </div>
+    <div class="tab-content" id="pills-tabContent"> --}}
         {{-- Isi --}}
-        <div class="tab-pane show active" id="pills-kota" role="tabpanel" aria-labelledby="pills-kota-tab">
+        {{-- <div class="tab-pane show active" id="pills-kota" role="tabpanel" aria-labelledby="pills-kota-tab">
             @foreach($trends as $trend)
             <?= $trend->kota ?>
             @endforeach
@@ -49,11 +49,16 @@
             @endforeach
         </div>
 
-    </div>
+    </div> --}}
+    @foreach($trends as $trend)
+    <?= $trend->kota ?>
+    <?= $trend->kecamatan ?>
+    <?= $trend->kelurahan ?>
+    @endforeach
 </div>
 @endsection
 
-{{-- @section('')
+{{-- @section('scripts')
 
     <script>
         $("iframe").ready(function() {
