@@ -32,8 +32,8 @@ English Masive Submission
                 <td>{{$english_masive->deskripsi }}</td>
                 <td>{{$english_masive->sumber }}</td>
                 <td>
-                    <form action="/admin/englishmasive/{{$english_masive->id}}" method="POST">
-                        <a href="/admin/englishmasive/{{$english_masive->id}}" class="btn btn-info">Edit</a>
+                    <form action="/admin/edit-englishmasive/{{$english_masive->id}}" method="POST">
+                        <a href="/admin/edit-englishmasive/{{$english_masive->id}}" class="btn btn-info">Edit</a>
                     </form>
                 </td>
             </tr>
