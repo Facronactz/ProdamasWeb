@@ -1,5 +1,6 @@
 @extends('layouts.desain')
-
+@section('e-boost', 'active')
+@section('kube', 'active')
 @section('content')
 <style>
   a {

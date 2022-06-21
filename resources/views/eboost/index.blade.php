@@ -1,5 +1,6 @@
 @extends('layouts.desain')
-
+@section('e-boost', 'active')
+@section('eboost', 'active')
 @section('head')
 <style>
     .carousel-img {
