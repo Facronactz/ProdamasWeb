@@ -1,5 +1,6 @@
 @extends('layouts.desain')
 @section('title', 'Hasil Search')
+@section('e-boost', 'active')
 @section('head')
 <link rel="stylesheet" href="{{ asset('/css/artikel.css') }}">
 @endsection
@@ -10,8 +11,10 @@
         <!-- artikel -->
         @if($keyword == 'pemasaran')
         <h3 style="font-family: Inter, sans-serif">Artikel Pemasaran</h3>
+        @section('pemasaran', 'active')
         @else
         <h3 style="font-family: Inter, sans-serif">Artikel Testimoni</h3>
+        @section('testimoni', 'active')
         @endif
 
         @if ($artikel->count())

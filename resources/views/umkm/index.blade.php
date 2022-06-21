@@ -1,5 +1,6 @@
 @extends('layouts.desain')
-
+@section('e-boost', 'active')
+@section('umkm', 'active')
 @section('content')
 <div>
   <img class="img-fluid" src="{{asset('UMKMProd/UMKM.png')}}">
@@ -10,7 +11,7 @@
       <h1><strong>UMKM</strong></h1>
       <br>
       @foreach($descriptions as $description)
-      <h4><?=$description->desc_umkm?></h4>
+      <h4><?= $description->desc_umkm ?></h4>
       @endforeach
     </div>
     <div class="mb-5">
