@@ -8,7 +8,7 @@ Edit English Masive
 
 @section('content')
 
-<form action="/admin/englishmasive/{{$dataemas->id}}" method="POST" enctype="multipart/form-data">
+<form action="/admin/edit-englishmasive/{{$dataemas->id}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('put')
     <div class="form-group">
