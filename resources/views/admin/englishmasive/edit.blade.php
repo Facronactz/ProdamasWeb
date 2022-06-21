@@ -70,7 +70,7 @@ Edit English Masive
         </div>
         @enderror
     </div>
-    
+<!--     
     <div class="form-group">
         <label for="gambar1">Gambar 1</label><br>
         <p>{{$dataemas->gambar1}}</p>
@@ -102,7 +102,7 @@ Edit English Masive
             {{ $message }}
         </div>
         @enderror --}}
-
+ -->
     <button type="submit" class="btn btn-primary">Edit</button>
     <a href="/admin/list-englishmasive" class="btn btn-outline-primary">Back</a>
 </form>
