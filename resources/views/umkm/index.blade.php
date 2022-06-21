@@ -7,8 +7,8 @@
 </div>
 <div class="container">
   <div class="m-4">
-    <div class="m-4 mb-5 text-center">
-      <h1><strong>UMKM</strong></h1>
+    <div class="m-4 mb-5">
+      <h1 class="text-center"><strong>UMKM</strong></h1>
       <br>
       @foreach($descriptions as $description)
       <h4><?= $description->desc_umkm ?></h4>
