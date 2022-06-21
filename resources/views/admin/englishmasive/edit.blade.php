@@ -8,7 +8,7 @@ Edit English Masive
 
 @section('content')
 
-<form action="/admin/englishmasive/{{$dataemas->id}}" method="POST" enctype="multipart/form-data">
+<form action="/admin/edit-englishmasive/{{$dataemas->id}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('put')
     <div class="form-group">
@@ -70,7 +70,7 @@ Edit English Masive
         </div>
         @enderror
     </div>
-{{-- 
+<!--     
     <div class="form-group">
         <label for="gambar1">Gambar 1</label><br>
         <p>{{$dataemas->gambar1}}</p>
@@ -101,8 +101,8 @@ Edit English Masive
         <div class="alert alert-danger">
             {{ $message }}
         </div>
-        @enderror --}}
-
+        @enderror
+ -->
     <button type="submit" class="btn btn-primary">Edit</button>
     <a href="/admin/list-englishmasive" class="btn btn-outline-primary">Back</a>
 </form>
