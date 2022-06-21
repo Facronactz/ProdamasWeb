@@ -41,8 +41,11 @@
         </div>
 
         <div class="tab-pane" id="pills-kelurahan" role="tabpanel" aria-labelledby="pills-kelurahan-tab">
+            test123
             @foreach($trends as $trend)
+            456
             <?= $trend->kelurahan ?>
+            789
             @endforeach
         </div>
 
