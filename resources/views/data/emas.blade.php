@@ -27,6 +27,7 @@
 
     <div class="mt-3">
         <p style="font-weight:700">
+            Analisis Deskriptif : <br>
             • Terdapat 189 spot EMAS di Kota Kediri. <br>
             • Terdapat 159 tutor EMAS di Kota Kediri. <br>
             • Jumlah partisipan EMAS di Kota Kediri adalah 2342 partisipan. <br> 
