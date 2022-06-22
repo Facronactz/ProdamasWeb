@@ -17,7 +17,7 @@
 <div id="carouselUtama" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block carousel-img w-100" src="https://prodamas.kedirikota.go.id/carouselProd/Banner Kurnia.jpg" alt="..." />
+            <img class="d-block carousel-img w-100" src="https://prodamas.kedirikota.go.id/carouselProd/Banner Kurnia.png" alt="..." />
         </div>
         {{-- <div class="carousel-item active">
                 <img src="img/header1.png" class="d-block w-100 carousel-img" alt="..." />
