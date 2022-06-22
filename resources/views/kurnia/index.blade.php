@@ -3,9 +3,18 @@
 @section('kurnia', 'active')
 @section('head')
 @section('content')
+<style>
+  a {
+    text-decoration: none;
+    color: black;
+  }
+</style>
 <div>
-    <img class="img-fluid" src="{{asset('kurniaProd/Banner Kurnia.png')}}">
-  </div>
+  <img class="img-fluid" src="{{asset('kurniaProd/Banner Kurnia.png')}}">
+</div>
+<div class="container">
+  <div class="m-4">
+
 <div style="height:4px; background-color: rgb(0, 0, 0);"> </div>
 <div class="container">
     <div class="m-4 mb-5 text-center">
