@@ -120,7 +120,7 @@ class artikelController extends Controller
                         ->sum('views');
                 // end code jumlah pengunjung
                 
-                Articleadmin::find($id)->increment('views');
+                ArticleAdmin::find($id)->increment('views');
                 $artikel = ArticleAdmin::where('id', $id)
                         ->orderBy('id', 'desc')
                         ->get();
