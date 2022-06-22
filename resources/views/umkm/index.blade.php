@@ -3,7 +3,7 @@
 @section('umkm', 'active')
 @section('content')
 <div>
-  <img class="img-fluid" src="{{asset('UMKMProd/UMKM.png')}}">
+  <img class="img-fluid" src="{{asset('UMKMProd/Banner Umkm.png')}}">
 </div>
 <div class="container">
   <div class="m-4">
