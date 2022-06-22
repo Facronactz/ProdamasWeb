@@ -3,7 +3,7 @@
 @section('wirausaha', 'active')
 @section('content')
 <div>
-    <img class="img-fluid" src="{{asset('wirausahaProd/WIRAUSAHA.png')}}">
+    <img class="img-fluid" src="{{asset('wirausahaProd/Banner-Wirausaha.png')}}">
 </div>
 <div class="container">
     <div class="m-4">
