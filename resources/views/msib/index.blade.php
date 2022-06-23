@@ -34,7 +34,7 @@
                     <blockquote class="blockquote">
                         <h1>{{ $divisi->nama }}</h1>
                     </blockquote>
-                    <figcaption class="blockquote-footer">
+                    <figcaption class="blockquote-footer text-white-50">
                         {{ $divisi->slogan }}
                     </figcaption>
                 </figure>
@@ -51,8 +51,8 @@
                                     <span>{{ $item->domisili }}</span><br>
                                     <span>{{ $item->prodi }}</span><br>
                                     <span>{{ $item->univ }}</span><br>
-                                    <a href="{{ $item->ig }}" class="text-black"><i class="fab fa-instagram"></i></a>
-                                    <a href="{{ $item->linkedin }}" class="text-black"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="{{ $item->ig }}" class="text-black"><i class="fab fa-instagram link-light"></i></a>
+                                    <a href="{{ $item->linkedin }}" class="text-black"><i class="fab fa-linkedin-in link-light"></i></a>
                                 </div>
                             @else
                                 <div class="col">
@@ -61,8 +61,8 @@
                                     <span>{{ $item->domisili }}</span><br>
                                     <span>{{ $item->prodi }}</span><br>
                                     <span>{{ $item->univ }}</span><br>
-                                    <a href="{{ $item->ig }}" class="text-black"><i class="fab fa-instagram"></i></a>
-                                    <a href="{{ $item->linkedin }}" class="text-black"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="{{ $item->ig }}" class="text-black"><i class="fab fa-instagram link-light"></i></a>
+                                    <a href="{{ $item->linkedin }}" class="text-black"><i class="fab fa-linkedin-in link-light"></i></a>
                                 </div>
                             @endif
                         @endif
