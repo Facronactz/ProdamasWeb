@@ -23,7 +23,7 @@
             @foreach ($divisions as $divisi)
                 <h1 class="mt-3">{{ $divisi->nama }}</h1>
                 <small class="text-muted">{{ $divisi->slogan }}</small>
-                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-2 mb-4">
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-2 mb-4 mx-auto">
                     @foreach ($msib as $item)
                         @if ($item->divisi == $divisi->kode)
                             @if ($item->id % 10 == 1)
