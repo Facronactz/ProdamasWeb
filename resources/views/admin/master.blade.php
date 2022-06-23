@@ -75,7 +75,7 @@
                 <!-- Default box -->
                 <div class="card">
                     <div class="card-body">
-                        
+
                         @hasSection('content')
                             @yield('content')
                         @else
@@ -103,38 +103,40 @@
                                             }
                                             $current = $menu_level;
                                         @endphp
-                                            @if ($divide)
+                                        @if ($divide)
                                             @php
-                                                $header = DB::table('users_level')->where('level', '=', $current)->first();
+                                                $header = DB::table('users_level')
+                                                    ->where('level', '=', $current)
+                                                    ->first();
                                             @endphp
                                             <div class="mb-4" style="width: 100%; height: 40px; border-bottom: 1px solid black; text-align: center">
                                                 <span style="font-size: 40px; background-color: #ffffff; padding: 0 10px;">
-                                                    {{$header->name}}
+                                                    {{ $header->name }}
                                                     <!--Padding is optional-->
                                                 </span>
                                             </div>
-                                            @endif
-                                            @if ($level == 'super' || $menu->level == 'basic' || $menu->level == $level)
-                                                <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2" style="background: {{ $menu->color }}; min-width: 200px;">
-                                                    <div class="card-body row">
-                                                        <div class="m-auto" style="color: #f4f6f9;">
-                                                            <i class="{{ $menu->icon }} fa-7x"></i>
-                                                            <a href="{{ $menu->link }}" class="stretched-link"></a>
-                                                            <h2>{{ $menu->name }}</h2>
-                                                        </div>
+                                        @endif
+                                        @if ($level == 'super' || $menu->level == 'basic' || $menu->level == $level)
+                                            <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2" style="background: {{ $menu->color }}; min-width: 200px;">
+                                                <div class="card-body row">
+                                                    <div class="m-auto" style="color: #f4f6f9;">
+                                                        <i class="{{ $menu->icon }} fa-7x"></i>
+                                                        <a href="{{ $menu->link }}" class="stretched-link"></a>
+                                                        <h2>{{ $menu->name }}</h2>
                                                     </div>
                                                 </div>
-                                            @else
-                                                <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2 btn-secondary" style="min-width: 200px;">
-                                                    <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Fungsi dinonaktifkan untuk akun ini. Silahkan hubungi admin">
-                                                        <div class="card-body row">
-                                                            <i class="{{ $menu->icon }} fa-7x"></i>
-                                                            <h2>{{ $menu->name }}</h2>
-                                                        </div>
-                                                    </span>
-                                                </div>
-                                            @endif
-                                        @endforeach
+                                            </div>
+                                        @else
+                                            <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2 btn-secondary" style="min-width: 200px;">
+                                                <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Fungsi dinonaktifkan untuk akun ini. Silahkan hubungi admin">
+                                                    <div class="card-body row">
+                                                        <i class="{{ $menu->icon }} fa-7x"></i>
+                                                        <h2>{{ $menu->name }}</h2>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        @endif
+                                    @endforeach
                                 </div>
                             </div>
                         @endif
