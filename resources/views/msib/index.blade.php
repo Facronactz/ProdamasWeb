@@ -34,17 +34,18 @@
                     <blockquote class="blockquote">
                         <div class="row">
                             <div class="col" style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
-                            <span class="col-auto" style="font-size: 40px; padding: 0 10px;">
+                            <span class="col-12 col-sm-auto" style="font-size: 40px; padding: 0 10px;">
                                 {{ $divisi->nama }}
                                 <!--Padding is optional-->
                             </span>
-                            <div class="col" style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
+                            <div class="col d-none d-sm-block" style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
                         </div>
                         {{-- <h1>{{ $divisi->nama }}</h1> --}}
                     </blockquote>
                     <figcaption class="blockquote-footer text-white-50">
                         {{ $divisi->slogan }}
                     </figcaption>
+                    <div class="col-12 d-block d-sm-none" style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
                 </figure>
                 {{-- <h1 class="mt-3">{{ $divisi->nama }}</h1>
                 <small class="text-muted">{{ $divisi->slogan }}</small> --}}
