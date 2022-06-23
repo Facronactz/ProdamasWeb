@@ -13,10 +13,19 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
-    <style></style>
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            color: white;
+        }
+    </style>
 </head>
 
-<body>
+<body background="{{asset('img/bg_msib.png')}}">
     <div class="container-xl overflow-hidden">
         <div class="row text-center">
             <h1 class="display-3">Tim Magang Merdeka Batch 2<br> Pemerintahan Kota Kediri</h1>
