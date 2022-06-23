@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\UMKM;
 use App\Http\Controllers\EboostAdmin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -380,7 +379,7 @@ Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 //Route search artikel
 Route::get('/artikel', [artikelController::class, 'index']);
-Route::get('/searchartikel', [SearchController::class, 'searchartikel'])->name('search');
+Route::get('searchartikel', [SearchController::class, 'searchartikel'])->name('search');
 
 //Route search audio
 Route::resource('/audio', AudioController::class);
