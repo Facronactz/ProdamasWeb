@@ -22,9 +22,11 @@
         </div>
 
 
-        <!-- Sidebar Menu -->        
-        <div class="col-md-3 col-lg-2 sidebar-offcanvas h-100 overflow-auto bg-light pl-0" id="sidebar" role="navigation">
-            <ul class="nav flex-column sticky-top pl-0 pt-5 mt-3">
+        <!-- Sidebar Menu -->
+        
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
                 <li class="nav-item">
                     <a href="/admin" class="nav-link @yield('dashboard')">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -44,7 +46,7 @@
                     @endif
                 @endforeach
             </ul>
-        </div>
+        </nav>
         <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
