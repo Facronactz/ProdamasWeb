@@ -120,7 +120,7 @@ class artikelController extends Controller
                         ->sum('views');
                 // end code jumlah pengunjung
 
-                // ArticleAdmin::find($id)->increment('views');
+                ArticleAdmin::find($id)->increment('views');
                 $artikel = ArticleAdmin::where('id', $id)
                         ->orderBy('id', 'desc')
                         ->get();
@@ -133,6 +133,6 @@ class artikelController extends Controller
                         $tags = $item->tags;
                 }
                 $menus = Menu::where('status', 'Show')->get();
-                return view('artikel.artikelLay', compact('artikel', 'artikelupdate', 'totalviews', 'counter', 'menus'));
+                return view('artikel.artikelLay', compact('artikel', 'artikelupdate', 'tags', 'totalviews', 'counter', 'menus'));
         }
 }
