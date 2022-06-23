@@ -33,7 +33,7 @@ class MenuAdminController extends Controller
 
     public function index()
     {
-        $menus = menu::groupBy('id')->get();
+        $menus = menu::latest()->get();
         return view('admin.menu.list', compact('menus'));
     }
 

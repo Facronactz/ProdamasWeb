@@ -20,7 +20,7 @@ class KubeAdminController extends Controller
     {
         $kube = Kube::all();
         $picture = Pict::all();
-        $daftar = KubeDaftar::all();
+        $daftar = KubeDaftar::latest()->get();
         return view('admin.kube.list', compact('kube', 'picture', 'daftar'));
     }
 

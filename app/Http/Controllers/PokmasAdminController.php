@@ -40,7 +40,7 @@ class PokmasAdminController extends Controller
 
     public function index()
     {
-        $pokmass = pokmas::groupBy('id')->get();
+        $pokmass = pokmas::latest()->get();
         $descriptions = DescriptionAdmin::first()->get();
         return view('admin.pokmas.list', compact('pokmass', 'descriptions'));
     }

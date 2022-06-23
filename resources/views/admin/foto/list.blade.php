@@ -3,7 +3,7 @@
 @section('foto', 'active')
 
 @section('title')
-    Foto Kegiatan
+Foto Kegiatan
 @endsection
 
 @section('content')
@@ -26,9 +26,9 @@
         </tr>
     </thead>
     <tbody>
-        @forelse ($posts as $post)
+        @forelse ($posts as $key=>$post)
         <tr>
-            <th scope="row">{{ $post->id }}</th>
+            <th scope="row">{{$key + 1}}</th>
             <td>{{ $post->title }}</td>
             <td>{{ $post->body }}</td>
             <!-- <td>{{ $post->cover }}</td> -->
@@ -38,8 +38,7 @@
                     <a href="/admin/foto/{{$post->id}}" class="btn btn-info">Edit</a>
                     @csrf
                     @method('DELETE')
-                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Foto?')"
-                        value="Delete">
+                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Foto?')" value="Delete">
                 </form>
             </td>
         </tr>
@@ -53,9 +52,9 @@
 @endsection
 
 @section('table')
-    <script>
-      $(document).ready(function() {
-          $('#tableFoto').DataTable(); //sesuikan id tabel yg dibat
-      } );
-    </script>
+<script>
+    $(document).ready(function() {
+        $('#tableFoto').DataTable(); //sesuikan id tabel yg dibat
+    });
+</script>
 @endsection
