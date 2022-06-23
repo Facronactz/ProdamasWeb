@@ -30,15 +30,15 @@
         <div class="row text-center">
             <h1 class="display-3">Tim Magang Merdeka Batch 2<br> Pemerintahan Kota Kediri</h1>
             @foreach ($divisions as $divisi)
-                <figure class="text-center">
+                <figure class="text-center mt-5">
                     <blockquote class="blockquote">
                         <div class="row row-cols-3">
-                            <div class="mt-3 col" style="height: 40px; border-bottom: 1px solid black; text-align: center"></div>
+                            <div class="col" style="height: 40px; border-bottom: 1px solid black; text-align: center"></div>
                             <span class="col" style="font-size: 40px; padding: 0 10px;">
                                 {{ $divisi->nama }}
                                 <!--Padding is optional-->
                             </span>
-                            <div class="mb-2 col" style="height: 40px; border-bottom: 1px solid black; text-align: center"></div>
+                            <div class="col" style="height: 40px; border-bottom: 1px solid black; text-align: center"></div>
                         </div>
                         {{-- <h1>{{ $divisi->nama }}</h1> --}}
                     </blockquote>
