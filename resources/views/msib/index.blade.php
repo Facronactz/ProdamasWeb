@@ -26,7 +26,7 @@
                 <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-2">
                     @foreach ($msib as $item)
                         @if ($item->divisi == $divisi->kode)
-                            @if ($item->id % 10 == 0)
+                            @if ($item->id % 10 == 1)
                                 <div class="col col-lg col-md-12">
                                 <img style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover" src="{{ $item->foto }}" alt="" srcset="">
                                 <h3>{{ $item->nama }}</h3>
