@@ -28,7 +28,7 @@
 
                 <li class="nav-item">
                     <a href="/admin" class="nav-link @yield('dashboard')">
-                        <i class="nav-icon fas fa-tachometer-alt-fast"></i>
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
