@@ -103,7 +103,7 @@ class UMKMAdminController extends Controller
     public function index()
     {
         $picts = Pict::first()->get();
-        $umkms = UMKM::all();
+        $umkms = UMKM::latest()->get();
         $descriptions = DescriptionAdmin::first()->get();
         return view('admin.umkm.list', compact('picts', 'umkms', 'descriptions'));
     }

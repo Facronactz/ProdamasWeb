@@ -57,7 +57,7 @@ class VideoAdminController extends Controller
 
     public function index()
     {
-        $videos = VideoAdmin::all();
+        $videos = VideoAdmin::latest()->get();
         return view('admin.video.list', compact('videos'));
     }
 

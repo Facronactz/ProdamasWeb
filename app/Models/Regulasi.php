@@ -11,7 +11,7 @@ class Regulasi extends Model
     use HasFactory;
     protected $table = "regulasi";
 
-    protected $fillable = ["judul", "file", "sumber"];
+    protected $fillable = ["judul", "file", "sumber", "created_at", "updated_at"];
 
     public function getCreatedAtAttribute()
     {
