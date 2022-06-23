@@ -26,9 +26,7 @@ class DataEmasAdminController extends Controller
         $request->validate([
             'judul' => 'required',
             'deskripsi' => 'required',
-            'judul_tutor' => 'required',
             'tableau_tutor' => 'required',
-            'judul_partisipan' => 'required',
             'tableau_partisipan' => 'required',
             'konten' => 'required',
             'sumber' => 'required',
