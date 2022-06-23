@@ -25,13 +25,21 @@
     </style>
 </head>
 
-<body background="{{asset('img/bg_msib.png')}}">
+<body background="{{ asset('img/bg_msib.png') }}">
     <div class="container-xl overflow-hidden">
         <div class="row text-center">
             <h1 class="display-3">Tim Magang Merdeka Batch 2<br> Pemerintahan Kota Kediri</h1>
             @foreach ($divisions as $divisi)
-                <h1 class="mt-3">{{ $divisi->nama }}</h1>
-                <small class="text-muted">{{ $divisi->slogan }}</small>
+                <figure class="text-center">
+                    <blockquote class="blockquote">
+                        <h1>{{ $divisi->nama }}</h1>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        {{ $divisi->slogan }}
+                    </figcaption>
+                </figure>
+                {{-- <h1 class="mt-3">{{ $divisi->nama }}</h1>
+                <small class="text-muted">{{ $divisi->slogan }}</small> --}}
                 <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 gy-3 gx-1 px-2 px-md-0 mb-4 mx-auto">
 
                     @foreach ($msib as $item)
