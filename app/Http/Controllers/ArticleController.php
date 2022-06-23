@@ -51,7 +51,7 @@ class ArticleController extends Controller
 
     public function index()
     {
-        $articles = ArticleAdmin::all();
+        $articles = ArticleAdmin::orderBy('id')->get();
         return view('admin.article.list', compact('articles'));
     }
 
