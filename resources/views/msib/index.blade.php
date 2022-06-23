@@ -34,7 +34,7 @@
                     <blockquote class="blockquote">
                         <div class="row row-cols-3">
                             <div class="mb-2 mt-3 col" style="width: 100%; height: 40px; border-bottom: 1px solid black; text-align: center"></div>
-                            <span class="col" style="font-size: 40px; background-color: #ffffff; padding: 0 10px;">
+                            <span class="col" style="font-size: 40px; padding: 0 10px;">
                                 {{ $divisi->nama }}
                                 <!--Padding is optional-->
                             </span>
