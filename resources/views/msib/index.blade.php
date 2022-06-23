@@ -33,12 +33,12 @@
                 <figure class="text-center mt-5">
                     <blockquote class="blockquote">
                         <div class="row row-cols-3">
-                            <div class="col" style="height: 40px; border-bottom: 1px solid black; text-align: center"></div>
-                            <span class="col" style="font-size: 40px; padding: 0 10px;">
+                            <div class="col" style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
+                            <span class="col-auto" style="font-size: 40px; padding: 0 10px;">
                                 {{ $divisi->nama }}
                                 <!--Padding is optional-->
                             </span>
-                            <div class="col" style="height: 40px; border-bottom: 1px solid black; text-align: center"></div>
+                            <div class="col" style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
                         </div>
                         {{-- <h1>{{ $divisi->nama }}</h1> --}}
                     </blockquote>
