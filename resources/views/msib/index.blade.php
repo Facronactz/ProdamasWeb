@@ -24,51 +24,17 @@
             <h1 class="mt-3">Website dan Aplikasi</h1>
             <small class="text-muted">In Website We Trust</small>
             <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-2">
+                @foreach (msib as item)
                 <div class="col col-lg col-md-12">
                     <img style="border-radius: 50%;" src="https://via.placeholder.com/400x400?text=Poto" alt="" srcset="">
-                    <h3>Farro</h3>
-                    <span>Jawa Timur</span><br>
-                    <span>Teknik Informatika</span><br>
-                    <span>Universitas Negeri Surabaya </span><br>
+                    <h3>$item->nama</h3>
+                    <span>$item->domisili</span><br>
+                    <span>$item->prodi</span><br>
+                    <span>$item->univ</span><br>
                     <a href="" class="text-black"><i class="fab fa-instagram"></i></a>
                     <a href="" class="text-black"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <div class="col mb-2">
-                    <img style="border-radius: 50%;" src="https://via.placeholder.com/400x400?text=Poto" alt="" srcset="">
-                    <h3>Burhan</h3>
-                    <span>Jawa Timur</span><br>
-                    <span>Teknik Informatika</span><br>
-                    <span>Universitas Negeri Surabaya </span><br>
-                    <a href="" class="text-black"><i class="fab fa-instagram"></i></a>
-                    <a href="" class="text-black"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <div class="col mb-2">
-                    <img style="border-radius: 50%;" src="https://via.placeholder.com/400x400?text=Poto" alt="" srcset="">
-                    <h3>Nina</h3>
-                    <span>Jawa Timur</span><br>
-                    <span>Teknik Informatika</span><br>
-                    <span>Universitas Negeri Surabaya </span><br>
-                    <a href="" class="text-black"><i class="fab fa-instagram"></i></a>
-                    <a href="" class="text-black"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <div class="col mb-2">
-                    <img style="border-radius: 50%;" src="https://via.placeholder.com/400x400?text=Poto" alt="" srcset="">
-                    <h3>Anggie</h3>
-                    <span>Jawa Timur</span><br>
-                    <span>Teknik Informatika</span><br>
-                    <span>Universitas Negeri Surabaya </span><br>
-                    <a href="" class="text-black"><i class="fab fa-instagram"></i></a>
-                    <a href="" class="text-black"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <div class="col mb-2">
-                    <img style="border-radius: 50%;" src="https://via.placeholder.com/400x400?text=Poto" alt="" srcset="">
-                    <h3>Bima</h3>
-                    <span>Jawa Timur</span><br>
-                    <span>Teknik Informatika</span><br>
-                    <span>Universitas Negeri Surabaya </span><br>
-                    <a href="" class="text-black"><i class="fab fa-instagram"></i></a>
-                    <a href="" class="text-black"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
