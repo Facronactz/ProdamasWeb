@@ -89,7 +89,7 @@
                                 $level = $user->level;
                                 $current = '';
                             @endphp
-                            <div class="container-fluid">
+                            <div class="container-fluid overflow-auto h-100">
                                 <div class="g-3 row justify-content-center my-3">
 
                                     {{-- Sidebar dan Dashboard admin ditambahkan secara manual di tabel DB 'admin_menu' --}}
