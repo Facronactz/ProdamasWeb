@@ -379,7 +379,7 @@ Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout')
 Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 //Route search artikel
-Route::resource('/artikel', artikelController::class);
+Route::get('/artikel', [artikelController::class, 'index']);
 Route::get('/searchartikel', [SearchController::class, 'searchartikel'])->name('search');
 
 //Route search audio
