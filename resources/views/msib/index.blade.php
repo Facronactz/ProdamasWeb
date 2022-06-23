@@ -27,10 +27,10 @@
                 @foreach ($msib as $item)
                 <div class="col col-lg col-md-12">
                     <img style="border-radius: 50%;" src="https://via.placeholder.com/400x400?text=Poto" alt="" srcset="">
-                    <h3>$item->nama</h3>
-                    <span>$item->domisili</span><br>
-                    <span>$item->prodi</span><br>
-                    <span>$item->univ</span><br>
+                    <h3>{{$item->nama}}</h3>
+                    <span>{{$item->domisili}}</span><br>
+                    <span>{{$item->prodi}}</span><br>
+                    <span>{{$item->univ}}</span><br>
                     <a href="" class="text-black"><i class="fab fa-instagram"></i></a>
                     <a href="" class="text-black"><i class="fab fa-linkedin-in"></i></a>
                 </div>
