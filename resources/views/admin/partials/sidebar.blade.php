@@ -26,6 +26,13 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
+                <li class="nav-item">
+                    <a href="/admin" class="nav-link @yield('dashboard')">
+                        <i class="nav-icon fas fa-tachometer-alt-fast"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                
                 {{-- Sidebar dan Dashboard admin ditambahkan secara manual di tabel DB 'admin_menu' --}}
                 @foreach ($menus as $menu)
                     @if ($level == 'super' || $menu->level == 'basic' || $menu->level == $level)

@@ -79,6 +79,7 @@
                         @hasSection('content')
                             @yield('content')
                         @else
+                            @section('dashboard', 'active')
                             {{-- Admin Menu --}}
 
                             @php
