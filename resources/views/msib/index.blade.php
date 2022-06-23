@@ -30,7 +30,7 @@
         <div class="row text-center">
             <h1 class="display-3">Tim Magang Merdeka Batch 2<br> Pemerintahan Kota Kediri</h1>
             @foreach ($divisions as $divisi)
-                <figure class="text-center mt-5">
+                <figure class="text-center mt-5 mb-0">
                     <blockquote class="blockquote">
                         <div class="row">
                             <div class="col" style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
@@ -51,8 +51,8 @@
                 </figure>
                 {{-- <h1 class="mt-3">{{ $divisi->nama }}</h1>
                 <small class="text-muted">{{ $divisi->slogan }}</small> --}}
-                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 gy-3 gx-1 px-2 px-md-0 mb-4 mx-auto">
 
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 gy-3 gx-1 px-2 px-md-0 mt-0 mb-4 mx-auto">
                     @foreach ($msib as $item)
                         @if ($item->divisi == $divisi->kode)
                             @if ($item->id % 10 == 1)
