@@ -56,7 +56,7 @@
                                 </div>
                             @else
                                 <div class="col">
-                                    <img class="img-fluid" style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover" src="{{ $item->foto }}" alt="" srcset="">
+                                    <img loading="lazy" class="img-fluid" style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover" src="{{ $item->foto }}" alt="" srcset="">
                                     <h3>{{ $item->nama }}</h3>
                                     <span>{{ $item->domisili }}</span><br>
                                     <span>{{ $item->prodi }}</span><br>
