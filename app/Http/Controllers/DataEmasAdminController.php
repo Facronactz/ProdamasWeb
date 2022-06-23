@@ -39,9 +39,7 @@ class DataEmasAdminController extends Controller
         $dataemas->update([
             'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
-            'judul_tutor' => $request->judul_tutor,
             'tableau_tutor' => $request->tableau_tutor,
-            'judul_partisipan' => $request->judul_partisipan,
             'tableau_partisipan' => $request->tableau_partisipan,
             'konten' => $request->konten,
             'sumber' => $request->sumber,

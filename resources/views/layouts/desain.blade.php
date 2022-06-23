@@ -361,7 +361,7 @@
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout" style="border-radius: 23px;padding:0px;margin-left:-10rem;">
                                         <li class="" style="padding:5px">
                                             <div>
-                                                <form action="search">
+                                                <form action="/search">
                                                     <div style="display:flex; align-items: center; vertical-align: middle;">
                                                         <div>
                                                             <input class="input-search" type="text" placeholder="Mau cari apa?" name="search" value="{{ request('search') }}" aria-label="Search">
