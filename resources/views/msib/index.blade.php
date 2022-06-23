@@ -26,7 +26,7 @@
             <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-2">
                 @foreach ($msib as $item)
                 <div class="col col-lg col-md-12">
-                    <img style="border-radius: 50%;" src="https://via.placeholder.com/400x400?text=Poto" alt="" srcset="">
+                    <img style="border-radius: 50%;" src="{{$item->foto}}" alt="" srcset="">
                     <h3>{{$item->nama}}</h3>
                     <span>{{$item->domisili}}</span><br>
                     <span>{{$item->prodi}}</span><br>
