@@ -488,7 +488,7 @@
                     <div class="footer-copyright footer-link" style="color: white">
                         <div class="row row-cols-1 row-cols-md-2">
                             <span class="col">&copy; 2022 Pemerintah Kota Kediri</span>
-                            <span class="col"><strong>Supported by</strong> Dinas Komunikasi dan Informatika & <a class="footer-link" href="{{ url('msib') }}" target="_blank">Tim Magang Merdeka</a></span>
+                            <span class="col"><strong>Supported by</strong> Dinas Komunikasi dan Informatika & <a class="footer-link link-light" href="{{ url('msib') }}" target="_blank">Tim Magang Merdeka</a></span>
                         </div>
                     </div>
                 </div>
