@@ -24,7 +24,7 @@
             <h1 class="mt-3">Website dan Aplikasi</h1>
             <small class="text-muted">In Website We Trust</small>
             <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-2">
-                @foreach (msib as item)
+                @foreach ($msib as $item)
                 <div class="col col-lg col-md-12">
                     <img style="border-radius: 50%;" src="https://via.placeholder.com/400x400?text=Poto" alt="" srcset="">
                     <h3>$item->nama</h3>
