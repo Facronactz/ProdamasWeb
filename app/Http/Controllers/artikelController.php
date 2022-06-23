@@ -133,6 +133,6 @@ class artikelController extends Controller
                         $tags = $item->tags;
                 }
                 $menus = Menu::where('status', 'Show')->get();
-                return view('artikel.artikelLay', compact('artikel', 'artikelupdate', 'tags', 'totalviews', 'counter', 'menus'));
+                return view('artikel.artikelLay', compact('artikel', 'artikelupdate', 'totalviews', 'counter', 'menus'));
         }
 }
