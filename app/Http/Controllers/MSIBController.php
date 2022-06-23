@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
  
 use App\Http\Controllers\Controller;
+use App\Models\Divisi;
 use App\Models\MSIB;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
@@ -24,6 +25,7 @@ public function index()
             ->sum('views');
         $menus = Menu::where('status', 'Show')->get();
         $msib = MSIB::first()->get();
-        return view('msib.index', compact('counter','totalviews', 'menus', 'msib'));
+        $divisions = Divisi::first()->get();
+        return view('msib.index', compact('counter','totalviews', 'menus', 'msib', 'divisions'));
     }
 }
