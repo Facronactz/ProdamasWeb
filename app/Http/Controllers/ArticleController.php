@@ -115,6 +115,8 @@ class ArticleController extends Controller
                 'article' => $request->article
             ]);
             $hsl = explode(",", $request->tags);
+            echo $hsl;
+            die();
             $article->retag($hsl);
         }
 
