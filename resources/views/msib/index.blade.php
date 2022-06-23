@@ -32,7 +32,13 @@
             @foreach ($divisions as $divisi)
                 <figure class="text-center">
                     <blockquote class="blockquote">
-                        <h1>{{ $divisi->nama }}</h1>
+                        <div class="mb-4" style="width: 100%; height: 40px; border-bottom: 1px solid black; text-align: center">
+                            <span style="font-size: 40px; background-color: #ffffff; padding: 0 10px;">
+                                {{ $divisi->nama }}
+                                <!--Padding is optional-->
+                            </span>
+                        </div>
+                        {{-- <h1>{{ $divisi->nama }}</h1> --}}
                     </blockquote>
                     <figcaption class="blockquote-footer text-white-50">
                         {{ $divisi->slogan }}
