@@ -48,7 +48,7 @@
 
 <body class="hold-transition sidebar-mini">
     <!-- Site wrapper -->
-    <div class="wrapper">
+    <div class="wrapper h-100">
         <!-- Navbar -->
         @include('admin.partials.navbar')
         <!-- /.navbar -->
