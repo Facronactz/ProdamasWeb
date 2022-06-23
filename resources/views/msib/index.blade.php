@@ -45,7 +45,7 @@
                     <figcaption class="blockquote-footer text-white-50">
                         {{ $divisi->slogan }}
                     </figcaption>
-                    <div class="col-12 d-block d-sm-none" style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
+                    <div class="col-12 d-block d-sm-none" style="border-bottom: 1px solid white; text-align: center"></div>
                 </figure>
                 {{-- <h1 class="mt-3">{{ $divisi->nama }}</h1>
                 <small class="text-muted">{{ $divisi->slogan }}</small> --}}
