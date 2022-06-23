@@ -71,7 +71,7 @@ class ArticleController extends Controller
         //         $tagg = trim($tagg, ',');
         //     }
         // }
-        foreach ($artikel as $item) {
+        foreach ($article as $item) {
             $tagg = $tagg . ',' . $item->tag_name;
             $tagg = trim($tagg, ',');
         }
