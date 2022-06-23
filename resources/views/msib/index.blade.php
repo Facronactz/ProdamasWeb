@@ -26,7 +26,8 @@
                 <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-2">
                     @foreach ($msib as $item)
                         @if ($item->divisi == $divisi->kode)
-                            <div class="col col-lg col-md-12">
+                            @if ($item->id % 10 == 0)
+                                <div class="col col-lg col-md-12">
                                 <img style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover" src="{{ $item->foto }}" alt="" srcset="">
                                 <h3>{{ $item->nama }}</h3>
                                 <span>{{ $item->domisili }}</span><br>
@@ -34,7 +35,19 @@
                                 <span>{{ $item->univ }}</span><br>
                                 <a href="{{ $item->ig }}" class="text-black"><i class="fab fa-instagram"></i></a>
                                 <a href="{{ $item->linkedin }}" class="text-black"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
+                                </div>
+
+                            @else
+                                <div class="col">
+                                <img style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover" src="{{ $item->foto }}" alt="" srcset="">
+                                <h3>{{ $item->nama }}</h3>
+                                <span>{{ $item->domisili }}</span><br>
+                                <span>{{ $item->prodi }}</span><br>
+                                <span>{{ $item->univ }}</span><br>
+                                <a href="{{ $item->ig }}" class="text-black"><i class="fab fa-instagram"></i></a>
+                                <a href="{{ $item->linkedin }}" class="text-black"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            @endif
                         @endif
                     @endforeach
                 </div>
