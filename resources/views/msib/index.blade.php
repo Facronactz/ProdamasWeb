@@ -21,7 +21,7 @@
         <div class="row text-center">
             <h1 class="display-3">Tim Magang Merdeka Batch 2<br> Pemerintahan Kota Kediri</h1>
             @foreach ($divisions as $divisi)
-                <h1 class="mt-3">{{ $divisi->name }}</h1>
+                <h1 class="mt-3">{{ $divisi->nama }}</h1>
                 <small class="text-muted">{{ $divisi->slogan }}</small>
                 <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-2">
                     @foreach ($msib as $item)
