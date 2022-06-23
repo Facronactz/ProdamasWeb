@@ -32,11 +32,13 @@
             @foreach ($divisions as $divisi)
                 <figure class="text-center">
                     <blockquote class="blockquote">
-                        <div class="mb-4" style="width: 100%; height: 40px; border-bottom: 1px solid black; text-align: center">
-                            <span style="font-size: 40px; background-color: #ffffff; padding: 0 10px;">
+                        <div class="row row-cols-3">
+                            <div class="mb-2 mt-3 col" style="width: 100%; height: 40px; border-bottom: 1px solid black; text-align: center"></div>
+                            <span class="col" style="font-size: 40px; background-color: #ffffff; padding: 0 10px;">
                                 {{ $divisi->nama }}
                                 <!--Padding is optional-->
                             </span>
+                            <div class="mb-2 mt-3 col" style="width: 100%; height: 40px; border-bottom: 1px solid black; text-align: center"></div>
                         </div>
                         {{-- <h1>{{ $divisi->nama }}</h1> --}}
                     </blockquote>
