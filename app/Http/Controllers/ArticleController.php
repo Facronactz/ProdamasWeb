@@ -71,8 +71,10 @@ class ArticleController extends Controller
         //         $tagg = trim($tagg, ',');
         //     }
         // }
-            $tagg = $tagg . ',' . $article->tag_name;
+        foreach ($article->tagged as $item) {
+            $tagg = $tagg . ',' . $item->tag_name;
             $tagg = trim($tagg, ',');
+        }
 
         return view('admin.article.edit', compact('article', 'tagg'));
     }
