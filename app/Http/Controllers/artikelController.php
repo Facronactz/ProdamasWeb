@@ -24,20 +24,20 @@ class artikelController extends Controller
                 // total
                 DB::table('counters')->increment('views');
                 $counter = DB::table('counters')->get();
-                
+
 
                 // code jumlah pengunjung
                 $artikel = DB::table('articles')
                         ->select(DB::raw('views'));
                 $counter = DB::table('counters')
                         ->select(DB::raw('views'));
-		        $totalviews = DB::table('tulis_ceritas')
+                $totalviews = DB::table('tulis_ceritas')
                         ->select(DB::raw('views'))
                         ->unionAll($artikel)
                         ->unionAll($counter)
                         ->sum('views');
                 // end code jumlah pengunjung
-            
+
                 $artikel = ArticleAdmin::where('status', 'published')
                         ->orderBy('id', 'desc')
                         ->paginate(4);
@@ -47,7 +47,7 @@ class artikelController extends Controller
                         ->take(3)
                         ->get();
                 $menus = Menu::where('status', 'Show')->get();
-                return view('artikel.index', compact('artikel', 'artikelupdate', 'totalviews','counter', 'menus'));
+                return view('artikel.index', compact('artikel', 'artikelupdate', 'totalviews', 'counter', 'menus'));
         }
 
         public function beranda()
@@ -55,20 +55,20 @@ class artikelController extends Controller
                 // total
                 DB::table('counters')->increment('views');
                 $counter = DB::table('counters')->get();
-                
+
 
                 // code jumlah pengunjung
                 $artikel = DB::table('articles')
                         ->select(DB::raw('views'));
                 $counter = DB::table('counters')
                         ->select(DB::raw('views'));
-		        $totalviews = DB::table('tulis_ceritas')
+                $totalviews = DB::table('tulis_ceritas')
                         ->select(DB::raw('views'))
                         ->unionAll($artikel)
                         ->unionAll($counter)
                         ->sum('views');
                 // end code jumlah pengunjung
-            
+
                 $artikel = ArticleAdmin::where('status', 'published')
                         ->orderBy('id', 'desc')
                         ->take(6)
@@ -81,7 +81,7 @@ class artikelController extends Controller
                 $posts = Post::orderBy('id', 'desc')
                         ->take(3)
                         ->get();
-                
+
                 $images = Image::orderBy('id', 'desc')
                         ->take(3)
                         ->get();
@@ -106,21 +106,21 @@ class artikelController extends Controller
                 // total
                 DB::table('counters')->increment('views');
                 $counter = DB::table('counters')->get();
-                
+
 
                 // code jumlah pengunjung
                 $artikel = DB::table('articles')
                         ->select(DB::raw('views'));
                 $counter = DB::table('counters')
                         ->select(DB::raw('views'));
-		        $totalviews = DB::table('tulis_ceritas')
+                $totalviews = DB::table('tulis_ceritas')
                         ->select(DB::raw('views'))
                         ->unionAll($artikel)
                         ->unionAll($counter)
                         ->sum('views');
                 // end code jumlah pengunjung
-                
-                ArticleAdmin::find($id)->increment('views');
+
+                // ArticleAdmin::find($id)->increment('views');
                 $artikel = ArticleAdmin::where('id', $id)
                         ->orderBy('id', 'desc')
                         ->get();
@@ -129,25 +129,10 @@ class artikelController extends Controller
                         ->orderBy('id', 'desc')
                         ->take(3)
                         ->get();
-                foreach ($artikel as $item){
+                foreach ($artikel as $item) {
                         $tags = $item->tags;
                 }
                 $menus = Menu::where('status', 'Show')->get();
-                return view('artikel.artikelLay', compact('artikel', 'artikelupdate', 'tags', 'totalviews','counter', 'menus'));
+                return view('artikel.artikelLay', compact('artikel', 'artikelupdate', 'tags', 'totalviews', 'counter', 'menus'));
         }
-
-        // public function ShareWidget()
-        // {
-        //     $shareComponent = Share::page(
-        //         'https://www.positronx.io/create-autocomplete-search-in-laravel-with-typeahead-js/',
-        //         'Your share text comes here',
-        //     )
-        //     ->facebook()
-        //     ->twitter()
-        //     ->linkedin()
-        //     ->telegram()
-        //     ->whatsapp();
-        //     //dd($shareComponent);
-        //     return view('artikel.index', compact('shareComponent'));
-        // }
 }
