@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div class="container-xl">
+    <div class="container-xl overflow-hidden">
         <div class="row text-center">
             <h1 class="display-3">Tim Magang Merdeka Batch 2<br> Pemerintahan Kota Kediri</h1>
             @foreach ($divisions as $divisi)
