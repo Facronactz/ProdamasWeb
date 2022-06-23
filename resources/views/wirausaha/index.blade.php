@@ -1,8 +1,9 @@
 @extends('layouts.desain')
-
+@section('e-boost', 'active')
+@section('wirausaha', 'active')
 @section('content')
 <div>
-    <img class="img-fluid" src="{{asset('wirausahaProd/WIRAUSAHA.png')}}">
+    <img class="img-fluid" src="{{asset('wirausahaProd/Banner-Wirausaha.png')}}">
 </div>
 <div class="container">
     <div class="m-4">
@@ -12,7 +13,7 @@
                 di Kota Kediri.
             </h4>
         </div>
-        
+
         <div class="card border-light my-4">
             <div class="row g-0">
                 @foreach ($wirausaha as $e)
@@ -35,7 +36,7 @@
                 <div class="col-lg-4 d-flex justify-content-center">
                     <img src="{{ asset('wirausahaProd/'.$e->foto_info) }}" class="img-fluid" style="max-height: 400px;">
                 </div>
-                
+
                 <div class="col-lg-8">
                     <div class="card-body">
                         <h2 class="card-title">Informasi Wirausaha</h2>
@@ -52,7 +53,7 @@
             @endforeach
         </div>
 
-        
+
 
     </div>
 </div>

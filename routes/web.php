@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\UMKM;
 use App\Http\Controllers\EboostAdmin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -57,6 +56,7 @@ use App\Http\Controllers\SettingCarouselController;
 use App\Http\Controllers\DataKoperasiAdminController;
 use App\Http\Controllers\KampungkerenAdminController;
 use App\Http\Controllers\MSIBController;
+use App\Http\Controllers\DataTrendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -337,17 +337,20 @@ Route::group(['middleware' => 'auth'], function () { //agar tidak dapat tampil m
     Route::delete('/admin/datakoperasi/{datakoperasi_id}', [DataKoperasiAdminController::class, 'destroy']);
 
     //Data Emas
-    Route::get('/admin/englishmasive/{dataemas_id}', [DataEmasAdminController::class, 'edit']);
-    Route::put('/admin/englishmasive/{dataemas_id}', [DataEmasAdminController::class, 'update']);
+    Route::get('/admin/edit-englishmasive/{dataemas_id}', [DataEmasAdminController::class, 'edit']);
+    Route::put('/admin/edit-englishmasive/{dataemas_id}', [DataEmasAdminController::class, 'update']);
     Route::get('/admin/list-englishmasive', [DataEmasAdminController::class, 'index']);
-    Route::delete('/admin/englishmasive/{dataemas_id}', [DataEmasAdminController::class, 'destroy']);
-
+    Route::delete('/admin/edit-englishmasive/{dataemas_id}', [DataEmasAdminController::class, 'destroy']);
 
     // RTH
     Route::get('/admin/rth/{rth_id}', [RTHAdminController::class, 'edit']);
     Route::put('/admin/rth/{rth_id}', [RTHAdminController::class, 'update']);
     Route::get('/admin/list-rth', [RTHAdminController::class, 'index']);
     Route::delete('/admin/rth/{rth_id}', [RTHAdminController::class, 'destroy']);
+
+    // Data Trend
+    Route::get('/admin/trend/{trend_id}', [DataTrendController::class, 'edit']);
+    Route::put('/admin/trend/{trend_id}', [DataTrendController::class, 'update']);
 });
 
 //berlangganan
@@ -376,7 +379,7 @@ Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout')
 Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 //Route search artikel
-Route::resource('/artikel', artikelController::class);
+Route::get('/artikel', [artikelController::class, 'index']);
 Route::get('/searchartikel', [SearchController::class, 'searchartikel'])->name('search');
 
 //Route search audio

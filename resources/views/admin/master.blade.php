@@ -58,8 +58,8 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
+            <!-- Content divide (Page divide) -->
+            <section class="content-divide">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
@@ -75,36 +75,67 @@
                 <!-- Default box -->
                 <div class="card">
                     <div class="card-body">
+                        
                         @hasSection('content')
-                        @yield('content')
+                            @yield('content')
                         @else
-                        {{-- Admin Menu --}}
+                            {{-- Admin Menu --}}
 
-                        @php
-                        $user = DB::table('users')
-                        ->where('id', '=', Auth::user()->id)
-                        ->first();
-                        $level = $user->level;
-                        @endphp
-                        <div class="container-fluid">
-                            <div class="g-3 row justify-content-center my-3">
+                            @php
+                                $user = DB::table('users')
+                                    ->where('id', '=', Auth::user()->id)
+                                    ->first();
+                                $level = $user->level;
+                                $current = '';
+                            @endphp
+                            <div class="container-fluid">
+                                <div class="g-3 row justify-content-center my-3">
 
-                                {{-- Sidebar dan Dashboard admin ditambahkan secara manual di tabel DB 'admin_menu' --}}
-                                @foreach ($menus as $menu)
-                                @if ($level == 'super' || $menu->level == 'basic' || $menu->level == $level)
-                                <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2" style="background: {{ $menu->color }}; min-width: 200px;">
-                                    <div class="card-body row">
-                                        <div class="m-auto" style="color: #f4f6f9;">
-                                            <i class="{{ $menu->icon }} fa-7x"></i>
-                                            <a href="{{ $menu->link }}" class="stretched-link"></a>
-                                            <h2>{{ $menu->name }}</h2>
-                                        </div>
-                                    </div>
+                                    {{-- Sidebar dan Dashboard admin ditambahkan secara manual di tabel DB 'admin_menu' --}}
+                                    @foreach ($menus as $menu)
+                                        @php
+                                            $menu_level = $menu->level;
+                                            if ($current != $menu_level) {
+                                                $divide = true;
+                                            } else {
+                                                $divide = false;
+                                            }
+                                            $current = $menu_level;
+                                        @endphp
+                                            @if ($divide)
+                                            @php
+                                                $header = DB::table('users_level')->where('level', '=', $current)->first();
+                                            @endphp
+                                            <div class="mb-4" style="width: 100%; height: 40px; border-bottom: 1px solid black; text-align: center">
+                                                <span style="font-size: 40px; background-color: #ffffff; padding: 0 10px;">
+                                                    {{$header->name}}
+                                                    <!--Padding is optional-->
+                                                </span>
+                                            </div>
+                                            @endif
+                                            @if ($level == 'super' || $menu->level == 'basic' || $menu->level == $level)
+                                                <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2" style="background: {{ $menu->color }}; min-width: 200px;">
+                                                    <div class="card-body row">
+                                                        <div class="m-auto" style="color: #f4f6f9;">
+                                                            <i class="{{ $menu->icon }} fa-7x"></i>
+                                                            <a href="{{ $menu->link }}" class="stretched-link"></a>
+                                                            <h2>{{ $menu->name }}</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @else
+                                                <div class="card text-center col-sm-5 col-md-4 col-lg-3 col-xl-2 mx-2 btn-secondary" style="min-width: 200px;">
+                                                    <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Fungsi dinonaktifkan untuk akun ini. Silahkan hubungi admin">
+                                                        <div class="card-body row">
+                                                            <i class="{{ $menu->icon }} fa-7x"></i>
+                                                            <h2>{{ $menu->name }}</h2>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                            @endif
+                                        @endforeach
                                 </div>
-                                @endif
-                                @endforeach
                             </div>
-                        </div>
                         @endif
                     </div>
                     <!-- /.card-body -->
@@ -120,7 +151,7 @@
             <div class="float-right d-none d-sm-block">
                 <!-- <b>Version</b> 3.0.5 -->
             </div>
-            <strong>Copyright &copy; 2021 <a href="#">Admin Prodamas</a>.</strong> All rights
+            <strong>Copyright &copy; 2022 <a href="#">Admin Prodamas</a>.</strong> All rights
             reserved.
         </footer>
 
@@ -205,10 +236,28 @@
                     toolbar: [
                         ['view', ['fullscreen', 'codeview']],
                     ],
+                }),
+                $('.tableau').summernote({
+                    callbacks: {
+                        onPaste: function(e) {
+                            var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
+                            e.preventDefault();
+                            document.execCommand('insertText', false, bufferText);
+                        },
+                    },
+                    toolbar: [
+                        ['view', ['fullscreen', 'codeview']],
+                    ],
                 })
         });
     </script>
 
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
     @stack('scripts')
     @yield('table')
 </body>

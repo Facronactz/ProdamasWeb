@@ -53,7 +53,7 @@ class KampungkerenAdminController extends Controller
 
     public function index()
     {
-        $kampungkeren = Kampungkeren::groupBy('judul')->get();
+        $kampungkeren = Kampungkeren::latest()->get();
         $descriptions = DescriptionAdmin::first()->get();
         return view('admin.kampungkeren.list', compact('kampungkeren', 'descriptions'));
     }

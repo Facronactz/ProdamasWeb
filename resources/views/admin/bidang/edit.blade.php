@@ -8,7 +8,7 @@ Edit Bidang
 
 @section('content')
 
-<form action="/admin/bidang/{{$bidang->id}}" method="POST" enctype="application/x-www-form-urlencoded">
+<form action="/admin/bidang/{{$bidang->id}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('put')
     <div class="form-group">
@@ -25,7 +25,7 @@ Edit Bidang
         @if ($bidang->foto)
         <p>{{$bidang->foto}}</p>
         @endif
-        <input type="file" class="form-control" name="foto[]" id="foto[]" value="{{$bidang->foto}}">
+        <input type="file" class="form-control" name="foto" id="foto">
         @error('foto')
         <div class="alert alert-danger">
             {{ $message }}

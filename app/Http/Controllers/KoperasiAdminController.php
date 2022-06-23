@@ -15,7 +15,7 @@ class KoperasiAdminController extends Controller
     {
         $koperasi = Koperasirw::first()->get();
         $picts = Pict::first()->get();
-        $daftar = KoperasiDaftar::first()->get();
+        $daftar = KoperasiDaftar::latest()->get();
         return view('admin.koperasirw.list', compact('koperasi', 'picts', 'daftar'));
     }
 

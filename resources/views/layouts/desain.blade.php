@@ -220,7 +220,7 @@
                                     <li class="w-100"><a class="dropdown-item @yield('foto')" href="{{ url('/foto') }}">Foto</a></li>
                                     <li class="w-100"><a class="dropdown-item @yield('audio')" href="{{ url('/audio') }}">Audio</a></li>
                                     <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/video') }}">Video</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('video')" href="{{ url('/media') }}">Media Sosial</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('sosmed')" href="{{ url('/media') }}">Media Sosial</a></li>
                                 </ul>
                             </div>
                             <div class="nav-item dropdown nav-list">
@@ -228,20 +228,20 @@
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkData">
                                     <li class="w-100"><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
                                     <li class="dropdown-submenu w-100">
-                                        <a class="dropdown-item @yield('kosong')">Prodamas Dalam Angka<span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <a class="dropdown-item @yield('angka')" data-bs-toggle="dropdown">Prodamas Dalam Angka<span class="caret fas fa-caret-right ms-3"></span></a>
                                         <ul class="dropdown-menu">
                                             <li class="dropdown-submenu w-100">
-                                                <li class="w-100"><a class="dropdown-item @yield('anggaran')" href="{{ url('/anggaran') }}">Anggaran & Realisasi</a></li>
-                                                <li class="w-100"><a class="dropdown-item @yield('rth')" href="{{ url('/rth') }}">Ruang Terbuka Hijau</a></li>
-                                                <li class="w-100"><a class="dropdown-item @yield('emas')" href="{{ url('/emas') }}">English Masive</a></li>
-                                                <li class="w-100"><a class="dropdown-item @yield('koperasi')" href="{{ url('/koperasi') }}">Koperasi RW</a></li>
-                                            </li>
-                                        </ul>
+                                            <li class="w-100"><a class="dropdown-item @yield('anggaran')" href="{{ url('/anggaran') }}">Anggaran & Realisasi</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('rth')" href="{{ url('/rth') }}">Ruang Terbuka Hijau</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('emas')" href="{{ url('/emas') }}">English Masive</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('koperasi')" href="{{ url('/koperasi') }}">Koperasi RW</a></li>
                                     </li>
-                                    <li class="w-100"><a class="dropdown-item @yield('kosong')" href="{{ url('/datatrend') }}">Data Trend</a></li>
-                                    <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}" target="_blank">Progressio</a></li>
-                                    {{-- <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio</a></li> --}}
-                                    {{-- <a class="@yield('progressio')" href="https://progressio.kedirikota.go.id/auth/login">Progressio <span class="caret fas fa-caret-right"></span></a> --}}
+                                </ul>
+                                </li>
+                                <li class="w-100"><a class="dropdown-item @yield('trend')" href="{{ url('/datatrend') }}">Data Trend</a></li>
+                                <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}" target="_blank">Progressio</a></li>
+                                {{-- <li class="w-100"><a class="dropdown-item @yield('progressio')" href="{{ url('/progressio') }}">Progressio</a></li> --}}
+                                {{-- <a class="@yield('progressio')" href="https://progressio.kedirikota.go.id/auth/login">Progressio <span class="caret fas fa-caret-right"></span></a> --}}
                                 </ul>
                             </div>
                             <div class="nav-item dropdown nav-list">
@@ -303,41 +303,42 @@
                             <div class="nav-item dropdown nav-list">
                                 <a class="nav-link dropdown-toggle dropdown-toggle-split @yield('e-boost')" id="navbarDropdownMenuLinkAbout" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" data-bs-reference="parent">E-Boost </a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuEboost">
-                                    <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/e-boost') }}">E-Boost</a></li>
+                                    <li class="w-100"><a class="dropdown-item @yield('eboost')" href="{{ url('/e-boost') }}">E-Boost</a></li>
                                     <li class="dropdown-submenu w-100">
-                                        <a class="dropdown-item @yield('e-boost')">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
+                                        <a class="dropdown-item @yield('')" data-bs-toggle="dropdown">Pelaku Usaha <span class="caret fas fa-caret-right ms-3"></span></a>
                                         <ul class="dropdown-menu">
                                             <li class="dropdown-submenu w-100">
-                                            <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/wirausaha') }}">Wirausaha</a></li>
-                                            <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/umkm') }}">UMKM</a></li>
-                                            <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/kube') }}">KUBE</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('wirausaha')" href="{{ url('/wirausaha') }}">Wirausaha</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('umkm')" href="{{ url('/umkm') }}">UMKM</a></li>
+                                            <li class="w-100"><a class="dropdown-item @yield('kube')" href="{{ url('/kube') }}">KUBE</a></li>
                                     </li>
                                 </ul>
                                 </li>
                                 <li class="dropdown-submenu w-100">
-                                    <a class="dropdown-item @yield('e-boost')">Akses Permodalan <span class="caret fas fa-caret-right ms-3"></span></a>
+                                    <a class="dropdown-item @yield('')" data-bs-toggle="dropdown">Akses Permodalan <span class="caret fas fa-caret-right ms-3"></span></a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-submenu w-100">
-                                        <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/koperasirw') }}">Koperasi RW</a></li>
-                                        <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/kurnia') }}">Kurnia</a></li>
+                                        <li class="w-100"><a class="dropdown-item @yield('koperasirw')" href="{{ url('/koperasirw') }}">Koperasi RW</a></li>
+                                        <li class="w-100"><a class="dropdown-item @yield('kurnia')" href="{{ url('/kurnia') }}">Kurnia</a></li>
                                 </li>
                                 </ul>
                                 </li>
                                 <li class="dropdown-submenu w-100">
-                                    <a class="dropdown-item @yield('e-boost')">Pemasaran<span class="caret fas fa-caret-right ms-3"></span></a>
+                                    <a class="dropdown-item @yield('')" data-bs-toggle="dropdown">Pemasaran<span class="caret fas fa-caret-right ms-3"></span></a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-submenu w-100">
-                                        <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/tags?tags=pemasaran') }}">Artikel</a></li>
+                                        <li class="w-100"><a class="dropdown-item @yield('pemasaran')" href="{{ url('/tags?tags=pemasaran') }}">Artikel</a></li>
                                 </li>
                                 </ul>
                                 </li>
                                 <li class=" dropdown-submenu w-100">
-                                                <a class="dropdown-item @yield('e-boost')">Publikasi<span class="caret fas fa-caret-right ms-3"></span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="dropdown-submenu w-100">
-                                                        {{-- <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/wirausaha') }}">Informasi Pelatihan
-                                            </a></li> --}}
-                                        <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/tags?tags=testimoni') }}">Testimoni</a></li>
+                                    <a class="dropdown-item @yield('')" data-bs-toggle="dropdown">Publikasi<span class="caret fas fa-caret-right ms-3"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-submenu w-100">
+                                            {{-- <li class="w-100"><a class="dropdown-item @yield('e-boost')" href="{{ url('/wirausaha') }}">Informasi Pelatihan
+                                            </a>
+                                        </li> --}}
+                                        <li class="w-100"><a class="dropdown-item @yield('testimoni')" href="{{ url('/tags?tags=testimoni') }}">Testimoni</a></li>
                                 </li>
                                 </ul>
                                 </li>
@@ -360,7 +361,7 @@
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAbout" style="border-radius: 23px;padding:0px;margin-left:-10rem;">
                                         <li class="" style="padding:5px">
                                             <div>
-                                                <form action="search">
+                                                <form action="/search">
                                                     <div style="display:flex; align-items: center; vertical-align: middle;">
                                                         <div>
                                                             <input class="input-search" type="text" placeholder="Mau cari apa?" name="search" value="{{ request('search') }}" aria-label="Search">
@@ -487,7 +488,7 @@
                     <div class="footer-copyright footer-link" style="color: white">
                         <div class="row row-cols-1 row-cols-md-2">
                             <span class="col">&copy; 2022 Pemerintah Kota Kediri</span>
-                            <span class="col"><strong>Supported by</strong> Dinas Kominfo & Tim Magang Merdeka</span>
+                            <span class="col"><strong>Supported by</strong> Dinas Komunikasi dan Informatika & Tim Magang Merdeka</span>
                         </div>
                     </div>
                 </div>
@@ -532,23 +533,23 @@
                 prevArrow: '<button type="button" class="carousel-icon-prev slick-prev bg-primary btn-primary mx-3" style="z-index: 2;"></button>',
                 nextArrow: '<button type="button" class="carousel-icon-next slick-next bg-primary btn-primary mx-3" style="z-index: 2;"></button>',
                 responsive: [{
-                    
+
                     breakpoint: 992,
                     settings: {
-                      slidesToShow: 2,
-                      slidesToScroll: 1,
-                      dots: true
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        dots: true
                     }
 
-                    }, {
-                    
+                }, {
+
                     breakpoint: 576,
                     settings: {
-                      slidesToShow: 1,
-                      slidesToScroll: 1,
-                      dots: true
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true
                     }
-                    
+
                 }]
             });
         });

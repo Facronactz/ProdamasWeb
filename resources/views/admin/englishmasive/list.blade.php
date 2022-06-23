@@ -20,28 +20,20 @@ English Masive Submission
                 <th scope="col">ID</th>
                 <th scope="col">Judul</th>
                 <th scope="col">Deskripsi</th>
-                <th scope="col">Judul Tutor</th>
-                <th scope="col">Tableau Tutor</th>
-                <th scope="col">Judul Partisipan</th>
-                <th scope="col">Tableau Partisipan</th>
                 <th scope="col">Sumber</th>
                 <th scope="col">Aksi</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($english_masives as $english_masive)
+            @foreach($dataemass as $dataemas)
             <tr>
-                <td>{{$english_masive->id}}</td>
-                <td>{{$english_masive->judul}}</td>
-                <td>{{ $english_masive->deskripsi }}</td>
-                <td>{{$english_masive->judul_tutor}}</td>
-                <td>{{$english_masive->tableau_tutor}}</td>
-                <td>{{$english_masive->judul_partisipan}}</td>
-                <td>{{$english_masive->tableau_partisipan}}</td>
-                <td>{{$english_masive->sumber }}</td>
+                <td>{{$dataemas->id}}</td>
+                <td>{{$dataemas->judul}}</td>
+                <td>{{$dataemas->deskripsi }}</td>
+                <td>{{$dataemas->sumber }}</td>
                 <td>
-                    <form action="/admin/englishmasive/{{$english_masive->id}}" method="POST">
-                        <a href="/admin/englishmasive/{{$english_masive->id}}" class="btn btn-info">Edit</a>
+                    <form action="/admin/edit-englishmasive/{{$dataemas->id}}" method="POST">
+                        <a href="/admin/edit-englishmasive/{{$dataemas->id}}" class="btn btn-info">Edit</a>
                     </form>
                 </td>
             </tr>

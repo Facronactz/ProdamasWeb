@@ -1,5 +1,6 @@
 @extends('layouts.desain')
-
+@section('e-boost', 'active')
+@section('kurnia', 'active')
 @section('head')
 <style>
     .carousel-img {
@@ -16,10 +17,7 @@
 <div id="carouselUtama" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block carousel-img w-100" src="https://prodamas.kedirikota.go.id/carouselProd/1653969225925-7.jpg" alt="..." />
-        </div>
-        <div class="carousel-item">
-            <img class="d-block carousel-img w-100" src="https://prodamas.kedirikota.go.id/carouselProd/1654133761959-sampul-1650266071.jpg" alt="..." />
+            <img class="d-block carousel-img w-100" src="https://prodamas.kedirikota.go.id/carouselProd/Banner Kurnia.png" alt="..." />
         </div>
         {{-- <div class="carousel-item active">
                 <img src="img/header1.png" class="d-block w-100 carousel-img" alt="..." />

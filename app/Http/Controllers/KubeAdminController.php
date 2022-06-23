@@ -18,9 +18,9 @@ class KubeAdminController extends Controller
     }
     public function index()
     {
-        $kube = Kube::first()->get();
-        $picture = Pict::first()->get();
-        $daftar = KubeDaftar::first()->get();
+        $kube = Kube::all();
+        $picture = Pict::all();
+        $daftar = KubeDaftar::latest()->get();
         return view('admin.kube.list', compact('kube', 'picture', 'daftar'));
     }
 

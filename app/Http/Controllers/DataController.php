@@ -7,8 +7,9 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Menu;
 use App\Models\Anggaran;
 use App\Models\RTH;
-
 use App\Models\DataKoperasi;
+use App\Models\EnglishMasive;
+use App\Models\DataTrend;
 
 class DataController extends Controller
 {
@@ -77,7 +78,7 @@ class DataController extends Controller
                 $menus = Menu::where('status', 'Show')->get();
                 $dataemas = EnglishMasive::first()->get();
                 // end code jumlah pengunjung
-                return view('data.emas', compact('counter', 'totalviews', 'menus', 'englishmasive'));
+                return view('data.emas', compact('counter', 'totalviews', 'menus', 'dataemas'));
         }
 
         public function koperasi()
@@ -167,8 +168,9 @@ class DataController extends Controller
                         ->unionAll($counter)
                         ->sum('views');
                 $menus = Menu::where('status', 'Show')->get();
+                $trends = DataTrend::first()->get();
                 // end code jumlah pengunjung
-                return view('data.datatrend', compact('counter', 'totalviews', 'menus'));
+                return view('data.datatrend', compact('counter', 'totalviews', 'menus', 'trends'));
         }
 
         public function banksampah()

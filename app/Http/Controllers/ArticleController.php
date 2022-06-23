@@ -51,7 +51,7 @@ class ArticleController extends Controller
 
     public function index()
     {
-        $articles = ArticleAdmin::all();
+        $articles = ArticleAdmin::latest()->get();
         return view('admin.article.list', compact('articles'));
     }
 
@@ -71,7 +71,7 @@ class ArticleController extends Controller
         //         $tagg = trim($tagg, ',');
         //     }
         // }
-        foreach ($artikel as $item) {
+        foreach ($article->tagged as $item) {
             $tagg = $tagg . ',' . $item->tag_name;
             $tagg = trim($tagg, ',');
         }

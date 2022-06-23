@@ -1,5 +1,6 @@
 @extends('layouts.desain')
-
+@section('e-boost', 'active')
+@section('kube', 'active')
 @section('content')
 <style>
   a {
@@ -8,7 +9,7 @@
   }
 </style>
 <div>
-  <img class="img-fluid" src="{{asset('kubeProd/KUBE.png')}}">
+  <img class="img-fluid" src="{{asset('kubeProd/Banner Kube.png')}}">
 </div>
 <div class="container">
   <div class="m-4">

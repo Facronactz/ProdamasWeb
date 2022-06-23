@@ -59,7 +59,7 @@ class AudioAdminController extends Controller
 
     public function index()
     {
-        $audios = AudioAdmin::all();
+        $audios = AudioAdmin::latest()->get();
         return view('admin.audio.list', compact('audios'));
     }
 /*

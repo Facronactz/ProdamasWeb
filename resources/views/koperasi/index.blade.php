@@ -1,8 +1,9 @@
 @extends('layouts.desain')
-
+@section('e-boost', 'active')
+@section('koperasirw', 'active')
 @section('content')
 <div>
-  <img class="img-fluid" src="{{asset('koperasiProd/KOPERASI RW.png')}}">
+  <img class="img-fluid" src="{{asset('koperasiProd/Banner Koperasi RW.png')}}">
 </div>
 <div class="container">
   <div class="m-4">

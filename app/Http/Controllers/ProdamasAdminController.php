@@ -44,9 +44,9 @@ class ProdamasAdminController extends Controller
 
     public function index()
     {
-        $prodamass = prodamas::groupBy('id')->get();
-        $regulasis = regulasi::groupBy('id')->get();
-        $transforms = transform::first()->get();
+        $prodamass = prodamas::latest('id')->get();
+        $regulasis = regulasi::latest('id')->get();
+        $transforms = transform::latest('id')->get();
         return view('admin.prodamas.list', compact('prodamass', 'regulasis', 'transforms'));
     }
 

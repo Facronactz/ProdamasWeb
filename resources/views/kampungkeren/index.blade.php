@@ -20,7 +20,7 @@
 
 @section('content')
 <div class="container-fluid p-0">
-    <img class="header-kampung-keren" src="{{ asset('img-tentang/header-kampung-keren.png') }}" alt="" srcset="">
+    <img class="header-kampung-keren" src="{{ asset('img-tentang/Kampung-Keren.png') }}" alt="" srcset="">
 </div>
 <!-- akhir jumbotrom -->
 

@@ -11,8 +11,8 @@ class DataEmasAdminController extends Controller
 {
     public function index()
     {
-        $dataemas = EnglishMasive::first()->get();
-        return view('admin.englishmasive.list', compact('dataemas'));
+        $dataemass = EnglishMasive::first()->get();
+        return view('admin.englishmasive.list', compact('dataemass'));
     }
 
     public function edit($id)
@@ -26,9 +26,7 @@ class DataEmasAdminController extends Controller
         $request->validate([
             'judul' => 'required',
             'deskripsi' => 'required',
-            'judul_tutor' => 'required',
             'tableau_tutor' => 'required',
-            'judul_partisipan' => 'required',
             'tableau_partisipan' => 'required',
             'konten' => 'required',
             'sumber' => 'required',
@@ -39,9 +37,7 @@ class DataEmasAdminController extends Controller
         $dataemas->update([
             'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
-            'judul_tutor' => $request->judul_tutor,
             'tableau_tutor' => $request->tableau_tutor,
-            'judul_partisipan' => $request->judul_partisipan,
             'tableau_partisipan' => $request->tableau_partisipan,
             'konten' => $request->konten,
             'sumber' => $request->sumber,
