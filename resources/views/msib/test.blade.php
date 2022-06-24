@@ -58,6 +58,12 @@
                 color: white;
             }
         }
+
+        @@media (min-width: 576px) {
+            .awal {
+                height: 100% !important;
+            }
+        }
     </style>
 </head>
 
@@ -78,7 +84,7 @@
                         $first = false;
                     @endphp
                 @endif
-                <figure @class(['text-center', 'mb-0', 'mt-3' => $first])>
+                <figure @class(['text-center', 'mb-0', 'mt-3' => $first, 'awal' => $first])>
                     <blockquote class="blockquote">
                         <div class="row">
                             <div @class(['col', 'mt-4' => $first, 'mt-sm-0' => $first]) style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
