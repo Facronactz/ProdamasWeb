@@ -70,9 +70,13 @@
             <h1 class="display-3">Tim Magang Merdeka Batch 2<br> Pemerintahan Kota Kediri</h1>
             @foreach ($divisions as $divisi)
                 @if ($loop->first)
-                    $first = true;
+                    @auth
+                        $first = true;
+                    @endauth
                 @else
-                    $first = false;
+                    @php
+                        $first = false;
+                    @endphp
                 @endif
                 <figure @class(['text-center', 'mb-0', 'mt-5' => $first])>
                     <blockquote class="blockquote">
