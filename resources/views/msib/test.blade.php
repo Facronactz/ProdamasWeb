@@ -121,8 +121,8 @@
                                     <span>{{ $item->domisili }}</span><br>
                                     <span>{{ $item->prodi }}</span><br>
                                     <span>{{ $item->univ }}</span><br>
-                                    <a href="{{ $item->ig }}" class="text-black"><i class="fab fa-instagram link-light"></i></a>
-                                    <a href="{{ $item->linkedin }}" class="text-black"><i class="fab fa-linkedin-in link-light"></i></a>
+                                    <a target="_blank" href="{{ $item->ig }}" class="text-black"><i class="fab fa-instagram link-light"></i></a>
+                                    <a target="_blank" href="{{ $item->linkedin }}" class="text-black"><i class="fab fa-linkedin-in link-light"></i></a>
                                 </div>
                             @else
                                 <div class="col">
@@ -131,8 +131,8 @@
                                     <span>{{ $item->domisili }}</span><br>
                                     <span>{{ $item->prodi }}</span><br>
                                     <span>{{ $item->univ }}</span><br>
-                                    <a href="{{ $item->ig }}" class="text-black"><i class="fab fa-instagram link-light"></i></a>
-                                    <a href="{{ $item->linkedin }}" class="text-black"><i class="fab fa-linkedin-in link-light"></i></a>
+                                    <a target="_blank" href="{{ $item->ig }}" class="text-black"><i class="fab fa-instagram link-light"></i></a>
+                                    <a target="_blank" href="{{ $item->linkedin }}" class="text-black"><i class="fab fa-linkedin-in link-light"></i></a>
                                 </div>
                             @endif
                         @endif
