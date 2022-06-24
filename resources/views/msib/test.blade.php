@@ -22,7 +22,8 @@
             height: 100vh;
             color: white;
         }
-        @@media (min-width: 768px) { 
+
+        @@media (min-width: 768px) {
             body {
                 background:
                     url("{{ asset('img/icon_kediri.png') }}"), url("{{ asset('img/icon_harmoni.png') }}"), url("{{ asset('img/PRIMARY LOGO.png') }}"),
@@ -30,15 +31,16 @@
                     url("{{ asset('img/bg_msib.png') }}");
                 background-repeat: no-repeat;
                 background-position:
-                left 0px top 5px, left 8vw top 14px, left 14vw top 14px, 
-                right 14.5vw top 10px, right 7.6vw top 10px, right 1vw top 18px, 
-                center;
+                    left 0px top 5px, left 8vw top 14px, left 14vw top 14px,
+                    right 14.5vw top 10px, right 7.6vw top 10px, right 1vw top 18px,
+                    center;
                 background-attachment: fixed;
                 background-size: 9vw, 5vw, 4.4vw, 5vw, 7.4vw, 6.9vw, cover;
                 height: 100vh;
                 color: white;
             }
-         }
+        }
+
         @@media (min-width: 992px) {
             body {
                 background:
@@ -61,17 +63,20 @@
 
 <body background="{{ asset('img/bg_msib.png') }}">
 
-        
+
 
 
     <div class="container-xl overflow-hidden">
         <div class="row text-center">
             <h1 class="display-3">Tim Magang Merdeka Batch 2<br> Pemerintahan Kota Kediri</h1>
             @foreach ($divisions as $divisi)
-                <figure class="text-center mt-5 mb-0">
+                @if ($loop->first)
+                    $first = true;
+                @endif
+                <figure @class(['text-center', 'mb-0', 'mt-5' => $first])>
                     <blockquote class="blockquote">
                         <div class="row">
-                            <div class="col" style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
+                            <div @class(['col', 'mt-4' => $first, 'mt-sm-0' => $first]) style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
                             <span class="col-12 col-sm-auto" style="font-size: 40px; padding: 0 10px;">
                                 {{ $divisi->nama }}
                                 <!--Padding is optional-->

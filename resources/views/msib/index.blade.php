@@ -22,16 +22,12 @@
             height: 100vh;
             color: white;
         }
-        @@media(min-width: 576px){
-            height: 100% !important;
-        }
     </style>
 </head>
 
 <body background="{{ asset('img/bg_msib.png') }}">
 
-{{--         
-        @include media-breakpoint-up(md) {
+    {{-- @include media-breakpoint-up(md) {
             body {
                 background:
                     url("{{ asset('img/icon_kediri.png') }}"), url("{{ asset('img/icon_harmoni.png') }}"), url("{{ asset('img/PRIMARY LOGO.png') }}"),
@@ -47,28 +43,16 @@
                 height: 100vh;
                 color: white;
             }
-        }
- --}}
+        } --}}
 
     <div class="container-xl overflow-hidden">
         <div class="row text-center">
             <h1 class="display-3">Tim Magang Merdeka Batch 2<br> Pemerintahan Kota Kediri</h1>
             @foreach ($divisions as $divisi)
-                @if ($loop->first)
-                    $first = true;
-                @endif
-                <figure @class([
-                    'text-center',
-                    'mb-0',
-                    'mt-5' => $first,
-                    ])>
+                <figure class="text-center mt-5 mb-0">
                     <blockquote class="blockquote">
                         <div class="row">
-                            <div @class([
-                                'col',
-                                'mt-4' => $first,
-                                'mt-sm-0' => $first,
-                            ]) style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
+                            <div class="col" style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
                             <span class="col-12 col-sm-auto" style="font-size: 40px; padding: 0 10px;">
                                 {{ $divisi->nama }}
                                 <!--Padding is optional-->
