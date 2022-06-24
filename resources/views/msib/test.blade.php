@@ -70,9 +70,9 @@
             <h1 class="display-3">Tim Magang Merdeka Batch 2<br> Pemerintahan Kota Kediri</h1>
             @foreach ($divisions as $divisi)
                 @if ($loop->first)
-                    @auth
+                    @php
                         $first = true;
-                    @endauth
+                    @endphp
                 @else
                     @php
                         $first = false;
