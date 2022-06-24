@@ -22,8 +22,13 @@
             height: 100vh;
             color: white;
         }
+    </style>
+</head>
 
-        /* @include media-breakpoint-up(md) {
+<body background="{{ asset('img/bg_msib.png') }}">
+
+{{--         
+        @include media-breakpoint-up(md) {
             body {
                 background:
                     url("{{ asset('img/icon_kediri.png') }}"), url("{{ asset('img/icon_harmoni.png') }}"), url("{{ asset('img/PRIMARY LOGO.png') }}"),
@@ -39,11 +44,9 @@
                 height: 100vh;
                 color: white;
             }
-        } */
-    </style>
-</head>
+        }
+ --}}
 
-<body background="{{ asset('img/bg_msib.png') }}">
     <div class="container-xl overflow-hidden">
         <div class="row text-center">
             <h1 class="display-3">Tim Magang Merdeka Batch 2<br> Pemerintahan Kota Kediri</h1>
