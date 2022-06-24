@@ -21,11 +21,11 @@
                 url("{{ asset('img/bg_msib.png') }}");
             background-repeat: no-repeat;
             background-position: 
-                left 220px top 10px, left 120px top 10px, left 20px top 10px, 
-                right 220px top 10px, right 120px top 10px, right 20px top 10px, 
-                center;
+            left 0px top 5px, left 110px top 14px, left 195px top 14px, 
+            right 220px top 10px, right 120px top 10px, right 20px top 18px, 
+            center;
             background-attachment: fixed;
-            background-size: 100px, 100px, 100px, 100px, 100px, 100px, cover;
+            background-size: 120px, 67px, 58px, 70px, 100px, 100px, cover;
             height: 100vh;
             color: white;
         }
