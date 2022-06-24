@@ -62,16 +62,17 @@
 </head>
 
 <body background="{{ asset('img/bg_msib.png') }}">
-
-
-
-
+    @php
+        $first = false;
+    @endphp
     <div class="container-xl overflow-hidden">
         <div class="row text-center">
             <h1 class="display-3">Tim Magang Merdeka Batch 2<br> Pemerintahan Kota Kediri</h1>
             @foreach ($divisions as $divisi)
                 @if ($loop->first)
                     $first = true;
+                @else
+                    $first = false;
                 @endif
                 <figure @class(['text-center', 'mb-0', 'mt-5' => $first])>
                     <blockquote class="blockquote">
