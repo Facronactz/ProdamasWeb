@@ -22,12 +22,6 @@
             height: 100vh;
             color: white;
         }
-    </style>
-</head>
-
-<body background="{{ asset('img/bg_msib.png') }}">
-
-{{--         
         @include media-breakpoint-up(md) {
             body {
                 background:
@@ -45,7 +39,13 @@
                 color: white;
             }
         }
- --}}
+    </style>
+</head>
+
+<body background="{{ asset('img/bg_msib.png') }}">
+
+        
+
 
     <div class="container-xl overflow-hidden">
         <div class="row text-center">
