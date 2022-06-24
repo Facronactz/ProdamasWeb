@@ -407,3 +407,4 @@ Route::get('/tags', [SearchController::class, 'eboost'])->name('tags');
 
 //Tim Pengembang
 Route::get('/msib', [MSIBController::class, 'index']);
+Route::get('/tester', [MSIBController::class, 'test']);
