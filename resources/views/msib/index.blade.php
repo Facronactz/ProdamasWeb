@@ -15,10 +15,17 @@
 
     <style>
         body {
+            background: 
+                url("{{ asset('img/icon_kediri.png') }}"), url("{{ asset('img/icon_harmoni.png') }}"), url("{{ asset('img/PRIMARY LOGO.png') }}"),  
+                url("{{ asset('img/icon_dikbud.png') }}"), url("{{ asset('img/icon_maber.png') }}"), url("{{ asset('img/icon_kamer.png') }}"), 
+                url("{{ asset('img/bg_msib.png') }}");
             background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+            background-position: 
+                left 220px top 10px, left 120px top 10px, left 20px top 10px, 
+                right 220px top 10px, right 120px top 10px, right 20px top 10px, 
+                center;
             background-attachment: fixed;
+            background-size: 100px, 100px, 100px, 100px, 100px, 100px, cover;
             height: 100vh;
             color: white;
         }
