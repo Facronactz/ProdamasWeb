@@ -59,7 +59,7 @@
             }
         }
 
-        @@media (min-width: 576px) {
+        @@media (max-width: 574px) {
             .awal {
                 height: 100% !important;
             }
