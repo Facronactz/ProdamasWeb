@@ -84,10 +84,10 @@
                         $first = false;
                     @endphp
                 @endif
-                <figure @class(['text-center', 'mb-0', 'mt-3' => $first, 'awal' => $first])>
+                <figure @class(['text-center', 'mb-0', 'mt-3' => $first])>
                     <blockquote class="blockquote">
                         <div class="row">
-                            <div @class(['col', 'mt-4' => $first, 'mt-sm-0' => $first]) style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
+                            <div @class(['col', 'mt-4' => $first, 'mt-sm-0' => $first, 'awal' => $first]) style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
                             <span class="col-12 col-sm-auto" style="font-size: 40px; padding: 0 10px;">
                                 {{ $divisi->nama }}
                                 <!--Padding is optional-->
