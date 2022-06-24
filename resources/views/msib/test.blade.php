@@ -22,7 +22,7 @@
             height: 100vh;
             color: white;
         }
-        @include media-breakpoint-up(md) {
+        @@include media-breakpoint-up(md) {
             body {
                 background:
                     url("{{ asset('img/icon_kediri.png') }}"), url("{{ asset('img/icon_harmoni.png') }}"), url("{{ asset('img/PRIMARY LOGO.png') }}"),
