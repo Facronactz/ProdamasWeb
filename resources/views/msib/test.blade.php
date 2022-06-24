@@ -111,7 +111,6 @@
                 </figure>
                 {{-- <h1 class="mt-3">{{ $divisi->nama }}</h1>
                 <small class="text-muted">{{ $divisi->slogan }}</small> --}}
-                {{$loop->remaining}}
                 <div @class(['row', 'row-cols-2', 'row-cols-md-3', 'row-cols-lg-5', 'gy-3', 'gx-1', 'px-2', 'px-md-0', 'mt-0', 'mb-4' => !$last, 'mx-auto', 'mb-5' => $last])>
                     @foreach ($msib as $item)
                         @if ($item->divisi == $divisi->kode)
