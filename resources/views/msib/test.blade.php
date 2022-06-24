@@ -23,7 +23,7 @@
             color: white;
         }
 
-        @@media (min-width: 768px) {
+        @@media (min-width: 992px) {
             body {
                 background:
                     url("{{ asset('img/icon_kediri.png') }}"), url("{{ asset('img/icon_harmoni.png') }}"), url("{{ asset('img/PRIMARY LOGO.png') }}"),
@@ -41,7 +41,7 @@
             }
         }
 
-        @@media (min-width: 992px) {
+        @@media (min-width: 1200px) {
             body {
                 background:
                     url("{{ asset('img/icon_kediri.png') }}"), url("{{ asset('img/icon_harmoni.png') }}"), url("{{ asset('img/PRIMARY LOGO.png') }}"),
