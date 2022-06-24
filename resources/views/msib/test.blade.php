@@ -22,24 +22,7 @@
             height: 100vh;
             color: white;
         }
-        @@media (min-width: 768px) {
-            body {
-                background:
-                    url("{{ asset('img/icon_kediri.png') }}"), url("{{ asset('img/icon_harmoni.png') }}"), url("{{ asset('img/PRIMARY LOGO.png') }}"),
-                    url("{{ asset('img/icon_dikbud.png') }}"), url("{{ asset('img/icon_maber.png') }}"), url("{{ asset('img/icon_kamer.png') }}"),
-                    url("{{ asset('img/bg_msib.png') }}");
-                background-repeat: no-repeat;
-                background-position:
-                    left 0px top 5px, left 110px top 14px, left 195px top 14px,
-                    right 220px top 10px, right 120px top 10px, right 20px top 18px,
-                    center;
-                background-attachment: fixed;
-                background-size: 120px, 67px, 58px, 70px, 100px, 100px, cover;
-                height: 100vh;
-                color: white;
-            }
-        }
-        @@media (min-width: 992px) { 
+        @@media (min-width: 768px) { 
             body {
                 background:
                     url("{{ asset('img/icon_kediri.png') }}"), url("{{ asset('img/icon_harmoni.png') }}"), url("{{ asset('img/PRIMARY LOGO.png') }}"),
@@ -56,6 +39,23 @@
                 color: white;
             }
          }
+        @@media (min-width: 992px) {
+            body {
+                background:
+                    url("{{ asset('img/icon_kediri.png') }}"), url("{{ asset('img/icon_harmoni.png') }}"), url("{{ asset('img/PRIMARY LOGO.png') }}"),
+                    url("{{ asset('img/icon_dikbud.png') }}"), url("{{ asset('img/icon_maber.png') }}"), url("{{ asset('img/icon_kamer.png') }}"),
+                    url("{{ asset('img/bg_msib.png') }}");
+                background-repeat: no-repeat;
+                background-position:
+                    left 0px top 5px, left 110px top 14px, left 195px top 14px,
+                    right 220px top 10px, right 120px top 10px, right 20px top 18px,
+                    center;
+                background-attachment: fixed;
+                background-size: 120px, 67px, 58px, 70px, 100px, 100px, cover;
+                height: 100vh;
+                color: white;
+            }
+        }
     </style>
 </head>
 
