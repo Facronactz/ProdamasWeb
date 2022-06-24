@@ -22,6 +22,9 @@
             height: 100vh;
             color: white;
         }
+        @@media(min-width: 576px){
+            height: 100% !important;
+        }
     </style>
 </head>
 
@@ -51,10 +54,21 @@
         <div class="row text-center">
             <h1 class="display-3">Tim Magang Merdeka Batch 2<br> Pemerintahan Kota Kediri</h1>
             @foreach ($divisions as $divisi)
-                <figure class="text-center mt-5 mb-0">
+                @if ($loop->first)
+                    $first = true;
+                @endif
+                <figure @class([
+                    'text-center',
+                    'mb-0',
+                    'mt-5' => $first,
+                    ])>
                     <blockquote class="blockquote">
                         <div class="row">
-                            <div class="col" style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
+                            <div @class([
+                                'col',
+                                'mt-4' => $first,
+                                'mt-sm-0' => $first,
+                            ]) style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
                             <span class="col-12 col-sm-auto" style="font-size: 40px; padding: 0 10px;">
                                 {{ $divisi->nama }}
                                 <!--Padding is optional-->
