@@ -25,6 +25,10 @@
 
         @@media (min-width: 768px) {
             body {
+                background:
+                    url("{{ asset('img/icon_kediri.png') }}"), url("{{ asset('img/icon_harmoni.png') }}"), url("{{ asset('img/PRIMARY LOGO.png') }}"),
+                    url("{{ asset('img/icon_dikbud.png') }}"), url("{{ asset('img/icon_maber.png') }}"), url("{{ asset('img/icon_kamer.png') }}"),
+                    url("{{ asset('img/bg_msib.png') }}");
                 background-position:
                     left 0px top 5px, left 8vw top 14px, left 14vw top 14px,
                     right 14.5vw top 10px, right 7.6vw top 10px, right 1vw top 18px,
