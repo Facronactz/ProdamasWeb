@@ -32,12 +32,12 @@
                     url("{{ asset('img/bg_msib.png') }}");
                 background-repeat: no-repeat;
                 background-position:
-                    left 0px top 5px, left 8vw top 14px, left 14vw top 14px,
-                    right 14.5vw top 10px, right 7.6vw top 10px, right 1vw top 18px,
-                    left 2vw bottom 20px, right 1vw bottom 15px,
-                    center;
+                left 0px top 5px, left 8vw top 14px, left 14vw top 14px, 
+                right 14.5vw top 10px, right 7.6vw top 10px, right 1vw top 18px, 
+                left 1vw bottom 15px, right 1vw bottom 13px, 
+                center;
                 background-attachment: fixed;
-                background-size: 9vw, 5vw, 4.4vw, 5vw, 7.4vw, 6.9vw, cover;
+                background-size: 9vw, 5vw, 4.4vw, 5vw, 7.4vw, 6.9vw, 6vw, 8vw, cover;
                 height: 100vh;
                 color: white;
             }
