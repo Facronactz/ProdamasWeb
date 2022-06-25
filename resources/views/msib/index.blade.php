@@ -22,37 +22,82 @@
             height: 100vh;
             color: white;
         }
-    </style>
-</head>
 
-<body background="{{ asset('img/bg_msib.png') }}">
-
-    {{-- @include media-breakpoint-up(md) {
+        @@media (min-width: 768px) {
             body {
                 background:
                     url("{{ asset('img/icon_kediri.png') }}"), url("{{ asset('img/icon_harmoni.png') }}"), url("{{ asset('img/PRIMARY LOGO.png') }}"),
                     url("{{ asset('img/icon_dikbud.png') }}"), url("{{ asset('img/icon_maber.png') }}"), url("{{ asset('img/icon_kamer.png') }}"),
+                    url("{{ asset('img/maskot1.png') }}"), url("{{ asset('img/maskot2.png') }}"),
                     url("{{ asset('img/bg_msib.png') }}");
                 background-repeat: no-repeat;
                 background-position:
-                    left 0px top 5px, left 110px top 14px, left 195px top 14px,
-                    right 220px top 10px, right 120px top 10px, right 20px top 18px,
-                    center;
+                left 0px top 5px, left 8vw top 14px, left 14vw top 14px, 
+                right 14.5vw top 10px, right 7.6vw top 10px, right 1vw top 18px, 
+                left 1vw bottom 15px, right 1vw bottom 13px, 
+                center;
                 background-attachment: fixed;
-                background-size: 120px, 67px, 58px, 70px, 100px, 100px, cover;
+                background-size: 9vw, 5vw, 4.4vw, 5vw, 7.4vw, 6.9vw, 6vw, 8vw, cover;
                 height: 100vh;
                 color: white;
             }
-        } --}}
+        }
 
+        @@media (min-width: 1400px) {
+            body {
+                background:
+                    url("{{ asset('img/icon_kediri.png') }}"), url("{{ asset('img/icon_harmoni.png') }}"), url("{{ asset('img/PRIMARY LOGO.png') }}"),
+                    url("{{ asset('img/icon_dikbud.png') }}"), url("{{ asset('img/icon_maber.png') }}"), url("{{ asset('img/icon_kamer.png') }}"),
+                    url("{{ asset('img/maskot1.png') }}"), url("{{ asset('img/maskot2.png') }}"),
+                    url("{{ asset('img/bg_msib.png') }}");
+                background-repeat: no-repeat;
+                background-position:
+                left 0px top 5px, left 110px top 14px, left 195px top 14px, 
+                right 220px top 10px, right 120px top 10px, right 20px top 18px, 
+                left 12px bottom 20px, right 0px bottom 15px, 
+                center;
+                background-attachment: fixed;
+                background-size: 120px, 67px, 58px, 70px, 100px, 100px, 126px, 169px, cover;
+                height: 100vh;
+                color: white;
+            }
+        }
+
+        @@media (max-width: 574px) {
+            .awal {
+                height: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body background="{{ asset('img/bg_msib.png') }}">
+    @php
+        $first = false;
+        $last = false;
+    @endphp
     <div class="container-xl overflow-hidden">
         <div class="row text-center">
             <h1 class="display-3">Tim Magang Merdeka Batch 2<br> Pemerintahan Kota Kediri</h1>
             @foreach ($divisions as $divisi)
-                <figure class="text-center mt-5 mb-0">
+                @if ($loop->first)
+                    @php
+                        $first = true;
+                    @endphp
+                @elseif ($loop->last)
+                    @php
+                        $last = true;
+                    @endphp
+                @else
+                    @php
+                        $first = false;
+                        $last = false;    
+                    @endphp
+                @endif
+                <figure @class(['text-center', 'mb-0', 'mt-3' => $first])>
                     <blockquote class="blockquote">
                         <div class="row">
-                            <div class="col" style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
+                            <div @class(['col', 'mt-4' => $first, 'mt-sm-0' => $first, 'awal' => $first]) style="height: 40px; border-bottom: 1px solid white; text-align: center"></div>
                             <span class="col-12 col-sm-auto" style="font-size: 40px; padding: 0 10px;">
                                 {{ $divisi->nama }}
                                 <!--Padding is optional-->
@@ -70,8 +115,7 @@
                 </figure>
                 {{-- <h1 class="mt-3">{{ $divisi->nama }}</h1>
                 <small class="text-muted">{{ $divisi->slogan }}</small> --}}
-
-                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 gy-3 gx-1 px-2 px-md-0 mt-0 mb-4 mx-auto">
+                <div @class(['row', 'row-cols-2', 'row-cols-md-3', 'row-cols-lg-5', 'gy-3', 'gx-1', 'px-2', 'px-md-0', 'mt-0', 'mb-4' => !$last, 'mx-auto', 'mb-5' => $last])>
                     @foreach ($msib as $item)
                         @if ($item->divisi == $divisi->kode)
                             @if ($item->id % 10 == 1)
@@ -81,8 +125,8 @@
                                     <span>{{ $item->domisili }}</span><br>
                                     <span>{{ $item->prodi }}</span><br>
                                     <span>{{ $item->univ }}</span><br>
-                                    <a href="{{ $item->ig }}" class="text-black"><i class="fab fa-instagram link-light"></i></a>
-                                    <a href="{{ $item->linkedin }}" class="text-black"><i class="fab fa-linkedin-in link-light"></i></a>
+                                    <a target="_blank" href="{{ $item->ig }}" class="text-black"><i class="fab fa-instagram link-light"></i></a>
+                                    <a target="_blank" href="{{ $item->linkedin }}" class="text-black"><i class="fab fa-linkedin-in link-light"></i></a>
                                 </div>
                             @else
                                 <div class="col">
@@ -91,8 +135,8 @@
                                     <span>{{ $item->domisili }}</span><br>
                                     <span>{{ $item->prodi }}</span><br>
                                     <span>{{ $item->univ }}</span><br>
-                                    <a href="{{ $item->ig }}" class="text-black"><i class="fab fa-instagram link-light"></i></a>
-                                    <a href="{{ $item->linkedin }}" class="text-black"><i class="fab fa-linkedin-in link-light"></i></a>
+                                    <a target="_blank" href="{{ $item->ig }}" class="text-black"><i class="fab fa-instagram link-light"></i></a>
+                                    <a target="_blank" href="{{ $item->linkedin }}" class="text-black"><i class="fab fa-linkedin-in link-light"></i></a>
                                 </div>
                             @endif
                         @endif
