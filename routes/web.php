@@ -55,6 +55,7 @@ use App\Http\Controllers\WirausahaAdminController;
 use App\Http\Controllers\SettingCarouselController;
 use App\Http\Controllers\DataKoperasiAdminController;
 use App\Http\Controllers\KampungkerenAdminController;
+use App\Http\Controllers\MSIBController;
 use App\Http\Controllers\DataTrendController;
 
 /*
@@ -403,3 +404,7 @@ Route::get('/searchcerita', [SearchController::class, 'searchcerita'])->name('se
 //Tag
 Route::get('/tag', [SearchController::class, 'tagger'])->name('tag');
 Route::get('/tags', [SearchController::class, 'eboost'])->name('tags');
+
+//Tim Pengembang
+Route::get('/msib', [MSIBController::class, 'index']);
+Route::get('/tester', [MSIBController::class, 'test']);
