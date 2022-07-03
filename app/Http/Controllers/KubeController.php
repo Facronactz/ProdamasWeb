@@ -45,7 +45,8 @@ class KubeController extends Controller
             'kotakube',
             'pesantrenkube',
             'mojorotokube',
-            'menus'
+            'menus',
+            'menu'
         ));
     }
 }
