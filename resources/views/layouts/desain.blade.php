@@ -347,6 +347,9 @@
                             @foreach ($menus ?? '' as $menu)
                             <a href="{{ url($menu->link) }}" target="_blank" style="color:red" class="nav-link nav-list @yield('{{ $menu->judul }}')">{{ $menu->judul }}</a>
                             @endforeach
+                            @foreach ($menu ?? '' as $menus)
+                            <a href="{{ url($menus->link) }}" target="_blank" style="color:white" class="nav-link nav-list @yield('{{ $menus->judul }}')">{{ $menus->judul }}</a>
+                            @endforeach
                             <div class="nav-list" id="scrollspy">
                                 <a class="nav-link" href="#footer">Kontak</a>
                             </div>
