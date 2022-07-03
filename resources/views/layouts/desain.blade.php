@@ -344,8 +344,8 @@
                                 </li>
                                 </ul>
                             </div>
-                            @foreach ($menu ?? '' as $menus)
-                            <a href="{{ url($menus->link) }}" target="_blank" style="color:red" class="nav-link nav-list @yield('{{ $menus->judul }}')">{{ $menus->judul }}</a>
+                            @foreach ($menus ?? '' as $menu)
+                            <a href="{{ url($menu->link) }}" target="_blank" style="color:red" class="nav-link nav-list @yield('{{ $menu->judul }}')">{{ $menu->judul }}</a>
                             @endforeach
                             <div class="nav-list" id="scrollspy">
                                 <a class="nav-link" href="#footer">Kontak</a>
@@ -462,7 +462,7 @@
                                     <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Angka</a> <br>
                                     <a class="footer-link" href="{{ url('e-boost') }}">E-Boost</a> <br>
                                     {{-- <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a> <br> --}}
-                                    <a class="footer-link" href="{{ url('msib') }}" target="_blank">Tim Pengembang</a>
+                                    <a class="footer-link" href="{{ url('msib') }}">Tim Pengembang</a>
                                 </div>
                                 <div class="col-md-6 my-md-0 mt-4">
                                     <p class="foot-title">
@@ -488,7 +488,7 @@
                     <div class="footer-copyright footer-link" style="color: white">
                         <div class="row row-cols-1 row-cols-md-2">
                             <span class="col">&copy; 2022 Pemerintah Kota Kediri</span>
-                            <span class="col"><strong>Supported by</strong> Dinas Komunikasi dan Informatika & <a class="footer-link link-light" href="{{ url('msib') }}" target="_blank">Tim Magang Merdeka</a></span>
+                            <span class="col"><strong>Supported by</strong> Dinas Komunikasi dan Informatika & Tim Magang Merdeka</span>
                         </div>
                     </div>
                 </div>
