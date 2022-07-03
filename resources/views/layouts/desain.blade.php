@@ -351,6 +351,7 @@
                             <a href="{{ url($menus->link) }}" target="_blank" style="color:white" class="nav-link nav-list @yield('{{ $menus->judul }}')">{{ $menus->judul }}</a>
                             @empty
                             <?= ""?>
+                            @endif
                             @endforeach
                             <div class="nav-list" id="scrollspy">
                                 <a class="nav-link" href="#footer">Kontak</a>
