@@ -28,6 +28,7 @@ class KubeController extends Controller
         ->sum('views');
 
         $menus = Menu::where('status', 'Show')->get();
+        $menu = Menu::where('status', 'Hidden')->get();
         $picts = Pict::first()->get();
         $kube = Kube::first()->get();
 
